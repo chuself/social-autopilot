@@ -28,11 +28,30 @@ export const PILLAR_LANGUAGE = {
   "industry-note": "en",
 };
 
-/** Round-robin, continuing from wherever the last plan stopped. */
-export function nextPillar(recent) {
+/**
+ * Which pillar comes next.
+ *
+ * Round-robin is the floor — every pillar still gets used, so the feed never
+ * collapses into one note. On top of that, a pillar that consistently
+ * outperforms gets an extra turn, and one that consistently flops loses one.
+ * `scores` is the per-pillar average engagement written by cli-metrics.js.
+ */
+export function nextPillar(recent, scores = null) {
   const last = recent.find((r) => PILLARS.includes(r.pillar))?.pillar;
   const i = last ? PILLARS.indexOf(last) : -1;
-  return PILLARS[(i + 1) % PILLARS.length];
+  const next = PILLARS[(i + 1) % PILLARS.length];
+
+  if (!scores || Object.keys(scores).length < PILLARS.length) return next;
+
+  // Skip the next pillar only if it is a clear laggard AND was used recently,
+  // so a weak pillar is thinned out rather than silently dropped forever.
+  const values = Object.values(scores);
+  const average = values.reduce((a, b) => a + b, 0) / values.length;
+  const usedRecently = recent.slice(0, 3).some((r) => r.pillar === next);
+  if (usedRecently && (scores[next] ?? 0) < average * 0.5) {
+    return PILLARS[(i + 2) % PILLARS.length];
+  }
+  return next;
 }
 
 export async function writePost({ brandId = "operra", pillar, recent = [], language, note }) {
@@ -58,6 +77,22 @@ export async function writePost({ brandId = "operra", pillar, recent = [], langu
     }
   }
 
+  // Whatever the owner told the bot in Telegram outranks the pillar defaults.
+  const steerPath = path.join(ROOT, "state", "steer.md");
+  let steerLines = "";
+  if (existsSync(steerPath)) {
+    const steer = (await readFile(steerPath, "utf8")).trim();
+    if (steer) {
+      steerLines = [
+        "",
+        "## Standing instructions from the owner",
+        "These override the style guidance above. The most recent ones win.",
+        steer,
+        "",
+      ].join("\n");
+    }
+  }
+
   const recentLines = recent
     .slice(0, 60)
     .map((r) => `- [${r.pillar}] ${r.headline}`)
@@ -67,7 +102,7 @@ export async function writePost({ brandId = "operra", pillar, recent = [], langu
 The audience is hotel owners and managers in Tanzania and East Africa.
 
 ${pillars}
-${topLines}
+${steerLines}${topLines}
 ## Approved facts
 You may ONLY state figures, statistics or client claims that appear here verbatim.
 If you want a number that is not listed, write the post with no number at all.

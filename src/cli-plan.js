@@ -11,6 +11,8 @@ import { writePost, nextPillar, findUnapprovedFigures } from "./brain.js";
 import { generateBackground } from "./background.js";
 import { renderPoster } from "./render.js";
 import { readQueue, writeQueue, recentPosts } from "./queue.js";
+import { existsSync } from "node:fs";
+import { readFile } from "node:fs/promises";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const args = process.argv.slice(2);
@@ -30,10 +32,16 @@ const postHour = Number(process.env.POST_HOUR ?? 9);
 const queue = await readQueue();
 const planned = [];
 
+// Written by cli-metrics.js from real engagement; absent on the first run.
+const scoresPath = path.join(ROOT, "state", "pillar-scores.json");
+const pillarScores = existsSync(scoresPath)
+  ? JSON.parse(await readFile(scoresPath, "utf8"))
+  : null;
+
 for (let day = 0; day < count; day++) {
   // Newest first — nextPillar() and the dedupe list both read position 0 as "last post".
   const recent = [...planned].reverse().concat(await recentPosts());
-  const pillar = nextPillar(recent);
+  const pillar = nextPillar(recent, pillarScores);
 
   let post;
   try {

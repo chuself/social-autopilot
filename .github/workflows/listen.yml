@@ -1,0 +1,36 @@
+name: listen
+
+# Every 15 minutes: pick up whatever you told the bot on Telegram.
+# Telegram holds messages for 24h, so nothing is lost between runs.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+concurrency: autopilot-state
+
+jobs:
+  listen:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+
+      - name: Read the inbox
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node src/cli-listen.js
+
+      - name: Save instructions
+        run: |
+          git config user.name "social-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase --autostash
+          git add -f state/steer.md state/telegram-offset.json state/PAUSED 2>/dev/null || true
+          git add -A state
+          git diff --staged --quiet || git commit -m "chore: instructions from Telegram [skip ci]"
+          git push

@@ -53,6 +53,17 @@ const top = [...merged.values()]
   .filter((s) => s.headline);
 
 await writeFile(path.join(ROOT, "state", "top-performers.json"), JSON.stringify(top, null, 2));
+
+// Per-pillar averages: this is what makes pillar selection self-tuning.
+const byPillar = {};
+for (const s of merged.values()) {
+  if (!s.pillar) continue;
+  (byPillar[s.pillar] ??= []).push(s.engagement);
+}
+const pillarScores = Object.fromEntries(
+  Object.entries(byPillar).map(([k, v]) => [k, v.reduce((a, b) => a + b, 0) / v.length])
+);
+await writeFile(path.join(ROOT, "state", "pillar-scores.json"), JSON.stringify(pillarScores, null, 2));
 console.log(`scored ${scored.length} posts, wrote ${top.length} top performers`);
 for (const t of top) console.log(`  ${t.engagement} (${t.platforms.join("+")}) — [${t.pillar}] ${t.headline}`);
 
