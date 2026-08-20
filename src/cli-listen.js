@@ -142,12 +142,18 @@ async function statusText() {
     "",
   ];
   for (const p of upcoming.slice(0, 8)) {
-    lines.push(`• ${p.scheduledFor.slice(0, 10)} [${p.language ?? "--"}] ${p.headline}`);
+    lines.push(`• ${eat(p.scheduledFor)} [${p.language ?? "--"}] ${p.headline}`);
   }
   if (existsSync(STEER)) {
     lines.push("", "<b>Your standing instructions:</b>", escapeHtml(await readFile(STEER, "utf8")).trim());
   }
   return lines.join("\n");
+}
+
+/** Render a stored UTC timestamp in East Africa Time. */
+function eat(iso) {
+  const d = new Date(new Date(iso).getTime() + 3 * 3600_000);
+  return `${d.toISOString().slice(0, 10)} ${d.toISOString().slice(11, 16)}`;
 }
 
 function escapeHtml(s) {

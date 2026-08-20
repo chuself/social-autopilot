@@ -22,6 +22,7 @@ const arg = (name, fallback) => {
   return i >= 0 ? args[i + 1] : fallback;
 };
 
+const EAT_OFFSET = 3; // Tanzania is UTC+3, no DST
 const config = await readConfig();
 // --count is a number of POSTS; they are laid across days using the configured
 // slots, so "3 a day" needs no separate flag.
@@ -73,7 +74,9 @@ for (let n = 0; n < count; n++) {
 
   const scheduledFor = new Date(start);
   scheduledFor.setDate(scheduledFor.getDate() + day);
-  scheduledFor.setHours(hour, 0, 0, 0);
+  // Configured hours are East Africa Time. GitHub runners are UTC, so setting
+  // local hours there would schedule everything three hours early.
+  scheduledFor.setUTCHours(hour - EAT_OFFSET, 0, 0, 0);
 
   const id = `${brandId}-${scheduledFor.toISOString().slice(0, 10)}-${String(hour).padStart(2, "0")}-${pillar}`;
 
