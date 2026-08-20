@@ -10,6 +10,9 @@ on:
       dry_run:
         description: "1 = log only, post nothing"
         default: "0"
+      auto_approve_hours:
+        description: "Hours before a pending post goes out (0 = immediately)"
+        default: "24"
 
 concurrency: autopilot-state
 
@@ -40,7 +43,7 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          AUTO_APPROVE_HOURS: "24"
+          AUTO_APPROVE_HOURS: ${{ inputs.auto_approve_hours || '24' }}
         run: node src/cli-publish.js
 
       - name: Record what went out
