@@ -26,5 +26,33 @@
       "facebook",
       "instagram"
     ]
+  },
+  {
+    "id": "operra-2026-08-20-08-client-proof",
+    "platform": "facebook",
+    "pillar": "client-proof",
+    "headline": "Kila idara inatumia mfumo kwa lugha inayoielewa",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
+    "id": "operra-2026-08-20-13-swahili-tip",
+    "platform": "facebook",
+    "pillar": "swahili-tip",
+    "headline": "Kagua usafi wa chumba kabla ya kumpa mteja ufunguo",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
   }
 ]
