@@ -250,5 +250,59 @@
     "scheduledFor": "2026-08-27T09:00:00.000Z",
     "createdAt": "2026-08-20T19:51:00.147Z",
     "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-20-08-client-proof",
+    "eyebrow": "Usimamizi wa Idara",
+    "headline": "Kila idara inatumia mfumo kwa lugha inayoielewa",
+    "body": "Wafanyakazi wa mapokezi na usafi wanatumia mfumo mmoja kwa Kiswahili au Kiingereza. Kazi zinaenda bila kukwama wala kuhitaji mafunzo magumu.",
+    "cta": "Tazama mfumo",
+    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi—kutoka mapokezi hadi usafi—anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
+    "hashtags": [
+      "#HotelierTanzania",
+      "#UsimamiziWaHoteli",
+      "#OperraTech",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "A subtle close-up of a neat reception ledger and key cards on a dark polished wooden counter, positioned low and on the right side of the frame. Soft moody lighting with deep purple #a478ff shadows and muted teal #36d2ba reflections. Left side remains empty and atmospheric. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-20-08-client-proof.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-20T08:00:00.000Z",
+    "createdAt": "2026-08-20T20:17:57.456Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-20-13-swahili-tip",
+    "eyebrow": "Usafi Wa Vyumba",
+    "headline": "Kagua usafi wa chumba kabla ya kumpa mteja ufunguo",
+    "body": "Usimamizi mzuri wa vyumba unahitaji ukaguzi wa haraka wa maeneo makuu matano kabla chumba hakijaripotiwa kuwa tayari kwenye mfumo.",
+    "cta": "Tazama mfumo",
+    "caption": "Mteja kuingia kwenye chumba kilichosafishwa nusu ni kosa linaloharibu sifa ya hoteli yako mara moja.\n\nHakikisha kila asubuhi msimamizi wa usafi anakagua mambo makuu matano: usafi wa bafu, taulo mpya, viyoyozi vinavyofanya kazi, taa, na harufu ya chumba kabla ya kubadili hali ya chumba kuwa Tayari.\n\nOperra inasaidia timu yako ya usafi kutoa taarifa za vyumba vilivyo tayari papo hapo bila kupiga simu mapokezi.\n\noperra.tech",
+    "hashtags": [
+      "#HotelTanzania",
+      "#UsimamiziWaHoteli",
+      "#HousekeepingTips",
+      "#HospitalityTZ"
+    ],
+    "imagePrompt": "A quiet, modern hotel corridor with warm ambient lighting casting soft shadows on clean wooden room doors, low contrast background, abstract violet and teal tones incorporating #a478ff and #36d2ba visual accents, main subject positioned right-of-centre, clear space on the left, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-20-13-swahili-tip.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-20T13:00:00.000Z",
+    "createdAt": "2026-08-20T20:19:11.350Z",
+    "status": "pending"
   }
 ]

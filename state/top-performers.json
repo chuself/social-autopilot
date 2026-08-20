@@ -12,5 +12,19 @@
       "facebook",
       "instagram"
     ]
+  },
+  {
+    "id": "operra-2026-08-20-pain-point",
+    "platform": "facebook",
+    "pillar": "pain-point",
+    "headline": "Kufunga hesabu za siku hakupaswi kuchukua masaa",
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "engagement": 0,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
   }
 ]
