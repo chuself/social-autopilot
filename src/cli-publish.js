@@ -14,8 +14,7 @@ import path from "node:path";
 import { publisherFor } from "./publish/index.js";
 import { readQueue, writeQueue, duePosts } from "./queue.js";
 import {
-  isPaused, isDryRun, postedTodayCount, assertAssetReachable,
-  MAX_POSTS_PER_PLATFORM_PER_DAY,
+  isPaused, isDryRun, postedTodayCount, assertAssetReachable, maxPostsPerDay,
 } from "./guards.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -40,6 +39,7 @@ if (!posts.length) {
   process.exit(0);
 }
 
+const dailyCap = await maxPostsPerDay();
 const history = existsSync(path.join(ROOT, "state", "history.json"))
   ? JSON.parse(await readFile(path.join(ROOT, "state", "history.json"), "utf8"))
   : [];
@@ -66,7 +66,7 @@ for (const post of posts) {
 
   for (const platform of post.platforms ?? []) {
     const already = await postedTodayCount(platform);
-    if (already >= MAX_POSTS_PER_PLATFORM_PER_DAY) {
+    if (already >= dailyCap) {
       console.log(`  skip ${platform}: daily cap reached (${already})`);
       continue;
     }

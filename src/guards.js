@@ -2,8 +2,18 @@ import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
+import { readConfig } from "./config.js";
+
 const ROOT = path.resolve(import.meta.dirname, "..");
-export const MAX_POSTS_PER_PLATFORM_PER_DAY = 2;
+
+/**
+ * Ceiling, not a target: the configured cadence plus one, so a retry or a
+ * manual post still fits but a bug cannot spam the account.
+ */
+export async function maxPostsPerDay() {
+  const { postsPerDay } = await readConfig();
+  return Math.max(2, postsPerDay + 1);
+}
 
 /** Kill switch: `git commit` an empty state/PAUSED file to stop all publishing. */
 export function isPaused() {
