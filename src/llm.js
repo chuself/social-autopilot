@@ -37,11 +37,17 @@ const gemini = {
   async run(prompt) {
     let last;
     for (const model of GEMINI_MODELS) {
-      try {
-        return await callGemini(model, prompt);
-      } catch (err) {
-        last = err;
-        console.warn(`  gemini/${model}: ${err.message.slice(0, 90)}`);
+      // Two goes per model: a transient network blip should not cost a day's post.
+      for (let attempt = 1; attempt <= 2; attempt++) {
+        try {
+          return await callGemini(model, prompt);
+        } catch (err) {
+          last = err;
+          const transient = /fetch failed|ECONN|ETIMEDOUT|socket|network|high demand|503|429/i.test(err.message);
+          console.warn(`  gemini/${model}${attempt > 1 ? " (retry)" : ""}: ${err.message.slice(0, 90)}`);
+          if (!transient) break;
+          if (attempt === 1) await new Promise((r) => setTimeout(r, 4000));
+        }
       }
     }
     throw last;

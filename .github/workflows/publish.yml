@@ -24,6 +24,15 @@ jobs:
         with: { node-version: 22, cache: npm }
       - run: npm ci --omit=dev || npm install --omit=dev
 
+      # Your rejections in the Sheet must be honoured before anything goes out.
+      - name: Pull approvals from the Sheet
+        continue-on-error: true
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
+        run: node src/cli-sheet.js
+
       - name: Publish anything due
         env:
           DRY_RUN: ${{ inputs.dry_run || '0' }}

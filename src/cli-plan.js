@@ -22,6 +22,9 @@ const arg = (name, fallback) => {
 const count = Number(arg("count", 7));
 const brandId = arg("brand", "operra");
 const start = arg("start") ? new Date(arg("start")) : new Date();
+// Free-text steering for one run, e.g.
+//   --note "push the new POS module, and sound urgent — high season starts next week"
+const note = arg("note") ?? process.env.PLAN_NOTE ?? null;
 const postHour = Number(process.env.POST_HOUR ?? 9);
 
 const queue = await readQueue();
@@ -34,7 +37,7 @@ for (let day = 0; day < count; day++) {
 
   let post;
   try {
-    post = await writePost({ brandId, pillar, recent });
+    post = await writePost({ brandId, pillar, recent, note });
   } catch (err) {
     console.error(`day ${day + 1} (${pillar}): brain failed — ${err.message}`);
     continue;

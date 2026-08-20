@@ -14,6 +14,20 @@ export const PILLARS = [
   "industry-note",
 ];
 
+/**
+ * The audience is Tanzanian hoteliers, so the feed leans Kiswahili: 4 of every 6
+ * posts. English is kept for the two pillars where it reads more naturally —
+ * hard numbers and regional industry commentary.
+ */
+export const PILLAR_LANGUAGE = {
+  "feature-spotlight": "sw",
+  "pain-point": "sw",
+  "number-that-lands": "en",
+  "client-proof": "sw",
+  "swahili-tip": "sw",
+  "industry-note": "en",
+};
+
 /** Round-robin, continuing from wherever the last plan stopped. */
 export function nextPillar(recent) {
   const last = recent.find((r) => PILLARS.includes(r.pillar))?.pillar;
@@ -21,7 +35,8 @@ export function nextPillar(recent) {
   return PILLARS[(i + 1) % PILLARS.length];
 }
 
-export async function writePost({ brandId = "operra", pillar, recent = [] }) {
+export async function writePost({ brandId = "operra", pillar, recent = [], language, note }) {
+  language ??= PILLAR_LANGUAGE[pillar] ?? "en";
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
   const pillars = await readFile(path.join(brandDir, "pillars.md"), "utf8");
@@ -64,6 +79,10 @@ ${recentLines}
 
 ## Your task
 Write ONE post for the pillar: **${pillar}**.
+${note ? `
+**Direction for this run — this overrides the usual angle:**
+${note}
+` : ""}
 
 Return ONLY a JSON object with these keys:
 - "eyebrow": 1-2 words, the module or theme (e.g. "Front desk", "Housekeeping"). Title case.
@@ -78,10 +97,15 @@ Return ONLY a JSON object with these keys:
   The headline is laid over the left side, so keep the subject right-of-centre and low contrast.
 - "template": "spotlight"
 
-${pillar === "swahili-tip" ? "Write the headline, body and caption in natural Tanzanian Kiswahili — not translated English. Keep the eyebrow and cta in Kiswahili too." : ""}`;
+${language === "sw"
+  ? `Write EVERY field — eyebrow, headline, body, cta, caption — in natural Tanzanian Kiswahili.
+Write it as a Tanzanian hotelier speaks, not as translated English. Avoid stiff textbook
+Kiswahili and avoid direct word-for-word renderings of English marketing phrases.
+Hashtags may stay in English where that is what people actually search.`
+  : "Write in English."}`;
 
   const post = await completeJson(prompt);
-  return { ...post, pillar, brand: brandId };
+  return { ...post, pillar, language, brand: brandId };
 }
 
 /**

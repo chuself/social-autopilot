@@ -30,5 +30,195 @@
     "postIds": [
       "facebook:1049514968255534_122140156947351110"
     ]
+  },
+  {
+    "id": "operra-2026-08-21-pain-point",
+    "eyebrow": "Ripoti za Siku",
+    "headline": "Saa sita usiku bado unapitia risiti za karatasi?",
+    "body": "Operra inaunganisha mapokezi na mgahawa ili kupata ripoti sahihi ya mauzo hapo hapo, bila kulazimika kusubiri usiku wa manane kufanya mahesabu.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Kulala ukiwa na wasiwasi kama hesabu za bar na mapokezi zimeoana ni mateso ya kila siku kwa mmiliki wa hoteli. 💤\n\nUkijaribu kusawazisha vitabu vya risiti kwa mkono, makosa madogo ya kibinadamu yanapoteza fedha zako. Operra inaleta mauzo yote kwenye mfumo mmoja rahisi unaofanya kazi hata kwenye mtandao mdogo wa simu.\n\nTembelea operra.tech",
+    "hashtags": [
+      "#HotelManagementTanzania",
+      "#OperraTech",
+      "#UsimamiziWaHoteli",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "An abstract dark photographic background of a modern hotel reception desk at night, dimly lit, with no text, no people, and no logos. The color grading features deep purple #a478ff and teal #36d2ba tones. The composition has the main subject positioned right-of-centre with very low contrast, leaving the left side dark and empty for text overlay.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-21-pain-point.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-21T06:00:00.000Z",
+    "createdAt": "2026-08-20T19:13:36.802Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-22-number-that-lands",
+    "eyebrow": "Audit Trail",
+    "headline": "Every transaction is tracked",
+    "body": "Operra records every payment, booking change, and refund automatically. Know exactly who did what, and when.",
+    "cta": "See it work",
+    "caption": "Where does the revenue go when you are not at the property? Discrepancies in daily receipts can quietly drain your profits.\n\nOperra logs every transaction, reservation edit, and voided sale automatically. Your audit trail stays complete even on low-bandwidth connections.\n\nKeep your revenue secure at operra.tech.",
+    "hashtags": [
+      "#HotelManagement",
+      "#EastAfricaHospitality",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "An abstract minimal background with subtle geometric patterns. High-end dark color grade featuring #a478ff and #36d2ba. Low contrast, with elements concentrated on the right-of-centre. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-22-number-that-lands.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T06:00:00.000Z",
+    "createdAt": "2026-08-20T19:14:22.548Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-23-client-proof",
+    "eyebrow": "Uendeshaji",
+    "headline": "Kazi haisimami hata mtandao ukiwa chini",
+    "body": "Operra inafanya kazi vizuri kwenye mtandao mdogo wa hapa nchini. Huna haja ya kuwa na intaneti ya kasi kubwa ili kusimamia hoteli yako vizuri.",
+    "cta": "Jaribu Operra leo",
+    "caption": "Changamoto ya mtandao isikurudishe nyuma kwenye huduma. Hoteli nyingi za hapa Tanzania zinakabiliwa na mtandao unaosuasua. Operra imeundwa mahususi kufanya kazi vizuri hata kwenye mtandao wa hali ya chini (low-bandwidth). Kuanzia mapokezi hadi jikoni, kila kitu kinaenda bila kukwama. Badili mfumo wako leo ili urahisishe uendeshaji wa hoteli yako.\n\noperra.tech",
+    "hashtags": [
+      "#HotelManagementTanzania",
+      "#OperraTech",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "Abstract photographic background of a modern, minimalist hotel reception desk at night. No people, no text, no logos. Dark color grade with deep violet (#a478ff) and cool teal (#36d2ba) tones. Soft, low-contrast lighting, with the main subject shifted to the right-of-centre, leaving the left side dark and clean for text overlay.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-23-client-proof.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-23T06:00:00.000Z",
+    "createdAt": "2026-08-20T19:15:07.414Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-24-swahili-tip",
+    "eyebrow": "Uendeshaji",
+    "headline": "Kagua chumba kabla mteja hajaondoka",
+    "body": "Zuia hasara ya vinywaji vya mini-bar na vifaa vya chumba kwa kufanya ukaguzi wa haraka kabla ya kukata risiti ya mwisho.",
+    "cta": "Jaribu Operra",
+    "caption": "Kila hoteli imeshawahi kupoteza taulo au vinywaji vya mini-bar kwa sababu tu ukaguzi ulifanyika mteja ashaondoka. 🔑 Weka utaratibu huu: housekeeping wakague chumba haraka mteja anapoomba kuondoka, na kutoa taarifa mapokezi kabla ya risiti kuchapishwa.\n\nOperra inarahisisha mawasiliano haya ya papo hapo kati ya housekeeping na mapokezi bila kupiga simu.\n\nPunguza hasara leo. Tembelea operra.tech.",
+    "hashtags": [
+      "#HotelOperations",
+      "#TanzaniaHospitality",
+      "#Operra",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "An abstract, low-contrast photographic background of a minimalist hotel hallway with a single dim lamp on the right-hand wall. Dark purple #a478ff and teal #36d2ba color grade. No text, no people, no logos. Left side is dark and completely empty for text overlay.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-24-swahili-tip.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-24T06:00:00.000Z",
+    "createdAt": "2026-08-20T19:15:51.720Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-25-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Local travelers expect instant check-ins",
+    "body": "With regional travel rising, front desk and housekeeping must sync instantly to avoid lobby delays.",
+    "cta": "Simplify your operations",
+    "caption": "East African travelers are moving faster than ever. They book on the go and expect their rooms ready the moment they step into your lobby.\n\nIf your front desk is still calling housekeeping to check room status, guests wait. Operra syncs your reception and cleaning teams instantly, even on low-bandwidth connections. Keep your service fast and your reviews high.\n\nLearn more at operra.tech",
+    "hashtags": [
+      "HospitalityEastAfrica",
+      "HotelManagement",
+      "TanzaniaTourism",
+      "HotelOperations"
+    ],
+    "imagePrompt": "A moody, minimalist photograph of a modern hotel reception counter in East Africa. No people, no text, no logos. Deep shadows with a dark violet #a478ff and teal #36d2ba color grade. The main reception desk is positioned on the right-of-centre, leaving the left side dark, clean, and low-contrast for text overlay.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-25-industry-note.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-25T06:00:00.000Z",
+    "createdAt": "2026-08-20T19:16:36.728Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-26-feature-spotlight",
+    "eyebrow": "Ukaguzi wa Ndani",
+    "headline": "Kila muamala una historia yake kamili",
+    "body": "Operra inaweka kumbukumbu ya kila malipo, punguzo la bei, au badiliko la chumba. Hakuna kufutana lawama kwenye mapokezi au hesabu za usiku.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Muda wa kukabidhi zamu ukifika, bado unatumia saa nzima kuuliza nani aliyetoa punguzo la bei kwenye chumba namba 10? 🔍\n\nUkiwa na Operra, kila muamala, malipo, au badiliko la bei linaandikwa na kuonyesha nani aliyefanya na kwa muda gani. Hakuna kupoteza muda kwenye vikao vya kuulizana. Kila kitu kiko wazi kwenye ripoti yako ya ukaguzi.\n\nRahisisha usimamizi wa hoteli yako leo. Tembelea operra.tech",
+    "hashtags": [
+      "#HotelManagementTanzania",
+      "#OperraTech",
+      "#HotelOwnersTZ",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "A dark, moody abstract background featuring a sleek modern hotel reception desk keycard reader, shot from a low angle. The scene is right-of-centre with soft, low-contrast lighting. Colour-graded in deep violet (#a478ff) and cool teal (#36d2ba) tones. Completely clean background on the left for text overlay. No people, no text, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-26-feature-spotlight.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-26T06:00:00.000Z",
+    "createdAt": "2026-08-20T19:17:22.018Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "10"
+    ]
+  },
+  {
+    "id": "operra-2026-08-27-pain-point",
+    "eyebrow": "Mapokezi",
+    "headline": "Mteja amefika lakini chumba kina mtu tayari?",
+    "body": "Kuzuia double-booking siyo kazi ya kubahatisha. Operra inaunganisha mapokezi na mauzo yako yote ili kuzuia migongano hii papo hapo.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Hakuna kitu kinacholeta aibu mapokezi kama mteja kufika usiku wa manane na kukuta chumba chake kimeshapangwa kwa mgeni mwingine. Kujaza vitabu kwa mkono au kutumia mifumo isiyosawazisha taarifa huleta migongano hii kila siku.\n\nOperra inamaliza changamoto hii. Mfumo wetu unahuisha hali ya vyumba papo hapo ili kuzuia double-booking kwenye idara zote kwa wakati mmoja.\n\nRahisisha kazi leo kupitia operra.tech.",
+    "hashtags": [
+      "HotelManagement",
+      "TanzaniaHospitality",
+      "Operra",
+      "HotelOwnersTZ"
+    ],
+    "imagePrompt": "A moody, minimalist hotel reception desk at night, softly lit, out of focus. Color graded in dark #a478ff and #36d2ba tones. Left side is clean and dark for text overlay, with the reception desk element positioned right-of-centre. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-27-pain-point.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-27T06:00:00.000Z",
+    "createdAt": "2026-08-20T19:18:07.003Z",
+    "status": "pending"
   }
 ]

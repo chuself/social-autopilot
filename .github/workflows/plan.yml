@@ -54,6 +54,14 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: plan week [skip ci]"
           git push
 
+      - name: Sync the review Sheet
+        continue-on-error: true
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
+        run: node src/cli-sheet.js
+
       - name: Send the digest
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
