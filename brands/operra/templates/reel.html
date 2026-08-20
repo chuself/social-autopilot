@@ -1,0 +1,165 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>reel</title>
+<style>
+  @font-face { font-family: Inter; src: url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: block; }
+  @font-face { font-family: Inter; src: url("../assets/fonts/inter-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: block; }
+  @font-face { font-family: Inter; src: url("../assets/fonts/inter-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: block; }
+  @font-face { font-family: Inter; src: url("../assets/fonts/inter-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: block; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1920px; }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #bg {
+    position: absolute; inset: -6%;
+    background-size: cover; background-position: center;
+    background-color: var(--bg);
+    will-change: transform;
+  }
+  #bg.fallback {
+    background-image:
+      radial-gradient(70% 40% at 74% 24%, color-mix(in srgb, var(--primary) 42%, transparent) 0%, transparent 68%),
+      radial-gradient(80% 50% at 10% 86%, color-mix(in srgb, var(--teal) 20%, transparent) 0%, transparent 64%);
+  }
+  #scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--bg) 58%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 74%, transparent) 40%,
+      color-mix(in srgb, var(--bg) 97%, transparent) 100%);
+  }
+
+  #frame { position: absolute; inset: 0; padding: 130px 90px; display: flex; flex-direction: column; }
+  header { display: flex; align-items: center; justify-content: space-between; }
+  #logo { height: 52px; width: auto; }
+  #eyebrow {
+    font-size: 22px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--primary); border: 1px solid var(--border); background: var(--cardBg);
+    border-radius: var(--pill); padding: 14px 30px;
+  }
+
+  main { margin-top: auto; margin-bottom: auto; }
+  /* Each beat is a full line of the script, revealed one at a time. */
+  .beat {
+    font-size: 92px; font-weight: 600; line-height: 1.12; letter-spacing: -0.025em;
+    color: var(--text); max-width: 16ch; text-wrap: balance;
+    position: absolute; left: 90px; right: 90px;
+    opacity: 0; will-change: opacity, transform;
+  }
+  .beat.small { font-size: 72px; }
+  .beat.xsmall { font-size: 58px; }
+
+  #rule { width: 110px; height: 8px; border-radius: 8px; background: var(--primary); opacity: 0; }
+
+  footer { display: flex; align-items: center; justify-content: space-between; }
+  #cta {
+    font-size: 30px; font-weight: 600; color: var(--bg);
+    background: var(--primary); border-radius: var(--pill); padding: 26px 52px;
+    opacity: 0; will-change: opacity, transform;
+  }
+  #site { font-size: 30px; font-weight: 500; color: var(--textLight); opacity: 0; }
+
+  /* Progress hairline — gives the viewer a reason to stay. */
+  #progress { position: absolute; left: 0; top: 0; height: 6px; background: var(--primary); width: 0; }
+</style>
+
+<div id="bg" class="fallback"></div>
+<div id="scrim"></div>
+<div id="progress"></div>
+<div id="frame">
+  <header>
+    <img id="logo" alt="">
+    <span id="eyebrow"></span>
+  </header>
+  <main id="beats"></main>
+  <footer>
+    <span id="cta"></span>
+    <span id="site"></span>
+  </footer>
+</div>
+
+<script>
+  /**
+   * Deterministic seeking: nothing animates on its own. The renderer calls
+   * setFrame(t) for each timestamp, so frame N is identical on every run and
+   * the video always matches the voiceover length.
+   */
+  window.__reel = { beats: [], duration: 8 };
+
+  function ease(x) { return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+  function clamp01(x) { return Math.max(0, Math.min(1, x)); }
+
+  window.setFrame = function (t) {
+    const { beats, duration } = window.__reel;
+    const n = beats.length || 1;
+    const intro = 0.45;
+    const outro = 1.5;
+    const body = Math.max(1, duration - outro);
+    const per = (body - intro) / n;
+
+    // Background drifts slowly the whole way — motion without distraction.
+    const p = clamp01(t / duration);
+    document.getElementById("bg").style.transform =
+      `scale(${1.04 + p * 0.09}) translate3d(${-p * 14}px, ${-p * 22}px, 0)`;
+    document.getElementById("progress").style.width = `${p * 100}%`;
+
+    // Header settles in the first half second.
+    const h = ease(clamp01(t / intro));
+    document.getElementById("logo").style.opacity = h;
+    document.getElementById("eyebrow").style.opacity = h;
+    document.getElementById("eyebrow").style.transform = `translateY(${(1 - h) * 18}px)`;
+
+    // One beat at a time: in, hold, out.
+    beats.forEach((_, i) => {
+      const el = document.getElementById(`beat-${i}`);
+      const start = intro + i * per;
+      const local = t - start;
+      let o = 0, y = 26;
+      if (local >= 0 && local < per) {
+        const inP = ease(clamp01(local / 0.4));
+        const outP = ease(clamp01((per - local) / 0.35));
+        o = Math.min(inP, outP);
+        y = (1 - inP) * 26;
+      }
+      el.style.opacity = o;
+      el.style.transform = `translateY(${y}px)`;
+    });
+
+    const ruleOn = ease(clamp01((t - intro) / 0.5));
+    document.getElementById("rule").style.opacity = ruleOn * 0.9;
+
+    // The CTA lands for the final beat and stays.
+    const c = ease(clamp01((t - (duration - outro)) / 0.5));
+    document.getElementById("cta").style.opacity = c;
+    document.getElementById("cta").style.transform = `translateY(${(1 - c) * 20}px)`;
+    document.getElementById("site").style.opacity = c;
+  };
+
+  window.buildReel = function (config) {
+    window.__reel = config;
+    const host = document.getElementById("beats");
+    host.innerHTML = "";
+    config.beats.forEach((text, i) => {
+      const el = document.createElement("div");
+      el.className = "beat" + (text.length > 58 ? " xsmall" : text.length > 34 ? " small" : "");
+      el.id = `beat-${i}`;
+      el.textContent = text;
+      host.appendChild(el);
+    });
+    const rule = document.createElement("div");
+    rule.id = "rule";
+    rule.style.position = "absolute";
+    rule.style.left = "90px";
+    rule.style.bottom = "-70px";
+    host.appendChild(rule);
+    window.setFrame(0);
+  };
+</script>

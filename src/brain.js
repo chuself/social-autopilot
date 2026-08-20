@@ -67,6 +67,47 @@ export function ctaLink(brand, postId) {
   return `https://wa.me/${number.replace(/\D/g, "")}?text=${encodeURIComponent(text)}`;
 }
 
+/**
+ * Turn an approved post into a spoken reel script. Reuses the post's own angle
+ * so the reel and the poster say the same thing — one idea, two formats.
+ */
+export async function writeReelScript(post, brandId = "operra") {
+  const brandDir = path.join(ROOT, "brands", brandId);
+  const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
+  const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
+  const sw = post.language === "sw";
+
+  const script = await completeJson(
+    `Turn this into a short vertical video script for ${brand.name}, a hotel management
+system in Tanzania. The audience is hotel owners and managers.
+
+Headline: ${post.headline}
+Body: ${post.body}
+
+## The only facts you may state
+${facts}
+Never state a price, phone number or statistic that is not listed above.
+
+Return ONLY JSON:
+{
+  "beats": ["3 to 4 on-screen lines"],
+  "narration": "what the voice says, one flowing paragraph",
+  "hook": "the first 3 words, must stop a thumb"
+}
+
+Rules:
+- "beats" appear one at a time on screen. Each is at most 7 words. The first is the hook.
+- The last beat names the payoff, not the product.
+- "narration" is 30-45 words, spoken naturally, and must cover the same ground as the
+  beats without reading them word for word.
+- ${sw
+      ? "Write EVERYTHING in natural Tanzanian Kiswahili, as a hotelier speaks."
+      : "Write in English."}
+- No URLs, no phone numbers, no emoji.`
+  );
+  return script;
+}
+
 export async function writePost({ brandId = "operra", pillar, recent = [], language, note }) {
   language ??= PILLAR_LANGUAGE[pillar] ?? "en";
   const brandDir = path.join(ROOT, "brands", brandId);

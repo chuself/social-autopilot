@@ -4,3 +4,5 @@ public/*.png
 state/PAUSED
 .page-token
 secrets/
+state/frames/
+state/audio/

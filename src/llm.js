@@ -9,7 +9,16 @@
 // model id is a real outage risk for an unattended poster.
 const GEMINI_MODELS = process.env.GEMINI_MODEL
   ? [process.env.GEMINI_MODEL]
-  : ["gemini-3.5-flash", "gemini-flash-latest", "gemini-3.6-flash", "gemini-2.5-flash"];
+  : [
+      // Full models first for quality, then the lite tier — which draws on a
+      // SEPARATE free quota pool, so it keeps working after the others are spent.
+      "gemini-3.5-flash",
+      "gemini-flash-latest",
+      "gemini-3.6-flash",
+      "gemini-3-flash-preview",
+      "gemini-3.1-flash-lite",
+      "gemini-flash-lite-latest",
+    ];
 const GROQ_MODEL = process.env.GROQ_MODEL ?? "llama-3.3-70b-versatile";
 
 export async function completeJson(prompt, { schemaHint } = {}) {

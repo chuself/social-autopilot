@@ -69,7 +69,7 @@
     "headline": "Kila idara inatumia mfumo kwa lugha inayoielewa",
     "body": "Wafanyakazi wa mapokezi na usafi wanatumia mfumo mmoja kwa Kiswahili au Kiingereza. Kazi zinaenda bila kukwama wala kuhitaji mafunzo magumu.",
     "cta": "Tazama mfumo",
-    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi\u2014kutoka mapokezi hadi usafi\u2014anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
+    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi—kutoka mapokezi hadi usafi—anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
     "hashtags": [
       "#HotelierTanzania",
       "#UsimamiziWaHoteli",
@@ -152,7 +152,20 @@
     ],
     "scheduledFor": "2026-08-21T05:00:00.000Z",
     "createdAt": "2026-08-20T20:36:04.578Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-21-08-number-that-lands.mp4",
+      "beats": [
+        "Track every payment instantly",
+        "See who changed rates",
+        "Even on slow internet",
+        "Complete team accountability"
+      ],
+      "narration": "Stop wondering who checked in that guest or changed a room rate. Operra tracks every single front desk action and payment instantly, even on low-bandwidth connections. Keep your team accountable and your Tanzanian hotel running smoothly in English or Kiswahili.",
+      "hasVoice": true,
+      "builtAt": "2026-08-20T22:23:28.090Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-21-13-client-proof",
@@ -160,7 +173,7 @@
     "headline": "Idara sita za hoteli zimeunganishwa sehemu moja",
     "body": "Hoteli zinazotumia Operra zinasimamia mapokezi, usafi, POS na ripoti za fedha kwenye mfumo mmoja bila kutumia vitabu vingi vya hesabu.",
     "cta": "Tazama mfumo",
-    "caption": "Unapokuwa na vitabu tofauti vya mapokezi, bar na usafi, taarifa za fedha ni rahisi kupotea.\n\nOperra inaunganisha idara zote sita za hoteli\u2014mapokezi, usafi wa vyumba, mauzo ya POS, upangaji bei na ripoti za kila siku. Kazi inaenda kwa haraka na usahihi bila urasimu.\n\nPata picha kamili ya uendeshaji wa hoteli yako. \ud83d\udcca\n\noperra.tech",
+    "caption": "Unapokuwa na vitabu tofauti vya mapokezi, bar na usafi, taarifa za fedha ni rahisi kupotea.\n\nOperra inaunganisha idara zote sita za hoteli—mapokezi, usafi wa vyumba, mauzo ya POS, upangaji bei na ripoti za kila siku. Kazi inaenda kwa haraka na usahihi bila urasimu.\n\nPata picha kamili ya uendeshaji wa hoteli yako. 📊\n\noperra.tech",
     "hashtags": [
       "#HoteliTanzania",
       "#UsimamiziWaHoteli",
@@ -348,7 +361,7 @@
     "headline": "Kagua kiyoyozi na maji ya moto kabla ya mteja",
     "body": "Mteja anapokuta kifaa kibovu chumbani, unapoteza uaminifu. Ukaguzi mfupi wa kila asubuhi unapunguza malalamiko na kulinda biashara yako.",
     "cta": "Tazama zaidi",
-    "caption": "Kero kubwa ya mgeni ni kuingia chumbani usiku na kukuta maji ya moto hayatoki au kiyoyozi kina shida. \ud83d\udd11\n\nBadala ya kusubiri mteja alalamike mapokezi, weka utaratibu wa wahudumu kukagua mifumo yote kabla ya kumpa mteja ufunguo. Hii inapunguza malalamiko na kulinda heshima ya hoteli yako.\n\nOperra inakusaidia kufuatilia hali ya kila chumba kwa urahisi.\n\noperra.tech",
+    "caption": "Kero kubwa ya mgeni ni kuingia chumbani usiku na kukuta maji ya moto hayatoki au kiyoyozi kina shida. 🔑\n\nBadala ya kusubiri mteja alalamike mapokezi, weka utaratibu wa wahudumu kukagua mifumo yote kabla ya kumpa mteja ufunguo. Hii inapunguza malalamiko na kulinda heshima ya hoteli yako.\n\nOperra inakusaidia kufuatilia hali ya kila chumba kwa urahisi.\n\noperra.tech",
     "hashtags": [
       "#HospitalityTZ",
       "#HotelManagement",
