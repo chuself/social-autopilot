@@ -1,0 +1,31 @@
+[
+  {
+    "id": "operra-2026-08-20-feature-spotlight",
+    "eyebrow": "Housekeeping",
+    "headline": "Know which rooms are ready instantly",
+    "body": "Your front desk sees room status updates the moment housekeeping finishes. No internal phone calls. Faster check-ins.",
+    "cta": "See it work",
+    "caption": "Guests are waiting in your lobby after a long safari. Your front desk team is calling housekeeping to check if room 204 is ready.\n\nWith Operra, the moment housekeeping updates a room's status, the front desk sees it instantly. No internal phone calls. No manual checks. Just faster check-ins.\n\noperra.tech",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#Operra",
+      "#HotelPMS"
+    ],
+    "imagePrompt": "A minimalist, low-contrast photograph of a neatly made luxury hotel bed with crisp linens, positioned right-of-centre. Dark color grade with deep violet #a478ff and teal #36d2ba accents. Soft moody lighting. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "brand": "operra",
+    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-20-feature-spotlight.png",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-20T06:00:00.000Z",
+    "createdAt": "2026-08-20T18:16:16.819Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "204"
+    ]
+  }
+]
