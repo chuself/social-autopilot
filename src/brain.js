@@ -54,6 +54,19 @@ export function nextPillar(recent, scores = null) {
   return next;
 }
 
+/**
+ * The call to action. A wa.me deep link carries a per-post tag in the prefilled
+ * message, so an incoming WhatsApp says which post produced it — that is what
+ * lets the feedback loop optimise for conversations instead of likes.
+ */
+export function ctaLink(brand, postId) {
+  const number = process.env.WHATSAPP_CTA_NUMBER;
+  if (!number) return brand.site;
+  const tag = postId ? postId.replace(/^operra-/, "") : "";
+  const text = `Habari, nimeona post yenu${tag ? ` [${tag}]` : ""}. Nataka kujua zaidi kuhusu Operra.`;
+  return `https://wa.me/${number.replace(/\D/g, "")}?text=${encodeURIComponent(text)}`;
+}
+
 export async function writePost({ brandId = "operra", pillar, recent = [], language, note }) {
   language ??= PILLAR_LANGUAGE[pillar] ?? "en";
   const brandDir = path.join(ROOT, "brands", brandId);
@@ -125,7 +138,8 @@ Return ONLY a JSON object with these keys:
 - "body": 15-30 words expanding the headline. Plain, specific.
 - "cta": 2-4 words (e.g. "See it work", "Book a demo").
 - "caption": 40-90 words for the post itself. Opens with a hook a hotelier would recognise.
-  Ends with ${brand.site}. Line breaks allowed. At most one emoji, only if it genuinely helps.
+  Do NOT include any URL or phone number — the link is appended automatically.
+  Line breaks allowed. At most one emoji, only if it genuinely helps.
 - "hashtags": array of 3-5 hashtags, relevant, no spam.
 - "imagePrompt": a photographic or abstract background description. MUST specify
   "no text, no people, no logos" and a dark ${brand.colors.primary}/${brand.colors.teal} colour grade.

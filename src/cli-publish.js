@@ -12,6 +12,8 @@ import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { publisherFor } from "./publish/index.js";
+import { ctaLink } from "./brain.js";
+import { readFile as readFileAsync } from "node:fs/promises";
 import { readQueue, writeQueue, duePosts } from "./queue.js";
 import {
   isPaused, isDryRun, postedTodayCount, assertAssetReachable, maxPostsPerDay,
@@ -61,7 +63,14 @@ for (const post of posts) {
     }
   }
 
-  const caption = [post.caption, (post.hashtags ?? []).join(" ")].filter(Boolean).join("\n\n");
+  // The link is appended at send time, not written into the queue, so changing
+  // the WhatsApp number never means regenerating a week of posts.
+  const brand = JSON.parse(
+    await readFileAsync(path.join(ROOT, "brands", post.brand ?? "operra", "brand.json"), "utf8")
+  );
+  const caption = [post.caption, ctaLink(brand, post.id), (post.hashtags ?? []).join(" ")]
+    .filter(Boolean)
+    .join("\n\n");
   const results = [];
 
   for (const platform of post.platforms ?? []) {
