@@ -27,6 +27,22 @@ export async function writePost({ brandId = "operra", pillar, recent = [] }) {
   const pillars = await readFile(path.join(brandDir, "pillars.md"), "utf8");
   const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
 
+  // What has actually worked here beats any style rule we could write.
+  const topPath = path.join(ROOT, "state", "top-performers.json");
+  let topLines = "";
+  if (existsSync(topPath)) {
+    const top = JSON.parse(await readFile(topPath, "utf8"));
+    if (top.length) {
+      topLines = [
+        "",
+        "## What performs best with this audience",
+        "Study the angle of these, do not copy the wording:",
+        ...top.map((t) => `- [${t.pillar}] ${t.headline}`),
+        "",
+      ].join("\n");
+    }
+  }
+
   const recentLines = recent
     .slice(0, 60)
     .map((r) => `- [${r.pillar}] ${r.headline}`)
@@ -36,7 +52,7 @@ export async function writePost({ brandId = "operra", pillar, recent = [] }) {
 The audience is hotel owners and managers in Tanzania and East Africa.
 
 ${pillars}
-
+${topLines}
 ## Approved facts
 You may ONLY state figures, statistics or client claims that appear here verbatim.
 If you want a number that is not listed, write the post with no number at all.

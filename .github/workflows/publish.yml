@@ -1,69 +1,52 @@
 name: publish
 
+# 09:00 and 17:00 EAT
 on:
+  schedule:
+    - cron: "0 6 * * *"
+    - cron: "0 14 * * *"
   workflow_dispatch:
     inputs:
-      post_file:
-        description: "Post JSON to publish"
-        default: "state/sample-post.json"
       dry_run:
-        description: "1 = render and log only"
-        default: "1"
-  # Phase 3 turns these on. Times are UTC; Tanzania is UTC+3.
-  # schedule:
-  #   - cron: "0 6 * * *"   # 09:00 EAT
-  #   - cron: "0 14 * * *"  # 17:00 EAT
+        description: "1 = log only, post nothing"
+        default: "0"
+
+concurrency: autopilot-state
 
 jobs:
-  # Render first and push the PNG, so Cloudflare Pages is serving it publicly
-  # BEFORE Instagram tries to fetch it. Publishing first always fails.
-  render:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 22, cache: npm }
-      - run: npm ci --omit=dev || npm install --omit=dev
-      - run: npx playwright install --with-deps chromium
-      - run: node src/cli-render.js "${{ inputs.post_file }}"
-      - name: Push the rendered asset
-        run: |
-          git config user.name "social-autopilot"
-          git config user.email "actions@users.noreply.github.com"
-          git add -f public/*.png
-          git diff --staged --quiet || git commit -m "chore: render assets [skip ci]"
-          git push
-
   publish:
-    needs: render
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-        with: { ref: ${{ github.ref }} }
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
       - run: npm ci --omit=dev || npm install --omit=dev
 
-      # Cloudflare Pages needs a moment to deploy the commit above.
-      - name: Wait for the asset to go live
-        run: sleep 90
-
-      - name: Publish
+      - name: Publish anything due
         env:
-          DRY_RUN: ${{ inputs.dry_run }}
+          DRY_RUN: ${{ inputs.dry_run || '0' }}
           PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
-        run: |
-          git pull --rebase
-          node src/cli-publish.js "${{ inputs.post_file }}"
+          AUTO_APPROVE_HOURS: "24"
+        run: node src/cli-publish.js
 
-      - name: Record history
+      - name: Record what went out
         if: ${{ inputs.dry_run != '1' }}
         run: |
           git config user.name "social-autopilot"
           git config user.email "actions@users.noreply.github.com"
-          git add -f state/history.json
+          git pull --rebase --autostash
+          git add -f state/history.json state/queue.json
           git diff --staged --quiet || git commit -m "chore: post history [skip ci]"
           git push
+
+      - name: Shout if publishing failed
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node -e "import('./src/notify.js').then(m=>m.notifyFailure('Publishing FAILED.','See the Actions log.'))"
