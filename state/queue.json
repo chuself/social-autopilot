@@ -69,7 +69,7 @@
     "headline": "Kila idara inatumia mfumo kwa lugha inayoielewa",
     "body": "Wafanyakazi wa mapokezi na usafi wanatumia mfumo mmoja kwa Kiswahili au Kiingereza. Kazi zinaenda bila kukwama wala kuhitaji mafunzo magumu.",
     "cta": "Tazama mfumo",
-    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi—kutoka mapokezi hadi usafi—anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
+    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi\u2014kutoka mapokezi hadi usafi\u2014anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
     "hashtags": [
       "#HotelierTanzania",
       "#UsimamiziWaHoteli",
@@ -128,84 +128,6 @@
     ]
   },
   {
-    "id": "operra-2026-08-20-08-industry-note",
-    "eyebrow": "Operations",
-    "headline": "Unstable internet shouldn't stop your front desk",
-    "body": "East African properties face frequent connectivity drops. Your hotel management system must keep working, even when the internet is slow.",
-    "cta": "See it work",
-    "caption": "Running a hotel in East Africa means dealing with unpredictable internet. When the connection drops, your front desk shouldn't grind to a halt.\n\nOperra is built specifically for local conditions, running smoothly on the low-bandwidth connections common in Tanzanian properties. Keep checking in guests and managing rooms without interruption.\n\nSimplify your operations today.\n\noperra.tech",
-    "hashtags": [
-      "HotelManagement",
-      "TanzaniaHospitality",
-      "EastAfrica"
-    ],
-    "imagePrompt": "An abstract, low-contrast background depicting a modern, dark hotel reception counter from a side angle. No text, no people, no logos. Color-graded with deep purple #a478ff and bright teal #36d2ba. The left side is clean and dark for text overlay.",
-    "template": "spotlight",
-    "pillar": "industry-note",
-    "language": "en",
-    "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-20-08-industry-note.png",
-    "platforms": [
-      "facebook",
-      "instagram"
-    ],
-    "scheduledFor": "2026-08-20T05:00:00.000Z",
-    "createdAt": "2026-08-20T20:33:48.567Z",
-    "status": "pending"
-  },
-  {
-    "id": "operra-2026-08-20-13-feature-spotlight",
-    "eyebrow": "Udhibiti",
-    "headline": "Fuatilia kila mabadiliko ya bei na malipo",
-    "body": "Operra inarekodi kila hatua inayochukuliwa na mfanyakazi wako. Hakuna miamala inayofutika au kubadilishwa bila wewe kujua.",
-    "cta": "Ona inavyofanya kazi",
-    "caption": "Umewahi kukagua hesabu mwisho wa mwezi ukakuta punguzo la bei usilolijua? 🔒\n\nMfumo wa Operra unarekodi kila hatua inayofanyika mapokezi na mgahawani. Kila mabadiliko ya bei au kufuta muamala kunaacha jina la aliyehusika. Hakuna tena maswali yasiyo na majibu wakati wa kufunga hesabu.\n\nFanya usimamizi wa hoteli yako uwe mwepesi na salama leo. Tembelea operra.tech kujifunza zaidi.",
-    "hashtags": [
-      "HotelManagementTanzania",
-      "OperraTech",
-      "TanzaniaHospitality"
-    ],
-    "imagePrompt": "A clean, modern, dark abstract digital interface background with glowing lines. No text, no people, no logos. Color grade of deep purple #a478ff and bright teal #36d2ba. The left side is clean and low contrast to allow overlay text, with abstract glowing nodes clustered on the right-of-centre.",
-    "template": "spotlight",
-    "pillar": "feature-spotlight",
-    "language": "sw",
-    "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-20-13-feature-spotlight.png",
-    "platforms": [
-      "facebook",
-      "instagram"
-    ],
-    "scheduledFor": "2026-08-20T10:00:00.000Z",
-    "createdAt": "2026-08-20T20:34:33.190Z",
-    "status": "pending"
-  },
-  {
-    "id": "operra-2026-08-20-19-pain-point",
-    "eyebrow": "Usimamizi Wa Fedha",
-    "headline": "Nani alipokea malipo ya simu ya mteja?",
-    "body": "Kila malipo ya simu au taslimu yanarekodiwa papo hapo kwenye mfumo ili kuzuia upotevu wa fedha na mkanganyiko wakati wa kukabidhi zamu.",
-    "cta": "Jaribu Operra sasa",
-    "caption": "Mteja anataka ku-check out lakini kumbukumbu ya malipo yake ya simu haionekani kwenye daftari la mapokezi. Unaanza kupigia simu wafanyakazi wa zamu iliyopita kuulizia kama walipokea muamala huo.\n\nHali hii inachelewesha wateja na kuleta mwanya wa kupoteza mapato ya hoteli yako. Ukiwa na Operra, kila malipo yanarekodiwa kwenye mfumo mara moja ili kuzuia mkanganyiko wa hesabu.\n\nRahisisha usimamizi leo kupitia operra.tech",
-    "hashtags": [
-      "#HotelManagement",
-      "#TanzaniaHospitality",
-      "#OperraTech"
-    ],
-    "imagePrompt": "A dark, low-contrast abstract background with a deep violet (#a478ff) and teal (#36d2ba) color grade. On the right side, a subtle, out-of-focus detail of a modern reception desk surface. No text, no people, no logos. Keep the left side clean and dark for text overlay.",
-    "template": "spotlight",
-    "pillar": "pain-point",
-    "language": "sw",
-    "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-20-19-pain-point.png",
-    "platforms": [
-      "facebook",
-      "instagram"
-    ],
-    "scheduledFor": "2026-08-20T16:00:00.000Z",
-    "createdAt": "2026-08-20T20:35:18.648Z",
-    "status": "pending"
-  },
-  {
     "id": "operra-2026-08-21-08-number-that-lands",
     "eyebrow": "Audit Trail",
     "headline": "Every price change and payment tracked in one place",
@@ -238,7 +160,7 @@
     "headline": "Idara sita za hoteli zimeunganishwa sehemu moja",
     "body": "Hoteli zinazotumia Operra zinasimamia mapokezi, usafi, POS na ripoti za fedha kwenye mfumo mmoja bila kutumia vitabu vingi vya hesabu.",
     "cta": "Tazama mfumo",
-    "caption": "Unapokuwa na vitabu tofauti vya mapokezi, bar na usafi, taarifa za fedha ni rahisi kupotea.\n\nOperra inaunganisha idara zote sita za hoteli—mapokezi, usafi wa vyumba, mauzo ya POS, upangaji bei na ripoti za kila siku. Kazi inaenda kwa haraka na usahihi bila urasimu.\n\nPata picha kamili ya uendeshaji wa hoteli yako. 📊\n\noperra.tech",
+    "caption": "Unapokuwa na vitabu tofauti vya mapokezi, bar na usafi, taarifa za fedha ni rahisi kupotea.\n\nOperra inaunganisha idara zote sita za hoteli\u2014mapokezi, usafi wa vyumba, mauzo ya POS, upangaji bei na ripoti za kila siku. Kazi inaenda kwa haraka na usahihi bila urasimu.\n\nPata picha kamili ya uendeshaji wa hoteli yako. \ud83d\udcca\n\noperra.tech",
     "hashtags": [
       "#HoteliTanzania",
       "#UsimamiziWaHoteli",
@@ -426,7 +348,7 @@
     "headline": "Kagua kiyoyozi na maji ya moto kabla ya mteja",
     "body": "Mteja anapokuta kifaa kibovu chumbani, unapoteza uaminifu. Ukaguzi mfupi wa kila asubuhi unapunguza malalamiko na kulinda biashara yako.",
     "cta": "Tazama zaidi",
-    "caption": "Kero kubwa ya mgeni ni kuingia chumbani usiku na kukuta maji ya moto hayatoki au kiyoyozi kina shida. 🔑\n\nBadala ya kusubiri mteja alalamike mapokezi, weka utaratibu wa wahudumu kukagua mifumo yote kabla ya kumpa mteja ufunguo. Hii inapunguza malalamiko na kulinda heshima ya hoteli yako.\n\nOperra inakusaidia kufuatilia hali ya kila chumba kwa urahisi.\n\noperra.tech",
+    "caption": "Kero kubwa ya mgeni ni kuingia chumbani usiku na kukuta maji ya moto hayatoki au kiyoyozi kina shida. \ud83d\udd11\n\nBadala ya kusubiri mteja alalamike mapokezi, weka utaratibu wa wahudumu kukagua mifumo yote kabla ya kumpa mteja ufunguo. Hii inapunguza malalamiko na kulinda heshima ya hoteli yako.\n\nOperra inakusaidia kufuatilia hali ya kila chumba kwa urahisi.\n\noperra.tech",
     "hashtags": [
       "#HospitalityTZ",
       "#HotelManagement",

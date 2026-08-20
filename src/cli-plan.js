@@ -57,9 +57,20 @@ const pillarScores = existsSync(scoresPath)
   ? JSON.parse(await readFile(scoresPath, "utf8"))
   : null;
 
-for (let n = 0; n < count; n++) {
+// Build the slot list first, dropping any that have already passed — planning
+// into the past means every one of them fires at once on the next publish run.
+const slots = [];
+for (let n = 0; slots.length < count && n < count + postHours.length * 2; n++) {
   const day = Math.floor(n / postHours.length);
   const hour = postHours[n % postHours.length];
+  const when = new Date(start);
+  when.setDate(when.getDate() + day);
+  when.setUTCHours(hour - EAT_OFFSET, 0, 0, 0);
+  if (when > new Date()) slots.push({ when, hour });
+}
+
+for (let n = 0; n < slots.length; n++) {
+  const { when, hour } = slots[n];
   // Newest first — nextPillar() and the dedupe list both read position 0 as "last post".
   const recent = [...planned].reverse().concat(await recentPosts());
   const pillar = nextPillar(recent, pillarScores);
@@ -72,11 +83,7 @@ for (let n = 0; n < count; n++) {
     continue;
   }
 
-  const scheduledFor = new Date(start);
-  scheduledFor.setDate(scheduledFor.getDate() + day);
-  // Configured hours are East Africa Time. GitHub runners are UTC, so setting
-  // local hours there would schedule everything three hours early.
-  scheduledFor.setUTCHours(hour - EAT_OFFSET, 0, 0, 0);
+  const scheduledFor = when;
 
   const id = `${brandId}-${scheduledFor.toISOString().slice(0, 10)}-${String(hour).padStart(2, "0")}-${pillar}`;
 
