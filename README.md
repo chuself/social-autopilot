@@ -15,7 +15,7 @@ plan-week   Sun 18:00 EAT
   ├─ brain (Gemini)   pick pillar, write copy + image prompt
   ├─ background.js    keyless Flux background  (or branded gradient)
   ├─ render.js        HTML overlay ──▶ public/<id>.png
-  ├─ wrangler         ──▶ social-autopilot-31s.pages.dev   (public URL for IG)
+  ├─ GitHub Pages     ──▶ chuself.github.io/social-autopilot  (public URL for IG)
   ├─ state/queue.json  status: pending | needs-review
   └─ cli-digest.js    ──▶ Telegram: "12 posts ready, 2 need your eye"
 
@@ -26,6 +26,20 @@ token-check Mon 08:00 EAT         shouts before the token dies
 
 Rendering happens at **plan** time, not publish time, because Instagram fetches the
 image URL server-side — the poster has to be live on Pages before publish day.
+
+The repo is public so GitHub Pages can host the posters for free with no extra
+credentials. No secrets live in the repo; they are all Actions secrets.
+
+### Connecting the review Sheet
+
+Service accounts cannot create Drive files unless the Drive API is enabled, so the
+simplest path is to create the Sheet yourself:
+
+1. Make a blank Google Sheet, rename the first tab to `Calendar`.
+2. Share it as **Editor** with the service account address in your key file.
+3. Set `SHEET_ID` (the id in the Sheet URL) and `GOOGLE_SERVICE_ACCOUNT_JSON` as repo secrets.
+
+The Sheet then stays in your own Drive, which is where you want it.
 
 ## Steering it from Telegram
 
@@ -95,7 +109,7 @@ node --env-file=.env src/cli-publish.js       # DRY_RUN=1 in .env by default
 ## Configuration
 
 Repo **secrets**: `FB_PAGE_ID`, `FB_PAGE_ACCESS_TOKEN`, `IG_USER_ID`, `GEMINI_API_KEY`,
-`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN`.
+`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, and optionally `GOOGLE_SERVICE_ACCOUNT_JSON` + `SHEET_ID`.
 Repo **variable**: `PUBLIC_ASSET_BASE`. Full notes in `.env.example`.
 
 The Page token **does not expire**. If it is ever invalidated, regenerate a user token in

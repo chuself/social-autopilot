@@ -8,10 +8,10 @@ import { createSign } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
-const SCOPES = [
-  "https://www.googleapis.com/auth/spreadsheets",
-  "https://www.googleapis.com/auth/drive",
-].join(" ");
+// Creating needs only the Sheets scope; sharing needs Drive. Requesting Drive
+// while that API is disabled poisons the whole token, so they are separate.
+const SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+const DRIVE_SCOPE = "https://www.googleapis.com/auth/drive";
 
 const raw = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 const creds = JSON.parse(existsSync(raw) ? await readFile(raw, "utf8") : raw);
@@ -32,22 +32,33 @@ const claims = b64url(
     iat: now,
   })
 );
-const signer = createSign("RSA-SHA256");
-signer.update(`${header}.${claims}`);
-const jwt = `${header}.${claims}.${b64url(signer.sign(creds.private_key))}`;
+async function tokenFor(scope) {
+  const c = b64url(
+    JSON.stringify({
+      iss: creds.client_email,
+      scope,
+      aud: "https://oauth2.googleapis.com/token",
+      exp: now + 3600,
+      iat: now,
+    })
+  );
+  const sg = createSign("RSA-SHA256");
+  sg.update(`${header}.${c}`);
+  const r = await (
+    await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+        assertion: `${header}.${c}.${b64url(sg.sign(creds.private_key))}`,
+      }),
+    })
+  ).json();
+  if (!r.access_token) throw new Error(`auth failed: ${r.error_description ?? r.error}`);
+  return { authorization: `Bearer ${r.access_token}`, "content-type": "application/json" };
+}
 
-const tok = await (
-  await fetch("https://oauth2.googleapis.com/token", {
-    method: "POST",
-    headers: { "content-type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      assertion: jwt,
-    }),
-  })
-).json();
-if (!tok.access_token) throw new Error(`auth failed: ${tok.error_description ?? tok.error}`);
-const auth = { authorization: `Bearer ${tok.access_token}`, "content-type": "application/json" };
+const auth = await tokenFor(SCOPES);
 
 const created = await (
   await fetch("https://sheets.googleapis.com/v4/spreadsheets", {
@@ -68,7 +79,7 @@ const share = await (
     `https://www.googleapis.com/drive/v3/files/${created.spreadsheetId}/permissions?sendNotificationEmail=false`,
     {
       method: "POST",
-      headers: auth,
+      headers: await tokenFor(DRIVE_SCOPE),
       body: JSON.stringify({ role: "writer", type: "user", emailAddress: owner }),
     }
   )
