@@ -18,14 +18,17 @@
     "brand": "operra",
     "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-20-feature-spotlight.png",
     "platforms": [
-      "facebook",
-      "instagram"
+      "facebook"
     ],
     "scheduledFor": "2026-08-20T06:00:00.000Z",
     "createdAt": "2026-08-20T18:16:16.819Z",
-    "status": "needs-review",
+    "status": "posted",
     "heldFigures": [
       "204"
+    ],
+    "postedAt": "2026-08-20T18:41:50.581Z",
+    "postIds": [
+      "facebook:1049514968255534_122140156947351110"
     ]
   }
 ]
