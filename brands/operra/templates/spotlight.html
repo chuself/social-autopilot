@@ -1,0 +1,104 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>poster</title>
+<style>
+  @font-face { font-family: Inter; src: url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: block; }
+  @font-face { font-family: Inter; src: url("../assets/fonts/inter-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: block; }
+  @font-face { font-family: Inter; src: url("../assets/fonts/inter-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: block; }
+  @font-face { font-family: Inter; src: url("../assets/fonts/inter-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: block; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1350px; }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- background layer: AI image, or gradient fallback --- */
+  #bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    background-color: var(--bg);
+  }
+  #bg.fallback {
+    background-image:
+      radial-gradient(70% 45% at 76% 26%, color-mix(in srgb, var(--primary) 42%, transparent) 0%, transparent 68%),
+      radial-gradient(80% 55% at 8% 88%, color-mix(in srgb, var(--teal) 20%, transparent) 0%, transparent 64%),
+      radial-gradient(50% 34% at 30% 8%, color-mix(in srgb, var(--primaryGlow) 16%, transparent) 0%, transparent 70%);
+  }
+  /* fallback needs far less scrim than a photo does */
+  #bg.fallback + #scrim { opacity: 0.28; }
+  /* scrim keeps text legible over any generated image */
+  #scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--bg) 62%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 78%, transparent) 42%,
+      color-mix(in srgb, var(--bg) 96%, transparent) 100%);
+  }
+
+  /* --- content --- */
+  #frame {
+    position: absolute; inset: 0;
+    padding: 88px 84px;
+    display: flex; flex-direction: column;
+  }
+  header { display: flex; align-items: center; justify-content: space-between; }
+  #logo { height: 46px; width: auto; }
+  #eyebrow {
+    font-size: 20px; font-weight: 600; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--primary);
+    border: 1px solid var(--border); background: var(--cardBg);
+    border-radius: var(--pill); padding: 12px 26px;
+  }
+
+  main { margin-top: auto; }
+  #headline {
+    font-size: 84px; font-weight: 600; line-height: 1.08; letter-spacing: -0.025em;
+    color: var(--text); text-wrap: balance; max-width: 15ch;
+  }
+  #headline.long { font-size: 68px; }
+  #headline.xlong { font-size: 56px; }
+  #rule {
+    width: 96px; height: 6px; border-radius: 6px;
+    background: var(--primary); margin: 40px 0 32px;
+  }
+  #body {
+    font-size: 32px; font-weight: 400; line-height: 1.55;
+    color: var(--textMuted); max-width: 24ch;
+  }
+
+  footer {
+    margin-top: 64px; padding-top: 40px;
+    border-top: 1px solid var(--hairline);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  #cta {
+    font-size: 26px; font-weight: 600; color: var(--bg);
+    background: var(--primary); border-radius: var(--pill);
+    padding: 22px 44px;
+  }
+  #site { font-size: 26px; font-weight: 500; color: var(--textLight); letter-spacing: 0.02em; }
+</style>
+
+<div id="bg" class="fallback"></div>
+<div id="scrim"></div>
+<div id="frame">
+  <header>
+    <img id="logo" alt="">
+    <span id="eyebrow"></span>
+  </header>
+  <main>
+    <h1 id="headline"></h1>
+    <div id="rule"></div>
+    <p id="body"></p>
+  </main>
+  <footer>
+    <span id="cta"></span>
+    <span id="site"></span>
+  </footer>
+</div>

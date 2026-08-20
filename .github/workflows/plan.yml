@@ -1,0 +1,38 @@
+name: plan-week
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many posts to plan"
+        default: "7"
+  # Phase 3 turns this on: Sunday 18:00 EAT = 15:00 UTC
+  # schedule:
+  #   - cron: "0 15 * * 0"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: npx playwright install --with-deps chromium
+
+      - name: Write the week
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          POST_HOUR: "9"
+        run: node src/cli-plan.js --count "${{ inputs.count }}"
+
+      # Pushing the PNGs here is what makes them publicly reachable in time
+      # for the publish workflow to hand Instagram a live URL.
+      - name: Push queue and rendered posters
+        run: |
+          git config user.name "social-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f public/*.png state/queue.json
+          git diff --staged --quiet || git commit -m "chore: plan week [skip ci]"
+          git push

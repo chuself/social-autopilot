@@ -1,0 +1,24 @@
+{
+  "id": "operra",
+  "name": "Operra",
+  "tagline": "Hotel management, simplified",
+  "site": "operra.tech",
+  "colors": {
+    "bg": "#040f13",
+    "surface": "#0e1c26",
+    "cardSolid": "#0b1820",
+    "primary": "#a478ff",
+    "primaryGlow": "#cf9bff",
+    "teal": "#36d2ba",
+    "text": "#f3f5f8",
+    "textMuted": "#8d9aa8",
+    "textLight": "#5d6a78",
+    "border": "rgba(164, 120, 255, 0.20)",
+    "cardBg": "rgba(164, 120, 255, 0.05)",
+    "hairline": "rgba(255, 255, 255, 0.08)"
+  },
+  "radii": { "pill": "100px", "card": "14px" },
+  "font": { "family": "Inter", "weights": [400, 500, 600, 700] },
+  "logo": "assets/logo-dark.png",
+  "canvas": { "width": 1080, "height": 1350 }
+}

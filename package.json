@@ -1,0 +1,14 @@
+{
+  "name": "social-autopilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Unattended daily social posting for Operra HMS (Facebook + Instagram).",
+  "scripts": {
+    "render": "node src/cli-render.js",
+    "publish": "node src/cli-publish.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
