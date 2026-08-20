@@ -37,6 +37,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Film it
+        id: film
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -44,6 +45,7 @@ jobs:
 
       # The MP4 must be publicly reachable before Instagram will fetch it.
       - name: Publish the file
+        if: steps.film.outputs.built == 'true'
         run: |
           git config user.name "social-autopilot"
           git config user.email "actions@users.noreply.github.com"
@@ -53,12 +55,16 @@ jobs:
           git push
 
       - uses: actions/configure-pages@v5
+        if: steps.film.outputs.built == 'true'
       - uses: actions/upload-pages-artifact@v3
+        if: steps.film.outputs.built == 'true'
         with:
           path: public
       - uses: actions/deploy-pages@v4
+        if: steps.film.outputs.built == 'true'
 
       - name: Wait for the file to go live
+        if: steps.film.outputs.built == 'true'
         run: |
           FILE=$(node -e "const q=require('./state/queue.json');const p=q.filter(x=>x.reel&&x.reel.status==='ready').pop();if(!p){console.error('no reel marked ready');process.exit(1)}console.log(p.reel.file)")
           URL="${{ vars.PUBLIC_ASSET_BASE }}/$FILE"
@@ -72,6 +78,7 @@ jobs:
           exit 1
 
       - name: Post it
+        if: steps.film.outputs.built == 'true'
         env:
           DRY_RUN: ${{ inputs.dry_run || '0' }}
           PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
@@ -86,7 +93,7 @@ jobs:
         run: node src/cli-publish-reel.js
 
       - name: Record it
-        if: ${{ inputs.dry_run != '1' }}
+        if: steps.film.outputs.built == 'true' && inputs.dry_run != '1'
         run: |
           git config user.name "social-autopilot"
           git config user.email "actions@users.noreply.github.com"

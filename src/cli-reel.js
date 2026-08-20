@@ -15,20 +15,37 @@ import { writeReelScript } from "./brain.js";
 import { speak } from "./audio.js";
 import { renderReel, probeVideo } from "./video.js";
 import { readQueue, writeQueue } from "./queue.js";
+import { appendFileSync } from "node:fs";
+
+/** Tell the workflow whether there is anything downstream to do. */
+function setOutput(built) {
+  if (process.env.GITHUB_OUTPUT) {
+    appendFileSync(process.env.GITHUB_OUTPUT, `built=${built}
+`);
+  }
+}
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const wanted = process.argv[2];
+// Normalise to null: the workflow passes "" when no id is given, and "" is
+// neither null nor undefined, so ?? would keep it and skip the fallback.
+const wanted = process.argv[2]?.trim() || null;
 
 const queue = await readQueue();
 
 // Prefer a post that is already written and not yet posted — the reel and the
 // poster then carry the same idea, and nothing is invented twice.
 const post =
-  (wanted && queue.find((p) => p.id === wanted)) ??
+  (wanted ? queue.find((p) => p.id === wanted) : null) ??
   queue.find((p) => p.status !== "posted" && p.status !== "reject" && !p.reel);
 
+if (wanted && !post) {
+  console.error(`No post with id "${wanted}" in the queue.`);
+  process.exit(1);
+}
+
 if (!post) {
-  console.log("No eligible post to turn into a reel.");
+  console.log("No eligible post to turn into a reel — nothing to do.");
+  setOutput(false);
   process.exit(0);
 }
 
@@ -75,4 +92,5 @@ post.reel = {
   status: "ready",
 };
 await writeQueue(queue);
+setOutput(true);
 console.log(`\nReel ready. Marked on ${post.id}.`);

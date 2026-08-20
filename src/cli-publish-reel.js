@@ -26,8 +26,10 @@ const base = (process.env.PUBLIC_ASSET_BASE ?? "").replace(/\/$/, "");
 if (!base) throw new Error("PUBLIC_ASSET_BASE is not set");
 
 const queue = await readQueue();
+// Same empty-string trap as cli-reel.js — "" is not null, so ?? would keep it.
+const wanted = process.argv[2]?.trim() || null;
 const post =
-  (process.argv[2] && queue.find((p) => p.id === process.argv[2])) ??
+  (wanted ? queue.find((p) => p.id === wanted) : null) ??
   queue.find((p) => p.reel?.status === "ready");
 
 if (!post) {
