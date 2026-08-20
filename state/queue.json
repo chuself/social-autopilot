@@ -16,7 +16,7 @@
     "template": "spotlight",
     "pillar": "feature-spotlight",
     "brand": "operra",
-    "backgroundPath": "D:\\Claude Code\\social-autopilot\\state\\bg\\operra-2026-08-20-feature-spotlight.png",
+    "backgroundPath": "state/bg/operra-2026-08-20-feature-spotlight.png",
     "platforms": [
       "facebook"
     ],
@@ -49,7 +49,7 @@
     "pillar": "pain-point",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-20-pain-point.png",
+    "backgroundPath": "state/bg/operra-2026-08-20-pain-point.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -81,7 +81,7 @@
     "pillar": "client-proof",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-20-08-client-proof.png",
+    "backgroundPath": "state/bg/operra-2026-08-20-08-client-proof.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -113,7 +113,7 @@
     "pillar": "swahili-tip",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-20-13-swahili-tip.png",
+    "backgroundPath": "state/bg/operra-2026-08-20-13-swahili-tip.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -145,7 +145,7 @@
     "pillar": "number-that-lands",
     "language": "en",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-21-08-number-that-lands.png",
+    "backgroundPath": "state/bg/operra-2026-08-20-feature-spotlight.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -156,14 +156,14 @@
     "reel": {
       "file": "operra-2026-08-21-08-number-that-lands.mp4",
       "beats": [
-        "Track every payment instantly",
-        "See who changed rates",
-        "Even on slow internet",
-        "Complete team accountability"
+        "Track every shilling",
+        "Monitor price changes and payments",
+        "Works on low-bandwidth connections",
+        "Total accountability for your team"
       ],
-      "narration": "Stop wondering who checked in that guest or changed a room rate. Operra tracks every single front desk action and payment instantly, even on low-bandwidth connections. Keep your team accountable and your Tanzanian hotel running smoothly in English or Kiswahili.",
+      "narration": "Track every shilling moving through your hotel. With Operra, you monitor every rate change and payment across your entire team. Whether using English or Kiswahili, our system works on low-bandwidth connections to give you complete peace of mind.",
       "hasVoice": true,
-      "builtAt": "2026-08-20T22:23:28.090Z",
+      "builtAt": "2026-08-20T22:35:25.721Z",
       "status": "ready"
     }
   },
@@ -185,7 +185,7 @@
     "pillar": "client-proof",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-21-13-client-proof.png",
+    "backgroundPath": "state/bg/operra-2026-08-21-13-client-proof.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -212,7 +212,7 @@
     "pillar": "swahili-tip",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-21-19-swahili-tip.png",
+    "backgroundPath": "state/bg/operra-2026-08-21-19-swahili-tip.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -239,7 +239,7 @@
     "pillar": "industry-note",
     "language": "en",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-22-08-industry-note.png",
+    "backgroundPath": "state/bg/operra-2026-08-22-08-industry-note.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -266,7 +266,7 @@
     "pillar": "feature-spotlight",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-22-13-feature-spotlight.png",
+    "backgroundPath": "state/bg/operra-2026-08-22-13-feature-spotlight.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -293,7 +293,7 @@
     "pillar": "pain-point",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-22-19-pain-point.png",
+    "backgroundPath": "state/bg/operra-2026-08-22-19-pain-point.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -320,7 +320,7 @@
     "pillar": "number-that-lands",
     "language": "en",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-23-08-number-that-lands.png",
+    "backgroundPath": "state/bg/operra-2026-08-23-08-number-that-lands.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -346,7 +346,7 @@
     "pillar": "client-proof",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-23-13-client-proof.png",
+    "backgroundPath": "state/bg/operra-2026-08-23-13-client-proof.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -373,7 +373,7 @@
     "pillar": "swahili-tip",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-23-19-swahili-tip.png",
+    "backgroundPath": "state/bg/operra-2026-08-23-19-swahili-tip.png",
     "platforms": [
       "facebook",
       "instagram"
@@ -400,7 +400,7 @@
     "pillar": "industry-note",
     "language": "en",
     "brand": "operra",
-    "backgroundPath": "/home/runner/work/social-autopilot/social-autopilot/state/bg/operra-2026-08-24-19-industry-note.png",
+    "backgroundPath": "state/bg/operra-2026-08-24-19-industry-note.png",
     "platforms": [
       "facebook",
       "instagram"

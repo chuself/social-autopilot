@@ -26,10 +26,11 @@
   }
   #bg.fallback {
     background-image:
-      radial-gradient(70% 40% at 74% 24%, color-mix(in srgb, var(--primary) 42%, transparent) 0%, transparent 68%),
-      radial-gradient(80% 50% at 10% 86%, color-mix(in srgb, var(--teal) 20%, transparent) 0%, transparent 64%);
+      radial-gradient(64% 34% at 72% 26%, color-mix(in srgb, var(--primary) 62%, transparent) 0%, transparent 70%),
+      radial-gradient(70% 40% at 14% 82%, color-mix(in srgb, var(--teal) 34%, transparent) 0%, transparent 66%),
+      radial-gradient(46% 26% at 34% 6%, color-mix(in srgb, var(--primaryGlow) 22%, transparent) 0%, transparent 72%);
   }
-  #bg.fallback + #scrim { opacity: 0.3; }
+  #bg.fallback + #scrim { opacity: 0.18; }
   #scrim {
     position: absolute; inset: 0;
     background: linear-gradient(180deg,
@@ -118,15 +119,17 @@
     document.getElementById("eyebrow").style.opacity = h;
     document.getElementById("eyebrow").style.transform = `translateY(${(1 - h) * 18}px)`;
 
-    // One beat at a time: in, hold, out.
+    // One beat at a time: in, hold, out. The LAST beat never fades — it holds
+    // under the call to action so the closing frame still says something.
     beats.forEach((_, i) => {
       const el = document.getElementById(`beat-${i}`);
+      const isLast = i === n - 1;
       const start = intro + i * per;
       const local = t - start;
       let o = 0, y = 26;
-      if (local >= 0 && local < per) {
+      if (local >= 0 && (isLast || local < per)) {
         const inP = ease(clamp01(local / 0.4));
-        const outP = ease(clamp01((per - local) / 0.35));
+        const outP = isLast ? 1 : ease(clamp01((per - local) / 0.35));
         o = Math.min(inP, outP);
         y = (1 - inP) * 26;
       }

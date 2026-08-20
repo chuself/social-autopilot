@@ -113,6 +113,9 @@ async function encode(frameDir, audioFile, duration, outFile) {
   args.push(
     "-map", "0:v:0",
     "-map", "1:a:0",
+    // Pad the audio to the full length. Without this "-shortest" trims the video
+    // to the narration and the closing CTA never reaches the viewer.
+    "-af", "apad",
     "-c:v", "libx264",
     "-profile:v", "high",
     "-pix_fmt", "yuv420p",
@@ -123,7 +126,6 @@ async function encode(frameDir, audioFile, duration, outFile) {
     "-b:a", "128k",
     "-ar", "44100",
     "-t", String(duration),
-    "-shortest",
     "-movflags", "+faststart",
     outFile
   );
