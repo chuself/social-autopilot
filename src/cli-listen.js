@@ -17,6 +17,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { notify } from "./notify.js";
 import { readQueue } from "./queue.js";
+import { completeJson } from "./llm.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const STEER = path.join(ROOT, "state", "steer.md");
@@ -86,10 +87,20 @@ for (const u of updates) {
       ].join("\n")
     );
   } else {
-    const stamp = new Date().toISOString().slice(0, 10);
-    await appendFile(STEER, `- (${stamp}) ${text}\n`, "utf8");
-    added++;
-    await notify(`✅ Noted. From the next plan onward:\n<i>${escapeHtml(text)}</i>`);
+    // Not everything typed at a bot is an instruction. "Hey" and "what's planned?"
+    // are conversation; storing them as standing rules would slowly poison the brief.
+    const intent = await classify(text);
+
+    if (intent.kind === "instruction") {
+      const stamp = new Date().toISOString().slice(0, 10);
+      await appendFile(STEER, `- (${stamp}) ${text}\n`, "utf8");
+      added++;
+      await notify(`✅ Noted. From the next plan onward:\n<i>${escapeHtml(text)}</i>`);
+    } else if (intent.kind === "question") {
+      await notify(intent.reply ? escapeHtml(intent.reply) : await statusText());
+    } else {
+      await notify(escapeHtml(intent.reply ?? "👍"));
+    }
   }
 }
 
@@ -119,4 +130,43 @@ async function statusText() {
 
 function escapeHtml(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+/**
+ * Decide whether a message changes how posts are written, asks something, or is
+ * just chat. On any failure it is treated as chat — a misread must never
+ * silently rewrite the brief.
+ */
+async function classify(text) {
+  const queue = await readQueue();
+  const upcoming = queue
+    .filter((p) => p.status !== "posted" && p.status !== "reject")
+    .slice(0, 10)
+    .map((p) => `- ${p.scheduledFor?.slice(0, 10)} [${p.language ?? "--"}] ${p.headline}`)
+    .join("\n");
+
+  try {
+    return await completeJson(
+      `You are the assistant behind an automated social media poster for Operra, a hotel
+management system in Tanzania. The owner sent you this on Telegram:
+
+"""${text}"""
+
+Currently queued to post:
+${upcoming || "(nothing queued)"}
+
+Classify the message and reply. Return ONLY JSON:
+{ "kind": "instruction" | "question" | "chat", "reply": "under 60 words, plain text" }
+
+- "instruction" = it changes how future posts are written or what they cover (tone,
+  wording, language, topics to push or avoid). Reply confirming what changed.
+- "question" = they are asking something. Answer it using the queue above.
+- "chat" = greeting or small talk. Reply briefly and naturally.
+
+Reply in the same language they wrote in.`
+    );
+  } catch (err) {
+    console.warn(`classify failed: ${err.message}`);
+    return { kind: "chat", reply: null };
+  }
 }
