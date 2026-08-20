@@ -71,7 +71,7 @@ export async function renderPoster(post, brandId = "operra", outFile) {
         brand,
         post,
         logoUrl: pathToFileURL(path.join(brandDir, brand.logo)).href,
-        bgUrl: post.backgroundPath ? pathToFileURL(path.resolve(post.backgroundPath)).href : null,
+        bgUrl: post.backgroundPath ? pathToFileURL(path.resolve(ROOT, post.backgroundPath)).href : null,
       }
     );
 

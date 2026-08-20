@@ -19,9 +19,11 @@ plan-week   Sun 18:00 EAT
   ├─ state/queue.json  status: pending | needs-review
   └─ cli-digest.js    ──▶ Telegram: "12 posts ready, 2 need your eye"
 
-publish     09:00 + 17:00 EAT     due + cleared ──▶ Facebook + Instagram
-listen      every 15 min          your Telegram messages ──▶ state/steer.md
-token-check Mon 08:00 EAT         shouts before the token dies
+publish     hourly               due + cleared ──▶ Facebook + Instagram
+reel        Tue + Fri 10:00 EAT  script ──▶ Swahili voiceover ──▶ 1080x1920 MP4 ──▶ Reels
+engage      every 30 min         comments answered, buying signals ──▶ you
+listen      every 15 min         your Telegram messages ──▶ state/steer.md
+token-check Mon 08:00 EAT        shouts before the token dies
 ```
 
 Rendering happens at **plan** time, not publish time, because Instagram fetches the
@@ -84,7 +86,9 @@ You do not have to act on the digest for the writing to get better.
 |---|---|
 | `state/PAUSED` | File exists → publishing exits immediately. The kill switch. |
 | `DRY_RUN=1` | Renders and logs every API call, calls nothing. |
-| Daily cap | Max 2 posts per platform per day, whatever the queue says. |
+| Daily cap | Configured cadence + 1 per platform per day, whatever the queue says. |
+| Reply sanitiser | A drafted public reply containing a phone number, price or unapproved figure is withheld entirely and escalated instead. |
+| Reel pre-flight | Size, duration and file size are checked before upload, not after a platform rejects it. |
 | Asset check | `HEAD` on the image URL; refuses to publish without a reachable image. |
 | Per-platform isolation | Facebook failing never stops Instagram, and vice versa. |
 | `facts.md` allowlist | Any figure not in `brands/operra/facts.md` → held as `needs-review`. |
@@ -133,8 +137,25 @@ src/guards.js      kill switch, dry run, daily cap, asset reachability
 src/notify.js      Telegram; no-ops when unconfigured
 src/cli-listen.js  reads your Telegram messages into standing instructions
 src/sheet.js       two-way Google Sheet sync (service-account JWT, no deps)
+src/video.js       deterministic frames via setFrame(t) -> H.264/AAC MP4
+src/audio.js       free Edge neural voices incl. sw-TZ; ambient pad fallback
+src/cli-engage.js  comment triage, replies, lead escalation
+src/config.js      cadence and posting times, steerable from Telegram
 scripts/           one-off setup helpers (token exchange, id lookup, telegram)
 ```
+
+## Reels
+
+`cli-reel.js` turns a queued post into a narrated vertical video:
+
+1. `writeReelScript()` converts the post into 3-4 on-screen beats plus narration.
+2. `audio.js` speaks the narration with a free Edge neural voice — **sw-TZ-Rehema**
+   or **sw-TZ-Daudi** for Kiswahili, needing no API key.
+3. `video.js` renders one frame per timestamp through `setFrame(t)` and encodes
+   H.264/AAC with `+faststart`, which Instagram requires.
+
+The video length follows the narration rather than the other way round, so the
+voice is never cut off. Nothing animates on its own — seek-safe and reproducible.
 
 ## Not built yet
 

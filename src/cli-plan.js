@@ -100,7 +100,8 @@ for (let n = 0; n < slots.length; n++) {
   const record = {
     id,
     ...post,
-    backgroundPath: bgPath,
+    // Relative to the repo root: an absolute runner path is meaningless anywhere else.
+    backgroundPath: bgPath ? path.relative(ROOT, bgPath).split(path.sep).join("/") : null,
     platforms: ["facebook", "instagram"],
     scheduledFor: scheduledFor.toISOString(),
     createdAt: new Date().toISOString(),

@@ -29,6 +29,7 @@
       radial-gradient(70% 40% at 74% 24%, color-mix(in srgb, var(--primary) 42%, transparent) 0%, transparent 68%),
       radial-gradient(80% 50% at 10% 86%, color-mix(in srgb, var(--teal) 20%, transparent) 0%, transparent 64%);
   }
+  #bg.fallback + #scrim { opacity: 0.3; }
   #scrim {
     position: absolute; inset: 0;
     background: linear-gradient(180deg,
@@ -101,7 +102,7 @@
     const { beats, duration } = window.__reel;
     const n = beats.length || 1;
     const intro = 0.45;
-    const outro = 1.5;
+    const outro = 3.2;
     const body = Math.max(1, duration - outro);
     const per = (body - intro) / n;
 
@@ -137,7 +138,7 @@
     document.getElementById("rule").style.opacity = ruleOn * 0.9;
 
     // The CTA lands for the final beat and stays.
-    const c = ease(clamp01((t - (duration - outro)) / 0.5));
+    const c = ease(clamp01((t - (duration - outro)) / 0.55));
     document.getElementById("cta").style.opacity = c;
     document.getElementById("cta").style.transform = `translateY(${(1 - c) * 20}px)`;
     document.getElementById("site").style.opacity = c;
