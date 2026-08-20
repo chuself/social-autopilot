@@ -12,7 +12,21 @@ import { readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
 const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
-const TAB = process.env.SHEET_TAB ?? "Calendar";
+/**
+ * Which tab to use. Prefers SHEET_TAB, falls back to whatever the first tab is
+ * actually called — a fresh Sheet is "Sheet1", and making the user rename it is
+ * a pointless setup step.
+ */
+let TAB_CACHE = null;
+async function tab() {
+  if (TAB_CACHE) return TAB_CACHE;
+  const meta = await sheets("?fields=sheets.properties.title");
+  const titles = (meta.sheets ?? []).map((s) => s.properties.title);
+  const wanted = process.env.SHEET_TAB;
+  TAB_CACHE = wanted && titles.includes(wanted) ? wanted : titles[0];
+  if (!TAB_CACHE) throw new Error("The spreadsheet has no tabs");
+  return TAB_CACHE;
+}
 
 export const HEADERS = [
   "Date", "Status", "Pillar", "Lang", "Headline", "Caption", "Poster", "Posted IDs", "ID",
@@ -82,6 +96,7 @@ async function sheets(pathAndQuery, init = {}) {
 
 /** Push the queue to the Sheet, newest last. Overwrites the whole tab. */
 export async function pushQueue(queue, assetBase = "") {
+  const TAB = await tab();
   const rows = queue.map((p) => [
     p.scheduledFor?.slice(0, 10) ?? "",
     p.status ?? "",
@@ -110,6 +125,7 @@ export async function pushQueue(queue, assetBase = "") {
 const VALID = new Set(["pending", "approved", "reject", "needs-review", "posted"]);
 
 export async function pullStatuses() {
+  const TAB = await tab();
   const json = await sheets(`/values/${encodeURIComponent(`${TAB}!A2:I1000`)}`);
   const out = {};
   for (const row of json.values ?? []) {
