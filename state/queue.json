@@ -197,7 +197,20 @@
     ],
     "scheduledFor": "2026-08-21T10:00:00.000Z",
     "createdAt": "2026-08-20T20:36:48.315Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-21-13-client-proof.mp4",
+      "beats": [
+        "Futa vitabu vyote",
+        "Simamia mapokezi usafi na POS",
+        "Inafanya kazi mtandao hafifu",
+        "Udhibiti kamili wa mapato yako"
+      ],
+      "narration": "Sahau kuhusu vitabu vingi vya hesabu. Operra inaunganisha mapokezi, usafi, POS na ripoti za fedha kwenye mfumo mmoja unaotumia Kiswahili au Kiingereza. Hata kama mtandao wako ni hafifu, unapata udhibiti kamili wa biashara yako bila hofu.",
+      "hasVoice": true,
+      "builtAt": "2026-08-20T22:49:28.997Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-21-19-swahili-tip",
