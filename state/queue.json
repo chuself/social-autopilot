@@ -156,14 +156,14 @@
     "reel": {
       "file": "operra-2026-08-21-08-number-that-lands.mp4",
       "beats": [
-        "Track every shilling",
-        "Monitor price changes and payments",
-        "Works on low-bandwidth connections",
-        "Total accountability for your team"
+        "Who changed rates at your desk?",
+        "See every payment and guest check-in.",
+        "Works perfectly on low-bandwidth connections.",
+        "Complete peace of mind for owners."
       ],
-      "narration": "Track every shilling moving through your hotel. With Operra, you monitor every rate change and payment across your entire team. Whether using English or Kiswahili, our system works on low-bandwidth connections to give you complete peace of mind.",
+      "narration": "Stop wondering who authorized that discount. With Operra, every single rate change, payment, and check-in is logged. Even on low-bandwidth connections, our bilingual system gives you a complete audit trail so you can run your property with total confidence.",
       "hasVoice": true,
-      "builtAt": "2026-08-20T22:35:25.721Z",
+      "builtAt": "2026-08-20T22:39:42.342Z",
       "status": "ready"
     }
   },
