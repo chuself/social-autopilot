@@ -18,6 +18,7 @@ import path from "node:path";
 import { notify } from "./notify.js";
 import { readQueue } from "./queue.js";
 import { completeJson } from "./llm.js";
+import { updateConfig, readConfig, LIMITS } from "./config.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const STEER = path.join(ROOT, "state", "steer.md");
@@ -46,6 +47,7 @@ if (!updates.length) {
 const owner = String(process.env.TELEGRAM_CHAT_ID ?? "");
 let lastUpdateId = offset;
 let added = 0;
+let settingsChanged = false;
 
 for (const u of updates) {
   lastUpdateId = Math.max(lastUpdateId, u.update_id + 1);
@@ -68,6 +70,10 @@ for (const u of updates) {
     await notify("▶️ Publishing resumed.");
   } else if (lower === "/status") {
     await notify(await statusText());
+  } else if (lower === "/replan") {
+    await writeFile(path.join(ROOT, "state", "REPLAN"), "requested from Telegram\n");
+    await notify("🔁 Re-planning the schedule now — this takes a few minutes.");
+    settingsChanged = true;
   } else if (lower === "/clear") {
     if (existsSync(STEER)) await unlink(STEER);
     await notify("🧹 Standing instructions cleared.");
@@ -81,7 +87,10 @@ for (const u of updates) {
         "• <i>push the POS module this week</i>",
         "• <i>stop using the word \"seamless\"</i>",
         "",
+        "Or change the routine: <i>post 3 times a day</i>, <i>post at 8, 13 and 19</i>",
+        "",
         "/status — what is queued",
+        "/replan — redo the schedule now",
         "/pause — stop posting   /resume — start again",
         "/clear — forget my instructions",
       ].join("\n")
@@ -91,7 +100,19 @@ for (const u of updates) {
     // are conversation; storing them as standing rules would slowly poison the brief.
     const intent = await classify(text);
 
-    if (intent.kind === "instruction") {
+    if (intent.kind === "setting") {
+      const { changes, rejected } = await updateConfig(intent.settings ?? {});
+      const parts = [];
+      if (changes.length) parts.push(`⚙️ <b>Routine updated</b>\n• ${changes.join("\n• ")}`);
+      if (rejected.length) parts.push(`❌ Not applied: ${rejected.join("; ")}`);
+      if (!changes.length && !rejected.length) parts.push("Nothing to change — already set that way.");
+      parts.push("\nTakes effect on the next plan. Send /replan to redo the schedule now.");
+      await notify(parts.join("\n"));
+      if (changes.length) {
+        settingsChanged = true;
+        await writeFile(path.join(ROOT, "state", "REPLAN"), "routine changed\n");
+      }
+    } else if (intent.kind === "instruction") {
       const stamp = new Date().toISOString().slice(0, 10);
       await appendFile(STEER, `- (${stamp}) ${text}\n`, "utf8");
       added++;
@@ -106,6 +127,7 @@ for (const u of updates) {
 
 await writeFile(OFFSET, JSON.stringify({ offset: lastUpdateId }, null, 2));
 console.log(`processed ${updates.length} update(s), ${added} new instruction(s)`);
+if (settingsChanged) console.log("SETTINGS_CHANGED");
 
 async function statusText() {
   const queue = await readQueue();
@@ -139,6 +161,7 @@ function escapeHtml(s) {
  */
 async function classify(text) {
   const queue = await readQueue();
+  const cfg = await readConfig();
   const upcoming = queue
     .filter((p) => p.status !== "posted" && p.status !== "reject")
     .slice(0, 10)
@@ -155,10 +178,21 @@ management system in Tanzania. The owner sent you this on Telegram:
 Currently queued to post:
 ${upcoming || "(nothing queued)"}
 
-Classify the message and reply. Return ONLY JSON:
-{ "kind": "instruction" | "question" | "chat", "reply": "under 60 words, plain text" }
+Current routine: ${cfg.postsPerDay} post(s) per day at ${cfg.postHours.map((h) => `${h}:00`).join(", ")} EAT.
 
-- "instruction" = it changes how future posts are written or what they cover (tone,
+Classify the message and reply. Return ONLY JSON:
+{
+  "kind": "setting" | "instruction" | "question" | "chat",
+  "settings": { "postsPerDay": number, "postHours": [numbers] },
+  "reply": "under 60 words, plain text"
+}
+
+- "setting" = it changes HOW OFTEN or WHEN to post. Fill "settings" with the new
+  values. postsPerDay max ${LIMITS.maxPostsPerDay}; hours are 24h local, between
+  ${LIMITS.minHour} and ${LIMITS.maxHour}. If they say "3 a day" and give no times,
+  spread them sensibly across the day. Omit any field they did not ask to change.
+
+- "instruction" = it changes how future posts are WRITTEN or what they cover (tone,
   wording, language, topics to push or avoid). Reply confirming what changed.
 - "question" = they are asking something. Answer it using the queue above.
 - "chat" = greeting or small talk. Reply briefly and naturally.

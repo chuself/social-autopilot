@@ -7,8 +7,11 @@ on:
   workflow_dispatch:
     inputs:
       count:
-        description: "How many posts to plan"
-        default: "7"
+        description: "How many posts to plan (blank = 7 days at the configured cadence)"
+        default: ""
+      replace:
+        description: "1 = discard unposted posts and rebuild the schedule"
+        default: "0"
 
 concurrency: autopilot-state
 
@@ -39,14 +42,17 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          POST_HOUR: "9"
-        run: node src/cli-plan.js --count "${{ inputs.count || 7 }}"
+        run: |
+          ARGS=""
+          [ -n "${{ inputs.count }}" ] && ARGS="--count ${{ inputs.count }}"
+          [ "${{ inputs.replace }}" = "1" ] && ARGS="$ARGS --replace"
+          node src/cli-plan.js $ARGS
 
       - name: Commit the queue
         run: |
           git config user.name "social-autopilot"
           git config user.email "actions@users.noreply.github.com"
-          git add -f public/*.png state/queue.json state/top-performers.json state/pillar-scores.json
+          git add -f public/*.png state/queue.json state/top-performers.json state/pillar-scores.json state/config.json
           git diff --staged --quiet || git commit -m "chore: plan week [skip ci]"
           # Another job (or a human) may have pushed while this run was writing.
           git pull --rebase --autostash

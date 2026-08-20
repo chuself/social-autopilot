@@ -1,0 +1,8 @@
+{
+  "postsPerDay": 3,
+  "postHours": [
+    8,
+    13,
+    19
+  ]
+}

@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,3 +37,14 @@ jobs:
           git add -A state
           git diff --staged --quiet || git commit -m "chore: instructions from Telegram [skip ci]"
           git push
+
+      # A routine change is only real once the schedule is rebuilt.
+      - name: Re-plan if the routine changed
+        if: hashFiles('state/REPLAN') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rm -f state/REPLAN
+          git add -A state && git commit -m "chore: replan triggered [skip ci]" || true
+          git push || true
+          gh workflow run plan-week --field replace=1
