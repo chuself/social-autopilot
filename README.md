@@ -20,18 +20,49 @@ plan-week   Sun 18:00 EAT
   └─ cli-digest.js    ──▶ Telegram: "12 posts ready, 2 need your eye"
 
 publish     09:00 + 17:00 EAT     due + cleared ──▶ Facebook + Instagram
+listen      every 15 min          your Telegram messages ──▶ state/steer.md
 token-check Mon 08:00 EAT         shouts before the token dies
 ```
 
 Rendering happens at **plan** time, not publish time, because Instagram fetches the
 image URL server-side — the poster has to be live on Pages before publish day.
 
+## Steering it from Telegram
+
+Send the bot a plain message and it becomes a standing instruction the writer obeys
+from the next plan onward. No code editing.
+
+> *less formal, write like WhatsApp*
+> *stop using the word "seamless"*
+> *push the POS module this week*
+
+| Command | Effect |
+|---|---|
+| `/status` | What is queued, and your current instructions |
+| `/pause` / `/resume` | Stop and start publishing |
+| `/clear` | Forget the standing instructions |
+
+The inbox is read every 15 minutes and only obeys `TELEGRAM_CHAT_ID` — nobody else
+can steer the feed.
+
 ## Your weekly loop
 
 1. Sunday evening: Telegram message listing the week.
-2. Skim it. Anything wrong → edit or set `"status": "reject"` in `state/queue.json`.
+2. Skim it. Anything wrong → reject it in the Sheet, or tell the bot what to change.
 3. Do nothing and `pending` posts go out anyway after 24h. Silence never stops the line.
 4. `needs-review` posts (an unapproved figure) **never** auto-post — they wait for you.
+
+## How it improves without you
+
+`cli-metrics.js` reads real engagement from both platforms after every post and writes
+two files the planner consumes:
+
+- `state/top-performers.json` — the best headlines, shown to the writer as reference.
+- `state/pillar-scores.json` — average engagement per pillar. A pillar that consistently
+  underperforms gets thinned out; round-robin remains the floor so the feed never
+  collapses into a single note.
+
+You do not have to act on the digest for the writing to get better.
 
 ## Guardrails
 
@@ -86,6 +117,8 @@ src/render.js      Playwright: background + HTML overlay → 1080×1350 PNG
 src/publish/       facebook.js, instagram.js, index.js  ← TikTok drops in here
 src/guards.js      kill switch, dry run, daily cap, asset reachability
 src/notify.js      Telegram; no-ops when unconfigured
+src/cli-listen.js  reads your Telegram messages into standing instructions
+src/sheet.js       two-way Google Sheet sync (service-account JWT, no deps)
 scripts/           one-off setup helpers (token exchange, id lookup, telegram)
 ```
 
