@@ -276,7 +276,12 @@
     ],
     "scheduledFor": "2026-08-20T08:00:00.000Z",
     "createdAt": "2026-08-20T20:17:57.456Z",
-    "status": "pending"
+    "status": "posted",
+    "postedAt": "2026-08-20T20:30:12.546Z",
+    "postIds": [
+      "facebook:1049514968255534_122140208067351110",
+      "instagram:17880230127623664"
+    ]
   },
   {
     "id": "operra-2026-08-20-13-swahili-tip",
@@ -303,6 +308,11 @@
     ],
     "scheduledFor": "2026-08-20T13:00:00.000Z",
     "createdAt": "2026-08-20T20:19:11.350Z",
-    "status": "pending"
+    "status": "posted",
+    "postedAt": "2026-08-20T20:30:29.288Z",
+    "postIds": [
+      "facebook:1049514968255534_122140208247351110",
+      "instagram:18125031652827894"
+    ]
   }
 ]
