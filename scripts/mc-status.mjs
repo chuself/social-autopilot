@@ -28,8 +28,11 @@ console.log(`${list.length} post(s) known to Metricool`);
 for (const p of list) {
   const nets = (p.providers ?? []).map((x) => x.network).join("+");
   const when = p.publicationDate?.dateTime ?? p.date ?? "?";
-  const status = p.status ?? p.postStatus ?? p.state ?? "?";
-  console.log(`  ${when}  ${nets.padEnd(10)}  status=${status}`);
+  // Field names vary; show whichever status-ish key actually carries a value
+  // rather than printing "?" and telling the owner nothing.
+  const statusKey = Object.keys(p).find((k) => /status|state|published/i.test(k) && p[k] != null);
+  const status = statusKey ? `${statusKey}=${JSON.stringify(p[statusKey])}` : "(no status field)";
+  console.log(`  ${when}  ${nets.padEnd(10)}  ${status}`);
   console.log(`     ${(p.text ?? "").slice(0, 70).replace(/\n/g, " ")}`);
   for (const k of ["publishedUrl", "url", "permalink", "postUrl"]) if (p[k]) console.log(`     ${k}: ${p[k]}`);
 }
