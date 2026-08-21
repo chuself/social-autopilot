@@ -69,7 +69,7 @@
     "headline": "Kila idara inatumia mfumo kwa lugha inayoielewa",
     "body": "Wafanyakazi wa mapokezi na usafi wanatumia mfumo mmoja kwa Kiswahili au Kiingereza. Kazi zinaenda bila kukwama wala kuhitaji mafunzo magumu.",
     "cta": "Tazama mfumo",
-    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi\u2014kutoka mapokezi hadi usafi\u2014anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
+    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi—kutoka mapokezi hadi usafi—anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
     "hashtags": [
       "#HotelierTanzania",
       "#UsimamiziWaHoteli",
@@ -301,6 +301,19 @@
     ],
     "scheduledFor": "2026-08-21T13:00:00.000Z",
     "createdAt": "2026-08-21T09:31:51.586Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-21-16-swahili-tip.mp4",
+      "beats": [
+        "Mauzo hayalingani stoo?",
+        "Linganisha haraka kabla ya kukabidhi",
+        "Dhibiti vinywaji vyote kwa urahisi",
+        "Mapato yako salama kila siku"
+      ],
+      "narration": "Kama mmiliki wa hoteli, unajua changamoto ya kupoteza vinywaji wakati wa kukabidhi shift. Operra inakusaidia kulinganisha stoo na mauzo ya POS haraka, hata kwenye mtandao hafifu. Pata ripoti za uhakika kwa Kiswahili na Kiingereza ili kulinda kila sarafu ya mapato yako.",
+      "hasVoice": true,
+      "builtAt": "2026-08-21T09:39:08.868Z",
+      "status": "ready"
+    }
   }
 ]
