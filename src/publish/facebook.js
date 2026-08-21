@@ -17,16 +17,27 @@ export async function publish({ imageUrl, caption, dryRun }) {
     return { platform: id, postId: "dry-run", url: null };
   }
 
-  const out = await graphPost(`${pageId}/photos`, {
+  // Two steps on purpose. Posting straight to /photos creates an "added_photos"
+  // album story; attaching an unpublished photo to /feed creates a real feed
+  // post, which is what followers actually see in their timeline.
+  const photo = await graphPost(`${pageId}/photos`, {
     url: imageUrl,
-    caption,
-    published: "true",
+    published: "false",
+    temporary: "false",
     access_token: token,
   });
+  if (!photo.id) throw new Error("photo upload returned no id");
+
+  const out = await graphPost(`${pageId}/feed`, {
+    message: caption,
+    attached_media: JSON.stringify([{ media_fbid: photo.id }]),
+    access_token: token,
+  });
+
   return {
     platform: id,
-    postId: out.post_id ?? out.id,
-    url: out.post_id ? `https://facebook.com/${out.post_id}` : null,
+    postId: out.id,
+    url: out.id ? `https://facebook.com/${out.id}` : null,
   };
 }
 

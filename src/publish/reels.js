@@ -36,22 +36,68 @@ export async function publishInstagramReel({ videoUrl, caption, coverUrl, dryRun
   return { platform: "instagram", postId: published.id };
 }
 
-/** Facebook Page video. */
+/**
+ * Facebook Reels proper. `/videos` produces a video post that merely gets a
+ * /reel/ URL — it never appears in the Page's Reels tab. A native Reel needs
+ * the three-phase /video_reels upload: start, upload, finish.
+ */
 export async function publishFacebookVideo({ videoUrl, caption, dryRun }) {
   const pageId = requireEnv("FB_PAGE_ID");
   const token = requireEnv("FB_PAGE_ACCESS_TOKEN");
 
   if (dryRun) {
-    console.log(`[dry-run] facebook VIDEO -> ${videoUrl}`);
+    console.log(`[dry-run] facebook REEL -> ${videoUrl}`);
     return { platform: "facebook", postId: "dry-run" };
   }
 
-  const out = await graphPost(`${pageId}/videos`, {
-    file_url: videoUrl,
+  // 1. start — reserves a video id and an upload endpoint
+  const start = await graphPost(`${pageId}/video_reels`, {
+    upload_phase: "start",
+    access_token: token,
+  });
+  const videoId = start.video_id;
+  if (!videoId) throw new Error("video_reels start returned no video_id");
+
+  // 2. upload — hand Facebook the URL and let it fetch the file itself
+  const up = await fetch(start.upload_url ?? `https://rupload.facebook.com/video-upload/v21.0/${videoId}`, {
+    method: "POST",
+    headers: {
+      Authorization: `OAuth ${token}`,
+      file_url: videoUrl,
+    },
+  });
+  const upJson = await up.json().catch(() => ({}));
+  if (!up.ok || upJson.success === false || upJson.error) {
+    throw new Error(`reel upload failed: ${upJson.error?.message ?? up.status}`);
+  }
+
+  // 3. finish — publish it as a Reel
+  const finish = await graphPost(`${pageId}/video_reels`, {
+    upload_phase: "finish",
+    video_id: videoId,
+    video_state: "PUBLISHED",
     description: caption,
     access_token: token,
   });
-  return { platform: "facebook", postId: out.id };
+  if (finish.success === false) throw new Error("video_reels finish rejected");
+
+  await waitForFacebookReel(videoId, token);
+  return { platform: "facebook", postId: videoId };
+}
+
+/** Facebook processes asynchronously too; a "published" reel can still be encoding. */
+async function waitForFacebookReel(videoId, token, attempts = 30) {
+  for (let i = 0; i < attempts; i++) {
+    const info = await graphGet(videoId, { fields: "status", access_token: token });
+    const st = info.status ?? {};
+    if (st.video_status === "ready") return;
+    if (st.video_status === "error" || st.processing_phase?.status === "error") {
+      throw new Error(`FB reel processing failed: ${JSON.stringify(st).slice(0, 200)}`);
+    }
+    if (i % 5 === 0) console.log(`  facebook processing… (${st.video_status ?? "?"})`);
+    await new Promise((r) => setTimeout(r, 8000));
+  }
+  console.warn("  facebook reel still processing — it will appear shortly");
 }
 
 /**
