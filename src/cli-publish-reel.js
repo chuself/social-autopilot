@@ -77,6 +77,8 @@ for (const [name, fn] of [
 
 if (!dryRun && results.length) {
   post.reel.status = "posted";
+  // Close the slot so nothing else picks it up.
+  if (post.format === "reel") post.status = "posted";
   post.reel.postedAt = new Date().toISOString();
   post.reel.postIds = results.map((r) => `${r.platform}:${r.postId}`);
   await writeQueue(queue);

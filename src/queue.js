@@ -39,6 +39,9 @@ export async function recentPosts(limit = 60) {
 export function duePosts(queue, now = new Date()) {
   return queue.filter((p) => {
     if (p.status === "posted" || p.status === "reject" || p.status === "needs-review") return false;
+    // Reel slots are filmed and published by the reel pipeline. Publishing them
+    // here too would post the same idea twice — once as video, once as a poster.
+    if (p.format === "reel") return false;
     if (new Date(p.scheduledFor) > now) return false;
     return p.status === "pending" || p.status === "approved";
   });
