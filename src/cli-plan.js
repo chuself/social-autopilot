@@ -70,6 +70,18 @@ for (let day = 0; day < days; day++) {
 }
 timetable.sort((a, b) => a.when - b.when);
 
+// Never plan a slot that is already filled. Re-running the planner should be
+// safe: without this it appends a second post to every slot it has seen before.
+const taken = new Set(
+  queue.filter((p) => p.status !== "posted" && p.status !== "reject").map((p) => p.scheduledFor)
+);
+const wanted = timetable.filter((t) => !taken.has(t.when.toISOString()));
+if (wanted.length < timetable.length) {
+  console.log(`${timetable.length - wanted.length} slot(s) already filled — skipping those`);
+}
+timetable.length = 0;
+timetable.push(...wanted);
+
 for (let n = 0; n < timetable.length; n++) {
   const { when, hour, format } = timetable[n];
   // Newest first — nextPillar() and the dedupe list both read position 0 as "last post".

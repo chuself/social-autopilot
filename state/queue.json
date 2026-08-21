@@ -69,7 +69,7 @@
     "headline": "Kila idara inatumia mfumo kwa lugha inayoielewa",
     "body": "Wafanyakazi wa mapokezi na usafi wanatumia mfumo mmoja kwa Kiswahili au Kiingereza. Kazi zinaenda bila kukwama wala kuhitaji mafunzo magumu.",
     "cta": "Tazama mfumo",
-    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi—kutoka mapokezi hadi usafi—anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
+    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi\u2014kutoka mapokezi hadi usafi\u2014anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
     "hashtags": [
       "#HotelierTanzania",
       "#UsimamiziWaHoteli",
@@ -277,33 +277,6 @@
     "status": "pending"
   },
   {
-    "id": "operra-2026-08-21-13-client-proof",
-    "eyebrow": "Uendeshaji",
-    "headline": "Mfumo unaofanya kazi hata mtandao ukiyumba",
-    "body": "Operra inakubali mtandao wa kasi ya chini. Shughuli za mapokezi, jiko, na hesabu zinaendelea vizuri bila kukatizwa na mawasiliano mabaya.",
-    "cta": "Ona inavyofanya kazi",
-    "caption": "Unajua ile kero ya mtandao kukata katikati ya kumhudumia mteja mapokezi?\n\nHoteli nyingi hapa nchini zimeondokana na adha hii baada ya kuhamia Operra. Mfumo huu umeundwa kufanya kazi vizuri hata kwenye mtandao hafifu uliopo mikoani au maeneo ya mbugani. Mapokezi, jikoni na uhasibu zinaunganishwa bila kukwama, na hesabu zako zinabaki salama wakati wote.",
-    "hashtags": [
-      "HotelManagement",
-      "TanzaniaHospitality",
-      "OperraTech"
-    ],
-    "imagePrompt": "Minimalist dark abstract background with low contrast right-of-centre composition, no text, no people, no logos. Color-graded with deep violet #a478ff and cyan #36d2ba tones. Soft, out-of-focus shapes resembling subtle digital network waves.",
-    "template": "spotlight",
-    "pillar": "client-proof",
-    "language": "sw",
-    "brand": "operra",
-    "backgroundPath": "state/bg/operra-2026-08-21-13-client-proof.png",
-    "format": "poster",
-    "platforms": [
-      "facebook",
-      "instagram"
-    ],
-    "scheduledFor": "2026-08-21T10:00:00.000Z",
-    "createdAt": "2026-08-21T09:31:06.534Z",
-    "status": "pending"
-  },
-  {
     "id": "operra-2026-08-21-16-swahili-tip",
     "eyebrow": "Usimamizi Wa Baa",
     "headline": "Linganisha stoo na mauzo kila mwisho wa shift",
@@ -329,35 +302,5 @@
     "scheduledFor": "2026-08-21T13:00:00.000Z",
     "createdAt": "2026-08-21T09:31:51.586Z",
     "status": "pending"
-  },
-  {
-    "id": "operra-2026-08-21-20-industry-note",
-    "eyebrow": "Finance",
-    "headline": "Reconcile mobile pay in real time",
-    "body": "East African guests expect seamless mobile money checkouts. Operra records every transaction instantly, eliminating evening reconciliation headaches.",
-    "cta": "See it work",
-    "caption": "More guests in East Africa are paying via mobile money than ever before. If your front desk team is still manually matching M-Pesa or Airtel Money messages to room bills at 11 PM, you are losing time and risking errors.\n\nModern properties are moving to instant transaction logging. Operra lets your reception record payments on the spot, keeping your daily audit accurate without the manual hassle.",
-    "hashtags": [
-      "#HotelManagement",
-      "#EastAfricaHospitality",
-      "#HotelOperations"
-    ],
-    "imagePrompt": "Abstract close-up of a modern hotel reception desk surface. Low-contrast, dark #a478ff and #36d2ba color grade. Subject is right-of-centre. No text, no people, no logos.",
-    "template": "spotlight",
-    "pillar": "industry-note",
-    "language": "en",
-    "brand": "operra",
-    "backgroundPath": "state/bg/operra-2026-08-21-20-industry-note.png",
-    "format": "poster",
-    "platforms": [
-      "facebook",
-      "instagram"
-    ],
-    "scheduledFor": "2026-08-21T17:00:00.000Z",
-    "createdAt": "2026-08-21T09:32:36.625Z",
-    "status": "needs-review",
-    "heldFigures": [
-      "11"
-    ]
   }
 ]
