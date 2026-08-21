@@ -301,7 +301,7 @@
     ],
     "scheduledFor": "2026-08-21T13:00:00.000Z",
     "createdAt": "2026-08-21T09:31:51.586Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-21-16-swahili-tip.mp4",
       "beats": [
@@ -313,7 +313,12 @@
       "narration": "Kama mmiliki wa hoteli, unajua changamoto ya kupoteza vinywaji wakati wa kukabidhi shift. Operra inakusaidia kulinganisha stoo na mauzo ya POS haraka, hata kwenye mtandao hafifu. Pata ripoti za uhakika kwa Kiswahili na Kiingereza ili kulinda kila sarafu ya mapato yako.",
       "hasVoice": true,
       "builtAt": "2026-08-21T09:39:08.868Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-21T09:41:05.310Z",
+      "postIds": [
+        "instagram:17955587316011494",
+        "facebook:2477610059403194"
+      ]
     }
   }
 ]
