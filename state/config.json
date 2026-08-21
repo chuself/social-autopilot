@@ -1,9 +1,20 @@
 {
-  "postsPerDay": 3,
-  "postHours": [
-    8,
-    13,
-    19
-  ],
-  "reelsPerWeek": 4
+  "slots": [
+    {
+      "hour": 8,
+      "format": "poster"
+    },
+    {
+      "hour": 13,
+      "format": "poster"
+    },
+    {
+      "hour": 16,
+      "format": "reel"
+    },
+    {
+      "hour": 20,
+      "format": "poster"
+    }
+  ]
 }
