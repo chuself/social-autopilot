@@ -1,15 +1,27 @@
 [
   {
+    "id": "operra-2026-08-21-08-number-that-lands",
+    "platform": "instagram",
+    "pillar": "number-that-lands",
+    "headline": "Every price change and payment tracked in one place",
+    "likes": 1,
+    "comments": 0,
+    "engagement": 2,
+    "platforms": [
+      "instagram",
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
     "id": "operra-2026-08-20-feature-spotlight",
-    "platform": "facebook",
+    "platform": "instagram",
     "pillar": "feature-spotlight",
     "headline": "Know which rooms are ready instantly",
     "likes": 0,
     "comments": 0,
-    "shares": 0,
     "engagement": 0,
     "platforms": [
-      "facebook",
       "instagram"
     ]
   },
@@ -43,15 +55,13 @@
   },
   {
     "id": "operra-2026-08-20-13-swahili-tip",
-    "platform": "facebook",
+    "platform": "instagram",
     "pillar": "swahili-tip",
     "headline": "Kagua usafi wa chumba kabla ya kumpa mteja ufunguo",
     "likes": 0,
     "comments": 0,
-    "shares": 0,
     "engagement": 0,
     "platforms": [
-      "facebook",
       "instagram"
     ]
   }
