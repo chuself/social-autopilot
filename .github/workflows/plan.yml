@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name "social-autopilot"
           git config user.email "actions@users.noreply.github.com"
-          git add -f public/*.png state/queue.json state/top-performers.json state/pillar-scores.json state/config.json
+          git add -f public/*.png state/bg/*.png state/queue.json state/top-performers.json state/pillar-scores.json state/config.json
           git diff --staged --quiet || git commit -m "chore: plan week [skip ci]"
           # Another job (or a human) may have pushed while this run was writing.
           git pull --rebase --autostash

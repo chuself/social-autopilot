@@ -28,18 +28,18 @@ export async function recentPosts(limit = 60) {
 
 /**
  * Posts that are due and cleared to go out.
- * `pending` auto-approves after AUTO_APPROVE_HOURS so silence never stops the line —
- * but `needs-review` (an unapproved figure) never auto-approves.
+ *
+ * A `pending` post publishes at its scheduled time. The review window is the
+ * gap between planning and the slot itself — an extra countdown on top of that
+ * silently pushed same-week posts past their slot, which is exactly what
+ * happened to the first 08:00 run.
+ *
+ * `needs-review` (an unapproved figure) never auto-publishes; a human decides.
  */
 export function duePosts(queue, now = new Date()) {
-  const autoApproveMs = Number(process.env.AUTO_APPROVE_HOURS ?? 24) * 3600_000;
   return queue.filter((p) => {
     if (p.status === "posted" || p.status === "reject" || p.status === "needs-review") return false;
     if (new Date(p.scheduledFor) > now) return false;
-    if (p.status === "approved") return true;
-    if (p.status === "pending") {
-      return now - new Date(p.createdAt ?? p.scheduledFor) >= autoApproveMs;
-    }
-    return false;
+    return p.status === "pending" || p.status === "approved";
   });
 }

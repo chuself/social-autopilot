@@ -87,7 +87,9 @@ for (const u of updates) {
         "• <i>push the POS module this week</i>",
         "• <i>stop using the word \"seamless\"</i>",
         "",
-        "Or change the routine: <i>post 3 times a day</i>, <i>post at 8, 13 and 19</i>",
+        "Or change the routine:",
+        "• <i>post 3 times a day</i>   • <i>post at 8, 13 and 19</i>",
+        "• <i>3 reels a week</i>      • <i>2 posters a day and 1 reel a day</i>",
         "",
         "/status — what is queued",
         "/replan — redo the schedule now",
@@ -131,6 +133,7 @@ if (settingsChanged) console.log("SETTINGS_CHANGED");
 
 async function statusText() {
   const queue = await readQueue();
+  const cfgNow = await readConfig();
   const now = new Date();
   const upcoming = queue
     .filter((p) => p.status !== "posted" && p.status !== "reject" && new Date(p.scheduledFor) >= now)
@@ -139,6 +142,7 @@ async function statusText() {
   const lines = [
     `📊 <b>Status</b>${paused ? " — ⏸ PAUSED" : ""}`,
     `${upcoming.length} queued · ${queue.filter((p) => p.status === "posted").length} posted all time`,
+    `Routine: ${cfgNow.postsPerDay}/day at ${cfgNow.postHours.map((h) => `${h}:00`).join(", ")} · ${cfgNow.reelsPerWeek} reels/week`,
     "",
   ];
   for (const p of upcoming.slice(0, 8)) {
@@ -184,19 +188,23 @@ management system in Tanzania. The owner sent you this on Telegram:
 Currently queued to post:
 ${upcoming || "(nothing queued)"}
 
-Current routine: ${cfg.postsPerDay} post(s) per day at ${cfg.postHours.map((h) => `${h}:00`).join(", ")} EAT.
+Current routine: ${cfg.postsPerDay} poster(s) per day at ${cfg.postHours.map((h) => `${h}:00`).join(", ")} EAT,
+and ${cfg.reelsPerWeek} reel(s) per week.
 
 Classify the message and reply. Return ONLY JSON:
 {
   "kind": "setting" | "instruction" | "question" | "chat",
-  "settings": { "postsPerDay": number, "postHours": [numbers] },
+  "settings": { "postsPerDay": number, "postHours": [numbers], "reelsPerWeek": number },
   "reply": "under 60 words, plain text"
 }
 
-- "setting" = it changes HOW OFTEN or WHEN to post. Fill "settings" with the new
-  values. postsPerDay max ${LIMITS.maxPostsPerDay}; hours are 24h local, between
-  ${LIMITS.minHour} and ${LIMITS.maxHour}. If they say "3 a day" and give no times,
-  spread them sensibly across the day. Omit any field they did not ask to change.
+- "setting" = it changes HOW OFTEN or WHEN to post. Fill "settings" with the new values.
+  * postsPerDay = still IMAGE posters, max ${LIMITS.maxPostsPerDay} per day.
+  * reelsPerWeek = VIDEO reels, counted per WEEK, max ${LIMITS.maxReelsPerWeek}.
+    If they say "2 reels a day", convert to per week (2 x 7 = 14).
+  * postHours are 24h local, between ${LIMITS.minHour} and ${LIMITS.maxHour}.
+  If they say "3 a day" with no times, spread them sensibly across the day.
+  Omit any field they did not ask to change.
 
 - "instruction" = it changes how future posts are WRITTEN or what they cover (tone,
   wording, language, topics to push or avoid). Reply confirming what changed.

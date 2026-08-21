@@ -1,9 +1,11 @@
 name: reel
 
-# Tue + Fri 10:00 EAT: turn a queued post into a narrated vertical video.
+# Wakes twice a day; state/config.json decides how many reels a week actually
+# get made, so the cadence is changeable from Telegram rather than in cron.
 on:
   schedule:
-    - cron: "0 7 * * 2,5"
+    - cron: "0 7 * * *"
+    - cron: "0 13 * * *"
   workflow_dispatch:
     inputs:
       post_id:

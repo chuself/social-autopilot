@@ -14,7 +14,8 @@ import path from "node:path";
 import { writeReelScript } from "./brain.js";
 import { speak } from "./audio.js";
 import { renderReel, probeVideo } from "./video.js";
-import { readQueue, writeQueue } from "./queue.js";
+import { readQueue, writeQueue, readHistory } from "./queue.js";
+import { readConfig } from "./config.js";
 import { appendFileSync } from "node:fs";
 
 /** Tell the workflow whether there is anything downstream to do. */
@@ -31,6 +32,21 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 const wanted = process.argv[2]?.trim() || null;
 
 const queue = await readQueue();
+
+// Cadence lives in config, not in cron, so it can be changed from Telegram.
+// The workflow wakes often; this decides whether a reel is actually owed.
+const cfg = await readConfig();
+if (!wanted && process.env.IGNORE_CADENCE !== "1") {
+  const weekAgo = Date.now() - 7 * 86400_000;
+  const madeThisWeek = (await readHistory()).filter(
+    (h) => h.format === "reel" && h.platform === "instagram" && new Date(h.postedAt).getTime() > weekAgo
+  ).length;
+  if (madeThisWeek >= cfg.reelsPerWeek) {
+    console.log(`Already ${madeThisWeek} reel(s) in the last 7 days (limit ${cfg.reelsPerWeek}) — nothing to do.`);
+    setOutput(false);
+    process.exit(0);
+  }
+}
 
 // Prefer a post that is already written and not yet posted — the reel and the
 // poster then carry the same idea, and nothing is invented twice.

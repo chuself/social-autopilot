@@ -16,9 +16,11 @@ export const DEFAULTS = {
   postsPerDay: 1,
   // Local (EAT) hours posts are scheduled at. Length should match postsPerDay.
   postHours: [9],
+  // Reels are heavier to make and to watch, so they are counted per WEEK.
+  reelsPerWeek: 2,
 };
 
-export const LIMITS = { maxPostsPerDay: 4, minHour: 6, maxHour: 23 };
+export const LIMITS = { maxPostsPerDay: 4, maxReelsPerWeek: 14, minHour: 6, maxHour: 23 };
 
 export async function readConfig() {
   if (!existsSync(FILE)) return { ...DEFAULTS };
@@ -47,6 +49,16 @@ export async function updateConfig(patch) {
     } else if (n !== current.postsPerDay) {
       next.postsPerDay = n;
       changes.push(`${current.postsPerDay} → ${n} posts per day`);
+    }
+  }
+
+  if (patch.reelsPerWeek != null) {
+    const n = Number(patch.reelsPerWeek);
+    if (!Number.isInteger(n) || n < 0 || n > LIMITS.maxReelsPerWeek) {
+      rejected.push(`reelsPerWeek ${patch.reelsPerWeek} (allowed 0-${LIMITS.maxReelsPerWeek})`);
+    } else if (n !== current.reelsPerWeek) {
+      next.reelsPerWeek = n;
+      changes.push(`${current.reelsPerWeek} → ${n} reels per week`);
     }
   }
 

@@ -8,11 +8,18 @@
  */
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { mkdir } from "node:fs/promises";
+import { mkdir, writeFile, rm } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 
 const run = promisify(execFile);
+
+/**
+ * Gemini's prebuilt voices. Aoede handles both English and Kiswahili well, which
+ * is why it leads — one voice keeps the channel sounding like one brand.
+ */
+const GEMINI_VOICE = process.env.GEMINI_TTS_VOICE ?? "Aoede";
+const GEMINI_TTS_MODELS = ["gemini-2.5-flash-preview-tts", "gemini-3.1-flash-tts-preview"];
 
 export const VOICES = {
   sw: ["sw-TZ-RehemaNeural", "sw-TZ-DaudiNeural"],
@@ -28,6 +35,10 @@ export const VOICES = {
 export async function speak(text, language, outFile) {
   if (process.env.SKIP_AUDIO === "1") return null;
   await mkdir(path.dirname(outFile), { recursive: true });
+
+  // Gemini first (Aoede), Edge neural second, ambient pad last.
+  const viaGemini = await geminiSpeak(text, language, outFile);
+  if (viaGemini) return viaGemini;
 
   const voices = VOICES[language] ?? VOICES.en;
   for (const voice of voices) {
@@ -103,4 +114,68 @@ export async function ambientPad(outFile, seconds = 10) {
 
 function pythonBin() {
   return process.env.PYTHON_BIN ?? (process.platform === "win32" ? "python" : "python3");
+}
+
+/**
+ * Gemini TTS returns raw 24 kHz mono PCM, not a container, so it has to be
+ * wrapped before anything else can read it.
+ */
+async function geminiSpeak(text, language, outFile) {
+  if (!process.env.GEMINI_API_KEY || process.env.SKIP_GEMINI_TTS === "1") return null;
+
+  const styled =
+    language === "sw"
+      ? `Say this warmly and clearly, as a Tanzanian presenter would: ${text}`
+      : `Say this warmly and clearly: ${text}`;
+
+  for (const model of GEMINI_TTS_MODELS) {
+    try {
+      const res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+            "x-goog-api-key": process.env.GEMINI_API_KEY,
+          },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: styled }] }],
+            generationConfig: {
+              responseModalities: ["AUDIO"],
+              speechConfig: {
+                voiceConfig: { prebuiltVoiceConfig: { voiceName: GEMINI_VOICE } },
+              },
+            },
+          }),
+          signal: AbortSignal.timeout(90_000),
+        }
+      );
+      const json = await res.json();
+      const part = json.candidates?.[0]?.content?.parts?.find((p) => p.inlineData?.data);
+      if (!part) throw new Error(json.error?.message ?? "no audio returned");
+
+      const rate = /rate=(\d+)/.exec(part.inlineData.mimeType ?? "")?.[1] ?? "24000";
+      const raw = `${outFile}.pcm`;
+      await writeFile(raw, Buffer.from(part.inlineData.data, "base64"));
+      await run("ffmpeg", [
+        "-y",
+        "-f", "s16le",
+        "-ar", rate,
+        "-ac", "1",
+        "-i", raw,
+        "-c:a", "libmp3lame",
+        "-b:a", "128k",
+        outFile,
+      ]);
+      await rm(raw, { force: true });
+
+      if (existsSync(outFile)) {
+        console.log(`  voiceover: Gemini ${GEMINI_VOICE} (${model})`);
+        return outFile;
+      }
+    } catch (err) {
+      console.warn(`  gemini tts ${model} failed: ${String(err.message).slice(0, 110)}`);
+    }
+  }
+  return null;
 }
