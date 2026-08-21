@@ -95,4 +95,39 @@ if (!dryRun && results.length) {
   );
 }
 
+// TikTok goes through Metricool, which is already TikTok-audited, so the post is
+// public without an audit of our own. Runs after the Meta legs so a TikTok
+// problem can never cost us Instagram and Facebook.
+if (!dryRun && tiktokConfigured()) {
+  try {
+    const r = await publishTikTok({ videoUrl, caption, dryRun });
+    console.log(`  queued on tiktok for ${r.scheduledFor}`);
+    await notify(`📱 <b>TikTok</b> queued for ${r.scheduledFor}\n${post.headline}`, { mirror: false });
+
+    const historyPath = path.join(ROOT, "state", "history.json");
+    const history = existsSync(historyPath)
+      ? JSON.parse(await readFile(historyPath, "utf8"))
+      : [];
+    history.push({ ...r, id: post.id, format: "reel", postedAt: new Date().toISOString() });
+    await writeFile(historyPath, JSON.stringify(history.slice(-200), null, 2));
+  } catch (err) {
+    console.error(`  TikTok failed: ${err.message}`);
+    await notify(
+      `⚠️ TikTok scheduling failed — the video is below to post by hand.\n<code>${err.message.slice(0, 200)}</code>`
+    );
+  }
+} else if (!dryRun) {
+  console.log("  tiktok not configured — skipping");
+}
+
+// Belt and braces: the finished file also comes to you ready to upload, so a
+// TikTok failure or the monthly cap never blocks the content.
+if (!dryRun && process.env.TIKTOK_HANDOFF !== "0") {
+  const tags = (post.hashtags ?? []).join(" ");
+  await sendVideo(
+    videoUrl,
+    `📱 <b>For TikTok</b> — tap and upload\n\n${post.caption ?? post.headline}\n\n${tags}`
+  );
+}
+
 console.log(dryRun ? "\nDRY RUN — nothing was posted." : "\ndone.");
