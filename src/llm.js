@@ -19,7 +19,11 @@ const GEMINI_MODELS = process.env.GEMINI_MODEL
       "gemini-3.1-flash-lite",
       "gemini-flash-lite-latest",
     ];
-const GROQ_MODEL = process.env.GROQ_MODEL ?? "llama-3.3-70b-versatile";
+// Verified live 2026-08-21. The previously hardcoded llama-3.3-70b-versatile
+// had been retired — a fallback that only fails when you finally need it.
+const GROQ_MODELS = process.env.GROQ_MODEL
+  ? [process.env.GROQ_MODEL]
+  : ["openai/gpt-oss-120b", "openai/gpt-oss-20b"];
 
 export async function completeJson(prompt, { schemaHint } = {}) {
   if (process.env.MOCK_LLM === "1") return mockPost();
@@ -89,6 +93,20 @@ const groq = {
   name: "groq",
   available: () => Boolean(process.env.GROQ_API_KEY),
   async run(prompt) {
+    let last;
+    for (const model of GROQ_MODELS) {
+      try {
+        return await callGroq(model, prompt);
+      } catch (err) {
+        last = err;
+        console.warn(`  groq/${model}: ${err.message.slice(0, 90)}`);
+      }
+    }
+    throw last;
+  },
+};
+
+async function callGroq(model, prompt) {
     const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -96,7 +114,7 @@ const groq = {
         authorization: `Bearer ${process.env.GROQ_API_KEY}`,
       },
       body: JSON.stringify({
-        model: GROQ_MODEL,
+        model,
         messages: [{ role: "user", content: prompt }],
         response_format: { type: "json_object" },
         temperature: 0.9,
@@ -107,8 +125,7 @@ const groq = {
     const text = json.choices?.[0]?.message?.content;
     if (!text) throw new Error("empty response");
     return parseJson(text);
-  },
-};
+}
 
 /** Models sometimes wrap JSON in a fence despite being told not to. */
 function parseJson(text) {
