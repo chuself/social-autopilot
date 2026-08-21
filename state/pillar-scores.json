@@ -1,7 +1,7 @@
 {
-  "feature-spotlight": 0,
-  "pain-point": 0,
-  "client-proof": 0,
-  "swahili-tip": 0,
-  "number-that-lands": 2
+  "feature-spotlight": 1,
+  "pain-point": 0.5,
+  "client-proof": 1,
+  "swahili-tip": 1,
+  "number-that-lands": 4
 }
