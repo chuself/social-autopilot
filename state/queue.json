@@ -346,7 +346,7 @@
     ],
     "scheduledFor": "2026-08-21T13:00:00.000Z",
     "createdAt": "2026-08-21T09:45:47.605Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-21-16-industry-note.mp4",
       "beats": [
@@ -358,7 +358,12 @@
       "narration": "With domestic travel rising across Tanzania, guests expect faster front desk service. Operra keeps your reception, housekeeping, and billing moving quickly, even on low-bandwidth connections. Switch between Kiswahili and English to keep your staff efficient and guests happy.",
       "hasVoice": true,
       "builtAt": "2026-08-21T09:53:02.590Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-21T09:54:17.752Z",
+      "postIds": [
+        "instagram:18091870979645792",
+        "facebook:2899259643765296"
+      ]
     }
   },
   {
