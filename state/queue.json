@@ -279,7 +279,12 @@
     ],
     "scheduledFor": "2026-08-21T17:00:00.000Z",
     "createdAt": "2026-08-21T07:18:38.756Z",
-    "status": "pending"
+    "status": "posted",
+    "postedAt": "2026-08-21T17:24:24.401Z",
+    "postIds": [
+      "facebook:1049514968255534_122140846587351110",
+      "instagram:18134622940616622"
+    ]
   },
   {
     "id": "operra-2026-08-21-16-swahili-tip",
