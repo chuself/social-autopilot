@@ -451,7 +451,20 @@
     ],
     "scheduledFor": "2026-08-22T13:00:00.000Z",
     "createdAt": "2026-08-21T09:48:02.021Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-22-16-number-that-lands.mp4",
+      "beats": [
+        "Lost in translation at your hotel?",
+        "Run operations in Kiswahili and English",
+        "Even on slow internet connections",
+        "A perfectly coordinated Tanzanian hotel"
+      ],
+      "narration": "Stop struggling with language barriers at your property. With Operra, your front desk and housekeeping teams work in Kiswahili or English. Manage your POS, pricing, and reports seamlessly, even on low-bandwidth Tanzanian connections, for a perfectly coordinated hotel.",
+      "hasVoice": true,
+      "builtAt": "2026-08-21T13:53:33.887Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-22-20-client-proof",
