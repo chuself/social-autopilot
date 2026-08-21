@@ -152,7 +152,7 @@
     ],
     "scheduledFor": "2026-08-21T05:00:00.000Z",
     "createdAt": "2026-08-20T20:36:04.578Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-21-08-number-that-lands.mp4",
       "beats": [
@@ -170,7 +170,12 @@
         "instagram:17974669686090740",
         "facebook:2191800291379153"
       ]
-    }
+    },
+    "postedAt": "2026-08-21T06:05:15.104Z",
+    "postIds": [
+      "facebook:1049514968255534_122140579383351110",
+      "instagram:18089097638463576"
+    ]
   },
   {
     "id": "operra-2026-08-21-13-client-proof",
