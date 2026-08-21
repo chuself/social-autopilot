@@ -1,7 +1,8 @@
 {
-  "feature-spotlight": 1,
+  "feature-spotlight": 0.5,
   "pain-point": 0.5,
   "client-proof": 1,
   "swahili-tip": 0.5,
-  "number-that-lands": 4
+  "number-that-lands": 1.3333333333333333,
+  "industry-note": 0
 }
