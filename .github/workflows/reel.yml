@@ -88,10 +88,10 @@ jobs:
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           WHATSAPP_CTA_NUMBER: ${{ vars.WHATSAPP_CTA_NUMBER }}
+          METRICOOL_KEY: ${{ secrets.METRICOOL_KEY }}
           METRICOOL_OAUTH: ${{ secrets.METRICOOL_OAUTH }}
           METRICOOL_BLOG_ID: ${{ vars.METRICOOL_BLOG_ID }}
           METRICOOL_USER_ID: ${{ vars.METRICOOL_USER_ID }}
-          GH_TOKEN: ${{ secrets.METRICOOL_PAT || secrets.GITHUB_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
@@ -105,6 +105,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git pull --rebase --autostash
           git add -A state
+          git add -f state/metricool.enc 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: reel posted [skip ci]"
           git push
 

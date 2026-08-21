@@ -9,18 +9,32 @@
  * Auth is OAuth 2.1: the owner approves once (scripts/metricool-auth.mjs) and we
  * mint access tokens from the stored refresh token thereafter.
  */
+import { seal, unseal } from "../secretstore.js";
+
 const MCP = "https://ai.metricool.com/mcp";
 const TOKEN_URL = "https://app.metricool.com/oauth/token";
 
 export const id = "tiktok";
 
 export function tiktokConfigured() {
-  return Boolean(process.env.METRICOOL_OAUTH && process.env.METRICOOL_BLOG_ID);
+  return Boolean(
+    (process.env.METRICOOL_KEY || process.env.METRICOOL_OAUTH) && process.env.METRICOOL_BLOG_ID
+  );
 }
 
-function credentials() {
+/**
+ * The sealed file is the source of truth once it exists, because it holds the
+ * newest rotated token. METRICOOL_OAUTH is only the seed for the first run.
+ */
+async function credentials() {
+  if (process.env.METRICOOL_KEY) {
+    const sealed = await unseal("metricool").catch((err) => {
+      throw new Error(`could not decrypt state/metricool.enc — wrong METRICOOL_KEY? (${err.message})`);
+    });
+    if (sealed?.refresh_token) return sealed;
+  }
   const raw = process.env.METRICOOL_OAUTH;
-  if (!raw) throw new Error("METRICOOL_OAUTH is not set — run scripts/metricool-auth.mjs");
+  if (!raw) throw new Error("No Metricool credentials — run scripts/metricool-auth.mjs");
   const c = JSON.parse(raw);
   if (!c.refresh_token) throw new Error("stored Metricool credentials have no refresh_token");
   return c;
@@ -32,7 +46,7 @@ function credentials() {
  * connection, so it is persisted immediately.
  */
 async function accessToken() {
-  const c = credentials();
+  const c = await credentials();
   const body = new URLSearchParams({
     grant_type: "refresh_token",
     refresh_token: c.refresh_token,
@@ -64,26 +78,16 @@ async function accessToken() {
  * into the secret, otherwise the next run starts with a dead token.
  */
 async function persistRefresh(next) {
-  const body = JSON.stringify(next, null, 2);
-  if (process.env.GITHUB_ACTIONS) {
-    const { execFile } = await import("node:child_process");
-    const { promisify } = await import("node:util");
-    try {
-      const run = promisify(execFile);
-      await run("gh", ["secret", "set", "METRICOOL_OAUTH", "--body", body]);
-      console.log("  rotated Metricool refresh token saved back to secrets");
-    } catch (err) {
-      console.error(
-        `  COULD NOT SAVE the rotated refresh token: ${err.message}
-` +
-          `  The next run will fail until re-authorised.`
-      );
-    }
-    return;
+  if (process.env.METRICOOL_KEY) {
+    await seal(next, "metricool");
+    console.log("  rotated refresh token sealed to state/metricool.enc");
   }
-  const { writeFile } = await import("node:fs/promises");
-  await writeFile(".metricool.json", body);
-  console.log("  rotated refresh token saved to .metricool.json");
+  // Keep the local copy in step too, so this machine can still authorise.
+  if (!process.env.GITHUB_ACTIONS) {
+    const { writeFile } = await import("node:fs/promises");
+    await writeFile(".metricool.json", JSON.stringify(next, null, 2));
+    console.log("  rotated refresh token saved to .metricool.json");
+  }
 }
 
 let rpcId = 0;
