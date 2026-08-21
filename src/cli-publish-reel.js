@@ -8,6 +8,7 @@
 import path from "node:path";
 import { readQueue, writeQueue } from "./queue.js";
 import { publishInstagramReel, publishFacebookVideo } from "./publish/reels.js";
+import { publishTikTok, tiktokConfigured } from "./publish/tiktok.js";
 import { ctaLink } from "./brain.js";
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";

@@ -11,7 +11,8 @@
  */
 import { createServer } from "node:http";
 import { createHash, randomBytes } from "node:crypto";
-import { writeFile } from "node:fs/promises";
+import { writeFile, readFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 
 const AS = "https://app.metricool.com/oauth";
 const RESOURCE = "https://ai.metricool.com/mcp";
@@ -19,6 +20,30 @@ const PORT = Number(process.env.OAUTH_PORT ?? 8765);
 const REDIRECT = `http://127.0.0.1:${PORT}/callback`;
 
 const b64url = (b) => b.toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const PENDING = ".metricool-pending.json";
+
+/**
+ * Resume mode: finish an approval whose local listener already exited.
+ *   node scripts/metricool-auth.mjs --code "http://127.0.0.1:8765/callback?code=..."
+ * The PKCE verifier is persisted before waiting, so a timeout no longer throws
+ * the authorisation away.
+ */
+const codeArg = process.argv.includes("--code")
+  ? process.argv[process.argv.indexOf("--code") + 1]
+  : null;
+
+if (codeArg) {
+  if (!existsSync(PENDING)) {
+    console.error(`No ${PENDING} — start a fresh run instead.`);
+    process.exit(1);
+  }
+  const pend = JSON.parse(await readFile(PENDING, "utf8"));
+  const code = codeArg.includes("code=")
+    ? new URL(codeArg).searchParams.get("code")
+    : codeArg.trim();
+  await exchange(code, pend.client_id, pend.client_secret, pend.verifier);
+  process.exit(0);
+}
 
 // 1. Register a client for this machine. No credentials needed to register.
 const reg = await (
@@ -92,39 +117,42 @@ const code = await new Promise((resolve, reject) => {
   }, Number(process.env.OAUTH_WAIT_MS ?? 900_000)); // 15 min — a 5 min window kept expiring
 });
 
-// 4. Exchange for tokens
-const body = new URLSearchParams({
-  grant_type: "authorization_code",
-  code,
-  redirect_uri: REDIRECT,
-  client_id: reg.client_id,
-  code_verifier: verifier,
-  resource: RESOURCE,
-});
-if (reg.client_secret) body.set("client_secret", reg.client_secret);
+await exchange(code, reg.client_id, reg.client_secret, verifier);
 
-const tok = await (
-  await fetch(`${AS}/token`, {
-    method: "POST",
-    headers: { "content-type": "application/x-www-form-urlencoded" },
-    body,
-  })
-).json();
+async function exchange(code, clientId, clientSecret, codeVerifier) {
+  const body = new URLSearchParams({
+    grant_type: "authorization_code",
+    code,
+    redirect_uri: REDIRECT,
+    client_id: clientId,
+    code_verifier: codeVerifier,
+    resource: RESOURCE,
+  });
+  if (clientSecret) body.set("client_secret", clientSecret);
 
-if (!tok.access_token) {
-  console.error("token exchange failed:", JSON.stringify(tok).slice(0, 300));
-  process.exit(1);
+  const tok = await (
+    await fetch(`${AS}/token`, {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body,
+    })
+  ).json();
+
+  if (!tok.access_token) {
+    console.error("token exchange failed:", JSON.stringify(tok).slice(0, 300));
+    process.exit(1);
+  }
+
+  const saved = {
+    client_id: clientId,
+    client_secret: clientSecret ?? null,
+    refresh_token: tok.refresh_token ?? null,
+    scope: tok.scope,
+    obtained: new Date().toISOString(),
+  };
+  await writeFile(".metricool.json", JSON.stringify(saved, null, 2));
+
+  console.log(`
+access token ok (expires in ${tok.expires_in ?? "?"}s)`);
+  console.log(saved.refresh_token ? "refresh token saved to .metricool.json" : "NO refresh token returned");
 }
-
-const saved = {
-  client_id: reg.client_id,
-  client_secret: reg.client_secret ?? null,
-  refresh_token: tok.refresh_token ?? null,
-  scope: tok.scope,
-  obtained: new Date().toISOString(),
-};
-await writeFile(".metricool.json", JSON.stringify(saved, null, 2));
-
-console.log(`\naccess token ok (expires in ${tok.expires_in ?? "?"}s)`);
-console.log(saved.refresh_token ? "refresh token saved to .metricool.json" : "NO refresh token returned");
-console.log("\nNext: gh secret set METRICOOL_OAUTH < .metricool.json");

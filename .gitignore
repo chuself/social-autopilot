@@ -7,3 +7,4 @@ secrets/
 state/frames/
 state/audio/
 .metricool.json
+.metricool-pending.json

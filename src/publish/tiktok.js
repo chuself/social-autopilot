@@ -26,7 +26,11 @@ function credentials() {
   return c;
 }
 
-/** Refresh tokens are long-lived; access tokens are minted per run. */
+/**
+ * Metricool ROTATES refresh tokens — each one works exactly once, and the
+ * response carries its replacement. Losing that replacement bricks the
+ * connection, so it is persisted immediately.
+ */
 async function accessToken() {
   const c = credentials();
   const body = new URLSearchParams({
@@ -44,9 +48,42 @@ async function accessToken() {
   });
   const json = await res.json();
   if (!json.access_token) {
-    throw new Error(`Metricool token refresh failed: ${JSON.stringify(json).slice(0, 200)}`);
+    throw new Error(
+      `Metricool token refresh failed (${json.error ?? res.status}). ` +
+        `A rotated refresh token was probably lost — re-run scripts/metricool-auth.mjs.`
+    );
+  }
+  if (json.refresh_token && json.refresh_token !== c.refresh_token) {
+    await persistRefresh({ ...c, refresh_token: json.refresh_token });
   }
   return json.access_token;
+}
+
+/**
+ * Where the replacement goes. Locally that is the file; in CI it must go back
+ * into the secret, otherwise the next run starts with a dead token.
+ */
+async function persistRefresh(next) {
+  const body = JSON.stringify(next, null, 2);
+  if (process.env.GITHUB_ACTIONS) {
+    const { execFile } = await import("node:child_process");
+    const { promisify } = await import("node:util");
+    try {
+      const run = promisify(execFile);
+      await run("gh", ["secret", "set", "METRICOOL_OAUTH", "--body", body]);
+      console.log("  rotated Metricool refresh token saved back to secrets");
+    } catch (err) {
+      console.error(
+        `  COULD NOT SAVE the rotated refresh token: ${err.message}
+` +
+          `  The next run will fail until re-authorised.`
+      );
+    }
+    return;
+  }
+  const { writeFile } = await import("node:fs/promises");
+  await writeFile(".metricool.json", body);
+  console.log("  rotated refresh token saved to .metricool.json");
 }
 
 let rpcId = 0;
@@ -95,6 +132,22 @@ async function connect() {
   return { token, session, server: result?.serverInfo?.name };
 }
 
+/** Call any Metricool tool. Exposed so setup checks reuse one refresh. */
+export async function callTool(name, args) {
+  const { token, session } = await connect();
+  const { result } = await rpc(token, "tools/call", { name, arguments: args }, session);
+  const text = (result?.content ?? []).map((c) => c.text ?? "").join("\n");
+  if (result?.isError) throw new Error(text.slice(0, 300));
+  return text;
+}
+
+/** Full definition of one tool, for checking argument names against reality. */
+export async function toolSchema(name) {
+  const { token, session } = await connect();
+  const { result } = await rpc(token, "tools/list", {}, session);
+  return (result?.tools ?? []).find((t) => t.name === name) ?? null;
+}
+
 /** Names change; discover rather than hard-code the scheduling tool. */
 export async function listTools() {
   const { token, session } = await connect();
@@ -108,43 +161,50 @@ export async function listTools() {
  *   caption    post text, hashtags included
  *   when       ISO time to schedule, or null for as soon as possible
  */
-export async function publishTikTok({ videoUrl, caption, when = null, dryRun }) {
+export async function publishTikTok({ videoUrl, caption, when = null, dryRun, networks = ["tiktok"] }) {
   if (dryRun) {
-    console.log(`[dry-run] tiktok -> ${videoUrl}`);
+    console.log(`[dry-run] ${networks.join("+")} -> ${videoUrl}`);
     return { platform: "tiktok", postId: "dry-run" };
   }
 
-  const { token, session } = await connect();
-  const { result: toolList } = await rpc(token, "tools/list", {}, session);
-  const tools = toolList?.tools ?? [];
-  const scheduler =
-    tools.find((t) => /schedule.*post|post.*schedule/i.test(t.name)) ??
-    tools.find((t) => /publish/i.test(t.name));
-  if (!scheduler) {
-    throw new Error(`no scheduling tool found. Available: ${tools.map((t) => t.name).join(", ")}`);
-  }
+  const blogId = String(process.env.METRICOOL_BLOG_ID);
+  // Brand timezone is Africa/Nairobi; the API wants an explicit offset and
+  // refuses anything in the past, so schedule a few minutes out.
+  const at = when ?? new Date(Date.now() + 6 * 60_000);
+  const local = new Date(at.getTime() + 3 * 3600_000).toISOString().replace(/\.\d{3}Z$/, "");
+  const date = `${local}+03:00`;
 
-  const at = when ?? new Date(Date.now() + 5 * 60_000).toISOString();
-  const { result } = await rpc(
-    token,
-    "tools/call",
-    {
-      name: scheduler.name,
-      arguments: {
-        blogId: Number(process.env.METRICOOL_BLOG_ID),
-        userId: Number(process.env.METRICOOL_USER_ID),
-        providers: ["tiktok"],
-        text: caption,
-        media: [videoUrl],
-        publicationDate: at,
-        autoPublish: true,
-      },
-    },
-    session
-  );
+  // `info` is a JSON *string*, not an object — the schema is explicit about it.
+  const info = {
+    autoPublish: true,
+    draft: false,
+    // Required inside info as well as at the top level, in the brand's timezone.
+    publicationDate: { dateTime: local, timezone: process.env.METRICOOL_TZ ?? "Africa/Nairobi" },
+    text: caption,
+    media: [videoUrl],
+    providers: networks.map((network) => ({ network })),
+    ...(networks.includes("tiktok")
+      ? {
+          tiktokData: {
+            privacyOption: "PUBLIC_TO_EVERYONE",
+            disableComment: false,
+            // TikTok requires its own title, separate from the caption body.
+            title: (caption.split("\n")[0] || caption).slice(0, 90),
+          },
+        }
+      : {}),
+  };
 
-  const text = (result?.content ?? []).map((c) => c.text ?? "").join(" ");
-  if (result?.isError) throw new Error(`TikTok schedule failed: ${text.slice(0, 200)}`);
-  console.log(`  scheduled for ${at}`);
-  return { platform: "tiktok", postId: text.slice(0, 80) || "scheduled", scheduledFor: at };
+  const out = await callTool("createScheduledPost", {
+    blogId,
+    date,
+    info: JSON.stringify(info),
+  });
+
+  // The response echoes the whole post, whose media URL also contains "planner",
+  // so match the app link specifically rather than the first plausible URL.
+  const url = /https:\/\/app\.metricool\.com\/\S*?(?=["\s,}]|$)/i.exec(out)?.[0] ?? null;
+  console.log(`  scheduled ${networks.join("+")} for ${date}`);
+  if (url) console.log(`  ${url}`);
+  return { platform: networks.join("+"), postId: url ?? "scheduled", scheduledFor: date };
 }
