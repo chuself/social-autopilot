@@ -6,3 +6,4 @@ state/PAUSED
 secrets/
 state/frames/
 state/audio/
+.metricool.json
