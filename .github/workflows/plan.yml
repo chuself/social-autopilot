@@ -1,13 +1,15 @@
 name: plan-week
 
-# Sunday 18:00 EAT (Tanzania is UTC+3)
+# Daily at 21:00 EAT: plan TOMORROW only. A week of queued content is a week of
+# decisions that cost a full rebuild to change; one day at a time means a change
+# made today is live tomorrow.
 on:
   schedule:
-    - cron: "0 15 * * 0"
+    - cron: "0 18 * * *"
   workflow_dispatch:
     inputs:
-      count:
-        description: "How many posts to plan (blank = 7 days at the configured cadence)"
+      days:
+        description: "How many days to plan (blank = 1)"
         default: ""
       replace:
         description: "1 = discard unposted posts and rebuild the schedule"
@@ -44,7 +46,7 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           ARGS=""
-          [ -n "${{ inputs.count }}" ] && ARGS="--count ${{ inputs.count }}"
+          [ -n "${{ inputs.days }}" ] && ARGS="--days ${{ inputs.days }}"
           [ "${{ inputs.replace }}" = "1" ] && ARGS="$ARGS --replace"
           node src/cli-plan.js $ARGS
 

@@ -1,0 +1,41 @@
+name: listen-live
+
+# The fast path. Holds an open connection to Telegram and answers in seconds.
+#
+# GitHub throttles `schedule:` (our 15-minute cron was really running every 45),
+# but NOT workflow_dispatch — so this job runs for most of an hour and then
+# dispatches its own successor, leaving no gap. The cron below is only a
+# resurrection path if that chain ever breaks.
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: listen-live
+  cancel-in-progress: true
+
+jobs:
+  listen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 58
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+
+      - name: Stay on the line
+        env:
+          LIVE_MINUTES: "52"
+          POLL_SECONDS: "45"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node src/cli-listen-live.js

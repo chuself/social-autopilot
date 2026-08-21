@@ -36,23 +36,20 @@ const queue = await readQueue();
 // Cadence lives in config, not in cron, so it can be changed from Telegram.
 // The workflow wakes often; this decides whether a reel is actually owed.
 const cfg = await readConfig();
-if (!wanted && process.env.IGNORE_CADENCE !== "1") {
-  const weekAgo = Date.now() - 7 * 86400_000;
-  const madeThisWeek = (await readHistory()).filter(
-    (h) => h.format === "reel" && h.platform === "instagram" && new Date(h.postedAt).getTime() > weekAgo
-  ).length;
-  if (madeThisWeek >= cfg.reelsPerWeek) {
-    console.log(`Already ${madeThisWeek} reel(s) in the last 7 days (limit ${cfg.reelsPerWeek}) — nothing to do.`);
-    setOutput(false);
-    process.exit(0);
-  }
+if (!wanted && process.env.IGNORE_CADENCE !== "1" && cfg.reelsPerDay === 0) {
+  console.log("No reel slots in the current routine — nothing to do.");
+  setOutput(false);
+  process.exit(0);
 }
 
 // Prefer a post that is already written and not yet posted — the reel and the
 // poster then carry the same idea, and nothing is invented twice.
 const post =
   (wanted ? queue.find((p) => p.id === wanted) : null) ??
-  queue.find((p) => p.status !== "posted" && p.status !== "reject" && !p.reel);
+  // Slots declare their own format now, so the reel job films what was planned
+  // as a reel rather than guessing at the next unfilmed post.
+  queue.find((p) => p.format === "reel" && p.status !== "posted" && p.status !== "reject" && !p.reel) ??
+  queue.find((p) => p.status !== "posted" && p.status !== "reject" && !p.reel && !p.format);
 
 if (wanted && !post) {
   console.error(`No post with id "${wanted}" in the queue.`);

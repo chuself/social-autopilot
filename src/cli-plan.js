@@ -3,8 +3,8 @@
  * Plan a run of posts: brain writes the copy, a background is generated,
  * the poster is rendered, and each post lands in state/queue.json as `pending`.
  *
- *   MOCK_LLM=1 node src/cli-plan.js --count 3
- *   node src/cli-plan.js --count 7 --start 2026-08-24
+ *   MOCK_LLM=1 node src/cli-plan.js            # tomorrow, per state/config.json
+ *   node src/cli-plan.js --days 3 --replace
  */
 import path from "node:path";
 import { writePost, nextPillar, findUnapprovedFigures } from "./brain.js";
@@ -24,17 +24,17 @@ const arg = (name, fallback) => {
 
 const EAT_OFFSET = 3; // Tanzania is UTC+3, no DST
 const config = await readConfig();
-// --count is a number of POSTS; they are laid across days using the configured
-// slots, so "3 a day" needs no separate flag.
-const count = Number(arg("count", 7 * config.postsPerDay));
+// Days, not posts. Planning one day at a time means a change you make today is
+// live tomorrow — no wasted week to throw away when you change your mind.
+const days = Number(arg("days", 1));
 const brandId = arg("brand", "operra");
 const start = arg("start") ? new Date(arg("start")) : new Date();
 // Free-text steering for one run, e.g.
 //   --note "push the new POS module, and sound urgent — high season starts next week"
 const note = arg("note") ?? process.env.PLAN_NOTE ?? null;
-const postHours = arg("hours")
-  ? arg("hours").split(",").map(Number)
-  : config.postHours;
+const slots = arg("hours")
+  ? arg("hours").split(",").map((h) => ({ hour: Number(h), format: "poster" }))
+  : config.slots;
 
 let queue = await readQueue();
 // A routine change rebuilds the schedule rather than appending to the old one.
@@ -57,20 +57,21 @@ const pillarScores = existsSync(scoresPath)
   ? JSON.parse(await readFile(scoresPath, "utf8"))
   : null;
 
-// Build the slot list first, dropping any that have already passed — planning
-// into the past means every one of them fires at once on the next publish run.
-const slots = [];
-for (let n = 0; slots.length < count && n < count + postHours.length * 2; n++) {
-  const day = Math.floor(n / postHours.length);
-  const hour = postHours[n % postHours.length];
-  const when = new Date(start);
-  when.setDate(when.getDate() + day);
-  when.setUTCHours(hour - EAT_OFFSET, 0, 0, 0);
-  if (when > new Date()) slots.push({ when, hour });
+// Build the timetable first, dropping anything already past — planning into the
+// past means every one of them fires at once on the next publish run.
+const timetable = [];
+for (let day = 0; day < days; day++) {
+  for (const slot of slots) {
+    const when = new Date(start);
+    when.setDate(when.getDate() + day);
+    when.setUTCHours(slot.hour - EAT_OFFSET, 0, 0, 0);
+    if (when > new Date()) timetable.push({ when, hour: slot.hour, format: slot.format });
+  }
 }
+timetable.sort((a, b) => a.when - b.when);
 
-for (let n = 0; n < slots.length; n++) {
-  const { when, hour } = slots[n];
+for (let n = 0; n < timetable.length; n++) {
+  const { when, hour, format } = timetable[n];
   // Newest first — nextPillar() and the dedupe list both read position 0 as "last post".
   const recent = [...planned].reverse().concat(await recentPosts());
   const pillar = nextPillar(recent, pillarScores);
@@ -102,6 +103,7 @@ for (let n = 0; n < slots.length; n++) {
     ...post,
     // Relative to the repo root: an absolute runner path is meaningless anywhere else.
     backgroundPath: bgPath ? path.relative(ROOT, bgPath).split(path.sep).join("/") : null,
+    format,
     platforms: ["facebook", "instagram"],
     scheduledFor: scheduledFor.toISOString(),
     createdAt: new Date().toISOString(),
@@ -110,7 +112,7 @@ for (let n = 0; n < slots.length; n++) {
   };
 
   await renderPoster(record, brandId, path.join(ROOT, "public", `${id}.png`));
-  console.log(`planned ${id} [${record.status}] — "${post.headline}"`);
+  console.log(`planned ${id} [${format}] [${record.status}] — "${post.headline}"`);
 
   planned.push(record);
 }

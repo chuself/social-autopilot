@@ -1,9 +1,14 @@
 /**
- * Operational settings the owner can change by messaging the bot — cadence and
- * timing, as opposed to state/steer.md which shapes what gets written.
+ * Operational settings the owner changes by messaging the bot — the shape of a
+ * posting day, as opposed to state/steer.md which shapes what gets written.
  *
- * Kept deliberately small and validated hard: this file decides how often the
- * account posts, so a bad value is worse than a rejected instruction.
+ * A day is a list of SLOTS, each with an hour and a format. Counts are not a
+ * separate setting: three posters and one reel is simply four slots, three of
+ * which say "poster". The previous model kept hours and counts apart, which made
+ * "3 posters and 1 reel at 8, 13, 16 and 20" impossible to express.
+ *
+ * Validated hard: this decides how often the account posts, so a bad value is
+ * worse than a rejected instruction.
  */
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -12,100 +17,119 @@ import path from "node:path";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const FILE = path.join(ROOT, "state", "config.json");
 
+export const FORMATS = new Set(["poster", "reel"]);
+
 export const DEFAULTS = {
-  postsPerDay: 1,
-  // Local (EAT) hours posts are scheduled at. Length should match postsPerDay.
-  postHours: [9],
-  // Reels are heavier to make and to watch, so they are counted per WEEK.
-  reelsPerWeek: 2,
+  // Local (EAT) hours. One entry per post.
+  slots: [{ hour: 9, format: "poster" }],
 };
 
-export const LIMITS = { maxPostsPerDay: 4, maxReelsPerWeek: 14, minHour: 6, maxHour: 23 };
+export const LIMITS = {
+  maxSlotsPerDay: 6,
+  maxReelsPerDay: 2,
+  minHour: 6,
+  maxHour: 23,
+};
 
 export async function readConfig() {
-  if (!existsSync(FILE)) return { ...DEFAULTS };
-  try {
-    return { ...DEFAULTS, ...JSON.parse(await readFile(FILE, "utf8")) };
-  } catch {
-    return { ...DEFAULTS };
+  let raw = {};
+  if (existsSync(FILE)) {
+    try {
+      raw = JSON.parse(await readFile(FILE, "utf8"));
+    } catch {
+      raw = {};
+    }
   }
+  // Only fall back to DEFAULTS when the file has neither shape, otherwise the
+  // default slots would mask an older postHours config and silently reset the day.
+  const hasShape = Array.isArray(raw.slots) || Array.isArray(raw.postHours);
+  return withDerived(hasShape ? { ...raw } : { ...DEFAULTS, ...raw });
 }
 
 /**
- * Apply a partial change. Returns { config, changes, rejected } so the caller can
- * tell the owner exactly what took effect — silent clamping would be worse than
- * saying no.
+ * Older configs stored postHours + postsPerDay + reelsPerWeek. Convert rather
+ * than break: a config written before slots existed still has to work.
+ */
+function withDerived(cfg) {
+  if (!Array.isArray(cfg.slots) || !cfg.slots.length) {
+    const hours = Array.isArray(cfg.postHours) && cfg.postHours.length ? cfg.postHours : [9];
+    cfg.slots = hours.map((hour) => ({ hour, format: "poster" }));
+  }
+  cfg.slots = [...cfg.slots].sort((a, b) => a.hour - b.hour);
+  cfg.postersPerDay = cfg.slots.filter((s) => s.format === "poster").length;
+  cfg.reelsPerDay = cfg.slots.filter((s) => s.format === "reel").length;
+  return cfg;
+}
+
+/**
+ * Apply a change. Returns { config, changes, rejected } so the owner can be told
+ * exactly what took effect — silent clamping would be worse than saying no.
  */
 export async function updateConfig(patch) {
   const current = await readConfig();
-  const next = { ...current };
   const changes = [];
   const rejected = [];
+  let slots = current.slots;
 
-  if (patch.postsPerDay != null) {
-    const n = Number(patch.postsPerDay);
-    if (!Number.isInteger(n) || n < 1 || n > LIMITS.maxPostsPerDay) {
-      rejected.push(`postsPerDay ${patch.postsPerDay} (allowed 1-${LIMITS.maxPostsPerDay})`);
-    } else if (n !== current.postsPerDay) {
-      next.postsPerDay = n;
-      changes.push(`${current.postsPerDay} → ${n} posts per day`);
+  if (Array.isArray(patch.slots) && patch.slots.length) {
+    const cleaned = [];
+    for (const s of patch.slots) {
+      const hour = Number(s?.hour);
+      const format = String(s?.format ?? "poster").toLowerCase();
+      if (!Number.isInteger(hour) || hour < LIMITS.minHour || hour > LIMITS.maxHour) {
+        rejected.push(`hour ${s?.hour} (allowed ${LIMITS.minHour}-${LIMITS.maxHour})`);
+        continue;
+      }
+      if (!FORMATS.has(format)) {
+        rejected.push(`format "${s?.format}"`);
+        continue;
+      }
+      if (cleaned.some((c) => c.hour === hour)) {
+        rejected.push(`duplicate hour ${hour}`);
+        continue;
+      }
+      cleaned.push({ hour, format });
     }
-  }
 
-  if (patch.reelsPerWeek != null) {
-    const n = Number(patch.reelsPerWeek);
-    if (!Number.isInteger(n) || n < 0 || n > LIMITS.maxReelsPerWeek) {
-      rejected.push(`reelsPerWeek ${patch.reelsPerWeek} (allowed 0-${LIMITS.maxReelsPerWeek})`);
-    } else if (n !== current.reelsPerWeek) {
-      next.reelsPerWeek = n;
-      changes.push(`${current.reelsPerWeek} → ${n} reels per week`);
-    }
-  }
-
-  if (Array.isArray(patch.postHours) && patch.postHours.length) {
-    const hours = patch.postHours
-      .map(Number)
-      .filter((h) => Number.isInteger(h) && h >= LIMITS.minHour && h <= LIMITS.maxHour);
-    if (hours.length !== patch.postHours.length) {
-      rejected.push(`some hours outside ${LIMITS.minHour}:00-${LIMITS.maxHour}:00`);
-    }
-    if (hours.length) {
-      const sorted = [...new Set(hours)].sort((a, b) => a - b);
-      if (sorted.join(",") !== current.postHours.join(",")) {
-        next.postHours = sorted;
-        changes.push(`times → ${sorted.map((h) => `${h}:00`).join(", ")}`);
+    if (cleaned.length > LIMITS.maxSlotsPerDay) {
+      rejected.push(`${cleaned.length} slots (max ${LIMITS.maxSlotsPerDay} a day)`);
+    } else if (cleaned.filter((c) => c.format === "reel").length > LIMITS.maxReelsPerDay) {
+      rejected.push(`too many reels (max ${LIMITS.maxReelsPerDay} a day)`);
+    } else if (cleaned.length) {
+      cleaned.sort((a, b) => a.hour - b.hour);
+      if (describe(cleaned) !== describe(current.slots)) {
+        slots = cleaned;
+        changes.push(`day is now ${describe(cleaned)}`);
       }
     }
   }
 
-  // Keep the two consistent: a cadence without enough slots would silently
-  // collapse several posts onto one hour.
-  if (next.postHours.length < next.postsPerDay) {
-    next.postHours = spreadHours(next.postsPerDay);
-    changes.push(`times auto-spread to ${next.postHours.map((h) => `${h}:00`).join(", ")}`);
-  }
-
   if (changes.length) {
-    await writeFile(FILE, JSON.stringify(next, null, 2));
+    await writeFile(FILE, JSON.stringify({ slots }, null, 2));
   }
-  return { config: next, changes, rejected };
+  return { config: withDerived({ slots }), changes, rejected };
+}
+
+export function describe(slots) {
+  return slots.map((s) => `${s.hour}:00 ${s.format}`).join(", ");
 }
 
 /**
- * Sensible slots per cadence. An even mathematical spread puts posts at 6am,
- * which is wrong for this audience — these are hand-picked reading moments:
- * before the shift, the midday lull, and the evening wind-down.
+ * Sensible hours for a given number of posts. An even mathematical spread puts
+ * posts at 6am; these are hand-picked reading moments.
  */
-const SLOTS = {
+const SPREAD = {
   1: [9],
   2: [9, 17],
   3: [8, 13, 19],
   4: [8, 12, 16, 20],
+  5: [8, 11, 14, 17, 20],
+  6: [8, 10, 13, 16, 19, 21],
 };
 
 export function spreadHours(n) {
-  if (SLOTS[n]) return SLOTS[n];
+  if (SPREAD[n]) return SPREAD[n];
   const { minHour, maxHour } = LIMITS;
-  const step = (maxHour - minHour) / (n - 1);
+  const step = (maxHour - minHour) / Math.max(1, n - 1);
   return Array.from({ length: n }, (_, i) => Math.round(minHour + step * i));
 }
