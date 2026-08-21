@@ -8,6 +8,10 @@ on:
 jobs:
   status:
     runs-on: ubuntu-latest
+    # Required: every Metricool call consumes a token rotation, and the
+    # replacement must be committed or the connection dies.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -26,4 +30,6 @@ jobs:
           git pull --rebase --autostash
           git add -f state/metricool.enc
           git diff --staged --quiet || git commit -m "chore: rotate metricool token [skip ci]"
-          git push || true
+          # Loud on purpose: a silent failure here bricks Metricool until the
+          # owner re-authorises in a browser.
+          git push || { echo "::error::Could not save the rotated Metricool token — the connection is now dead."; exit 1; }
