@@ -1,0 +1,29 @@
+name: metricool-status
+
+# On demand: ask Metricool what it did with our scheduled posts. The decryption
+# key only exists in CI, so this is the only place the question can be asked.
+on:
+  workflow_dispatch:
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Ask Metricool
+        env:
+          METRICOOL_KEY: ${{ secrets.METRICOOL_KEY }}
+          METRICOOL_OAUTH: ${{ secrets.METRICOOL_OAUTH }}
+          METRICOOL_BLOG_ID: ${{ vars.METRICOOL_BLOG_ID }}
+        run: node scripts/mc-status.mjs
+      - name: Save the rotated token
+        if: always()
+        run: |
+          git config user.name "social-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase --autostash
+          git add -f state/metricool.enc
+          git diff --staged --quiet || git commit -m "chore: rotate metricool token [skip ci]"
+          git push || true
