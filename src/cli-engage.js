@@ -45,15 +45,36 @@ const cutoff = Date.now() - 14 * 86400_000;
 const history = (await readHistory()).filter((h) => new Date(h.postedAt).getTime() > cutoff);
 
 const comments = [];
+const denied = new Set();
 for (const post of history) {
   try {
     comments.push(...(await fetchComments(post)));
   } catch (err) {
-    console.warn(`${post.platform} ${post.postId}: ${err.message}`);
+    // A permissions failure reads exactly like "nobody commented" unless it is
+    // called out — which is how this went unnoticed for a day.
+    if (/#200|#10|Missing Permissions|permission/i.test(err.message)) {
+      denied.add(post.platform);
+    } else {
+      console.warn(`${post.platform} ${post.postId}: ${err.message}`);
+    }
   }
 }
 
-console.log(`${comments.length} comment(s) on ${history.length} recent post(s)`);
+if (denied.size) {
+  const msg =
+    `🔒 <b>Comment replies are switched off</b>
+` +
+    `Reading comments on <b>${[...denied].join(" and ")}</b> is being denied.
+
+` +
+    `The Page token is missing <code>pages_read_user_content</code>, ` +
+    `<code>pages_manage_engagement</code> and <code>instagram_manage_comments</code>. ` +
+    `Regenerate it in the Graph API Explorer with those added.`;
+  console.error(`PERMISSION DENIED on: ${[...denied].join(", ")}`);
+  await notify(msg);
+}
+
+console.log(`${comments.length} comment(s) on ${history.length} recent post(s)${denied.size ? " (some denied)" : ""}`);
 
 let sent = 0;
 for (const c of comments) {
