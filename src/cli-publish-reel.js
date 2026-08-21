@@ -12,7 +12,7 @@ import { ctaLink } from "./brain.js";
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { isPaused, isDryRun } from "./guards.js";
-import { notify } from "./notify.js";
+import { notify, sendVideo } from "./notify.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const dryRun = isDryRun();

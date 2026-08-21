@@ -103,6 +103,39 @@ async function sendWhatsApp(text) {
   return true;
 }
 
+/**
+ * Deliver a finished video to Telegram so it can be posted by hand where no
+ * automatic route exists (TikTok, until an audited path is in place).
+ * Telegram fetches the file itself, so the URL must be public and under ~20MB.
+ */
+export async function sendVideo(videoUrl, caption) {
+  if (!notifyConfigured()) {
+    console.log(`[video not sent — Telegram not configured] ${videoUrl}`);
+    return false;
+  }
+  const res = await fetch(`${API}${process.env.TELEGRAM_BOT_TOKEN}/sendVideo`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      chat_id: process.env.TELEGRAM_CHAT_ID,
+      video: videoUrl,
+      caption: caption.slice(0, 1000),
+      parse_mode: "HTML",
+      supports_streaming: true,
+    }),
+  });
+  const json = await res.json();
+  if (!json.ok) {
+    console.error(`sendVideo failed: ${json.description ?? res.status}`);
+    // Fall back to a plain link — better a link than nothing.
+    await notify(`${caption}
+
+${videoUrl}`, { mirror: false });
+    return false;
+  }
+  return true;
+}
+
 /** Failures must be loud — this is how an unattended pipeline asks for help. */
 export async function notifyFailure(what, err) {
   await notify(
