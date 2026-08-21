@@ -1,0 +1,33 @@
+name: pages
+
+# Publishes ./public on demand and whenever its contents change. Assets are
+# normally deployed by the plan and reel jobs; this exists so a static page
+# (like the privacy policy) can go live without building anything.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+concurrency: pages-deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - id: deploy
+        uses: actions/deploy-pages@v4
+      - run: echo "deployed ${{ steps.deploy.outputs.page_url }}"
