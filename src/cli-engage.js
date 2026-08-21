@@ -24,6 +24,9 @@ import { isDryRun } from "./guards.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const REPLIED = path.join(ROOT, "state", "replied.json");
+// Without "from" we cannot tell our own comments apart, so we remember the ids
+// of every reply we post and skip them.
+const OURS = path.join(ROOT, "state", "our-comments.json");
 const LEADS = path.join(ROOT, "state", "leads.json");
 const MAX_REPLIES_PER_RUN = 10;
 
@@ -39,6 +42,7 @@ const CTA = ctaLink(brand, null);
 
 const replied = new Set(existsSync(REPLIED) ? JSON.parse(await readFile(REPLIED, "utf8")) : []);
 const leads = existsSync(LEADS) ? JSON.parse(await readFile(LEADS, "utf8")) : [];
+const ours = new Set(existsSync(OURS) ? JSON.parse(await readFile(OURS, "utf8")) : []);
 
 // Only look at the last 14 days — older threads are not worth waking up.
 const cutoff = Date.now() - 14 * 86400_000;
@@ -127,7 +131,8 @@ The drafted reply invented a detail, so nothing was posted.`
     console.log(`  [dry-run] would reply: ${verdict.reply}`);
   } else {
     try {
-      await graphPost(`${c.id}/comments`, { message: verdict.reply, access_token: token });
+      const posted = await graphPost(`${c.id}/comments`, { message: verdict.reply, access_token: token });
+      if (posted?.id) ours.add(posted.id);
       console.log(`  replied`);
     } catch (err) {
       console.error(`  reply failed: ${err.message}`);
@@ -140,14 +145,17 @@ The drafted reply invented a detail, so nothing was posted.`
 
 if (!dryRun) {
   await writeFile(REPLIED, JSON.stringify([...replied].slice(-2000), null, 2));
+  await writeFile(OURS, JSON.stringify([...ours].slice(-2000), null, 2));
   await writeFile(LEADS, JSON.stringify(leads.slice(-500), null, 2));
 }
 console.log(`\n${sent} repl(ies) sent, ${leads.length} lead(s) on file`);
 
 async function fetchComments(post) {
   if (post.platform === "facebook") {
+    // No "from": Meta blocks the commenter's identity on Page posts, and asking
+    // for it fails the WHOLE request. We do not need a name in order to reply.
     const j = await graphGet(`${post.postId}/comments`, {
-      fields: "id,message,from{name},created_time,permalink_url",
+      fields: "id,message,created_time,permalink_url",
       limit: "50",
       access_token: token,
     });
@@ -155,9 +163,9 @@ async function fetchComments(post) {
       id: c.id,
       platform: "facebook",
       text: c.message ?? "",
-      from: c.from?.name ?? "someone",
+      from: "someone",
       permalink: c.permalink_url,
-      fromPage: c.from?.id === process.env.FB_PAGE_ID,
+      fromPage: ours.has(c.id),
     }));
   }
   const j = await graphGet(`${post.postId}/comments`, {
@@ -171,7 +179,7 @@ async function fetchComments(post) {
     text: c.text ?? "",
     from: c.username ?? "someone",
     permalink: null,
-    fromPage: false,
+    fromPage: ours.has(c.id),
   }));
 }
 
