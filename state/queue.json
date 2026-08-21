@@ -229,7 +229,20 @@
     ],
     "scheduledFor": "2026-08-21T13:00:00.000Z",
     "createdAt": "2026-08-21T07:17:53.720Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-21-16-pain-point.mp4",
+      "beats": [
+        "Wateja wawili chumbani huleta aibu kubwa.",
+        "Mfumo wa Operra unazuia makosa haya.",
+        "Hali ya vyumba inaonekana papo hapo.",
+        "Mapokezi tulivu na wateja wenye furaha."
+      ],
+      "narration": "Kupanga wateja wawili chumba kimoja ni aibu kubwa kwa hoteli yako. Ukiwa na Operra, unaona hali halisi ya kila chumba kwa sekunde ileile. Inafanya kazi vizuri hata mtandao ukiwa chini, ikihakikisha mapokezi yako yanakuwa tulivu na yenye ufanisi kila siku.",
+      "hasVoice": true,
+      "builtAt": "2026-08-21T07:45:59.901Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-21-20-number-that-lands",
