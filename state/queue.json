@@ -487,5 +487,145 @@
       "facebook:1049514968255534_122141617881351110",
       "instagram:17950874124251936"
     ]
+  },
+  {
+    "id": "operra-2026-08-23-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Mwanza Hotels",
+        "headline": "Lake-side internet shouldn't stall checkouts",
+        "body": "When the connection drops during conference rushes, pen and paper shouldn't be your backup plan."
+      },
+      {
+        "eyebrow": "Low Bandwidth",
+        "headline": "Runs on slow Tanzanian connections",
+        "body": "We built Operra to keep your front desk and POS synced even on low-bandwidth networks."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Simplified control for smaller teams",
+        "body": "Manage front desk, housekeeping, POS, and billing on one system. No heavy internet required."
+      }
+    ],
+    "caption": "Mwanza's conference season brings high volume but tests your lakeside connection. When your internet slows down, your property management shouldn't freeze. Operra is built specifically for Tanzanian properties. It runs smoothly on low-bandwidth connections, keeping your front desk, housekeeping, and POS synced without interruption. No more manual logs or delayed billing when the network drops. Keep your team efficient and your guests checked in on time.",
+    "hashtags": [
+      "MwanzaHotels",
+      "TanzaniaHospitality",
+      "HotelManagement",
+      "Operra"
+    ],
+    "imagePrompt": "An overhead flat-lay, looking straight down onto a surface. A neat arrangement of a modern hotel plastic keycard, a sleek compact internet router, a clean notebook, and a small brass reception bell on a light gray concrete desk. Mid-tone, even soft daylight, shallow shadows. No text, no people, no logos.",
+    "cta": "Try Operra today",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-08-23-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-23T05:00:00.000Z",
+    "createdAt": "2026-08-22T18:33:58.133Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-08-23-08-number-that-lands-1.png",
+      "operra-2026-08-23-08-number-that-lands-2.png",
+      "operra-2026-08-23-08-number-that-lands-3.png"
+    ],
+    "headline": "Lake-side internet shouldn't stall checkouts"
+  },
+  {
+    "id": "operra-2026-08-23-13-client-proof",
+    "eyebrow": "Operations",
+    "headline": "Fast check-ins for trekking groups in Moshi",
+    "body": "Our dual Kiswahili and English interface helps your reception and housekeeping teams prep rooms instantly as climbers return.",
+    "cta": "See it work",
+    "caption": "When a climbing group descends from Kilimanjaro, they expect fast check-ins. In Moshi, peak season leaves no room for communication errors.\n\nLocal properties keep operations moving because reception and housekeeping coordinate instantly. With our Kiswahili and English interface, your entire team stays aligned. No missed room updates, no delayed check-ins.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelOperations",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "An overhead flat-lay looking straight down onto a clean, rustic wooden surface. On the right-of-centre, a pair of dusty leather hiking boots sits neatly next to a folded stack of fresh white hotel towels. The left third of the frame is empty and visually calm, showing only the clean grain of the wooden surface. Mid-tone, even soft daylight, neat arrangement, shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-23-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-23T10:00:00.000Z",
+    "createdAt": "2026-08-22T18:34:42.788Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-23-16-swahili-tip",
+    "eyebrow": "Front Desk",
+    "headline": "Split corporate bills at check-in",
+    "body": "Avoid checkout delays. Separate corporate room charges from personal incidentals the moment your guest arrives.",
+    "cta": "See how it works",
+    "caption": "Dar es Salaam corporate guests need to check out fast to beat the morning traffic.\n\nDon't waste time splitting room rates from bar bills at checkout. Route corporate expenses to the company ledger and incidentals to the guest's personal bill right at check-in.\n\nKeep your lobby moving and corporate accounts clean.",
+    "hashtags": [
+      "HotelOperations",
+      "DarEsSalaam",
+      "HospitalityManagement"
+    ],
+    "imagePrompt": "An overhead flat-lay looking straight down onto a light grey concrete reception desk. On the right, a neat arrangement of a printed invoice paper, a brass hotel key, and a slim pen. The left third of the image is completely empty, plain light grey concrete surface with soft daylight and shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-23-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-23T13:00:00.000Z",
+    "createdAt": "2026-08-22T18:35:27.461Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-23-20-industry-note",
+    "eyebrow": "Tour Invoicing",
+    "headline": "Safari season demands faster tour operator billing",
+    "body": "As safari peak season hits Arusha, delayed invoicing to tour operators locks up cash flow. Instant record-keeping keeps group billing seamless.",
+    "cta": "See how it works",
+    "caption": "Peak safari season brings high occupancy to Arusha, but group bookings can stall your back office. Tour operators require clear, itemized bills before releasing final payments.\n\nWhen room charges, meals, and extras are logged as they happen, closing group folios takes minutes instead of days. Keep your cash flow moving while safari groups arrive and depart.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HospitalityManagement",
+      "#EastAfricaTourism",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "Overhead flat-lay, looking straight down onto a surface. A wooden clipboard holding safari itineraries, a brass room key, and a pocket compass placed on a clean wooden desk. Mid-tone, even soft daylight, neat arrangement, shallow shadows. Visual detail positioned on the right side, leaving the left side visually calm with empty desk space. No text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-23-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-23T17:00:00.000Z",
+    "createdAt": "2026-08-22T18:36:12.808Z",
+    "status": "pending"
   }
 ]
