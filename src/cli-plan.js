@@ -107,13 +107,21 @@ const pillarScores = existsSync(scoresPath)
 
 // Build the timetable first, dropping anything already past — planning into the
 // past means every one of them fires at once on the next publish run.
+//
+// The daily job runs at 21:00 EAT to plan TOMORROW — but `days` counted from
+// today, and by 21:00 every one of today's slots is behind us, so the whole
+// timetable filtered away and the evening planner queued nothing. Every night.
+// The queue only ever filled up because of ad-hoc replans during the day.
+// If the starting day has nothing left in it, roll forward and plan the next.
 const timetable = [];
-for (let day = 0; day < days; day++) {
-  for (const slot of slots) {
-    const when = new Date(start);
-    when.setDate(when.getDate() + day);
-    when.setUTCHours(slot.hour - EAT_OFFSET, 0, 0, 0);
-    if (when > new Date()) timetable.push({ when, hour: slot.hour, format: slot.format });
+for (let offset = 0; timetable.length === 0 && offset <= 1; offset++) {
+  for (let day = 0; day < days; day++) {
+    for (const slot of slots) {
+      const when = new Date(start);
+      when.setDate(when.getDate() + day + offset);
+      when.setUTCHours(slot.hour - EAT_OFFSET, 0, 0, 0);
+      if (when > new Date()) timetable.push({ when, hour: slot.hour, format: slot.format });
+    }
   }
 }
 timetable.sort((a, b) => a.when - b.when);
