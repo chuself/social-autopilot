@@ -210,6 +210,18 @@ deployment and a week of confusion.
   already audited can post publicly on your behalf.
 
 ### Metricool
+- **Metricool is for TikTok. Nothing else. Ever.** The free plan allows 20
+  scheduled posts a month *across every network it can reach*. TikTok has no
+  other route to a public post, so that allowance is TikTok's lifeline. Adding a
+  second network to the same call halves it and TikTok goes dark around day ten
+  — silently, because a refused schedule is not an error the pipeline sees.
+  Facebook, Instagram and YouTube each have their own route, or they wait.
+  `publishTikTok` throws if given a `networks` option, and preflight executes
+  that guard on every run so it cannot drift back.
+- **A rotation is only durable once its commit lands.** The hazard is not just
+  two CI runs racing — it is *any* rotation happening somewhere the repo does
+  not see, including a laptop. Run local tooling with `--skip=metricool`, and
+  push `state/metricool.enc` immediately if you do rotate it.
 - **Refresh tokens rotate on every use.** Each works once and returns its
   replacement. *Any* job that touches Metricool — including a read-only status
   check — must be able to persist the replacement, or it destroys the credential

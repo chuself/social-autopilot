@@ -8,8 +8,26 @@
  *
  * Auth is OAuth 2.1: the owner approves once (scripts/metricool-auth.mjs) and we
  * mint access tokens from the stored refresh token thereafter.
+ *
+ * ─────────────────────────────────────────────────────────────────────────────
+ * METRICOOL IS FOR TIKTOK. NOTHING ELSE. EVER.
+ *
+ * Metricool's free plan allows 20 SCHEDULED POSTS A MONTH across every network
+ * it can reach. TikTok has no other route to a public post, so that allowance is
+ * TikTok's lifeline and nothing else may spend it. At one reel a day TikTok
+ * alone needs ~30 a month and already runs out near month end; adding a second
+ * network to the same call halves the allowance and TikTok goes dark around day
+ * ten — silently, because a refused schedule is not an error the pipeline sees.
+ *
+ * Facebook, Instagram and YouTube each have their own free route, or they wait.
+ * They do NOT ride on this one. The guard below enforces it at runtime and
+ * preflight executes that guard on every run, so this cannot quietly drift back.
+ * ─────────────────────────────────────────────────────────────────────────────
  */
 import { seal, unseal } from "../secretstore.js";
+
+/** Not configurable. See the banner above before you think about changing it. */
+const NETWORKS = Object.freeze(["tiktok"]);
 
 const MCP = "https://ai.metricool.com/mcp";
 const TOKEN_URL = "https://app.metricool.com/oauth/token";
@@ -165,7 +183,19 @@ export async function listTools() {
  *   caption    post text, hashtags included
  *   when       ISO time to schedule, or null for as soon as possible
  */
-export async function publishTikTok({ videoUrl, caption, when = null, dryRun, networks = ["tiktok"] }) {
+export async function publishTikTok({ videoUrl, caption, when = null, dryRun, ...rest }) {
+  // A `networks` option used to exist and default to ["tiktok"]. It is gone on
+  // purpose: it was one keystroke away from spending TikTok's only allowance on
+  // a network that has a free route of its own. Passing it is now an error, not
+  // a preference, and preflight calls this with one every run to prove it.
+  if ("networks" in rest) {
+    throw new Error(
+      "Metricool is for TikTok only — the free 20/month allowance is TikTok's " +
+        "lifeline and nothing else may spend it. Publish other networks their own way."
+    );
+  }
+  const networks = NETWORKS;
+
   if (dryRun) {
     console.log(`[dry-run] ${networks.join("+")} -> ${videoUrl}`);
     return { platform: "tiktok", postId: "dry-run" };

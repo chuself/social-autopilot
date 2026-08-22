@@ -684,6 +684,24 @@ await check(
   { group: "creds", level: "warn", net: true }
 );
 
+// Executed, not read. Metricool's 20-a-month free allowance is TikTok's only
+// route to a public post; one extra network on that call halves it and TikTok
+// goes dark mid-month without raising anything the pipeline would notice.
+await check(
+  "metricool is tiktok-only",
+  async () => {
+    const { publishTikTok } = await import("../src/publish/tiktok.js");
+    try {
+      await publishTikTok({ videoUrl: "x", caption: "x", dryRun: true, networks: ["youtube"] });
+    } catch (err) {
+      if (/tiktok only/i.test(err.message)) return "guard holds — other networks refused";
+      throw new Error(`guard threw the wrong error: ${err.message}`);
+    }
+    throw new Error("a non-TikTok network was ACCEPTED — TikTok's allowance is at risk");
+  },
+  { group: "creds" }
+);
+
 await check(
   "google sheet",
   async () => {
