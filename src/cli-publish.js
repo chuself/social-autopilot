@@ -14,7 +14,7 @@ import path from "node:path";
 import { publisherFor } from "./publish/index.js";
 import { publishCarousel } from "./publish/instagram.js";
 import { publishAlbum } from "./publish/facebook.js";
-import { ctaLink } from "./brain.js";
+import { ctaLink, ctaComment } from "./brain.js";
 import { commentOn } from "./publish/comment.js";
 import { readConfig } from "./config.js";
 import { readFile as readFileAsync } from "node:fs/promises";
@@ -105,7 +105,9 @@ for (const post of posts) {
 
       if (linkInComment && result.postId && result.postId !== "dry-run") {
         try {
-          await commentOn(result.postId, link, { dryRun });
+          // Instagram does not linkify comments, so it gets a readable number
+          // instead of an unclickable URL.
+          await commentOn(result.postId, ctaComment(brand, post.id, platform), { dryRun });
           console.log(`    link added as the first comment`);
         } catch (err) {
           // Not fatal: the post is already live and useful without it.

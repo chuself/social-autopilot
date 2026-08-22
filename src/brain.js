@@ -55,9 +55,27 @@ export function nextPillar(recent, scores = null) {
 }
 
 /**
- * The call to action. A wa.me deep link carries a per-post tag in the prefilled
- * message, so an incoming WhatsApp says which post produced it — that is what
- * lets the feedback loop optimise for conversations instead of likes.
+ * How the contact detail should read on each platform.
+ *
+ * Instagram does not linkify anything in a comment, so a long wa.me URL is
+ * unclickable AND ugly — a plainly formatted number is more use. Facebook does
+ * linkify comments, so it keeps the deep link with its per-post tag.
+ */
+export function ctaComment(brand, postId, platform) {
+  const number = process.env.WHATSAPP_CTA_NUMBER;
+  if (!number) return brand.site;
+
+  if (platform === "instagram") {
+    const digits = number.replace(/\D/g, "");
+    const pretty = digits.replace(/^(\d{3})(\d{3})(\d{3})(\d{3})$/, "+$1 $2 $3 $4");
+    return `WhatsApp ${pretty}  ·  ${brand.site}`;
+  }
+  return ctaLink(brand, postId);
+}
+
+/**
+ * A wa.me deep link carrying a per-post tag, so an incoming WhatsApp says which
+ * post produced it — that is what lets the loop optimise for conversations.
  */
 export function ctaLink(brand, postId) {
   const number = process.env.WHATSAPP_CTA_NUMBER;
