@@ -39,6 +39,18 @@ if (!post) {
   process.exit(0);
 }
 
+// Film ahead, publish on time. Without this a reel goes out the moment it is
+// rendered, so a 16:00 slot could land the previous afternoon.
+if (!wanted && process.env.IGNORE_SCHEDULE !== "1") {
+  const due = new Date(post.scheduledFor) <= new Date();
+  if (!due) {
+    const eatTime = new Date(new Date(post.scheduledFor).getTime() + 3 * 3600_000)
+      .toISOString().slice(11, 16);
+    console.log(`Reel is ready but not due until ${eatTime} EAT — leaving it.`);
+    process.exit(0);
+  }
+}
+
 const videoUrl = `${base}/${post.reel.file}`;
 console.log(`Publishing reel: ${post.headline}`);
 console.log(`  ${videoUrl}`);

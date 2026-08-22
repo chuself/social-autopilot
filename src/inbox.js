@@ -275,7 +275,8 @@ Classify the message and reply. Return ONLY JSON:
 - "question" = they are asking something. Answer it using the queue above.
 - "chat" = greeting or small talk. Reply briefly and naturally.
 
-Reply in the same language they wrote in.`
+Reply in the same language they wrote in.`,
+      { fast: true }
     );
   } catch (err) {
     console.warn(`  classify failed, treating as chat: ${err.message}`);

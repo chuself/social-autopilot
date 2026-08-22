@@ -7,6 +7,9 @@
  */
 // Tried in order — free-tier models go "high demand" often enough that a single
 // model id is a real outage risk for an unattended poster.
+// Small, quick jobs go here first — same quota pool trick, far less contention.
+const FAST_MODELS = ["gemini-3.1-flash-lite", "gemini-flash-lite-latest", "gemini-3.5-flash"];
+
 const GEMINI_MODELS = process.env.GEMINI_MODEL
   ? [process.env.GEMINI_MODEL]
   : [
@@ -25,8 +28,15 @@ const GROQ_MODELS = process.env.GROQ_MODEL
   ? [process.env.GROQ_MODEL]
   : ["openai/gpt-oss-120b", "openai/gpt-oss-20b"];
 
-export async function completeJson(prompt, { schemaHint } = {}) {
+/**
+ * @param {object} opts
+ *   fast — put the lite models first. Classification and short replies are easy
+ *   work, and the lite tier is far less often overloaded, which is what made
+ *   simple questions take 30-50 seconds to answer.
+ */
+export async function completeJson(prompt, { schemaHint, fast = false } = {}) {
   if (process.env.MOCK_LLM === "1") return mockPost();
+  if (fast) return await gemini.run(prompt, schemaHint, FAST_MODELS).catch(() => groq.run(prompt));
 
   const errors = [];
   for (const provider of [gemini, groq]) {
@@ -47,9 +57,9 @@ export async function completeJson(prompt, { schemaHint } = {}) {
 const gemini = {
   name: "gemini",
   available: () => Boolean(process.env.GEMINI_API_KEY),
-  async run(prompt) {
+  async run(prompt, _hint, models = GEMINI_MODELS) {
     let last;
-    for (const model of GEMINI_MODELS) {
+    for (const model of models) {
       // Two goes per model: a transient network blip should not cost a day's post.
       for (let attempt = 1; attempt <= 2; attempt++) {
         try {

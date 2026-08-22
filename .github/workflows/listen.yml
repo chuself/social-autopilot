@@ -2,9 +2,10 @@ name: listen
 
 # Every 15 minutes: pick up whatever you told the bot on Telegram.
 # Telegram holds messages for 24h, so nothing is lost between runs.
+# Manual only. listen-live.js holds an open connection and answers in seconds;
+# running this on a cron as well meant two jobs polling the same inbox and
+# racing over the read offset. Kept as a manual recovery path.
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 concurrency: autopilot-state
