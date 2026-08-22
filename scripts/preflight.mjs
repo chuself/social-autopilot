@@ -79,6 +79,14 @@ await check("config", async () => {
   return describe(cfg.slots);
 });
 
+// ── 3b. Guards must resolve to real numbers: a NaN cap silently never applies.
+await check("daily cap is a number", async () => {
+  const { maxPostsPerDay } = await import("../src/guards.js");
+  const cap = await maxPostsPerDay();
+  if (!Number.isFinite(cap)) throw new Error(`cap is ${cap} — the guard is off`);
+  return `${cap} per platform per day`;
+});
+
 // ── 4. Every queued post has the assets it will need. ───────────────────────
 await check("queued assets present", async () => {
   const queue = JSON.parse(await readFile(path.join(ROOT, "state", "queue.json"), "utf8"));

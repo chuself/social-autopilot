@@ -11,8 +11,14 @@ const ROOT = path.resolve(import.meta.dirname, "..");
  * manual post still fits but a bug cannot spam the account.
  */
 export async function maxPostsPerDay() {
-  const { postsPerDay } = await readConfig();
-  return Math.max(2, postsPerDay + 1);
+  const cfg = await readConfig();
+  // Count the slots themselves. Reading a postsPerDay field that no longer
+  // exists made this NaN, and `already >= NaN` is always false — the cap was
+  // silently off for every post.
+  const perDay = cfg.slots?.length ?? 1;
+  const cap = Math.max(2, perDay + 1);
+  if (!Number.isFinite(cap)) throw new Error(`daily cap did not resolve to a number: ${cap}`);
+  return cap;
 }
 
 /** Kill switch: `git commit` an empty state/PAUSED file to stop all publishing. */
