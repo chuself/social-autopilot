@@ -44,14 +44,53 @@ let queue = await readQueue();
 // A routine change rebuilds the schedule rather than appending to the old one.
 if (args.includes("--replace")) {
   const { unlinkSync, existsSync: exists } = await import("node:fs");
+  const { notify, sendVideo } = await import("./notify.js");
   const dropped = queue.filter((p) => p.status !== "posted");
-  for (const p of dropped) {
-    for (const f of [path.join(ROOT, "public", `${p.id}.png`), path.join(ROOT, "state", "bg", `${p.id}.png`)]) {
-      if (exists(f)) unlinkSync(f);
+
+  // A built reel is minutes of render time, a voiceover, and an MP4 already
+  // live on Pages. One --replace threw away a finished Kiswahili reel that had
+  // never been posted, deleted nothing but its poster, and said so only in a
+  // log line. Hand the video over before destroying the row — the same handoff
+  // the TikTok path already uses — so the work survives the schedule change.
+  const base = (process.env.PUBLIC_ASSET_BASE ?? "").replace(/\/$/, "");
+  const builtReels = dropped.filter((p) => p.reel?.file && p.reel.status !== "posted");
+  for (const p of builtReels) {
+    if (!base) break;
+    try {
+      await sendVideo(
+        `${base}/${p.reel.file}`,
+        `🎬 <b>Made but never posted</b>\nThe routine changed before this one went out, so it is being dropped from the schedule. Here it is to post by hand if you want it.\n\n${p.headline ?? p.id}`
+      );
+    } catch (err) {
+      console.warn(`  could not hand over ${p.reel.file}: ${err.message}`);
     }
   }
+
+  for (const p of dropped) {
+    const files = [
+      path.join(ROOT, "public", `${p.id}.png`),
+      path.join(ROOT, "state", "bg", `${p.id}.png`),
+      // MP4s were never cleaned up, so every discarded reel left an orphan
+      // sitting on Pages for good.
+      ...(p.reel?.file ? [path.join(ROOT, "public", p.reel.file)] : []),
+      ...(p.slideFiles ?? []).map((f) => path.join(ROOT, "public", f)),
+    ];
+    for (const f of files) if (exists(f)) unlinkSync(f);
+  }
+
   queue = queue.filter((p) => p.status === "posted");
-  console.log(`--replace: dropped ${dropped.length} unposted row(s)`);
+  console.log(`--replace: dropped ${dropped.length} unposted row(s), ${builtReels.length} of them already filmed`);
+
+  // Destroying planned work is worth a sentence to the owner. Silence here is
+  // how a whole day's reel disappeared without anyone noticing.
+  if (dropped.length) {
+    await notify(
+      `🗑 <b>Schedule rebuilt</b>\nDropped ${dropped.length} unposted item(s) to make room for the new routine` +
+        (builtReels.length ? `, including ${builtReels.length} already-filmed reel(s) — sent above` : "") +
+        `:\n\n` +
+        dropped.map((p) => `• ${p.headline ?? p.id}`).join("\n")
+    );
+  }
 }
 const planned = [];
 

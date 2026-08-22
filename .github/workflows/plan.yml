@@ -44,21 +44,26 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # --replace destroys planned work, so it has to be able to say what it
+          # threw away and hand over any reel that was already filmed.
+          PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: |
           ARGS=""
           [ -n "${{ inputs.days }}" ] && ARGS="--days ${{ inputs.days }}"
           [ "${{ inputs.replace }}" = "1" ] && ARGS="$ARGS --replace"
           node src/cli-plan.js $ARGS
 
+      # `public` and `state/bg` as DIRECTORIES, so assets deleted by --replace
+      # are removed from the repo too instead of lingering as orphans on Pages.
       - name: Commit the queue
         run: |
-          git config user.name "social-autopilot"
-          git config user.email "actions@users.noreply.github.com"
-          git add -f public/*.png state/bg/*.png state/queue.json state/top-performers.json state/pillar-scores.json state/config.json
-          git diff --staged --quiet || git commit -m "chore: plan week [skip ci]"
-          # Another job (or a human) may have pushed while this run was writing.
-          git pull --rebase --autostash
-          git push
+          bash scripts/push-state.sh "chore: plan week [skip ci]" \
+            public state/bg state/queue.json state/top-performers.json \
+            state/pillar-scores.json state/config.json
 
       # The posters must be publicly reachable before publish day, because
       # Instagram fetches the image URL server-side.

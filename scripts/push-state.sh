@@ -19,8 +19,12 @@ shift
 git config user.name "social-autopilot"
 git config user.email "actions@users.noreply.github.com"
 
-# -f because state/ holds files that are gitignored for local development.
-git add -f "$@" 2>/dev/null || true
+# -f because public/*.png is gitignored for local development but must ship.
+# -A so a DIRECTORY pathspec also stages deletions: --replace deletes the assets
+# of dropped posts, and without this they stayed in the repo and on Pages for
+# ever as orphans. Pass directories only where you want that sync — never a
+# directory holding genuinely ignored files like state/frames.
+git add -f -A -- "$@" 2>/dev/null || true
 
 if git diff --staged --quiet; then
   echo "nothing to record"
