@@ -53,3 +53,43 @@ function requireEnv(name) {
   if (!v) throw new Error(`Missing ${name} — see .env.example`);
   return v;
 }
+
+/**
+ * Carousel: every slide gets its own child container, then a parent that ties
+ * them together. Instagram will not accept the parent until each child has
+ * finished downloading, so children are created first and awaited.
+ */
+export async function publishCarousel({ imageUrls, caption, dryRun }) {
+  const igUser = requireEnv("IG_USER_ID");
+  const token = requireEnv("FB_PAGE_ACCESS_TOKEN");
+
+  if (dryRun) {
+    console.log(`[dry-run] instagram CAROUSEL -> ${imageUrls.length} slides`);
+    return { platform: "instagram", postId: "dry-run" };
+  }
+
+  const children = [];
+  for (const url of imageUrls) {
+    const child = await graphPost(`${igUser}/media`, {
+      image_url: url,
+      is_carousel_item: "true",
+      access_token: token,
+    });
+    children.push(child.id);
+  }
+  for (const id of children) await waitForContainer(id, token);
+
+  const parent = await graphPost(`${igUser}/media`, {
+    media_type: "CAROUSEL",
+    children: children.join(","),
+    caption,
+    access_token: token,
+  });
+  await waitForContainer(parent.id, token);
+
+  const published = await graphPost(`${igUser}/media_publish`, {
+    creation_id: parent.id,
+    access_token: token,
+  });
+  return { platform: "instagram", postId: published.id, slides: imageUrls.length };
+}

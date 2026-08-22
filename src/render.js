@@ -63,6 +63,10 @@ export async function renderPoster(post, brandId = "operra", outFile) {
         set("headline", post.headline);
         set("body", post.body);
         set("cta", post.cta);
+        // An empty pill is worse than no pill: carousel slides before the last
+        // one carry no call to action.
+        const ctaEl = document.getElementById("cta");
+        if (ctaEl && !String(post.cta ?? "").trim()) ctaEl.style.display = "none";
         set("site", brand.site);
 
         // Headline never overflows: step the size down as it gets longer.

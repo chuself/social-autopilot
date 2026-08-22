@@ -17,7 +17,7 @@ import path from "node:path";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const FILE = path.join(ROOT, "state", "config.json");
 
-export const FORMATS = new Set(["poster", "reel"]);
+export const FORMATS = new Set(["poster", "reel", "carousel"]);
 
 export const DEFAULTS = {
   // Local (EAT) hours. One entry per post.
@@ -65,6 +65,7 @@ function withDerived(cfg) {
   cfg.slots = [...cfg.slots].sort((a, b) => a.hour - b.hour);
   cfg.postersPerDay = cfg.slots.filter((s) => s.format === "poster").length;
   cfg.reelsPerDay = cfg.slots.filter((s) => s.format === "reel").length;
+  cfg.carouselsPerDay = cfg.slots.filter((s) => s.format === "carousel").length;
   cfg.tiktokPerDay = Number.isInteger(cfg.tiktokPerDay) ? cfg.tiktokPerDay : DEFAULTS.tiktokPerDay;
   return cfg;
 }

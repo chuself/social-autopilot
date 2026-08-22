@@ -109,6 +109,72 @@ Rules:
 }
 
 /**
+ * Write a carousel: several slides that only make sense read in order.
+ *
+ * Alice chooses the slide count herself — a two-point idea padded to five is
+ * worse than a tight three. The first slide has to earn the swipe, the middle
+ * ones carry one idea each, and the last asks for something.
+ */
+export async function writeCarousel({ brandId = "operra", pillar, recent = [], language, note, city = null }) {
+  language ??= PILLAR_LANGUAGE[pillar] ?? "en";
+  const brandDir = path.join(ROOT, "brands", brandId);
+  const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
+  const look = lookForDate(brand);
+  const pillars = await readFile(path.join(brandDir, "pillars.md"), "utf8");
+  const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
+
+  const recentLines =
+    recent.slice(0, 40).map((r) => `- ${r.headline}`).join("\n") || "- (nothing yet)";
+
+  const post = await completeJson(
+    `You write social carousels for ${brand.name} — ${brand.tagline} (${brand.site}).
+The audience is hotel owners and managers in Tanzania and East Africa.
+
+${pillars}
+
+## Approved facts
+You may ONLY state figures or claims that appear here verbatim.
+${facts}
+
+## Already posted — do not repeat these angles
+${recentLines}
+
+## Your task
+Write ONE carousel for the pillar: **${pillar}**.
+${city ? `Speak to hoteliers in ${city.name} — ${city.note}.` : ""}
+${note ? `Direction for this run: ${note}` : ""}
+
+Decide how many slides it needs: **3, 4 or 5**. Choose the smallest number that
+tells it properly. A thin idea stretched over five slides is worse than a tight three.
+
+Return ONLY JSON:
+{
+  "slides": [ { "eyebrow": "1-2 words", "headline": "max 7 words", "body": "max 18 words" } ],
+  "caption": "40-90 words, the post caption",
+  "hashtags": ["3-5"],
+  "imagePrompt": "one background description used across every slide",
+  "cta": "2-4 words for the last slide"
+}
+
+Rules:
+- Slide 1 is the hook: a problem the reader recognises. No product name.
+- Middle slides carry ONE idea each and must build, not restate.
+- The last slide names the payoff and carries the call to action.
+- "imagePrompt": choose a SUBJECT that connects to this carousel's topic, then shoot
+  it as composition «${look?.composition ?? "wide"}», tone «${look?.tone ?? "dark"}»,
+  treatment «${look?.treatment ?? "plain"}». Obey the tone.
+  End with "no text, no people, no logos".
+- ${language === "sw"
+      ? "Write EVERY field in natural Tanzanian Kiswahili, as a hotelier speaks."
+      : "Write in English."}
+- No URLs, no phone numbers.`
+  );
+
+  const slides = (post.slides ?? []).slice(0, 5);
+  return { ...post, slides, pillar, language, brand: brandId, look: look?.name ?? null, city: city?.name ?? null };
+}
+
+/**
  * Which visual look today belongs to.
  *
  * A feed that always looks identical goes stale fast — but changing it randomly
@@ -222,16 +288,19 @@ Return ONLY a JSON object with these keys:
   Do NOT include any URL or phone number — the link is appended automatically.
   Line breaks allowed. At most one emoji, only if it genuinely helps.
 - "hashtags": array of 3-5 hashtags, relevant, no spam.
-- "imagePrompt": a background image description built from THIS BLOCK'S direction.
-  Do not restate the direction — write a specific scene inside it.
-    Subject      : ${look?.imageStyle ?? "abstract texture"}
-    Composition  : ${look?.composition ?? "wide shot"}
-    Tone/light   : ${look?.tone ?? "dark, low contrast"}
-  Obey the Tone exactly. Do NOT add "dark colour grade" unless the Tone says dark —
-  a bright look must stay bright.
+- "imagePrompt": the background image.
+  YOU choose the SUBJECT — it must visually connect to what THIS post is about.
+  A post about bar bills shows bar glassware or a till roll; a post about mountain
+  trekkers shows boots or a highland lodge, never a beach. Pick one concrete object
+  or place a Tanzanian hotelier would recognise from the headline.
+  Then shoot that subject in THIS BLOCK'S style, which you must obey exactly:
+    Composition : ${look?.composition ?? "wide shot"}
+    Light/tone  : ${look?.tone ?? "dark, low contrast"}
+    Treatment   : ${look?.treatment ?? "plain"}
+  Do NOT add "dark colour grade" unless the tone says dark — a bright look stays bright.
   End with "no text, no people, no logos".
-  The headline sits over the left third, so keep the busy detail right-of-centre
-  and leave the left side visually calm — plain wall, sky, shadow or empty space.
+  The headline sits over the left third, so keep the detail right-of-centre and
+  leave the left side visually calm — plain wall, sky, shadow or empty space.
 - "template": "spotlight"
 
 ${language === "sw"

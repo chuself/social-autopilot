@@ -46,3 +46,32 @@ function requireEnv(name) {
   if (!v) throw new Error(`Missing ${name} — see .env.example`);
   return v;
 }
+
+/** Facebook takes several unpublished photos attached to one feed post. */
+export async function publishAlbum({ imageUrls, caption, dryRun }) {
+  const pageId = requireEnv("FB_PAGE_ID");
+  const token = requireEnv("FB_PAGE_ACCESS_TOKEN");
+
+  if (dryRun) {
+    console.log(`[dry-run] facebook ALBUM -> ${imageUrls.length} photos`);
+    return { platform: "facebook", postId: "dry-run" };
+  }
+
+  const media = [];
+  for (const url of imageUrls) {
+    const photo = await graphPost(`${pageId}/photos`, {
+      url,
+      published: "false",
+      temporary: "false",
+      access_token: token,
+    });
+    media.push({ media_fbid: photo.id });
+  }
+
+  const out = await graphPost(`${pageId}/feed`, {
+    message: caption,
+    attached_media: JSON.stringify(media),
+    access_token: token,
+  });
+  return { platform: "facebook", postId: out.id, slides: imageUrls.length };
+}

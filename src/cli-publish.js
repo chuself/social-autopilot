@@ -12,6 +12,8 @@ import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { publisherFor } from "./publish/index.js";
+import { publishCarousel } from "./publish/instagram.js";
+import { publishAlbum } from "./publish/facebook.js";
 import { ctaLink } from "./brain.js";
 import { commentOn } from "./publish/comment.js";
 import { readConfig } from "./config.js";
@@ -50,15 +52,19 @@ const history = existsSync(path.join(ROOT, "state", "history.json"))
 
 for (const post of posts) {
   console.log(`\n--- ${post.id}`);
-  const imageUrl = `${base}/${post.id}.png`;
+  const imageUrls = assets.map((f) => `${base}/${f}`);
+  const imageUrl = imageUrls[0];
 
-  if (!existsSync(path.join(ROOT, "public", `${post.id}.png`))) {
-    console.error(`  no rendered asset — skipped`);
+  const isCarousel = post.format === "carousel" && (post.slideFiles ?? []).length > 1;
+  const assets = isCarousel ? post.slideFiles : [`${post.id}.png`];
+
+  if (!assets.every((f) => existsSync(path.join(ROOT, "public", f)))) {
+    console.error(`  missing rendered asset(s) — skipped`);
     continue;
   }
   if (!dryRun) {
     try {
-      await assertAssetReachable(imageUrl);
+      for (const u of imageUrls) await assertAssetReachable(u);
     } catch (err) {
       console.error(`  ${err.message} — skipped`);
       continue;
@@ -82,8 +88,13 @@ for (const post of posts) {
       continue;
     }
     try {
-      const result = await publisherFor(platform).publish({ imageUrl, caption, dryRun });
-      console.log(`  posted to ${platform}: ${result.postId}`);
+      // A carousel is a different call on both platforms, not a flag on the same one.
+      const result = isCarousel
+        ? platform === "instagram"
+          ? await publishCarousel({ imageUrls, caption, dryRun })
+          : await publishAlbum({ imageUrls, caption, dryRun })
+        : await publisherFor(platform).publish({ imageUrl, caption, dryRun });
+      console.log(`  posted to ${platform}: ${result.postId}${isCarousel ? ` (${imageUrls.length} slides)` : ""}`);
       results.push({ ...result, id: post.id, postedAt: new Date().toISOString() });
 
       if (linkInComment && result.postId && result.postId !== "dry-run") {

@@ -38,47 +38,47 @@
   "lookRotationDays": 3,
   "looks": [
     {
-      "name": "lobby-light",
+      "name": "goldenhour",
       "accent": "#a478ff",
-      "tone": "dark, warm golden-hour light",
-      "composition": "wide interior, deep perspective",
-      "imageStyle": "hotel lobby at golden hour, long shadows, soft window light, film grain",
+      "tone": "warm, golden low sun, long shadows, dark overall",
+      "composition": "wide shot with deep perspective",
+      "treatment": "soft window light, gentle film grain",
       "scrim": 0.85,
-      "panel": 0.25
+      "panel": 0.3
     },
     {
       "name": "flatlay",
       "accent": "#36d2ba",
       "tone": "mid-tone, even soft daylight",
-      "composition": "overhead flat-lay shot straight down on a table",
-      "imageStyle": "room keys, a folded guest register, a cup of chai and a pen arranged on dark wood",
+      "composition": "overhead flat-lay, looking straight down onto a surface",
+      "treatment": "neat arrangement, shallow shadows",
       "scrim": 0.55,
       "panel": 0.55
     },
     {
-      "name": "linen",
+      "name": "macro",
       "accent": "#8fd0ff",
-      "tone": "light, high-key, soft and clean",
-      "composition": "extreme macro, filling the frame",
-      "imageStyle": "crisp white hotel linen, folds and stitching, morning light",
+      "tone": "light, high-key, clean",
+      "composition": "extreme close-up filling the frame",
+      "treatment": "shallow depth of field, fine texture detail",
       "scrim": 0.3,
       "panel": 0.95
     },
     {
       "name": "blueprint",
       "accent": "#8b9dff",
-      "tone": "flat graphic, no photography at all",
-      "composition": "pure abstract graphic \u2014 lines, grids and planes",
-      "imageStyle": "minimal architectural line drawing, thin strokes on a plain field, lots of empty space",
+      "tone": "flat graphic, not a photograph",
+      "composition": "minimal line drawing on a plain field, lots of empty space",
+      "treatment": "thin strokes, single muted colour",
       "scrim": 0.45,
       "panel": 0.75
     },
     {
-      "name": "coastal",
+      "name": "daylight",
       "accent": "#3fb6c9",
       "tone": "bright, sunlit, airy",
-      "composition": "exterior landscape, wide horizon",
-      "imageStyle": "Zanzibar shoreline, whitewashed wall, palm shadow falling across it, midday sun",
+      "composition": "exterior, wide, open horizon",
+      "treatment": "hard midday light and strong shadow shapes",
       "scrim": 0.25,
       "panel": 0.95
     },
@@ -86,10 +86,10 @@
       "name": "nightfall",
       "accent": "#c98a86",
       "tone": "deep blue hour, cool and quiet",
-      "composition": "exterior at dusk, looking at a building",
-      "imageStyle": "a small East African hotel exterior at blue hour, warm windows glowing against cool sky",
+      "composition": "exterior at dusk",
+      "treatment": "warm interior light glowing against a cool sky",
       "scrim": 0.8,
-      "panel": 0.3
+      "panel": 0.35
     }
   ],
   "cities": [

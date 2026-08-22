@@ -7,7 +7,7 @@
  *   node src/cli-plan.js --days 3 --replace
  */
 import path from "node:path";
-import { writePost, nextPillar, findUnapprovedFigures, cityForIndex } from "./brain.js";
+import { writePost, writeCarousel, nextPillar, findUnapprovedFigures, cityForIndex } from "./brain.js";
 import { generateBackground } from "./background.js";
 import { renderPoster } from "./render.js";
 import { readQueue, writeQueue, recentPosts } from "./queue.js";
@@ -32,9 +32,13 @@ const start = arg("start") ? new Date(arg("start")) : new Date();
 // Free-text steering for one run, e.g.
 //   --note "push the new POS module, and sound urgent — high season starts next week"
 const note = arg("note") ?? process.env.PLAN_NOTE ?? null;
+// --hours 8,13 --format carousel  overrides the configured day for one run.
+const forcedFormat = arg("format");
 const slots = arg("hours")
-  ? arg("hours").split(",").map((h) => ({ hour: Number(h), format: "poster" }))
-  : config.slots;
+  ? arg("hours").split(",").map((h) => ({ hour: Number(h), format: forcedFormat ?? "poster" }))
+  : forcedFormat
+    ? config.slots.map((s) => ({ ...s, format: forcedFormat }))
+    : config.slots;
 
 let queue = await readQueue();
 // A routine change rebuilds the schedule rather than appending to the old one.
@@ -100,7 +104,10 @@ for (let n = 0; n < timetable.length; n++) {
 
   let post;
   try {
-    post = await writePost({ brandId, pillar, recent, note, city });
+    post =
+      format === "carousel"
+        ? await writeCarousel({ brandId, pillar, recent, note, city })
+        : await writePost({ brandId, pillar, recent, note, city });
   } catch (err) {
     console.error(`slot ${n + 1} (${pillar}): brain failed — ${err.message}`);
     continue;
@@ -133,8 +140,29 @@ for (let n = 0; n < timetable.length; n++) {
     heldFigures: figures.length ? figures : undefined,
   };
 
-  await renderPoster(record, brandId, path.join(ROOT, "public", `${id}.png`));
-  console.log(`planned ${id} [${format}] [${record.status}] — "${post.headline}"`);
+  if (format === "carousel") {
+    // One PNG per slide, numbered in swipe order.
+    record.slideFiles = [];
+    for (const [i, slide] of (post.slides ?? []).entries()) {
+      const file = `${id}-${i + 1}.png`;
+      await renderPoster(
+        {
+          ...record,
+          ...slide,
+          // Only the last slide asks for anything.
+          cta: i === (post.slides.length - 1) ? post.cta ?? record.cta : "",
+        },
+        brandId,
+        path.join(ROOT, "public", file)
+      );
+      record.slideFiles.push(file);
+    }
+    record.headline = post.slides?.[0]?.headline ?? post.caption?.slice(0, 50) ?? id;
+    console.log(`planned ${id} [carousel ${record.slideFiles.length} slides] [${record.status}] — "${record.headline}"`);
+  } else {
+    await renderPoster(record, brandId, path.join(ROOT, "public", `${id}.png`));
+    console.log(`planned ${id} [${format}] [${record.status}] — "${post.headline}"`);
+  }
 
   planned.push(record);
 }
