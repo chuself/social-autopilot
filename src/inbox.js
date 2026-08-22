@@ -264,6 +264,7 @@ Currently queued:
 ${upcoming || "(nothing queued)"}
 
 Current routine: ${describeRoutine(cfg)}
+Looks preview: ${existsSync(PREVIEW_LOOKS) ? "one is being rendered right now" : "none in progress; the last one was already sent"}
 
 Classify the message and reply. Return ONLY JSON:
 {
@@ -285,12 +286,19 @@ Classify the message and reply. Return ONLY JSON:
     owner explicitly asks about TikTok frequency.
 - "instruction" = it changes how posts are WRITTEN or what they cover (tone, wording,
   language, topics to push or avoid). Reply confirming what changed.
-- "preview" = they want to SEE the visual looks / designs / styles compared
-  ("show me the looks", "nionyeshe designs", "what do the styles look like").
+- "preview" = they are ASKING YOU TO MAKE one now ("show me the looks",
+  "nionyeshe designs", "send the looks"). It must be a REQUEST.
+  Asking about one already under way — "is it done?", "did you send it?",
+  "imefika?" — is a "question", NOT a preview. Re-rendering because someone asked
+  whether it finished is a loop; answer them instead.
 - "question" = they are asking something else. Answer it using the queue above.
 - "chat" = greeting or small talk. Reply briefly and naturally.
 
-Reply in the same language they wrote in.`,
+## Language of YOUR reply
+Reply in the SAME language the owner wrote in, above.
+The queued posts below are mostly Kiswahili — that is the CONTENT language and
+has nothing to do with how you answer. If the owner writes English, answer in
+English. Judge only from their message.`,
       { fast: true }
     );
   } catch (err) {

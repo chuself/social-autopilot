@@ -124,7 +124,9 @@ for (let n = 0; n < timetable.length; n++) {
   }
 
   const bgPath = post.imagePrompt
-    ? await generateBackground(post.imagePrompt, path.join(ROOT, "state", "bg", `${id}.png`))
+    ? await generateBackground(post.imagePrompt, path.join(ROOT, "state", "bg", `${id}.png`), {
+        aspect: format === "reel" ? "9:16" : "4:5",
+      })
     : null;
 
   const record = {

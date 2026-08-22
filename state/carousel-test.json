@@ -1,0 +1,55 @@
+[
+  {
+    "id": "operra-2026-08-22-22-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Mizozo ya Bili",
+        "headline": "Bili ya kampuni ina makosa tena?",
+        "body": "Wageni wa makampuni wanataka kuondoka haraka, lakini risiti ina mabadiliko yasiyo na maelezo mapokezi."
+      },
+      {
+        "eyebrow": "Ufuatiliaji Imara",
+        "headline": "Kila hatua ina jina na muda",
+        "body": "Operra inatunza kumbukumbu ya kila anayebadilisha bei au chumba. Hakuna kufuta miamala kwa siri."
+      },
+      {
+        "eyebrow": "Udhibiti Kamili",
+        "headline": "Linda mapato na uaminifu wa hoteli",
+        "body": "Ondoa mizozo ya risiti na wateja wa korporeti Dar es Salaam. Rahisisha usimamizi wa mapokezi leo."
+      }
+    ],
+    "caption": "Katika hoteli za Dar es Salaam, wateja wa makampuni wanajali usahihi wa muda. Risiti moja yenye makosa au mabadiliko yasiyoeleweka inaweza kuchelewesha malipo ya mwezi mzima. Operra inarahisisha hili kupitia mfumo wa ufuatiliaji (audit trail) unaorekodi kila hatua kwenye bili. Unajua nani aliyebadilisha bei, lini, na kwa nini. Hakuna tena mizozo ya mara kwa mara kwenye mapokezi wala upotevu wa mapato ya hoteli yako. 💼",
+    "hashtags": [
+      "HoteliTanzania",
+      "UsimamiziWaHoteli",
+      "OperraTech"
+    ],
+    "imagePrompt": "overhead flat-lay, looking straight down onto a surface. A sleek, modern leather portfolio organizer, a metal pen, and a small glass of water on a minimalist dark wood desk. mid-tone, even soft daylight, neat arrangement, shallow shadows. no text, no people, no logos",
+    "cta": "Anza na Operra",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-08-22-22-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T08:57:21.222220Z",
+    "createdAt": "2026-08-22T07:25:51.748Z",
+    "status": "posted",
+    "slideFiles": [
+      "operra-2026-08-22-22-feature-spotlight-1.png",
+      "operra-2026-08-22-22-feature-spotlight-2.png",
+      "operra-2026-08-22-22-feature-spotlight-3.png"
+    ],
+    "headline": "Bili ya kampuni ina makosa tena?",
+    "postedAt": "2026-08-22T09:00:25.385Z",
+    "postIds": [
+      "facebook:1049514968255534_122141408691351110",
+      "instagram:18127345609695735"
+    ]
+  }
+]
