@@ -84,11 +84,16 @@ if (args.includes("--replace")) {
   // Destroying planned work is worth a sentence to the owner. Silence here is
   // how a whole day's reel disappeared without anyone noticing.
   if (dropped.length) {
+    const clip = (s, n) => (String(s).length > n ? `${String(s).slice(0, n - 1)}…` : String(s));
     await notify(
-      `🗑 <b>Schedule rebuilt</b>\nDropped ${dropped.length} unposted item(s) to make room for the new routine` +
-        (builtReels.length ? `, including ${builtReels.length} already-filmed reel(s) — sent above` : "") +
-        `:\n\n` +
-        dropped.map((p) => `• ${p.headline ?? p.id}`).join("\n")
+      `🗑 <b>Schedule rebuilt</b> — dropped ${dropped.length}` +
+        (builtReels.length ? `, incl. ${builtReels.length} filmed reel(s) sent above` : "") +
+        `\n` +
+        dropped
+          .slice(0, 6)
+          .map((p) => `• ${clip(p.headline ?? p.id, 45)}`)
+          .join("\n") +
+        (dropped.length > 6 ? `\n<i>+${dropped.length - 6} more</i>` : "")
     );
   }
 }

@@ -56,7 +56,7 @@ if (!post) {
       const reason =
         late < 0
           ? `filmed, waiting for its ${eatOf(p.scheduledFor)} EAT slot`
-          : `filmed but ${late.toFixed(1)}h late — past the ${MAX_LATE_HOURS}h cutoff, will not auto-publish`;
+          : `filmed but past the ${MAX_LATE_HOURS}h lateness cutoff`;
       console.log(`  ${p.id}: ${reason}`);
       noteSkip(p, reason);
     }
@@ -138,8 +138,9 @@ if (!dryRun && results.length) {
   history.push(...results);
   await writeFile(historyPath, JSON.stringify(history.slice(-200), null, 2));
 
+  // Platform post ids are for the log, not for a phone.
   await notify(
-    `🎬 <b>Reel posted</b>\n${post.headline}\n\n${results.map((r) => `${r.platform}: ${r.postId}`).join("\n")}`
+    `🎬 <b>Reel posted</b> — ${results.map((r) => r.platform).join(" + ")}\n${post.headline}`
   );
 }
 

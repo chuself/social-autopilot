@@ -762,30 +762,31 @@ if (mode === "always" || (mode === "1" && (failed.length || warned.length))) {
   const { notify } = await import("../src/notify.js");
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-  const head = failed.length
-    ? `\u{1F6A8} <b>Preflight: ${failed.length} fault${failed.length > 1 ? "s" : ""}</b>`
-    : warned.length
-      ? `⚠️ <b>Preflight: ${warned.length} thing${warned.length > 1 ? "s" : ""} to know</b>`
-      : "✅ <b>Preflight: all clear</b>";
+  // Read on a phone. Faults in full because they need acting on; warnings to
+  // one line each because they are context; passes as a single tally. A wall
+  // of green buries the one line that matters.
+  const clip = (s, n) => {
+    const t = String(s).trim();
+    return t.length > n ? `${t.slice(0, n - 1)}…` : t;
+  };
 
-  const lines = [head, ""];
-
-  // Faults first, then warnings. A wall of passes buries the one line that matters.
-  for (const r of failed) lines.push(`❌ <b>${esc(r.name)}</b>\n   ${esc(r.detail)}`);
-  if (failed.length && warned.length) lines.push("");
-  for (const r of warned) lines.push(`⚠️ <b>${esc(r.name)}</b>\n   ${esc(r.detail)}`);
-
-  // The owner asks "what is the routine / is it paused / what's queued" often
-  // enough that the answers belong in every report, not only in a failing one.
-  const facts = results.filter((r) =>
-    ["config valid", "tomorrow is planned", "facebook page", "instagram account"].includes(r.name)
-  );
-  if (facts.length) {
-    lines.push("", "<b>Where things stand</b>");
-    for (const r of facts) lines.push(`• ${esc(r.name)}: ${esc(r.detail)}`);
+  const lines = [];
+  if (failed.length) {
+    lines.push(`\u{1F6A8} <b>${failed.length} fault${failed.length > 1 ? "s" : ""}</b>`);
+    for (const r of failed) lines.push("", `❌ <b>${esc(r.name)}</b>\n${esc(r.detail)}`);
+  } else {
+    lines.push("✅ <b>All clear</b>");
   }
 
-  lines.push("", `<i>${passed.length} passed · ${warned.length} warned · ${failed.length} failed</i>`);
+  if (warned.length) {
+    lines.push("");
+    for (const r of warned) lines.push(`⚠️ ${esc(r.name)} — ${esc(clip(r.detail, 70))}`);
+  }
+
+  lines.push(
+    "",
+    `<i>${passed.length} ok · ${warned.length} warn · ${failed.length} fail</i>`
+  );
   await notify(lines.join("\n"));
 }
 

@@ -171,9 +171,10 @@ export async function sendPhoto(filePath, caption) {
 
 /** Failures must be loud — this is how an unattended pipeline asks for help. */
 export async function notifyFailure(what, err) {
-  await notify(
-    `⚠️ <b>Social Autopilot</b>\n${what}\n\n<code>${escapeHtml(String(err).slice(0, 500))}</code>`
-  );
+  // 500 characters of stack trace on a phone is unreadable and tells the owner
+  // nothing they can act on. One line of cause, and the log has the rest.
+  const cause = String(err).split("\n")[0].slice(0, 140);
+  await notify(`⚠️ <b>${escapeHtml(what)}</b>\n<code>${escapeHtml(cause)}</code>`);
 }
 
 function stripHtml(s) {

@@ -60,8 +60,8 @@ if (stale.length && !dryRun) {
   }
   await writeQueue(queue);
   await notify(
-    `⏰ <b>${stale.length} slot(s) missed</b>\nMore than ${MAX_LATE_HOURS}h late, so they were closed rather than posted at the wrong hour.\n\n` +
-      stale.map((p) => `• ${p.headline ?? p.id}`).join("\n")
+    `⏰ <b>${stale.length} missed</b> — over ${MAX_LATE_HOURS}h late, closed rather than posted at the wrong hour\n` +
+      stale.map((p) => `• ${clip(p.headline ?? p.id, 45)}`).join("\n")
   );
 }
 
@@ -86,17 +86,22 @@ const alreadyPosted = (postId, platform) =>
  * unreachable poster surfaces this hour instead of after the slot has gone.
  */
 let redeployRequested = false;
-async function requestRedeploy(postId, why) {
+async function requestRedeploy(post) {
   if (redeployRequested) return;
   redeployRequested = true;
   if (process.env.GITHUB_OUTPUT) {
     const { appendFile } = await import("node:fs/promises");
     await appendFile(process.env.GITHUB_OUTPUT, "redeploy=true\n");
   }
+  // No stack, no URL, no raw error — none of it is actionable on a phone.
   await notify(
-    `🌐 <b>Asset not being served</b>\n${postId} could not be published because its file is not live yet.\n` +
-      `<code>${String(why).slice(0, 160)}</code>\n\nAsking Pages to redeploy; it should go out next hour.`
+    `🌐 <b>Held — image not live yet</b>\n${clip(post.headline ?? post.id, 45)}\nRedeploy asked for; it should go out next hour.`
   );
+}
+
+function clip(s, n) {
+  const t = String(s).trim();
+  return t.length > n ? `${t.slice(0, n - 1)}…` : t;
 }
 
 for (const post of posts) {
@@ -109,7 +114,7 @@ for (const post of posts) {
 
   if (!assets.every((f) => existsSync(path.join(ROOT, "public", f)))) {
     console.error(`  missing rendered asset(s) — skipped`);
-    noteSkip(post, "its image has not been rendered");
+    noteSkip(post, "image not rendered");
     continue;
   }
   if (!dryRun) {
@@ -120,8 +125,8 @@ for (const post of posts) {
       // that raced and lost. Skipping alone means the slot passes in silence
       // every hour forever, so ask for a redeploy and say so out loud.
       console.error(`  ${err.message} — skipped, requesting a Pages deploy`);
-      noteSkip(post, "its image is not live yet — asked Pages to redeploy");
-      await requestRedeploy(post.id, err.message);
+      noteSkip(post, "image not live, redeploy asked");
+      await requestRedeploy(post);
       continue;
     }
   }

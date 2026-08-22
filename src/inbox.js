@@ -195,21 +195,17 @@ export async function handleMessage(text, chatId) {
 
 function helpText() {
   return [
-    "Send me plain text and I will write in that style from now on.",
+    "<b>Just talk to me.</b>",
+    "<i>less formal, write like WhatsApp</i>",
+    "<i>push the POS module this week</i>",
+    "<i>3 posters and 1 reel at 8, 13, 16 and 20</i>",
     "",
-    "Examples:",
-    "• <i>less formal, write like WhatsApp</i>",
-    "• <i>push the POS module this week</i>",
-    "",
-    "Or change the routine:",
-    "• <i>3 posters and 1 reel a day at 8, 13, 16 and 20</i>",
-    "",
-    "/status — what is queued",
-    "/preflight — run every check and report what is broken",
-    "/looks — see every visual look side by side",
+    "/status — what is out, what is not, and why",
+    "/preflight — check everything, report faults",
+    "/looks — every visual look side by side",
     "/replan — rebuild the schedule now",
-    "/pause — stop posting   /resume — start again",
-    "/clear — forget my instructions",
+    "/pause · /resume — stop and start posting",
+    "/clear — forget my standing instructions",
   ].join("\n");
 }
 
@@ -230,26 +226,85 @@ export async function statusText() {
     .filter((p) => new Date(p.scheduledFor) >= now)
     .sort((a, b) => new Date(a.scheduledFor) - new Date(b.scheduledFor));
 
-  const lines = [
-    `📊 <b>Status</b>${existsSync(PAUSED) ? " — ⏸ PAUSED" : ""}`,
-    `${upcoming.length} queued · ${queue.filter((p) => p.status === "posted").length} posted all time`,
-    `Routine: ${describeRoutine(cfg)}`,
-    "",
-  ];
+  const postedToday = queue.filter(
+    (p) => p.status === "posted" && String(p.postedAt ?? p.scheduledFor).slice(0, 10) === todayEat()
+  ).length;
+
+  const lines = [];
+  lines.push(
+    existsSync(PAUSED)
+      ? "⏸ <b>Paused</b> — nothing will post until /resume"
+      : `📊 <b>${postedToday} out today · ${open.length} to go</b>`
+  );
+
+  // Overdue first and in full: this is the only part anyone is anxious about.
   if (overdue.length) {
-    lines.push(`⚠️ <b>${overdue.length} not out yet</b>`);
-    for (const p of overdue.slice(0, 5)) {
-      lines.push(`• ${eat(p.scheduledFor)} ${p.headline}\n   <i>${escapeHtml(whyWaiting(p, now))}</i>`);
+    lines.push("", "⚠️ <b>Not out yet</b>");
+    for (const p of overdue.slice(0, 4)) {
+      lines.push(`${slotLine(p, now, { tag: false })}\n<i>${escapeHtml(whyWaiting(p, now))}</i>`);
     }
-    lines.push("");
+    if (overdue.length > 4) lines.push(`<i>+${overdue.length - 4} more</i>`);
   }
-  for (const p of upcoming.slice(0, 8)) {
-    lines.push(`• ${eat(p.scheduledFor)} [${p.language ?? "--"}] ${p.headline}\n   <i>${escapeHtml(whyWaiting(p, now))}</i>`);
+
+  // Upcoming is one line each. The time already says when, so a "due in 3h"
+  // under every row is noise; only a reel's filming state earns a tag.
+  if (upcoming.length) {
+    lines.push("", "<b>Next</b>");
+    for (const p of upcoming.slice(0, 5)) lines.push(slotLine(p, now));
+    if (upcoming.length > 5) lines.push(`<i>+${upcoming.length - 5} more</i>`);
+  } else if (!overdue.length) {
+    lines.push("", "<i>Nothing queued. The 21:00 planner writes tomorrow.</i>");
   }
+
+  // Standing instructions shape every post, so their presence belongs here —
+  // but as one line, not the whole file. /status is a glance, not an archive.
   if (existsSync(STEER)) {
-    lines.push("", "<b>Your standing instructions:</b>", escapeHtml(await readFile(STEER, "utf8")).trim());
+    const all = (await readFile(STEER, "utf8")).split("\n").filter((l) => l.trim());
+    const last = all[all.length - 1]?.replace(/^-\s*/, "") ?? "";
+    lines.push(
+      "",
+      `✍️ <i>${escapeHtml(clip(last, 60))}</i>${all.length > 1 ? ` <i>(+${all.length - 1} more)</i>` : ""}`
+    );
   }
+
+  lines.push("", `<i>${escapeHtml(describeRoutine(cfg))}</i>`);
   return lines.join("\n");
+}
+
+/** One post, one line: when · what · a tag only when it tells you something. */
+function slotLine(p, now = new Date(), { tag = true } = {}) {
+  const icon = { reel: "🎬", carousel: "🎠" }[p.format] ?? "🖼";
+  // Overdue rows carry a full reason on the next line, so a tag there would
+  // just say the same thing twice.
+  const suffix = !tag
+    ? ""
+    : p.status === "needs-review"
+      ? " · held"
+      : p.format === "reel"
+        ? p.reel?.status === "ready"
+          ? " · filmed"
+          : " · not filmed"
+        : "";
+  return `<b>${shortWhen(p.scheduledFor, now)}</b> ${icon} ${escapeHtml(clip(p.headline ?? p.id, 38))}${suffix}`;
+}
+
+function clip(s, n) {
+  const t = String(s).trim();
+  return t.length > n ? `${t.slice(0, n - 1)}…` : t;
+}
+
+const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+/** "13:00" when it is today in EAT, "Sun 13:00" when it is not. */
+function shortWhen(iso, now = new Date()) {
+  const d = new Date(new Date(iso).getTime() + 3 * 3600_000);
+  const hhmm = d.toISOString().slice(11, 16);
+  const sameDay = d.toISOString().slice(0, 10) === todayEat(now);
+  return sameDay ? hhmm : `${DAYS[d.getUTCDay()]} ${hhmm}`;
+}
+
+function todayEat(now = new Date()) {
+  return new Date(now.getTime() + 3 * 3600_000).toISOString().slice(0, 10);
 }
 
 export function describeRoutine(cfg) {
@@ -307,8 +362,16 @@ Classify the message and reply. Return ONLY JSON:
 {
   "kind": "setting" | "instruction" | "preview" | "question" | "chat",
   "settings": { "slots": [ { "hour": number, "format": "poster" | "reel" } ], "tiktokPerDay": number },
-  "reply": "under 60 words, plain text"
+  "reply": "under 35 words, plain text"
 }
+
+## How your reply should read
+It is read on a phone, usually one-handed, usually while busy.
+- Lead with the answer. No "Sure!", no "Great question", no restating the question.
+- One or two short sentences. Break to a new line rather than writing a long one.
+- Concrete over vague: times, counts and names, not "shortly" or "a few".
+- No markdown, no asterisks, no bullet characters — plain sentences only.
+- If the answer is a time, give it in EAT.
 
 - "setting" = it changes HOW OFTEN, WHEN, or IN WHAT FORMAT to post. Return the FULL
   desired day as "slots" — one entry per post, each with its hour and its format.

@@ -83,6 +83,15 @@ export function clearSkip(post) {
   delete post.lastSkipReason;
 }
 
+/** "40m late", "2h late", "7h20m late" — never "2.0h late". */
+function lateness(hours) {
+  const mins = Math.round(hours * 60);
+  if (mins < 60) return `${mins}m late`;
+  const h = Math.floor(mins / 60);
+  const m = mins % 60;
+  return m ? `${h}h${m}m late` : `${h}h late`;
+}
+
 function ago(iso) {
   const mins = Math.round((Date.now() - new Date(iso)) / 60_000);
   if (mins < 1) return "just now";
@@ -96,7 +105,7 @@ export function whyWaiting(post, now = new Date()) {
   if (post.status === "reject") return "rejected";
   if (post.status === "needs-review") return "held — a figure in it is not in facts.md";
   if (post.status === "missed") {
-    return `missed — ${hoursLate(post, now).toFixed(1)}h late, past the ${MAX_LATE_HOURS}h cutoff`;
+    return `missed — ${lateness(hoursLate(post, now))}, past the ${MAX_LATE_HOURS}h cutoff`;
   }
 
   const when = new Date(post.scheduledFor);
@@ -109,11 +118,10 @@ export function whyWaiting(post, now = new Date()) {
     return eta;
   }
 
-  const late = hoursLate(post, now);
-  const lateness = late < 1 ? `${Math.round(late * 60)}m late` : `${late.toFixed(1)}h late`;
-  if (post.lastSkipReason) return `${lateness} — ${post.lastSkipReason} (tried ${ago(post.lastAttempt)})`;
-  if (post.format === "reel" && post.reel?.status !== "ready") return `${lateness} — not filmed yet`;
-  return `${lateness} — due, but nothing has tried to publish it yet`;
+  const late = lateness(hoursLate(post, now));
+  if (post.lastSkipReason) return `${late} · ${post.lastSkipReason} (tried ${ago(post.lastAttempt)})`;
+  if (post.format === "reel" && post.reel?.status !== "ready") return `${late} · not filmed yet`;
+  return `${late} · nothing has tried to publish it yet`;
 }
 
 export function hoursLate(post, now = new Date()) {
