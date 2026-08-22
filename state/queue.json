@@ -401,7 +401,12 @@
     ],
     "scheduledFor": "2026-08-22T05:00:00.000Z",
     "createdAt": "2026-08-21T09:46:31.934Z",
-    "status": "pending"
+    "status": "posted",
+    "postedAt": "2026-08-22T05:23:10.471Z",
+    "postIds": [
+      "facebook:1049514968255534_122141318925351110",
+      "instagram:17923824999409179"
+    ]
   },
   {
     "id": "operra-2026-08-22-13-pain-point",
