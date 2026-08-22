@@ -409,34 +409,6 @@
     ]
   },
   {
-    "id": "operra-2026-08-22-13-pain-point",
-    "eyebrow": "Hesabu za Shift",
-    "headline": "Pesa ya droo haipaswi kutofautiana na ripoti",
-    "body": "Shift inapobadilika na hesabu hazikubaliani, ni kazi ngumu kujua nani alipokea nini. Operra inarekodi kila muamala na mtumiaji husika kwa uwazi.",
-    "cta": "Ona inavyofanya kazi",
-    "caption": "Shift inapoisha, mfanyakazi mmoja anasema pesa imekamilika, anayepokea anasema imepungua.\n\nMivutano hii ya kila siku inachukua muda na kuficha uvujaji wa mapato. Ukiwa na kumbukumbu ya moja kwa moja ya kila muamala, nani aliyepokea na mabadiliko yoyote yaliyofanyika, hakuna kubahatisha tena. Kila shilingi inaonekana wazi kwenye ripoti ya shift.",
-    "hashtags": [
-      "#HotelManagement",
-      "#TanzaniaHotels",
-      "#HospitalityTZ",
-      "#OperraTech"
-    ],
-    "imagePrompt": "Dark, minimalist photographic background of a hotel front desk cash drawer and receipt tray on a polished dark wood surface, subject positioned right-of-centre, low contrast, soft ambient lighting with a dark #a478ff and #36d2ba color grade, no text, no people, no logos.",
-    "template": "spotlight",
-    "pillar": "pain-point",
-    "language": "sw",
-    "brand": "operra",
-    "backgroundPath": "state/bg/operra-2026-08-22-13-pain-point.png",
-    "format": "poster",
-    "platforms": [
-      "facebook",
-      "instagram"
-    ],
-    "scheduledFor": "2026-08-22T10:00:00.000Z",
-    "createdAt": "2026-08-21T09:47:17.473Z",
-    "status": "pending"
-  },
-  {
     "id": "operra-2026-08-22-16-number-that-lands",
     "eyebrow": "Operations",
     "headline": "Two languages to run your entire hotel",
@@ -482,31 +454,86 @@
     }
   },
   {
-    "id": "operra-2026-08-22-20-client-proof",
-    "eyebrow": "Mtandao na Mfumo",
-    "headline": "Mfumo unaofanya kazi hata mtandao ukiwa wa kusuasua",
-    "body": "Hoteli nyingi nchini Tanzania zinakabiliana na mtandao dhaifu. Operra imeundwa kufanya kazi vizuri kwenye intaneti ya kasi yoyote bila kukatisha huduma.",
-    "cta": "Omba onyesho leo",
-    "caption": "Intaneti ikisua au kukatika katikati ya siku, kazi za mapokezi na stoo hazipaswi kusimama.\n\nHoteli nchini zinatumia Operra kwa sababu imeundwa mahususi kufanya kazi vizuri hata kwenye mtandao dhaifu. Wafanyakazi wako wanaendelea kuhudumia wageni na kupokea malipo bila kuchelewesha wateja au kupoteza kumbukumbu za mauzo. Mfumo unahakikisha kazi zinaenda bila kikwazo.",
+    "id": "operra-2026-08-22-13-swahili-tip",
+    "eyebrow": "Mapokezi",
+    "headline": "Kukabidhi shift kusiwe kwa maneno tu",
+    "body": "Andika kila ombi la mteja ambalo halijakamilika ili timu inayokuja ianzie pale ulipoishia. Hii inaokoa muda na kuepusha makosa.",
+    "cta": "Rahisisha kazi",
+    "caption": "Kukabidhi shift kwa maneno ya mdomo pekee ni chanzo kikubwa cha malalamiko ya wateja. Mapokezi wakisahau kumjulisha mwenzao kuhusu mteja anayechelewa kuondoka au chumba kinachohitaji matengenezo, fujo huanzia hapo.\n\nWeka utaratibu wa kila mfanyakazi kuacha kumbukumbu ya maandishi ya masuala yote ambayo hayajakamilika. Timu mpya ikifika, inasoma na kuendelea na kazi bila kubahatisha wala kupoteza muda.",
     "hashtags": [
-      "#TanzaniaHospitality",
-      "#HotelManagement",
-      "#OperraTech",
-      "#HotelOperations"
+      "#UendeshajiHoteli",
+      "#Mapokezi",
+      "#TanzaniaHospitality"
     ],
-    "imagePrompt": "A minimalist, low-contrast photographic background of a quiet hotel lobby desk at dusk. Main elements positioned right-of-centre, keeping the left side empty for overlay text. Color graded in dark deep purple (#a478ff) and cyan (#36d2ba) tones. No text, no people, no logos.",
+    "imagePrompt": "A minimalist, modern hotel reception desk background with clean lines, low angle shot, dark atmospheric mood with #a478ff and #36d2ba color grade. Subject is on the right-of-centre, left side is low contrast and clean. No text, no people, no logos.",
     "template": "spotlight",
-    "pillar": "client-proof",
+    "pillar": "swahili-tip",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "state/bg/operra-2026-08-22-20-client-proof.png",
+    "backgroundPath": "state/bg/operra-2026-08-22-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T10:00:00.000Z",
+    "createdAt": "2026-08-22T05:45:09.269Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-22-16-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Cloud operations built for regional internet speeds",
+    "body": "East African properties often deal with unstable connectivity. Operra is designed to keep your front desk and POS running smoothly on low-bandwidth networks.",
+    "cta": "Learn more",
+    "caption": "Unstable internet should never stop your front desk from checking in guests or billing a table.\n\nAcross Tanzania and East Africa, properties frequently navigate network fluctuations. When management software requires high bandwidth, front desk lines grow and billing stalls.\n\nOperra is built to run reliably on low-bandwidth connections, keeping your front desk, POS, and housekeeping in sync.",
+    "hashtags": [
+      "#HotelManagement",
+      "#EastAfricaHotels",
+      "#HospitalityTech",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "Minimalist modern hotel reception counter at dusk with subtle ambient lighting placed right-of-centre, dark moody purple and teal color grade #a478ff and #36d2ba, low-contrast background with clean empty space on the left side, high-end architectural interior photography, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "backgroundPath": "state/bg/operra-2026-08-22-16-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T13:00:00.000Z",
+    "createdAt": "2026-08-22T05:45:53.935Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-22-20-feature-spotlight",
+    "eyebrow": "Marekebisho Ya Bei",
+    "headline": "Weka bei za vyumba kwa msimu bila mkanganyiko",
+    "body": "Badilisha viwango vya bei kwenye mfumo mara moja. Mapokezi wanaona bei mpya papo hapo bila kupiga simu.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Msimu ukibadilika au kukiwa na tukio mjini, kubadilisha bei za vyumba kusiwe kazi ya kupiga simu kila mara mapokezi.\n\nUkiwa na Operra, unarekebisha bei mara moja na inaonekana kwenye mfumo mzima papo hapo. Hakuna kosa la kuuza chumba kwa bei ya chini kimakosa au kumpa mteja bili isiyo sahihi.\n\nKila mabadiliko ya bei yanakuwa wazi, na biashara yako inaendelea bila usumbufu.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHotels",
+      "#Operra",
+      "#HotelierLife"
+    ],
+    "imagePrompt": "Abstract modern hotel front desk counter at dusk with subtle ambient lighting, minimalist clean interior, right-of-centre subject, low contrast, dark #a478ff and #36d2ba color grade, soft shadows, cinematic lighting, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "backgroundPath": "state/bg/operra-2026-08-22-20-feature-spotlight.png",
     "format": "poster",
     "platforms": [
       "facebook",
       "instagram"
     ],
     "scheduledFor": "2026-08-22T17:00:00.000Z",
-    "createdAt": "2026-08-21T09:49:01.450Z",
+    "createdAt": "2026-08-22T05:46:38.494Z",
     "status": "pending"
   }
 ]
