@@ -11,7 +11,13 @@ on:
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
-concurrency: pages-deploy
+# Newest wins. Three deploys once landed within 14 seconds and the one built
+# from the OLDEST commit finished last, rolling the whole site back to a tree
+# that predated that evening's poster. The poster then 404'd, Instagram could
+# not fetch it, and the slot passed with nothing posted and nothing logged.
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -23,7 +29,12 @@ jobs:
     environment:
       name: github-pages
     steps:
+      # Always deploy the tip of main, never the sha that happened to trigger
+      # this run. A queued run then cannot publish stale content whenever it
+      # finishes, so deploy order stops mattering.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

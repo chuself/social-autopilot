@@ -49,12 +49,8 @@ jobs:
       - name: Publish the file
         if: steps.film.outputs.built == 'true'
         run: |
-          git config user.name "social-autopilot"
-          git config user.email "actions@users.noreply.github.com"
-          git add -f public/*.mp4 state/queue.json
-          git diff --staged --quiet || git commit -m "chore: reel built [skip ci]"
-          git pull --rebase --autostash
-          git push
+          bash scripts/push-state.sh "chore: reel built [skip ci]" \
+            public/*.mp4 state/queue.json
 
       - uses: actions/configure-pages@v5
         if: steps.film.outputs.built == 'true'
@@ -68,7 +64,10 @@ jobs:
       - name: Wait for the file to go live
         if: steps.film.outputs.built == 'true'
         run: |
-          FILE=$(node -e "const q=require('./state/queue.json');const p=q.filter(x=>x.reel&&x.reel.status==='ready').pop();if(!p){console.error('no reel marked ready');process.exit(1)}console.log(p.reel.file)")
+          # The one THIS run just built — newest builtAt. `.pop()` took the last
+          # ready reel in file order, which with two reels waiting meant
+          # confirming one file was live and then uploading a different one.
+          FILE=$(node -e "const q=require('./state/queue.json');const r=q.filter(x=>x.reel&&x.reel.status==='ready');if(!r.length){console.error('no reel marked ready');process.exit(1)}r.sort((a,b)=>new Date(b.reel.builtAt)-new Date(a.reel.builtAt));console.log(r[0].reel.file)")
           URL="${{ vars.PUBLIC_ASSET_BASE }}/$FILE"
           for i in $(seq 1 30); do
             CODE=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
@@ -98,16 +97,13 @@ jobs:
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: node src/cli-publish-reel.js
 
+      # always(): if "Post it" failed halfway, whatever DID go out must still be
+      # recorded, or the next run reposts it.
       - name: Record it
-        if: steps.film.outputs.built == 'true' && inputs.dry_run != '1'
+        if: ${{ always() && steps.film.outputs.built == 'true' && inputs.dry_run != '1' }}
         run: |
-          git config user.name "social-autopilot"
-          git config user.email "actions@users.noreply.github.com"
-          git pull --rebase --autostash
-          git add -A state
-          git add -f state/metricool.enc 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore: reel posted [skip ci]"
-          git push
+          bash scripts/push-state.sh "chore: reel posted [skip ci]" \
+            state/queue.json state/history.json state/metricool.enc
 
       - name: Shout if the reel failed
         if: failure()

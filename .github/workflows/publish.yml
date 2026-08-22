@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      # A 404 on an asset dispatches a Pages deploy to fix itself.
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -37,6 +39,7 @@ jobs:
         run: node src/cli-sheet.js
 
       - name: Publish anything due
+        id: publish
         env:
           DRY_RUN: ${{ inputs.dry_run || '0' }}
           PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
@@ -47,15 +50,46 @@ jobs:
           AUTO_APPROVE_HOURS: ${{ inputs.auto_approve_hours || '24' }}
         run: node src/cli-publish.js
 
+      # A committed asset that Pages is not serving fixes itself rather than
+      # failing quietly every hour until the slot has gone.
+      - name: Redeploy Pages if an asset was unreachable
+        if: steps.publish.outputs.redeploy == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pages
+
+      # One job owns "is it time?" for EVERY format.
+      #
+      # Reels used to be published only inside the same job that filmed them,
+      # gated on that job having built something. A reel filmed early correctly
+      # declined to post before its slot — and then nothing ever came back for
+      # it, because the next reel run had nothing left to film and skipped every
+      # downstream step. A filmed reel could strand for good. Now the hourly
+      # reconciler picks it up like anything else. Needs no renderer: the MP4 is
+      # already built and already live on Pages.
+      - name: Publish any reel whose slot has arrived
+        env:
+          DRY_RUN: ${{ inputs.dry_run || '0' }}
+          PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          WHATSAPP_CTA_NUMBER: ${{ vars.WHATSAPP_CTA_NUMBER }}
+          METRICOOL_KEY: ${{ secrets.METRICOOL_KEY }}
+          METRICOOL_OAUTH: ${{ secrets.METRICOOL_OAUTH }}
+          METRICOOL_BLOG_ID: ${{ vars.METRICOOL_BLOG_ID }}
+          METRICOOL_USER_ID: ${{ vars.METRICOOL_USER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+        run: node src/cli-publish-reel.js
+
       - name: Record what went out
-        if: ${{ inputs.dry_run != '1' }}
+        if: ${{ always() && inputs.dry_run != '1' }}
         run: |
-          git config user.name "social-autopilot"
-          git config user.email "actions@users.noreply.github.com"
-          git pull --rebase --autostash
-          git add -f state/history.json state/queue.json
-          git diff --staged --quiet || git commit -m "chore: post history [skip ci]"
-          git push
+          bash scripts/push-state.sh "chore: post history [skip ci]" \
+            state/history.json state/queue.json state/metricool.enc
 
       - name: Shout if publishing failed
         if: failure()

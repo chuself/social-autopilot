@@ -6,7 +6,7 @@
  * file server-side, exactly like the posters.
  */
 import path from "node:path";
-import { readQueue, writeQueue } from "./queue.js";
+import { readQueue, writeQueue, dueReels, hoursLate, MAX_LATE_HOURS } from "./queue.js";
 import { publishInstagramReel, publishFacebookVideo } from "./publish/reels.js";
 import { publishTikTok, tiktokConfigured } from "./publish/tiktok.js";
 import { readConfig } from "./config.js";
@@ -30,26 +30,39 @@ if (!base) throw new Error("PUBLIC_ASSET_BASE is not set");
 const queue = await readQueue();
 // Same empty-string trap as cli-reel.js — "" is not null, so ?? would keep it.
 const wanted = process.argv[2]?.trim() || null;
-const post =
-  (wanted ? queue.find((p) => p.id === wanted) : null) ??
-  queue.find((p) => p.reel?.status === "ready");
+const eatOf = (iso) =>
+  new Date(new Date(iso).getTime() + 3 * 3600_000).toISOString().slice(11, 16);
+
+// Film ahead, publish on time. Pick the EARLIEST reel whose slot has arrived,
+// not merely the first one in the file: taking the first and giving up when it
+// was not due yet is what stranded a filmed reel for an entire day.
+const ready = queue.filter((p) => p.reel?.status === "ready");
+const post = wanted
+  ? queue.find((p) => p.id === wanted)
+  : process.env.IGNORE_SCHEDULE === "1"
+    ? ready[0]
+    : dueReels(queue)[0];
 
 if (!post) {
-  console.log("No reel ready to publish.");
+  // Say which of the three "nothing happened" cases this is. All three used to
+  // print the same line, so a stuck reel was indistinguishable from no reel.
+  if (!ready.length) {
+    console.log("No reel is filmed and waiting.");
+  } else {
+    for (const p of ready) {
+      const late = hoursLate(p);
+      console.log(
+        late < 0
+          ? `  ${p.id}: filmed, not due until ${eatOf(p.scheduledFor)} EAT`
+          : `  ${p.id}: filmed and ${late.toFixed(1)}h late — past the ${MAX_LATE_HOURS}h cutoff, will not auto-publish`
+      );
+    }
+    console.log(`${ready.length} reel(s) filmed, none due right now.`);
+  }
   process.exit(0);
 }
 
-// Film ahead, publish on time. Without this a reel goes out the moment it is
-// rendered, so a 16:00 slot could land the previous afternoon.
-if (!wanted && process.env.IGNORE_SCHEDULE !== "1") {
-  const due = new Date(post.scheduledFor) <= new Date();
-  if (!due) {
-    const eatTime = new Date(new Date(post.scheduledFor).getTime() + 3 * 3600_000)
-      .toISOString().slice(11, 16);
-    console.log(`Reel is ready but not due until ${eatTime} EAT — leaving it.`);
-    process.exit(0);
-  }
-}
+console.log(`Slot ${eatOf(post.scheduledFor)} EAT selected out of ${ready.length} filmed reel(s).`);
 
 const videoUrl = `${base}/${post.reel.file}`;
 console.log(`Publishing reel: ${post.headline}`);
@@ -73,11 +86,23 @@ const caption = [post.caption, ctaLink(brand, post.id), (post.hashtags ?? []).jo
   .filter(Boolean)
   .join("\n\n");
 
+// Same receipt check as the posters: if the commit recording a post was lost to
+// a race, the queue still says pending and the next run would post it twice.
+const priorHistory = existsSync(path.join(ROOT, "state", "history.json"))
+  ? JSON.parse(await readFile(path.join(ROOT, "state", "history.json"), "utf8"))
+  : [];
+const alreadyPosted = (platform) =>
+  priorHistory.some((h) => h.id === post.id && h.platform === platform && h.postId !== "dry-run");
+
 const results = [];
 for (const [name, fn] of [
   ["instagram", publishInstagramReel],
   ["facebook", publishFacebookVideo],
 ]) {
+  if (alreadyPosted(name)) {
+    console.log(`  skip ${name}: already in history`);
+    continue;
+  }
   try {
     const r = await fn({ videoUrl, caption, dryRun });
     console.log(`  posted to ${name}: ${r.postId}`);

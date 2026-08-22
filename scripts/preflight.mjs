@@ -252,6 +252,7 @@ await check(
         (p) =>
           p.status !== "posted" &&
           p.status !== "reject" &&
+          p.status !== "missed" &&
           p.scheduledFor &&
           now - new Date(p.scheduledFor).getTime() > GRACE_MIN * 60_000
       )
@@ -268,6 +269,99 @@ await check(
     return "every slot on time";
   },
   { group: "content" }
+);
+
+// A reel that is filmed, live on Pages, and past its slot but still unposted.
+// This is the exact deadlock that stranded a reel for a day: publishing used to
+// happen only inside the job that filmed, so a reel that deferred itself had
+// nobody left to pick it up.
+await check(
+  "no stranded reels",
+  async () => {
+    const queue = await readState("queue.json", []);
+    const ready = queue.filter(
+      (p) =>
+        p.reel?.status === "ready" &&
+        p.status !== "posted" &&
+        p.status !== "reject" &&
+        p.status !== "missed"
+    );
+    const stranded = ready.filter((p) => new Date(p.scheduledFor) <= new Date());
+    if (stranded.length) {
+      throw new Error(
+        `${stranded.length} filmed but unpublished past their slot: ` +
+          stranded.map((p) => `${eat(p.scheduledFor)} EAT ${p.id}`).join(", ")
+      );
+    }
+    return ready.length ? `${ready.length} filmed and waiting for its slot` : "none waiting";
+  },
+  { group: "content" }
+);
+
+// If a state commit lost a race, the post went out but the queue never learned,
+// and the next run posted it again. The receipt is history, so check history.
+await check(
+  "no duplicate posts",
+  async () => {
+    const history = await readState("history.json", []);
+    const seen = new Map();
+    const dupes = [];
+    for (const h of history) {
+      if (!h.id || !h.platform || h.postId === "dry-run") continue;
+      const key = `${h.id}|${h.platform}`;
+      // The same id and platform twice with DIFFERENT post ids is a real
+      // double-post; the same post id twice is just a re-recorded receipt.
+      if (seen.has(key) && seen.get(key).postId !== h.postId) {
+        dupes.push({ key, at: h.postedAt });
+      }
+      seen.set(key, h);
+    }
+    if (!dupes.length) return `${seen.size} posts, none duplicated`;
+
+    // A duplicate that already happened cannot be undone, and a check that can
+    // never go green stops being read. Recent ones are a live fault; old ones
+    // are a scar, reported once and not screamed about daily.
+    const DAY = 86_400_000;
+    const recent = dupes.filter((d) => Date.now() - new Date(d.at) < DAY);
+    if (recent.length) {
+      throw new Error(`${recent.length} posted twice in the last 24h: ${recent.map((d) => d.key).join(", ")}`);
+    }
+    const worst = dupes[dupes.length - 1];
+    return {
+      warn: `${dupes.length} historic double-post(s), none in the last 24h - latest ${worst.key} on ${String(worst.at).slice(0, 10)}`,
+    };
+  },
+  { group: "content" }
+);
+
+// The routine is editable from Telegram; the reel cron is not. Change the day to
+// put a reel at 08:00 and the cron still wakes at 10:00 — the one setting Alice
+// says she can change is the one the schedule ignores.
+await check(
+  "reel cron covers the slots",
+  async () => {
+    const { readConfig } = await import("../src/config.js");
+    const cfg = await readConfig();
+    const reelSlots = cfg.slots.filter((s) => s.format === "reel");
+    if (!reelSlots.length) return "no reel slots in the routine";
+
+    const yml = await readFile(path.join(ROOT, ".github", "workflows", "reel.yml"), "utf8");
+    const cronsEat = [...yml.matchAll(/cron:\s*"(\d+)\s+(\d+)\s/g)].map(
+      ([, , h]) => (Number(h) + 3) % 24
+    );
+    if (!cronsEat.length) throw new Error("no cron found in reel.yml");
+
+    // Filming must happen at or before the slot, on the same day.
+    const uncovered = reelSlots.filter((s) => !cronsEat.some((c) => c <= s.hour));
+    if (uncovered.length) {
+      throw new Error(
+        `${uncovered.map((s) => `${s.hour}:00`).join(", ")} EAT has no earlier film run ` +
+          `(crons fire ${cronsEat.map((c) => `${c}:00`).join(", ")} EAT)`
+      );
+    }
+    return `${reelSlots.length} reel slot(s), filmed from ${cronsEat.map((c) => `${c}:00`).join(", ")} EAT`;
+  },
+  { group: "config", level: "warn" }
 );
 
 // A post held for an unapproved figure never publishes and never complains.
@@ -300,12 +394,22 @@ await check(
         new Date(p.scheduledFor) > now &&
         new Date(p.scheduledFor) - now < 36 * 3600_000
     );
-    // Before the 21:00 planner has run, having only the rest of today is normal.
-    if (!ahead.length) throw new Error("nothing at all queued for the next 36 hours");
+    // The planner runs at 21:00 EAT for tomorrow. An empty queue at 20:00 is
+    // the normal end of a day; the same emptiness at 23:00 means it failed.
+    // A check that cries wolf every evening is a check nobody reads.
+    const eatHour = new Date(Date.now() + 3 * 3600_000).getUTCHours();
+    const plannerHasRun = eatHour >= 22 || eatHour < 6;
+
+    if (!ahead.length) {
+      if (!plannerHasRun) {
+        return { warn: `nothing queued yet - normal until the 21:00 EAT planner runs (it is ${eatHour}:00 EAT)` };
+      }
+      throw new Error(`nothing queued and the 21:00 EAT planner should have run by now (${eatHour}:00 EAT)`);
+    }
     if (ahead.length < cfg.slots.length) {
-      return {
-        warn: `only ${ahead.length} queued for the next 36h against ${cfg.slots.length} slots a day - fine before 21:00 EAT, a planner failure after`,
-      };
+      const msg = `only ${ahead.length} queued for the next 36h against ${cfg.slots.length} slots a day`;
+      if (plannerHasRun) throw new Error(`${msg} - the planner has run, so it came up short`);
+      return { warn: `${msg} - normal before the 21:00 EAT planner` };
     }
     return `${ahead.length} queued: ${ahead.map((p) => `${eat(p.scheduledFor)} ${p.format}`).join(", ")}`;
   },
@@ -377,6 +481,29 @@ await check(
       next.format === "carousel" && next.slideFiles?.length ? next.slideFiles[0] : `${next.id}.png`;
     await assertAssetReachable(`${base.replace(/\/$/, "")}/${file}`);
     return `Pages is serving ${file}`;
+  },
+  { group: "publish", net: true }
+);
+
+// History records whatever id the API handed back, and an API that accepted a
+// post is not proof a post exists — this is the shape of the Dev-mode failure,
+// where everything returned 200 and nobody could see anything. Reading the post
+// back will not detect an audience problem (an admin token sees its own Page
+// either way), but it does catch a post that was recorded and then removed,
+// rejected, or never really created.
+await check(
+  "last post still exists",
+  async () => {
+    const history = await readState("history.json", []);
+    const last = [...history].reverse().find((h) => h.platform === "facebook" && h.postId && h.postId !== "dry-run");
+    if (!last) return { warn: "nothing posted to Facebook yet to verify" };
+    const { graphGet } = await import("../src/graph.js");
+    const p = await graphGet(last.postId, {
+      fields: "id,created_time,is_published",
+      access_token: process.env.FB_PAGE_ACCESS_TOKEN,
+    });
+    if (p.is_published === false) throw new Error(`${last.postId} exists but is not published`);
+    return `${last.id} verified on Facebook (${p.created_time?.slice(0, 16) ?? "?"})`;
   },
   { group: "publish", net: true }
 );

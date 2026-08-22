@@ -18,7 +18,8 @@ import { ctaLink, ctaComment } from "./brain.js";
 import { commentOn } from "./publish/comment.js";
 import { readConfig } from "./config.js";
 import { readFile as readFileAsync } from "node:fs/promises";
-import { readQueue, writeQueue, duePosts } from "./queue.js";
+import { readQueue, writeQueue, duePosts, stalePosts, hoursLate, MAX_LATE_HOURS } from "./queue.js";
+import { notify } from "./notify.js";
 import {
   isPaused, isDryRun, postedTodayCount, assertAssetReachable, maxPostsPerDay,
 } from "./guards.js";
@@ -40,15 +41,61 @@ const posts = singleFile
   ? [JSON.parse(await readFile(path.resolve(ROOT, singleFile), "utf8"))]
   : duePosts(queue);
 
+const dailyCap = await maxPostsPerDay();
+const history = existsSync(path.join(ROOT, "state", "history.json"))
+  ? JSON.parse(await readFile(path.join(ROOT, "state", "history.json"), "utf8"))
+  : [];
+
+// A slot that slipped past the cutoff is closed here rather than left to
+// publish at some wrong hour days later. Marking it `missed` also stops it
+// being reported as overdue forever — but it is never closed quietly.
+const stale = queue ? stalePosts(queue) : [];
+if (stale.length && !dryRun) {
+  for (const p of stale) {
+    p.status = "missed";
+    p.missedAt = new Date().toISOString();
+    console.log(`  MISSED ${p.id} — ${hoursLate(p).toFixed(1)}h late, past the ${MAX_LATE_HOURS}h cutoff`);
+  }
+  await writeQueue(queue);
+  await notify(
+    `⏰ <b>${stale.length} slot(s) missed</b>\nMore than ${MAX_LATE_HOURS}h late, so they were closed rather than posted at the wrong hour.\n\n` +
+      stale.map((p) => `• ${p.headline ?? p.id}`).join("\n")
+  );
+}
+
 if (!posts.length) {
   console.log("Nothing due.");
   process.exit(0);
 }
 
-const dailyCap = await maxPostsPerDay();
-const history = existsSync(path.join(ROOT, "state", "history.json"))
-  ? JSON.parse(await readFile(path.join(ROOT, "state", "history.json"), "utf8"))
-  : [];
+/**
+ * Has this exact post already gone to this platform?
+ *
+ * The commit that records a post can lose a race and never land, and the next
+ * hourly run then sees the slot as still pending and posts it a second time.
+ * History is the receipt; check it before trusting the queue's status.
+ */
+const alreadyPosted = (postId, platform) =>
+  history.some((h) => h.id === postId && h.platform === platform && h.postId !== "dry-run");
+
+/**
+ * An asset that is committed but not being served needs a Pages deploy, not a
+ * shrug. Signals the workflow to dispatch one, and tells the owner once, so an
+ * unreachable poster surfaces this hour instead of after the slot has gone.
+ */
+let redeployRequested = false;
+async function requestRedeploy(postId, why) {
+  if (redeployRequested) return;
+  redeployRequested = true;
+  if (process.env.GITHUB_OUTPUT) {
+    const { appendFile } = await import("node:fs/promises");
+    await appendFile(process.env.GITHUB_OUTPUT, "redeploy=true\n");
+  }
+  await notify(
+    `🌐 <b>Asset not being served</b>\n${postId} could not be published because its file is not live yet.\n` +
+      `<code>${String(why).slice(0, 160)}</code>\n\nAsking Pages to redeploy; it should go out next hour.`
+  );
+}
 
 for (const post of posts) {
   console.log(`\n--- ${post.id}`);
@@ -66,7 +113,11 @@ for (const post of posts) {
     try {
       for (const u of imageUrls) await assertAssetReachable(u);
     } catch (err) {
-      console.error(`  ${err.message} — skipped`);
+      // The file is committed but Pages is not serving it — usually a deploy
+      // that raced and lost. Skipping alone means the slot passes in silence
+      // every hour forever, so ask for a redeploy and say so out loud.
+      console.error(`  ${err.message} — skipped, requesting a Pages deploy`);
+      await requestRedeploy(post.id, err.message);
       continue;
     }
   }
@@ -88,6 +139,10 @@ for (const post of posts) {
   const results = [];
 
   for (const platform of post.platforms ?? []) {
+    if (alreadyPosted(post.id, platform)) {
+      console.log(`  skip ${platform}: already in history — a lost commit, not a new post`);
+      continue;
+    }
     const already = await postedTodayCount(platform);
     if (already >= dailyCap) {
       console.log(`  skip ${platform}: daily cap reached (${already})`);

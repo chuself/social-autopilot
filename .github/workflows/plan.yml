@@ -69,13 +69,17 @@ jobs:
       - id: pages
         uses: actions/deploy-pages@v4
 
+      # This used to echo the HTTP code and carry on, so a 404 scrolled past in
+      # a green build and the poster failed hours later at its slot — where it
+      # looked like nothing had been due.
       - name: Confirm the posters are live
-        run: |
-          for f in public/*.png; do
-            url="${{ vars.PUBLIC_ASSET_BASE }}/$(basename "$f")"
-            code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
-            echo "$code  $url"
-          done
+        env:
+          PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+        run: node scripts/confirm-live.mjs
 
       - name: Sync the review Sheet
         continue-on-error: true
