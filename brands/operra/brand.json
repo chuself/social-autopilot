@@ -40,32 +40,56 @@
     {
       "name": "lobby-light",
       "accent": "#a478ff",
-      "imageStyle": "warm hotel lobby interior at golden hour, soft window light, shallow depth of field, film grain"
+      "tone": "dark, warm golden-hour light",
+      "composition": "wide interior, deep perspective",
+      "imageStyle": "hotel lobby at golden hour, long shadows, soft window light, film grain",
+      "scrim": 0.85,
+      "panel": 0.25
     },
     {
-      "name": "night-desk",
-      "accent": "#7c6cff",
-      "imageStyle": "hotel reception after dark, deep blue shadows, single warm lamp, moody and quiet"
+      "name": "flatlay",
+      "accent": "#36d2ba",
+      "tone": "mid-tone, even soft daylight",
+      "composition": "overhead flat-lay shot straight down on a table",
+      "imageStyle": "room keys, a folded guest register, a cup of chai and a pen arranged on dark wood",
+      "scrim": 0.55,
+      "panel": 0.55
     },
     {
       "name": "linen",
-      "accent": "#36d2ba",
-      "imageStyle": "extreme macro of crisp folded hotel linen and stitching, neutral tones, soft diffuse light"
+      "accent": "#8fd0ff",
+      "tone": "light, high-key, soft and clean",
+      "composition": "extreme macro, filling the frame",
+      "imageStyle": "crisp white hotel linen, folds and stitching, morning light",
+      "scrim": 0.3,
+      "panel": 0.95
     },
     {
       "name": "blueprint",
       "accent": "#8b9dff",
-      "imageStyle": "abstract architectural geometry, faint grid lines, matte surfaces, technical and calm"
+      "tone": "flat graphic, no photography at all",
+      "composition": "pure abstract graphic \u2014 lines, grids and planes",
+      "imageStyle": "minimal architectural line drawing, thin strokes on a plain field, lots of empty space",
+      "scrim": 0.45,
+      "panel": 0.75
     },
     {
       "name": "coastal",
       "accent": "#3fb6c9",
-      "imageStyle": "Zanzibar coastal daylight, whitewashed walls and palm shadow, airy and bright but low contrast"
+      "tone": "bright, sunlit, airy",
+      "composition": "exterior landscape, wide horizon",
+      "imageStyle": "Zanzibar shoreline, whitewashed wall, palm shadow falling across it, midday sun",
+      "scrim": 0.25,
+      "panel": 0.95
     },
     {
-      "name": "ledger",
+      "name": "nightfall",
       "accent": "#c98a86",
-      "imageStyle": "macro of paper texture, ink and worn edges, analogue and tactile, warm shadow"
+      "tone": "deep blue hour, cool and quiet",
+      "composition": "exterior at dusk, looking at a building",
+      "imageStyle": "a small East African hotel exterior at blue hour, warm windows glowing against cool sky",
+      "scrim": 0.8,
+      "panel": 0.3
     }
   ],
   "cities": [

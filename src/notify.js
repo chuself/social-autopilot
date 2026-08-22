@@ -136,6 +136,39 @@ ${videoUrl}`, { mirror: false });
   return true;
 }
 
+/**
+ * Send a local image straight to Telegram as an upload.
+ *
+ * Uploading beats hosting it first: no Pages deploy, no waiting for a CDN, and
+ * a preview nobody keeps does not belong in the public asset folder.
+ */
+export async function sendPhoto(filePath, caption) {
+  if (!notifyConfigured()) {
+    console.log(`[photo not sent — Telegram not configured] ${filePath}`);
+    return false;
+  }
+  const { readFile } = await import("node:fs/promises");
+  const path = await import("node:path");
+  const bytes = await readFile(filePath);
+
+  const form = new FormData();
+  form.append("chat_id", process.env.TELEGRAM_CHAT_ID);
+  form.append("caption", (caption ?? "").slice(0, 1000));
+  form.append("parse_mode", "HTML");
+  form.append("photo", new Blob([bytes], { type: "image/png" }), path.basename(filePath));
+
+  const res = await fetch(`${API}${process.env.TELEGRAM_BOT_TOKEN}/sendPhoto`, {
+    method: "POST",
+    body: form,
+  });
+  const json = await res.json();
+  if (!json.ok) {
+    console.error(`sendPhoto failed: ${json.description ?? res.status}`);
+    return false;
+  }
+  return true;
+}
+
 /** Failures must be loud — this is how an unattended pipeline asks for help. */
 export async function notifyFailure(what, err) {
   await notify(

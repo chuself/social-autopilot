@@ -48,6 +48,7 @@ while (Date.now() < deadline) {
   const started = Date.now();
   let changed = false;
   let replan = false;
+  let preview = false;
   let newOffset = await readOffset();
 
   for (const u of updates) {
@@ -60,6 +61,7 @@ while (Date.now() < deadline) {
       const r = await handleMessage(msg.text, msg.chat.id);
       changed ||= r.changed;
       replan ||= r.replan;
+      preview ||= r.preview;
       handled++;
       console.log(
         `[${r.kind}] "${msg.text.slice(0, 50)}" — answered in ${((Date.now() - sentAt) / 1000).toFixed(1)}s`
@@ -74,6 +76,7 @@ while (Date.now() < deadline) {
   // Persist immediately: a watcher that dies must not lose an instruction.
   if (changed || newOffset) await commitState();
   if (replan) await triggerReplan();
+  if (preview) await dispatch("looks-preview");
 
   console.log(`  batch done in ${((Date.now() - started) / 1000).toFixed(1)}s`);
 }
@@ -109,6 +112,17 @@ async function commitState() {
   await git(["commit", "-m", "chore: from Telegram [skip ci]"]);
   await git(["pull", "--rebase", "--autostash"]);
   await git(["push"]);
+}
+
+/** Fire a workflow by name; dispatch is not throttled the way schedules are. */
+async function dispatch(workflow, ...fields) {
+  if (!process.env.GITHUB_ACTIONS) {
+    console.log(`(would dispatch ${workflow})`);
+    return;
+  }
+  await run("gh", ["workflow", "run", workflow, ...fields], { cwd: ROOT })
+    .then(() => console.log(`  dispatched ${workflow}`))
+    .catch((e) => console.warn(`  ${workflow} dispatch failed: ${e.message}`));
 }
 
 /** A routine change is only real once the schedule is rebuilt. */

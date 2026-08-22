@@ -19,6 +19,7 @@ export const OFFSET = path.join(ROOT, "state", "telegram-offset.json");
 export const PAUSED = path.join(ROOT, "state", "PAUSED");
 export const REPLAN = path.join(ROOT, "state", "REPLAN");
 export const PENDING_CHANGE = path.join(ROOT, "state", "pending-change.json");
+export const PREVIEW_LOOKS = path.join(ROOT, "state", "PREVIEW_LOOKS");
 
 export function botToken() {
   return process.env.TELEGRAM_BOT_TOKEN;
@@ -112,6 +113,11 @@ export async function handleMessage(text, chatId) {
     await notify("🔁 Re-planning now — this takes a few minutes.");
     return { kind: "command", changed: true, replan: true };
   }
+  if (lower === "/looks" || lower === "/preview") {
+    await writeFile(PREVIEW_LOOKS, "requested from Telegram\n");
+    await notify("🎨 Rendering every look — the sheet lands here in a couple of minutes.");
+    return { kind: "command", changed: true, replan: false, preview: true };
+  }
   if (lower === "/clear") {
     if (existsSync(STEER)) await unlink(STEER);
     await notify("🧹 Standing instructions cleared.");
@@ -159,6 +165,12 @@ export async function handleMessage(text, chatId) {
     return { kind: "instruction", changed: true, replan: false };
   }
 
+  if (intent.kind === "preview") {
+    await writeFile(PREVIEW_LOOKS, "requested from Telegram\n");
+    await notify("🎨 Rendering every look — the sheet lands here in a couple of minutes.");
+    return { kind: "preview", changed: true, replan: false, preview: true };
+  }
+
   if (intent.kind === "question") {
     await notify(intent.reply ? escapeHtml(intent.reply) : await statusText());
     return { kind: "question", changed: false, replan: false };
@@ -180,6 +192,7 @@ function helpText() {
     "• <i>3 posters and 1 reel a day at 8, 13, 16 and 20</i>",
     "",
     "/status — what is queued",
+    "/looks — see every visual look side by side",
     "/replan — rebuild the schedule now",
     "/pause — stop posting   /resume — start again",
     "/clear — forget my instructions",
@@ -254,7 +267,7 @@ Current routine: ${describeRoutine(cfg)}
 
 Classify the message and reply. Return ONLY JSON:
 {
-  "kind": "setting" | "instruction" | "question" | "chat",
+  "kind": "setting" | "instruction" | "preview" | "question" | "chat",
   "settings": { "slots": [ { "hour": number, "format": "poster" | "reel" } ], "tiktokPerDay": number },
   "reply": "under 60 words, plain text"
 }
@@ -272,7 +285,9 @@ Classify the message and reply. Return ONLY JSON:
     owner explicitly asks about TikTok frequency.
 - "instruction" = it changes how posts are WRITTEN or what they cover (tone, wording,
   language, topics to push or avoid). Reply confirming what changed.
-- "question" = they are asking something. Answer it using the queue above.
+- "preview" = they want to SEE the visual looks / designs / styles compared
+  ("show me the looks", "nionyeshe designs", "what do the styles look like").
+- "question" = they are asking something else. Answer it using the queue above.
 - "chat" = greeting or small talk. Reply briefly and naturally.
 
 Reply in the same language they wrote in.`,

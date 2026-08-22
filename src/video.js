@@ -29,10 +29,13 @@ export async function renderReel(post, brandId, audioFile, outFile) {
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
   // Prefer the look recorded on the post: a re-render weeks later must produce
   // the same image, not today's rotation.
-  const accent =
-    (brand.looks ?? []).find((l) => l.name === post.look)?.accent ??
-    lookForDate(brand)?.accent ??
-    null;
+  const activeLook =
+    (brand.looks ?? []).find((l) => l.name === post.look) ?? lookForDate(brand) ?? null;
+  const accent = activeLook?.accent ?? null;
+  // A bright background needs less global scrim but a stronger panel behind the
+  // text; a near-black one needs the opposite.
+  const scrim = activeLook?.scrim;
+  const panel = activeLook?.panel;
   const templatePath = path.join(brandDir, "templates", `${post.videoTemplate ?? "reel"}.html`);
   if (!existsSync(templatePath)) throw new Error(`No reel template for ${brandId}`);
 
@@ -50,10 +53,12 @@ export async function renderReel(post, brandId, audioFile, outFile) {
     await page.goto(pathToFileURL(templatePath).href, { waitUntil: "load" });
 
     await page.evaluate(
-      ({ brand, post, logoUrl, bgUrl, duration, accent }) => {
+      ({ brand, post, logoUrl, bgUrl, duration, accent, scrim, panel }) => {
         const root = document.documentElement;
         for (const [k, v] of Object.entries(brand.colors)) root.style.setProperty(`--${k}`, v);
         if (accent) root.style.setProperty("--primary", accent);
+        if (scrim != null) root.style.setProperty("--scrim", String(scrim));
+        if (panel != null) root.style.setProperty("--panel", String(panel));
         root.style.setProperty("--pill", brand.radii.pill);
 
         document.getElementById("logo").src = logoUrl;
@@ -72,6 +77,8 @@ export async function renderReel(post, brandId, audioFile, outFile) {
         brand,
         post,
         accent,
+        scrim,
+        panel,
         logoUrl: pathToFileURL(path.join(brandDir, brand.logo)).href,
         bgUrl: post.backgroundPath
           ? pathToFileURL(path.resolve(ROOT, post.backgroundPath)).href

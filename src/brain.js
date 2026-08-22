@@ -222,12 +222,16 @@ Return ONLY a JSON object with these keys:
   Do NOT include any URL or phone number — the link is appended automatically.
   Line breaks allowed. At most one emoji, only if it genuinely helps.
 - "hashtags": array of 3-5 hashtags, relevant, no spam.
-- "imagePrompt": a background description in THIS WEEK'S visual direction:
-  «${look?.imageStyle ?? "dark abstract texture"}»
-  Stay inside that direction — vary the subject, not the style. MUST specify
-  "no text, no people, no logos" and a dark colour grade.
-  The headline is laid over the left side, so keep the subject right-of-centre
-  and low contrast there.
+- "imagePrompt": a background image description built from THIS BLOCK'S direction.
+  Do not restate the direction — write a specific scene inside it.
+    Subject      : ${look?.imageStyle ?? "abstract texture"}
+    Composition  : ${look?.composition ?? "wide shot"}
+    Tone/light   : ${look?.tone ?? "dark, low contrast"}
+  Obey the Tone exactly. Do NOT add "dark colour grade" unless the Tone says dark —
+  a bright look must stay bright.
+  End with "no text, no people, no logos".
+  The headline sits over the left third, so keep the busy detail right-of-centre
+  and leave the left side visually calm — plain wall, sky, shadow or empty space.
 - "template": "spotlight"
 
 ${language === "sw"

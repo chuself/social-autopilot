@@ -12,6 +12,7 @@ import { promisify } from "node:util";
 import { renderPoster } from "./render.js";
 import { readQueue } from "./queue.js";
 import { lookForDate } from "./brain.js";
+import { sendPhoto } from "./notify.js";
 
 const run = promisify(execFile);
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -27,19 +28,30 @@ if (!looks.length) {
 }
 
 const queue = await readQueue();
-const sample =
+const fallback =
   queue.find((p) => p.status !== "posted" && p.backgroundPath) ??
   queue.find((p) => p.backgroundPath) ??
   queue[queue.length - 1];
-if (!sample) {
+if (!fallback) {
   console.log("No post to sample.");
   process.exit(0);
+}
+
+/**
+ * Prefer a real post made in each look, so the sheet shows that look's actual
+ * imagery. Reusing one background compares only the accent, which hides the
+ * thing most worth judging.
+ */
+function sampleFor(name) {
+  const own = queue.find((p) => p.look === name && p.backgroundPath);
+  return own ?? fallback;
 }
 
 const today = lookForDate(brand)?.name;
 const files = [];
 for (const look of looks) {
   const file = path.join(ROOT, "state", "frames", `look-${look.name}.png`);
+  const sample = sampleFor(look.name);
   await renderPoster({ ...sample, look: look.name }, "operra", file);
   files.push(file);
   console.log(`  ${look.name}${look.name === today ? "  <- today" : ""}`);

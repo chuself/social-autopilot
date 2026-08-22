@@ -1,0 +1,39 @@
+name: looks-preview
+
+# On demand, or when /looks is asked for on Telegram. Renders every look side by
+# side from ONE existing post, so the comparison isolates the visual and costs
+# no LLM calls.
+on:
+  workflow_dispatch:
+
+concurrency: looks-preview
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: npx playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Render and send
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node src/cli-looks.js
+
+      - name: Clear the request
+        if: always()
+        run: |
+          git config user.name "social-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          rm -f state/PREVIEW_LOOKS
+          git pull --rebase --autostash
+          git add -A state
+          git diff --staged --quiet || git commit -m "chore: looks preview sent [skip ci]"
+          git push || true
