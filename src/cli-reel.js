@@ -8,13 +8,11 @@
  * Publishing is a separate step (cli-publish-reel.js) because, exactly like the
  * posters, the file must be live on a public URL before Instagram can fetch it.
  */
-import { writeFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
 import path from "node:path";
 import { writeReelScript } from "./brain.js";
 import { speak } from "./audio.js";
 import { renderReel, probeVideo } from "./video.js";
-import { readQueue, writeQueue, readHistory } from "./queue.js";
+import { readQueue, writeQueue } from "./queue.js";
 import { readConfig } from "./config.js";
 import { appendFileSync } from "node:fs";
 

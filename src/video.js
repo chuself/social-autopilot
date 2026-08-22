@@ -6,7 +6,7 @@
  * length exactly — the same discipline as the poster renderer.
  */
 import { chromium } from "playwright";
-import { mkdir, rm, readFile, writeFile } from "node:fs/promises";
+import { mkdir, rm, readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";

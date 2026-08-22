@@ -1,0 +1,60 @@
+name: preflight
+
+# Runs on every push to main and once a day.
+#
+# Exists because three bugs in one day all passed `node --check`: a function
+# imported but never called, a block referencing variables that were never
+# added, and a use-before-declaration. None were visible without executing the
+# code — so this executes it, and shouts on Telegram when something breaks.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "scripts/preflight.mjs"
+      - "brands/**"
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: npx playwright install --with-deps chromium
+
+      - name: Preflight
+        env:
+          PREFLIGHT_NOTIFY: "1"
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
+          WHATSAPP_CTA_NUMBER: ${{ vars.WHATSAPP_CTA_NUMBER }}
+          # Metricool is checked read-only, but any call rotates the token, so
+          # this job must be able to save the replacement.
+          METRICOOL_KEY: ${{ secrets.METRICOOL_KEY }}
+          METRICOOL_BLOG_ID: ${{ vars.METRICOOL_BLOG_ID }}
+        run: node scripts/preflight.mjs
+
+      - name: Save any rotated token
+        if: always()
+        run: |
+          git config user.name "social-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f state/metricool.enc 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: rotate metricool token [skip ci]"
+          git pull --rebase --autostash || true
+          git push || true
