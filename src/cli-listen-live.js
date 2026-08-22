@@ -49,6 +49,7 @@ while (Date.now() < deadline) {
   let changed = false;
   let replan = false;
   let preview = false;
+  const toDispatch = new Set();
   let newOffset = await readOffset();
 
   for (const u of updates) {
@@ -62,6 +63,7 @@ while (Date.now() < deadline) {
       changed ||= r.changed;
       replan ||= r.replan;
       preview ||= r.preview;
+      for (const w of r.dispatch ?? []) toDispatch.add(w);
       handled++;
       console.log(
         `[${r.kind}] "${msg.text.slice(0, 50)}" — answered in ${((Date.now() - sentAt) / 1000).toFixed(1)}s`
@@ -77,6 +79,8 @@ while (Date.now() < deadline) {
   if (changed || newOffset) await commitState();
   if (replan) await triggerReplan();
   if (preview) await dispatch("looks-preview");
+  // Commands that just want a workflow run, with no state to carry.
+  for (const w of toDispatch) await dispatch(w);
 
   console.log(`  batch done in ${((Date.now() - started) / 1000).toFixed(1)}s`);
 }

@@ -123,8 +123,21 @@ export async function handleMessage(text, chatId) {
     await notify("🧹 Standing instructions cleared.");
     return { kind: "command", changed: true, replan: false };
   }
+  if (lower === "/preflight" || lower === "/check" || lower === "/doctor") {
+    await notify("\u{1F50E} Running preflight - the report lands here in a couple of minutes.");
+    return { kind: "command", changed: false, replan: false, dispatch: ["preflight"] };
+  }
   if (lower.startsWith("/start") || lower.startsWith("/help")) {
     await notify(helpText());
+    return { kind: "command", changed: false, replan: false };
+  }
+
+  // An unrecognised slash command must never reach the classifier. `/preflight`
+  // was read as a question and answered with a friendly paragraph, so the check
+  // never ran and nothing said it hadn't. A command that does not exist should
+  // say so.
+  if (lower.startsWith("/")) {
+    await notify(`I don't know <b>${escapeHtml(trimmed.split(/\s/)[0])}</b>.\n\n${helpText()}`);
     return { kind: "command", changed: false, replan: false };
   }
 
@@ -192,6 +205,7 @@ function helpText() {
     "• <i>3 posters and 1 reel a day at 8, 13, 16 and 20</i>",
     "",
     "/status — what is queued",
+    "/preflight — run every check and report what is broken",
     "/looks — see every visual look side by side",
     "/replan — rebuild the schedule now",
     "/pause — stop posting   /resume — start again",

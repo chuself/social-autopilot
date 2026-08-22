@@ -29,6 +29,9 @@ jobs:
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # Commands like /preflight fire another workflow from here too, so the
+          # recovery path behaves the same as the live listener.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node src/cli-listen.js
 
       - name: Save instructions

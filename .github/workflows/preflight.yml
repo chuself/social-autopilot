@@ -1,6 +1,7 @@
 name: preflight
 
-# Runs on every push to main and once a day.
+# Runs on every push to main, once a day, and whenever /preflight is sent on
+# Telegram.
 #
 # Exists because three bugs in one day all passed `node --check`: a function
 # imported but never called, a block referencing variables that were never
@@ -17,6 +18,8 @@ on:
     - cron: "0 4 * * *"
   workflow_dispatch:
 
+concurrency: preflight
+
 jobs:
   preflight:
     runs-on: ubuntu-latest
@@ -29,9 +32,18 @@ jobs:
       - run: npm ci --omit=dev || npm install --omit=dev
       - run: npx playwright install --with-deps chromium
 
+      # The reel pipeline's two binary dependencies. Without them installed the
+      # media checks would report a broken runner rather than broken code.
+      - name: Media tools
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pipx install edge-tts || pip install --break-system-packages edge-tts
+
       - name: Preflight
         env:
-          PREFLIGHT_NOTIFY: "1"
+          # Asked for by hand means somebody is waiting for an answer, so send
+          # the whole report. On a schedule, only speak up when something is wrong.
+          PREFLIGHT_NOTIFY: ${{ github.event_name == 'workflow_dispatch' && 'always' || '1' }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -41,12 +53,15 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
           PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
           WHATSAPP_CTA_NUMBER: ${{ vars.WHATSAPP_CTA_NUMBER }}
           # Metricool is checked read-only, but any call rotates the token, so
           # this job must be able to save the replacement.
           METRICOOL_KEY: ${{ secrets.METRICOOL_KEY }}
           METRICOOL_BLOG_ID: ${{ vars.METRICOOL_BLOG_ID }}
+          METRICOOL_USER_ID: ${{ vars.METRICOOL_USER_ID }}
         run: node scripts/preflight.mjs
 
       - name: Save any rotated token
