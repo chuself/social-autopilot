@@ -9,7 +9,7 @@ import { readFile, writeFile, appendFile, unlink } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { notify } from "./notify.js";
-import { readQueue } from "./queue.js";
+import { readQueue, whyWaiting } from "./queue.js";
 import { completeJson } from "./llm.js";
 import { updateConfig, readConfig, LIMITS } from "./config.js";
 
@@ -217,8 +217,17 @@ export async function statusText() {
   const queue = await readQueue();
   const cfg = await readConfig();
   const now = new Date();
-  const upcoming = queue
-    .filter((p) => p.status !== "posted" && p.status !== "reject" && new Date(p.scheduledFor) >= now)
+  const open = queue.filter(
+    (p) => p.status !== "posted" && p.status !== "reject" && p.status !== "missed"
+  );
+  // Anything whose time has passed but which has not gone out is the FIRST
+  // thing the owner wants to see — "what is the queue waiting for" was asked
+  // over and over while the answer sat in an Actions log nobody could read.
+  const overdue = open
+    .filter((p) => new Date(p.scheduledFor) < now)
+    .sort((a, b) => new Date(a.scheduledFor) - new Date(b.scheduledFor));
+  const upcoming = open
+    .filter((p) => new Date(p.scheduledFor) >= now)
     .sort((a, b) => new Date(a.scheduledFor) - new Date(b.scheduledFor));
 
   const lines = [
@@ -227,8 +236,15 @@ export async function statusText() {
     `Routine: ${describeRoutine(cfg)}`,
     "",
   ];
+  if (overdue.length) {
+    lines.push(`⚠️ <b>${overdue.length} not out yet</b>`);
+    for (const p of overdue.slice(0, 5)) {
+      lines.push(`• ${eat(p.scheduledFor)} ${p.headline}\n   <i>${escapeHtml(whyWaiting(p, now))}</i>`);
+    }
+    lines.push("");
+  }
   for (const p of upcoming.slice(0, 8)) {
-    lines.push(`• ${eat(p.scheduledFor)} [${p.language ?? "--"}] ${p.headline}`);
+    lines.push(`• ${eat(p.scheduledFor)} [${p.language ?? "--"}] ${p.headline}\n   <i>${escapeHtml(whyWaiting(p, now))}</i>`);
   }
   if (existsSync(STEER)) {
     lines.push("", "<b>Your standing instructions:</b>", escapeHtml(await readFile(STEER, "utf8")).trim());
@@ -261,10 +277,17 @@ export function escapeHtml(s) {
 async function classify(text) {
   const queue = await readQueue();
   const cfg = await readConfig();
+  // Include WHY each one is still sitting there. Without it the model was
+  // asked "what is the queue waiting for?" and could only guess from a list of
+  // headlines, so it answered confidently and wrongly.
   const upcoming = queue
     .filter((p) => p.status !== "posted" && p.status !== "reject")
     .slice(0, 10)
-    .map((p) => `- ${p.scheduledFor?.slice(0, 10)} [${p.language ?? "--"}] ${p.headline}`)
+    .map(
+      (p) =>
+        `- ${eat(p.scheduledFor)} EAT [${p.language ?? "--"}] ${p.format ?? "poster"}: ${p.headline}` +
+        ` — ${whyWaiting(p)}`
+    )
     .join("\n");
 
   try {

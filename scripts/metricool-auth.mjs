@@ -85,9 +85,23 @@ const authUrl =
     resource: RESOURCE,
   });
 
+// Persist BEFORE waiting. --code resume is documented at the top of this file
+// but nothing ever wrote this, so a timed-out or closed listener threw the
+// registration and the PKCE verifier away and the approval could not be
+// finished — the whole point of the resume path.
+await writeFile(
+  PENDING,
+  JSON.stringify(
+    { client_id: reg.client_id, client_secret: reg.client_secret ?? null, verifier, state, started: new Date().toISOString() },
+    null,
+    2
+  )
+);
+
 console.log("\nOpen this in your browser and approve:\n");
 console.log(authUrl);
 console.log("\nwaiting for the redirect…");
+console.log(`(if this exits first, finish with: node scripts/metricool-auth.mjs --code "<the redirected URL>")`);
 
 // 3. Catch the redirect locally — the browser is on this machine, so no public
 //    callback host is needed.
@@ -155,4 +169,20 @@ async function exchange(code, clientId, clientSecret, codeVerifier) {
   console.log(`
 access token ok (expires in ${tok.expires_in ?? "?"}s)`);
   console.log(saved.refresh_token ? "refresh token saved to .metricool.json" : "NO refresh token returned");
+
+  // .metricool.json is gitignored, so CI cannot see it. Seal it here or the
+  // re-authorisation only fixes this laptop and every workflow keeps failing —
+  // which is exactly why a re-auth once needed a follow-up "re-seal" commit.
+  if (saved.refresh_token) {
+    if (!process.env.METRICOOL_KEY) {
+      console.warn("\nMETRICOOL_KEY is not set — could not seal state/metricool.enc for CI.");
+    } else {
+      const { seal } = await import("../src/secretstore.js");
+      await seal(saved, "metricool");
+      console.log("sealed to state/metricool.enc — commit and push it so CI picks it up");
+    }
+  }
+
+  // The verifier has served its purpose; leaving it around invites a stale resume.
+  if (existsSync(PENDING)) await (await import("node:fs/promises")).unlink(PENDING);
 }

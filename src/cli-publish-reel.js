@@ -6,7 +6,9 @@
  * file server-side, exactly like the posters.
  */
 import path from "node:path";
-import { readQueue, writeQueue, dueReels, hoursLate, MAX_LATE_HOURS } from "./queue.js";
+import {
+  readQueue, writeQueue, dueReels, hoursLate, noteSkip, clearSkip, MAX_LATE_HOURS,
+} from "./queue.js";
 import { publishInstagramReel, publishFacebookVideo } from "./publish/reels.js";
 import { publishTikTok, tiktokConfigured } from "./publish/tiktok.js";
 import { readConfig } from "./config.js";
@@ -51,13 +53,15 @@ if (!post) {
   } else {
     for (const p of ready) {
       const late = hoursLate(p);
-      console.log(
+      const reason =
         late < 0
-          ? `  ${p.id}: filmed, not due until ${eatOf(p.scheduledFor)} EAT`
-          : `  ${p.id}: filmed and ${late.toFixed(1)}h late — past the ${MAX_LATE_HOURS}h cutoff, will not auto-publish`
-      );
+          ? `filmed, waiting for its ${eatOf(p.scheduledFor)} EAT slot`
+          : `filmed but ${late.toFixed(1)}h late — past the ${MAX_LATE_HOURS}h cutoff, will not auto-publish`;
+      console.log(`  ${p.id}: ${reason}`);
+      noteSkip(p, reason);
     }
     console.log(`${ready.length} reel(s) filmed, none due right now.`);
+    if (!dryRun) await writeQueue(queue);
   }
   process.exit(0);
 }
@@ -113,7 +117,13 @@ for (const [name, fn] of [
   }
 }
 
+if (!dryRun && !results.length) {
+  noteSkip(post, "both platforms refused the reel — see the reel job log");
+  await writeQueue(queue);
+}
+
 if (!dryRun && results.length) {
+  clearSkip(post);
   post.reel.status = "posted";
   // Close the slot so nothing else picks it up.
   if (post.format === "reel") post.status = "posted";

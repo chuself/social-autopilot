@@ -18,7 +18,9 @@ import { ctaLink, ctaComment } from "./brain.js";
 import { commentOn } from "./publish/comment.js";
 import { readConfig } from "./config.js";
 import { readFile as readFileAsync } from "node:fs/promises";
-import { readQueue, writeQueue, duePosts, stalePosts, hoursLate, MAX_LATE_HOURS } from "./queue.js";
+import {
+  readQueue, writeQueue, duePosts, stalePosts, hoursLate, noteSkip, clearSkip, MAX_LATE_HOURS,
+} from "./queue.js";
 import { notify } from "./notify.js";
 import {
   isPaused, isDryRun, postedTodayCount, assertAssetReachable, maxPostsPerDay,
@@ -107,6 +109,7 @@ for (const post of posts) {
 
   if (!assets.every((f) => existsSync(path.join(ROOT, "public", f)))) {
     console.error(`  missing rendered asset(s) — skipped`);
+    noteSkip(post, "its image has not been rendered");
     continue;
   }
   if (!dryRun) {
@@ -117,6 +120,7 @@ for (const post of posts) {
       // that raced and lost. Skipping alone means the slot passes in silence
       // every hour forever, so ask for a redeploy and say so out loud.
       console.error(`  ${err.message} — skipped, requesting a Pages deploy`);
+      noteSkip(post, "its image is not live yet — asked Pages to redeploy");
       await requestRedeploy(post.id, err.message);
       continue;
     }
@@ -137,15 +141,20 @@ for (const post of posts) {
     .filter(Boolean)
     .join("\n\n");
   const results = [];
+  // Why each platform did not take it, so a post that goes nowhere can say so
+  // rather than just staying "pending".
+  const skips = [];
 
   for (const platform of post.platforms ?? []) {
     if (alreadyPosted(post.id, platform)) {
       console.log(`  skip ${platform}: already in history — a lost commit, not a new post`);
+      skips.push(`${platform}: already posted`);
       continue;
     }
     const already = await postedTodayCount(platform);
     if (already >= dailyCap) {
       console.log(`  skip ${platform}: daily cap reached (${already})`);
+      skips.push(`${platform}: daily cap of ${dailyCap} reached`);
       continue;
     }
     try {
@@ -172,7 +181,13 @@ for (const post of posts) {
     } catch (err) {
       // One platform failing must never stop the others.
       console.error(`  FAILED ${platform}: ${err.message}`);
+      skips.push(`${platform}: ${err.message.slice(0, 90)}`);
     }
+  }
+
+  if (!dryRun) {
+    if (results.length) clearSkip(post);
+    else if (skips.length) noteSkip(post, skips.join("; "));
   }
 
   if (!dryRun && results.length) {

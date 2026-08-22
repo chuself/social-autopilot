@@ -64,6 +64,58 @@ export function duePosts(queue, now = new Date()) {
   });
 }
 
+/**
+ * Record why a post did not go out this time.
+ *
+ * Nothing used to write this down. Every skip printed one line into an Actions
+ * log and vanished, so the queue could say a post was "pending" but never why
+ * it had stayed that way for six hours — and the only way to find out was to
+ * read the logs of a job that had already scrolled past. `/status` can now
+ * answer the question instead.
+ */
+export function noteSkip(post, reason) {
+  post.lastAttempt = new Date().toISOString();
+  post.lastSkipReason = reason;
+}
+
+export function clearSkip(post) {
+  post.lastAttempt = new Date().toISOString();
+  delete post.lastSkipReason;
+}
+
+function ago(iso) {
+  const mins = Math.round((Date.now() - new Date(iso)) / 60_000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return `${mins}m ago`;
+  return `${Math.floor(mins / 60)}h${mins % 60}m ago`;
+}
+
+/** One plain sentence for the owner: what is this post waiting for? */
+export function whyWaiting(post, now = new Date()) {
+  if (post.status === "posted") return "posted";
+  if (post.status === "reject") return "rejected";
+  if (post.status === "needs-review") return "held — a figure in it is not in facts.md";
+  if (post.status === "missed") {
+    return `missed — ${hoursLate(post, now).toFixed(1)}h late, past the ${MAX_LATE_HOURS}h cutoff`;
+  }
+
+  const when = new Date(post.scheduledFor);
+  if (when > now) {
+    const mins = Math.round((when - now) / 60_000);
+    const eta = mins < 60 ? `due in ${mins}m` : `due in ${Math.floor(mins / 60)}h${mins % 60}m`;
+    if (post.format === "reel") {
+      return post.reel?.status === "ready" ? `filmed and waiting — ${eta}` : `${eta}, not filmed yet`;
+    }
+    return eta;
+  }
+
+  const late = hoursLate(post, now);
+  const lateness = late < 1 ? `${Math.round(late * 60)}m late` : `${late.toFixed(1)}h late`;
+  if (post.lastSkipReason) return `${lateness} — ${post.lastSkipReason} (tried ${ago(post.lastAttempt)})`;
+  if (post.format === "reel" && post.reel?.status !== "ready") return `${lateness} — not filmed yet`;
+  return `${lateness} — due, but nothing has tried to publish it yet`;
+}
+
 export function hoursLate(post, now = new Date()) {
   if (!post.scheduledFor) return 0;
   return (now - new Date(post.scheduledFor)) / 3600_000;
