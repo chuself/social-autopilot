@@ -1,0 +1,176 @@
+[
+  {
+    "id": "operra-2026-08-22-18-feature-spotlight",
+    "eyebrow": "Hali ya Vyumba",
+    "headline": "Fahamu chumba kiko tayari bila kupiga simu",
+    "body": "Housekeeper akikamilisha usafi, mapokezi wanaona taarifa hiyo kwenye mfumo papo hapo. Hakuna kupoteza muda wa mgeni kusubiri.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mgeni amefika mapokezi lakini huna uhakika kama chumba chake kimeshafanyiwa usafi. Badala ya kuanza kupiga simu ghorofani au kutuma mtu akakague, Operra inakuonyesha hali ya vyumba vyote kwa wakati halisi.\n\nHousekeeper akimaliza kufanya usafi na kubadilisha hali ya chumba kwenye simu yake, mapokezi wanaona chumba kiko tayari papo hapo. Wageni wako hawatasubiri tena bila sababu.",
+    "hashtags": [
+      "#Operra",
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#HotelOwnersTZ"
+    ],
+    "imagePrompt": "warm hotel lobby interior at golden hour, soft window light, shallow depth of field, film grain. A clean, empty reception desk on the right side of the frame. Left side has low contrast and is dark. Dark colour grade, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "lobby-light",
+    "backgroundPath": "state/bg/operra-2026-08-22-18-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T15:00:00.000Z",
+    "createdAt": "2026-08-22T07:05:30.699Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-22-19-pain-point",
+    "eyebrow": "Ripoti za Siku",
+    "headline": "Saa nane usiku bado unafunga hesabu za siku?",
+    "body": "Operra inarahisisha ukaguzi wa usiku. Kila malipo na mauzo ya huduma yanaingia kwenye mfumo papo hapo bila makosa ya kibinadamu.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Hakuna kitu kinachochosha kama kumaliza shift huku hesabu za mapokezi na bar hazioani. Unabaki kuhakiki kila risiti kwa mkono wakati unapaswa kupumzika.\n\nOperra inaondoa adha hii. Kila muamala, kuanzia chumbani hadi mgahawani, unaonekana kwenye mfumo mmoja kwa wakati mmoja. Ripoti ya siku inakamilika kwa sekunde chache, hata ukiwa mbali na hoteli.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#OperraTech",
+      "#HotelOwnersTZ"
+    ],
+    "imagePrompt": "A close-up of a rustic wooden hotel front desk ledger after dark, deep blue shadows, a single warm lamp glowing on the right side of the desk, moody and quiet. No text, no people, no logos. Dark color grade, low contrast on the left half.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "night-desk",
+    "backgroundPath": "state/bg/operra-2026-08-22-19-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T16:00:00.000Z",
+    "createdAt": "2026-08-22T07:06:15.823Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-22-20-number-that-lands",
+    "eyebrow": "Connectivity",
+    "headline": "System reliability on slow internet",
+    "body": "Operra is built to run smoothly on the low-bandwidth connections common across Tanzanian properties, keeping your front desk online.",
+    "cta": "See it work",
+    "caption": "Internet dropouts shouldn't freeze your front desk. Most cloud systems require high-speed fiber to function, leaving you stranded when the connection slows down.\n\nOperra is engineered specifically to run on the low-bandwidth connections common in Tanzanian properties. Your team can post payments and check in guests without frustrating delays.",
+    "hashtags": [
+      "HotelManagement",
+      "TanzaniaHospitality",
+      "HotelOperations"
+    ],
+    "imagePrompt": "Extreme macro of crisp folded dark hotel linen and neat stitching, neutral charcoal tones, soft diffuse light. No text, no people, no logos. Dark colour grade. The main texture is detailed on the right-of-centre, leaving the left side clean and low-contrast for text overlay.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "linen",
+    "backgroundPath": "state/bg/operra-2026-08-22-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T17:00:00.000Z",
+    "createdAt": "2026-08-22T07:07:01.132Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-22-21-client-proof",
+    "eyebrow": "Uendeshaji",
+    "headline": "Kila mfanyakazi anatumia lugha anayoielewa",
+    "body": "Operra inapatikana kwa Kiswahili na Kiingereza. Mapokezi, housekeeping na uongozi wote wanatumia mfumo mmoja bila kikwazo cha lugha.",
+    "cta": "Jaribu Operra sasa",
+    "caption": "Mawasiliano yakilegalega kati ya mapokezi na housekeeping, wateja ndio wanaoumia. Ukiwa na Operra, kila mfanyakazi anachagua lugha anayoielewa vizuri zaidi—iwe Kiswahili au Kiingereza.\n\nHakuna tena kukoseana maelekezo ya usafi wa vyumba au huduma za chakula kwa sababu ya lugha. Kazi inaenda haraka na kwa usahihi wa hali ya juu.",
+    "hashtags": [
+      "#HotelManagement",
+      "#OperraTanzania",
+      "#Ukarimu"
+    ],
+    "imagePrompt": "Abstract architectural geometry of a modern hotel corridor ceiling, faint grid lines, matte slate-grey surfaces, technical and calm. Soft side-lighting from the right-of-centre, dark color grade, low contrast on the left. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "backgroundPath": "state/bg/operra-2026-08-22-21-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T18:00:00.000Z",
+    "createdAt": "2026-08-22T07:07:45.917Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-22-22-swahili-tip",
+    "eyebrow": "Uendeshaji",
+    "headline": "Kagua viyoyozi chumba kikiwa wazi",
+    "body": "Usisubiri mteja aingie ndipo ugundue hitilafu. Kagua mifumo ya maji na AC mapema ili kulinda sifa ya hoteli yako.",
+    "cta": "Omba onyesho",
+    "caption": "Mteja akishaingia chumbani, sio wakati sahihi wa kugundua AC haifanyi kazi au maji ya moto hayatoki. 🛠️\n\nKagua mifumo hii kila chumba kinapokuwa wazi. Weka utaratibu wa housekeeping kuripoti hitilafu mapema kabla ya mapokezi kukabidhi funguo.\n\nOperra inarahisisha hili kwa kuruhusu timu ya usafi kuripoti hitilafu moja kwa moja kwenye mfumo, na mapokezi wanaona papo hapo.",
+    "hashtags": [
+      "HotelManagement",
+      "TanzaniaHospitality",
+      "HotelOperations",
+      "Operra"
+    ],
+    "imagePrompt": "Zanzibar coastal daylight, whitewashed walls and palm shadow, airy and bright but low contrast. A beautifully carved Swahili wooden chair sits on the right-of-centre. The left side is a clean, minimalist whitewashed wall, perfect for text overlay. No text, no people, no logos, dark colour grade.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "coastal",
+    "backgroundPath": "state/bg/operra-2026-08-22-22-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T19:00:00.000Z",
+    "createdAt": "2026-08-22T07:08:30.676Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-22-23-industry-note",
+    "eyebrow": "Operations",
+    "headline": "East African travel is shifting to last-minute bookings",
+    "body": "Manual reservation books cannot keep up with instant regional bookings. Digital coordination prevents double-booking walk-ins.",
+    "cta": "See how it works",
+    "caption": "East African properties are seeing a clear shift. More guests from across the region are booking trips with less than 24 hours' notice.\n\nIf your front desk relies on a paper ledger, managing these last-minute arrivals leads to double-bookings. Real-time digital inventory coordination helps you capture this demand without the operational chaos.",
+    "hashtags": [
+      "HotelManagement",
+      "EastAfricaHospitality",
+      "Operra"
+    ],
+    "imagePrompt": "Macro photograph of heavy handmade paper texture with dark ink stains and worn edges, analogue and tactile, deep warm shadows. A subtle, low-contrast vintage map detail is positioned on the far right. The left side is mostly dark, empty, and very low contrast. Dark color grade, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "ledger",
+    "backgroundPath": "state/bg/operra-2026-08-22-23-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-22T20:00:00.000Z",
+    "createdAt": "2026-08-22T07:09:15.929Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "24"
+    ]
+  }
+]

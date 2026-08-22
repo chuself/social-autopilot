@@ -13,6 +13,8 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { publisherFor } from "./publish/index.js";
 import { ctaLink } from "./brain.js";
+import { commentOn } from "./publish/comment.js";
+import { readConfig } from "./config.js";
 import { readFile as readFileAsync } from "node:fs/promises";
 import { readQueue, writeQueue, duePosts } from "./queue.js";
 import {
@@ -83,6 +85,16 @@ for (const post of posts) {
       const result = await publisherFor(platform).publish({ imageUrl, caption, dryRun });
       console.log(`  posted to ${platform}: ${result.postId}`);
       results.push({ ...result, id: post.id, postedAt: new Date().toISOString() });
+
+      if (linkInComment && result.postId && result.postId !== "dry-run") {
+        try {
+          await commentOn(result.postId, link, { dryRun });
+          console.log(`    link added as the first comment`);
+        } catch (err) {
+          // Not fatal: the post is already live and useful without it.
+          console.warn(`    could not add the link comment: ${err.message}`);
+        }
+      }
     } catch (err) {
       // One platform failing must never stop the others.
       console.error(`  FAILED ${platform}: ${err.message}`);

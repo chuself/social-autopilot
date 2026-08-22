@@ -7,7 +7,7 @@
  *   node src/cli-plan.js --days 3 --replace
  */
 import path from "node:path";
-import { writePost, nextPillar, findUnapprovedFigures } from "./brain.js";
+import { writePost, nextPillar, findUnapprovedFigures, cityForIndex } from "./brain.js";
 import { generateBackground } from "./background.js";
 import { renderPoster } from "./render.js";
 import { readQueue, writeQueue, recentPosts } from "./queue.js";
@@ -91,9 +91,16 @@ for (let n = 0; n < timetable.length; n++) {
   const recent = [...planned].reverse().concat(await recentPosts());
   const pillar = nextPillar(recent, pillarScores);
 
+  // Rotate the city by total posts written, so it advances across days rather
+  // than resetting every run.
+  const brandFile = JSON.parse(
+    await readFile(path.join(ROOT, "brands", brandId, "brand.json"), "utf8")
+  );
+  const city = cityForIndex(brandFile, queue.length + planned.length);
+
   let post;
   try {
-    post = await writePost({ brandId, pillar, recent, note });
+    post = await writePost({ brandId, pillar, recent, note, city });
   } catch (err) {
     console.error(`slot ${n + 1} (${pillar}): brain failed — ${err.message}`);
     continue;

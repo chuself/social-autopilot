@@ -119,12 +119,28 @@ Rules:
 export function lookForDate(brand, date = new Date()) {
   const looks = brand.looks ?? [];
   if (!looks.length) return null;
+  // Preview override: lets a look be sampled before its block comes round.
+  if (process.env.FORCE_LOOK) {
+    const forced = looks.find((l) => l.name === process.env.FORCE_LOOK);
+    if (forced) return forced;
+  }
   const days = Math.floor(date.getTime() / 86400_000);
   const block = Math.floor(days / (brand.lookRotationDays ?? 3));
   return looks[block % looks.length];
 }
 
-export async function writePost({ brandId = "operra", pillar, recent = [], language, note }) {
+/**
+ * Which city this post speaks to. Rotates one per post so the feed keeps naming
+ * real places rather than addressing a generic "hotel" — a Zanzibar resort and
+ * an Arusha safari lodge have very different problems.
+ */
+export function cityForIndex(brand, i) {
+  const cities = brand.cities ?? [];
+  if (!cities.length) return null;
+  return cities[Math.abs(i) % cities.length];
+}
+
+export async function writePost({ brandId = "operra", pillar, recent = [], language, note, city = null, series = null }) {
   language ??= PILLAR_LANGUAGE[pillar] ?? "en";
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
@@ -185,6 +201,13 @@ ${recentLines}
 
 ## Your task
 Write ONE post for the pillar: **${pillar}**.
+${city ? `
+Speak to hoteliers in **${city.name}** specifically — ${city.note}. Name the place
+naturally once; do not force it into every line.
+` : ""}${series ? `
+This is part ${series.part} of ${series.total} in a series called "${series.title}".
+Open by signalling which part it is, and end by pointing at the next one.
+` : ""}
 ${note ? `
 **Direction for this run — this overrides the usual angle:**
 ${note}
@@ -215,7 +238,15 @@ Hashtags may stay in English where that is what people actually search.`
   : "Write in English."}`;
 
   const post = await completeJson(prompt);
-  return { ...post, pillar, language, brand: brandId, look: look?.name ?? null };
+  return {
+    ...post,
+    pillar,
+    language,
+    brand: brandId,
+    look: look?.name ?? null,
+    city: city?.name ?? null,
+    series: series ?? null,
+  };
 }
 
 /**

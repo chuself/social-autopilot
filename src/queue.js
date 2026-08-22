@@ -3,7 +3,11 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const QUEUE = path.join(ROOT, "state", "queue.json");
+// QUEUE_FILE lets a preview run write somewhere harmless instead of the live
+// schedule. Defaults to the real queue, so normal operation is unchanged.
+const QUEUE = process.env.QUEUE_FILE
+  ? path.resolve(ROOT, process.env.QUEUE_FILE)
+  : path.join(ROOT, "state", "queue.json");
 const HISTORY = path.join(ROOT, "state", "history.json");
 
 export async function readQueue() {

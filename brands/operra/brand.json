@@ -67,5 +67,27 @@
       "accent": "#c98a86",
       "imageStyle": "macro of paper texture, ink and worn edges, analogue and tactile, warm shadow"
     }
+  ],
+  "cities": [
+    {
+      "name": "Dar es Salaam",
+      "note": "business travel, high turnover, corporate accounts"
+    },
+    {
+      "name": "Arusha",
+      "note": "safari season peaks, group bookings, tour operator invoicing"
+    },
+    {
+      "name": "Zanzibar",
+      "note": "resorts, long stays, foreign currency and OTA commissions"
+    },
+    {
+      "name": "Mwanza",
+      "note": "lake tourism and regional conferences, smaller teams"
+    },
+    {
+      "name": "Moshi",
+      "note": "Kilimanjaro trekking groups, seasonal spikes, porters and guides"
+    }
   ]
 }
