@@ -69,7 +69,7 @@
     "headline": "Kila idara inatumia mfumo kwa lugha inayoielewa",
     "body": "Wafanyakazi wa mapokezi na usafi wanatumia mfumo mmoja kwa Kiswahili au Kiingereza. Kazi zinaenda bila kukwama wala kuhitaji mafunzo magumu.",
     "cta": "Tazama mfumo",
-    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi\u2014kutoka mapokezi hadi usafi\u2014anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
+    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi—kutoka mapokezi hadi usafi—anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
     "hashtags": [
       "#HotelierTanzania",
       "#UsimamiziWaHoteli",
@@ -478,7 +478,20 @@
     ],
     "scheduledFor": "2026-08-22T10:00:00.000Z",
     "createdAt": "2026-08-22T05:45:09.269Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-22-13-swahili-tip.mp4",
+      "beats": [
+        "Kukabidhi shift kusiwe kwa maneno",
+        "Rekodi kila ombi la mteja",
+        "Okoa muda na uepuke makosa",
+        "Wageni wako wapate huduma bora"
+      ],
+      "narration": "Kukabidhi shift kwa maneno tu kunaleta makosa. Ukiwa na Operra, unaandika kila ombi la mteja ili timu inayofuata ianzie hapo. Mfumo huu unafanya kazi hata kwa intaneti ya chini, kwa Kiswahili na Kiingereza, kuokoa muda na kufanya wageni wako wafurahi.",
+      "hasVoice": true,
+      "builtAt": "2026-08-22T07:34:13.674Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-22-20-feature-spotlight",
