@@ -44,6 +44,10 @@ jobs:
           # Asked for by hand means somebody is waiting for an answer, so send
           # the whole report. On a schedule, only speak up when something is wrong.
           PREFLIGHT_NOTIFY: ${{ github.event_name == 'workflow_dispatch' && 'always' || '1' }}
+          # The live Metricool call rotates the refresh token, and two runs
+          # overlapping destroys it. Pushes come in bursts; the daily schedule
+          # does not. So only the schedule makes the call.
+          PREFLIGHT_METRICOOL: ${{ github.event_name == 'schedule' && '1' || '0' }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}

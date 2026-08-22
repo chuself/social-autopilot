@@ -660,11 +660,18 @@ await check(
   { group: "creds" }
 );
 
-// Every Metricool call rotates the refresh token, so this check must run in a
-// job with contents: write or it destroys the credential just by looking.
+// EVERY Metricool call rotates the refresh token, and the replacement is only
+// durable once its commit lands. Two runs overlapping therefore destroys the
+// credential — which is exactly what happened after four pushes in one hour,
+// each firing preflight, each rotating. So the live call is opt-in and fires
+// only on the daily schedule, never on a push. Decryption above already proves
+// the credential is readable, which is what a push actually needs to know.
 await check(
   "metricool / tiktok",
   async () => {
+    if (process.env.PREFLIGHT_METRICOOL !== "1") {
+      return { warn: "live check skipped — it rotates the token; runs on the daily schedule only" };
+    }
     const { tiktokConfigured, callTool } = await import("../src/publish/tiktok.js");
     if (!tiktokConfigured()) throw new Error("not configured");
     const out = await callTool("getBrandSettings", {});
