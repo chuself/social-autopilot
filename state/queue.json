@@ -481,6 +481,11 @@
     ],
     "scheduledFor": "2026-08-22T17:00:00.000Z",
     "createdAt": "2026-08-22T13:10:17.885Z",
-    "status": "pending"
+    "status": "posted",
+    "postedAt": "2026-08-22T17:17:10.305Z",
+    "postIds": [
+      "facebook:1049514968255534_122141617881351110",
+      "instagram:17950874124251936"
+    ]
   }
 ]
