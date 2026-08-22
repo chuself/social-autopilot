@@ -72,8 +72,11 @@ timetable.sort((a, b) => a.when - b.when);
 
 // Never plan a slot that is already filled. Re-running the planner should be
 // safe: without this it appends a second post to every slot it has seen before.
+// Includes posted slots: a slot that has already been served is spent for that
+// day. Excluding them let the planner refill a slot that had already gone out,
+// which is how 16:00 ended up with two reels.
 const taken = new Set(
-  queue.filter((p) => p.status !== "posted" && p.status !== "reject").map((p) => p.scheduledFor)
+  queue.filter((p) => p.status !== "reject").map((p) => p.scheduledFor)
 );
 const wanted = timetable.filter((t) => !taken.has(t.when.toISOString()));
 if (wanted.length < timetable.length) {

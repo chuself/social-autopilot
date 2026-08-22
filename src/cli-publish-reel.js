@@ -9,6 +9,7 @@ import path from "node:path";
 import { readQueue, writeQueue } from "./queue.js";
 import { publishInstagramReel, publishFacebookVideo } from "./publish/reels.js";
 import { publishTikTok, tiktokConfigured } from "./publish/tiktok.js";
+import { readConfig } from "./config.js";
 import { ctaLink } from "./brain.js";
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -98,7 +99,10 @@ if (!dryRun && results.length) {
 // TikTok goes through Metricool, which is already TikTok-audited, so the post is
 // public without an audit of our own. Runs after the Meta legs so a TikTok
 // problem can never cost us Instagram and Facebook.
-if (!dryRun && tiktokConfigured()) {
+// TikTok is rationed and Kiswahili gets first claim on the day's slot.
+const cfg = await readConfig();
+const tiktokDecision = await decideTikTok(post, cfg, queue);
+if (!dryRun && tiktokConfigured() && tiktokDecision.go) {
   try {
     const r = await publishTikTok({ videoUrl, caption, dryRun });
     console.log(`  queued on tiktok for ${r.scheduledFor}`);
@@ -117,7 +121,48 @@ if (!dryRun && tiktokConfigured()) {
     );
   }
 } else if (!dryRun) {
-  console.log("  tiktok not configured — skipping");
+  console.log(`  tiktok skipped — ${tiktokDecision.reason ?? "not configured"}`);
+}
+
+/**
+ * One TikTok a day, and a Kiswahili reel outranks an English one for it.
+ * Metricool's free allowance is 20 posts a month, so the daily cap is what keeps
+ * TikTok alive to month end; the language rule is editorial — the audience is
+ * Tanzanian and TikTok is where a cold account can still reach them.
+ */
+async function decideTikTok(post, cfg, queue) {
+  const limit = cfg.tiktokPerDay ?? 1;
+  if (limit === 0) return { go: false, reason: "tiktok is switched off" };
+
+  const today = new Date().toISOString().slice(0, 10);
+  const historyPath = path.join(ROOT, "state", "history.json");
+  const history = existsSync(historyPath)
+    ? JSON.parse(await readFile(historyPath, "utf8"))
+    : [];
+  const usedToday = history.filter(
+    (h) => String(h.platform).includes("tiktok") && String(h.postedAt).slice(0, 10) === today
+  ).length;
+
+  if (usedToday >= limit) {
+    return { go: false, reason: `already ${usedToday} TikTok post(s) today (limit ${limit})` };
+  }
+
+  // If this reel is English and a Kiswahili reel is still to come today, save
+  // the slot for it rather than spending it on the weaker fit.
+  if (post.language !== "sw") {
+    const swahiliLater = queue.some(
+      (p) =>
+        p.format === "reel" &&
+        p.language === "sw" &&
+        p.status !== "posted" &&
+        p.status !== "reject" &&
+        String(p.scheduledFor).slice(0, 10) === today
+    );
+    if (swahiliLater) {
+      return { go: false, reason: "holding today's TikTok slot for a Kiswahili reel" };
+    }
+  }
+  return { go: true };
 }
 
 // Belt and braces: the finished file also comes to you ready to upload, so a

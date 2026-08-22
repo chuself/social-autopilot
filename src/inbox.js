@@ -18,6 +18,7 @@ export const STEER = path.join(ROOT, "state", "steer.md");
 export const OFFSET = path.join(ROOT, "state", "telegram-offset.json");
 export const PAUSED = path.join(ROOT, "state", "PAUSED");
 export const REPLAN = path.join(ROOT, "state", "REPLAN");
+export const PENDING_CHANGE = path.join(ROOT, "state", "pending-change.json");
 
 export function botToken() {
   return process.env.TELEGRAM_BOT_TOKEN;
@@ -64,6 +65,34 @@ export async function handleMessage(text, chatId) {
   const trimmed = text.trim();
   const lower = trimmed.toLowerCase();
 
+  // A change that was held for confirmation is applied only on an explicit yes.
+  if (existsSync(PENDING_CHANGE)) {
+    const held = JSON.parse(await readFile(PENDING_CHANGE, "utf8"));
+    const yes = /^(yes|y|ndio|ndiyo|sawa|confirm|do it|go ahead|proceed)/i.test(trimmed);
+    const no = /^(no|hapana|cancel|stop|leave it|forget it)/i.test(trimmed);
+
+    if (yes) {
+      await unlink(PENDING_CHANGE);
+      const { changes, rejected } = await updateConfig({ ...held.patch, confirmed: true });
+      await notify(
+        changes.length
+          ? `✅ Confirmed.\n• ${changes.join("\n• ")}\n\nSend /replan to rebuild the schedule.`
+          : `Nothing changed. ${rejected.join("; ")}`
+      );
+      return { kind: "setting", changed: changes.length > 0, replan: false };
+    }
+    if (no) {
+      await unlink(PENDING_CHANGE);
+      await notify("👍 Left as it was.");
+      return { kind: "command", changed: true, replan: false };
+    }
+    // Anything else: the question still stands, so re-ask rather than losing it.
+    await notify(
+      `⏳ Still waiting on this one:\n${escapeHtml(held.why)}\n\nReply <b>yes</b> to go ahead, or <b>no</b> to leave it.`
+    );
+    return { kind: "chat", changed: false, replan: false };
+  }
+
   if (lower === "/pause") {
     await writeFile(PAUSED, "paused from Telegram\n");
     await notify("⏸ Publishing paused. Send /resume to start again.");
@@ -98,7 +127,21 @@ export async function handleMessage(text, chatId) {
   const intent = await classify(trimmed);
 
   if (intent.kind === "setting") {
-    const { changes, rejected } = await updateConfig(intent.settings ?? {});
+    const { changes, rejected, needsConfirmation } = await updateConfig(intent.settings ?? {});
+
+    // Held, not applied: some changes break something quietly a week later, and
+    // the owner deserves to hear why before it happens rather than after.
+    if (needsConfirmation) {
+      await writeFile(
+        PENDING_CHANGE,
+        JSON.stringify({ patch: intent.settings, ...needsConfirmation, askedAt: new Date().toISOString() }, null, 2)
+      );
+      await notify(
+        `⚠️ <b>Before I change that</b>\n${escapeHtml(needsConfirmation.why)}\n\n` +
+          `Reply <b>yes</b> to do it anyway, or <b>no</b> to leave it as it is.`
+      );
+      return { kind: "setting", changed: true, replan: false };
+    }
     const parts = [];
     if (changes.length) parts.push(`⚙️ <b>Routine updated</b>\n• ${changes.join("\n• ")}`);
     if (rejected.length) parts.push(`❌ Not applied: ${rejected.join("; ")}`);
@@ -212,7 +255,7 @@ Current routine: ${describeRoutine(cfg)}
 Classify the message and reply. Return ONLY JSON:
 {
   "kind": "setting" | "instruction" | "question" | "chat",
-  "settings": { "slots": [ { "hour": number, "format": "poster" | "reel" } ] },
+  "settings": { "slots": [ { "hour": number, "format": "poster" | "reel" } ], "tiktokPerDay": number },
   "reply": "under 60 words, plain text"
 }
 
@@ -224,6 +267,9 @@ Classify the message and reply. Return ONLY JSON:
   Hours are 24h local, between ${LIMITS.minHour} and ${LIMITS.maxHour}.
   At most ${LIMITS.maxSlotsPerDay ?? 6} slots per day. If they name fewer hours than
   posts, spread the extras sensibly. Reply confirming the new day.
+  * tiktokPerDay = how many reels go to TikTok per day. Default and recommended
+    is 1, because the free Metricool allowance is 20 a month. Set it only if the
+    owner explicitly asks about TikTok frequency.
 - "instruction" = it changes how posts are WRITTEN or what they cover (tone, wording,
   language, topics to push or avoid). Reply confirming what changed.
 - "question" = they are asking something. Answer it using the queue above.

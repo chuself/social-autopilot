@@ -22,6 +22,9 @@ export const FORMATS = new Set(["poster", "reel"]);
 export const DEFAULTS = {
   // Local (EAT) hours. One entry per post.
   slots: [{ hour: 9, format: "poster" }],
+  // TikTok is rationed: Metricool's free plan allows 20 scheduled posts a month,
+  // so more than one a day cannot be sustained. Kiswahili reels get priority.
+  tiktokPerDay: 1,
 };
 
 export const LIMITS = {
@@ -29,6 +32,10 @@ export const LIMITS = {
   maxReelsPerDay: 2,
   minHour: 6,
   maxHour: 23,
+  // Above this, Metricool's monthly free allowance runs out mid-month, so the
+  // owner is asked to confirm rather than being quietly signed up to a break.
+  safeTiktokPerDay: 1,
+  maxTiktokPerDay: 2,
 };
 
 export async function readConfig() {
@@ -58,6 +65,7 @@ function withDerived(cfg) {
   cfg.slots = [...cfg.slots].sort((a, b) => a.hour - b.hour);
   cfg.postersPerDay = cfg.slots.filter((s) => s.format === "poster").length;
   cfg.reelsPerDay = cfg.slots.filter((s) => s.format === "reel").length;
+  cfg.tiktokPerDay = Number.isInteger(cfg.tiktokPerDay) ? cfg.tiktokPerDay : DEFAULTS.tiktokPerDay;
   return cfg;
 }
 
@@ -104,10 +112,35 @@ export async function updateConfig(patch) {
     }
   }
 
-  if (changes.length) {
-    await writeFile(FILE, JSON.stringify({ slots }, null, 2));
+  let tiktokPerDay = current.tiktokPerDay;
+  let needsConfirmation = null;
+
+  if (patch.tiktokPerDay != null) {
+    const n = Number(patch.tiktokPerDay);
+    if (!Number.isInteger(n) || n < 0 || n > LIMITS.maxTiktokPerDay) {
+      rejected.push(`tiktokPerDay ${patch.tiktokPerDay} (allowed 0-${LIMITS.maxTiktokPerDay})`);
+    } else if (n !== current.tiktokPerDay) {
+      if (n > LIMITS.safeTiktokPerDay && !patch.confirmed) {
+        // Do NOT apply. Metricool's free allowance is 20 a month; more than one
+        // a day exhausts it before month end and TikTok stops without warning.
+        needsConfirmation = {
+          field: "tiktokPerDay",
+          value: n,
+          why:
+            `${n} TikTok posts a day is about ${n * 30} a month, but the free ` +
+            `Metricool allowance is 20 — TikTok would stop around day ${Math.floor(20 / n)}.`,
+        };
+      } else {
+        tiktokPerDay = n;
+        changes.push(`${current.tiktokPerDay} → ${n} TikTok post(s) per day`);
+      }
+    }
   }
-  return { config: withDerived({ slots }), changes, rejected };
+
+  if (changes.length) {
+    await writeFile(FILE, JSON.stringify({ slots, tiktokPerDay }, null, 2));
+  }
+  return { config: withDerived({ slots, tiktokPerDay }), changes, rejected, needsConfirmation };
 }
 
 export function describe(slots) {

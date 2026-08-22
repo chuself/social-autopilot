@@ -69,7 +69,7 @@
     "headline": "Kila idara inatumia mfumo kwa lugha inayoielewa",
     "body": "Wafanyakazi wa mapokezi na usafi wanatumia mfumo mmoja kwa Kiswahili au Kiingereza. Kazi zinaenda bila kukwama wala kuhitaji mafunzo magumu.",
     "cta": "Tazama mfumo",
-    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi—kutoka mapokezi hadi usafi—anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
+    "caption": "Hoteli nyingi zinapata usumbufu pale wafanyakazi wanaposhindwa kutumia mifumo yenye Kiingereza kigumu.\n\nMfumo wa Operra una muundo wa Kiswahili na Kiingereza, hivyo kila mfanyakazi\u2014kutoka mapokezi hadi usafi\u2014anaingiza taarifa kwa usahihi. Unapata ripoti za uendeshaji na hesabu bila kuchelewa wala kupoteza taarifa za kila siku.\n\nRahisisha usimamizi wa hoteli yako kupitia operra.tech",
     "hashtags": [
       "#HotelierTanzania",
       "#UsimamiziWaHoteli",
@@ -478,34 +478,6 @@
     ],
     "scheduledFor": "2026-08-22T10:00:00.000Z",
     "createdAt": "2026-08-22T05:45:09.269Z",
-    "status": "pending"
-  },
-  {
-    "id": "operra-2026-08-22-16-industry-note",
-    "eyebrow": "Operations",
-    "headline": "Cloud operations built for regional internet speeds",
-    "body": "East African properties often deal with unstable connectivity. Operra is designed to keep your front desk and POS running smoothly on low-bandwidth networks.",
-    "cta": "Learn more",
-    "caption": "Unstable internet should never stop your front desk from checking in guests or billing a table.\n\nAcross Tanzania and East Africa, properties frequently navigate network fluctuations. When management software requires high bandwidth, front desk lines grow and billing stalls.\n\nOperra is built to run reliably on low-bandwidth connections, keeping your front desk, POS, and housekeeping in sync.",
-    "hashtags": [
-      "#HotelManagement",
-      "#EastAfricaHotels",
-      "#HospitalityTech",
-      "#TanzaniaHospitality"
-    ],
-    "imagePrompt": "Minimalist modern hotel reception counter at dusk with subtle ambient lighting placed right-of-centre, dark moody purple and teal color grade #a478ff and #36d2ba, low-contrast background with clean empty space on the left side, high-end architectural interior photography, no text, no people, no logos",
-    "template": "spotlight",
-    "pillar": "industry-note",
-    "language": "en",
-    "brand": "operra",
-    "backgroundPath": "state/bg/operra-2026-08-22-16-industry-note.png",
-    "format": "reel",
-    "platforms": [
-      "facebook",
-      "instagram"
-    ],
-    "scheduledFor": "2026-08-22T13:00:00.000Z",
-    "createdAt": "2026-08-22T05:45:53.935Z",
     "status": "pending"
   },
   {
