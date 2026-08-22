@@ -69,3 +69,14 @@ const filter =
 
 await run("ffmpeg", ["-v", "error", ...inputs, "-filter_complex", filter, OUT, "-y"]);
 console.log(`\ncontact sheet -> ${path.relative(ROOT, OUT)}`);
+
+if (process.env.SEND_PREVIEW !== "0") {
+  const names = looks.map((l) => (l.name === today ? `<b>${l.name}</b>` : l.name)).join(" · ");
+  const ok = await sendPhoto(
+    OUT,
+    `🎨 <b>Visual looks</b>\n${names}\n\nSame words, same layout — only the imagery ` +
+      `and accent change. Each runs for ${brand.lookRotationDays ?? 3} days.`
+  );
+  console.log(ok ? "sent to Telegram" : "SEND FAILED — the sheet was built but not delivered");
+  if (!ok) process.exitCode = 1;
+}

@@ -52,11 +52,11 @@ const history = existsSync(path.join(ROOT, "state", "history.json"))
 
 for (const post of posts) {
   console.log(`\n--- ${post.id}`);
-  const imageUrls = assets.map((f) => `${base}/${f}`);
-  const imageUrl = imageUrls[0];
-
+  // A carousel is several files in swipe order; everything else is one.
   const isCarousel = post.format === "carousel" && (post.slideFiles ?? []).length > 1;
   const assets = isCarousel ? post.slideFiles : [`${post.id}.png`];
+  const imageUrls = assets.map((f) => `${base}/${f}`);
+  const imageUrl = imageUrls[0];
 
   if (!assets.every((f) => existsSync(path.join(ROOT, "public", f)))) {
     console.error(`  missing rendered asset(s) — skipped`);
@@ -76,7 +76,13 @@ for (const post of posts) {
   const brand = JSON.parse(
     await readFileAsync(path.join(ROOT, "brands", post.brand ?? "operra", "brand.json"), "utf8")
   );
-  const caption = [post.caption, ctaLink(brand, post.id), (post.hashtags ?? []).join(" ")]
+  // The link goes in the first comment by default — a caption link is widely
+  // observed to suppress reach, and it is still one tap away.
+  const cfg = await readConfig();
+  const link = ctaLink(brand, post.id);
+  const linkInComment = cfg.linkInFirstComment !== false;
+
+  const caption = [post.caption, linkInComment ? null : link, (post.hashtags ?? []).join(" ")]
     .filter(Boolean)
     .join("\n\n");
   const results = [];
