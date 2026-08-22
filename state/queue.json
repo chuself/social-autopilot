@@ -454,71 +454,33 @@
     }
   },
   {
-    "id": "operra-2026-08-22-13-swahili-tip",
-    "eyebrow": "Mapokezi",
-    "headline": "Kukabidhi shift kusiwe kwa maneno tu",
-    "body": "Andika kila ombi la mteja ambalo halijakamilika ili timu inayokuja ianzie pale ulipoishia. Hii inaokoa muda na kuepusha makosa.",
-    "cta": "Rahisisha kazi",
-    "caption": "Kukabidhi shift kwa maneno ya mdomo pekee ni chanzo kikubwa cha malalamiko ya wateja. Mapokezi wakisahau kumjulisha mwenzao kuhusu mteja anayechelewa kuondoka au chumba kinachohitaji matengenezo, fujo huanzia hapo.\n\nWeka utaratibu wa kila mfanyakazi kuacha kumbukumbu ya maandishi ya masuala yote ambayo hayajakamilika. Timu mpya ikifika, inasoma na kuendelea na kazi bila kubahatisha wala kupoteza muda.",
+    "id": "operra-2026-08-22-20-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Track multi-currency bookings without the math",
+    "body": "Stop losing margins to manual exchange rate updates. Track USD and Shillings side by side automatically.",
+    "cta": "See it work",
+    "caption": "Running a resort in Zanzibar means dealing with USD bookings, Shilling expenses, and fluctuating rates. If your reception team is doing manual conversions on paper, errors are costing you money.\n\nOperra handles multiple currencies natively. Every rate is locked at check-in, keeping your reports accurate and your revenue secure.",
     "hashtags": [
-      "#UendeshajiHoteli",
-      "#Mapokezi",
-      "#TanzaniaHospitality"
+      "ZanzibarHotels",
+      "HotelManagement",
+      "EastAfricaHospitality"
     ],
-    "imagePrompt": "A minimalist, modern hotel reception desk background with clean lines, low angle shot, dark atmospheric mood with #a478ff and #36d2ba color grade. Subject is on the right-of-centre, left side is low contrast and clean. No text, no people, no logos.",
+    "imagePrompt": "An overhead flat-lay looking straight down onto a weathered turquoise wooden tabletop. On the right side, there is a brass vintage hotel key with a leather tag, a neat stack of US dollar bills, and a printed paper receipt. The left third of the image is completely empty, showing only the clean wooden surface. Mid-tone, even soft daylight, neat arrangement, shallow shadows. No text, no people, no logos.",
     "template": "spotlight",
-    "pillar": "swahili-tip",
+    "pillar": "pain-point",
     "language": "sw",
     "brand": "operra",
-    "backgroundPath": "state/bg/operra-2026-08-22-13-swahili-tip.png",
-    "format": "reel",
-    "platforms": [
-      "facebook",
-      "instagram"
-    ],
-    "scheduledFor": "2026-08-22T10:00:00.000Z",
-    "createdAt": "2026-08-22T05:45:09.269Z",
-    "status": "pending",
-    "reel": {
-      "file": "operra-2026-08-22-13-swahili-tip.mp4",
-      "beats": [
-        "Kukabidhi shift kusiwe kwa maneno",
-        "Rekodi kila ombi la mteja",
-        "Okoa muda na uepuke makosa",
-        "Wageni wako wapate huduma bora"
-      ],
-      "narration": "Kukabidhi shift kwa maneno tu kunaleta makosa. Ukiwa na Operra, unaandika kila ombi la mteja ili timu inayofuata ianzie hapo. Mfumo huu unafanya kazi hata kwa intaneti ya chini, kwa Kiswahili na Kiingereza, kuokoa muda na kufanya wageni wako wafurahi.",
-      "hasVoice": true,
-      "builtAt": "2026-08-22T07:34:13.674Z",
-      "status": "ready"
-    }
-  },
-  {
-    "id": "operra-2026-08-22-20-feature-spotlight",
-    "eyebrow": "Marekebisho Ya Bei",
-    "headline": "Weka bei za vyumba kwa msimu bila mkanganyiko",
-    "body": "Badilisha viwango vya bei kwenye mfumo mara moja. Mapokezi wanaona bei mpya papo hapo bila kupiga simu.",
-    "cta": "Ona inavyofanya kazi",
-    "caption": "Msimu ukibadilika au kukiwa na tukio mjini, kubadilisha bei za vyumba kusiwe kazi ya kupiga simu kila mara mapokezi.\n\nUkiwa na Operra, unarekebisha bei mara moja na inaonekana kwenye mfumo mzima papo hapo. Hakuna kosa la kuuza chumba kwa bei ya chini kimakosa au kumpa mteja bili isiyo sahihi.\n\nKila mabadiliko ya bei yanakuwa wazi, na biashara yako inaendelea bila usumbufu.",
-    "hashtags": [
-      "#HotelManagement",
-      "#TanzaniaHotels",
-      "#Operra",
-      "#HotelierLife"
-    ],
-    "imagePrompt": "Abstract modern hotel front desk counter at dusk with subtle ambient lighting, minimalist clean interior, right-of-centre subject, low contrast, dark #a478ff and #36d2ba color grade, soft shadows, cinematic lighting, no text, no people, no logos",
-    "template": "spotlight",
-    "pillar": "feature-spotlight",
-    "language": "sw",
-    "brand": "operra",
-    "backgroundPath": "state/bg/operra-2026-08-22-20-feature-spotlight.png",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-22-20-pain-point.png",
     "format": "poster",
     "platforms": [
       "facebook",
       "instagram"
     ],
     "scheduledFor": "2026-08-22T17:00:00.000Z",
-    "createdAt": "2026-08-22T05:46:38.494Z",
+    "createdAt": "2026-08-22T13:10:17.885Z",
     "status": "pending"
   }
 ]
