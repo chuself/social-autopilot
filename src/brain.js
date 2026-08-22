@@ -108,10 +108,27 @@ Rules:
   return script;
 }
 
+/**
+ * Which visual look today belongs to.
+ *
+ * A feed that always looks identical goes stale fast — but changing it randomly
+ * looks broken. So the look rotates on a fixed clock: every brand.lookRotationDays
+ * the palette accent and the background style move on together, and the logo,
+ * type and layout stay put. Deterministic, so every post in a block matches.
+ */
+export function lookForDate(brand, date = new Date()) {
+  const looks = brand.looks ?? [];
+  if (!looks.length) return null;
+  const days = Math.floor(date.getTime() / 86400_000);
+  const block = Math.floor(days / (brand.lookRotationDays ?? 3));
+  return looks[block % looks.length];
+}
+
 export async function writePost({ brandId = "operra", pillar, recent = [], language, note }) {
   language ??= PILLAR_LANGUAGE[pillar] ?? "en";
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
+  const look = lookForDate(brand);
   const pillars = await readFile(path.join(brandDir, "pillars.md"), "utf8");
   const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
 
@@ -182,9 +199,12 @@ Return ONLY a JSON object with these keys:
   Do NOT include any URL or phone number — the link is appended automatically.
   Line breaks allowed. At most one emoji, only if it genuinely helps.
 - "hashtags": array of 3-5 hashtags, relevant, no spam.
-- "imagePrompt": a photographic or abstract background description. MUST specify
-  "no text, no people, no logos" and a dark ${brand.colors.primary}/${brand.colors.teal} colour grade.
-  The headline is laid over the left side, so keep the subject right-of-centre and low contrast.
+- "imagePrompt": a background description in THIS WEEK'S visual direction:
+  «${look?.imageStyle ?? "dark abstract texture"}»
+  Stay inside that direction — vary the subject, not the style. MUST specify
+  "no text, no people, no logos" and a dark colour grade.
+  The headline is laid over the left side, so keep the subject right-of-centre
+  and low contrast there.
 - "template": "spotlight"
 
 ${language === "sw"
@@ -195,7 +215,7 @@ Hashtags may stay in English where that is what people actually search.`
   : "Write in English."}`;
 
   const post = await completeJson(prompt);
-  return { ...post, pillar, language, brand: brandId };
+  return { ...post, pillar, language, brand: brandId, look: look?.name ?? null };
 }
 
 /**

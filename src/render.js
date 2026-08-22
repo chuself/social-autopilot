@@ -3,6 +3,7 @@ import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { lookForDate } from "./brain.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -16,6 +17,12 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 export async function renderPoster(post, brandId = "operra", outFile) {
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
+  // Prefer the look recorded on the post: a re-render weeks later must produce
+  // the same image, not today's rotation.
+  const accent =
+    (brand.looks ?? []).find((l) => l.name === post.look)?.accent ??
+    lookForDate(brand)?.accent ??
+    null;
 
   const template = post.template ?? "spotlight";
   const templatePath = path.join(brandDir, "templates", `${template}.html`);
@@ -32,11 +39,14 @@ export async function renderPoster(post, brandId = "operra", outFile) {
     await page.goto(pathToFileURL(templatePath).href, { waitUntil: "load" });
 
     await page.evaluate(
-      ({ brand, post, logoUrl, bgUrl }) => {
+      ({ brand, post, logoUrl, bgUrl, accent }) => {
         const root = document.documentElement;
         for (const [key, value] of Object.entries(brand.colors)) {
           root.style.setProperty(`--${key}`, value);
         }
+        // The look's accent replaces the primary for this rotation block, so the
+        // feed shifts colour with the background style rather than drifting apart.
+        if (accent) root.style.setProperty("--primary", accent);
         root.style.setProperty("--pill", brand.radii.pill);
         root.style.setProperty("--card", brand.radii.card);
 
@@ -70,6 +80,7 @@ export async function renderPoster(post, brandId = "operra", outFile) {
       {
         brand,
         post,
+        accent,
         logoUrl: pathToFileURL(path.join(brandDir, brand.logo)).href,
         bgUrl: post.backgroundPath ? pathToFileURL(path.resolve(ROOT, post.backgroundPath)).href : null,
       }

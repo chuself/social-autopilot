@@ -12,6 +12,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { lookForDate } from "./brain.js";
 
 const run = promisify(execFile);
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -26,6 +27,12 @@ const SIZE = { width: 1080, height: 1920 };
 export async function renderReel(post, brandId, audioFile, outFile) {
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
+  // Prefer the look recorded on the post: a re-render weeks later must produce
+  // the same image, not today's rotation.
+  const accent =
+    (brand.looks ?? []).find((l) => l.name === post.look)?.accent ??
+    lookForDate(brand)?.accent ??
+    null;
   const templatePath = path.join(brandDir, "templates", `${post.videoTemplate ?? "reel"}.html`);
   if (!existsSync(templatePath)) throw new Error(`No reel template for ${brandId}`);
 
@@ -43,9 +50,10 @@ export async function renderReel(post, brandId, audioFile, outFile) {
     await page.goto(pathToFileURL(templatePath).href, { waitUntil: "load" });
 
     await page.evaluate(
-      ({ brand, post, logoUrl, bgUrl, duration }) => {
+      ({ brand, post, logoUrl, bgUrl, duration, accent }) => {
         const root = document.documentElement;
         for (const [k, v] of Object.entries(brand.colors)) root.style.setProperty(`--${k}`, v);
+        if (accent) root.style.setProperty("--primary", accent);
         root.style.setProperty("--pill", brand.radii.pill);
 
         document.getElementById("logo").src = logoUrl;
@@ -63,6 +71,7 @@ export async function renderReel(post, brandId, audioFile, outFile) {
       {
         brand,
         post,
+        accent,
         logoUrl: pathToFileURL(path.join(brandDir, brand.logo)).href,
         bgUrl: post.backgroundPath
           ? pathToFileURL(path.resolve(ROOT, post.backgroundPath)).href
