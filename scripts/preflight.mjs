@@ -300,8 +300,10 @@ await check(
 
 // If a state commit lost a race, the post went out but the queue never learned,
 // and the next run posted it again. The receipt is history, so check history.
+// Named for the fault, not the happy path: "no duplicate posts — 2 old" read
+// like a contradiction in the Telegram report.
 await check(
-  "no duplicate posts",
+  "duplicate posts",
   async () => {
     const history = await readState("history.json", []);
     const seen = new Map();
@@ -327,9 +329,7 @@ await check(
       throw new Error(`${recent.length} posted twice in the last 24h: ${recent.map((d) => d.key).join(", ")}`);
     }
     const worst = dupes[dupes.length - 1];
-    return {
-      warn: `${dupes.length} historic double-post(s), none in the last 24h - latest ${worst.key} on ${String(worst.at).slice(0, 10)}`,
-    };
+    return { warn: `${dupes.length} old, none since ${String(worst.at).slice(0, 10)}` };
   },
   { group: "content" }
 );
@@ -401,15 +401,13 @@ await check(
     const plannerHasRun = eatHour >= 22 || eatHour < 6;
 
     if (!ahead.length) {
-      if (!plannerHasRun) {
-        return { warn: `nothing queued yet - normal until the 21:00 EAT planner runs (it is ${eatHour}:00 EAT)` };
-      }
-      throw new Error(`nothing queued and the 21:00 EAT planner should have run by now (${eatHour}:00 EAT)`);
+      if (!plannerHasRun) return { warn: "nothing queued yet — the 21:00 planner has not run" };
+      throw new Error(`nothing queued and the 21:00 planner should have run by now (${eatHour}:00 EAT)`);
     }
     if (ahead.length < cfg.slots.length) {
-      const msg = `only ${ahead.length} queued for the next 36h against ${cfg.slots.length} slots a day`;
-      if (plannerHasRun) throw new Error(`${msg} - the planner has run, so it came up short`);
-      return { warn: `${msg} - normal before the 21:00 EAT planner` };
+      const msg = `${ahead.length} queued, ${cfg.slots.length} slots a day`;
+      if (plannerHasRun) throw new Error(`${msg} — the planner ran and came up short`);
+      return { warn: `${msg} — normal before the 21:00 planner` };
     }
     return `${ahead.length} queued: ${ahead.map((p) => `${eat(p.scheduledFor)} ${p.format}`).join(", ")}`;
   },
@@ -426,9 +424,7 @@ await check(
     if (!open.length) return `${leads.length} seen, none waiting`;
     const oldest = open.reduce((a, b) => (a.seenAt < b.seenAt ? a : b));
     const days = Math.floor((Date.now() - new Date(oldest.seenAt)) / 86_400_000);
-    return {
-      warn: `${open.length} waiting on a human, oldest ${days}d: "${oldest.text?.slice(0, 40)}" (${oldest.platform})`,
-    };
+    return { warn: `${open.length} waiting on you, oldest ${days}d` };
   },
   { group: "content", level: "warn" }
 );
@@ -670,7 +666,7 @@ await check(
   "metricool / tiktok",
   async () => {
     if (process.env.PREFLIGHT_METRICOOL !== "1") {
-      return { warn: "live check skipped — it rotates the token; runs on the daily schedule only" };
+      return { warn: "live check runs on the daily schedule only" };
     }
     const { tiktokConfigured, callTool } = await import("../src/publish/tiktok.js");
     if (!tiktokConfigured()) throw new Error("not configured");
@@ -765,11 +761,6 @@ if (mode === "always" || (mode === "1" && (failed.length || warned.length))) {
   // Read on a phone. Faults in full because they need acting on; warnings to
   // one line each because they are context; passes as a single tally. A wall
   // of green buries the one line that matters.
-  const clip = (s, n) => {
-    const t = String(s).trim();
-    return t.length > n ? `${t.slice(0, n - 1)}…` : t;
-  };
-
   const lines = [];
   if (failed.length) {
     lines.push(`\u{1F6A8} <b>${failed.length} fault${failed.length > 1 ? "s" : ""}</b>`);
@@ -778,9 +769,13 @@ if (mode === "always" || (mode === "1" && (failed.length || warned.length))) {
     lines.push("✅ <b>All clear</b>");
   }
 
+  // Never truncate. Clipping these to one line cut every warning off mid-word
+  // and threw away the only part worth reading; Telegram wraps perfectly well
+  // on its own. Keeping them readable is the job of the CHECKS, which should
+  // return a short detail in the first place.
   if (warned.length) {
     lines.push("");
-    for (const r of warned) lines.push(`⚠️ ${esc(r.name)} — ${esc(clip(r.detail, 70))}`);
+    for (const r of warned) lines.push(`⚠️ <b>${esc(r.name)}</b> — ${esc(r.detail)}`);
   }
 
   lines.push(

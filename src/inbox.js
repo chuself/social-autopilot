@@ -10,6 +10,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { notify } from "./notify.js";
 import { readQueue, whyWaiting } from "./queue.js";
+import { escapeHtml, clip, slotLine, todayEat } from "./format.js";
 import { completeJson } from "./llm.js";
 import { updateConfig, readConfig, LIMITS } from "./config.js";
 
@@ -271,41 +272,6 @@ export async function statusText() {
   return lines.join("\n");
 }
 
-/** One post, one line: when · what · a tag only when it tells you something. */
-function slotLine(p, now = new Date(), { tag = true } = {}) {
-  const icon = { reel: "🎬", carousel: "🎠" }[p.format] ?? "🖼";
-  // Overdue rows carry a full reason on the next line, so a tag there would
-  // just say the same thing twice.
-  const suffix = !tag
-    ? ""
-    : p.status === "needs-review"
-      ? " · held"
-      : p.format === "reel"
-        ? p.reel?.status === "ready"
-          ? " · filmed"
-          : " · not filmed"
-        : "";
-  return `<b>${shortWhen(p.scheduledFor, now)}</b> ${icon} ${escapeHtml(clip(p.headline ?? p.id, 38))}${suffix}`;
-}
-
-function clip(s, n) {
-  const t = String(s).trim();
-  return t.length > n ? `${t.slice(0, n - 1)}…` : t;
-}
-
-const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-/** "13:00" when it is today in EAT, "Sun 13:00" when it is not. */
-function shortWhen(iso, now = new Date()) {
-  const d = new Date(new Date(iso).getTime() + 3 * 3600_000);
-  const hhmm = d.toISOString().slice(11, 16);
-  const sameDay = d.toISOString().slice(0, 10) === todayEat(now);
-  return sameDay ? hhmm : `${DAYS[d.getUTCDay()]} ${hhmm}`;
-}
-
-function todayEat(now = new Date()) {
-  return new Date(now.getTime() + 3 * 3600_000).toISOString().slice(0, 10);
-}
 
 export function describeRoutine(cfg) {
   if (Array.isArray(cfg.slots) && cfg.slots.length) {
@@ -320,9 +286,8 @@ export function eat(iso) {
   return `${d.toISOString().slice(0, 10)} ${d.toISOString().slice(11, 16)}`;
 }
 
-export function escapeHtml(s) {
-  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
+// Re-exported so existing callers keep working; it lives in format.js now.
+export { escapeHtml };
 
 /**
  * Decide whether a message changes the routine, changes the writing, asks
