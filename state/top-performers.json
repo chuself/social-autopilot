@@ -14,6 +14,20 @@
     ]
   },
   {
+    "id": "operra-2026-08-22-20-pain-point",
+    "platform": "facebook",
+    "pillar": "pain-point",
+    "headline": "Track multi-currency bookings without the math",
+    "likes": 0,
+    "comments": 1,
+    "shares": 0,
+    "engagement": 4,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
     "id": "operra-2026-08-22-16-number-that-lands",
     "platform": "instagram",
     "pillar": "number-that-lands",
@@ -35,20 +49,6 @@
     "comments": 0,
     "engagement": 1,
     "platforms": [
-      "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-08-20-pain-point",
-    "platform": "facebook",
-    "pillar": "pain-point",
-    "headline": "Kufunga hesabu za siku hakupaswi kuchukua masaa",
-    "likes": 0,
-    "comments": 0,
-    "shares": 0,
-    "engagement": 1,
-    "platforms": [
-      "facebook",
       "instagram"
     ]
   }
