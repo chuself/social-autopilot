@@ -571,7 +571,7 @@
     ],
     "scheduledFor": "2026-08-23T10:00:00.000Z",
     "createdAt": "2026-08-22T18:34:42.788Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-23-13-client-proof.mp4",
       "beats": [
@@ -583,10 +583,14 @@
       "narration": "Wageni wako wanaporudi kutoka Kilimanjaro wakiwa wamechoka, mfumo wetu wa lugha mbili unasaidia mapokezi na housekeeping kuandaa vyumba haraka sana. Hata kukiwa na mtandao hafifu sana, Operra inahakikisha wageni wanaingia vyumbani bila kuchelewa na kupata huduma bora.",
       "hasVoice": true,
       "builtAt": "2026-08-23T07:38:50.565Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-23T11:18:43.565Z",
+      "postIds": [
+        "instagram:18095856548161364",
+        "facebook:28076865275302317"
+      ]
     },
-    "lastAttempt": "2026-08-23T09:23:21.194Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-08-23T11:18:43.565Z"
   },
   {
     "id": "operra-2026-08-23-16-swahili-tip",
