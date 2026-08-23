@@ -36,12 +36,11 @@ jobs:
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: node src/cli-engage.js
 
+      # always(): state/alerts.json is what stops an ongoing outage being
+      # announced every thirty minutes. If the job fails after alerting and that
+      # file is not committed, the throttle resets and the spam resumes.
       - name: Record what was answered
-        if: ${{ inputs.dry_run != '1' }}
+        if: ${{ always() && inputs.dry_run != '1' }}
         run: |
-          git config user.name "social-autopilot"
-          git config user.email "actions@users.noreply.github.com"
-          git pull --rebase --autostash
-          git add -A state
-          git diff --staged --quiet || git commit -m "chore: comment replies and leads [skip ci]"
-          git push
+          bash scripts/push-state.sh "chore: comment replies and leads [skip ci]" \
+            state/replied.json state/our-comments.json state/leads.json state/alerts.json

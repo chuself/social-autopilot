@@ -17,7 +17,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { graphGet, graphPost } from "./graph.js";
 import { completeJson } from "./llm.js";
-import { notify } from "./notify.js";
+import { notify, notifyOnce, clearAlert } from "./notify.js";
 import { readHistory } from "./queue.js";
 import { ctaLink } from "./brain.js";
 import { isDryRun } from "./guards.js";
@@ -50,14 +50,18 @@ const history = (await readHistory()).filter((h) => new Date(h.postedAt).getTime
 
 const comments = [];
 const denied = new Set();
+// One real error per platform. The alert used to assert a cause without ever
+// looking at what Meta actually said.
+const deniedWhy = new Map();
 for (const post of history) {
   try {
     comments.push(...(await fetchComments(post)));
   } catch (err) {
     // A permissions failure reads exactly like "nobody commented" unless it is
     // called out — which is how this went unnoticed for a day.
-    if (/#200|#10|Missing Permissions|permission/i.test(err.message)) {
+    if (/API access blocked|#200|#10\b|Missing Permissions|permission/i.test(err.message)) {
       denied.add(post.platform);
+      if (!deniedWhy.has(post.platform)) deniedWhy.set(post.platform, err.message);
     } else {
       console.warn(`${post.platform} ${post.postId}: ${err.message}`);
     }
@@ -65,17 +69,53 @@ for (const post of history) {
 }
 
 if (denied.size) {
-  const msg =
-    `🔒 <b>Comment replies are switched off</b>
+  const why = [...deniedWhy.values()].join(" ");
+  const where = [...denied].join(" and ");
+
+  // Two faults produce the identical symptom and need OPPOSITE actions, and
+  // guessing wrong costs a day: this alert used to assert "the token is missing
+  // scopes" every time and send the owner to the Graph Explorer to regenerate a
+  // token that was perfectly fine, while Meta had blocked the whole app.
+  //
+  // Telling them apart takes one request. A missing COMMENT scope still leaves
+  // the Page readable; a blocked app or a dead token fails on everything. So
+  // ask for the most basic field on the Page and see whether even that is
+  // refused. Uses nothing CI does not already have.
+  let pageReadable = null;
+  try {
+    await graphGet(process.env.FB_PAGE_ID, { fields: "id", access_token: token });
+    pageReadable = true;
+  } catch (probe) {
+    pageReadable = false;
+    console.error(`page probe also failed: ${probe.message.slice(0, 120)}`);
+  }
+
+  const msg = pageReadable
+    ? `🔒 <b>Comment replies are switched off</b>
 ` +
-    `Reading comments on <b>${[...denied].join(" and ")}</b> is being denied.
+      `Reading comments on <b>${where}</b> is denied, but the Page itself still answers — so this is the ` +
+      `comment permissions specifically.
 
 ` +
-    `The Page token is missing <code>pages_read_user_content</code>, ` +
-    `<code>pages_manage_engagement</code> and <code>instagram_manage_comments</code>. ` +
-    `Regenerate it in the Graph API Explorer with those added.`;
-  console.error(`PERMISSION DENIED on: ${[...denied].join(", ")}`);
-  await notify(msg);
+      `Grant <code>pages_read_user_content</code>, <code>pages_manage_engagement</code> and ` +
+      `<code>instagram_manage_comments</code>, then re-run <code>scripts/exchange-token.js</code>.`
+    : `🚫 <b>Facebook and Instagram are cut off</b>
+` +
+      `Not just comments — <b>nothing can post</b>. Even reading the Page id is refused, so the ` +
+      `token is not the cause and regenerating it will not help.
+
+` +
+      `Check <b>developers.facebook.com</b> → your app → the alert banner. This is normally an ` +
+      `overdue Data Use Checkup, a verification step, or the app being taken out of Live mode. ` +
+      `Everything returns on its own once that is cleared.`;
+
+  console.error(`DENIED on ${where} (page readable: ${pageReadable}): ${why.slice(0, 140)}`);
+  // Every 30 minutes for days is how a bot teaches its owner to ignore it.
+  await notifyOnce(pageReadable ? "comments-denied" : "meta-cut-off", msg, { hours: 12 });
+} else {
+  // Recovered — let the next failure speak up immediately.
+  await clearAlert("comments-denied");
+  await clearAlert("meta-cut-off");
 }
 
 console.log(`${comments.length} comment(s) on ${history.length} recent post(s)${denied.size ? " (some denied)" : ""}`);
