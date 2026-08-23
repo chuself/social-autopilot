@@ -571,7 +571,20 @@
     ],
     "scheduledFor": "2026-08-23T10:00:00.000Z",
     "createdAt": "2026-08-22T18:34:42.788Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-23-13-client-proof.mp4",
+      "beats": [
+        "Wageni wameshuka mlimani?",
+        "Housekeeping na reception zinaelewana.",
+        "Inafanya kazi mtandao ukiwa hafifu.",
+        "Wageni wanapata huduma haraka."
+      ],
+      "narration": "Wageni wako wanaporudi kutoka Kilimanjaro wakiwa wamechoka, mfumo wetu wa lugha mbili unasaidia mapokezi na housekeeping kuandaa vyumba haraka sana. Hata kukiwa na mtandao hafifu sana, Operra inahakikisha wageni wanaingia vyumbani bila kuchelewa na kupata huduma bora.",
+      "hasVoice": true,
+      "builtAt": "2026-08-23T07:38:50.565Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-23-16-swahili-tip",
