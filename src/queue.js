@@ -134,7 +134,17 @@ export function hoursLate(post, now = new Date()) {
  * the caller can report them rather than silently dropping them on the floor.
  */
 export function stalePosts(queue, now = new Date()) {
-  return queue.filter((p) => OPEN(p) && p.scheduledFor && hoursLate(p, now) > MAX_LATE_HOURS);
+  return queue.filter(
+    (p) =>
+      OPEN(p) &&
+      p.scheduledFor &&
+      hoursLate(p, now) > MAX_LATE_HOURS &&
+      // A platform outage is not a missed slot. When Meta blocked the app,
+      // every post sat unpublished through the cutoff and would have been
+      // closed as "missed" — throwing away a day of finished content because
+      // someone else's API was down. Held posts wait for the platform instead.
+      !p.blockedByOutage
+  );
 }
 
 /**

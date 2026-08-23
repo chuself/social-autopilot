@@ -191,8 +191,20 @@ for (const post of posts) {
   }
 
   if (!dryRun) {
-    if (results.length) clearSkip(post);
-    else if (skips.length) noteSkip(post, skips.join("; "));
+    if (results.length) {
+      clearSkip(post);
+      delete post.blockedByOutage;
+    } else if (skips.length) {
+      // Every platform refused with an auth/permission error: that is the
+      // platform being down or cut off, not anything wrong with this post. Flag
+      // it so the staleness rule leaves it alone rather than closing a day of
+      // finished work while someone else's API is broken.
+      const outage =
+        skips.length > 0 &&
+        skips.every((s) => /API access blocked|OAuth|permission|impersonat|#190|#200/i.test(s));
+      if (outage) post.blockedByOutage = true;
+      noteSkip(post, outage ? "the platform is cut off — waiting for it to come back" : skips.join("; "));
+    }
   }
 
   if (!dryRun && results.length) {
