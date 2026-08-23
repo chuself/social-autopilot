@@ -52,12 +52,6 @@ jobs:
 
       # A committed asset that Pages is not serving fixes itself rather than
       # failing quietly every hour until the slot has gone.
-      - name: Redeploy Pages if an asset was unreachable
-        if: steps.publish.outputs.redeploy == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run pages
-
       # One job owns "is it time?" for EVERY format.
       #
       # Reels used to be published only inside the same job that filmed them,
@@ -68,6 +62,13 @@ jobs:
       # reconciler picks it up like anything else. Needs no renderer: the MP4 is
       # already built and already live on Pages.
       - name: Publish any reel whose slot has arrived
+        id: reel
+        # A reconciler must never die for one item. A transient 503 from Pages
+        # on one MP4 took down the whole publish run and reported "Publishing
+        # FAILED" as though nothing at all had gone out. Whatever happens to the
+        # reel, the posters that already published still get recorded and the
+        # next hourly run still comes.
+        continue-on-error: true
         env:
           DRY_RUN: ${{ inputs.dry_run || '0' }}
           PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
@@ -84,6 +85,15 @@ jobs:
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: node src/cli-publish-reel.js
+
+      # After BOTH publishers, so it can see either one's request. A committed
+      # asset that Pages is not serving stays unserved until something
+      # redeploys it, and the slot passes in silence every hour until then.
+      - name: Redeploy Pages if an asset was unreachable
+        if: steps.publish.outputs.redeploy == 'true' || steps.reel.outputs.redeploy == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pages
 
       - name: Record what went out
         if: ${{ always() && inputs.dry_run != '1' }}

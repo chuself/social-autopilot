@@ -460,6 +460,43 @@ await check(
   { group: "publish", net: true }
 );
 
+// The publish job is a RECONCILER: it wakes hourly, does whatever it can, and
+// leaves the rest for next time. One unpublishable item must never take the
+// whole run down with it — that is exactly what happened when a transient 503
+// from Pages on one MP4 killed the entire publish run and reported
+// "Publishing FAILED" as though nothing at all had gone out.
+//
+// Executed, not read: point the reel publisher at a host that cannot serve
+// anything and require it to exit 0 anyway.
+await check(
+  "one bad item cannot kill publish",
+  async () => {
+    const { stdout, stderr } = await run(process.execPath, ["src/cli-publish-reel.js"], {
+      cwd: ROOT,
+      env: {
+        ...process.env,
+        DRY_RUN: "0",
+        // A host that resolves to nothing: every reachability check fails.
+        PUBLIC_ASSET_BASE: "https://127.0.0.1:9",
+        // Never let this test reach Telegram or a platform.
+        TELEGRAM_BOT_TOKEN: "",
+        TELEGRAM_CHAT_ID: "",
+        CALLMEBOT_PHONE: "",
+        CALLMEBOT_APIKEY: "",
+        GITHUB_OUTPUT: "",
+      },
+    }).catch((err) => {
+      throw new Error(
+        `it exited ${err.code} instead of skipping — one unreachable asset would fail the whole run`
+      );
+    });
+    const out = `${stdout}\n${stderr}`;
+    if (/ReferenceError|TypeError/.test(out)) throw new Error(out.slice(0, 140));
+    return "survives an unreachable asset";
+  },
+  { group: "publish", net: true }
+);
+
 // Instagram fetches media server-side. If Pages has not deployed the file yet,
 // publishing builds a container against a 404 and fails at the last step.
 await check(

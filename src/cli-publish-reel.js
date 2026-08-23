@@ -16,7 +16,7 @@ import { ctaLink } from "./brain.js";
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { isPaused, isDryRun } from "./guards.js";
-import { notify, sendVideo } from "./notify.js";
+import { notify, notifyOnce, sendVideo } from "./notify.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const dryRun = isDryRun();
@@ -72,15 +72,55 @@ const videoUrl = `${base}/${post.reel.file}`;
 console.log(`Publishing reel: ${post.headline}`);
 console.log(`  ${videoUrl}`);
 
-// Both platforms fetch the file themselves — if it is not live, stop here
-// rather than letting the platform fail opaquely minutes later.
+// Both platforms fetch the file themselves, so an unreachable file has to stop
+// us here rather than failing opaquely inside Meta minutes later.
+//
+// But this must NOT throw. It used to, which was fine when the only caller was
+// the reel job — the sole step after it was recording. It is now also called by
+// the hourly publisher, where throwing kills the whole reconciler, and a single
+// transient 503 from Pages did exactly that: the 13:00 reel sat filmed and
+// unpublished, and the run reported "Publishing FAILED" as though nothing had
+// gone out at all.
+//
+// A reconciler must never die for one item. Retry briefly for propagation, then
+// leave it for the next run and say why.
 if (!dryRun) {
-  const head = await fetch(videoUrl, { method: "HEAD" });
-  const type = head.headers.get("content-type") ?? "";
-  if (!head.ok || !type.startsWith("video/")) {
-    throw new Error(`Reel not reachable as video (${head.status}, ${type}): ${videoUrl}`);
+  const live = await reachable(videoUrl, 3);
+  if (!live.ok) {
+    console.error(`  not reachable (${live.detail}) — leaving it for the next run`);
+    noteSkip(post, `video not live yet (${live.detail})`);
+    await writeQueue(queue);
+    // Ask Pages to try again; a file that is committed but not served stays
+    // that way until something redeploys it.
+    if (process.env.GITHUB_OUTPUT) {
+      const { appendFile } = await import("node:fs/promises");
+      await appendFile(process.env.GITHUB_OUTPUT, "redeploy=true\n");
+    }
+    await notifyOnce(
+      `reel-not-live-${post.id}`,
+      `🎬 <b>Reel is ready but not serving yet</b>\n${post.headline}\nI will try again next hour.`,
+      { hours: 3 }
+    );
+    process.exit(0);
   }
-  console.log(`  reachable: ${head.status} ${type}`);
+  console.log(`  reachable: ${live.detail}`);
+}
+
+/** HEAD it a few times: a fresh Pages deploy takes a moment to propagate. */
+async function reachable(url, attempts) {
+  let detail = "unknown";
+  for (let i = 1; i <= attempts; i++) {
+    try {
+      const head = await fetch(url, { method: "HEAD" });
+      const type = head.headers.get("content-type") ?? "";
+      if (head.ok && type.startsWith("video/")) return { ok: true, detail: `${head.status} ${type}` };
+      detail = `${head.status} ${type}`;
+    } catch (err) {
+      detail = err.message.slice(0, 60);
+    }
+    if (i < attempts) await new Promise((r) => setTimeout(r, 5000));
+  }
+  return { ok: false, detail };
 }
 
 const brand = JSON.parse(
