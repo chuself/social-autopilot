@@ -12,6 +12,7 @@ import { generateBackground } from "./background.js";
 import { renderPoster } from "./render.js";
 import { readQueue, writeQueue, recentPosts } from "./queue.js";
 import { readConfig } from "./config.js";
+import { readCampaigns, campaignFor } from "./campaigns.js";
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 
@@ -97,6 +98,11 @@ if (args.includes("--replace")) {
     );
   }
 }
+const campaigns = await readCampaigns();
+// How many of a given day s slots the campaign has already taken. The FIRST
+// slots of the day go to it, so it gets the morning rather than the leftovers.
+const campaignSlotIndex = new Map();
+
 const planned = [];
 
 // Written by cli-metrics.js from real engagement; absent on the first run.
@@ -154,12 +160,37 @@ for (let n = 0; n < timetable.length; n++) {
   );
   const city = cityForIndex(brandFile, queue.length + planned.length);
 
+  // A campaign is a note handed to the SAME writer for some of the day s
+  // slots, not a second pipeline. Rendering, the figure guard, publishing and
+  // the reel path are all untouched and cannot regress because of it.
+  const dayKey = when.toISOString().slice(0, 10);
+  const campaign = campaignFor(campaigns, when);
+  const usedToday = campaignSlotIndex.get(dayKey) ?? 0;
+  const onCampaign = Boolean(campaign) && usedToday < campaign.slotsPerDay;
+  if (onCampaign) campaignSlotIndex.set(dayKey, usedToday + 1);
+
+  const slotNote = onCampaign
+    ? [
+        note,
+        `This post is part of a campaign called "${campaign.name}".`,
+        `What it is about: ${campaign.brief}`,
+        campaign.cta ? `End with this call to action: ${campaign.cta}` : null,
+        `It runs ${campaign.startsOn} to ${campaign.endsOn}, so write it as part of a run`,
+        `rather than as a one-off announcement.`,
+        `Do NOT invent dates, prices or discounts that are not stated above.`,
+      ]
+        .filter(Boolean)
+        .join(" ")
+    : note;
+
+  if (onCampaign) console.log(`  slot ${n + 1} belongs to campaign "${campaign.name}"`);
+
   let post;
   try {
     post =
       format === "carousel"
-        ? await writeCarousel({ brandId, pillar, recent, note, city })
-        : await writePost({ brandId, pillar, recent, note, city });
+        ? await writeCarousel({ brandId, pillar, recent, note: slotNote, city, language: onCampaign ? campaign.language ?? undefined : undefined })
+        : await writePost({ brandId, pillar, recent, note: slotNote, city, language: onCampaign ? campaign.language ?? undefined : undefined });
   } catch (err) {
     console.error(`slot ${n + 1} (${pillar}): brain failed — ${err.message}`);
     continue;
@@ -218,6 +249,11 @@ for (let n = 0; n < timetable.length; n++) {
     console.log(`planned ${id} [${format}] [${record.status}] — "${post.headline}"`);
   }
 
+  // On the record, not the draft: `record` is what reaches the queue.
+  if (onCampaign) {
+    record.campaign = campaign.id;
+    record.campaignName = campaign.name;
+  }
   planned.push(record);
 }
 

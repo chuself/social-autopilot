@@ -98,6 +98,19 @@ export async function handleMessage(text, chatId) {
 
     if (yes) {
       await unlink(PENDING_CHANGE);
+
+      // The same hold-and-confirm gate now guards two different things.
+      if (held.campaign) {
+        const { readCampaigns, writeCampaigns, describeCampaign } = await import("./campaigns.js");
+        const rows = await readCampaigns();
+        rows.push(held.campaign);
+        await writeCampaigns(rows);
+        await notify(
+          `🎯 <b>Campaign set</b>\n${describeCampaign(held.campaign)}\n\nSend /replan to build it into the schedule now.`
+        );
+        return { kind: "setting", changed: true, replan: false };
+      }
+
       const { changes, rejected } = await updateConfig({ ...held.patch, confirmed: true });
       await notify(
         changes.length
@@ -147,6 +160,23 @@ export async function handleMessage(text, chatId) {
     await notify("🧹 Standing instructions cleared.");
     return { kind: "command", changed: true, replan: false };
   }
+  if (lower === "/campaigns") {
+    const { readCampaigns, describeCampaign, isActive } = await import("./campaigns.js");
+    const rows = await readCampaigns();
+    const live = rows.filter((c) => isActive(c));
+    const later = rows.filter((c) => !isActive(c) && c.status !== "ended" && c.startsOn > todayEat());
+    if (!rows.length) {
+      await notify("No campaigns. Tell me about one — <i>run an Eid offer, 20% off rooms, five days from Friday</i>");
+      return { kind: "command", changed: false, replan: false };
+    }
+    const lines = [];
+    if (live.length) lines.push("🎯 <b>Running now</b>", ...live.map((c) => `• ${describeCampaign(c)}`));
+    if (later.length) lines.push("", "<b>Coming up</b>", ...later.map((c) => `• ${describeCampaign(c)}`));
+    if (!lines.length) lines.push("Nothing running. Past campaigns are kept but finished.");
+    lines.push("", "<i>Say “stop the &lt;name&gt; campaign” to end one early.</i>");
+    await notify(lines.join("\n"));
+    return { kind: "command", changed: false, replan: false };
+  }
   if (lower === "/preflight" || lower === "/check" || lower === "/doctor") {
     await notify("\u{1F50E} Running preflight - the report lands here in a couple of minutes.");
     return { kind: "command", changed: false, replan: false, dispatch: ["preflight"] };
@@ -193,6 +223,58 @@ export async function handleMessage(text, chatId) {
     await notify(parts.join("\n"));
     if (changes.length) await writeFile(REPLAN, "routine changed\n");
     return { kind: "setting", changed: changes.length > 0, replan: changes.length > 0 };
+  }
+
+  // A campaign is a thing that is happening for a while — an offer, an opening,
+  // a season. It is NOT a standing instruction, which was the only shape Alice
+  // had for "please talk about this", and which never stopped.
+  if (intent.kind === "campaign") {
+    const { readCampaigns, writeCampaigns, buildCampaign, describeCampaign, isActive } =
+      await import("./campaigns.js");
+    const cfg2 = await readConfig();
+    const rows = await readCampaigns();
+
+    if (intent.campaign?.stop) {
+      const target = rows.find(
+        (c) => isActive(c) && String(c.name).toLowerCase().includes(String(intent.campaign.name ?? "").toLowerCase())
+      );
+      if (!target) {
+        await notify("I could not find a running campaign by that name. /campaigns shows what is live.");
+        return { kind: "chat", changed: false, replan: false };
+      }
+      target.status = "ended";
+      target.endedAt = new Date().toISOString();
+      await writeCampaigns(rows);
+      await notify(`🛑 Stopped <b>${escapeHtml(target.name)}</b>. Send /replan to rebuild without it.`);
+      return { kind: "setting", changed: true, replan: false };
+    }
+
+    const { campaign, rejected, needsConfirmation } = buildCampaign(intent.campaign ?? {}, {
+      slotsInDay: cfg2.slots.length,
+    });
+    if (!campaign) {
+      await notify(`I could not set that up — ${escapeHtml(rejected.join("; "))}`);
+      return { kind: "chat", changed: false, replan: false };
+    }
+
+    // Same posture as the TikTok cap: held, with the reason, not applied.
+    if (needsConfirmation) {
+      await writeFile(
+        PENDING_CHANGE,
+        JSON.stringify({ campaign, ...needsConfirmation, askedAt: new Date().toISOString() }, null, 2)
+      );
+      await notify(
+        `⚠️ <b>Before I run that</b>\n${escapeHtml(needsConfirmation.why)}\n\nReply <b>yes</b> to do it anyway, or <b>no</b> to leave it.`
+      );
+      return { kind: "setting", changed: true, replan: false };
+    }
+
+    rows.push(campaign);
+    await writeCampaigns(rows);
+    await notify(
+      `🎯 <b>Campaign set</b>\n${describeCampaign(campaign)}\n<i>${escapeHtml(campaign.brief)}</i>\n\nSend /replan to build it into the schedule now.`
+    );
+    return { kind: "setting", changed: true, replan: false };
   }
 
   if (intent.kind === "instruction") {
@@ -464,8 +546,12 @@ function helpText() {
     "<i>less formal, write like WhatsApp</i>",
     "<i>push the POS module this week</i>",
     "<i>3 posters and 1 reel at 8, 13, 16 and 20</i>",
+    "<i>run an Eid offer, 20% off, five days from Friday</i>",
+    "",
+    "Send me a photo and I will put it on the right post.",
     "",
     "/status — what is out, what is not, and why",
+    "/campaigns — what is running and until when",
     "/preflight — check everything, report faults",
     "/looks — every visual look side by side",
     "/replan — rebuild the schedule now",
@@ -532,6 +618,14 @@ export async function statusText() {
     );
   }
 
+  // A running campaign changes what the whole feed is about, so it belongs on
+  // the glance rather than behind /campaigns.
+  const { readCampaigns, isActive } = await import("./campaigns.js");
+  const running = (await readCampaigns()).filter((c) => isActive(c));
+  for (const c of running) {
+    lines.push("", `🎯 <i>${escapeHtml(c.name)} · ${c.slotsPerDay}/day until ${c.endsOn}</i>`);
+  }
+
   lines.push("", `<i>${escapeHtml(describeRoutine(cfg))}</i>`);
   return lines.join("\n");
 }
@@ -589,10 +683,23 @@ Looks preview: ${existsSync(PREVIEW_LOOKS) ? "one is being rendered right now" :
 
 Classify the message and reply. Return ONLY JSON:
 {
-  "kind": "setting" | "instruction" | "preview" | "question" | "chat",
+  "kind": "setting" | "campaign" | "instruction" | "preview" | "question" | "chat",
   "settings": { "slots": [ { "hour": number, "format": "poster" | "reel" } ], "tiktokPerDay": number },
+  "campaign": {
+    "name": "short name",
+    "brief": "what to say about it, one or two sentences",
+    "cta": "what to ask people to do, or null",
+    "startsOn": "YYYY-MM-DD or null for today",
+    "endsOn": "YYYY-MM-DD or null",
+    "days": number,
+    "slotsPerDay": number,
+    "language": "sw" | "en" | null,
+    "stop": false
+  },
   "reply": "under 35 words, plain text"
 }
+
+Today is ${new Date(Date.now() + 3 * 3600_000).toISOString().slice(0, 10)} in East Africa Time.
 
 ## How your reply should read
 It is read on a phone, usually one-handed, usually while busy.
@@ -613,8 +720,20 @@ It is read on a phone, usually one-handed, usually while busy.
   * tiktokPerDay = how many reels go to TikTok per day. Default and recommended
     is 1, because the free Metricool allowance is 20 a month. Set it only if the
     owner explicitly asks about TikTok frequency.
-- "instruction" = it changes how posts are WRITTEN or what they cover (tone, wording,
-  language, topics to push or avoid). Reply confirming what changed.
+- "campaign" = something that is HAPPENING FOR A WHILE and then stops: an offer,
+  a promotion, an opening, an event, a season, a launch. It has a subject and an
+  end. "run an Eid offer, 20% off, five days from Friday", "tangaza ufunguzi wa
+  mgahawa wiki hii", "push the new POS module until the end of the month".
+  * slotsPerDay defaults to 1. Only go higher if they clearly ask for more.
+  * days defaults to 5 when they give no end.
+  * NEVER invent a discount, price or date they did not say. If they said "20%
+    off" put that in brief; if they said nothing about numbers, say nothing.
+  * "stop the Eid campaign", "acha ile campaign" → set stop:true and the name.
+- "instruction" = it changes how posts are WRITTEN or what they cover FROM NOW
+  ON, with no end (tone, wording, language, topics to push or avoid). "less
+  formal" is an instruction. "20% off this week" is a campaign. If it has an end
+  date or an occasion, it is a campaign, not an instruction.
+  Reply confirming what changed.
 - "preview" = they are ASKING YOU TO MAKE one now ("show me the looks",
   "nionyeshe designs", "send the looks"). It must be a REQUEST.
   Asking about one already under way — "is it done?", "did you send it?",

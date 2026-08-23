@@ -47,6 +47,9 @@ export const formatIcon = (format) => ({ reel: "🎬", carousel: "🎠" }[format
  * them already says it.
  */
 export function slotLine(p, now = new Date(), { tag = true, time = true, withDay = true } = {}) {
+  // A campaign post is worth marking: the owner asked for it and wants to see
+  // it actually landed in the schedule.
+  const mark = p.campaign ? "🎯 " : "";
   const suffix = !tag
     ? ""
     : p.status === "needs-review"
@@ -62,5 +65,5 @@ export function slotLine(p, now = new Date(), { tag = true, time = true, withDay
     ? shortWhen(p.scheduledFor, now)
     : new Date(new Date(p.scheduledFor).getTime() + 3 * 3600_000).toISOString().slice(11, 16);
   const when = time ? `<b>${stamp}</b> ` : "";
-  return `${when}${formatIcon(p.format)} ${escapeHtml(clip(p.headline ?? p.id, 38))}${suffix}`;
+  return `${when}${mark}${formatIcon(p.format)} ${escapeHtml(clip(p.headline ?? p.id, 38))}${suffix}`;
 }
