@@ -1,0 +1,55 @@
+name: rewrite
+
+# Fired when the owner taps Rewrite on a post and says what should change.
+# Rebuilds that ONE post and hands it back held for a decision — a rewrite must
+# never cost a day of content, so nothing else in the queue is touched.
+on:
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: "Post to redo (blank = whatever has a note waiting)"
+        default: ""
+
+concurrency: rewrite
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: npx playwright install --with-deps chromium
+
+      - name: Redo it
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
+          WHATSAPP_CTA_NUMBER: ${{ vars.WHATSAPP_CTA_NUMBER }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+        run: node src/cli-rewrite.js "${{ inputs.post_id }}"
+
+      - name: Keep it
+        if: always()
+        run: |
+          bash scripts/push-state.sh "chore: post rewritten [skip ci]" \
+            public state/queue.json state/bg state/actions.json state/pending-rewrite.json
+
+      # The new image must be live before the post can publish.
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4

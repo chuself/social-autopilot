@@ -9,9 +9,14 @@
  * close by telling the owner to edit state/queue.json and create state/PAUSED
  * — instructions for a developer at a laptop, not for someone on a phone.
  */
+import path from "node:path";
+import { existsSync } from "node:fs";
 import { readQueue, readHistory } from "./queue.js";
-import { notify } from "./notify.js";
-import { escapeHtml, clip, slotLine, longDay, todayEat } from "./format.js";
+import { notify, sendPhoto } from "./notify.js";
+import { registerAction } from "./actions.js";
+import { escapeHtml, clip, slotLine, longDay, todayEat, shortWhen } from "./format.js";
+
+const ROOT = path.resolve(import.meta.dirname, "..");
 
 const queue = await readQueue();
 const history = await readHistory();
@@ -79,5 +84,33 @@ if (needsReview.length) {
 
 lines.push(`<i>${postedThisWeek} posts out in the last 7 days · /status anytime</i>`);
 
-await notify(lines.join("\n"));
-console.log("digest sent");
+// Everything below is opt-in. The default stays exactly as it was — the day is
+// planned and it goes out — because an owner who trusts the pipeline should not
+// have to press anything. The button is for the days you want a look first, and
+// for a client who has not learned to trust it yet.
+const auto = upcoming.filter((p) => p.status !== "needs-review");
+const buttons = auto.length
+  ? [[{ text: `✏️ Review each (${auto.length})`, data: await registerAction({ verb: "review-each", ids: auto.map((p) => p.id) }) }]]
+  : null;
+
+await notify(lines.join("\n"), { buttons });
+
+// Anything already held gets its own message with the picture and a decision,
+// because "one of these needs your eye" is useless without showing which.
+for (const p of needsReview) {
+  const file = path.join(ROOT, "public", `${p.id}.png`);
+  const approve = await registerAction({ verb: "approve", postId: p.id });
+  const reject = await registerAction({ verb: "reject", postId: p.id });
+  const rewrite = await registerAction({ verb: "rewrite", postId: p.id });
+  const caption =
+    `<b>${shortWhen(p.scheduledFor)}</b> ${escapeHtml(clip(p.headline ?? p.id, 60))}\n` +
+    `<i>held — ${escapeHtml((p.heldFigures ?? []).join(", ") || "needs your eye")}</i>`;
+  const decision = [
+    [{ text: "✅ Post it", data: approve }, { text: "🚫 Drop it", data: reject }],
+    [{ text: "✏️ Rewrite", data: rewrite }],
+  ];
+  if (existsSync(file)) await sendPhoto(file, caption, { buttons: decision });
+  else await notify(caption, { buttons: decision, mirror: false });
+}
+
+console.log(`digest sent${needsReview.length ? ` + ${needsReview.length} held for review` : ""}`);

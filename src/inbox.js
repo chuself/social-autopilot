@@ -9,7 +9,7 @@ import { readFile, writeFile, appendFile, unlink } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { notify } from "./notify.js";
-import { readQueue, whyWaiting } from "./queue.js";
+import { readQueue, writeQueue, whyWaiting } from "./queue.js";
 import { escapeHtml, clip, slotLine, todayEat } from "./format.js";
 import { completeJson } from "./llm.js";
 import { updateConfig, readConfig, LIMITS } from "./config.js";
@@ -23,6 +23,8 @@ export const PENDING_CHANGE = path.join(ROOT, "state", "pending-change.json");
 export const PREVIEW_LOOKS = path.join(ROOT, "state", "PREVIEW_LOOKS");
 /** Photos that have arrived but not yet been looked at by the photo job. */
 export const PHOTO_QUEUE = path.join(ROOT, "state", "photo-queue.json");
+/** A Rewrite button was tapped; the next message is the note explaining why. */
+export const PENDING_REWRITE = path.join(ROOT, "state", "pending-rewrite.json");
 
 export function botToken() {
   return process.env.TELEGRAM_BOT_TOKEN;
@@ -68,6 +70,25 @@ export async function handleMessage(text, chatId) {
 
   const trimmed = text.trim();
   const lower = trimmed.toLowerCase();
+
+  // They tapped Rewrite and this is the note. It must be caught BEFORE the
+  // classifier, which would happily file "make it shorter" as a standing
+  // instruction for every future post rather than a change to this one.
+  if (existsSync(PENDING_REWRITE) && !lower.startsWith("/")) {
+    const { postId } = JSON.parse(await readFile(PENDING_REWRITE, "utf8"));
+    await unlink(PENDING_REWRITE);
+    const queue = await readQueue();
+    const post = queue.find((p) => p.id === postId);
+    if (!post) {
+      await notify("That post is gone now, so I have dropped the note.");
+      return { kind: "command", changed: true, replan: false };
+    }
+    post.rewriteNote = trimmed;
+    post.status = "needs-review";
+    await writeQueue(queue);
+    await notify(`✏️ Redoing <b>${escapeHtml(clip(post.headline ?? post.id, 45))}</b> — ${escapeHtml(trimmed)}`);
+    return { kind: "instruction", changed: true, replan: false, dispatch: ["rewrite"] };
+  }
 
   // A change that was held for confirmation is applied only on an explicit yes.
   if (existsSync(PENDING_CHANGE)) {
@@ -325,10 +346,45 @@ async function applyDecision(action) {
       post.status = "needs-review";
       post.rewriteRequested = new Date().toISOString();
       await writeQueue(queue);
+      // The next thing they type is the note, so remember what it is about.
+      await writeFile(PENDING_REWRITE, JSON.stringify({ postId: post.id, askedAt: new Date().toISOString() }, null, 2));
       return {
         toast: "Tell me what to change",
-        say: `✏️ What should change about <b>${escapeHtml(clip(post.headline ?? post.id, 45))}</b>? Reply with the note and I will rewrite just this one.`,
+        say: `✏️ What should change about <b>${escapeHtml(clip(post.headline ?? post.id, 45))}</b>?\nReply with the note and I will redo just this one.`,
       };
+    }
+
+    // Opt in to deciding each post by hand for one day, without changing the
+    // routine. Holding them at needs-review means the hourly publisher will not
+    // take them while they wait for an answer.
+    case "review-each": {
+      const queue = await readQueue();
+      const held = [];
+      for (const id of action.ids ?? []) {
+        const post = queue.find((p) => p.id === id);
+        if (!post || post.status === "posted" || post.status === "reject") continue;
+        post.status = "needs-review";
+        held.push(post);
+      }
+      if (!held.length) return { toast: "Nothing left to review." };
+      await writeQueue(queue);
+
+      const { registerAction } = await import("./actions.js");
+      const { sendPhoto } = await import("./notify.js");
+      for (const p of held) {
+        const file = path.join(ROOT, "public", `${p.id}.png`);
+        const decision = [
+          [
+            { text: "✅ Post it", data: await registerAction({ verb: "approve", postId: p.id }) },
+            { text: "🚫 Drop it", data: await registerAction({ verb: "reject", postId: p.id }) },
+          ],
+          [{ text: "✏️ Rewrite", data: await registerAction({ verb: "rewrite", postId: p.id }) }],
+        ];
+        const caption = `<b>${shortWhenSafe(p)}</b> ${escapeHtml(clip(p.headline ?? p.id, 60))}`;
+        if (existsSync(file)) await sendPhoto(file, caption, { buttons: decision });
+        else await notify(caption, { buttons: decision, mirror: false });
+      }
+      return { toast: `${held.length} held for your decision`, say: null };
     }
 
     // ── photo placement, the first of the two confirmations ────────────────
