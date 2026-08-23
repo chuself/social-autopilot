@@ -104,6 +104,22 @@ function clip(s, n) {
   return t.length > n ? `${t.slice(0, n - 1)}…` : t;
 }
 
+/** The shared record of comments we wrote ourselves, so engage skips them. */
+async function rememberOurComment(id) {
+  const file = path.join(ROOT, "state", "our-comments.json");
+  let ids = [];
+  if (existsSync(file)) {
+    try {
+      ids = JSON.parse(await readFile(file, "utf8"));
+    } catch {
+      ids = [];
+    }
+  }
+  if (ids.includes(id)) return;
+  ids.push(id);
+  await writeFile(file, JSON.stringify(ids.slice(-2000), null, 2));
+}
+
 for (const post of posts) {
   console.log(`\n--- ${post.id}`);
   // A carousel is several files in swipe order; everything else is one.
@@ -176,7 +192,12 @@ for (const post of posts) {
         try {
           // Instagram does not linkify comments, so it gets a readable number
           // instead of an unclickable URL.
-          await commentOn(result.postId, ctaComment(brand, post.id, platform), { dryRun });
+          const commentId = await commentOn(result.postId, ctaComment(brand, post.id, platform), { dryRun });
+          // Remember it. Meta will not tell us who wrote a comment, so the only
+          // way to recognise our own is to have written the id down — and this
+          // one was being thrown away, which is why the engage job kept
+          // escalating Alice's own CTA link as an inbound buying signal.
+          if (commentId) await rememberOurComment(commentId);
           console.log(`    link added as the first comment`);
         } catch (err) {
           // Not fatal: the post is already live and useful without it.

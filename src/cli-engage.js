@@ -15,10 +15,9 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { graphGet, graphPost } from "./graph.js";
+import { graphGet, graphPost, graphBatch } from "./graph.js";
 import { completeJson } from "./llm.js";
 import { notify, notifyOnce, clearAlert } from "./notify.js";
-import { readHistory } from "./queue.js";
 import { ctaLink } from "./brain.js";
 import { isDryRun } from "./guards.js";
 
@@ -44,30 +43,75 @@ const replied = new Set(existsSync(REPLIED) ? JSON.parse(await readFile(REPLIED,
 const leads = existsSync(LEADS) ? JSON.parse(await readFile(LEADS, "utf8")) : [];
 const ours = new Set(existsSync(OURS) ? JSON.parse(await readFile(OURS, "utf8")) : []);
 
-// Only look at the last 14 days — older threads are not worth waking up.
-const cutoff = Date.now() - 14 * 86400_000;
-const history = (await readHistory()).filter((h) => new Date(h.postedAt).getTime() > cutoff);
+// How far back to look for comments.
+//
+// This used to be one Graph call PER POST, every 30 minutes: 34 posts, ~1,300
+// calls a day, almost all returning nothing, from data-centre IPs. Meta
+// flagged the developer account for unusual activity three days in.
+//
+// Comments come back nested inside the feed, so the whole account is two
+// sub-requests in one HTTP call however many posts there are. Reading a
+// two-week-old post every half hour buys nothing either: comments land within
+// a day or they do not land.
+const WINDOW_DAYS = Number(process.env.ENGAGE_WINDOW_DAYS ?? 7);
+const PAGE_LIMIT = Number(process.env.ENGAGE_PAGE_LIMIT ?? 25);
+const now = Date.now();
+const cutoff = now - WINDOW_DAYS * 86400_000;
 
 const comments = [];
 const denied = new Set();
 // One real error per platform. The alert used to assert a cause without ever
 // looking at what Meta actually said.
 const deniedWhy = new Map();
-for (const post of history) {
-  try {
-    comments.push(...(await fetchComments(post)));
-  } catch (err) {
-    // A permissions failure reads exactly like "nobody commented" unless it is
-    // called out — which is how this went unnoticed for a day.
-    if (/API access blocked|#200|#10\b|Missing Permissions|permission/i.test(err.message)) {
-      denied.add(post.platform);
-      if (!deniedWhy.has(post.platform)) deniedWhy.set(post.platform, err.message);
-    } else {
-      console.warn(`${post.platform} ${post.postId}: ${err.message}`);
+
+const fbFields = `id,created_time,comments.limit(50){id,message,created_time,permalink_url}`;
+const igFields = `id,timestamp,comments.limit(50){id,text,username,timestamp}`;
+
+const feeds = [
+  {
+    platform: "facebook",
+    relative_url: `${process.env.FB_PAGE_ID}/feed?fields=${encodeURIComponent(fbFields)}&limit=${PAGE_LIMIT}`,
+    stamp: (n) => n.created_time,
+  },
+];
+if (process.env.IG_USER_ID) {
+  feeds.push({
+    platform: "instagram",
+    relative_url: `${process.env.IG_USER_ID}/media?fields=${encodeURIComponent(igFields)}&limit=${PAGE_LIMIT}`,
+    stamp: (n) => n.timestamp,
+  });
+}
+
+let scanned = 0;
+try {
+  const results = await graphBatch(feeds.map((x) => ({ relative_url: x.relative_url })), token);
+  results.forEach((r, i) => {
+    const feed = feeds[i];
+    if (!r.ok) {
+      // A permissions failure reads exactly like "nobody commented" unless it
+      // is called out — which is how this went unnoticed for a day.
+      denied.add(feed.platform);
+      if (!deniedWhy.has(feed.platform)) deniedWhy.set(feed.platform, r.error ?? "unknown");
+      return;
     }
+    for (const node of r.body?.data ?? []) {
+      const when = new Date(feed.stamp(node) ?? 0).getTime();
+      if (when && when < cutoff) continue;
+      scanned++;
+      comments.push(...shapeComments(feed.platform, node));
+    }
+  });
+} catch (err) {
+  // The batch itself failed: auth or a block, not one bad post.
+  for (const feed of feeds) {
+    denied.add(feed.platform);
+    if (!deniedWhy.has(feed.platform)) deniedWhy.set(feed.platform, err.message);
   }
 }
 
+console.log(
+  `${feeds.length} feed read(s) in 1 batch call covered ${scanned} post(s) from the last ${WINDOW_DAYS}d`
+);
 if (denied.size) {
   const why = [...deniedWhy.values()].join(" ");
   const where = [...denied].join(" and ");
@@ -118,12 +162,33 @@ if (denied.size) {
   await clearAlert("meta-cut-off");
 }
 
-console.log(`${comments.length} comment(s) on ${history.length} recent post(s)${denied.size ? " (some denied)" : ""}`);
+console.log(`${comments.length} comment(s) found${denied.size ? " (some denied)" : ""}`);
 
 let sent = 0;
+// Our own CTA comment, recognised by CONTENT as well as by id.
+// Ids are the real mechanism, but cli-publish was discarding the id of the
+// link comment it posts, so Alice read her own call to action as an inbound
+// buying signal and escalated it to the owner. Twice. Content matching costs
+// nothing and means one missed id can never do that again.
+const ctaNumber = String(process.env.WHATSAPP_CTA_NUMBER ?? "").replace(/D/g, "");
+function isOurOwn(c) {
+  if (c.fromPage) return true;
+  const t = String(c.text ?? "");
+  if (!t.trim()) return false;
+  if (ctaNumber && t.replace(/D/g, "").includes(ctaNumber)) return true;
+  if (t.includes("wa.me/")) return true;
+  if (brand.site && t.includes(brand.site)) return true;
+  return false;
+}
+
 for (const c of comments) {
   if (replied.has(c.id)) continue;
-  if (c.fromPage) continue; // our own replies
+  if (isOurOwn(c)) {
+    // Remember it so it is not re-examined every half hour.
+    ours.add(c.id);
+    replied.add(c.id);
+    continue;
+  }
 
   const verdict = await triage(c);
   console.log(`  [${verdict.kind}] ${c.from}: ${c.text.slice(0, 60)}`);
@@ -190,39 +255,32 @@ if (!dryRun) {
 }
 console.log(`\n${sent} repl(ies) sent, ${leads.length} lead(s) on file`);
 
-async function fetchComments(post) {
-  if (post.platform === "facebook") {
-    // No "from": Meta blocks the commenter's identity on Page posts, and asking
-    // for it fails the WHOLE request. We do not need a name in order to reply.
-    const j = await graphGet(`${post.postId}/comments`, {
-      fields: "id,message,created_time,permalink_url",
-      limit: "50",
-      access_token: token,
-    });
-    return (j.data ?? []).map((c) => ({
+/** Pull our own shape out of one feed node, comments already nested inside. */
+function shapeComments(platform, node) {
+  const rows = node?.comments?.data ?? [];
+  if (platform === "facebook") {
+    return rows.map((c) => ({
       id: c.id,
       platform: "facebook",
       text: c.message ?? "",
+      // No "from": Meta blocks the commenter s identity on Page posts, and
+      // asking for it fails the WHOLE request.
       from: "someone",
       permalink: c.permalink_url,
+      postId: node.id,
       fromPage: ours.has(c.id),
     }));
   }
-  const j = await graphGet(`${post.postId}/comments`, {
-    fields: "id,text,username,timestamp",
-    limit: "50",
-    access_token: token,
-  });
-  return (j.data ?? []).map((c) => ({
+  return rows.map((c) => ({
     id: c.id,
     platform: "instagram",
     text: c.text ?? "",
     from: c.username ?? "someone",
     permalink: null,
+    postId: node.id,
     fromPage: ours.has(c.id),
   }));
 }
-
 /**
  * Decide what a comment is. Errs towards silence: on any failure the comment is
  * left alone rather than answered wrongly in public.
