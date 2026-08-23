@@ -529,15 +529,19 @@
     ],
     "scheduledFor": "2026-08-23T05:00:00.000Z",
     "createdAt": "2026-08-22T18:33:58.133Z",
-    "status": "pending",
+    "status": "posted",
     "slideFiles": [
       "operra-2026-08-23-08-number-that-lands-1.png",
       "operra-2026-08-23-08-number-that-lands-2.png",
       "operra-2026-08-23-08-number-that-lands-3.png"
     ],
     "headline": "Lake-side internet shouldn't stall checkouts",
-    "lastAttempt": "2026-08-23T05:24:44.828Z",
-    "lastSkipReason": "facebook: Graph POST 1049514968255534/photos failed (400): Any of the pages_read_engagement, pages_m; instagram: Graph POST 17841436263903904/media failed (400): Any of the pages_read_engagement, pages_m"
+    "lastAttempt": "2026-08-23T06:23:22.321Z",
+    "postedAt": "2026-08-23T06:23:22.321Z",
+    "postIds": [
+      "facebook:1049514968255534_122141992845351110",
+      "instagram:18055036553790941"
+    ]
   },
   {
     "id": "operra-2026-08-23-13-client-proof",
