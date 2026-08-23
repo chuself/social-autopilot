@@ -620,7 +620,7 @@
     ],
     "scheduledFor": "2026-08-23T13:00:00.000Z",
     "createdAt": "2026-08-22T18:35:27.461Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-23-16-swahili-tip.mp4",
       "beats": [
@@ -632,8 +632,14 @@
       "narration": "Kwanini upoteze muda wa wateja wako wakati wa kuondoka? Ukiwa na mfumo wetu wa mapokezi, unaweza kutenganisha bili za chumba za kampuni na matumizi binafsi ya mgeni mara tu anapofika. Rahisisha kazi, hata kwenye mtandao hafifu, na uondoe foleni kabisa.",
       "hasVoice": true,
       "builtAt": "2026-08-23T13:40:04.358Z",
-      "status": "ready"
-    }
+      "status": "posted",
+      "postedAt": "2026-08-23T13:41:26.886Z",
+      "postIds": [
+        "instagram:18349754896221247",
+        "facebook:2805242259850596"
+      ]
+    },
+    "lastAttempt": "2026-08-23T13:41:26.886Z"
   },
   {
     "id": "operra-2026-08-23-20-industry-note",
