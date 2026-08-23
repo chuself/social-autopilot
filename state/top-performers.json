@@ -1,5 +1,33 @@
 [
   {
+    "id": "operra-2026-08-23-08-number-that-lands",
+    "platform": "facebook",
+    "pillar": "number-that-lands",
+    "headline": "Lake-side internet shouldn't stall checkouts",
+    "likes": 1,
+    "comments": 1,
+    "shares": 0,
+    "engagement": 5,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
+    "id": "operra-2026-08-23-20-industry-note",
+    "platform": "facebook",
+    "pillar": "industry-note",
+    "headline": "Safari season demands faster tour operator billing",
+    "likes": 1,
+    "comments": 1,
+    "shares": 0,
+    "engagement": 5,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
     "id": "operra-2026-08-21-08-number-that-lands",
     "platform": "instagram",
     "pillar": "number-that-lands",
@@ -24,31 +52,6 @@
     "engagement": 4,
     "platforms": [
       "facebook",
-      "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-08-22-16-number-that-lands",
-    "platform": "instagram",
-    "pillar": "number-that-lands",
-    "headline": "Two languages to run your entire hotel",
-    "likes": 1,
-    "comments": 1,
-    "engagement": 3,
-    "platforms": [
-      "instagram",
-      "tiktok"
-    ]
-  },
-  {
-    "id": "operra-2026-08-20-feature-spotlight",
-    "platform": "instagram",
-    "pillar": "feature-spotlight",
-    "headline": "Know which rooms are ready instantly",
-    "likes": 1,
-    "comments": 0,
-    "engagement": 1,
-    "platforms": [
       "instagram"
     ]
   }
