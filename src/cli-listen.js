@@ -5,7 +5,9 @@
  * The fast path is cli-listen-live.js, which long-polls and answers in seconds.
  * This runs on a schedule so a message still lands if that chain ever breaks.
  */
-import { botToken, readOffset, writeOffset, fetchUpdates, handleMessage } from "./inbox.js";
+import {
+  botToken, readOffset, writeOffset, fetchUpdates, handleMessage, handlePhoto, handleCallback,
+} from "./inbox.js";
 
 if (!botToken()) {
   console.log("TELEGRAM_BOT_TOKEN not set — nothing to listen to.");
@@ -27,13 +29,24 @@ const toDispatch = new Set();
 
 for (const u of updates) {
   newOffset = Math.max(newOffset, u.update_id + 1);
+
+  // Same three kinds as the live listener. The recovery path must handle a
+  // button tap and a photo too, or a message sent while the chain is down is
+  // acknowledged by nobody.
+  const cbq = u.callback_query;
   const msg = u.message;
-  if (!msg?.text) continue;
-  const r = await handleMessage(msg.text, msg.chat.id);
+  const isPhoto = Boolean(msg?.photo?.length || msg?.document);
+  if (!cbq && !isPhoto && !msg?.text) continue;
+
+  const r = cbq
+    ? await handleCallback(cbq)
+    : isPhoto
+      ? await handlePhoto(msg, msg.chat.id)
+      : await handleMessage(msg.text, msg.chat.id);
   replan ||= r.replan;
   for (const w of r.dispatch ?? []) toDispatch.add(w);
   handled++;
-  console.log(`[${r.kind}] ${msg.text.slice(0, 60)}`);
+  console.log(`[${r.kind}] ${cbq ? "button" : isPhoto ? "photo" : msg.text.slice(0, 60)}`);
 }
 
 await writeOffset(newOffset);

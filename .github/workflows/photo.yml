@@ -1,0 +1,69 @@
+name: photo
+
+# Fired when the owner sends a photograph on Telegram.
+#
+# The listener deliberately does not do this work: it has no ffmpeg and no
+# browser, and its whole value is answering in seconds. It takes the file off
+# Telegram (that download URL expires within the hour), acknowledges, and
+# dispatches this.
+#
+# Runs twice per photo — once to work out where it belongs and ask, once to
+# apply it — because placing someone's photograph on their own brand's feed is
+# confirmed twice and the confirmations arrive in different jobs.
+on:
+  workflow_dispatch:
+
+concurrency: photo
+
+jobs:
+  photo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: npx playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Place it
+        id: place
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
+          WHATSAPP_CTA_NUMBER: ${{ vars.WHATSAPP_CTA_NUMBER }}
+        run: node src/cli-photo.js
+
+      # always(): a photo that was applied but never committed leaves the queue
+      # pointing at a background that does not exist in the repo.
+      - name: Keep the picture and the queue
+        if: always()
+        run: |
+          bash scripts/push-state.sh "chore: photo from Telegram [skip ci]" \
+            public state/queue.json state/photo-queue.json state/media state/actions.json state/bg
+
+      # The rendered post has to be live on Pages before it can publish, exactly
+      # like every other asset.
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4
+
+      - name: Shout if it failed
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+        run: node -e "import('./src/notify.js').then(m=>m.notifyFailure('I could not place that photo.','See the Actions log.'))"

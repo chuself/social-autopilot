@@ -21,6 +21,8 @@ export const PAUSED = path.join(ROOT, "state", "PAUSED");
 export const REPLAN = path.join(ROOT, "state", "REPLAN");
 export const PENDING_CHANGE = path.join(ROOT, "state", "pending-change.json");
 export const PREVIEW_LOOKS = path.join(ROOT, "state", "PREVIEW_LOOKS");
+/** Photos that have arrived but not yet been looked at by the photo job. */
+export const PHOTO_QUEUE = path.join(ROOT, "state", "photo-queue.json");
 
 export function botToken() {
   return process.env.TELEGRAM_BOT_TOKEN;
@@ -192,6 +194,212 @@ export async function handleMessage(text, chatId) {
 
   await notify(escapeHtml(intent.reply ?? "👍"));
   return { kind: "chat", changed: false, replan: false };
+}
+
+/**
+ * A photograph arrived.
+ *
+ * The listener stays deliberately light: it has no ffmpeg and no browser, and
+ * its whole value is answering in seconds. So it takes the file off Telegram —
+ * where the download URL expires within the hour — acknowledges, and hands the
+ * probing, the vision pass and the render to a job that has the tools.
+ */
+export async function handlePhoto(msg, chatId) {
+  const owner = String(process.env.TELEGRAM_CHAT_ID ?? "");
+  if (owner && String(chatId) !== owner) return { kind: "ignored", changed: false };
+
+  // `photo` is Telegram's own re-encode in several sizes, largest last, always
+  // JPEG with orientation already applied. A `document` is the untouched
+  // original, which may be HEIC, enormous, or not an image at all.
+  const asPhoto = msg.photo?.[msg.photo.length - 1];
+  const asDoc = msg.document?.mime_type?.startsWith("image/") ? msg.document : null;
+  const file = asPhoto ?? asDoc;
+
+  if (!file) {
+    await notify("That is not something I can use as a picture. Send a photo and I will fit it to the post.");
+    return { kind: "chat", changed: false };
+  }
+
+  const { downloadTelegramFile } = await import("./notify.js");
+  const dest = path.join(ROOT, "state", "media", "incoming", `${file.file_unique_id}.bin`);
+
+  try {
+    await downloadTelegramFile(file.file_id, dest);
+  } catch (err) {
+    await notify(`I could not download that photo — ${escapeHtml(err.message.slice(0, 80))}`);
+    return { kind: "chat", changed: false };
+  }
+
+  const pending = existsSync(PHOTO_QUEUE) ? JSON.parse(await readFile(PHOTO_QUEUE, "utf8")) : [];
+  if (!pending.some((p) => p.uniqueId === file.file_unique_id)) {
+    pending.push({
+      uniqueId: file.file_unique_id,
+      fileId: file.file_id,
+      path: path.relative(ROOT, dest).replace(/\\/g, "/"),
+      caption: (msg.caption ?? "").trim() || null,
+      brand: process.env.BRAND_ID ?? "operra",
+      receivedAt: new Date().toISOString(),
+      status: "new",
+    });
+    await writeFile(PHOTO_QUEUE, JSON.stringify(pending, null, 2));
+  }
+
+  await notify("📷 Got it — working out where it fits.");
+  return { kind: "photo", changed: true, replan: false, dispatch: ["photo"] };
+}
+
+/**
+ * A button was tapped.
+ *
+ * Buttons outlive the shift that drew them, so the verb and its target come
+ * from state/actions.json rather than from the 64 bytes Telegram allows.
+ * Every branch answers the callback first: Telegram spins for a few seconds
+ * and then reports the tap as failed, whatever we do afterwards.
+ */
+export async function handleCallback(cbq) {
+  const { answerCallback, clearButtons } = await import("./notify.js");
+  const owner = String(process.env.TELEGRAM_CHAT_ID ?? "");
+  if (owner && String(cbq.message?.chat?.id) !== owner) {
+    await answerCallback(cbq.id, "Not for you.");
+    return { kind: "ignored", changed: false };
+  }
+
+  const { consumeAction } = await import("./actions.js");
+  const action = await consumeAction(cbq.data);
+
+  if (!action) {
+    await answerCallback(cbq.id, "That button has expired.");
+    await clearButtons(cbq.message.chat.id, cbq.message.message_id);
+    return { kind: "command", changed: false };
+  }
+  if (action.alreadyUsed) {
+    await answerCallback(cbq.id, "Already done.");
+    await clearButtons(cbq.message.chat.id, cbq.message.message_id);
+    return { kind: "command", changed: false };
+  }
+
+  const result = await applyDecision(action);
+  await answerCallback(cbq.id, result.toast);
+  await clearButtons(cbq.message.chat.id, cbq.message.message_id);
+  if (result.say) await notify(result.say);
+  return {
+    kind: "command",
+    changed: true,
+    replan: false,
+    dispatch: result.dispatch ?? [],
+  };
+}
+
+/**
+ * One place where every button verb is applied, so the two listeners cannot
+ * drift and a new button cannot half-work.
+ */
+async function applyDecision(action) {
+  const { readQueue, writeQueue } = await import("./queue.js");
+
+  switch (action.verb) {
+    // ── the approval flow, shared by photos and the nightly digest ──────────
+    case "approve": {
+      const queue = await readQueue();
+      const post = queue.find((p) => p.id === action.postId);
+      if (!post) return { toast: "That post is gone." };
+      post.status = "pending";
+      post.approvedAt = new Date().toISOString();
+      delete post.heldFigures;
+      await writeQueue(queue);
+      return { toast: "Approved", say: `✅ Approved — <b>${escapeHtml(clip(post.headline ?? post.id, 45))}</b> goes out at ${shortWhenSafe(post)}.` };
+    }
+    case "reject": {
+      const queue = await readQueue();
+      const post = queue.find((p) => p.id === action.postId);
+      if (!post) return { toast: "That post is gone." };
+      post.status = "reject";
+      post.rejectedAt = new Date().toISOString();
+      await writeQueue(queue);
+      return { toast: "Rejected", say: `🚫 Dropped — <b>${escapeHtml(clip(post.headline ?? post.id, 45))}</b> will not go out.` };
+    }
+    case "rewrite": {
+      const queue = await readQueue();
+      const post = queue.find((p) => p.id === action.postId);
+      if (!post) return { toast: "That post is gone." };
+      post.status = "needs-review";
+      post.rewriteRequested = new Date().toISOString();
+      await writeQueue(queue);
+      return {
+        toast: "Tell me what to change",
+        say: `✏️ What should change about <b>${escapeHtml(clip(post.headline ?? post.id, 45))}</b>? Reply with the note and I will rewrite just this one.`,
+      };
+    }
+
+    // ── photo placement, the first of the two confirmations ────────────────
+    case "photo-use": {
+      const queue = await readQueue();
+      const post = queue.find((p) => p.id === action.postId);
+      if (!post) return { toast: "That post is gone." };
+      const pending = existsSync(PHOTO_QUEUE) ? JSON.parse(await readFile(PHOTO_QUEUE, "utf8")) : [];
+      const row = pending.find((p) => p.uniqueId === action.uniqueId);
+      if (row) {
+        row.status = "apply";
+        row.targetPostId = action.postId;
+        await writeFile(PHOTO_QUEUE, JSON.stringify(pending, null, 2));
+      }
+      return {
+        toast: "Putting it on that post",
+        say: "🖼 Applying it — I will send the finished post for a last look.",
+        dispatch: ["photo"],
+      };
+    }
+    case "photo-save": {
+      const pending = existsSync(PHOTO_QUEUE) ? JSON.parse(await readFile(PHOTO_QUEUE, "utf8")) : [];
+      const row = pending.find((p) => p.uniqueId === action.uniqueId);
+      if (row) {
+        row.status = "saved";
+        await writeFile(PHOTO_QUEUE, JSON.stringify(pending, null, 2));
+      }
+      return {
+        toast: "Saved",
+        say: "💾 Kept it in your pictures. Tell me which post to use it on whenever you like.",
+      };
+    }
+    case "photo-other": {
+      return {
+        toast: "Which one?",
+        say: await pickSlotMessage(action.uniqueId),
+      };
+    }
+    default:
+      return { toast: "I do not know that button." };
+  }
+}
+
+/** Offer the upcoming slots as buttons so a photo can be moved to another one. */
+async function pickSlotMessage(uniqueId) {
+  const { readQueue } = await import("./queue.js");
+  const { registerAction } = await import("./actions.js");
+  const queue = await readQueue();
+  const now = new Date();
+  const open = queue
+    .filter((p) => p.status !== "posted" && p.status !== "reject" && p.status !== "missed" && new Date(p.scheduledFor) >= now)
+    .sort((a, b) => new Date(a.scheduledFor) - new Date(b.scheduledFor))
+    .slice(0, 6);
+
+  if (!open.length) return "Nothing is queued to put it on. I have kept the photo.";
+
+  const buttons = [];
+  for (const p of open) {
+    const token = await registerAction({ verb: "photo-use", uniqueId, postId: p.id });
+    buttons.push([{ text: `${shortWhenSafe(p)} ${clip(p.headline ?? p.id, 28)}`, data: token }]);
+  }
+  await notify("Which post should it go on?", { buttons, mirror: false });
+  return null;
+}
+
+function shortWhenSafe(p) {
+  try {
+    return new Date(new Date(p.scheduledFor).getTime() + 3 * 3600_000).toISOString().slice(11, 16);
+  } catch {
+    return "its slot";
+  }
 }
 
 function helpText() {

@@ -54,6 +54,50 @@ export async function completeJson(prompt, { schemaHint, fast = false } = {}) {
   );
 }
 
+/**
+ * Ask about an image. Used to judge what the owner actually sent — you never
+ * know whether a photo is the hotel pool, a screenshot of a WhatsApp thread, a
+ * blurry receipt, or a logo on white.
+ *
+ * Vision is Gemini-only here: Groq's chain in this project is text models, so a
+ * failure has no fallback and callers must cope with null rather than break.
+ * Returns null instead of throwing — a photo we cannot describe is still a
+ * photo the owner can place by hand.
+ */
+export async function describeImage(bytes, mimeType, prompt) {
+  if (!process.env.GEMINI_API_KEY) return null;
+  const data = Buffer.from(bytes).toString("base64");
+
+  for (const model of ["gemini-3.1-flash-lite", "gemini-3.5-flash"]) {
+    try {
+      const res = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+            "x-goog-api-key": process.env.GEMINI_API_KEY,
+          },
+          body: JSON.stringify({
+            contents: [
+              { role: "user", parts: [{ text: prompt }, { inlineData: { mimeType, data } }] },
+            ],
+            generationConfig: { responseMimeType: "application/json", temperature: 0.2 },
+          }),
+        }
+      );
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error?.message ?? `HTTP ${res.status}`);
+      const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (!text) throw new Error("empty response");
+      return parseJson(text);
+    } catch (err) {
+      console.warn(`  vision/${model}: ${err.message.slice(0, 90)}`);
+    }
+  }
+  return null;
+}
+
 const gemini = {
   name: "gemini",
   available: () => Boolean(process.env.GEMINI_API_KEY),

@@ -14,7 +14,7 @@ import { promisify } from "node:util";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import {
-  botToken, readOffset, writeOffset, fetchUpdates, handleMessage, REPLAN,
+  botToken, readOffset, writeOffset, fetchUpdates, handleMessage, handlePhoto, handleCallback, REPLAN,
 } from "./inbox.js";
 
 const run = promisify(execFile);
@@ -54,20 +54,30 @@ while (Date.now() < deadline) {
 
   for (const u of updates) {
     newOffset = Math.max(newOffset, u.update_id + 1);
-    const msg = u.message;
-    if (!msg?.text) continue;
 
-    const sentAt = msg.date * 1000;
+    // Three kinds of update now, not one. A button tap is a callback_query and
+    // carries no `message.text`, so the old `if (!msg?.text) continue` silently
+    // dropped every one of them.
+    const cbq = u.callback_query;
+    const msg = u.message;
+    const isPhoto = Boolean(msg?.photo?.length || msg?.document);
+    if (!cbq && !isPhoto && !msg?.text) continue;
+
+    const sentAt = (cbq?.message?.date ?? msg?.date ?? Date.now() / 1000) * 1000;
+    const label = cbq ? "button" : isPhoto ? "photo" : `"${msg.text.slice(0, 50)}"`;
+
     try {
-      const r = await handleMessage(msg.text, msg.chat.id);
+      const r = cbq
+        ? await handleCallback(cbq)
+        : isPhoto
+          ? await handlePhoto(msg, msg.chat.id)
+          : await handleMessage(msg.text, msg.chat.id);
       changed ||= r.changed;
       replan ||= r.replan;
       preview ||= r.preview;
       for (const w of r.dispatch ?? []) toDispatch.add(w);
       handled++;
-      console.log(
-        `[${r.kind}] "${msg.text.slice(0, 50)}" — answered in ${((Date.now() - sentAt) / 1000).toFixed(1)}s`
-      );
+      console.log(`[${r.kind}] ${label} — answered in ${((Date.now() - sentAt) / 1000).toFixed(1)}s`);
     } catch (err) {
       console.error(`handling failed: ${err.message}`);
     }
