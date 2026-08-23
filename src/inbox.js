@@ -177,7 +177,10 @@ export async function handleMessage(text, chatId) {
     await notify(lines.join("\n"));
     return { kind: "command", changed: false, replan: false };
   }
-  if (lower === "/preflight" || lower === "/check" || lower === "/doctor") {
+  // /watchdog is the same run. The scheduled cloud watchdog reasons over logs
+  // and git history but has no credentials; this one has them and checks the
+  // live platforms, so on demand it is the more useful of the two.
+  if (lower === "/preflight" || lower === "/check" || lower === "/doctor" || lower === "/watchdog") {
     await notify("\u{1F50E} Running preflight - the report lands here in a couple of minutes.");
     return { kind: "command", changed: false, replan: false, dispatch: ["preflight"] };
   }
@@ -552,7 +555,7 @@ function helpText() {
     "",
     "/status — what is out, what is not, and why",
     "/campaigns — what is running and until when",
-    "/preflight — check everything, report faults",
+    "/watchdog — check everything, report faults",
     "/looks — every visual look side by side",
     "/replan — rebuild the schedule now",
     "/pause · /resume — stop and start posting",

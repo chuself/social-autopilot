@@ -365,15 +365,56 @@ await check(
 );
 
 // A post held for an unapproved figure never publishes and never complains.
+// Held is fine for an hour; held for a day means the decision was never made
+// and the slot is quietly gone.
 await check(
   "nothing stuck in review",
   async () => {
     const queue = await readState("queue.json", []);
     const held = queue.filter((p) => p.status === "needs-review");
-    if (held.length) {
-      return { warn: `${held.length} held: "${held[0].headline?.slice(0, 50)}" - a figure is not in facts.md` };
+    if (!held.length) return "none held";
+
+    const oldest = held.reduce((a, b) =>
+      new Date(a.rewriteRequested ?? a.createdAt ?? 0) < new Date(b.rewriteRequested ?? b.createdAt ?? 0) ? a : b
+    );
+    const hours = (Date.now() - new Date(oldest.rewriteRequested ?? oldest.createdAt ?? Date.now())) / 3600_000;
+    if (hours > 24) {
+      throw new Error(`${held.length} held, oldest ${Math.floor(hours / 24)}d — the decision was never made`);
     }
-    return "none held";
+    return { warn: `${held.length} waiting on your decision, oldest ${hours.toFixed(0)}h` };
+  },
+  { group: "content", level: "warn" }
+);
+
+// Did today actually produce what the routine promises? Every other check looks
+// at intent — the queue, the config, the credentials. This one looks at the
+// receipt, which is the only thing that proves anything reached an audience.
+await check(
+  "posted what today owed",
+  async () => {
+    const { readConfig } = await import("../src/config.js");
+    const cfg = await readConfig();
+    const history = await readState("history.json", []);
+    const today = new Date(Date.now() + 3 * 3600_000).toISOString().slice(0, 10);
+
+    // History is one row PER PLATFORM, so count distinct posts, not rows.
+    const out = new Set(
+      history
+        .filter((h) => h.id && h.postId !== "dry-run")
+        .filter((h) => new Date(new Date(h.postedAt).getTime() + 3 * 3600_000).toISOString().slice(0, 10) === today)
+        .map((h) => h.id)
+    );
+
+    // Only count slots whose hour has actually passed — at 09:00 the day owes
+    // one post, not four.
+    const eatHour = new Date(Date.now() + 3 * 3600_000).getUTCHours();
+    const due = cfg.slots.filter((s) => s.hour <= eatHour).length;
+
+    if (!due) return "nothing owed yet today";
+    if (out.size >= due) return `${out.size} out, ${due} owed by ${eatHour}:00 EAT`;
+    return {
+      warn: `${out.size} out but ${due} owed by ${eatHour}:00 EAT — ${due - out.size} slot(s) produced nothing`,
+    };
   },
   { group: "content", level: "warn" }
 );
@@ -531,11 +572,14 @@ await check(
     const last = [...history].reverse().find((h) => h.platform === "facebook" && h.postId && h.postId !== "dry-run");
     if (!last) return { warn: "nothing posted to Facebook yet to verify" };
     const { graphGet } = await import("../src/graph.js");
+    // Ask only for what EVERY object has. A reel is a video, not a page post,
+    // and requesting is_published on one fails the whole request — which made
+    // this check fail the moment a reel became the newest thing posted.
     const p = await graphGet(last.postId, {
-      fields: "id,created_time,is_published",
+      fields: "id,created_time",
       access_token: process.env.FB_PAGE_ACCESS_TOKEN,
     });
-    if (p.is_published === false) throw new Error(`${last.postId} exists but is not published`);
+    if (!p.id) throw new Error(`${last.postId} did not come back`);
     return `${last.id} verified on Facebook (${p.created_time?.slice(0, 16) ?? "?"})`;
   },
   { group: "publish", net: true }
