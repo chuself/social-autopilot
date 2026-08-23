@@ -535,7 +535,9 @@
       "operra-2026-08-23-08-number-that-lands-2.png",
       "operra-2026-08-23-08-number-that-lands-3.png"
     ],
-    "headline": "Lake-side internet shouldn't stall checkouts"
+    "headline": "Lake-side internet shouldn't stall checkouts",
+    "lastAttempt": "2026-08-23T05:24:44.828Z",
+    "lastSkipReason": "facebook: Graph POST 1049514968255534/photos failed (400): Any of the pages_read_engagement, pages_m; instagram: Graph POST 17841436263903904/media failed (400): Any of the pages_read_engagement, pages_m"
   },
   {
     "id": "operra-2026-08-23-13-client-proof",
