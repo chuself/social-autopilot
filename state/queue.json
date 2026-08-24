@@ -719,13 +719,19 @@
     ],
     "scheduledFor": "2026-08-24T05:00:00.000Z",
     "createdAt": "2026-08-23T18:40:15.905Z",
-    "status": "pending",
+    "status": "posted",
     "slideFiles": [
       "operra-2026-08-24-08-feature-spotlight-1.png",
       "operra-2026-08-24-08-feature-spotlight-2.png",
       "operra-2026-08-24-08-feature-spotlight-3.png"
     ],
-    "headline": "Hesabu za OTA zinapoteza faida yako?"
+    "headline": "Hesabu za OTA zinapoteza faida yako?",
+    "lastAttempt": "2026-08-24T05:35:12.999Z",
+    "postedAt": "2026-08-24T05:35:12.999Z",
+    "postIds": [
+      "facebook:1049514968255534_122142466233351110",
+      "instagram:18109717108828749"
+    ]
   },
   {
     "id": "operra-2026-08-24-13-pain-point",
