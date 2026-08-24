@@ -761,7 +761,20 @@
     ],
     "scheduledFor": "2026-08-24T10:00:00.000Z",
     "createdAt": "2026-08-23T18:41:01.607Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-24-13-pain-point.mp4",
+      "beats": [
+        "Wageni wengi Mwanza?",
+        "Bili na karatasi zinakuchanganya?",
+        "Inafanya kazi mtandao ukiwa hafifu",
+        "Usimamizi rahisi na ufanisi mkubwa"
+      ],
+      "narration": "Msimu wa wageni wengi Mwanza, usipoteze muda na karatasi au kugawanya bili kwa mikono. Operra inarahisisha mapokezi na hesabu papo hapo. Inafanya kazi vizuri kabisa hata mtandao ukiwa wa kusuasua, kwa Kiswahili na Kiingereza. Okoa muda sasa.",
+      "hasVoice": true,
+      "builtAt": "2026-08-24T08:01:36.851Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-24-16-number-that-lands",
