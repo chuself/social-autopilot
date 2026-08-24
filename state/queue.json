@@ -810,7 +810,20 @@
     ],
     "scheduledFor": "2026-08-24T13:00:00.000Z",
     "createdAt": "2026-08-23T18:41:46.398Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-24-16-number-that-lands.mp4",
+      "beats": [
+        "Slow mountain internet ruins guest checkouts.",
+        "Track bookings on low-bandwidth connections.",
+        "Control front desk and housekeeping easily.",
+        "Seamless payments and happier guests."
+      ],
+      "narration": "Don't let weak Tanzanian internet stall your lodge checkouts. Operra keeps your front desk, housekeeping, and payments running smoothly even on low-bandwidth connections. Manage your entire property in English or Kiswahili, ensuring uninterrupted operations and happier guests every day.",
+      "hasVoice": true,
+      "builtAt": "2026-08-24T14:00:05.835Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-24-20-client-proof",
