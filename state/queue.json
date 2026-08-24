@@ -860,6 +860,12 @@
     ],
     "scheduledFor": "2026-08-24T17:00:00.000Z",
     "createdAt": "2026-08-23T18:42:31.247Z",
-    "status": "pending"
+    "status": "posted",
+    "lastAttempt": "2026-08-24T17:27:26.537Z",
+    "postedAt": "2026-08-24T17:27:26.537Z",
+    "postIds": [
+      "facebook:1049514968255534_122142707931351110",
+      "instagram:18152650486507035"
+    ]
   }
 ]
