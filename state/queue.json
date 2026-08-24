@@ -867,5 +867,148 @@
       "facebook:1049514968255534_122142707931351110",
       "instagram:18152650486507035"
     ]
+  },
+  {
+    "id": "operra-2026-08-25-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Msimu wa Peak",
+        "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
+        "body": "Kuhakiki voucher za mawakala wageni wakishafika Arusha kunachelewesha check-in na kuharibu sifa ya hoteli yako."
+      },
+      {
+        "eyebrow": "Ushauri wetu",
+        "headline": "Hakiki voucher za mawakala masaa 24 kabla",
+        "body": "Linganisha viwango vya bei na vyumba vilivyotengwa mapema kabisa. Wageni wakifika, ni kuwapa funguo tu."
+      },
+      {
+        "eyebrow": "Ufumbuzi",
+        "headline": "Operra inarahisisha usimamizi wa mawakala",
+        "body": "Weka bei maalum za mawakala na dhibiti invoice zao kwa usahihi, bila makosa ya hesabu mapokezi."
+      }
+    ],
+    "caption": "Msimu wa watalii Arusha unakuja na presha kubwa mapokezi. Wageni wanatoka safari ndefu, wanataka kupumzika mara moja. Ukianza kuhakiki viwango vya bei vya tour operators na voucher zao wakati wageni wapo kaunta, unatengeneza foleni isiyo na lazima. Ushauri wetu: Hakiki na weka sawa kumbukumbu zote masaa 24 kabla ya kuwasili. Operra inakusaidia kusimamia bei za mawakala na kutoa invoice sahihi kwa urahisi, hata kwenye mtandao wa chini.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelManagement",
+      "Operra",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "An extreme close-up filling the frame of traditional wooden lodge room keys with engraved brass tags resting on a polished timber front desk. Light, high-key, clean tone. Shallow depth of field, fine texture detail. No text, no people, no logos.",
+    "cta": "Rahisisha kazi leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-08-25-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-25T05:00:00.000Z",
+    "createdAt": "2026-08-24T18:52:16.651Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "24"
+    ],
+    "slideFiles": [
+      "operra-2026-08-25-08-swahili-tip-1.png",
+      "operra-2026-08-25-08-swahili-tip-2.png",
+      "operra-2026-08-25-08-swahili-tip-3.png"
+    ],
+    "headline": "Wageni wa safari wamechoka, foleni mapokezi?"
+  },
+  {
+    "id": "operra-2026-08-25-13-industry-note",
+    "eyebrow": "Pricing",
+    "headline": "Zanzibar resorts face rising commission costs",
+    "body": "Shift long-stay guests to direct bookings with instant, multi-currency invoicing that works even on low-bandwidth coastal networks.",
+    "cta": "Simplify your pricing",
+    "caption": "Zanzibar peak season brings longer guest stays but heavier OTA commission bills. Hoteliers are shifting to direct bookings to protect margins.\n\nTo secure these guests, your team needs to send fast, accurate invoices in both USD and TZS. Operra handles multi-currency rates and front desk billing on low-bandwidth coastal connections.\n\nKeep more of your room revenue.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "An extreme close-up of a crisp printed guest folio invoice resting on a light-colored wooden counter next to a polished brass room key. Light, high-key, clean tone. Shallow depth of field, fine texture detail on the paper and wood grain. The details are on the right side of the frame, leaving the left side visually calm with empty light wooden surface. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-25-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-25T10:00:00.000Z",
+    "createdAt": "2026-08-24T18:53:01.356Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-25-16-feature-spotlight",
+    "eyebrow": "Front Desk",
+    "headline": "Run smooth group check-ins during Mwanza peaks",
+    "body": "Assign rooms, split corporate bills, and check in large conference groups in minutes. Keep your lobby clear and guests happy.",
+    "cta": "See how it works",
+    "caption": "Conference season in Mwanza brings large groups all at once. If your front desk is still manually assigning rooms and typing out guest details, check-in stalls.\n\nOperra simplifies group bookings. Allocate blocks of rooms, manage split billing, and register guests on one simple screen. Fast check-ins mean happy corporate guests and a calm lobby.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "An extreme close-up of a stack of blank white hotel keycards on a light wooden reception desk. High-key, clean, bright lighting. Shallow depth of field with sharp focus on the texture of the wooden desk on the right side. The left side of the frame is a soft, out-of-focus neutral wall. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-25-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-25T13:00:00.000Z",
+    "createdAt": "2026-08-24T18:53:46.225Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-25-20-pain-point",
+    "eyebrow": "Mapokezi",
+    "headline": "Mvurugano wa bili za watalii na waongoza njia?",
+    "body": "Tenganisha malipo ya wageni, waongoza njia na wapagazi bila hesabu ngumu. Operra inarahisisha usimamizi wa vikundi vya watalii mapokezi.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Msimu wa kupanda mlima Kilimanjaro ukipamba moto Moshi 🏔️, mapokezi yanajaa haraka. Wageni wamechoka, na unapaswa kutenganisha bili zao na za waongoza njia au wapagazi bila makosa.\n\nKuchelewa au kukosea hesabu kunaharibu sifa ya hotel yako.\n\nOperra inakusaidia kugawanya bili za vyumba na vinywaji kwa urahisi kwenye mfumo unaofanya kazi hata kwenye mtandao wa chini. Wageni wanaondoka kwa wakati, na hesabu zako zinabaki salama.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelManagement",
+      "#TanzaniaTourism",
+      "#Operra"
+    ],
+    "imagePrompt": "Extreme close-up of a metallic hiking carabiner resting on a light-colored wooden reception desk. High-key, clean, bright morning light. Shallow depth of field with fine texture of the brushed metal and wood grain. The left side of the frame is a softly blurred, neutral light wall, leaving empty space for text. The detailed carabiner is positioned right-of-centre. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-25-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-25T17:00:00.000Z",
+    "createdAt": "2026-08-24T18:54:31.413Z",
+    "status": "pending"
   }
 ]
