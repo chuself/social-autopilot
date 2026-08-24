@@ -761,7 +761,7 @@
     ],
     "scheduledFor": "2026-08-24T10:00:00.000Z",
     "createdAt": "2026-08-23T18:41:01.607Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-24-13-pain-point.mp4",
       "beats": [
@@ -773,10 +773,14 @@
       "narration": "Msimu wa wageni wengi Mwanza, usipoteze muda na karatasi au kugawanya bili kwa mikono. Operra inarahisisha mapokezi na hesabu papo hapo. Inafanya kazi vizuri kabisa hata mtandao ukiwa wa kusuasua, kwa Kiswahili na Kiingereza. Okoa muda sasa.",
       "hasVoice": true,
       "builtAt": "2026-08-24T08:01:36.851Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-24T10:34:24.108Z",
+      "postIds": [
+        "instagram:18095550305325262",
+        "facebook:1565863318669047"
+      ]
     },
-    "lastAttempt": "2026-08-24T09:41:50.207Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-08-24T10:34:24.108Z"
   },
   {
     "id": "operra-2026-08-24-16-number-that-lands",
