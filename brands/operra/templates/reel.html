@@ -96,21 +96,57 @@
    */
   window.__reel = { beats: [], duration: 8 };
 
+  /**
+   * Motion style. Every value defaults to what this template has always done,
+   * so a config with no style renders exactly as before — the twelve styles are
+   * additive, not a rewrite of working choreography.
+   */
+  const DEFAULT_STYLE = {
+    enter: "up", exit: "fade", bg: "drift", align: "left",
+    rule: "bar", progress: "top", cta: "rise", pace: 0.4,
+  };
+  function style() { return Object.assign({}, DEFAULT_STYLE, window.__reel.style || {}); }
+
   function ease(x) { return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
   function clamp01(x) { return Math.max(0, Math.min(1, x)); }
 
+  /** Where a beat sits before it arrives, and where it goes as it leaves. */
+  function offsetFor(kind, amount) {
+    switch (kind) {
+      case "down":  return { x: 0, y: -amount, s: 1, b: 0 };
+      case "left":  return { x: -amount * 1.6, y: 0, s: 1, b: 0 };
+      case "right": return { x: amount * 1.6, y: 0, s: 1, b: 0 };
+      case "scale": return { x: 0, y: 0, s: 0.86, b: 0 };
+      case "blur":  return { x: 0, y: amount * 0.3, s: 1, b: 8 };
+      case "shrink":return { x: 0, y: 0, s: 0.94, b: 0 };
+      case "slide": return { x: 0, y: -amount * 0.7, s: 1, b: 0 };
+      case "fade":  return { x: 0, y: 0, s: 1, b: 0 };
+      default:      return { x: 0, y: amount, s: 1, b: 0 };  // "up"
+    }
+  }
+
   window.setFrame = function (t) {
     const { beats, duration } = window.__reel;
+    const st = style();
     const n = beats.length || 1;
     const intro = 0.45;
     const outro = 3.2;
     const body = Math.max(1, duration - outro);
     const per = (body - intro) / n;
 
-    // Background drifts slowly the whole way — motion without distraction.
+    // Background motion — the same slow drift as before unless the style says
+    // otherwise. Always a single continuous move so nothing jumps on a seek.
     const p = clamp01(t / duration);
-    document.getElementById("bg").style.transform =
-      `scale(${1.04 + p * 0.09}) translate3d(${-p * 14}px, ${-p * 22}px, 0)`;
+    const bgEl = document.getElementById("bg");
+    switch (st.bg) {
+      case "zoom-in":   bgEl.style.transform = `scale(${1.02 + p * 0.14})`; break;
+      case "zoom-out":  bgEl.style.transform = `scale(${1.16 - p * 0.13})`; break;
+      case "pan-left":  bgEl.style.transform = `scale(1.12) translate3d(${p * 34}px, 0, 0)`; break;
+      case "pan-right": bgEl.style.transform = `scale(1.12) translate3d(${-p * 34}px, 0, 0)`; break;
+      case "still":     bgEl.style.transform = "scale(1.04)"; break;
+      default:          bgEl.style.transform =
+                          `scale(${1.04 + p * 0.09}) translate3d(${-p * 14}px, ${-p * 22}px, 0)`;
+    }
     document.getElementById("progress").style.width = `${p * 100}%`;
 
     // Header settles in the first half second.
@@ -126,29 +162,69 @@
       const isLast = i === n - 1;
       const start = intro + i * per;
       const local = t - start;
-      let o = 0, y = 26;
+      const from = offsetFor(st.enter, 26);
+      const to = offsetFor(st.exit, 26);
+
+      let o = 0, x = from.x, y = from.y, sc = from.s, bl = from.b;
       if (local >= 0 && (isLast || local < per)) {
-        const inP = ease(clamp01(local / 0.4));
+        const inP = ease(clamp01(local / st.pace));
         const outP = isLast ? 1 : ease(clamp01((per - local) / 0.35));
         o = Math.min(inP, outP);
-        y = (1 - inP) * 26;
+        // Arriving interpolates from `from` to rest; leaving goes on to `to`.
+        x = (1 - inP) * from.x + (1 - outP) * to.x;
+        y = (1 - inP) * from.y + (1 - outP) * to.y;
+        sc = 1 - (1 - inP) * (1 - from.s) - (1 - outP) * (1 - to.s);
+        bl = (1 - inP) * from.b + (1 - outP) * to.b;
       }
       el.style.opacity = o;
-      el.style.transform = `translateY(${y}px)`;
+      el.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${sc})`;
+      el.style.filter = bl > 0.05 ? `blur(${bl}px)` : "none";
     });
 
+    // "grow" draws the rule out rather than fading it in; "none" hides it.
+    const ruleEl = document.getElementById("rule");
     const ruleOn = ease(clamp01((t - intro) / 0.5));
-    document.getElementById("rule").style.opacity = ruleOn * 0.9;
+    if (st.rule === "none") {
+      ruleEl.style.opacity = 0;
+    } else {
+      ruleEl.style.opacity = ruleOn * 0.9;
+      if (st.rule === "grow") ruleEl.style.width = `${ruleOn * 110}px`;
+    }
 
     // The CTA lands for the final beat and stays.
     const c = ease(clamp01((t - (duration - outro)) / 0.55));
-    document.getElementById("cta").style.opacity = c;
-    document.getElementById("cta").style.transform = `translateY(${(1 - c) * 20}px)`;
+    const ctaEl = document.getElementById("cta");
+    ctaEl.style.opacity = c;
+    if (st.cta === "pop") {
+      // Overshoot slightly, then settle — read as arriving rather than sliding.
+      ctaEl.style.transform = `scale(${0.86 + c * 0.17 - Math.max(0, c - 0.82) * 0.17})`;
+    } else if (st.cta === "slide") {
+      ctaEl.style.transform = `translate3d(${(1 - c) * -40}px, 0, 0)`;
+    } else {
+      ctaEl.style.transform = `translateY(${(1 - c) * 20}px)`;
+    }
     document.getElementById("site").style.opacity = c;
   };
 
   window.buildReel = function (config) {
     window.__reel = config;
+    const st = style();
+
+    // Layout choices are set once, here, not per frame — they do not animate.
+    const stage = document.getElementById("stage") || document.body;
+    stage.style.textAlign = st.align === "center" ? "center" : "";
+    if (st.align === "center") {
+      stage.style.alignItems = "center";
+      const eb = document.getElementById("eyebrow");
+      if (eb) eb.style.margin = "0 auto";
+    }
+
+    const bar = document.getElementById("progress");
+    if (bar) {
+      if (st.progress === "none") bar.style.display = "none";
+      else if (st.progress === "bottom") { bar.style.top = "auto"; bar.style.bottom = "0"; }
+    }
+
     const host = document.getElementById("beats");
     host.innerHTML = "";
     config.beats.forEach((text, i) => {
@@ -161,8 +237,21 @@
     const rule = document.createElement("div");
     rule.id = "rule";
     rule.style.position = "absolute";
-    rule.style.left = "90px";
     rule.style.bottom = "-70px";
+    if (st.align === "center") {
+      rule.style.left = "50%";
+      rule.style.transform = "translateX(-50%)";
+    } else {
+      rule.style.left = "90px";
+    }
+    // "dot" is the same element as a square; "grow" is drawn out by setFrame.
+    if (st.rule === "dot") {
+      rule.style.width = "18px";
+      rule.style.height = "18px";
+      rule.style.borderRadius = "50%";
+    } else if (st.rule === "grow") {
+      rule.style.width = "0px";
+    }
     host.appendChild(rule);
     window.setFrame(0);
   };

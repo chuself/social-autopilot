@@ -13,6 +13,7 @@ import { promisify } from "node:util";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { lookForDate } from "./brain.js";
+import { styleFor } from "./reel-styles.js";
 
 const run = promisify(execFile);
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -31,6 +32,14 @@ export async function renderReel(post, brandId, audioFile, outFile) {
   // the same image, not today's rotation.
   const activeLook =
     (brand.looks ?? []).find((l) => l.name === post.look) ?? lookForDate(brand) ?? null;
+
+  // Motion style. Chosen from the post id, never the clock and never random, so
+  // the render stays reproducible; and pinned to whatever was recorded on the
+  // post, so a re-render weeks later reproduces the original exactly — the same
+  // discipline as the visual look above.
+  const motion = styleFor(post.id ?? "operra", post.reelStyle ?? null);
+  post.reelStyle = motion.name;
+  console.log(`  motion style: ${motion.name}`);
   const accent = activeLook?.accent ?? null;
   // A bright background needs less global scrim but a stronger panel behind the
   // text; a near-black one needs the opposite.
@@ -53,7 +62,7 @@ export async function renderReel(post, brandId, audioFile, outFile) {
     await page.goto(pathToFileURL(templatePath).href, { waitUntil: "load" });
 
     await page.evaluate(
-      ({ brand, post, logoUrl, bgUrl, duration, accent, scrim, panel }) => {
+      ({ brand, post, logoUrl, bgUrl, duration, accent, scrim, panel, motion }) => {
         const root = document.documentElement;
         for (const [k, v] of Object.entries(brand.colors)) root.style.setProperty(`--${k}`, v);
         if (accent) root.style.setProperty("--primary", accent);
@@ -71,7 +80,7 @@ export async function renderReel(post, brandId, audioFile, outFile) {
           bg.classList.remove("fallback");
           bg.style.backgroundImage = `url("${bgUrl}")`;
         }
-        window.buildReel({ beats: post.beats ?? [], duration });
+        window.buildReel({ beats: post.beats ?? [], duration, style: motion });
       },
       {
         brand,
@@ -79,6 +88,7 @@ export async function renderReel(post, brandId, audioFile, outFile) {
         accent,
         scrim,
         panel,
+        motion,
         logoUrl: pathToFileURL(path.join(brandDir, brand.logo)).href,
         bgUrl: post.backgroundPath
           ? pathToFileURL(path.resolve(ROOT, post.backgroundPath)).href
