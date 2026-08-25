@@ -997,7 +997,7 @@
     ],
     "scheduledFor": "2026-08-25T13:00:00.000Z",
     "createdAt": "2026-08-24T18:53:46.225Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-25-16-feature-spotlight.mp4",
       "beats": [
@@ -1009,8 +1009,14 @@
       "narration": "Msimu wa wageni wengi Mwanza usikuwekee presha mapokezi. Ukiwa na Operra, unagawa vyumba na kutenganisha bili za vikundi vikubwa kwa dakika chache tu, hata kukiwa na mtandao wa chini. Rahisisha kazi ya mapokezi na ufanye wageni wako wafurahi leo.",
       "hasVoice": true,
       "builtAt": "2026-08-25T13:59:55.060Z",
-      "status": "ready"
-    }
+      "status": "posted",
+      "postedAt": "2026-08-25T14:01:32.692Z",
+      "postIds": [
+        "instagram:18073924286417219",
+        "facebook:1459115799597598"
+      ]
+    },
+    "lastAttempt": "2026-08-25T14:01:32.692Z"
   },
   {
     "id": "operra-2026-08-25-20-pain-point",
