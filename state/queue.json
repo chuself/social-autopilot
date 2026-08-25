@@ -1054,5 +1054,145 @@
       "facebook:1049514968255534_122143206573351110",
       "instagram:17896855104668425"
     ]
+  },
+  {
+    "id": "operra-2026-08-26-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Dar Salaam",
+        "headline": "Corporate checkout rush stalling?",
+        "body": "When business guests queue up, slow internet shouldn't freeze your front desk."
+      },
+      {
+        "eyebrow": "Low Bandwidth",
+        "headline": "Keep moving on any connection",
+        "body": "Operra runs reliably on the low-bandwidth connections common in Tanzanian hotels."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Simplify your corporate checkouts",
+        "body": "Manage your front desk, billing, and reports without network interruptions."
+      }
+    ],
+    "caption": "In Dar es Salaam's fast-paced business hotels, morning checkouts cannot wait for slow internet. When corporate guests need to reach the airport, system lags cost you reputation and future bookings. Operra is designed specifically for East African hospitality, running smoothly on low-bandwidth connections. Manage your front desk, housekeeping, and billing without the interruption. Keep your guests moving.",
+    "hashtags": [
+      "#TanzaniaHospitality",
+      "#DarEsSalaamHotels",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "An extreme close-up filling the frame of a sleek, blank wooden hotel key card resting on a light-colored, finely textured reception counter. Light, high-key, clean tone, shallow depth of field, fine texture detail. No text, no people, no logos.",
+    "cta": "Book a demo",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-08-26-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-26T05:00:00.000Z",
+    "createdAt": "2026-08-25T18:51:02.256Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-08-26-08-number-that-lands-1.png",
+      "operra-2026-08-26-08-number-that-lands-2.png",
+      "operra-2026-08-26-08-number-that-lands-3.png"
+    ],
+    "headline": "Corporate checkout rush stalling?"
+  },
+  {
+    "id": "operra-2026-08-26-13-client-proof",
+    "eyebrow": "Uendeshaji Lodge",
+    "headline": "Lodge za Arusha zinasawazisha idara kwenye mtandao hafifu",
+    "body": "Unganisha mapokezi, housekeeping na POS ya bar. Operra inafanya kazi vizuri hata kwenye mtandao hafifu wa maeneo ya porini.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Msimu wa watalii Arusha unakuja na pilika nyingi, lakini mtandao hafifu wa porini usikwamishe uendeshaji wa lodge yako.\n\nLodge kadhaa mkoani humo zimefuta kabisa changamoto hii kwa kutumia Operra. Mfumo wetu unaziwezesha idara za mapokezi, housekeeping, na bar kufanya kazi kwa pamoja kwa wakati mmoja, hata kukiwa na mtandao wa kusuasua. Kila taarifa inafika salama bila kuchelewesha wageni.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariLodges",
+      "#HotelManagementTanzania"
+    ],
+    "imagePrompt": "An extreme close-up of a rustic, handcrafted wooden key fob with a brass ring, resting on a light-colored, fine-textured stone reception counter. Clean, high-key lighting with a shallow depth of field, focusing sharply on the wood grain and brass texture on the right side of the frame. The left third of the frame is a soft, out-of-focus background of a bright, minimalist hotel lobby, leaving calm empty space. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-26-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-26T10:00:00.000Z",
+    "createdAt": "2026-08-25T18:51:47.190Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-26-16-swahili-tip",
+    "eyebrow": "Resort Revenue",
+    "headline": "Keep long-stay guests direct on Zanzibar",
+    "body": "Offer direct return rates at check-out to bypass high OTA commission fees on their next island visit.",
+    "cta": "See it work",
+    "caption": "When Zanzibar guests extend their stay, don't let them book the extra nights through an OTA. Train your front desk to offer a direct rate right at the desk. Keeping the extension in-house saves on commission and captures the foreign currency value directly. Operra simplifies this by updating your front desk and housekeeping instantly. 🔑",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelOperations",
+      "DirectBookings",
+      "HospitalityTanzania"
+    ],
+    "imagePrompt": "Extreme close-up of a brass room key tag resting on a polished coconut wood reception desk, light high-key clean morning light, shallow depth of field, fine texture detail on the brass, left side visually calm with empty white plaster wall, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-26-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-26T13:00:00.000Z",
+    "createdAt": "2026-08-25T18:52:31.693Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-26-20-industry-note",
+    "eyebrow": "Front Desk",
+    "headline": "Mwanza corporate travel demands faster turnarounds",
+    "body": "Smaller teams in Mwanza must transition rooms quickly between conference guests. Operra keeps housekeeping and reception synchronized.",
+    "cta": "Book a demo",
+    "caption": "Mwanza is seeing a rise in regional business travel, but managing corporate groups with a small team is tough. When a conference arrives, your front desk and housekeeping must work as one. Operra connects your rooms, POS, and billing on a system built to run smoothly even on low-bandwidth connections. Keep your billing accurate.",
+    "hashtags": [
+      "MwanzaHotels",
+      "HotelManagement",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "An extreme close-up of a modern hotel keycard resting on a polished light wood reception desk. High-key, clean morning light. Shallow depth of field, fine wood grain texture detail on the right-of-centre, with the left side of the frame remaining a calm, empty, out-of-focus wood surface. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-26-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-26T17:00:00.000Z",
+    "createdAt": "2026-08-25T18:53:16.741Z",
+    "status": "pending"
   }
 ]
