@@ -948,7 +948,20 @@
     ],
     "scheduledFor": "2026-08-25T10:00:00.000Z",
     "createdAt": "2026-08-24T18:53:01.356Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-25-13-industry-note.mp4",
+      "beats": [
+        "Stop paying commissions",
+        "Secure direct long-stay bookings",
+        "Work on slow coastal networks",
+        "Keep your resort profits"
+      ],
+      "narration": "Tired of high booking commissions eating your Zanzibar resort profits? Switch long-stay guests to direct bookings with instant invoicing. Operra runs perfectly on low-bandwidth coastal connections, giving you full control in English or Kiswahili.",
+      "hasVoice": true,
+      "builtAt": "2026-08-25T07:47:34.564Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-25-16-feature-spotlight",
