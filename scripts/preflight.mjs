@@ -383,7 +383,38 @@ await check(
     }
     return { warn: `${held.length} waiting on your decision, oldest ${hours.toFixed(0)}h` };
   },
-  { group: "content", level: "warn" }
+  // NOT level:"warn". Registering it that way turned the >24h escalation back
+  // into a warning, so a post that had been stuck for a day and a half was
+  // reported in the same tone as a post held for ten minutes.
+  { group: "content" }
+);
+
+// A held post whose buttons do not resolve cannot be approved at all.
+//
+// The digest registers its button tokens in state/actions.json and then the
+// runner is destroyed. plan.yml was not committing that file, so every Approve
+// button it ever sent was dead on arrival: the owner tapped it, the listener
+// looked the token up, found nothing, and said "that button has expired".
+// A whole post was lost to this, and it looked like the owner being slow.
+await check(
+  "held posts have working buttons",
+  async () => {
+    const queue = await readState("queue.json", []);
+    const held = queue.filter((p) => p.status === "needs-review");
+    if (!held.length) return "nothing held";
+
+    const actions = await readState("actions.json", {});
+    const targets = new Set(Object.values(actions).map((a) => a.postId).filter(Boolean));
+    const orphans = held.filter((p) => !targets.has(p.id));
+
+    if (orphans.length) {
+      throw new Error(
+        `${orphans.length} held with no button that resolves — ${orphans[0].id} cannot be approved`
+      );
+    }
+    return `${held.length} held, all answerable`;
+  },
+  { group: "content" }
 );
 
 // Did today actually produce what the routine promises? Every other check looks

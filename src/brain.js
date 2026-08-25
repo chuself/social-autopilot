@@ -344,6 +344,16 @@ Hashtags may stay in English where that is what people actually search.`
  * The invented-statistic guard. An unattended LLM will eventually make up a number;
  * anything numeric that is not in facts.md gets the post held for review.
  */
+/**
+ * Time words in both languages. A number sitting next to one of these is
+ * describing WHEN, not claiming anything: "masaa 24 kabla", "within 48 hours",
+ * "siku 3", "24/7". Holding those cost a real post — a Kiswahili carousel sat
+ * unpublished for a day and a half over the 24 in "masaa 24 kabla".
+ */
+const TIME_WORDS =
+  "hours?|hrs?|minutes?|mins?|seconds?|secs?|days?|weeks?|months?|years?|" +
+  "saa|masaa|dakika|sekunde|siku|wiki|mwezi|miezi|mwaka|miaka";
+
 export async function findUnapprovedFigures(post, brandId = "operra") {
   const factsPath = path.join(ROOT, "brands", brandId, "facts.md");
   const facts = existsSync(factsPath) ? await readFile(factsPath, "utf8") : "";
@@ -354,10 +364,28 @@ export async function findUnapprovedFigures(post, brandId = "operra") {
 
   return [...new Set(found.map((f) => f.trim()))].filter((f) => {
     const bare = f.replace(/%$/, "").trim();
+
+    // These are the reasons the guard exists — an invented price, percentage or
+    // statistic. Never exempt them, whatever surrounds them: in "20% off for 3
+    // days" the 20% is still a claim and the 3 is not.
+    const isPercent = f.includes("%");
+    const money = new RegExp(`(TZS|TSH|KSH|USD|\\$|shilingi|elfu|milioni)\\s*${escapeRe(bare)}|${escapeRe(bare)}\\s*(TZS|TSH|KSH|USD|/=|shilingi|elfu|milioni)`, "i");
+    if (isPercent || money.test(text)) return true;
+
     if (approved.has(bare)) return false;
     // A bare year or a small count reads as prose, not a claim.
     if (/^(19|20)\d{2}$/.test(bare)) return false;
-    if (/^\d$/.test(bare) && !f.includes("%")) return false;
+    if (/^\d$/.test(bare)) return false;
+    // "24/7" is an idiom, not a measurement.
+    if (new RegExp(`${escapeRe(bare)}\\s*/\\s*7\\b`).test(text)) return false;
+    // A number touching a time word is saying WHEN, not how much.
+    if (new RegExp(`(${TIME_WORDS})\\s*${escapeRe(bare)}\\b|\\b${escapeRe(bare)}\\s*(${TIME_WORDS})\\b`, "i").test(text)) {
+      return false;
+    }
     return true;
   });
+}
+
+function escapeRe(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }

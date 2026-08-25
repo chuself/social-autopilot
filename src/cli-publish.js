@@ -19,7 +19,8 @@ import { commentOn } from "./publish/comment.js";
 import { readConfig } from "./config.js";
 import { readFile as readFileAsync } from "node:fs/promises";
 import {
-  readQueue, writeQueue, duePosts, stalePosts, hoursLate, noteSkip, clearSkip, MAX_LATE_HOURS,
+  readQueue, writeQueue, duePosts, stalePosts, heldTooLong, hoursLate, noteSkip, clearSkip,
+  MAX_LATE_HOURS, HELD_MAX_HOURS,
 } from "./queue.js";
 import { notify } from "./notify.js";
 import {
@@ -62,6 +63,23 @@ if (stale.length && !dryRun) {
   await notify(
     `⏰ <b>${stale.length} missed</b> — over ${MAX_LATE_HOURS}h late, closed rather than posted at the wrong hour\n` +
       stale.map((p) => `• ${clip(p.headline ?? p.id, 45)}`).join("\n")
+  );
+}
+
+// A post waiting on a human is excluded from the staleness sweep above, which
+// is right — but nothing was closing it either, so a held post sat for thirty
+// hours with no chase and no ending. Give the decision a deadline of its own.
+const abandoned = queue ? heldTooLong(queue) : [];
+if (abandoned.length && !dryRun) {
+  for (const p of abandoned) {
+    p.status = "missed";
+    p.missedAt = new Date().toISOString();
+    console.log(`  MISSED ${p.id} — held ${hoursLate(p).toFixed(0)}h with no decision`);
+  }
+  await writeQueue(queue);
+  await notify(
+    `⏰ <b>${abandoned.length} closed unanswered</b> — held more than ${HELD_MAX_HOURS}h waiting for a yes or no\n` +
+      abandoned.map((p) => `• ${clip(p.headline ?? p.id, 45)}`).join("\n")
   );
 }
 

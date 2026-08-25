@@ -63,7 +63,7 @@ jobs:
         run: |
           bash scripts/push-state.sh "chore: plan week [skip ci]" \
             public state/bg state/queue.json state/top-performers.json \
-            state/pillar-scores.json state/config.json
+            state/pillar-scores.json state/config.json state/actions.json
 
       # The posters must be publicly reachable before publish day, because
       # Instagram fetches the image URL server-side.

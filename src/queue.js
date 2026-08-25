@@ -124,6 +124,44 @@ export function whyWaiting(post, now = new Date()) {
   return `${late} · nothing has tried to publish it yet`;
 }
 
+/**
+ * How long a post may sit waiting for a human before its slot is written off.
+ *
+ * Longer than MAX_LATE_HOURS on purpose: a held post is waiting on a person,
+ * and people sleep. An overnight hold should survive until morning. But it must
+ * not sit for ever, which is exactly what happened — a carousel was held on a
+ * false-positive figure and was still sitting there thirty hours later with
+ * nothing chasing it.
+ */
+export const HELD_MAX_HOURS = Number(process.env.HELD_MAX_HOURS ?? 14);
+
+/** Held posts whose slot is so far gone that the decision no longer matters. */
+export function heldTooLong(queue, now = new Date()) {
+  return queue.filter(
+    (p) => p.status === "needs-review" && p.scheduledFor && hoursLate(p, now) > HELD_MAX_HOURS
+  );
+}
+
+/**
+ * The next slot with nothing in it, for a post approved after its own slot
+ * passed. "I was late to allow it" should move the post, not lose it.
+ */
+export function nextFreeSlot(queue, config, now = new Date()) {
+  const taken = new Set(
+    queue.filter((p) => p.status !== "reject" && p.status !== "missed").map((p) => p.scheduledFor)
+  );
+  for (let day = 0; day <= 2; day++) {
+    for (const slot of [...(config.slots ?? [])].sort((a, b) => a.hour - b.hour)) {
+      const when = new Date(now);
+      when.setDate(when.getDate() + day);
+      when.setUTCHours(slot.hour - 3, 0, 0, 0); // EAT is UTC+3, no DST
+      if (when <= now) continue;
+      if (!taken.has(when.toISOString())) return { when, format: slot.format };
+    }
+  }
+  return null;
+}
+
 export function hoursLate(post, now = new Date()) {
   if (!post.scheduledFor) return 0;
   return (now - new Date(post.scheduledFor)) / 3600_000;

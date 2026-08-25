@@ -406,12 +406,38 @@ async function applyDecision(action) {
   switch (action.verb) {
     // ── the approval flow, shared by photos and the nightly digest ──────────
     case "approve": {
+      const { hoursLate, nextFreeSlot, MAX_LATE_HOURS } = await import("./queue.js");
       const queue = await readQueue();
       const post = queue.find((p) => p.id === action.postId);
       if (!post) return { toast: "That post is gone." };
       post.status = "pending";
       post.approvedAt = new Date().toISOString();
       delete post.heldFigures;
+
+      // Approving after the slot has gone used to be silently useless: the post
+      // flipped to pending, the publisher skipped it for being too late, and
+      // the staleness sweep then closed it as missed. "I was late to allow it"
+      // should MOVE the post, not lose it.
+      const late = hoursLate(post);
+      if (late > MAX_LATE_HOURS) {
+        const cfg = await readConfig();
+        const slot = nextFreeSlot(queue, cfg);
+        if (!slot) {
+          await writeQueue(queue);
+          return {
+            toast: "Approved, but its slot has gone",
+            say: `✅ Approved, but that slot passed ${Math.round(late)}h ago and every upcoming slot is taken. Send /replan if you want room made for it.`,
+          };
+        }
+        post.scheduledFor = slot.when.toISOString();
+        delete post.lastSkipReason;
+        await writeQueue(queue);
+        return {
+          toast: "Approved — moved to the next free slot",
+          say: `✅ Approved. Its own slot passed ${Math.round(late)}h ago, so I moved it to <b>${shortWhenSafe(post)}</b>.`,
+        };
+      }
+
       await writeQueue(queue);
       return { toast: "Approved", say: `✅ Approved — <b>${escapeHtml(clip(post.headline ?? post.id, 45))}</b> goes out at ${shortWhenSafe(post)}.` };
     }
