@@ -948,7 +948,7 @@
     ],
     "scheduledFor": "2026-08-25T10:00:00.000Z",
     "createdAt": "2026-08-24T18:53:01.356Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-25-13-industry-note.mp4",
       "beats": [
@@ -960,10 +960,14 @@
       "narration": "Tired of high booking commissions eating your Zanzibar resort profits? Switch long-stay guests to direct bookings with instant invoicing. Operra runs perfectly on low-bandwidth coastal connections, giving you full control in English or Kiswahili.",
       "hasVoice": true,
       "builtAt": "2026-08-25T07:47:34.564Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-25T10:28:01.121Z",
+      "postIds": [
+        "instagram:18457571221138184",
+        "facebook:2506266513171327"
+      ]
     },
-    "lastAttempt": "2026-08-25T09:31:13.064Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-08-25T10:28:01.121Z"
   },
   {
     "id": "operra-2026-08-25-16-feature-spotlight",
