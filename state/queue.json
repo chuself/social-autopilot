@@ -961,7 +961,9 @@
       "hasVoice": true,
       "builtAt": "2026-08-25T07:47:34.564Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-08-25T07:47:47.248Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-08-25-16-feature-spotlight",
