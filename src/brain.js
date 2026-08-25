@@ -144,6 +144,12 @@ export async function writeCarousel({ brandId = "operra", pillar, recent = [], l
   const recentLines =
     recent.slice(0, 40).map((r) => `- ${r.headline}`).join("\n") || "- (nothing yet)";
 
+  // Same trick as the headline list, applied to what was PHOTOGRAPHED.
+  const subjectLines =
+    [...new Set(recent.slice(0, 14).map((r) => subjectOf(r.imagePrompt)).filter(Boolean))]
+      .map((x) => `- ${x}`)
+      .join("\n") || "- (nothing yet)";
+
   const post = await completeJson(
     `You write social carousels for ${brand.name} — ${brand.tagline} (${brand.site}).
 The audience is hotel owners and managers in Tanzania and East Africa.
@@ -156,6 +162,17 @@ ${facts}
 
 ## Already posted — do not repeat these angles
 ${recentLines}
+
+## Backgrounds already used — pick something GENUINELY different
+${subjectLines}
+
+Do not reuse any subject above. Do NOT default to keys, keycards, a reception
+desk or a front counter unless this post is specifically about checking in —
+that is the rut this account falls into. The subject must come from what THIS
+post is actually about: weak wifi shows a router or cabling; a billing mix-up
+shows a printed folio or a calculator; group arrivals show luggage tags or a
+coach; long stays show laundry or a kettle; corporate guests show a lanyard or
+a meeting room; seasons show a wall calendar or weather.
 
 ## Your task
 Write ONE carousel for the pillar: **${pillar}**.
@@ -269,6 +286,12 @@ export async function writePost({ brandId = "operra", pillar, recent = [], langu
     .map((r) => `- [${r.pillar}] ${r.headline}`)
     .join("\n") || "- (nothing yet)";
 
+  // Same trick as the headline list, applied to what was PHOTOGRAPHED.
+  const subjectLines =
+    [...new Set(recent.slice(0, 14).map((r) => subjectOf(r.imagePrompt)).filter(Boolean))]
+      .map((x) => `- ${x}`)
+      .join("\n") || "- (nothing yet)";
+
   const prompt = `You write social posts for ${brand.name} — ${brand.tagline} (${brand.site}).
 The audience is hotel owners and managers in Tanzania and East Africa.
 
@@ -282,6 +305,17 @@ ${facts}
 
 ## Already posted — do not repeat these angles
 ${recentLines}
+
+## Backgrounds already used — pick something GENUINELY different
+${subjectLines}
+
+Do not reuse any subject above. Do NOT default to keys, keycards, a reception
+desk or a front counter unless this post is specifically about checking in —
+that is the rut this account falls into. The subject must come from what THIS
+post is actually about: weak wifi shows a router or cabling; a billing mix-up
+shows a printed folio or a calculator; group arrivals show luggage tags or a
+coach; long stays show laundry or a kettle; corporate guests show a lanyard or
+a meeting room; seasons show a wall calendar or weather.
 
 ## Your task
 Write ONE post for the pillar: **${pillar}**.
@@ -354,6 +388,32 @@ const TIME_WORDS =
   "hours?|hrs?|minutes?|mins?|seconds?|secs?|days?|weeks?|months?|years?|" +
   "saa|masaa|dakika|sekunde|siku|wiki|mwezi|miezi|mwaka|miaka";
 
+/**
+ * The SUBJECT of an image prompt: the opening clause, before all the styling.
+ *
+ * Used to show the writer what it has already photographed. Without this it
+ * only ever saw previous headlines, so it avoided repeating an angle while
+ * drawing a key on a reception desk six posts in a row.
+ */
+export function subjectOf(imagePrompt) {
+  if (!imagePrompt) return null;
+  let t = String(imagePrompt).trim();
+
+  // Strip the photographic lead-in. Composition and tone come from the LOOK and
+  // are identical across every post in a rotation block, so leaving them in
+  // shows the writer fourteen near-identical lines and hides the one thing that
+  // matters — the object.
+  t = t.replace(
+    /^(an?|the)?\s*(dramatic|moody|bright|soft|clean|high-key|low-key)?\s*(extreme\s+|tight\s+|super\s+)?(close-?up|macro|flat-?lay|overhead(\s+flat-?lay)?|wide(\s+shot)?|aerial|top-down)\b[^a-z0-9]*((looking\s+)?(straight\s+)?(down\s+)?(onto|of|on|at)\b)?\s*/i,
+    ""
+  );
+  t = t.replace(/^filling the frame(\s+of)?\s*/i, "");
+  t = t.replace(/^(an?|the)\s+/i, "");
+
+  // Keep the object, not the lighting essay that follows it.
+  const out = t.split(/\s+/).filter(Boolean).slice(0, 9).join(" ").replace(/[,;:.]+$/, "").trim();
+  return out || null;
+}
 export async function findUnapprovedFigures(post, brandId = "operra") {
   const factsPath = path.join(ROOT, "brands", brandId, "facts.md");
   const facts = existsSync(factsPath) ? await readFile(factsPath, "utf8") : "";
