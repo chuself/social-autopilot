@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-08-26T09:36:35.141Z"
+    "missedAt": "2026-08-26T10:31:13.397Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1139,7 +1139,7 @@
     ],
     "scheduledFor": "2026-08-26T10:00:00.000Z",
     "createdAt": "2026-08-25T18:51:47.190Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-26-13-client-proof.mp4",
       "beats": [
@@ -1151,10 +1151,14 @@
       "narration": "Mtandao hafifu porini usikuzuie kuendesha lodge yako. Operra inaunganisha mapokezi, housekeeping na POS ya bar hata kwenye mtandao mdogo. Rahisisha usimamizi wa idara zote na ripoti kwa Kiswahili au Kiingereza bila kukwama.",
       "hasVoice": true,
       "builtAt": "2026-08-26T07:51:12.791Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-26T10:32:25.891Z",
+      "postIds": [
+        "instagram:18264648967305853",
+        "facebook:1555931532677069"
+      ]
     },
-    "lastAttempt": "2026-08-26T09:36:35.207Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-08-26T10:32:25.891Z"
   },
   {
     "id": "operra-2026-08-26-16-swahili-tip",
