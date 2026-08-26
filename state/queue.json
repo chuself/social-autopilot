@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-08-26T16:14:52.598Z"
+    "missedAt": "2026-08-26T18:54:45.827Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1238,6 +1238,12 @@
     ],
     "scheduledFor": "2026-08-26T17:00:00.000Z",
     "createdAt": "2026-08-25T18:53:16.741Z",
-    "status": "pending"
+    "status": "posted",
+    "lastAttempt": "2026-08-26T18:55:14.232Z",
+    "postedAt": "2026-08-26T18:55:14.232Z",
+    "postIds": [
+      "facebook:1049514968255534_122143616805351110",
+      "instagram:18628538767002576"
+    ]
   }
 ]
