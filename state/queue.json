@@ -1152,7 +1152,9 @@
       "hasVoice": true,
       "builtAt": "2026-08-26T07:51:12.791Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-08-26T07:51:23.650Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-08-26-16-swahili-tip",
