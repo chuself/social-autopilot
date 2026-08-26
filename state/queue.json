@@ -1139,7 +1139,20 @@
     ],
     "scheduledFor": "2026-08-26T10:00:00.000Z",
     "createdAt": "2026-08-25T18:51:47.190Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-26-13-client-proof.mp4",
+      "beats": [
+        "Mtandao hafifu porini?",
+        "Unganisha idara zote kwa urahisi.",
+        "Inafanya kazi kwenye mtandao mdogo.",
+        "Uendeshaji wa lodge bila usumbufu."
+      ],
+      "narration": "Mtandao hafifu porini usikuzuie kuendesha lodge yako. Operra inaunganisha mapokezi, housekeeping na POS ya bar hata kwenye mtandao mdogo. Rahisisha usimamizi wa idara zote na ripoti kwa Kiswahili au Kiingereza bila kukwama.",
+      "hasVoice": true,
+      "builtAt": "2026-08-26T07:51:12.791Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-26-16-swahili-tip",
