@@ -1189,7 +1189,7 @@
     ],
     "scheduledFor": "2026-08-26T13:00:00.000Z",
     "createdAt": "2026-08-25T18:52:31.693Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-26-16-swahili-tip.mp4",
       "beats": [
@@ -1201,8 +1201,14 @@
       "narration": "Epuka kulipa kamisheni kubwa kwa mawakala wa mtandaoni. Kupitia Operra, wape wageni wako wa Zanzibar ofa maalum ya kurudi moja kwa moja wanapoondoka. Mfumo wetu unafanya kazi vizuri hata kwenye mtandao hafifu, ukisimamia mapokezi na hesabu ili uongeze faida ya hoteli yako.",
       "hasVoice": true,
       "builtAt": "2026-08-26T14:03:56.171Z",
-      "status": "ready"
-    }
+      "status": "posted",
+      "postedAt": "2026-08-26T14:06:19.303Z",
+      "postIds": [
+        "instagram:17861725266675310",
+        "facebook:1090839823477813"
+      ]
+    },
+    "lastAttempt": "2026-08-26T14:06:19.303Z"
   },
   {
     "id": "operra-2026-08-26-20-industry-note",
