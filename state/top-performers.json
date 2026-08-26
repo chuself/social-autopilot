@@ -1,5 +1,19 @@
 [
   {
+    "id": "operra-2026-08-26-08-number-that-lands",
+    "platform": "facebook",
+    "pillar": "number-that-lands",
+    "headline": "Corporate checkout rush stalling?",
+    "likes": 1,
+    "comments": 1,
+    "shares": 0,
+    "engagement": 6,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
     "id": "operra-2026-08-23-08-number-that-lands",
     "platform": "facebook",
     "pillar": "number-that-lands",
@@ -28,28 +42,14 @@
     ]
   },
   {
-    "id": "operra-2026-08-21-08-number-that-lands",
-    "platform": "instagram",
-    "pillar": "number-that-lands",
-    "headline": "Every price change and payment tracked in one place",
-    "likes": 2,
-    "comments": 0,
-    "engagement": 4,
-    "platforms": [
-      "instagram",
-      "facebook",
-      "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-08-22-20-pain-point",
+    "id": "operra-2026-08-25-20-pain-point",
     "platform": "facebook",
     "pillar": "pain-point",
-    "headline": "Track multi-currency bookings without the math",
+    "headline": "Mvurugano wa bili za watalii na waongoza njia?",
     "likes": 0,
     "comments": 1,
     "shares": 0,
-    "engagement": 4,
+    "engagement": 5,
     "platforms": [
       "facebook",
       "instagram"

@@ -1245,5 +1245,144 @@
       "facebook:1049514968255534_122143616805351110",
       "instagram:18628538767002576"
     ]
+  },
+  {
+    "id": "operra-2026-08-27-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Msimu wa Moshi",
+        "headline": "Bei za vyumba zinachanganya mapokezi?",
+        "body": "Msimu wa kupanda mlima ukianza, bei kubadilika kienyeji kunapoteza faida yako mapokezi."
+      },
+      {
+        "eyebrow": "Udhibiti wa bei",
+        "headline": "Bei za msimu zinasasishwa kiotomatiki",
+        "body": "Weka bei tofauti za peak na low season mapema. Mfumo unabadilisha zenyewe bila makosa."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Linda faida yako ya msimu",
+        "body": "Hakuna kupoteza mapato kwa makosa ya bei mapokezi wakati wa msimu wa wageni Moshi."
+      }
+    ],
+    "caption": "Msimu wa wageni wa Kili unapoanza Moshi, bei za vyumba zinabadilika haraka. Kama mapokezi bado wanakariri au kuangalia bei kwenye karatasi, makosa hayataepukika. Operra inakuwezesha kuweka bei zako za msimu mapema, na mfumo unazibadilisha kiotomatiki tarehe ikifika. Hakuna bei ya low-season inayotumika kimakosa wakati wa peak season. Linda kila senti ya hoteli yako.",
+    "hashtags": [
+      "HotelManagementTanzania",
+      "MoshiHotels",
+      "Operra"
+    ],
+    "imagePrompt": "A minimal line drawing of a classic trekking backpack on a plain, warm off-white field, lots of empty space. Flat graphic style, not a photograph. Thin strokes, single muted slate blue colour. No text, no people, no logos.",
+    "cta": "Anza na Operra",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "backgroundPath": "state/bg/operra-2026-08-27-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-27T05:00:00.000Z",
+    "createdAt": "2026-08-26T19:58:17.240Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-08-27-08-feature-spotlight-1.png",
+      "operra-2026-08-27-08-feature-spotlight-2.png",
+      "operra-2026-08-27-08-feature-spotlight-3.png"
+    ],
+    "headline": "Bei za vyumba zinachanganya mapokezi?"
+  },
+  {
+    "id": "operra-2026-08-27-13-pain-point",
+    "eyebrow": "Bili za Makampuni",
+    "headline": "Invoices za makampuni zinachelewa kutumwa?",
+    "body": "Kutenganisha bili za kampuni na matumizi binafsi ya mgeni asubuhi husababisha foleni mapokezi na ucheleweshaji wa malipo.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Asubuhi Dar es Salaam, wageni wa makampuni wanawahi mikutano huku mapokezi wakihangaika kutofautisha bili ya chumba na matumizi ya ziada. LPO haionekani na majumuisho yanachukua muda.\n\nOperra inatenganisha bili za kampuni na za binafsi papo hapo wakati wa check-in. Invoice kamili inakuwa tayari mgeni anapochek-out bila kuchelewesha malipo yako.\n\nPunguza foleni na uokoe muda.",
+    "hashtags": [
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#OperraTech"
+    ],
+    "imagePrompt": "Minimal line drawing of a corporate ID lanyard and a folded invoice sheet placed on the right side of a plain field, lots of empty space. Flat graphic, not a photograph, thin strokes, single muted slate blue colour. Detail positioned on the right third, leaving the left side completely empty. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-27-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-27T10:00:00.000Z",
+    "createdAt": "2026-08-26T19:59:28.841Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-27-16-number-that-lands",
+    "eyebrow": "Connectivity",
+    "headline": "6 core departments running on low bandwidth",
+    "body": "Keep front desk, housekeeping, POS, pricing, reports, and audit trails moving even on slow safari lodge connections.",
+    "cta": "Request a demo",
+    "caption": "Safari season in Arusha means back-to-back guest arrivals and instant billing demands. You cannot afford to let slow local networks stall your desk.\n\nOperra runs all 6 essential areas—from POS to audit trails—on the low-bandwidth connections common in Tanzanian properties. Keep your lodge fully coordinated without needing high-speed fiber.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelManagement",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "Minimal line drawing of a modern internet router with two small antennas, positioned on the right side of a plain light beige background. Flat graphic, thin black strokes, single muted colour. Lots of empty space on the left. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-27-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-27T13:00:00.000Z",
+    "createdAt": "2026-08-26T20:00:13.726Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-27-20-client-proof",
+    "eyebrow": "Operations",
+    "headline": "Zanzibar resort syncs beach bar and front desk",
+    "body": "Running front desk, housekeeping, and POS on a single low-bandwidth connection.",
+    "cta": "See it work",
+    "caption": "Unstable coastal internet shouldn't delay checkouts. Resorts in Zanzibar are using Operra to sync their front desk, housekeeping, and beach-side POS on a single low-bandwidth connection. Every drink at the bar instantly hits the guest folio. No missed bills, no manual math at checkout.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelOperations",
+      "Operra"
+    ],
+    "imagePrompt": "Minimal line drawing of a tropical cocktail glass with a slice of lime next to a clean receipt printer roll, flat graphic on a plain light sand-colored background, thin strokes, single muted brown colour, left side visually calm, lots of empty space, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-27-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-27T17:00:00.000Z",
+    "createdAt": "2026-08-26T20:01:00.937Z",
+    "status": "pending"
   }
 ]
