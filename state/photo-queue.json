@@ -6,6 +6,11 @@
     "caption": null,
     "brand": "operra",
     "receivedAt": "2026-08-27T09:13:11.153Z",
-    "status": "new"
+    "status": "offered",
+    "mediaId": "operra-mtbb32kp-f9bc",
+    "mediaPath": "state/media/operra/operra-mtbb32kp-f9bc.png",
+    "subject": "unmade bed with clothing",
+    "why": "Messy environment matches low bandwidth/disorganized theme.",
+    "offeredPostId": "operra-2026-08-27-16-number-that-lands"
   }
 ]
