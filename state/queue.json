@@ -1374,7 +1374,20 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-08-27T22:35:00.631Z"
+    "missedAt": "2026-08-27T22:35:00.631Z",
+    "reel": {
+      "file": "operra-2026-08-27-16-number-that-lands.mp4",
+      "beats": [
+        "Slow lodge internet?",
+        "Run core departments smoothly.",
+        "In English and Kiswahili.",
+        "Flawless remote property operations."
+      ],
+      "narration": "Managing a Tanzanian property on low bandwidth is tough. Operra keeps your front desk, housekeeping, POS, pricing, reports, and audit trails moving seamlessly. Switch easily between Kiswahili and English to keep your remote safari lodge running perfectly.",
+      "hasVoice": true,
+      "builtAt": "2026-08-27T22:59:44.063Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-27-20-client-proof",
