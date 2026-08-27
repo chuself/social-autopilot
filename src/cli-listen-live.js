@@ -83,7 +83,12 @@ while (Date.now() < deadline) {
     const isPhoto = Boolean(msg?.photo?.length || msg?.document);
     if (!cbq && !isPhoto && !msg?.text) continue;
 
-    const sentAt = (cbq?.message?.date ?? msg?.date ?? Date.now() / 1000) * 1000;
+    // For a button, cbq.message.date is when the BOT posted the message the
+    // button sits on — not when it was tapped. Measuring from it produced log
+    // lines like "button — answered in 40180.6s", which reads as an eleven-hour
+    // outage and is really someone deciding overnight. Telegram gives no tap
+    // time, so a button is timed from when we picked it up.
+    const sentAt = cbq ? Date.now() : (msg?.date ?? Date.now() / 1000) * 1000;
     const label = cbq ? "button" : isPhoto ? "photo" : `"${msg.text.slice(0, 50)}"`;
 
     try {

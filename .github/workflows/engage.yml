@@ -10,7 +10,12 @@ on:
         description: "1 = classify and log, reply to nothing"
         default: "0"
 
-concurrency: autopilot-state
+# NOT autopilot-state. That group exists to serialise writes to state/queue.json
+# and engage never touches it — it writes replied, our-comments, leads and
+# alerts. Sharing the lock only meant engage queued behind publish and got
+# cancelled, which is exactly what happened the first time the heartbeat fired
+# them together.
+concurrency: autopilot-engage
 
 jobs:
   engage:

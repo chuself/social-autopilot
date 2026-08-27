@@ -28,12 +28,21 @@ const run = promisify(execFile);
 const ROOT = path.resolve(import.meta.dirname, "..");
 const REPO = process.env.GITHUB_REPOSITORY ?? "chuself/social-autopilot";
 
-/** How often each job should run, in minutes, when its own condition is met. */
+/**
+ * How often each job should run, in minutes, when its own condition is met.
+ *
+ * `queueWriter` matters: publish, reel and plan all rewrite state/queue.json and
+ * share the `autopilot-state` concurrency group, and GitHub keeps only ONE
+ * pending run per group — a second queued run cancels the first. The very first
+ * heartbeat dispatched publish, engage and reel three seconds apart and engage
+ * was cancelled on the spot. So only one queue writer goes out per tick; the
+ * next tick is forty-five seconds away and will send the next.
+ */
 const JOBS = [
-  { workflow: "publish", everyMin: 60 },
+  { workflow: "publish", everyMin: 60, queueWriter: true },
   { workflow: "engage", everyMin: 30 },
-  { workflow: "reel", everyMin: 150, when: reelNeeded },
-  { workflow: "plan-week", everyMin: 360, when: planNeeded },
+  { workflow: "reel", everyMin: 150, when: reelNeeded, queueWriter: true },
+  { workflow: "plan-week", everyMin: 360, when: planNeeded, queueWriter: true },
 ];
 
 /** When each workflow last actually started, straight from GitHub. */
@@ -65,9 +74,13 @@ export async function lastRunTimes() {
  */
 export async function heartbeat(seen, { dispatch, now = Date.now() } = {}) {
   const fired = [];
+  let queueWriterSent = false;
+
   for (const job of JOBS) {
     const last = seen[job.workflow] ?? 0;
     if (now - last < job.everyMin * 60_000) continue;
+    // One queue writer per tick, or they cancel each other on the shared lock.
+    if (job.queueWriter && queueWriterSent) continue;
     if (job.when && !(await job.when(now))) continue;
 
     const ok = await dispatch(job.workflow);
@@ -75,6 +88,7 @@ export async function heartbeat(seen, { dispatch, now = Date.now() } = {}) {
     if (ok) {
       seen[job.workflow] = now;
       fired.push(job.workflow);
+      if (job.queueWriter) queueWriterSent = true;
     }
   }
   return fired;
