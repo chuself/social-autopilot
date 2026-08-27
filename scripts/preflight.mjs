@@ -443,11 +443,21 @@ await check(
 
     if (!due) return "nothing owed yet today";
     if (out.size >= due) return `${out.size} out, ${due} owed by ${eatHour}:00 EAT`;
-    return {
-      warn: `${out.size} out but ${due} owed by ${eatHour}:00 EAT — ${due - out.size} slot(s) produced nothing`,
-    };
+
+    const short = due - out.size;
+    // One slot behind can be a slot mid-flight. Two or more, or a whole day
+    // with nothing at all, is the account having gone quiet — which is what
+    // happened when GitHub stopped firing the crons and Alice posted nothing
+    // for a day while every individual check still passed.
+    if (out.size === 0 && due >= 2) {
+      throw new Error(`NOTHING has gone out today and ${due} slots are past — the account is silent`);
+    }
+    if (short >= 2) {
+      throw new Error(`${out.size} out but ${due} owed by ${eatHour}:00 EAT — ${short} slots produced nothing`);
+    }
+    return { warn: `${out.size} out, ${due} owed by ${eatHour}:00 EAT — 1 slot behind` };
   },
-  { group: "content", level: "warn" }
+  { group: "content" }
 );
 
 // The planner runs at 21:00 for tomorrow. If it failed, the queue is empty and

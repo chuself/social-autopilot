@@ -16,6 +16,7 @@ import path from "node:path";
 import {
   botToken, readOffset, writeOffset, fetchUpdates, handleMessage, handlePhoto, handleCallback, REPLAN,
 } from "./inbox.js";
+import { heartbeat, lastRunTimes } from "./heartbeat.js";
 
 const run = promisify(execFile);
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -32,7 +33,26 @@ const POLL_SECONDS = Number(process.env.POLL_SECONDS ?? 45);
 console.log(`listening for ${minutes} minutes (long poll ${POLL_SECONDS}s)…`);
 let handled = 0;
 
+// This job is the only clock that reliably ticks: GitHub throttles `schedule:`
+// and on 27 August stopped firing it almost entirely — publish ran twice
+// instead of twenty-four times and reel not at all, so Alice posted nothing all
+// day. `workflow_dispatch` is not throttled, and this process is already alive
+// around the clock, so it drives the rest. The crons stay as the resurrection
+// path. Seeded from GitHub so a cron that DID fire is never duplicated.
+const seen = process.env.GITHUB_ACTIONS ? await lastRunTimes() : {};
+if (process.env.GITHUB_ACTIONS) {
+  console.log(
+    `heartbeat seeded: ${Object.entries(seen)
+      .map(([k, v]) => `${k} ${v ? Math.round((Date.now() - v) / 60_000) + "m ago" : "never"}`)
+      .join(", ")}`
+  );
+}
+
 while (Date.now() < deadline) {
+  // Before the long poll, not after: a poll that blocks for 45 seconds must
+  // never be what delays a due post.
+  await tick();
+
   let updates = [];
   try {
     updates = await fetchUpdates(await readOffset(), POLL_SECONDS);
@@ -102,6 +122,21 @@ function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
+/**
+ * Fire anything the schedule owes. Never throws: a heartbeat that crashes the
+ * listener would take the control channel down with it, which is far worse than
+ * a late post.
+ */
+async function tick() {
+  if (!process.env.GITHUB_ACTIONS) return;
+  try {
+    const fired = await heartbeat(seen, { dispatch });
+    if (fired.length) console.log(`  heartbeat dispatched: ${fired.join(", ")}`);
+  } catch (err) {
+    console.warn(`heartbeat: ${err.message.slice(0, 100)}`);
+  }
+}
+
 async function git(args) {
   try {
     await run("git", args, { cwd: ROOT });
@@ -132,11 +167,18 @@ async function commitState() {
 async function dispatch(workflow, ...fields) {
   if (!process.env.GITHUB_ACTIONS) {
     console.log(`(would dispatch ${workflow})`);
-    return;
+    return false;
   }
-  await run("gh", ["workflow", "run", workflow, ...fields], { cwd: ROOT })
-    .then(() => console.log(`  dispatched ${workflow}`))
-    .catch((e) => console.warn(`  ${workflow} dispatch failed: ${e.message}`));
+  // Returns whether it was ACCEPTED, so the heartbeat retries next tick rather
+  // than recording a run that never started.
+  try {
+    await run("gh", ["workflow", "run", workflow, ...fields], { cwd: ROOT });
+    console.log(`  dispatched ${workflow}`);
+    return true;
+  } catch (e) {
+    console.warn(`  ${workflow} dispatch failed: ${e.message.slice(0, 90)}`);
+    return false;
+  }
 }
 
 /** A routine change is only real once the schedule is rebuilt. */
