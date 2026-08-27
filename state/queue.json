@@ -1353,7 +1353,11 @@
     ],
     "scheduledFor": "2026-08-27T13:00:00.000Z",
     "createdAt": "2026-08-26T20:00:13.726Z",
-    "status": "pending"
+    "status": "needs-review",
+    "photo": {
+      "mediaId": "operra-mtbb32kp-f9bc",
+      "appliedAt": "2026-08-27T10:26:55.690Z"
+    }
   },
   {
     "id": "operra-2026-08-27-20-client-proof",

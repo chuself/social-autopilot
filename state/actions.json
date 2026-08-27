@@ -28,5 +28,17 @@
     "uniqueId": "AQADWBFrG_7DgVB-",
     "fingerprint": "208c32c6794f617ff19155ffb278136e315bb2a0",
     "createdAt": "2026-08-27T09:14:13.168Z"
+  },
+  "0024d6c9": {
+    "verb": "approve",
+    "postId": "operra-2026-08-27-16-number-that-lands",
+    "fingerprint": "4bee90dac16486aa11be4ae65f40bd150582e3a9",
+    "createdAt": "2026-08-27T10:26:55.692Z"
+  },
+  "f92f4f0b": {
+    "verb": "reject",
+    "postId": "operra-2026-08-27-16-number-that-lands",
+    "fingerprint": "983d960f3930c649aa20dbbc8c99d0cba882992e",
+    "createdAt": "2026-08-27T10:26:55.692Z"
   }
 }
