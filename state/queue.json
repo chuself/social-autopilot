@@ -1337,7 +1337,9 @@
       "hasVoice": true,
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-08-27T18:20:42.639Z",
+    "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
     "id": "operra-2026-08-27-16-number-that-lands",
