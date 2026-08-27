@@ -1325,7 +1325,19 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-08-27T17:32:17.784Z"
+    "missedAt": "2026-08-27T17:32:17.784Z",
+    "reel": {
+      "file": "operra-2026-08-27-13-pain-point.mp4",
+      "beats": [
+        "Invois za makampuni zinachelewa kutumwa?",
+        "Kutenganisha bili kunasababisha foleni asubuhi.",
+        "Rahisisha mapokezi na upate malipo mapema."
+      ],
+      "narration": "Kutenganisha bili za kampuni na matumizi binafsi ya wageni asubuhi kunasababisha foleni ndefu mapokezi na kuchelewesha malipo yako. Ukiwa na Operra, mfumo unaofanya kazi hata kwenye mtandao hafifu, unasimamia mapokezi kwa urahisi na kukusanya malipo yako haraka.",
+      "hasVoice": true,
+      "builtAt": "2026-08-27T18:20:28.660Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-27-16-number-that-lands",
