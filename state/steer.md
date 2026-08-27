@@ -1,2 +1,3 @@
 - (2026-08-22) In English
 - (2026-08-23) Post it now
+- (2026-08-27) Cancel that use the original post
