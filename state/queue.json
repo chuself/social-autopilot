@@ -1509,7 +1509,7 @@
     ],
     "scheduledFor": "2026-08-28T10:00:00.000Z",
     "createdAt": "2026-08-28T02:10:08.291Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-28-13-industry-note.mp4",
       "beats": [
@@ -1521,10 +1521,14 @@
       "narration": "When mountain schedules change in Moshi, you need to adjust room charges and guide meals instantly. Our system keeps your partner accounts accurate even on low-bandwidth Tanzanian connections, ensuring flawless service and trusted partnerships.",
       "hasVoice": true,
       "builtAt": "2026-08-28T07:03:05.375Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-28T10:06:28.522Z",
+      "postIds": [
+        "instagram:17894292294396085",
+        "facebook:1727431211639290"
+      ]
     },
-    "lastAttempt": "2026-08-28T09:48:11.010Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-08-28T10:06:28.522Z"
   },
   {
     "id": "operra-2026-08-28-16-feature-spotlight",
