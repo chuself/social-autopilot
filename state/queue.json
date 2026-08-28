@@ -1426,5 +1426,144 @@
       "facebook:1049514968255534_122143987083351110",
       "instagram:18087193697666030"
     ]
+  },
+  {
+    "id": "operra-2026-08-28-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "CHANGAMOTO MWANZA",
+        "headline": "Wageni wa mikutano wanasubiri vyumba?",
+        "body": "Wageni wakifika kwa pamoja, timu ndogo ya usafi inazidiwa nguvu haraka."
+      },
+      {
+        "eyebrow": "USHAURI WETU",
+        "headline": "Sanisha usafi na ratiba ya mkutano",
+        "body": "Omba ratiba ya vikao mapema. Safisha vyumba wakiwa kwenye ukumbi wa mikutano."
+      },
+      {
+        "eyebrow": "RAHISISHA KAZI",
+        "headline": "Operra inarahisisha usimamizi huu",
+        "body": "Badili hali ya chumba papo hapo ili mapokezi wajue chumba kiko tayari."
+      }
+    ],
+    "caption": "Wakati wa msimu wa mikutano Mwanza, hoteli ndogo hukabiliwa na shinikizo kubwa la kuandaa vyumba haraka. Mbinu rahisi ni kushirikiana na waandaaji wa mkutano kupata ratiba kamili ya vikao. Hii inaruhusu timu yako ya usafi kufanya kazi kwa awamu wageni wakiwa kwenye vikao, badala ya kusubiri hadi jioni. Ukiwa na Operra, unaweza kubadili hali ya vyumba kwenye mfumo wetu rahisi na kuruhusu mapokezi kujua vyumba vilivyo tayari papo hapo bila usumbufu.",
+    "hashtags": [
+      "MwanzaHotels",
+      "OperraSaaS",
+      "UkarimuTanzania"
+    ],
+    "imagePrompt": "Minimal line drawing of a classic wooden clipboard with a single sheet of paper and a checklist on a plain pale beige field, lots of empty space, flat graphic, thin strokes, single muted dark grey colour. No text, no people, no logos.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-08-28-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-28T05:00:00.000Z",
+    "createdAt": "2026-08-28T02:08:50.180Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-08-28-08-swahili-tip-1.png",
+      "operra-2026-08-28-08-swahili-tip-2.png",
+      "operra-2026-08-28-08-swahili-tip-3.png"
+    ],
+    "headline": "Wageni wa mikutano wanasubiri vyumba?"
+  },
+  {
+    "id": "operra-2026-08-28-13-industry-note",
+    "eyebrow": "Group Billing",
+    "headline": "Trekking operators expect instant billing updates",
+    "body": "When mountain schedules shift in Moshi, adjust room charges and guide meals immediately. Keep your tour partner accounts accurate.",
+    "cta": "See how",
+    "caption": "Peak climbing season in Moshi means itineraries change hourly. A group descends early, or a guide needs extra equipment storage billed to the agency. If these updates stay on paper slips, checkout is a mess.\n\nOperra lets your front desk update tour operator folios in real time, even on low-bandwidth connections. Keep your agency partners happy with clear, instant billing.",
+    "hashtags": [
+      "MoshiHotels",
+      "TanzaniaHospitality",
+      "HotelManagement"
+    ],
+    "imagePrompt": "Minimal line drawing of classic leather hiking boots on a plain warm-gray background. Thin strokes, single muted dark charcoal color. Flat graphic style, plenty of empty space on the left. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-28-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-28T10:00:00.000Z",
+    "createdAt": "2026-08-28T02:10:08.291Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-28-16-feature-spotlight",
+    "eyebrow": "Usafi wa Vyumba",
+    "headline": "Vyumba viko tayari mapokezi bila kupigiana simu",
+    "body": "Housekeeping wakimaliza kusafisha, mfumo unasasisha taarifa papo hapo. Mapokezi wanajua chumba kiko tayari bila kupoteza muda wa mteja.",
+    "cta": "Fahamu zaidi",
+    "caption": "Wageni wa kibiashara Dar es Salaam hawana muda wa kusubiri mapokezi wakati vyumba vikiandaliwa. Operra inarahisisha mawasiliano kati ya housekeeping na mapokezi. Usafi ukikamilika, taarifa inaonekana kwenye mfumo papo hapo hata kwenye mtandao hafifu. Hakuna haja ya kupigiana simu au kukimbizana koridorini. Kila idara inasoma ukurasa mmoja.",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#Operra",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "Minimal line drawing of a neatly folded stack of fresh hotel towels resting on a light-colored surface, positioned right-of-center. Flat graphic style with thin strokes in a single muted slate blue color on a solid off-white background. Left side is completely empty and visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-28-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-28T13:00:00.000Z",
+    "createdAt": "2026-08-28T02:10:53.548Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-28-20-pain-point",
+    "eyebrow": "Mapokezi",
+    "headline": "Mawakala kubadilisha tarehe za safari ghafla?",
+    "body": "Msimu wa peak Arusha, mabadiliko ya dakika za mwisho hayapaswi kusababisha overbooking. Operra inakupa picha kamili ya vyumba vyako papo hapo.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Msimu wa watalii Arusha ukiwa umeratiba vizuri, ghafla wakala mmoja anabadilisha tarehe za kundi lake. Kwenye makaratasi au lahajedwali za Excel, hili ni janga linaloweza kuleta overbooking au kupoteza wageni.\n\nOperra inarahisisha usimamizi wa vyumba vyako. Ukibadilisha tarehe ya booking moja, mfumo mzima unajisawazisha papo hapo ili kuzuia makosa.\n\nLinda sifa ya lodge yako msimu huu.",
+    "hashtags": [
+      "HotelManagement",
+      "ArushaHotels",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "Minimal line drawing of a classic vintage brass pocket compass resting on a plain, light beige background, lots of empty space. Flat graphic, not a photograph. Thin strokes, single muted brown colour. Left side of the image is completely blank and visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-28-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-28T17:00:00.000Z",
+    "createdAt": "2026-08-28T02:11:39.520Z",
+    "status": "pending"
   }
 ]
