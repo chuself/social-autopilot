@@ -1744,7 +1744,20 @@
     ],
     "scheduledFor": "2026-08-29T13:00:00.000Z",
     "createdAt": "2026-08-28T18:06:29.742Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-29-16-swahili-tip.mp4",
+      "beats": [
+        "Usiwasubirishe watalii wanaoshuka",
+        "Wasiliana na waongoza njia mapema",
+        "Andaa vyumba vyao kabla hawajafika",
+        "Wape wageni wako mapokezi ya haraka"
+      ],
+      "narration": "Watalii wakishuka mlimani wanataka kupumzika mara moja. Wasiliana na waongoza njia saa tatu kabla ili uandae vyumba vyao mapema Moshi. Mfumo wetu unarahisisha mapokezi na usafi hata kwenye mtandao hafifu, kwa Kiswahili na Kiingereza, ili kuwapa wageni huduma ya haraka.",
+      "hasVoice": true,
+      "builtAt": "2026-08-28T23:05:31.021Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-29-20-industry-note",
