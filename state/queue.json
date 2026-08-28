@@ -1555,7 +1555,20 @@
     ],
     "scheduledFor": "2026-08-28T13:00:00.000Z",
     "createdAt": "2026-08-28T02:10:53.548Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-28-16-feature-spotlight.mp4",
+      "beats": [
+        "Acha kupigia housekeeping",
+        "Taarifa za usafi zinasasishwa papo hapo",
+        "Mapokezi wanajua chumba kiko tayari",
+        "Wateja wanaingia bila kuchelewa"
+      ],
+      "narration": "Kupigia housekeeping simu kila mara kunachelewesha wageni mapokezi. Mfumo wa Operra unasasisha hali ya chumba papo hapo kikisafishwa. Mapokezi wanajua chumba kiko tayari bila kupoteza muda, hata kwa mtandao wa kawaida. Wageni wako wanaingia bila kuchelewa.",
+      "hasVoice": true,
+      "builtAt": "2026-08-28T10:05:05.311Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-28-20-pain-point",
