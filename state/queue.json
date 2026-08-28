@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-28T22:54:58.429Z",
+    "lastAttempt": "2026-08-28T23:05:43.867Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-28T22:54:58.429Z",
+    "lastAttempt": "2026-08-28T23:05:43.867Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1713,7 +1713,7 @@
       "builtAt": "2026-08-28T19:20:06.467Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-28T22:54:58.429Z",
+    "lastAttempt": "2026-08-28T23:05:43.867Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
@@ -1757,7 +1757,9 @@
       "hasVoice": true,
       "builtAt": "2026-08-28T23:05:31.021Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-08-28T23:05:43.867Z",
+    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
   },
   {
     "id": "operra-2026-08-29-20-industry-note",
