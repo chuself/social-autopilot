@@ -1615,5 +1615,151 @@
       "facebook:1049514968255534_122144584821351110",
       "instagram:18328350448276923"
     ]
+  },
+  {
+    "id": "operra-2026-08-29-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Zanzibar resorts",
+        "headline": "Managing six systems slows you down",
+        "body": "Shuffling between separate tools for billing, rooms, and restaurant ruins the guest experience."
+      },
+      {
+        "eyebrow": "The Leak",
+        "headline": "Disconnected operations cost you daily",
+        "body": "When housekeeping, reception, and bar systems don't sync, billing errors and guest complaints rise."
+      },
+      {
+        "eyebrow": "One platform",
+        "headline": "Six core operations, one interface",
+        "body": "Manage front desk, housekeeping, POS, pricing, reports, and audit trails in a single tool."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Simplify your island resort operations",
+        "body": "Keep your entire property coordinated on low-bandwidth connections."
+      }
+    ],
+    "caption": "Zanzibar resorts shouldn't have to fight disconnected software. When your front desk, housekeeping, and bar operate on different systems, mistakes happen and revenue leaks. Operra brings all six core hotel operations into one reliable platform that runs smoothly even on low-bandwidth island connections. No complex setups, just clear control over your property. Ready to simplify?",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "Operra",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "minimal line drawing of a classic mechanical stopwatch on a plain sand-colored field, lots of empty space, flat graphic, not a photograph, thin strokes, single muted brown colour, no text, no people, no logos",
+    "cta": "Book a demo",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-08-29-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-29T05:00:00.000Z",
+    "createdAt": "2026-08-28T18:04:59.176Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-08-29-08-number-that-lands-1.png",
+      "operra-2026-08-29-08-number-that-lands-2.png",
+      "operra-2026-08-29-08-number-that-lands-3.png",
+      "operra-2026-08-29-08-number-that-lands-4.png"
+    ],
+    "headline": "Managing six systems slows you down"
+  },
+  {
+    "id": "operra-2026-08-29-13-client-proof",
+    "eyebrow": "Client Proof",
+    "headline": "Mwanza lakeside hotel beats slow internet",
+    "body": "A busy conference property keeps front desk and housekeeping synced on basic low-bandwidth connections.",
+    "cta": "See how",
+    "caption": "Conference season in Mwanza demands fast room turnarounds, but lakeside internet can be unpredictable. One regional property solved this by running their entire front desk and housekeeping on Operra. Built specifically for the low-bandwidth connections common in Tanzanian properties, it keeps your team coordinated without dropouts.\n\nSimplify your operations today.",
+    "hashtags": [
+      "MwanzaHotels",
+      "HotelOperations",
+      "Operra"
+    ],
+    "imagePrompt": "Minimal line drawing of a classic conference tabletop microphone on a plain light beige background, thin dark grey strokes, flat graphic, lots of empty space on the left. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-29-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-29T10:00:00.000Z",
+    "createdAt": "2026-08-28T18:05:44.357Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-29-16-swahili-tip",
+    "eyebrow": "Mapokezi",
+    "headline": "Usiwasubirishe watalii wanaoshuka mlimani",
+    "body": "Wasiliana na waongoza njia saa tatu kabla hawajafika hotelini Moshi ili kuandaa vyumba na kadi zao mapema.",
+    "cta": "Rahisisha utendaji",
+    "caption": "Wageni wanaotoka mlimani wanakuwa wamechoka na wanahitaji kupumzika haraka. Kuzuia foleni mapokezi hapa Moshi, weka utaratibu wa waongoza njia kukutumia taarifa saa tatu kabla hawajafika.\n\nHii inakupa muda wa kuandaa vyumba kwenye mfumo wako mapema ili wakifika wapokee funguo tu. Utaratibu mdogo unaookoa muda na kulinda sifa ya hoteli yako.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "Minimal line drawing of a classic aluminum thermal flask on a plain field. Flat graphic, thin strokes, single muted forest green colour. Left side visually calm and empty. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-29-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-29T13:00:00.000Z",
+    "createdAt": "2026-08-28T18:06:29.742Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-29-20-industry-note",
+    "eyebrow": "Front Desk",
+    "headline": "Dar corporate checkouts demand instant billing",
+    "body": "Keep your business guests moving. Generate accurate corporate folios and split bills instantly, even during the morning checkout rush.",
+    "cta": "See it work",
+    "caption": "Dar es Salaam corporate guests are always on a tight schedule. A delayed checkout or a billing error means a missed flight or a late meeting—and a lost corporate account. \n\nWith Operra, your front desk can split bills and print accurate corporate invoices in seconds. No manual calculations, no delays, just smooth operations that keep your business clients coming back.",
+    "hashtags": [
+      "DarEsSalaam",
+      "HotelManagement",
+      "TanzaniaHospitality",
+      "Operra"
+    ],
+    "imagePrompt": "Minimal line drawing of a classic leather executive briefcase on a plain light background. Composition: minimal line drawing on a plain field, lots of empty space. Light/tone: flat graphic, not a photograph. Treatment: thin strokes, single muted colour. Keep the left side visually calm with empty space. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-29-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-29T17:00:00.000Z",
+    "createdAt": "2026-08-28T18:07:42.375Z",
+    "status": "pending"
   }
 ]
