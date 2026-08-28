@@ -203,15 +203,32 @@ await check(
   { group: "config", level: "warn" }
 );
 
+// Standing instructions go to the writer for EVERY future post, so a passing
+// remark that lands in here quietly rewrites the brand voice for good. "Hey",
+// "What do we have planned", "Post it now" and "Cancel that use the original
+// post" have all been in this file.
 await check(
   "standing instructions",
   async () => {
     const f = path.join(ROOT, "state", "steer.md");
     if (!existsSync(f)) return "none set";
     const lines = (await readFile(f, "utf8")).split("\n").filter((l) => l.trim());
-    return `${lines.length} in force: ${lines[lines.length - 1]?.slice(0, 60) ?? ""}`;
+    if (!lines.length) return "none set";
+
+    const { readsAsTransient } = await import("../src/lastaction.js");
+    const junk = lines.filter((l) =>
+      readsAsTransient(l.replace(/^-\s*\(\d{4}-\d{2}-\d{2}\)\s*/, "").trim())
+    );
+    if (junk.length) {
+      throw new Error(
+        `${junk.length} look like passing remarks, not rules — every post is being told "${junk[0]
+          .replace(/^-\s*\(\d{4}-\d{2}-\d{2}\)\s*/, "")
+          .slice(0, 45)}"`
+      );
+    }
+    return `${lines.length} in force: ${lines[lines.length - 1]?.slice(0, 55) ?? ""}`;
   },
-  { group: "config", level: "warn" }
+  { group: "config" }
 );
 
 // == content ==================================================================

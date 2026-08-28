@@ -11,6 +11,7 @@ import path from "node:path";
 import { notify } from "./notify.js";
 import { readQueue, writeQueue, whyWaiting } from "./queue.js";
 import { escapeHtml, clip, slotLine, todayEat } from "./format.js";
+import { readsAsUndo, readsAsTransient, undoableAction, markUndone, recordAction } from "./lastaction.js";
 import { completeJson } from "./llm.js";
 import { updateConfig, readConfig, LIMITS } from "./config.js";
 
@@ -70,6 +71,24 @@ export async function handleMessage(text, chatId) {
 
   const trimmed = text.trim();
   const lower = trimmed.toLowerCase();
+
+  // "Cancel that." Answered by undoing what Alice just did — before the
+  // classifier can read an imperative sentence and file it as a permanent rule
+  // for every future post, which is exactly how "Cancel that use the original
+  // post" ended up in the brand brief while the post it referred to sat held
+  // until it was closed as missed.
+  if (readsAsUndo(trimmed) && !lower.startsWith("/")) {
+    const action = await undoableAction();
+    if (action) {
+      const undone = await undoAction(action);
+      await markUndone();
+      await notify(undone.say);
+      return { kind: "command", changed: true, replan: false, dispatch: undone.dispatch ?? [] };
+    }
+    // Nothing recent to undo: say so rather than filing it as a writing rule.
+    await notify("Nothing recent to cancel. /status shows what is queued.");
+    return { kind: "chat", changed: false, replan: false };
+  }
 
   // They tapped Rewrite and this is the note. It must be caught BEFORE the
   // classifier, which would happily file "make it shorter" as a standing
@@ -281,9 +300,25 @@ export async function handleMessage(text, chatId) {
   }
 
   if (intent.kind === "instruction") {
+    // A standing instruction is handed to the writer for EVERY future post, so
+    // the bar is high and the classifier alone has not met it: "Hey", "What do
+    // we have planned", "Post it now" and "Cancel that use the original post"
+    // all got filed as permanent brand voice. A passing remark is answered, not
+    // written into the brief.
+    if (readsAsTransient(trimmed)) {
+      await notify(
+        `That reads like it is about right now rather than a rule for every post, so I have not added it to your standing instructions.\n\n` +
+          `If you did mean it as a permanent rule, say it as one — <i>always keep captions under 40 words</i>.`
+      );
+      return { kind: "chat", changed: false, replan: false };
+    }
     const stamp = new Date().toISOString().slice(0, 10);
     await appendFile(STEER, `- (${stamp}) ${trimmed}\n`, "utf8");
-    await notify(`✅ Noted. From the next plan onward:\n<i>${escapeHtml(trimmed)}</i>`);
+    await notify(
+      `✅ Noted as a standing rule for every future post:\n<i>${escapeHtml(trimmed)}</i>\n\n` +
+        `Say <b>undo</b> if that is not what you meant. /clear forgets them all.`
+    );
+    await recordAction({ kind: "instruction-added", text: trimmed });
     return { kind: "instruction", changed: true, replan: false };
   }
 
@@ -536,6 +571,53 @@ async function applyDecision(action) {
     }
     default:
       return { toast: "I do not know that button." };
+  }
+}
+
+/**
+ * Reverse the last reversible thing. Each branch puts the world back as it was
+ * and says what it did — an undo the owner cannot see the effect of is no
+ * better than the silence that caused this.
+ */
+async function undoAction(action) {
+  const { readQueue, writeQueue } = await import("./queue.js");
+
+  switch (action.kind) {
+    case "photo-applied": {
+      const queue = await readQueue();
+      const post = queue.find((p) => p.id === action.postId);
+      if (!post) return { say: "That post is gone, so there was nothing to put back." };
+
+      // Back to the background it had before the photo, and out of the hold the
+      // photo put it in — otherwise it just sits until it is closed as missed,
+      // which is what happened.
+      if (action.previousBackground) post.backgroundPath = action.previousBackground;
+      else delete post.backgroundPath;
+      delete post.photo;
+      post.status = action.previousStatus ?? "pending";
+      await writeQueue(queue);
+
+      return {
+        say:
+          `↩️ Put <b>${escapeHtml(clip(post.headline ?? post.id, 45))}</b> back to its original picture ` +
+          `and released it, so it goes out at ${shortWhenSafe(post)} as planned.`,
+        // Re-render with the original background so the live asset matches.
+        dispatch: ["rewrite"],
+      };
+    }
+
+    case "instruction-added": {
+      const text = await readFile(STEER, "utf8").catch(() => "");
+      const kept = text
+        .split("\n")
+        .filter((l) => l.trim() && !l.includes(action.text))
+        .join("\n");
+      await writeFile(STEER, kept ? `${kept}\n` : "", "utf8");
+      return { say: `↩️ Removed that from your standing instructions:\n<i>${escapeHtml(clip(action.text, 60))}</i>` };
+    }
+
+    default:
+      return { say: "There is nothing I can take back." };
   }
 }
 

@@ -22,6 +22,7 @@ import { ingestPhoto, fitTo, markUsed, CANVAS } from "./media.js";
 import { renderPoster } from "./render.js";
 import { notify, sendPhoto } from "./notify.js";
 import { registerAction } from "./actions.js";
+import { recordAction } from "./lastaction.js";
 import { completeJson } from "./llm.js";
 import { escapeHtml, clip, shortWhen } from "./format.js";
 
@@ -184,6 +185,16 @@ async function apply(row) {
     await notify("📷 That post is no longer in the queue, so I left the photo alone.");
     return;
   }
+
+  // Remember what we are about to replace. Without this, "cancel that" has
+  // nothing to put back and the post stays held until it is closed as missed.
+  await recordAction({
+    kind: "photo-applied",
+    postId: post.id,
+    previousBackground: post.backgroundPath ?? null,
+    previousStatus: post.status ?? "pending",
+    mediaId: row.mediaId,
+  });
 
   const media = { path: row.mediaPath, mediaId: row.mediaId, subject: row.subject };
   const outFile =
