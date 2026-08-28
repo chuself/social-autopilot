@@ -1699,7 +1699,20 @@
     ],
     "scheduledFor": "2026-08-29T10:00:00.000Z",
     "createdAt": "2026-08-28T18:05:44.357Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-29-13-client-proof.mp4",
+      "beats": [
+        "Mtandao wa kusuasua?",
+        "Unganisha mapokezi na usafi sasa.",
+        "Inafanya kazi kwenye intaneti hafifu.",
+        "Huduma ya haraka bila kukwama."
+      ],
+      "narration": "Hata kama mtandao wa hoteli yako unasumbua, Operra inakuwezesha kuunganisha mapokezi na usafi wa vyumba bila kukwama. Mfumo huu unafanya kazi kwa intaneti hafifu, ukisimamia mauzo na ripoti kwa Kiswahili au Kiingereza ili kurahisisha huduma.",
+      "hasVoice": true,
+      "builtAt": "2026-08-28T19:20:06.467Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-29-16-swahili-tip",
