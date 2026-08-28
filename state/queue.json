@@ -1509,7 +1509,20 @@
     ],
     "scheduledFor": "2026-08-28T10:00:00.000Z",
     "createdAt": "2026-08-28T02:10:08.291Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-28-13-industry-note.mp4",
+      "beats": [
+        "Trekking schedules shift without warning.",
+        "Update room charges and guide meals.",
+        "Run smoothly even on low bandwidth.",
+        "Keep your tour partners perfectly happy."
+      ],
+      "narration": "When mountain schedules change in Moshi, you need to adjust room charges and guide meals instantly. Our system keeps your partner accounts accurate even on low-bandwidth Tanzanian connections, ensuring flawless service and trusted partnerships.",
+      "hasVoice": true,
+      "builtAt": "2026-08-28T07:03:05.375Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-28-16-feature-spotlight",
