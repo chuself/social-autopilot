@@ -1811,5 +1811,144 @@
       "facebook:1049514968255534_122144984679351110",
       "instagram:17930559297389537"
     ]
+  },
+  {
+    "id": "operra-2026-08-30-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Msimu wa Safari",
+        "headline": "Bili za ma-agent zina makosa?",
+        "body": "Kupoteza muda kukagua nani aliyebadilisha bei au kuongeza huduma kwenye ankara ya watalii."
+      },
+      {
+        "eyebrow": "Ufuatiliaji mgumu",
+        "headline": "Mzozo mmoja unachelewesha malipo",
+        "body": "Bila rekodi sahihi, unalazimika kukubali hasara au kupoteza muda kupiga simu mapokezi."
+      },
+      {
+        "eyebrow": "Suluhisho la Operra",
+        "headline": "Audit trail inaonyesha kila kitu",
+        "body": "Ona kila mabadiliko ya bei, mtumiaji aliyefanya, na sababu zake kwa kubofya mara moja."
+      }
+    ],
+    "caption": "Wakati wa msimu wa safari Arusha, kila dakika inahesabika. Mizozo ya bili kati ya lodge yako na mawakala wa utalii haipaswi kuchelewesha malipo yako. Ukiwa na mfumo wa Operra, unaziba mianya yote ya hasara. Kipengele cha 'Audit Trail' kinarekodi kila muamala, marekebisho ya bei, au kufutwa kwa huduma. Unajua nani alifanya mabadiliko na kwa nini, bila kuuliza mtu. Rahisisha usimamizi wa lodge yako msimu huu.",
+    "hashtags": [
+      "Operra",
+      "ArushaLodges",
+      "HotelManagementTanzania",
+      "HotelSoftware"
+    ],
+    "imagePrompt": "An antique brass compass resting on a weathered safari vehicle bonnet, with a vast, sun-drenched savannah horizon stretching in the background. Hard midday light casting a sharp, dramatic shadow of the compass. Exterior, wide, open horizon, bright, sunlit, airy tone. No text, no people, no logos.",
+    "cta": "Anza na Operra",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-08-30-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-30T05:00:00.000Z",
+    "createdAt": "2026-08-29T18:02:17.729Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-08-30-08-feature-spotlight-1.png",
+      "operra-2026-08-30-08-feature-spotlight-2.png",
+      "operra-2026-08-30-08-feature-spotlight-3.png"
+    ],
+    "headline": "Bili za ma-agent zina makosa?"
+  },
+  {
+    "id": "operra-2026-08-30-13-pain-point",
+    "eyebrow": "Mapokezi",
+    "headline": "Bili za tours na transfers zinasahaulika wageni wakiondoka?",
+    "body": "Zuia upotevu wa mapato Zanzibar. Operra inaunganisha gharama zote za huduma kwenye chumba cha mteja papo hapo kwa usahihi.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wageni wa Zanzibar wakimaliza likizo yao, kila dakika wanayosubiri mapokezi inaleta usumbufu. Kuliko kukimbizana na makaratasi ya safari za boti au viungo dakika ya mwisho na kupoteza mapato, Operra inakuwezesha kuingiza kila huduma kwenye chumba cha mteja papo hapo. \n\nHakuna bili inayosahaulika kwenye faili. Hakuna malumbano wakati wa check-out.",
+    "hashtags": [
+      "#ZanzibarResorts",
+      "#HotelManagementTanzania",
+      "#OperraPMS"
+    ],
+    "imagePrompt": "An exterior, wide shot of a single white-washed wooden beach table on a Zanzibar beach under the bright midday sun. On the right side of the table sits a clear glass of fresh coconut water casting a sharp, strong shadow onto the wooden surface. The Indian Ocean horizon is wide and open in the background under a clear, bright sky. The left third of the frame is visually calm with empty white sand and sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-30-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-30T10:00:00.000Z",
+    "createdAt": "2026-08-29T18:03:03.110Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-30-16-number-that-lands",
+    "eyebrow": "Connectivity",
+    "headline": "Keep your lakeside front desk online",
+    "body": "Operra runs reliably on the low-bandwidth connections common in Tanzanian properties, keeping checkouts moving.",
+    "cta": "See it work",
+    "caption": "Mwanza lakeside hotels shouldn't suffer from dropping connections. When the local network slows down, your front desk shouldn't grind to a halt. Operra is built to run smoothly on low-bandwidth connections, keeping your front desk, housekeeping, and billing synced. No frozen screens during morning departures.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "A single weathered metal boat cleat on a sun-bleached wooden dock by the lake. Composition: exterior, wide, open horizon. Light/tone: bright, sunlit, airy. Treatment: hard midday light and strong shadow shapes. The dock cleat is positioned on the right, leaving the left third of the frame visually calm with open water and sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-30-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-30T13:00:00.000Z",
+    "createdAt": "2026-08-29T18:04:05.983Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-30-20-client-proof",
+    "eyebrow": "Operations",
+    "headline": "Moshi lodge stays synced on weak internet",
+    "body": "A highland property coordinates front desk and housekeeping seamlessly, even when mountain connections drop to basic speeds.",
+    "cta": "See how",
+    "caption": "Trekking groups returning from Kilimanjaro expect fast check-ins, but mountain internet can be highly unpredictable.\n\nA boutique lodge in Moshi keeps its front desk, housekeeping, and billing fully coordinated with Operra. Engineered to run on low-bandwidth connections, the system prevents offline delays and billing errors during peak arrival hours.",
+    "hashtags": [
+      "HotelManagement",
+      "MoshiHotels",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "An exterior, wide shot of a single weathered outdoor telecommunications antenna mounted on a simple wooden post, set against a vast, bright blue sky over the Tanzanian highlands. Hard midday light casts a sharp, distinct shadow of the antenna on the post and ground. The post and antenna are positioned on the right-of-centre, leaving the left third of the frame completely empty as a clean, bright, sunlit sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-30-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-30T17:00:00.000Z",
+    "createdAt": "2026-08-29T18:04:50.663Z",
+    "status": "pending"
   }
 ]
