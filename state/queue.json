@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-08-29T12:07:36.417Z"
+    "missedAt": "2026-08-29T13:07:45.367Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-08-29T12:07:36.413Z"
+    "missedAt": "2026-08-29T13:07:45.363Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-08-29T12:07:36.416Z",
+    "missedAt": "2026-08-29T13:07:45.365Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-08-29T12:07:36.416Z",
+    "missedAt": "2026-08-29T13:07:45.365Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1754,7 +1754,7 @@
     ],
     "scheduledFor": "2026-08-29T13:00:00.000Z",
     "createdAt": "2026-08-28T18:06:29.742Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-29-16-swahili-tip.mp4",
       "beats": [
@@ -1766,10 +1766,14 @@
       "narration": "Watalii wakishuka mlimani wanataka kupumzika mara moja. Wasiliana na waongoza njia saa tatu kabla ili uandae vyumba vyao mapema Moshi. Mfumo wetu unarahisisha mapokezi na usafi hata kwenye mtandao hafifu, kwa Kiswahili na Kiingereza, ili kuwapa wageni huduma ya haraka.",
       "hasVoice": true,
       "builtAt": "2026-08-28T23:05:31.021Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-29T13:08:47.792Z",
+      "postIds": [
+        "instagram:18131781868641967",
+        "facebook:1533990134698252"
+      ]
     },
-    "lastAttempt": "2026-08-29T12:07:36.477Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-08-29T13:08:47.792Z"
   },
   {
     "id": "operra-2026-08-29-20-industry-note",
