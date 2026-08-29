@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-08-29T04:03:28.196Z"
+    "missedAt": "2026-08-29T05:04:04.071Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-08-29T04:03:28.192Z"
+    "missedAt": "2026-08-29T05:04:04.067Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-08-29T04:03:28.194Z",
+    "missedAt": "2026-08-29T05:04:04.069Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-29T04:03:28.254Z",
+    "lastAttempt": "2026-08-29T05:05:09.462Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-08-29T04:03:28.194Z",
+    "missedAt": "2026-08-29T05:04:04.069Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-29T04:03:28.254Z",
+    "lastAttempt": "2026-08-29T05:05:09.462Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1662,14 +1662,20 @@
     ],
     "scheduledFor": "2026-08-29T05:00:00.000Z",
     "createdAt": "2026-08-28T18:04:59.176Z",
-    "status": "pending",
+    "status": "posted",
     "slideFiles": [
       "operra-2026-08-29-08-number-that-lands-1.png",
       "operra-2026-08-29-08-number-that-lands-2.png",
       "operra-2026-08-29-08-number-that-lands-3.png",
       "operra-2026-08-29-08-number-that-lands-4.png"
     ],
-    "headline": "Managing six systems slows you down"
+    "headline": "Managing six systems slows you down",
+    "lastAttempt": "2026-08-29T05:05:09.397Z",
+    "postedAt": "2026-08-29T05:05:09.398Z",
+    "postIds": [
+      "facebook:1049514968255534_122144817105351110",
+      "instagram:18014494625936535"
+    ]
   },
   {
     "id": "operra-2026-08-29-13-client-proof",
@@ -1713,7 +1719,7 @@
       "builtAt": "2026-08-28T19:20:06.467Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-29T04:03:28.254Z",
+    "lastAttempt": "2026-08-29T05:05:09.463Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
@@ -1758,7 +1764,7 @@
       "builtAt": "2026-08-28T23:05:31.021Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-29T04:03:28.254Z",
+    "lastAttempt": "2026-08-29T05:05:09.463Z",
     "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
   },
   {
