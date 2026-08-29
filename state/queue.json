@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-08-29T09:05:56.139Z"
+    "missedAt": "2026-08-29T10:06:31.764Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-08-29T09:05:56.135Z"
+    "missedAt": "2026-08-29T10:06:31.760Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-08-29T09:05:56.137Z",
+    "missedAt": "2026-08-29T10:06:31.762Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-08-29T09:05:56.137Z",
+    "missedAt": "2026-08-29T10:06:31.762Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1705,7 +1705,7 @@
     ],
     "scheduledFor": "2026-08-29T10:00:00.000Z",
     "createdAt": "2026-08-28T18:05:44.357Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-29-13-client-proof.mp4",
       "beats": [
@@ -1717,10 +1717,14 @@
       "narration": "Hata kama mtandao wa hoteli yako unasumbua, Operra inakuwezesha kuunganisha mapokezi na usafi wa vyumba bila kukwama. Mfumo huu unafanya kazi kwa intaneti hafifu, ukisimamia mauzo na ripoti kwa Kiswahili au Kiingereza ili kurahisisha huduma.",
       "hasVoice": true,
       "builtAt": "2026-08-28T19:20:06.467Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-29T10:07:45.238Z",
+      "postIds": [
+        "instagram:18115384438942665",
+        "facebook:1807541896905831"
+      ]
     },
-    "lastAttempt": "2026-08-29T09:05:56.195Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-08-29T10:07:45.238Z"
   },
   {
     "id": "operra-2026-08-29-16-swahili-tip",
