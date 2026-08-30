@@ -1895,7 +1895,7 @@
     ],
     "scheduledFor": "2026-08-30T10:00:00.000Z",
     "createdAt": "2026-08-29T18:03:03.110Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-08-30-13-pain-point.mp4",
       "beats": [
@@ -1907,10 +1907,14 @@
       "narration": "Je, wageni wanaondoka bila kulipia transfers na tours? Zuia upotevu wa mapato Zanzibar. Operra inaunganisha gharama zote za chumba papo hapo. Inafanya kazi vizuri hata kwenye mtandao mdogo, kwa Kiswahili na Kiingereza. Dhibiti hoteli yako kikamilifu.",
       "hasVoice": true,
       "builtAt": "2026-08-30T07:04:55.777Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-08-30T10:06:35.116Z",
+      "postIds": [
+        "instagram:18418286974156973",
+        "facebook:1927551141249242"
+      ]
     },
-    "lastAttempt": "2026-08-30T09:27:22.932Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-08-30T10:06:35.116Z"
   },
   {
     "id": "operra-2026-08-30-16-number-that-lands",
