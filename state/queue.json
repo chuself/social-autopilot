@@ -2000,5 +2000,144 @@
       "facebook:1049514968255534_122145426867351110",
       "instagram:18097759649071724"
     ]
+  },
+  {
+    "id": "operra-2026-08-31-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Dar ya kazi",
+        "headline": "Foleni za asubuhi zinachelewesha wateja wako?",
+        "body": "Wageni wa makampuni Dar wana haraka ya vikao. Uhakiki wa LPO asubuhi unaleta msongamano usio wa lazima."
+      },
+      {
+        "eyebrow": "Ushauri wetu",
+        "headline": "Hakiki LPO siku moja kabla",
+        "body": "Piga simu kwa mhasibu wa kampuni inayomleta mgeni kuthibitisha malipo kabla ya siku ya mgeni kuwasili."
+      },
+      {
+        "eyebrow": "Ufumbuzi",
+        "headline": "Ondoa foleni za asubuhi mapokezi",
+        "body": "Ukiwa na Operra, taarifa zote za kampuni na ankara zao zinakaa tayari kwa mbofyo mmoja tu."
+      }
+    ],
+    "caption": "Kwenye hoteli za biashara Dar es Salaam, asubuhi ni muda wa kukimbizana sana. Wageni wa makampuni hawana muda wa kusubiri mapokezi wakati LPO zao zikihakikiwa asubuhi ya kuondoka. Ushauri wetu: fanya uhakiki wa barua za dhamana siku moja kabla ya mgeni kufika ili kuepuka usumbufu asubuhi ya checkout. Operra inarahisisha usimamizi huu wa bili za makampuni ili asubuhi yako iwe tulivu na yenye ufanisi.",
+    "hashtags": [
+      "#HotelierTanzania",
+      "#DarEsSalaamHotels",
+      "#OperraTech",
+      "#UsimamiziWaHoteli"
+    ],
+    "imagePrompt": "Minimal line drawing of a classic leather document folder resting on a sun-bleached outdoor concrete ledge, exterior, wide, open horizon, tone: bright, sunlit, airy, treatment: hard midday light and strong shadow shapes, no text, no people, no logos",
+    "cta": "Jaribu Operra leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-08-31-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-31T05:00:00.000Z",
+    "createdAt": "2026-08-30T18:02:06.370Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-08-31-08-swahili-tip-1.png",
+      "operra-2026-08-31-08-swahili-tip-2.png",
+      "operra-2026-08-31-08-swahili-tip-3.png"
+    ],
+    "headline": "Foleni za asubuhi zinachelewesha wateja wako?"
+  },
+  {
+    "id": "operra-2026-08-31-13-industry-note",
+    "eyebrow": "Billing",
+    "headline": "Keep Arusha safari departures on schedule",
+    "body": "Safari operators expect clean, split invoices for room charges and guest extras. Balance every ledger before the safari vehicles pull up.",
+    "cta": "See how it works",
+    "caption": "When safari vehicles arrive in Arusha, departures must be swift. Tour operators expect clean room invoices, while guests must settle their own bar or laundry bills. If your front desk is manually splitting these folios on paper, departures stall. Operra handles multi-currency split billing on one screen, even on low-bandwidth connections. Keep your safari groups moving on time.",
+    "hashtags": [
+      "ArushaTourism",
+      "SafariOperations",
+      "HotelManagement"
+    ],
+    "imagePrompt": "exterior, wide, open horizon shot of a pair of classic metal safari binoculars resting on the right side of a weathered wooden outdoor table. Bright, sunlit, airy atmosphere with hard midday light and strong shadow shapes casting to the left. The left side of the frame is a visually calm, empty sun-bleached wooden deck leading to a soft, distant dry-grass savannah horizon. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-31-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-31T10:00:00.000Z",
+    "createdAt": "2026-08-30T18:02:51.913Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-31-16-feature-spotlight",
+    "eyebrow": "Pricing",
+    "headline": "Automate day-use and late checkout rates",
+    "body": "Set clear rules for late departures. Operra automatically posts half-day charges to the guest folio based on checkout time.",
+    "cta": "See it work",
+    "caption": "Zanzibar flight schedules often mean guests request late checkouts. Managing these half-day rates manually leads to front desk arguments or forgotten charges.\n\nWith Operra, late checkout fees are automated. Set your grace period, and the system applies the correct day-use rate instantly. Your reception team stays fast, and your revenue stays protected.",
+    "hashtags": [
+      "HotelOperations",
+      "ZanzibarHotels",
+      "RevenueManagement"
+    ],
+    "imagePrompt": "exterior, wide, open horizon shot of a single classic brass luggage cart standing on a sun-drenched stone pathway, casting a sharp, dark shadow to the left. The left side is a visually calm empty space of clear blue sky and smooth stone. Bright, sunlit, airy with hard midday light and strong shadow shapes. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-31-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-31T13:00:00.000Z",
+    "createdAt": "2026-08-30T18:03:36.356Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-08-31-20-pain-point",
+    "eyebrow": "Event Billing",
+    "headline": "Lost conference extras at checkout?",
+    "body": "Stop chasing paper chits between the kitchen and the hall. Operra connects your event spaces and reception instantly, even on low-bandwidth connections.",
+    "cta": "See it work",
+    "caption": "Hosting a regional NGO or government workshop in Mwanza? When a small team is running the show, conference extras like afternoon sodas, extra buffet plates, or late projector hire often slip off the final invoice.\n\nWith Operra, every single charge from the kitchen or the hall is posted directly to the corporate bill in real time. No lost paper slips. No awkward post-checkout phone calls to organizers. Just clear, instant billing.",
+    "hashtags": [
+      "MwanzaHotels",
+      "HotelOperations",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "exterior, wide, open horizon shot of a single white ceramic coffee mug resting on a sun-bleached wooden table on a lakeside terrace, with the calm blue waters of Lake Victoria stretching to the horizon under bright, sunlit, airy sky with hard midday light and strong shadow shapes. The mug is positioned on the right third of the frame, leaving the left side of the terrace and lake empty and visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-08-31-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-08-31T17:00:00.000Z",
+    "createdAt": "2026-08-30T18:04:20.952Z",
+    "status": "pending"
   }
 ]
