@@ -1940,7 +1940,20 @@
     ],
     "scheduledFor": "2026-08-30T13:00:00.000Z",
     "createdAt": "2026-08-29T18:04:05.983Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-30-16-number-that-lands.mp4",
+      "beats": [
+        "Slow lakeside internet?",
+        "Run your hotel without interruption.",
+        "Power through low-bandwidth Tanzanian connections.",
+        "Flawless checkouts and happier guests."
+      ],
+      "narration": "Don't let weak internet stall your front desk. Operra is built for Tanzanian properties, running smoothly on low-bandwidth connections in English or Kiswahili. Manage housekeeping, POS, and reports effortlessly, keeping your checkouts moving and guests smiling.",
+      "hasVoice": true,
+      "builtAt": "2026-08-30T10:05:15.584Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-30-20-client-proof",
