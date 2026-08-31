@@ -2267,7 +2267,20 @@
     ],
     "scheduledFor": "2026-09-01T10:00:00.000Z",
     "createdAt": "2026-08-31T18:03:19.685Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-01-13-client-proof.mp4",
+      "beats": [
+        "Mtandao wa kusuasua?",
+        "Unganisha mapokezi na mgahawa kikamilifu",
+        "Mifumo inafanya kazi intaneti ikiwa chini",
+        "Bili za haraka za kampuni"
+      ],
+      "narration": "Hata kama intaneti inasumbua hoteli yako, unaweza kuunganisha mapokezi na mgahawa kwa urahisi. Mfumo wetu unarahisisha usimamizi na utoaji wa bili za haraka kwa wateja wa kampuni bila kukwama, ukiwa kwa Kiswahili na Kiingereza.",
+      "hasVoice": true,
+      "builtAt": "2026-08-31T19:31:36.567Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-01-16-swahili-tip",
