@@ -2084,7 +2084,20 @@
     ],
     "scheduledFor": "2026-08-31T10:00:00.000Z",
     "createdAt": "2026-08-30T18:02:51.913Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-08-31-13-industry-note.mp4",
+      "beats": [
+        "Keep Arusha safaris on schedule",
+        "Clean split invoices, no delays",
+        "Low-bandwidth, bilingual system for staff",
+        "Every departure runs on time"
+      ],
+      "narration": "With Operra’s front‑desk, housekeeping, POS and reporting tools, you can issue clean, split invoices for room charges and extras, even on low‑bandwidth connections, in English or Kiswahili, ensuring every safari departure stays on schedule.",
+      "hasVoice": true,
+      "builtAt": "2026-08-31T07:04:06.325Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-08-31-16-feature-spotlight",
