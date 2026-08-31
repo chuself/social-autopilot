@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-31T06:43:37.400Z",
+    "lastAttempt": "2026-08-31T07:04:20.226Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-31T06:43:37.400Z",
+    "lastAttempt": "2026-08-31T07:04:20.226Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2097,7 +2097,9 @@
       "hasVoice": true,
       "builtAt": "2026-08-31T07:04:06.325Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-08-31T07:04:20.226Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-08-31-16-feature-spotlight",
