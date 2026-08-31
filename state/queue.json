@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-31T10:26:09.226Z",
+    "lastAttempt": "2026-08-31T11:29:50.811Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-31T10:26:09.226Z",
+    "lastAttempt": "2026-08-31T11:29:50.811Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2147,7 +2147,7 @@
       "builtAt": "2026-08-31T10:05:41.258Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-08-31T10:26:09.226Z",
+    "lastAttempt": "2026-08-31T11:29:50.811Z",
     "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
   },
   {
