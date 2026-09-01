@@ -1,0 +1,52 @@
+name: prune
+
+# Weekly: drop rendered assets for posts that are finished and old.
+#
+# Nothing had ever removed them, so public/ reached 149 MB and was growing at
+# roughly 12 MB a day. Every workflow clones this repository, so that weight is
+# paid on every run — and fetches had started failing outright.
+#
+# Deliberately its own workflow rather than a step inside plan: deleting files
+# on a live system should be reviewable on its own, and should not be able to
+# take the planner down with it.
+on:
+  schedule:
+    - cron: "0 3 * * 0"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Keep assets newer than this many days"
+        default: "7"
+
+concurrency: autopilot-state
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+
+      - name: Prune
+        run: node scripts/prune-assets.mjs --days "${{ inputs.days || '7' }}" --apply
+
+      - name: Record it
+        run: |
+          bash scripts/push-state.sh "chore: prune spent assets [skip ci]" \
+            public state/bg
+
+      # Pages serves the LAST artifact, so it has to be redeployed from the
+      # pruned tree — otherwise the deleted files keep being served and the
+      # deploy that follows some other job would silently restore the old set.
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4

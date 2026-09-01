@@ -12,7 +12,7 @@ import path from "node:path";
 import { writeReelScript } from "./brain.js";
 import { speak } from "./audio.js";
 import { renderReel, probeVideo } from "./video.js";
-import { readQueue, writeQueue } from "./queue.js";
+import { readQueue, writeQueue, hoursLate, MAX_LATE_HOURS } from "./queue.js";
 import { readConfig } from "./config.js";
 import { appendFileSync } from "node:fs";
 
@@ -40,14 +40,37 @@ if (!wanted && process.env.IGNORE_CADENCE !== "1" && cfg.reelsPerDay === 0) {
   process.exit(0);
 }
 
+/**
+ * Worth filming at all?
+ *
+ * Filming takes a browser, a voiceover and several minutes, and the publisher
+ * refuses anything more than MAX_LATE_HOURS past its slot — so a reel filmed
+ * after that point can never go out. GitHub fired this cron four hours late and
+ * cli-reel dutifully filmed a slot that was already seven hours gone: the work
+ * was done, the MP4 was committed, and it went straight to "filmed but
+ * unpublished past their slot".
+ *
+ * The heartbeat already applies this rule before dispatching. The cron did not,
+ * because the rule lived in the caller instead of here.
+ */
+const filmable = (p) =>
+  p.status !== "posted" &&
+  p.status !== "reject" &&
+  p.status !== "missed" &&
+  !p.reel &&
+  hoursLate(p) <= MAX_LATE_HOURS;
+
 // Prefer a post that is already written and not yet posted — the reel and the
 // poster then carry the same idea, and nothing is invented twice.
 const post =
   (wanted ? queue.find((p) => p.id === wanted) : null) ??
   // Slots declare their own format now, so the reel job films what was planned
-  // as a reel rather than guessing at the next unfilmed post.
-  queue.find((p) => p.format === "reel" && p.status !== "posted" && p.status !== "reject" && !p.reel) ??
-  queue.find((p) => p.status !== "posted" && p.status !== "reject" && !p.reel && !p.format);
+  // as a reel rather than guessing at the next unfilmed post. Earliest slot
+  // first, so a late run catches up in order rather than by file position.
+  queue
+    .filter((p) => p.format === "reel" && filmable(p))
+    .sort((a, b) => new Date(a.scheduledFor) - new Date(b.scheduledFor))[0] ??
+  queue.find((p) => filmable(p) && !p.format);
 
 if (wanted && !post) {
   console.error(`No post with id "${wanted}" in the queue.`);
