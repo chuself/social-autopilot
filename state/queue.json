@@ -2273,7 +2273,7 @@
     ],
     "scheduledFor": "2026-09-01T10:00:00.000Z",
     "createdAt": "2026-08-31T18:03:19.685Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-01-13-client-proof.mp4",
       "beats": [
@@ -2285,10 +2285,14 @@
       "narration": "Hata kama intaneti inasumbua hoteli yako, unaweza kuunganisha mapokezi na mgahawa kwa urahisi. Mfumo wetu unarahisisha usimamizi na utoaji wa bili za haraka kwa wateja wa kampuni bila kukwama, ukiwa kwa Kiswahili na Kiingereza.",
       "hasVoice": true,
       "builtAt": "2026-08-31T19:31:36.567Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-01T10:05:53.224Z",
+      "postIds": [
+        "instagram:18461033446188751",
+        "facebook:28206675472320078"
+      ]
     },
-    "lastAttempt": "2026-09-01T09:11:12.447Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-01T10:05:53.224Z"
   },
   {
     "id": "operra-2026-09-01-16-swahili-tip",
