@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-01T04:36:20.506Z"
+    "missedAt": "2026-09-01T05:36:50.028Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-01T04:36:20.502Z"
+    "missedAt": "2026-09-01T05:36:50.023Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-01T04:36:20.504Z",
+    "missedAt": "2026-09-01T05:36:50.025Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-01T04:36:20.563Z",
+    "lastAttempt": "2026-09-01T05:37:32.577Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-01T04:36:20.504Z",
+    "missedAt": "2026-09-01T05:36:50.025Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-01T04:36:20.564Z",
+    "lastAttempt": "2026-09-01T05:37:32.577Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2231,13 +2231,19 @@
     ],
     "scheduledFor": "2026-09-01T05:00:00.000Z",
     "createdAt": "2026-08-31T18:02:35.045Z",
-    "status": "pending",
+    "status": "posted",
     "slideFiles": [
       "operra-2026-09-01-08-number-that-lands-1.png",
       "operra-2026-09-01-08-number-that-lands-2.png",
       "operra-2026-09-01-08-number-that-lands-3.png"
     ],
-    "headline": "Moshi turnarounds demand absolute speed"
+    "headline": "Moshi turnarounds demand absolute speed",
+    "lastAttempt": "2026-09-01T05:37:32.514Z",
+    "postedAt": "2026-09-01T05:37:32.514Z",
+    "postIds": [
+      "facebook:1049514968255534_122146270335351110",
+      "instagram:18092955077365283"
+    ]
   },
   {
     "id": "operra-2026-09-01-13-client-proof",
@@ -2281,7 +2287,7 @@
       "builtAt": "2026-08-31T19:31:36.567Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-01T04:36:20.564Z",
+    "lastAttempt": "2026-09-01T05:37:32.578Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
