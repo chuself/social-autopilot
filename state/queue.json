@@ -2318,7 +2318,19 @@
     ],
     "scheduledFor": "2026-09-01T13:00:00.000Z",
     "createdAt": "2026-08-31T18:04:04.718Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-01-16-swahili-tip.mp4",
+      "beats": [
+        "Hakiki vocha mapema",
+        "Weka kwenye mfumo wageni wakifika",
+        "Malipo ya haraka bila migogoro"
+      ],
+      "narration": "Usisubiri siku ya kuondoka kuhangaika na bili za ma-agent. Kagua na kuingiza vocha zote kwenye mfumo wa Operra wageni wanapowasili. Inarahisisha ripoti na ukaguzi wa hesabu, na kuhakikisha unapokea malipo yako kwa wakati bila ucheleweshaji wowote.",
+      "hasVoice": true,
+      "builtAt": "2026-09-01T10:04:25.889Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-01-20-industry-note",
