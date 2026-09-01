@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-01T16:15:09.824Z"
+    "missedAt": "2026-09-01T17:16:33.655Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-01T16:15:09.819Z"
+    "missedAt": "2026-09-01T17:16:33.651Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-01T16:15:09.822Z",
+    "missedAt": "2026-09-01T17:16:33.653Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-01T16:15:09.887Z",
+    "lastAttempt": "2026-09-01T17:17:03.744Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-01T16:15:09.822Z",
+    "missedAt": "2026-09-01T17:16:33.653Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-01T16:15:09.887Z",
+    "lastAttempt": "2026-09-01T17:17:03.744Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2371,6 +2371,12 @@
     ],
     "scheduledFor": "2026-09-01T17:00:00.000Z",
     "createdAt": "2026-08-31T18:04:50.180Z",
-    "status": "pending"
+    "status": "posted",
+    "lastAttempt": "2026-09-01T17:17:03.678Z",
+    "postedAt": "2026-09-01T17:17:03.678Z",
+    "postIds": [
+      "facebook:1049514968255534_122146461183351110",
+      "instagram:18114773890960481"
+    ]
   }
 ]
