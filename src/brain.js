@@ -41,14 +41,27 @@ export function nextPillar(recent, scores = null) {
   const i = last ? PILLARS.indexOf(last) : -1;
   const next = PILLARS[(i + 1) % PILLARS.length];
 
-  if (!scores || Object.keys(scores).length < PILLARS.length) return next;
+  // state/pillar-scores.json now carries ONLY pillars cli-metrics is confident
+  // about — enough posts, and a big enough gap to mean it. An empty or thin
+  // file therefore means "no opinion", and round-robin is the right answer.
+  //
+  // This used to require all six before acting, which sounds cautious and was
+  // not: the scores were averages of Alice's own CTA comment, so six entries
+  // existed from day one and a pillar could be thinned on the strength of one
+  // stray like.
+  const known = scores ? Object.entries(scores) : [];
+  if (known.length < 2) return next;
 
-  // Skip the next pillar only if it is a clear laggard AND was used recently,
-  // so a weak pillar is thinned out rather than silently dropped forever.
-  const values = Object.values(scores);
-  const average = values.reduce((a, b) => a + b, 0) / values.length;
+  // Compare against the pillars we actually have evidence for, not against a
+  // field that includes pillars we know nothing about.
+  const average = known.reduce((a, [, v]) => a + v, 0) / known.length;
+  const score = scores[next];
+  if (score === undefined) return next;
+
+  // Thinned, never dropped: it must also have been used recently, so a weak
+  // pillar loses a turn rather than disappearing from the rotation for good.
   const usedRecently = recent.slice(0, 3).some((r) => r.pillar === next);
-  if (usedRecently && (scores[next] ?? 0) < average * 0.5) {
+  if (usedRecently && score < average * 0.5) {
     return PILLARS[(i + 2) % PILLARS.length];
   }
   return next;

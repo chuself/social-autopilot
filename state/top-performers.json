@@ -1,58 +1,100 @@
 [
   {
-    "id": "operra-2026-08-26-08-number-that-lands",
-    "platform": "facebook",
-    "pillar": "number-that-lands",
-    "headline": "Corporate checkout rush stalling?",
-    "likes": 1,
-    "comments": 1,
+    "id": "operra-2026-08-31-13-industry-note",
+    "platform": "instagram",
+    "pillar": "industry-note",
+    "format": "reel",
+    "language": "en",
+    "look": "daylight",
+    "headline": "Keep Arusha safari departures on schedule",
+    "reach": 117,
+    "likes": 2,
+    "comments": 0,
     "shares": 0,
-    "engagement": 7,
+    "saves": 0,
+    "engagement": 2,
     "platforms": [
-      "facebook",
-      "instagram"
+      "instagram",
+      "facebook"
     ]
   },
   {
-    "id": "operra-2026-08-21-08-number-that-lands",
+    "id": "operra-2026-08-30-16-number-that-lands",
     "platform": "instagram",
     "pillar": "number-that-lands",
-    "headline": "Every price change and payment tracked in one place",
+    "format": "reel",
+    "language": "en",
+    "look": "daylight",
+    "headline": "Keep your lakeside front desk online",
+    "reach": 105,
     "likes": 3,
     "comments": 0,
-    "engagement": 6,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 3,
+    "platforms": [
+      "instagram",
+      "facebook"
+    ]
+  },
+  {
+    "id": "operra-2026-08-21-16-industry-note",
+    "platform": "instagram",
+    "pillar": "industry-note",
+    "format": "reel",
+    "language": "en",
+    "look": null,
+    "headline": "East African guests expect faster check-ins",
+    "reach": 101,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 3,
     "platforms": [
       "instagram",
       "facebook",
-      "instagram"
+      "tiktok"
     ]
   },
   {
-    "id": "operra-2026-08-23-08-number-that-lands",
-    "platform": "facebook",
-    "pillar": "number-that-lands",
-    "headline": "Lake-side internet shouldn't stall checkouts",
-    "likes": 1,
-    "comments": 1,
+    "id": "operra-2026-08-23-13-client-proof",
+    "platform": "instagram",
+    "pillar": "client-proof",
+    "format": "reel",
+    "language": "sw",
+    "look": "flatlay",
+    "headline": "Fast check-ins for trekking groups in Moshi",
+    "reach": 29,
+    "likes": 2,
+    "comments": 0,
     "shares": 0,
-    "engagement": 6,
+    "saves": 0,
+    "engagement": 2,
     "platforms": [
+      "instagram",
       "facebook",
-      "instagram"
+      "tiktok"
     ]
   },
   {
-    "id": "operra-2026-08-23-20-industry-note",
-    "platform": "facebook",
-    "pillar": "industry-note",
-    "headline": "Safari season demands faster tour operator billing",
-    "likes": 1,
-    "comments": 1,
+    "id": "operra-2026-08-30-13-pain-point",
+    "platform": "instagram",
+    "pillar": "pain-point",
+    "format": "reel",
+    "language": "sw",
+    "look": "daylight",
+    "headline": "Bili za tours na transfers zinasahaulika wageni wakiondoka?",
+    "reach": 20,
+    "likes": 2,
+    "comments": 0,
     "shares": 0,
-    "engagement": 6,
+    "saves": 0,
+    "engagement": 2,
     "platforms": [
+      "instagram",
       "facebook",
-      "instagram"
+      "tiktok"
     ]
   }
 ]
