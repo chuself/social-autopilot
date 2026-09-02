@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-02T04:00:21.409Z"
+    "missedAt": "2026-09-02T05:01:00.910Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-02T04:00:21.405Z"
+    "missedAt": "2026-09-02T05:01:00.905Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-02T04:00:21.407Z",
+    "missedAt": "2026-09-02T05:01:00.907Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-02T04:00:21.470Z",
+    "lastAttempt": "2026-09-02T05:01:47.942Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-02T04:00:21.407Z",
+    "missedAt": "2026-09-02T05:01:00.907Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-02T04:00:21.470Z",
+    "lastAttempt": "2026-09-02T05:01:47.942Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2420,13 +2420,19 @@
     ],
     "scheduledFor": "2026-09-02T05:00:00.000Z",
     "createdAt": "2026-09-01T18:01:58.444Z",
-    "status": "pending",
+    "status": "posted",
     "slideFiles": [
       "operra-2026-09-02-08-feature-spotlight-1.png",
       "operra-2026-09-02-08-feature-spotlight-2.png",
       "operra-2026-09-02-08-feature-spotlight-3.png"
     ],
-    "headline": "Ukiwa mbali na hotelini, unapata hesabu?"
+    "headline": "Ukiwa mbali na hotelini, unapata hesabu?",
+    "lastAttempt": "2026-09-02T05:01:47.877Z",
+    "postedAt": "2026-09-02T05:01:47.877Z",
+    "postIds": [
+      "facebook:1049514968255534_122146735107351110",
+      "instagram:17956116834230159"
+    ]
   },
   {
     "id": "operra-2026-09-02-13-pain-point",
