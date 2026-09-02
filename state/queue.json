@@ -2465,7 +2465,20 @@
     "status": "needs-review",
     "heldFigures": [
       "00"
-    ]
+    ],
+    "reel": {
+      "file": "operra-2026-09-02-13-pain-point.mp4",
+      "beats": [
+        "Wageni wakiondoka mapema",
+        "Vifaa na chakula visisahaulike",
+        "Hata kwenye mtandao mdogo",
+        "Linda kila senti ya hoteli"
+      ],
+      "narration": "Vikundi vya watalii vikiondoka mapema Moshi, ni rahisi kukosa mapato ya vifaa na milo ya ziada. Mfumo wetu unarekodi kila huduma hata kwenye mtandao hafifu, kwa Kiswahili na Kiingereza. Dhibiti mapokezi na ripoti zako ili ulinde kila senti ya biashara yako.",
+      "hasVoice": true,
+      "builtAt": "2026-09-02T10:04:36.444Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
