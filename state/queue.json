@@ -2510,7 +2510,20 @@
     ],
     "scheduledFor": "2026-09-02T13:00:00.000Z",
     "createdAt": "2026-09-01T18:03:28.138Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-02-16-number-that-lands.mp4",
+      "beats": [
+        "Slow corporate checkouts?",
+        "Sync front desk and POS",
+        "No more manual reconciliation",
+        "Fast departures and happy guests"
+      ],
+      "narration": "Don't let manual billing delays hold up your corporate guests at checkout. Operra syncs your front desk, POS, and housekeeping in English and Kiswahili, running smoothly even on low-bandwidth Tanzanian connections. Keep departures moving and guests happy.",
+      "hasVoice": true,
+      "builtAt": "2026-09-02T15:05:13.078Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-02-20-client-proof",
