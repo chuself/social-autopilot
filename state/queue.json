@@ -2566,5 +2566,145 @@
       "facebook:1049514968255534_122147052627351110",
       "instagram:17921928942199612"
     ]
+  },
+  {
+    "id": "operra-2026-09-03-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Zanzibar Resorts",
+        "headline": "Unapoteza faida kwa wageni wa muda mrefu?",
+        "body": "Kamisheni za OTA kwenye wageni wa wiki mbili zinamaliza kabisa faida yako ya msimu."
+      },
+      {
+        "eyebrow": "Mbinu Yetu",
+        "headline": "Badilisha kamisheni kuwa usafiri wa bure",
+        "body": "Gharama ya usafiri wa uwanja wa ndege ni ndogo kuliko kulipa 20% ya kamisheni kwa siku saba."
+      },
+      {
+        "eyebrow": "Usimamizi Rahisi",
+        "headline": "Okoa faida yako na mifumo sahihi",
+        "body": "Fuatilia direct bookings, ratiba za usafiri na malipo ya wageni wako wote sehemu moja rahisi."
+      }
+    ],
+    "caption": "Wageni wanaokaa Zanzibar kwa muda mrefu ndio wanaobeba msimu wako, lakini kuwalipia kamisheni za OTA kwa siku zote hizo kunapunguza faida yako kwa kiasi kikubwa. Badala yake, wavutie ku-book direct kwa kuwapa usafiri wa bure wa uwanja wa ndege. Operra inakusaidia kusimamia 'direct bookings' hizi na kuratibu huduma zote za ziada bila usumbufu na kwa urahisi kabisa.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "Operra",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "A close-up shot of a single hand-woven palm-leaf fan resting on a rustic wooden table on a quiet seaside veranda in Zanzibar, exterior at dusk, deep blue hour, cool and quiet tone, warm interior light from a nearby window glowing softly against a cool sky and ocean backdrop, no text, no people, no logos.",
+    "cta": "Jaribu Operra",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-09-03-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-03T05:00:00.000Z",
+    "createdAt": "2026-09-02T20:58:23.486Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-03-08-swahili-tip-1.png",
+      "operra-2026-09-03-08-swahili-tip-2.png",
+      "operra-2026-09-03-08-swahili-tip-3.png"
+    ],
+    "headline": "Unapoteza faida kwa wageni wa muda mrefu?"
+  },
+  {
+    "id": "operra-2026-09-03-13-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Regional conferences test lean Mwanza hotel teams",
+    "body": "When staff handle both reception and event billing, silos lead to missed charges. Keep your team coordinated on one simple screen.",
+    "cta": "Book a demo",
+    "caption": "Mwanza is seeing a steady rise in regional business conferences, bringing welcome mid-week bookings. But managing these events with a lean team means your staff wear multiple hats.\n\nWhen the same person handles event billing, front desk check-ins, and housekeeping updates, paper handovers fail.\n\nOperra unites your front desk, billing, and housekeeping on one simple interface. Your team stays aligned, errors drop, and checkouts stay fast.",
+    "hashtags": [
+      "MwanzaHotels",
+      "TanzaniaHospitality",
+      "HotelOperations"
+    ],
+    "imagePrompt": "Exterior at dusk of a modern minimalist lakeside meeting pavilion with floor-to-ceiling glass windows. Deep blue hour, cool and quiet tone. Warm interior light glows from inside the pavilion, casting a soft reflection on the calm lake water. The pavilion is positioned on the right-of-centre, leaving the left third as calm empty sky and dark water. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-03-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-03T10:00:00.000Z",
+    "createdAt": "2026-09-02T20:59:08.516Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-03-16-feature-spotlight",
+    "eyebrow": "Front Desk",
+    "headline": "Resell delayed rooms with live occupancy updates",
+    "body": "Track delayed mountain descents in real time. Know exactly which rooms are free to capture walk-in guests during Moshi's peak season.",
+    "cta": "See how it works",
+    "caption": "When a climbing group gets delayed on Kilimanjaro, your rooms shouldn’t sit empty.\n\nOperra gives your front desk live room status on any device. If an itinerary changes, your team instantly sees which rooms are free to sell to last-minute walk-ins.\n\nNo phone calls to housekeeping. No lost peak-season revenue. Keep your Moshi lodge running at full capacity.",
+    "hashtags": [
+      "HotelManagement",
+      "MoshiHotels",
+      "Kilimanjaro",
+      "Operra"
+    ],
+    "imagePrompt": "An exterior shot at dusk of a rustic wooden veranda of a Moshi lodge. A pair of trekking poles and a metal thermos flask rest on a wooden bench on the right-of-center. Deep blue hour sky in the background, cool and quiet, with warm interior light glowing softly from the windows. The left third of the frame is a clean, softly shadowed plaster wall, leaving a visually calm empty space. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-03-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-03T13:00:00.000Z",
+    "createdAt": "2026-09-02T20:59:56.892Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-03-20-pain-point",
+    "eyebrow": "Mapokezi",
+    "headline": "Bili za LPO zinasumbua wageni wa makampuni wakiondoka?",
+    "body": "Linganisha huduma zote, chakula na vinywaji na makubaliano ya LPO ya kampuni papo hapo bila kuchelewesha wageni wako wa Dar.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mteja wa kampuni anawahi ndege JNIA, lakini anasubiri mapokezi kwa sababu bili ya chakula haitofautiani na LPO yake. Hali hii inaleta usumbufu na kuchelewesha malipo. 💼\n\nUkiwa na Operra, unaweza kutenganisha bili ya kampuni na matumizi binafsi ya mteja tangu siku anapoingia. Hakuna makosa ya hesabu, hakuna kuchelewesha wageni.\n\nFanya mchakato wa check-out uwe wa haraka na wa kitaalamu.",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaam",
+      "#HospitalityTZ"
+    ],
+    "imagePrompt": "Exterior shot at dusk of a modern executive balcony overlooking Dar es Salaam, deep blue hour, cool and quiet. A single sleek metal pen rests on a leather portfolio folder on a glass table, positioned right-of-centre. Warm interior office light glows from behind glass panels against a cool twilight sky. Left side is calm and empty sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-03-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-03T17:00:00.000Z",
+    "createdAt": "2026-09-02T21:00:40.975Z",
+    "status": "pending"
   }
 ]

@@ -1,5 +1,24 @@
 [
   {
+    "id": "operra-2026-09-01-16-swahili-tip",
+    "platform": "instagram",
+    "pillar": "swahili-tip",
+    "format": "reel",
+    "language": "sw",
+    "look": "daylight",
+    "headline": "Hakiki vocha za ma-agent wageni wakifika",
+    "reach": 123,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 1,
+    "platforms": [
+      "instagram",
+      "facebook"
+    ]
+  },
+  {
     "id": "operra-2026-08-31-13-industry-note",
     "platform": "instagram",
     "pillar": "industry-note",
@@ -66,26 +85,6 @@
     "look": "flatlay",
     "headline": "Fast check-ins for trekking groups in Moshi",
     "reach": 29,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 2,
-    "platforms": [
-      "instagram",
-      "facebook",
-      "tiktok"
-    ]
-  },
-  {
-    "id": "operra-2026-08-30-13-pain-point",
-    "platform": "instagram",
-    "pillar": "pain-point",
-    "format": "reel",
-    "language": "sw",
-    "look": "daylight",
-    "headline": "Bili za tours na transfers zinasahaulika wageni wakiondoka?",
-    "reach": 20,
     "likes": 2,
     "comments": 0,
     "shares": 0,
