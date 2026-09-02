@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-02T11:31:13.177Z",
+    "lastAttempt": "2026-09-02T12:03:30.642Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-02T11:31:13.177Z",
+    "lastAttempt": "2026-09-02T12:03:30.642Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2478,7 +2478,9 @@
       "hasVoice": true,
       "builtAt": "2026-09-02T12:02:28.884Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-09-02T12:03:30.643Z",
+    "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
