@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-02T11:31:13.053Z"
+    "missedAt": "2026-09-02T12:34:41.018Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-02T11:31:13.049Z"
+    "missedAt": "2026-09-02T12:34:41.013Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-02T11:31:13.050Z",
+    "missedAt": "2026-09-02T12:34:41.016Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-02T12:34:22.747Z",
+    "lastAttempt": "2026-09-02T12:34:41.077Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-02T11:31:13.051Z",
+    "missedAt": "2026-09-02T12:34:41.016Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-02T12:34:22.747Z",
+    "lastAttempt": "2026-09-02T12:34:41.077Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2479,7 +2479,7 @@
       "builtAt": "2026-09-02T12:02:28.884Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-02T12:34:22.747Z",
+    "lastAttempt": "2026-09-02T12:34:41.077Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2510,22 +2510,7 @@
     ],
     "scheduledFor": "2026-09-02T13:00:00.000Z",
     "createdAt": "2026-09-01T18:03:28.138Z",
-    "status": "pending",
-    "reel": {
-      "file": "operra-2026-09-02-16-number-that-lands.mp4",
-      "beats": [
-        "Stop checkout delays",
-        "Sync front desk and POS",
-        "Works on low-bandwidth connections",
-        "Flawless and fast departures"
-      ],
-      "narration": "Don't let manual reconciliation delay your departing corporate guests. Operra connects your front desk, housekeeping, and POS in English or Kiswahili, running smoothly even on low-bandwidth Tanzanian connections. Keep your bills accurate and your checkouts fast.",
-      "hasVoice": true,
-      "builtAt": "2026-09-02T12:34:09.969Z",
-      "status": "ready"
-    },
-    "lastAttempt": "2026-09-02T12:34:22.747Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "status": "pending"
   },
   {
     "id": "operra-2026-09-02-20-client-proof",
