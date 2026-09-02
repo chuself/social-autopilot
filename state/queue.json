@@ -2465,7 +2465,20 @@
     "status": "needs-review",
     "heldFigures": [
       "00"
-    ]
+    ],
+    "reel": {
+      "file": "operra-2026-09-02-13-pain-point.mp4",
+      "beats": [
+        "Wageni wakiondoka mapema",
+        "Milo na vifaa visisahaulike tena",
+        "Inafanya kazi kwenye mtandao hafifu",
+        "Nasa mapato yako yote kikamilifu"
+      ],
+      "narration": "Wageni wa milimani wakiondoka mapema Moshi, ni rahisi kusahau gharama za chakula na vifaa. Mfumo wetu unasaidia kuratibu mapokezi na mauzo hata kwenye mtandao hafifu, kwa Kiswahili au Kiingereza. Linda kila senti ya malipo.",
+      "hasVoice": true,
+      "builtAt": "2026-09-02T12:02:28.884Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
