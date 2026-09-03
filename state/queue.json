@@ -2651,7 +2651,19 @@
     ],
     "scheduledFor": "2026-09-03T10:00:00.000Z",
     "createdAt": "2026-09-02T20:59:08.516Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-03-13-industry-note.mp4",
+      "beats": [
+        "Hosting big conferences",
+        "Silos cause missed billing",
+        "Stop losing event revenue"
+      ],
+      "narration": "When big conferences hit Mwanza, lean hotel teams get overwhelmed. Front desk and event billing silos lead to missed charges. Operra keeps your reception, POS, and housekeeping coordinated on one simple screen, running smoothly even on low-bandwidth Tanzanian connections.",
+      "hasVoice": true,
+      "builtAt": "2026-09-03T07:05:58.184Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-03-16-feature-spotlight",
