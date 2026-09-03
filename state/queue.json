@@ -2756,5 +2756,143 @@
       "facebook:1049514968255534_122147402265351110",
       "instagram:18148060684531734"
     ]
+  },
+  {
+    "id": "operra-2026-09-04-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Arusha Peaks",
+        "headline": "Group departures demand instant billing",
+        "body": "When safari groups checkout at dawn, your reception cannot afford slow, manual billing mistakes."
+      },
+      {
+        "eyebrow": "Dual Language",
+        "headline": "Two languages, one smooth system",
+        "body": "Run your lodge in English and Kiswahili, keeping your team aligned on one low-bandwidth platform."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Simplify your safari lodge billing",
+        "body": "Cover your front desk, housekeeping, POS, and reports without relying on high-speed internet."
+      }
+    ],
+    "caption": "During peak safari season, morning departures are chaotic. Tour operators expect fast, accurate invoices, but slow internet at Arusha properties often delays checkout. Operra keeps your front desk moving. With a dual Kiswahili and English interface, your team can manage front desk, housekeeping, POS, and billing on a system built to run on low-bandwidth connections. No delays. No missed extras. Simplify your operations.",
+    "hashtags": [
+      "ArushaHotels",
+      "SafariLodge",
+      "HotelManagement"
+    ],
+    "imagePrompt": "An exterior shot at dusk of a rustic wooden veranda of an Arusha safari lodge during the deep blue hour, cool and quiet. On the deck, a neat row of classic canvas safari duffel bags with leather luggage tags rests under a warm interior light glowing against a cool sky. No text, no people, no logos.",
+    "cta": "Book a demo",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-09-04-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-04T05:00:00.000Z",
+    "createdAt": "2026-09-03T18:02:55.946Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-04-08-number-that-lands-1.png",
+      "operra-2026-09-04-08-number-that-lands-2.png",
+      "operra-2026-09-04-08-number-that-lands-3.png"
+    ],
+    "headline": "Group departures demand instant billing"
+  },
+  {
+    "id": "operra-2026-09-04-13-client-proof",
+    "eyebrow": "Mapokezi",
+    "headline": "Mtandao dhaifu Zanzibar sio kikwazo tena",
+    "body": "Operra inafanya kazi vizuri kwenye mtandao dhaifu ili kuzuia foleni za wageni mapokezi.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mtandao wa Zanzibar unaposumbua wakati wa msimu wa wageni, huduma zisishikilie sekunde za mwisho za mteja. Resort moja ya Zanzibar imepunguza foleni za kuondoka kwa kutumia Operra inayofanya kazi vizuri hata kwenye mtandao hafifu. Kila muamala na bili ya chumba inasawazishwa bila kukwama, hivyo wageni wanawahi safari zao bila usumbufu.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "Operra"
+    ],
+    "imagePrompt": "exterior shot at dusk of a coastal resort terrace, a single white internet router sitting on a wooden side table on the right side of the frame, warm interior light glowing from the open glass doors of the lobby, cool deep blue hour sky on the left side of the frame, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-04-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-04T10:00:00.000Z",
+    "createdAt": "2026-09-03T18:03:40.680Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-04-16-swahili-tip",
+    "eyebrow": "Conference Operations",
+    "headline": "Pre-verify corporate LPOs before the event starts",
+    "body": "Avoid checkout friction for Mwanza conference delegates. Confirm billing instructions and LPOs with corporate planners two days before arrival.",
+    "cta": "See Operra",
+    "caption": "Mwanza corporate events move fast. When a regional conference checks out, small teams get overwhelmed by manual billing verification.\n\nTo keep departures smooth, verify all Local Purchase Orders (LPOs) and extra charges agreements with the event planner 48 hours before the first delegate arrives. This keeps your front desk clear and your team focused on hospitality. 📊",
+    "hashtags": [
+      "HotelOperations",
+      "MwanzaHotels",
+      "HospitalityTips"
+    ],
+    "imagePrompt": "Exterior shot at dusk of a lakeside meeting room window. Through the glass, a single corporate lanyard and a neat notebook sit on a polished wooden table, illuminated by a warm interior light glowing against the cool, deep blue hour sky of Lake Victoria in the background. Calm, clean composition with the left third kept as plain dark window reflection. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-04-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-04T13:00:00.000Z",
+    "createdAt": "2026-09-03T18:04:26.885Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-04-20-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Simplify post-climb crew and rental billing",
+    "body": "Track extra guide meals, porter fees, and gear rentals in one system to prevent checkout delays during Moshi's trekking peaks.",
+    "cta": "See it work",
+    "caption": "Moshi's trekking season puts heavy pressure on checkout mornings. When climbing groups return, tracking rented gear, guide meals, and porter fees on loose papers causes long delays at the front desk.\n\nKeep your team coordinated. By logging every extra service instantly, you can present one clear, accurate invoice the moment the group descends. No missed charges, no delayed departures.",
+    "hashtags": [
+      "MoshiHotels",
+      "KilimanjaroTourism",
+      "HotelOperations"
+    ],
+    "imagePrompt": "An exterior shot at dusk of a mountain lodge terrace in Moshi. A heavy climbing rope is neatly coiled on a stone ledge on the right side, with warm light glowing from a lodge window behind it. The left side is a quiet, deep blue hour sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-04-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-04T17:00:00.000Z",
+    "createdAt": "2026-09-03T18:05:11.308Z",
+    "status": "pending"
   }
 ]
