@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-03T12:55:52.307Z"
+    "missedAt": "2026-09-03T13:56:01.402Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-03T12:55:52.302Z"
+    "missedAt": "2026-09-03T13:56:01.396Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-03T12:55:52.304Z",
+    "missedAt": "2026-09-03T13:56:01.399Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-03T12:55:52.304Z",
+    "missedAt": "2026-09-03T13:56:01.399Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-03T12:55:52.368Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-03T12:55:52.307Z"
+    "missedAt": "2026-09-03T13:56:01.402Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -2700,7 +2700,7 @@
     ],
     "scheduledFor": "2026-09-03T13:00:00.000Z",
     "createdAt": "2026-09-02T20:59:56.892Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-03-16-feature-spotlight.mp4",
       "beats": [
@@ -2712,10 +2712,14 @@
       "narration": "Wageni wako wanapochelewa kushuka mlimani Moshi, usipoteze mapato. Operra inakuonyesha vyumba vilivyo wazi papo hapo, hata kwenye mtandao mdogo. Unaweza kupokea wageni wapya wa ghafla haraka, kuratibu usafi, na kusimamia mapokezi yako bila fujo msimu huu wa utalii.",
       "hasVoice": true,
       "builtAt": "2026-09-03T10:04:48.400Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-03T13:57:15.760Z",
+      "postIds": [
+        "instagram:18098549570313395",
+        "facebook:1041405432127146"
+      ]
     },
-    "lastAttempt": "2026-09-03T12:55:52.368Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-03T13:57:15.760Z"
   },
   {
     "id": "operra-2026-09-03-20-pain-point",
