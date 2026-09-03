@@ -2696,7 +2696,20 @@
     ],
     "scheduledFor": "2026-09-03T13:00:00.000Z",
     "createdAt": "2026-09-02T20:59:56.892Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-03-16-feature-spotlight.mp4",
+      "beats": [
+        "Watalii wamechelewa mlimani?",
+        "Fahamu vyumba vilivyo wazi sasa hivi",
+        "Inafanya kazi hata mtandao ukiwa chini",
+        "Nasa wageni wa ghafla msimu huu"
+      ],
+      "narration": "Wageni wako wanapochelewa kushuka mlimani Moshi, usipoteze mapato. Operra inakuonyesha vyumba vilivyo wazi papo hapo, hata kwenye mtandao mdogo. Unaweza kupokea wageni wapya wa ghafla haraka, kuratibu usafi, na kusimamia mapokezi yako bila fujo msimu huu wa utalii.",
+      "hasVoice": true,
+      "builtAt": "2026-09-03T10:04:48.400Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-03-20-pain-point",
