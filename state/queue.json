@@ -2839,7 +2839,20 @@
     ],
     "scheduledFor": "2026-09-04T10:00:00.000Z",
     "createdAt": "2026-09-03T18:03:40.680Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-04-13-client-proof.mp4",
+      "beats": [
+        "Mtandao dhaifu Zanzibar usikwamishe huduma.",
+        "Fanya kazi hata intaneti ikiwa chini.",
+        "Simamia mapokezi, usafi na mauzo yote.",
+        "Zuia foleni na ufurahishe wageni."
+      ],
+      "narration": "Mtandao dhaifu Zanzibar usikwamishe biashara yako ya hoteli. Operra inafanya kazi vizuri hata kwenye intaneti ya chini, ikikusaidia kusimamia mapokezi, usafi, na mauzo bila shida. Zuia foleni ndefu na utoe huduma za haraka kwa wageni wako muda wote.",
+      "hasVoice": true,
+      "builtAt": "2026-09-04T07:07:39.084Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-04-16-swahili-tip",
