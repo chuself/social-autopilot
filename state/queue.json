@@ -2884,7 +2884,20 @@
     ],
     "scheduledFor": "2026-09-04T13:00:00.000Z",
     "createdAt": "2026-09-03T18:04:26.885Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-04-16-swahili-tip.mp4",
+      "beats": [
+        "Wageni wanakwama mapokezi?",
+        "Hakiki LPO mapema kabla hawajafika.",
+        "Ondoa kero za malipo ya mikutano.",
+        "Wageni wako waondoke kwa tabasamu."
+      ],
+      "narration": "Usiwaache wageni wa mikutano ya Mwanza wakwame mapokezi wakati wa kuondoka. Hakiki maagizo ya malipo na LPO na waandaaji siku mbili kabla ya kuwasili. Mfumo wetu unarahisisha huduma za mapokezi kwa Kiswahili, hata mtandao ukiwa wa chini.",
+      "hasVoice": true,
+      "builtAt": "2026-09-04T10:03:38.775Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-04-20-industry-note",
