@@ -2839,7 +2839,7 @@
     ],
     "scheduledFor": "2026-09-04T10:00:00.000Z",
     "createdAt": "2026-09-03T18:03:40.680Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-04-13-client-proof.mp4",
       "beats": [
@@ -2851,10 +2851,14 @@
       "narration": "Mtandao dhaifu Zanzibar usikwamishe biashara yako ya hoteli. Operra inafanya kazi vizuri hata kwenye intaneti ya chini, ikikusaidia kusimamia mapokezi, usafi, na mauzo bila shida. Zuia foleni ndefu na utoe huduma za haraka kwa wageni wako muda wote.",
       "hasVoice": true,
       "builtAt": "2026-09-04T07:07:39.084Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-04T10:04:50.287Z",
+      "postIds": [
+        "instagram:18099722810028957",
+        "facebook:1048009401175012"
+      ]
     },
-    "lastAttempt": "2026-09-04T09:30:50.185Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-04T10:04:50.287Z"
   },
   {
     "id": "operra-2026-09-04-16-swahili-tip",
