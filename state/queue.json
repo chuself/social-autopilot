@@ -2944,5 +2944,144 @@
       "facebook:1049514968255534_122147799201351110",
       "instagram:18122139112867030"
     ]
+  },
+  {
+    "id": "operra-2026-09-05-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Dar Hoteli",
+        "headline": "Nani alibadilisha bei ya chumba jana?",
+        "body": "Mabadiliko ya bei ya dakika za mwisho yanavuruga mahesabu na kuleta migogoro na wateja wa corporate."
+      },
+      {
+        "eyebrow": "Audit Trail",
+        "headline": "Kila mabadiliko yana jina na maelezo",
+        "body": "Operra inarekodi kila mabadiliko ya bei, discount au chumba kiotomatiki. Hakuna kupoteza mapato kimya kimya."
+      },
+      {
+        "eyebrow": "Usimamizi",
+        "headline": "Linda mapato ya hoteli yako sasa",
+        "body": "Pata ripoti safi ya miamala yote moja kwa moja kwenye simu yako ukiwa popote Dar."
+      }
+    ],
+    "caption": "Katika hoteli za Dar es Salaam zenye mzunguko mkubwa wa wageni wa corporate, kila shilingi inahesabika. Lakini mabadiliko ya bei ya vyumba au discount zisizo na maelezo zinaweza kuvuruga mahesabu yako ya siku. Operra inakupa 'Audit Trail' ya uhakika—kila mabadiliko ya bili yanarekodiwa kiotomatiki pamoja na jina la aliyefanya na sababu yake. Hakuna tena mapato yanayopotea kimya kimya.",
+    "hashtags": [
+      "Operra",
+      "HotelManagementTanzania",
+      "DarEsSalaamHotels",
+      "HotelOperations"
+    ],
+    "imagePrompt": "A close-up shot of a classic metallic calculator resting next to a folded fabric corporate lanyard on a dark polished wooden table. Composition: wide shot with deep perspective. Tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain. No text, no people, no logos.",
+    "cta": "Jaribu Operra sasa",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-09-05-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-05T05:00:00.000Z",
+    "createdAt": "2026-09-04T18:02:53.932Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-05-08-feature-spotlight-1.png",
+      "operra-2026-09-05-08-feature-spotlight-2.png",
+      "operra-2026-09-05-08-feature-spotlight-3.png"
+    ],
+    "headline": "Nani alibadilisha bei ya chumba jana?"
+  },
+  {
+    "id": "operra-2026-09-05-13-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Safari group checkouts shouldn't stall your morning",
+    "body": "Keep peak-season departures moving in Arusha. Operra manages custom tour operator rates and last-minute extras on one screen.",
+    "cta": "See it work",
+    "caption": "When a safari group is boarding the cruiser in Arusha, every minute counts. A single missing lunch box charge or a disputed operator rate shouldn't hold up the departure. \n\nOperra simplifies peak-season billing. Front desk teams can update group extras instantly, apply contracted agency rates, and print accurate invoices in seconds. No manual calculations, no delayed departures.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelOperations",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of a stack of classic metal safari lunch boxes resting on a rustic wooden table in a dimly lit lodge dining room. Warm, golden low sun cutting through a side window on the right, creating long shadows, dark overall tone. Soft window light, gentle film grain. The left third of the frame is a clean, dark-toned empty wooden wall in deep shadow, keeping it visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-05-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-05T10:00:00.000Z",
+    "createdAt": "2026-09-04T18:03:38.750Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-05-16-number-that-lands",
+    "eyebrow": "Resort Operations",
+    "headline": "6 core operations running on weak resort Wi-Fi",
+    "body": "Manage front desk, housekeeping, POS, pricing, reports, and audit trail even when the coastal connection drops.",
+    "cta": "See how",
+    "caption": "Zanzibar resort guest experiences shouldn't stall when the coastal internet fluctuates.\n\nOperra runs your front desk, housekeeping, POS, pricing, reports, and audit trail on low-bandwidth connections. No slow checkouts. No missed beach bar bills at departure. Just one simple system keeping your entire team on the same page.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "A wide shot with deep perspective of a single chilled glass of coconut water with a bamboo straw resting on a dark teak side table next to a swimming pool at a Zanzibar resort. Warm, golden low sun, long shadows, dark overall tone. Soft window light, gentle film grain. The left side of the frame is visually calm with empty pool deck tiling in shadow. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-05-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-05T13:00:00.000Z",
+    "createdAt": "2026-09-04T18:04:24.517Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-05-20-client-proof",
+    "eyebrow": "Mrejesho",
+    "headline": "Bili za mikutano Mwanza hazikwami tena kwa mtandao hafifu",
+    "body": "Hoteli ya Mwanza inatumia mfumo unaofanya kazi hata kwenye mtandao wa chini kusawazisha bili za wateja wa mikutano bila makosa.",
+    "cta": "Jaribu Operra",
+    "caption": "Wageni wa mikutano wakiondoka kwa mkupuo, mtandao ukikata ni mtihani mkubwa mapokezi.\n\nHoteli moja ya kibiashara Mwanza imefanikiwa kuunganisha bili za migahawa na vyumba papo hapo, hata mtandao ukiwa dhaifu. Hakuna bili inayopotea, na wageni hawasubiri. Mfumo wetu unahakikisha idara zote zinawasiliana bila kukwamishwa na kasi ya internet.",
+    "hashtags": [
+      "MwanzaHotels",
+      "HotelManagement",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of a single clipboard holding a paper guest folio and a classic brass pen, resting on a dark wooden conference table. Soft golden low sun streaming through a window on the right, casting long shadows across the empty left side of the table. Soft window light, gentle film grain, dark overall tone. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-05-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-05T17:00:00.000Z",
+    "createdAt": "2026-09-04T18:05:09.086Z",
+    "status": "pending"
   }
 ]
