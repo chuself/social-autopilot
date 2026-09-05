@@ -3132,5 +3132,152 @@
       "facebook:1049514968255534_122148144039351110",
       "instagram:18140905174583747"
     ]
+  },
+  {
+    "id": "operra-2026-09-06-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Moshi Yetu",
+        "headline": "Vikundi vya mlimani vinaleta vurugu mapokezi?",
+        "body": "Wageni wakishuka Kili, mizigo na wapagazi wanasongamana mapokezi kwa wakati mmoja. Inaleta usumbufu."
+      },
+      {
+        "eyebrow": "Ushauri wetu",
+        "headline": "Tenga gear room mbali na mapokezi",
+        "body": "Miongozo na wapagazi washushe vifaa vya mlimani moja kwa moja kwenye stoo maalum, sio eneo la kupumzikia."
+      },
+      {
+        "eyebrow": "Mifumo ya malipo",
+        "headline": "Kamilisha bili za usafiri mapema asubuhi",
+        "body": "Weka gharama zote za usafiri mapema kwenye mfumo ili wageni wasisubiri mahesabu ya transfers wakati wa kuondoka."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Simamia hoteli yako ya Moshi kirahisi",
+        "body": "Mfumo wetu unarahisisha usajili wa wageni, hesabu za migahawa na bili za usafiri zote kwa pamoja."
+      }
+    ],
+    "caption": "Msimu wa kupanda mlima Kilimanjaro ukipamba moto, vurugu za mapokezi zinaweza kuharibu uzoefu wa wageni wako. Siri ya kudhibiti hali hii ni kutenganisha harakati za kitalii na mapokezi ya hoteli. Hakikisha vifaa vyote vya milimani vinaenda moja kwa moja kwenye stoo maalum (gear room), na bili zote za usafiri kutoka getini zimeingizwa kwenye mfumo kabla wageni hawajafika. Operra inakusaidia kuunganisha huduma hizi zote ili mapokezi yako yabaki tulivu.",
+    "hashtags": [
+      "HotelTanzania",
+      "MoshiHotels",
+      "Operra",
+      "HospitalityTZ"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of a pair of well-worn leather hiking boots resting on a rustic wooden bench next to a classic metal thermos flask, warm, golden low sun, long shadows, dark overall, soft window light, gentle film grain, no text, no people, no logos",
+    "cta": "Ongea nasi leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Moshi",
+    "backgroundPath": "state/bg/operra-2026-09-06-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-06T05:00:00.000Z",
+    "createdAt": "2026-09-05T18:03:33.891Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-06-08-swahili-tip-1.png",
+      "operra-2026-09-06-08-swahili-tip-2.png",
+      "operra-2026-09-06-08-swahili-tip-3.png",
+      "operra-2026-09-06-08-swahili-tip-4.png"
+    ],
+    "headline": "Vikundi vya mlimani vinaleta vurugu mapokezi?"
+  },
+  {
+    "id": "operra-2026-09-06-13-industry-note",
+    "eyebrow": "Front Desk",
+    "headline": "Late-night Dar check-ins demand ready billing",
+    "body": "Corporate guests landing late at JNIA expect pre-saved rates and billing rules, eliminating midnight front desk delays.",
+    "cta": "Simplify your desk",
+    "caption": "Business travelers landing late in Dar es Salaam have zero patience for billing mix-ups at midnight. If corporate rates and billing instructions are not synced before they arrive, your night team faces slow check-in queues and frustrated guests.\n\nOperra keeps your corporate accounts, negotiated rates, and billing rules updated in one system. Your night audit runs smoothly, and your guests get to their rooms faster.",
+    "hashtags": [
+      "DarEsSalaam",
+      "HotelOperations",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "wide shot with deep perspective of a sleek brass key hook board on a dark textured concrete wall, soft window light, warm, golden low sun, long shadows, dark overall, gentle film grain, left side visually calm with empty shadow, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-06-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-06T10:00:00.000Z",
+    "createdAt": "2026-09-05T18:04:19.273Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-06-16-feature-spotlight",
+    "eyebrow": "Bili za Mawakala",
+    "headline": "Ankara za safari tayari kwa sekunde moja",
+    "body": "Unganisha huduma zote za vinywaji, chakula na safari kwenye ankara moja ya wakala bila makosa ya hesabu.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Msimu wa safari unapoanza Arusha, kila sekunde ya wageni wako inahesabika. Hawapaswi kuchelewa kuelekea mbugani kwa sababu ya bili za mawakala kuchanganyikiwa mapokezi.\n\nOperra inakusanya gharama zote za ziada kwenye mfumo mmoja papo hapo. Unatengeneza ankara safi isiyo na makosa kwa mbofyo mmoja tu.\n\nFanya kazi kwa urahisi leo.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "A wide shot with deep perspective of a classic canvas safari duffel bag and a heavy brass compass resting on a dark wooden table. Soft window light from a warm, golden low sun casts long shadows, creating a dark overall tone with gentle film grain. The left side of the frame is a calm, empty dark wooden surface, keeping the detail on the right. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-06-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-06T13:00:00.000Z",
+    "createdAt": "2026-09-05T18:05:04.953Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-06-20-pain-point",
+    "eyebrow": "Fedha za Nje",
+    "headline": "Sarafu za kigeni zinapoteza faida yako",
+    "body": "Kubadilisha sarafu kwa mikono huko Zanzibar kunaleta upotevu wa fedha. Weka mfumo unaofuatilia viwango vya kubadilisha fedha kwa usahihi.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Hoteli nyingi za Zanzibar zinapoteza kiasi kikubwa cha mapato kwenye kubadilisha sarafu za kigeni mikononi mwa mabawabu na mapokezi bila uangalizi wa karibu. Unapokea dola, euro na shilingi kwa wakati mmoja, lakini hesabu za mwisho wa siku hazisomeki.\n\nOperra inasimamia viwango vyote vya fedha za kigeni moja kwa moja kwenye mfumo mkuu ili kuzuia upotevu wa mapato.\n\nSimamia biashara yako bila malalamiko.",
+    "hashtags": [
+      "OperraTech",
+      "ZanzibarHotels",
+      "HotelManagement",
+      "Tanzania"
+    ],
+    "imagePrompt": "wide shot with deep perspective of a traditional wooden money box resting next to foreign currency exchange notes, warm, golden low sun, long shadows, dark overall, soft window light, gentle film grain, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-06-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-06T17:00:00.000Z",
+    "createdAt": "2026-09-05T18:10:28.289Z",
+    "status": "pending"
   }
 ]
