@@ -3027,7 +3027,7 @@
     ],
     "scheduledFor": "2026-09-05T10:00:00.000Z",
     "createdAt": "2026-09-04T18:03:38.750Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-05-13-pain-point.mp4",
       "beats": [
@@ -3039,10 +3039,14 @@
       "narration": "Usiache foleni za asubuhi zicheleweshe wageni wako wa safari. Operra inakusaidia kudhibiti malipo ya makampuni ya utalii na huduma za ziada kwenye skrini moja, hata kukiwa na mtandao dhaifu. Rahisisha kazi na uwaondoshe wageni wako kwa tabasamu.",
       "hasVoice": true,
       "builtAt": "2026-09-05T07:04:33.094Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-05T10:07:06.395Z",
+      "postIds": [
+        "instagram:18115509145984271",
+        "facebook:29134239142828551"
+      ]
     },
-    "lastAttempt": "2026-09-05T09:21:33.795Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-05T10:07:06.395Z"
   },
   {
     "id": "operra-2026-09-05-16-number-that-lands",
