@@ -3072,7 +3072,20 @@
     ],
     "scheduledFor": "2026-09-05T13:00:00.000Z",
     "createdAt": "2026-09-04T18:04:24.517Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-05-16-number-that-lands.mp4",
+      "beats": [
+        "Weak resort Wi-Fi?",
+        "Manage six core operations easily.",
+        "Bilingual tools for your team.",
+        "Flawless coastal guest experiences."
+      ],
+      "narration": "When your coastal connection drops, your hotel shouldn't stop. Manage your front desk, housekeeping, POS, and pricing on low bandwidth in English or Kiswahili. Keep your property running smoothly and secure your audit trails, no matter the signal.",
+      "hasVoice": true,
+      "builtAt": "2026-09-05T10:05:28.442Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-05-20-client-proof",
