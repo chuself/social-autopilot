@@ -3027,7 +3027,20 @@
     ],
     "scheduledFor": "2026-09-05T10:00:00.000Z",
     "createdAt": "2026-09-04T18:03:38.750Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-05-13-pain-point.mp4",
+      "beats": [
+        "Foleni za asubuhi",
+        "Unganisha huduma zote skrini moja",
+        "Inafanya kazi mtandao ukiwa chini",
+        "Wageni wawahi safari bila kuchelewa"
+      ],
+      "narration": "Usiache foleni za asubuhi zicheleweshe wageni wako wa safari. Operra inakusaidia kudhibiti malipo ya makampuni ya utalii na huduma za ziada kwenye skrini moja, hata kukiwa na mtandao dhaifu. Rahisisha kazi na uwaondoshe wageni wako kwa tabasamu.",
+      "hasVoice": true,
+      "builtAt": "2026-09-05T07:04:33.094Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-05-16-number-that-lands",
