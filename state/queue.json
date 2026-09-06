@@ -3268,7 +3268,20 @@
     ],
     "scheduledFor": "2026-09-06T13:00:00.000Z",
     "createdAt": "2026-09-05T18:05:04.953Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-06-16-feature-spotlight.mp4",
+      "beats": [
+        "Ankara za safari",
+        "Tayari sasa kwa sekunde moja",
+        "Bila makosa hata kwenye mtandao hafifu",
+        "Mawakala walioridhika na hesabu sahihi"
+      ],
+      "narration": "Sasa unaweza kuandaa ankara za mawakala kwa sekunde moja tu. Operra inaunganisha vinywaji, chakula na safari zote kwenye mfumo mmoja bila makosa ya hesabu. Inafanya kazi vizuri kabisa hata kukiwa na mtandao hafifu kwenye hoteli au kambi yako.",
+      "hasVoice": true,
+      "builtAt": "2026-09-06T10:04:24.457Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-06-20-pain-point",
