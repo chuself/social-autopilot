@@ -3222,7 +3222,20 @@
     ],
     "scheduledFor": "2026-09-06T10:00:00.000Z",
     "createdAt": "2026-09-05T18:04:19.273Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-06-13-industry-note.mp4",
+      "beats": [
+        "Late JNIA arrivals expect fast billing.",
+        "Eliminate midnight front desk delays.",
+        "Works on low-bandwidth Tanzanian networks.",
+        "Seamless check-ins for corporate guests."
+      ],
+      "narration": "When corporate guests land late at JNIA, they expect immediate check-ins. Operra pre-saves corporate rates to eliminate midnight billing delays. It runs smoothly on low-bandwidth Tanzanian connections, offering an English and Kiswahili interface for your front desk.",
+      "hasVoice": true,
+      "builtAt": "2026-09-06T07:03:53.227Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-06-16-feature-spotlight",
