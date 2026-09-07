@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-07T12:53:34.977Z"
+    "missedAt": "2026-09-07T13:54:20.860Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-07T12:53:34.972Z"
+    "missedAt": "2026-09-07T13:54:20.855Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-07T12:53:34.975Z",
+    "missedAt": "2026-09-07T13:54:20.857Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-07T12:53:34.975Z",
+    "missedAt": "2026-09-07T13:54:20.857Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-07T12:53:35.039Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-07T12:53:34.978Z"
+    "missedAt": "2026-09-07T13:54:20.860Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -3461,7 +3461,7 @@
     ],
     "scheduledFor": "2026-09-07T13:00:00.000Z",
     "createdAt": "2026-09-06T18:08:00.011Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-07-16-swahili-tip.mp4",
       "beats": [
@@ -3473,10 +3473,14 @@
       "narration": "Epuka msongamano wa asubuhi kwenye hoteli yako ya Dar es Salaam. Ukiwa na Operra, unaweza kuratibu malipo ya usafiri wa uwanja wa ndege wakati mgeni anaingia. Mfumo wetu unafanya kazi vizuri hata kukiwa na mtandao mdogo, ukihakikisha checkouts za haraka na wageni kuwahi safari.",
       "hasVoice": true,
       "builtAt": "2026-09-07T10:04:26.293Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-07T13:55:22.332Z",
+      "postIds": [
+        "instagram:18128378959752250",
+        "facebook:4374399242874043"
+      ]
     },
-    "lastAttempt": "2026-09-07T12:53:35.039Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-07T13:55:22.332Z"
   },
   {
     "id": "operra-2026-09-07-20-industry-note",
