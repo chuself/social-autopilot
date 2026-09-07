@@ -3517,5 +3517,145 @@
       "facebook:1049514968255534_122148981705351110",
       "instagram:18112989464003416"
     ]
+  },
+  {
+    "id": "operra-2026-09-08-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Muda wa Wageni",
+        "headline": "Wateja wanasubiri mapokezi vyumba haviko tayari?",
+        "body": "Mawasiliano ya kusuasua kati ya housekeeping na mapokezi yanaharibu picha ya resort yako Zanzibar."
+      },
+      {
+        "eyebrow": "Mfumo wa Operra",
+        "headline": "Vyumba vikiwa safi, mapokezi wanajua papo hapo",
+        "body": "Housekeeping wakimaliza kusafisha, mfumo unasasisha hali ya chumba mtandaoni bila kupigiana simu au kutafutana."
+      },
+      {
+        "eyebrow": "Ufanisi",
+        "headline": "Operra inarahisisha usimamizi wa resort",
+        "body": "Ondoa foleni za mapokezi na uongeze furaha kwa wageni wako kuanzia siku ya kwanza."
+      }
+    ],
+    "caption": "Kwenye biashara ya utalii Zanzibar, dakika tano za mteja kusubiri mapokezi zinaweza kuharibu likizo yake yote. Operra inaunganisha idara ya housekeeping na mapokezi kwa usawazishaji wa papo hapo. Chumba kikiwa tayari, mapokezi wanaona kwenye kioo chao mara moja, hata kukiwa na mtandao dhaifu. Hakuna haja ya kupigiana simu au kutuma mtu kwenda kuangalia kama chumba kimesafishwa. Rahisisha kazi, okoa muda wa wageni wako.",
+    "hashtags": [
+      "ZanzibarResorts",
+      "HotelManagement",
+      "Operra",
+      "HospitalityTanzania"
+    ],
+    "imagePrompt": "overhead flat-lay, looking straight down onto a surface of a weathered turquoise wooden tabletop. A neat arrangement of a polished brass room number plate '104', a clean folded white cotton hand towel, and a small fresh white frangipani flower. Mid-tone, even soft daylight, neat arrangement, shallow shadows. No text, no people, no logos.",
+    "cta": "Jaribu Operra",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-09-08-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-08T05:00:00.000Z",
+    "createdAt": "2026-09-07T18:02:59.862Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-08-08-feature-spotlight-1.png",
+      "operra-2026-09-08-08-feature-spotlight-2.png",
+      "operra-2026-09-08-08-feature-spotlight-3.png"
+    ],
+    "headline": "Wateja wanasubiri mapokezi vyumba haviko tayari?"
+  },
+  {
+    "id": "operra-2026-09-08-13-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Struggling to split conference bills at checkout?",
+    "body": "Stop calculating delegate extras manually. Operra lets your small team separate corporate group accounts from personal bills instantly.",
+    "cta": "See it work",
+    "caption": "When a major regional conference wraps up in Mwanza, the checkout rush can quickly overwhelm a lean front desk team. \n\nManually separating the corporate master bill from individual delegate extras like drinks or laundry is slow and invites errors. With Operra, you can split bills and generate clean, accurate folios in just a few clicks. \n\nKeep your checkout queue moving and your corporate clients impressed.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "An overhead flat-lay looking straight down onto a smooth, light-grey concrete surface. On the right side, a printed guest invoice lies neatly next to a sleek matte-black pen and two colorful corporate lanyards. The left third of the image is completely empty and clean. Mid-tone, even soft daylight, neat arrangement, shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-08-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-08T10:00:00.000Z",
+    "createdAt": "2026-09-07T18:03:48.226Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-08-16-number-that-lands",
+    "eyebrow": "Connectivity",
+    "headline": "6 core departments running on low bandwidth",
+    "body": "Keep your Moshi front desk, housekeeping, and POS synced even when your internet connection drops.",
+    "cta": "See it work",
+    "caption": "When trekking groups return to Moshi, your reception desk shouldn't stall due to weak internet. Keep your rooms, bar POS, and guest bills perfectly synced. Operra runs on low-bandwidth connections common in Tanzanian properties. Manage front desk, housekeeping, POS, pricing, reports, and your audit trail without interruptions.",
+    "hashtags": [
+      "MoshiHotels",
+      "HotelManagement",
+      "Operra"
+    ],
+    "imagePrompt": "An overhead flat-lay looking straight down onto a dark slate surface. On the right side, a neatly folded paper topographic trail map of Mount Kilimanjaro. Mid-tone, even soft daylight with shallow shadows. The left side is completely empty and visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-08-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-08T13:00:00.000Z",
+    "createdAt": "2026-09-07T18:04:29.483Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-08-20-client-proof",
+    "eyebrow": "Mapokezi",
+    "headline": "Bili za makampuni hazikwami mtandao ukisumbua",
+    "body": "Operra inasawazisha huduma zote za hoteli yako ya Dar es Salaam hata kwenye mtandao hafifu wa dharura.",
+    "cta": "Fahamu zaidi",
+    "caption": "Wageni wa makampuni Dar es Salaam hawana muda wa kupoteza asubuhi wakati wa check-out. Mtandao wa fiber ukisumbua, Operra inaendelea kufanya kazi vizuri kwenye internet ya dharura ya kiwango cha chini (low bandwidth).\n\nMiamala yako yote, ripoti, na audit trail zinasalia salama bila kukatiza huduma za mapokezi.\n\nFanya kazi bila wasiwasi wa mtandao leo.",
+    "hashtags": [
+      "HotelManagement",
+      "DarEsSalaamHotels",
+      "Operra",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "Overhead flat-lay, looking straight down onto a smooth dark mahogany wooden surface. On the right side, a neat arrangement of a sleek modern silver calculator and a crisp, blank printed receipt roll. The left side is a clean, empty dark wooden surface with soft, even daylight casting shallow shadows. Minimalist, professional, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-08-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-08T17:00:00.000Z",
+    "createdAt": "2026-09-07T18:05:14.367Z",
+    "status": "pending"
   }
 ]
