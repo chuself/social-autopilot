@@ -3412,7 +3412,7 @@
     ],
     "scheduledFor": "2026-09-07T10:00:00.000Z",
     "createdAt": "2026-09-06T18:07:14.218Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-07-13-client-proof.mp4",
       "beats": [
@@ -3424,10 +3424,14 @@
       "narration": "Hata kama intaneti ya milimani inasumbua hapa Moshi, Operra inahakikisha mapokezi, malipo, na usafi vinaenda sawa bila mtandao wa kasi. Mfumo huu unarahisisha usimamizi wa hoteli yako kwa Kiswahili na Kiingereza, bila kukwamishwa na kasi ndogo ya mtandao.",
       "hasVoice": true,
       "builtAt": "2026-09-07T07:04:19.972Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-07T10:05:45.640Z",
+      "postIds": [
+        "instagram:18488296480101324",
+        "facebook:1061753883244529"
+      ]
     },
-    "lastAttempt": "2026-09-07T09:51:54.005Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-07T10:05:45.640Z"
   },
   {
     "id": "operra-2026-09-07-16-swahili-tip",
