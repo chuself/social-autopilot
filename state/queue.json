@@ -3457,7 +3457,20 @@
     ],
     "scheduledFor": "2026-09-07T13:00:00.000Z",
     "createdAt": "2026-09-06T18:08:00.011Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-07-16-swahili-tip.mp4",
+      "beats": [
+        "Foleni asubuhi mapokezi?",
+        "Sajili malipo ya usafiri mgeni anapoingia.",
+        "Inafanya kazi hata kwenye mtandao mdogo.",
+        "Ondoa foleni, wageni wawahi safari zao."
+      ],
+      "narration": "Epuka msongamano wa asubuhi kwenye hoteli yako ya Dar es Salaam. Ukiwa na Operra, unaweza kuratibu malipo ya usafiri wa uwanja wa ndege wakati mgeni anaingia. Mfumo wetu unafanya kazi vizuri hata kukiwa na mtandao mdogo, ukihakikisha checkouts za haraka na wageni kuwahi safari.",
+      "hasVoice": true,
+      "builtAt": "2026-09-07T10:04:26.293Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-07-20-industry-note",
