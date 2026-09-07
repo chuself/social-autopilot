@@ -3412,7 +3412,20 @@
     ],
     "scheduledFor": "2026-09-07T10:00:00.000Z",
     "createdAt": "2026-09-06T18:07:14.218Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-07-13-client-proof.mp4",
+      "beats": [
+        "Mtandao ukisumbua lodge?",
+        "Operra inaunganisha mapokezi na malipo.",
+        "Inafanya kazi kwa mtandao dhaifu.",
+        "Usimamizi wa hoteli unanyooka kabisa."
+      ],
+      "narration": "Hata kama intaneti ya milimani inasumbua hapa Moshi, Operra inahakikisha mapokezi, malipo, na usafi vinaenda sawa bila mtandao wa kasi. Mfumo huu unarahisisha usimamizi wa hoteli yako kwa Kiswahili na Kiingereza, bila kukwamishwa na kasi ndogo ya mtandao.",
+      "hasVoice": true,
+      "builtAt": "2026-09-07T07:04:19.972Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-07-16-swahili-tip",
