@@ -3707,5 +3707,144 @@
       "facebook:1049514968255534_122149410201351110",
       "instagram:18282098554291982"
     ]
+  },
+  {
+    "id": "operra-2026-09-09-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "MSIMU WA SAFARI",
+        "headline": "Bili za vikundi zinasumbua asubuhi ya checkout?",
+        "body": "Wageni wanawahi kupanda magari ya safari lakini bili za vinywaji na laundry bado hazijatenganishwa mapokezi."
+      },
+      {
+        "eyebrow": "USHAURI WETU",
+        "headline": "Tenga extras masaa 24 kabla ya kuwasili",
+        "body": "Hakiki vocha ya wakala mapema. Fungua akaunti tofauti ya extras kwa kila mgeni kabla hawajafika hotelini."
+      },
+      {
+        "eyebrow": "SULUHISHO",
+        "headline": "Kamilisha checkout za vikundi kwa sekunde chache",
+        "body": "Operra inarahisisha usimamizi wa bili za makampuni na wageni binafsi, hata kwenye mtandao hafifu wa Arusha."
+      }
+    ],
+    "caption": "Msimu wa wageni wengi Arusha unakuja na changamoto ya foleni mapokezi asubuhi ya kuondoka. Mara nyingi hii inatokana na kuchelewa kutenganisha bili za mawakala na matumizi binafsi ya wageni kama vinywaji au laundry. Ushauri wetu: fanya maandalizi haya masaa 24 kabla hawajafika. Operra inarahisisha zoezi hili kwa kukusaidia kutenganisha bili na kusimamia akaunti za makampuni kwa haraka, hata mtandao ukiwa wa kusuasua.",
+    "hashtags": [
+      "Operra",
+      "HotelManagement",
+      "ArushaHotels",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "An overhead flat-lay, looking straight down onto a rustic dark-stained wooden table surface. On the right side, a neatly arranged leather-bound field logbook, a pair of vintage black binoculars, and a small brass key. Mid-tone, even soft daylight, neat arrangement, shallow shadows, no text, no people, no logos.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-09-09-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-09T05:00:00.000Z",
+    "createdAt": "2026-09-08T18:04:24.900Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-09-08-swahili-tip-1.png",
+      "operra-2026-09-09-08-swahili-tip-2.png",
+      "operra-2026-09-09-08-swahili-tip-3.png"
+    ],
+    "headline": "Bili za vikundi zinasumbua asubuhi ya checkout?"
+  },
+  {
+    "id": "operra-2026-09-09-13-industry-note",
+    "eyebrow": "Pricing",
+    "headline": "Zanzibar guests expect seamless multi-currency checkout",
+    "body": "Manually calculating USD and TZS bills at checkout delays departures. Operra automates multi-currency pricing and front desk billing instantly.",
+    "cta": "See it work",
+    "caption": "Zanzibar resorts are seeing a shift. Guests want to settle accommodation in USD but pay bar and excursion bills in Shillings.\n\nIf your front desk is still manually converting rates during the morning checkout rush, errors are inevitable. You either lose margin on the exchange rate or delay their airport transfer.\n\nOperra keeps your front desk, POS, and pricing synced. Update rates once and let the system handle the rest—even on low-bandwidth connections.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelOperations",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "Overhead flat-lay, looking straight down onto a whitewashed rustic stone surface. On the right side, a neat arrangement of a classic brass calculator and a neatly rolled paper receipt. The left side is a plain, visually calm whitewashed stone surface with soft daylight and shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-09-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-09T10:00:00.000Z",
+    "createdAt": "2026-09-08T18:05:09.768Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-09-16-feature-spotlight",
+    "eyebrow": "Audit Trail",
+    "headline": "Track every payment and discount as it happens",
+    "body": "Operra records every price change, manual discount, and voided bill instantly. Protect your revenue without micromanaging your front desk team.",
+    "cta": "See it work",
+    "caption": "When your Mwanza hotel gets busy with regional conference guests, small billing discrepancies can slip through unnoticed. A manual rate change here, a voided receipt there.\n\nOperra's live audit trail logs every single adjustment instantly. You know exactly who made the change and why, giving you complete peace of mind even when you are away from the property.\n\nKeep your hotel's revenue secure.",
+    "hashtags": [
+      "#HotelManagement",
+      "#Mwanza",
+      "#HospitalityTech"
+    ],
+    "imagePrompt": "An overhead flat-lay looking straight down onto a polished dark green marble surface. On the right side, a neat arrangement of a sleek brass calculator and a folded paper receipt with shallow shadows. Even soft daylight. Left side is clean and empty. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-09-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-09T13:00:00.000Z",
+    "createdAt": "2026-09-08T18:05:54.774Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-09-20-pain-point",
+    "eyebrow": "Housekeeping",
+    "headline": "When trekking groups return from the mountain early",
+    "body": "Don't scramble to find clean rooms. Keep your front desk and housekeeping synced instantly, even on low-bandwidth connections.",
+    "cta": "See how it works",
+    "caption": "When a climbing group cuts their trek short and returns to Moshi early, your reception shouldn't scramble. Walking up and down corridors or calling housekeeping to check room status takes too long while tired guests wait.\n\nOperra connects your front desk and housekeeping in real time. See exactly which rooms are clean and ready the moment they are updated, keeping your turnaround seamless.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelOperations",
+      "#KilimanjaroTrekking"
+    ],
+    "imagePrompt": "Overhead flat-lay looking straight down onto a light-grey stone patio surface. On the right side, a pair of rugged, dusty leather hiking boots and a neatly folded trail map of Mount Kilimanjaro are neatly arranged. The left side is completely empty, showing only the clean stone texture in soft, even daylight with shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-09-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-09T17:00:00.000Z",
+    "createdAt": "2026-09-08T18:06:39.409Z",
+    "status": "pending"
   }
 ]
