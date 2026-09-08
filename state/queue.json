@@ -3601,7 +3601,7 @@
     ],
     "scheduledFor": "2026-09-08T10:00:00.000Z",
     "createdAt": "2026-09-07T18:03:48.226Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-08-13-pain-point.mp4",
       "beats": [
@@ -3613,10 +3613,14 @@
       "narration": "Kupiga hesabu za ziada za wageni wa mikutano kunachosha sana. Operra inakusaidia kutenganisha bili za kampuni na za binafsi kwa sekunde chache, hata mtandao ukiwa wa kusuasua. Okoa muda, fanya wateja wako waondoke kwa tabasamu.",
       "hasVoice": true,
       "builtAt": "2026-09-07T18:15:25.947Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-08T10:06:24.534Z",
+      "postIds": [
+        "instagram:17919223749432708",
+        "facebook:1585429933307993"
+      ]
     },
-    "lastAttempt": "2026-09-08T09:10:44.940Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-08T10:06:24.534Z"
   },
   {
     "id": "operra-2026-09-08-16-number-that-lands",
