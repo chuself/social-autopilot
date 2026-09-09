@@ -3896,5 +3896,146 @@
       "facebook:1049514968255534_122149845423351110",
       "instagram:18001523292004500"
     ]
+  },
+  {
+    "id": "operra-2026-09-10-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Dar hotels",
+        "headline": "Corporate checkouts clog your morning",
+        "body": "High-turnover business hotels can't afford billing delays when corporate guests depart at 7 AM."
+      },
+      {
+        "eyebrow": "One system",
+        "headline": "6 core operations, zero gaps",
+        "body": "Sync front desk, housekeeping, POS, pricing, reports, and audit trail in one place."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Simplify your corporate billing",
+        "body": "Keep your front desk moving with a fast, reliable system built for Tanzanian hospitality."
+      }
+    ],
+    "caption": "Dar es Salaam business hotels move fast. When corporate guests check out simultaneously, manual reconciliation causes friction and delays. Operra brings all 6 core departments—front desk, housekeeping, POS, pricing, reports, and audit trail—into a single, reliable system. Keep your billing accurate and your lobby clear, even on low-bandwidth connections. Simplify your operations.",
+    "hashtags": [
+      "#DarEsSalaamHotels",
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "overhead flat-lay, looking straight down onto a smooth matte-finish dark charcoal paper surface. On the right side, a neat arrangement of a slim metal pen, a minimal pocket calculator, and a blank paper receipt. Mid-tone, even soft daylight, neat arrangement, shallow shadows, no text, no people, no logos.",
+    "cta": "See Operra live",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-09-10-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-10T05:00:00.000Z",
+    "createdAt": "2026-09-09T20:53:49.875Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-10-08-number-that-lands-1.png",
+      "operra-2026-09-10-08-number-that-lands-2.png",
+      "operra-2026-09-10-08-number-that-lands-3.png"
+    ],
+    "headline": "Corporate checkouts clog your morning"
+  },
+  {
+    "id": "operra-2026-09-10-13-client-proof",
+    "eyebrow": "Mapokezi",
+    "headline": "Safari za asubuhi Arusha hazikwami tena",
+    "body": "Lodge za Arusha sasa zinakamilisha ankara za ma-agent na mapokezi mapema, hata mtandao ukiwa hafifu wakati wa msimu wa watalii.",
+    "cta": "Tazama mfumo",
+    "caption": "Msimu wa watalii ukichangamka Arusha, safari za magari ya porini hazisubiri bili zilizochelewa.\n\nOperra inasaidia lodge za Arusha kuendesha mapokezi, mgahawa na mahesabu kwa pamoja hata mtandao ukiwa dhaifu. Hakuna mkanganyiko wa vocha za ma-agent asubuhi wala kuchelewesha wageni getini. Wafanyakazi wanatumia mfumo kwa Kiswahili au Kiingereza bila usumbufu.\n\nKila idara inasoma taarifa sahihi kabla gari la kwanza halijaondoka.",
+    "hashtags": [
+      "#HoteliTanzania",
+      "#ArushaHotels",
+      "#HospitalityTanzania",
+      "#OperraPMS"
+    ],
+    "imagePrompt": "An overhead flat-lay, looking straight down onto a surface of warm pale buff sandstone. On the right side, a neatly placed olive canvas safari field notebook alongside a brass mechanical pencil and a pair of compact safari field binoculars in a matte leather case. Shallow shadows, neat arrangement, mid-tone, even soft daylight. The left two-thirds remain completely clear and empty stone surface, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-10-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-10T10:00:00.000Z",
+    "createdAt": "2026-09-09T20:54:34.668Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-10-16-swahili-tip",
+    "eyebrow": "Front Desk",
+    "headline": "Verify OTA virtual cards on day one",
+    "body": "For long-stay Zanzibar bookings, check the virtual card balance immediately. Waiting until checkout risks facing expired cards or payment delays.",
+    "cta": "Simplify your front desk",
+    "caption": "Managing long-stay OTA bookings at your Zanzibar resort? Don't wait until checkout to charge the virtual credit card.\n\nVerify the card balance on the day the guest arrives. If there is a rate mismatch or an authorization error, you have days to resolve it with the booking platform—not minutes while their airport transfer waits.\n\nKeep your front desk running smoothly.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelOperations",
+      "FrontDesk"
+    ],
+    "imagePrompt": "Overhead flat-lay, looking straight down onto a smooth, warm terracotta tiled surface. On the right side, a neat wooden clipboard holds a printed guest folio and a classic brass pen. Even soft daylight, neat arrangement, shallow shadows. The left side is empty terracotta tile, visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-10-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-10T13:00:00.000Z",
+    "createdAt": "2026-09-09T20:55:19.670Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-10-20-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Synchronise lakeside dining and room folios instantly",
+    "body": "Mwanza lakefront properties often run lean teams. When weekend diners add charges to their stay, instant front desk visibility prevents missing items at departure.",
+    "cta": "Book a demo",
+    "caption": "Weekend lake traffic brings a mix of day diners and overnight guests to Mwanza properties. For smaller teams, keeping bar tabs, restaurant bills, and room folios synced manually creates delays during check-out.\n\nWhen your front desk and POS share one system, every order posts directly to the guest folio in real time. Your team handles busy rushes cleanly without missing room charges or holding up departures.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#EastAfricaTourism"
+    ],
+    "imagePrompt": "Overhead flat-lay looking straight down onto a natural woven reed mat surface. On the right side, a polished dark wooden bill presenter tray holding a neatly folded paper receipt and a clean glass tumbler. The left side is an empty, calm expanse of woven reed texture. Soft, even daylight with shallow shadows, mid-tone aesthetic, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-10-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-10T17:00:00.000Z",
+    "createdAt": "2026-09-09T20:56:11.212Z",
+    "status": "pending"
   }
 ]
