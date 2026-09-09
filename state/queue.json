@@ -3836,7 +3836,20 @@
     ],
     "scheduledFor": "2026-09-09T13:00:00.000Z",
     "createdAt": "2026-09-08T18:05:54.774Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-09-16-feature-spotlight.mp4",
+      "beats": [
+        "Mapato yako salama?",
+        "Fuatilia kila punguzo papo hapo",
+        "Linda faida yako bila usumbufu",
+        "Usimamizi rahisi na faida ya uhakika"
+      ],
+      "narration": "Mapato yako salama? Operra inarekodi kila badiliko la bei, punguzo, na risiti iliyofutwa papo hapo. Linda faida ya hoteli yako bila kulazimika kusimamia wafanyakazi kila sekunde. Pata udhibiti kamili na amani ya moyo leo.",
+      "hasVoice": true,
+      "builtAt": "2026-09-09T10:04:17.698Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-09-20-pain-point",
