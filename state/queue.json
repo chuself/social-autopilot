@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-09T12:54:44.459Z"
+    "missedAt": "2026-09-09T13:55:20.633Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-09T12:54:44.453Z"
+    "missedAt": "2026-09-09T13:55:20.628Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-09T12:54:44.456Z",
+    "missedAt": "2026-09-09T13:55:20.630Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-09T12:54:44.456Z",
+    "missedAt": "2026-09-09T13:55:20.630Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-09T12:54:44.516Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-09T12:54:44.459Z"
+    "missedAt": "2026-09-09T13:55:20.633Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -3840,7 +3840,7 @@
     ],
     "scheduledFor": "2026-09-09T13:00:00.000Z",
     "createdAt": "2026-09-08T18:05:54.774Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-09-16-feature-spotlight.mp4",
       "beats": [
@@ -3852,10 +3852,14 @@
       "narration": "Mapato yako salama? Operra inarekodi kila badiliko la bei, punguzo, na risiti iliyofutwa papo hapo. Linda faida ya hoteli yako bila kulazimika kusimamia wafanyakazi kila sekunde. Pata udhibiti kamili na amani ya moyo leo.",
       "hasVoice": true,
       "builtAt": "2026-09-09T10:04:17.698Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-09T13:56:25.359Z",
+      "postIds": [
+        "instagram:17895183807398743",
+        "facebook:1618054443372009"
+      ]
     },
-    "lastAttempt": "2026-09-09T12:54:44.516Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-09T13:56:25.359Z"
   },
   {
     "id": "operra-2026-09-09-20-pain-point",
