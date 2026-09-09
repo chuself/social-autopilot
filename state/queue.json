@@ -3791,7 +3791,20 @@
     ],
     "scheduledFor": "2026-09-09T10:00:00.000Z",
     "createdAt": "2026-09-08T18:05:09.768Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-09-13-industry-note.mp4",
+      "beats": [
+        "Stop manual checkouts",
+        "Instantly automate multi-currency billing",
+        "Runs smoothly on low-bandwidth connections",
+        "Flawless guest departures every time"
+      ],
+      "narration": "Manually calculating USD and TZS at checkout delays your Zanzibar guests. Operra automates your front desk billing instantly, even on low-bandwidth Tanzanian connections. Manage housekeeping, POS, and pricing in English or Kiswahili for effortless guest departures.",
+      "hasVoice": true,
+      "builtAt": "2026-09-09T07:06:08.703Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-09-16-feature-spotlight",
