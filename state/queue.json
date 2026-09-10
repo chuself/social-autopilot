@@ -4087,5 +4087,145 @@
       "facebook:1049514968255534_122151257265351110",
       "instagram:18494356888100350"
     ]
+  },
+  {
+    "id": "operra-2026-09-11-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Msimu wa Mlima",
+        "headline": "Wageni wameshuka, vyumba viko tayari?",
+        "body": "Wapandaji wamechoka na wanahitaji kupumzika. Je, mapokezi wanajua vyumba vilivyosafishwa?"
+      },
+      {
+        "eyebrow": "Ushirikiano wa Haraka",
+        "headline": "Housekeeping wakisafisha, mapokezi wanaona papo hapo",
+        "body": "Hakuna kukimbizana koridorini kuuliza hali ya vyumba. Taarifa zinasasishwa kwa sekunde moja tu."
+      },
+      {
+        "eyebrow": "Operra Moshi",
+        "headline": "Rahisisha mapokezi ya wageni na Operra",
+        "body": "Simamia usafi wa vyumba na mapokezi kwa mfumo rahisi unaofanya kazi hata mtandao ukiwa dhaifu."
+      }
+    ],
+    "caption": "Msimu wa wageni wa mlimani ukianza Moshi, kila sekunde inahesabika. Wageni wakishuka kutoka Kilimanjaro wanakuwa wamechoka na wanataka kupumzika haraka. Operra inaondoa migogoro ya mawasiliano kati ya housekeeping na mapokezi. Housekeeping wakimaliza kufanya usafi, mfumo unasasisha taarifa papo hapo ili mapokezi wajue chumba kiko tayari kuuzwa au kukaliwa. Hakuna makosa, hakuna kuchelewesha wageni kwenye mapokezi yako.",
+    "hashtags": [
+      "HotelManagement",
+      "MoshiTanzania",
+      "OperraTech",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "An extreme close-up filling the frame of a stack of freshly laundered, neatly folded fluffy white hotel towels sitting on a rustic wooden bench. The texture of the cotton fabric is highly detailed. Tone is light, high-key, clean. Shallow depth of field, fine texture detail. No text, no people, no logos.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "backgroundPath": "state/bg/operra-2026-09-11-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-11T05:00:00.000Z",
+    "createdAt": "2026-09-10T18:04:49.245Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-11-08-feature-spotlight-1.png",
+      "operra-2026-09-11-08-feature-spotlight-2.png",
+      "operra-2026-09-11-08-feature-spotlight-3.png"
+    ],
+    "headline": "Wageni wameshuka, vyumba viko tayari?"
+  },
+  {
+    "id": "operra-2026-09-11-13-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Rushing to JNIA, but the night bill is missing",
+    "body": "Stop losing revenue to delayed room service and bar postings. Operra syncs all department charges to the guest folio instantly.",
+    "cta": "See how it works",
+    "caption": "Every second counts when a corporate guest is checking out of your Dar es Salaam hotel to catch an early flight at JNIA.\n\nIt is stressful when they are stuck at reception because last night's room service or dinner bill has not been posted to their room. You either let them go unpaid or risk them missing their flight.\n\nOperra connects your point of sale directly to the front desk. Real-time posting means fast checkouts and zero lost revenue.",
+    "hashtags": [
+      "HotelOperations",
+      "DarEsSalaam",
+      "HotelManagement",
+      "HospitalityEA"
+    ],
+    "imagePrompt": "Extreme close-up of a sleek tan leather luggage tag and a boarding pass on a smooth, light-beige travertine stone surface. The luggage tag is positioned on the right side of the frame, showing fine stitching details. The left side is a clean, empty travertine surface with soft, high-key natural light and shallow depth of field. Clean, minimalist composition. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-11-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-11T10:00:00.000Z",
+    "createdAt": "2026-09-10T18:05:33.896Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-11-16-number-that-lands",
+    "eyebrow": "Operations",
+    "headline": "Run 6 core departments on low bandwidth",
+    "body": "Keep front desk, housekeeping, POS, pricing, reports, and audit trails synced in Arusha, even when your internet connection drops.",
+    "cta": "See it work",
+    "caption": "Arusha safari departures do not wait for slow internet. When your lodge is busy with peak season departures, a weak connection shouldn't freeze your billing or stall your front desk.\n\nOperra is designed to keep all six of your core departments running smoothly on low-bandwidth connections. Keep your team coordinated, your guest bills accurate, and your morning checkouts on time.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelOperations",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "An extreme close-up of a vintage brass safari compass resting on a detailed paper map of Northern Tanzania. Light, high-key, clean lighting. Shallow depth of field with fine texture detail on the polished brass and aged paper. The compass is positioned right-of-centre, leaving the left third of the frame visually calm and empty. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-11-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-11T13:00:00.000Z",
+    "createdAt": "2026-09-10T18:06:24.296Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-11-20-client-proof",
+    "eyebrow": "Billing",
+    "headline": "Zanzibar resort keeps checkout moving on low bandwidth",
+    "body": "Run your front desk and sync guest folios without interruption, even when the resort Wi-Fi drops.",
+    "cta": "See it work",
+    "caption": "A slow internet connection shouldn't delay a guest's transfer to the airport. One beach resort in Zanzibar kept their checkout desk running smoothly during peak morning departures, even with weak local Wi-Fi. By using Operra, their team easily manages multi-currency bills and finalizes folios without waiting for the network to recover. 🛜",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelOperations",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "An extreme close-up of a polished brass bill tray with a folded white paper invoice, resting on a light, sun-bleached teak wood surface. Light, high-key, clean tone. Shallow depth of field, fine texture detail on the paper and wood grain. The invoice and tray are positioned on the right-of-centre, leaving the left side visually calm with clean, empty wood surface. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-11-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-11T17:00:00.000Z",
+    "createdAt": "2026-09-10T18:07:09.866Z",
+    "status": "pending"
   }
 ]
