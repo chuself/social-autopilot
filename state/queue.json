@@ -4026,7 +4026,20 @@
     ],
     "scheduledFor": "2026-09-10T13:00:00.000Z",
     "createdAt": "2026-09-09T20:55:19.670Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-10-16-swahili-tip.mp4",
+      "beats": [
+        "Thibitisha kadi OTA sasa",
+        "Kadi virtual kwa muda mrefu",
+        "Angalia salio mara ya kwanza",
+        "Malipo salama bila ucheleweshaji"
+      ],
+      "narration": "Kwa uamuzi wa haraka, hakikisha unakagua salio la kadi virtual ya OTA mara tu baada ya kuhifadhi kibanda cha muda mrefu Zanzibar. Hii inazuia kadi kufutika mapema na kuchelewa kwa malipo, ikifanya operesheni iwe salama, hata kwenye mtandao wa polepole, na kwa Kiingereza au Kiswahili.",
+      "hasVoice": true,
+      "builtAt": "2026-09-10T10:06:56.688Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-10-20-industry-note",
