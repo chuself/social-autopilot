@@ -3981,7 +3981,20 @@
     ],
     "scheduledFor": "2026-09-10T10:00:00.000Z",
     "createdAt": "2026-09-09T20:54:34.668Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-10-13-client-proof.mp4",
+      "beats": [
+        "Safari za asubuhi",
+        "Ankara za ma-agent tayari mapema",
+        "Hata mtandao ukiwa hafifu sana",
+        "Wageni wanawahi mbugani bila usumbufu"
+      ],
+      "narration": "Msimu wa watalii, mtandao hafifu usikwamishe lodge yako. Operra inarahisisha mapokezi na ankara za ma-agent haraka sana, hata kukiwa na mtandao mdogo. Sasa wageni wako watawahi safari za asubuhi Arusha bila kucheleweshwa na hesabu.",
+      "hasVoice": true,
+      "builtAt": "2026-09-10T07:04:13.334Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-10-16-swahili-tip",
