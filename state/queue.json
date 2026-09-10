@@ -3981,7 +3981,7 @@
     ],
     "scheduledFor": "2026-09-10T10:00:00.000Z",
     "createdAt": "2026-09-09T20:54:34.668Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-10-13-client-proof.mp4",
       "beats": [
@@ -3993,10 +3993,14 @@
       "narration": "Msimu wa watalii, mtandao hafifu usikwamishe lodge yako. Operra inarahisisha mapokezi na ankara za ma-agent haraka sana, hata kukiwa na mtandao mdogo. Sasa wageni wako watawahi safari za asubuhi Arusha bila kucheleweshwa na hesabu.",
       "hasVoice": true,
       "builtAt": "2026-09-10T07:04:13.334Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-10T10:08:17.533Z",
+      "postIds": [
+        "instagram:18628809919044194",
+        "facebook:2195984164281830"
+      ]
     },
-    "lastAttempt": "2026-09-10T09:18:45.310Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-10T10:08:17.533Z"
   },
   {
     "id": "operra-2026-09-10-16-swahili-tip",
