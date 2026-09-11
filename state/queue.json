@@ -4277,5 +4277,153 @@
       "facebook:1049514968255534_122153700051351110",
       "instagram:17905939101489896"
     ]
+  },
+  {
+    "id": "operra-2026-09-12-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Changamoto",
+        "headline": "Mkutano mkubwa, timu ndogo ya mapokezi?",
+        "body": "Vikundi vya mikutano vikifika kwa pamoja, timu ndogo inazidiwa na usajili wa kila mgeni mmoja mmoja."
+      },
+      {
+        "eyebrow": "Mbinu ya Kazi",
+        "headline": "Sajili wageni kupitia 'Rooming List'",
+        "body": "Omba orodha ya wageni mapema. Weka tayari funguo na fomu moja ya pamoja ya kusaini."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Okoa saa mbili za usumbufu",
+        "body": "Wageni wanaingia vyumbani haraka bila foleni. Timu yako inapata nafasi ya kuandaa huduma nyingine."
+      },
+      {
+        "eyebrow": "Ufumbuzi",
+        "headline": "Operra inarahisisha kazi zako zote",
+        "body": "Dhibiti hali ya vyumba, malipo ya vikundi na hesabu kwa urahisi kutoka mfumo mmoja rahisi."
+      }
+    ],
+    "caption": "Msimu wa mikutano ya kikanda Mwanza unahitaji kasi. Kama unaendesha hoteli kwa kutumia timu ndogo, foleni ndefu za mapokezi zinaweza kuharibu sifa ya huduma yenu. Badala ya kusubiri wageni wajaze fomu mmoja mmoja, ratibu usajili wao mapema kwa kutumia mfumo wa pamoja wa 'master list'. Operra inasaidia timu yako kufuatilia hali halisi ya vyumba na malipo ya vikundi kwa urahisi, bila makosa ya kimahesabu. Rahisisha uendeshaji wa hoteli yako leo.",
+    "hashtags": [
+      "HotelTanzania",
+      "MwanzaHotels",
+      "Operra",
+      "HospitalityTZ"
+    ],
+    "imagePrompt": "An extreme close-up filling the frame of a clean wooden clipboard holding a neatly printed rooming list document with tick boxes, next to a simple metal pen. The clipboard rests on a warm light bamboo surface. Light, high-key, clean tone, shallow depth of field, fine texture detail. No text, no people, no logos.",
+    "cta": "Gundua Operra",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-09-12-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-12T05:00:00.000Z",
+    "createdAt": "2026-09-11T20:54:39.111Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-12-08-swahili-tip-1.png",
+      "operra-2026-09-12-08-swahili-tip-2.png",
+      "operra-2026-09-12-08-swahili-tip-3.png",
+      "operra-2026-09-12-08-swahili-tip-4.png"
+    ],
+    "headline": "Mkutano mkubwa, timu ndogo ya mapokezi?"
+  },
+  {
+    "id": "operra-2026-09-12-13-industry-note",
+    "eyebrow": "Group Operations",
+    "headline": "Keep Moshi climbing groups moving",
+    "body": "Coordinate room readiness and agency billing instantly, even when your internet connection drops.",
+    "cta": "Book a demo",
+    "caption": "When trekking groups return to Moshi, they expect fast check-ins, while tour operators demand instant, split bills for gear and extra nights.\n\nDelays at the desk don't just frustrate tired climbers—they stall your partner agencies. Operra keeps your front desk and billing synced on low-bandwidth connections, ensuring group invoices are ready the moment they walk through the door.",
+    "hashtags": [
+      "MoshiHotels",
+      "KilimanjaroHospitality",
+      "HotelOperations"
+    ],
+    "imagePrompt": "An extreme close-up of a pair of classic leather trekking boots on the right side of the frame, resting on a coarse-woven light grey wool blanket. The left side of the frame is a soft, out-of-focus neutral background, clean and empty. Light, high-key, clean lighting, shallow depth of field, highlighting the fine texture of the leather and wool. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-12-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-12T10:00:00.000Z",
+    "createdAt": "2026-09-11T20:55:23.520Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-12-16-feature-spotlight",
+    "eyebrow": "Front Desk",
+    "headline": "Clean corporate folios in one click",
+    "body": "Keep company accounts reconciled automatically. No manual spreadsheets, and no delayed billing at month-end.",
+    "cta": "See it work",
+    "caption": "Dar es Salaam business hotels run on corporate contracts. But when checkouts pile up and company accounts need split billing, manual errors delay your payments.\n\nOperra keeps your corporate folios clean from day one. Track contracted rates, split personal extras from company bills instantly, and generate accurate invoices without the weekend reconciliation headache.",
+    "hashtags": [
+      "DarEsSalaam",
+      "HotelManagement",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "An extreme close-up of a sleek navy-blue leather corporate folio folder resting on a bright white desk. A minimalist silver executive pen lies across the right side of the folder. High-key, clean morning light cast from the right side, highlighting the fine pebble texture of the leather. Shallow depth of field, with the left third of the frame showing a soft, out-of-focus light-grey desk surface. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-12-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-12T13:00:00.000Z",
+    "createdAt": "2026-09-11T20:56:09.037Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-12-20-pain-point",
+    "eyebrow": "Reservations",
+    "headline": "Holding empty rooms during Arusha peak season?",
+    "body": "Stop waiting for tour operators to release unused blocks. Track allocations and release deadlines instantly on one screen.",
+    "cta": "See it work",
+    "caption": "Peak safari season in Arusha should mean 100% occupancy, not empty rooms held for unconfirmed tour operator blocks.\n\nWhen allocation deadlines pass without updates, you risk turning away profitable walk-ins—or double-booking at the last minute.\n\nOperra simplifies block bookings. Track release dates, view real-time availability, and update occupancy instantly. No manual spreadsheets, no missed revenue.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "Extreme close-up filling the frame of a sleek brass paperclip holding a printed safari tour operator room-allocation list on a clean white page. Shot on a light-colored, fine-grained light oak table. Light, high-key, clean, shallow depth of field, fine texture detail. Left side is empty light wood surface, details on the right-of-centre. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-12-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-12T17:00:00.000Z",
+    "createdAt": "2026-09-11T20:56:53.539Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "100%"
+    ]
   }
 ]
