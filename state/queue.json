@@ -4217,7 +4217,20 @@
     ],
     "scheduledFor": "2026-09-11T13:00:00.000Z",
     "createdAt": "2026-09-10T18:06:24.296Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-11-16-number-that-lands.mp4",
+      "beats": [
+        "Internet keeps dropping?",
+        "Manage six core hotel departments",
+        "Run smoothly on low bandwidth",
+        "Flawless guest check-ins always"
+      ],
+      "narration": "Tanzanian hotels cannot rely on perfect internet. Operra keeps your front desk, housekeeping, POS, pricing, reports, and audit trails synced even on low bandwidth. Switch between English and Kiswahili, and run your Arusha property without interruptions.",
+      "hasVoice": true,
+      "builtAt": "2026-09-11T10:06:17.724Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-11-20-client-proof",
