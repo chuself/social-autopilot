@@ -4172,7 +4172,20 @@
     ],
     "scheduledFor": "2026-09-11T10:00:00.000Z",
     "createdAt": "2026-09-10T18:05:33.896Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-11-13-pain-point.mp4",
+      "beats": [
+        "Mteja anakimbia JNIA, bili haionekani mapokezi!",
+        "Acha kupoteza mapato ya bar na chakula.",
+        "Operra inaunganisha gharama zote papo hapo.",
+        "Mapato salama na uendeshaji usio na shaka."
+      ],
+      "narration": "Mteja anawahi uwanja wa ndege wa JNIA lakini bili ya usiku haionekani mapokezi? Acha kupoteza mapato kwa ucheleweshaji wa idara ya bar au chakula. Mfumo wa Operra unaunganisha gharama zote kwenye bili ya mteja papo hapo, hata kwa mtandao mdogo. Linda mapato yako!",
+      "hasVoice": true,
+      "builtAt": "2026-09-11T07:06:49.277Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-11-16-number-that-lands",
