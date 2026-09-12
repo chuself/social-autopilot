@@ -4469,5 +4469,145 @@
     "heldFigures": [
       "100%"
     ]
+  },
+  {
+    "id": "operra-2026-09-13-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "ZANZIBAR RESORTS",
+        "headline": "Losing revenue to currency confusion?",
+        "body": "Manually tracking OTA commissions and exchange rates across departments causes silent, constant profit leakage."
+      },
+      {
+        "eyebrow": "THE SOLUTION",
+        "headline": "Six core departments, zero friction",
+        "body": "Sync front desk, POS, pricing, and reports on the low-bandwidth connections common in Tanzanian resorts."
+      },
+      {
+        "eyebrow": "OPERRA",
+        "headline": "Complete control on weak Wi-Fi",
+        "body": "Stop the leakage. Run your entire Zanzibar property on a simplified PMS built for local connectivity."
+      }
+    ],
+    "caption": "Zanzibar resorts face unique operational challenges—from fluctuating exchange rates to spotty coastal internet. Operra keeps your front desk, housekeeping, POS, pricing, reports, and audit trail fully synchronized, even on low-bandwidth connections. Stop letting manual currency calculations and weak Wi-Fi drain your resort's profits. Manage your property with a system built for Tanzanian hospitality.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "TanzaniaHospitality",
+      "Operra"
+    ],
+    "imagePrompt": "extreme close-up filling the frame of a heavy polished brass paperweight holding down a crisp stack of US Dollar and Tanzanian Shilling notes on a distressed white-washed wooden table. Tone is light, high-key, clean, with a shallow depth of field and fine texture detail. No text, no people, no logos.",
+    "cta": "Simplify your resort",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-09-13-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-13T05:00:00.000Z",
+    "createdAt": "2026-09-12T18:04:03.831Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-13-08-number-that-lands-1.png",
+      "operra-2026-09-13-08-number-that-lands-2.png",
+      "operra-2026-09-13-08-number-that-lands-3.png"
+    ],
+    "headline": "Losing revenue to currency confusion?"
+  },
+  {
+    "id": "operra-2026-09-13-13-client-proof",
+    "eyebrow": "Usimamizi wa Vyumba",
+    "headline": "Mwanza: Check-in ya haraka hata mtandao ukiwa chini",
+    "body": "Uratibu wa mapokezi na usafishaji vyumba unakamilika bila kukwama, ukitumia mtandao hafifu wa Mwanza.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Ndege ya asubuhi ikitua Mwanza, wageni wa mikutano wanataka check-in ya haraka. Ukitegemea mtandao unaosumbua, foleni mapokezi ni lazima.\n\nHoteli za Mwanza sasa zinatumia Operra kuratibu vyumba na mapokezi bila kukwama. Housekeeping wakimaliza kusafisha, mapokezi wanaona papo hapo hata kwenye mtandao hafifu. Wageni wanaingia vyumbani bila kusubiri.",
+    "hashtags": [
+      "MwanzaHotels",
+      "HotelManagementTanzania",
+      "Operra"
+    ],
+    "imagePrompt": "An extreme close-up filling the frame of a sleek glass pitcher of cold water with condensation beads, next to a clean glass tumbler on a light-colored wooden conference table. Light, high-key, clean lighting. Shallow depth of field, fine texture detail of water droplets. The left side is a calm, out-of-focus off-white wall. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-13-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-13T10:00:00.000Z",
+    "createdAt": "2026-09-12T18:04:50.366Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-13-16-swahili-tip",
+    "eyebrow": "Operations",
+    "headline": "Split trekking extras at check-in",
+    "body": "Keep your Moshi group departures fast. Route mountain gear rentals to a separate folio on day one so the tour operator's bill stays clean.",
+    "cta": "See how it works",
+    "caption": "When climbing groups return to Moshi, they want to rest, not wait at your front desk.\n\nAvoid checkout friction by splitting mountain gear rentals and extra meals onto a separate folio at check-in. This keeps the main accommodation invoice clean for the tour operator, allowing guests to settle their personal extras instantly.\n\nKeep departures smooth and your desk clear.",
+    "hashtags": [
+      "HotelOperations",
+      "MoshiHotels",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "Extreme close-up filling the frame of a single silver aluminum climbing carabiner resting on a light-colored, clean pine wood table. High-key, clean, bright natural light. Shallow depth of field, fine metallic and wood grain texture detail. The left side of the frame is empty, calm pine wood. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-13-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-13T13:00:00.000Z",
+    "createdAt": "2026-09-12T18:05:34.530Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-13-20-industry-note",
+    "eyebrow": "Billing",
+    "headline": "Keep Dar corporate accounts clean",
+    "body": "Split personal extras from company LPOs instantly. Operra keeps your corporate billing accurate on any connection.",
+    "cta": "See it work",
+    "caption": "Corporate bookers in Dar es Salaam don't have patience for billing errors at checkout. When a business guest needs room charges on the company LPO and dinner on their personal card, delays cost you repeat business.\n\nOperra simplifies split billing. Generate clean, accurate folios in seconds, even on low-bandwidth connections. Keep your corporate clients happy and your front desk moving.",
+    "hashtags": [
+      "DarEsSalaam",
+      "HotelOperations",
+      "Operra",
+      "CorporateTravel"
+    ],
+    "imagePrompt": "An extreme close-up of a crisp white corporate lanyard with a silver metal clip, resting on a light gray textured concrete surface. High-key, clean studio lighting, shallow depth of field, fine texture detail. The lanyard lies on the right-of-centre, leaving the left side of the frame as a calm, empty light gray background. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-13-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-13T17:00:00.000Z",
+    "createdAt": "2026-09-12T18:06:18.954Z",
+    "status": "pending"
   }
 ]
