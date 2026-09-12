@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-12T12:24:14.055Z"
+    "missedAt": "2026-09-12T13:24:51.049Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-12T12:24:14.050Z"
+    "missedAt": "2026-09-12T13:24:51.044Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-12T12:24:14.052Z",
+    "missedAt": "2026-09-12T13:24:51.047Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-12T12:24:14.052Z",
+    "missedAt": "2026-09-12T13:24:51.047Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-12T12:24:14.117Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-12T12:24:14.055Z"
+    "missedAt": "2026-09-12T13:24:51.049Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4416,7 +4416,7 @@
     ],
     "scheduledFor": "2026-09-12T13:00:00.000Z",
     "createdAt": "2026-09-11T20:56:09.037Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-12-16-feature-spotlight.mp4",
       "beats": [
@@ -4428,10 +4428,14 @@
       "narration": "Sahau usumbufu wa lahajedwali kila mwisho wa mwezi. Operra inasawazisha hesabu za makampuni kiotomatiki kwa mbofyo mmoja tu, hata mtandao ukiwa dhaifu. Unapata ankara safi, ripoti sahihi za mapokezi na huduma zote kwa haraka bila kuchelewesha malipo ya wateja wako.",
       "hasVoice": true,
       "builtAt": "2026-09-12T10:05:04.004Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-12T13:25:57.073Z",
+      "postIds": [
+        "instagram:18152921815515699",
+        "facebook:1606490317754460"
+      ]
     },
-    "lastAttempt": "2026-09-12T12:24:14.117Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-12T13:25:57.073Z"
   },
   {
     "id": "operra-2026-09-12-20-pain-point",
