@@ -4367,7 +4367,20 @@
     ],
     "scheduledFor": "2026-09-12T10:00:00.000Z",
     "createdAt": "2026-09-11T20:55:23.520Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-12-13-industry-note.mp4",
+      "beats": [
+        "Moshi climbing groups arriving?",
+        "Internet drops again?",
+        "Coordinate rooms and billing.",
+        "Keep climbing groups moving."
+      ],
+      "narration": "When Kilimanjaro climbing groups arrive, you can't let slow internet delay their check-in. Operra coordinates your front desk, housekeeping, and billing even on low-bandwidth connections. Manage your Tanzanian property seamlessly in English or Kiswahili, and keep your guests moving.",
+      "hasVoice": true,
+      "builtAt": "2026-09-12T07:06:43.508Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-12-16-feature-spotlight",
