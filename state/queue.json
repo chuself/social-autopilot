@@ -4412,7 +4412,20 @@
     ],
     "scheduledFor": "2026-09-12T13:00:00.000Z",
     "createdAt": "2026-09-11T20:56:09.037Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-12-16-feature-spotlight.mp4",
+      "beats": [
+        "Ankara za makampuni",
+        "Zinakaa sawa kiotomatiki bila makosa",
+        "Hata kwenye mtandao mdogo wa hapa",
+        "Malipo ya haraka bila kuchelewa"
+      ],
+      "narration": "Sahau usumbufu wa lahajedwali kila mwisho wa mwezi. Operra inasawazisha hesabu za makampuni kiotomatiki kwa mbofyo mmoja tu, hata mtandao ukiwa dhaifu. Unapata ankara safi, ripoti sahihi za mapokezi na huduma zote kwa haraka bila kuchelewesha malipo ya wateja wako.",
+      "hasVoice": true,
+      "builtAt": "2026-09-12T10:05:04.004Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-12-20-pain-point",
