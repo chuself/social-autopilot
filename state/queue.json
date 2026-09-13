@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-13T06:15:02.367Z",
+    "lastAttempt": "2026-09-13T07:04:58.153Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-13T06:15:02.367Z",
+    "lastAttempt": "2026-09-13T07:04:58.154Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2479,7 +2479,7 @@
       "builtAt": "2026-09-02T12:02:28.884Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-13T06:15:02.367Z",
+    "lastAttempt": "2026-09-13T07:04:58.154Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-09-13T06:15:02.317Z"
   },
@@ -4566,7 +4566,9 @@
       "hasVoice": true,
       "builtAt": "2026-09-13T07:04:41.201Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-09-13T07:04:58.154Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-09-13-16-swahili-tip",
