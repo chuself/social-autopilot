@@ -4660,5 +4660,145 @@
       "facebook:1049514968255534_122154788415351110",
       "instagram:18173014804453831"
     ]
+  },
+  {
+    "id": "operra-2026-09-14-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Msimu wa Safari",
+        "headline": "Mawakala wengi, bei tofauti mapokezi?",
+        "body": "Kila kampuni ina mkataba wake. Makosa ya ankara wakati wa msimu yanagharimu hoteli yako."
+      },
+      {
+        "eyebrow": "Ufumbuzi",
+        "headline": "Mikataba yote mahali pamoja",
+        "body": "Operra inaweka bei maalum kwa kila wakala. Hakuna hesabu za mikono kwenye ankara."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Ankara safi bila kuchelewa",
+        "body": "Rahisisha mapokezi na hesabu za mawakala msimu huu wa kilele."
+      }
+    ],
+    "caption": "Msimu wa safari ukiwa umerudi Arusha, mawakala wanatarajia usahihi wa haraka. Kama mapokezi yako bado yanapiga mahesabu ya mikataba kwenye makaratasi au lahajedwali, makosa hayataepukika. Operra inakusaidia kuweka bei maalum za kila wakala wa utalii kwenye mfumo wetu. Ankara zinatoka zikiwa safi na sahihi kwa sekunde moja tu—hata mtandao ukiwa dhaifu. Ondoa migogoro ya malipo na mawakala msimu huu.",
+    "hashtags": [
+      "Operra",
+      "ArushaHotels",
+      "HotelManagement",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "A minimal line drawing of a classic fountain pen resting on a simple, open document folder on a solid pale beige background, lots of empty space, flat graphic style, thin dark-brown strokes, single muted colour palette, no text, no people, no logos.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-09-14-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-14T05:00:00.000Z",
+    "createdAt": "2026-09-13T18:04:15.084Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-14-08-feature-spotlight-1.png",
+      "operra-2026-09-14-08-feature-spotlight-2.png",
+      "operra-2026-09-14-08-feature-spotlight-3.png"
+    ],
+    "headline": "Mawakala wengi, bei tofauti mapokezi?"
+  },
+  {
+    "id": "operra-2026-09-14-13-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Did the beach bar bill reach the desk?",
+    "body": "Stop losing revenue to late-reported extras. Operra syncs restaurant, bar, and excursion charges to the room folio instantly, even on weak Wi-Fi.",
+    "cta": "Simplify your billing",
+    "caption": "A guest is checking out of your Zanzibar resort. Their taxi to the airport is waiting. You print the bill, they pay, and they leave.\n\nTen minutes later, a paper receipt from the beach bar arrives at the front desk.\n\nWhen dining and activities aren't synced, your property leaks revenue. Operra connects your POS and front desk instantly. Every charge lands on the folio the moment it is ordered.",
+    "hashtags": [
+      "HotelManagement",
+      "ZanzibarResorts",
+      "HotelPOS",
+      "Operra"
+    ],
+    "imagePrompt": "Minimal line drawing of a single tall tropical cocktail glass with a paper straw on the right side, set against a plain, light sandy-beige background. Flat graphic, not a photograph. Thin strokes, single muted charcoal colour. Visually calm and empty on the left side. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-14-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-14T10:00:00.000Z",
+    "createdAt": "2026-09-13T18:05:03.681Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-14-16-number-that-lands",
+    "eyebrow": "Connectivity",
+    "headline": "Lakeside billing that runs on low bandwidth",
+    "body": "Keep your front desk, POS, and housekeeping synced even when the lake breeze slows your internet. Built for Tanzanian properties.",
+    "cta": "See it work",
+    "caption": "When the afternoon breeze off Lake Victoria slows your Mwanza internet to a crawl, your front desk shouldn't stall. Guests checking out from regional conferences expect instant, accurate bills. Operra runs smoothly on low-bandwidth connections common in Tanzanian properties, keeping your reception, POS, and housekeeping synced without delays. 📶",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelManagement",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "A minimal line drawing of a modern compact internet router with two small antennas resting on a plain shelf, lots of empty space. Flat graphic, not a photograph. Thin strokes, single muted teal colour. The router is placed on the far right, leaving the left side completely blank. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-14-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-14T13:00:00.000Z",
+    "createdAt": "2026-09-13T18:05:47.425Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-14-20-client-proof",
+    "eyebrow": "Front Desk",
+    "headline": "Faster checkout for Moshi trekking groups",
+    "body": "Keep your reception synced and close group bills instantly, even on low-bandwidth connections.",
+    "cta": "See it work",
+    "caption": "When climbing groups return from Kilimanjaro, checkout can quickly overwhelm your front desk. Splitting gear rentals, porter tips, and bar bills manually takes time—especially when your connection is slow. \n\nOperra keeps your team moving. Run your operations smoothly on the low-bandwidth connections common in Tanzanian properties. Generate clean, accurate invoices instantly so guests depart on schedule. 🏔️",
+    "hashtags": [
+      "MoshiHotels",
+      "TanzaniaHospitality",
+      "HotelOperations"
+    ],
+    "imagePrompt": "Minimal line drawing of a pair of telescoping trekking poles resting on the right side of a plain warm-grey background. Flat graphic style, thin strokes, single muted charcoal colour, lots of empty space on the left. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-14-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-14T17:00:00.000Z",
+    "createdAt": "2026-09-13T18:06:31.333Z",
+    "status": "pending"
   }
 ]
