@@ -4603,7 +4603,20 @@
     ],
     "scheduledFor": "2026-09-13T13:00:00.000Z",
     "createdAt": "2026-09-12T18:05:34.530Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-13-16-swahili-tip.mp4",
+      "beats": [
+        "Check-in ya mlima isicheleweshe wageni.",
+        "Tenga bili za vifaa siku ya kwanza.",
+        "Bili ya kampuni ya utalii inabaki safi.",
+        "Malipo ya haraka bila migogoro ya bili."
+      ],
+      "narration": "Wageni wa mlimani wakifika Moshi, usipoteze muda mapokezi. Operra inakusaidia kutenganisha gharama za kukodi vifaa vya mlimani kwenye folio tofauti tangu siku ya kwanza. Bili ya kampuni inabaki safi, na wageni wanaondoka kwa haraka bila migogoro.",
+      "hasVoice": true,
+      "builtAt": "2026-09-13T12:38:01.728Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-13-20-industry-note",
