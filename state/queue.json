@@ -4553,7 +4553,20 @@
     ],
     "scheduledFor": "2026-09-13T10:00:00.000Z",
     "createdAt": "2026-09-12T18:04:50.366Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-13-13-client-proof.mp4",
+      "beats": [
+        "Mtandao ukizingua mapokezi?",
+        "Check-in na usafishaji vinaendelea.",
+        "Mfumo wa Kiswahili na Kiingereza.",
+        "Huduma za haraka bila usumbufu."
+      ],
+      "narration": "Mtandao ukizingua mapokezi, kazi hazipaswi kusimama. Mfumo wa Operra unakuwezesha kusimamia mapokezi, usafishaji wa vyumba, na ripoti hata mtandao ukiwa chini. Unatumia Kiswahili au Kiingereza kurahisisha uendeshaji wa hoteli yako na kutoa huduma za haraka.",
+      "hasVoice": true,
+      "builtAt": "2026-09-13T07:04:41.201Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-13-16-swahili-tip",
