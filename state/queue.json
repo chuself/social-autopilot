@@ -4745,7 +4745,7 @@
     ],
     "scheduledFor": "2026-09-14T10:00:00.000Z",
     "createdAt": "2026-09-13T18:05:03.681Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-14-13-pain-point.mp4",
       "beats": [
@@ -4757,10 +4757,14 @@
       "narration": "Bili imefika mapokezi? Mara nyingi wateja huondoka kabla ya bili za bar na migahawa kufika mapokezi kwa sababu ya mtandao hafifu. Operra inasuluhisha hili kwa kuunganisha huduma zote kwenye chumba cha mteja papo hapo. Linda kila sarafu ya hoteli yako sasa.",
       "hasVoice": true,
       "builtAt": "2026-09-14T07:03:43.362Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-14T10:06:50.206Z",
+      "postIds": [
+        "instagram:18339020620283078",
+        "facebook:1090465326700422"
+      ]
     },
-    "lastAttempt": "2026-09-14T09:44:40.697Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-14T10:06:50.206Z"
   },
   {
     "id": "operra-2026-09-14-16-number-that-lands",
