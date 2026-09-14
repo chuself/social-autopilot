@@ -4745,7 +4745,20 @@
     ],
     "scheduledFor": "2026-09-14T10:00:00.000Z",
     "createdAt": "2026-09-13T18:05:03.681Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-14-13-pain-point.mp4",
+      "beats": [
+        "Bili imefika mapokezi?",
+        "Mtandao hafifu usikupotezee mapato.",
+        "Unganisha huduma zote papo hapo.",
+        "Usimamizi thabiti wa mapato yako."
+      ],
+      "narration": "Bili imefika mapokezi? Mara nyingi wateja huondoka kabla ya bili za bar na migahawa kufika mapokezi kwa sababu ya mtandao hafifu. Operra inasuluhisha hili kwa kuunganisha huduma zote kwenye chumba cha mteja papo hapo. Linda kila sarafu ya hoteli yako sasa.",
+      "hasVoice": true,
+      "builtAt": "2026-09-14T07:03:43.362Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-14-16-number-that-lands",
