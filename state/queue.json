@@ -4790,7 +4790,20 @@
     ],
     "scheduledFor": "2026-09-14T13:00:00.000Z",
     "createdAt": "2026-09-13T18:05:47.425Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-14-16-number-that-lands.mp4",
+      "beats": [
+        "Slow lakeside internet?",
+        "Sync front desk and housekeeping.",
+        "Operra works on low bandwidth.",
+        "Uninterrupted lakeside guest experiences."
+      ],
+      "narration": "When the lake breeze slows your connection, your hotel shouldn't stop. Operra keeps your front desk, housekeeping, and billing perfectly synced on low bandwidth. Manage your entire Tanzanian property smoothly in English or Kiswahili, no matter the signal.",
+      "hasVoice": true,
+      "builtAt": "2026-09-14T10:05:34.387Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-14-20-client-proof",
