@@ -4850,5 +4850,147 @@
       "facebook:1049514968255534_122155276959351110",
       "instagram:18127093357695855"
     ]
+  },
+  {
+    "id": "operra-2026-09-15-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "MBINU YA KAZI",
+        "headline": "Checkout za makampuni zinachelewesha wageni asubuhi?",
+        "body": "Asubuhi za Dar ziko mbioni. Bili zenye makosa ya LPO hufanya wageni wako wakose mikutano."
+      },
+      {
+        "eyebrow": "HATUA YA KWANZA",
+        "headline": "Thibitisha LPO mgeni anapoingia mapokezi",
+        "body": "Ingiza namba ya TIN na masharti ya kampuni mara moja. Usisubiri folio ikusanyike siku ya kuondoka."
+      },
+      {
+        "eyebrow": "OPERRA",
+        "headline": "Ankara safi kwa sekunde chache",
+        "body": "Operra inasaidia mapokezi na bili za makampuni kwenda kwa kasi, hata mtandao ukiwa chini."
+      }
+    ],
+    "caption": "Hoteli za Dar es Salaam zinahudumia wageni wengi wa kibiashara. Asubuhi, kila dakika ni muhimu kwa mgeni anayewahi mkutano. Bili za makampuni zisipothibitishwa mapema wakati wa check-in, mapokezi yanazongwa na foleni asubuhi. Hakikisha timu yako inathibitisha LPO na namba ya TIN mara mgeni anapofika. Hii inafanya checkout kuwa ya sekunde chache na kuweka hesabu zako safi.",
+    "hashtags": [
+      "#HotelierTanzania",
+      "#DarEsSalaamHotels",
+      "#UsimamiziWaHoteli",
+      "#OperraTech"
+    ],
+    "imagePrompt": "minimal line drawing of a compact desktop calculator resting beside a neatly folded tax receipt on a plain field, lots of empty space, flat graphic, not a photograph, thin strokes, single muted dark slate line colour, no text, no people, no logos",
+    "cta": "Gundua Operra leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "backgroundPath": null,
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-15T05:00:00.000Z",
+    "createdAt": "2026-09-14T18:07:05.185Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-15-08-swahili-tip-1.png",
+      "operra-2026-09-15-08-swahili-tip-2.png",
+      "operra-2026-09-15-08-swahili-tip-3.png"
+    ],
+    "headline": "Checkout za makampuni zinachelewesha wageni asubuhi?"
+  },
+  {
+    "id": "operra-2026-09-15-13-industry-note",
+    "eyebrow": "Tour Billing",
+    "headline": "Streamline safari tour operator invoices",
+    "body": "Group departures in Arusha shouldn't mean delayed invoicing. Reconcile vouchers and extras instantly for faster operator payouts.",
+    "cta": "See how it works",
+    "caption": "Peak safari season in Arusha brings back-to-back groups and a mountain of tour operator vouchers. If billing gets delayed at checkout, your cash stays locked up for weeks.\n\nOperra links front desk, POS, and vouchers into unified group accounts automatically. Generate accurate operator invoices the moment groups head out on game drives.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariLodges",
+      "#HotelOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "minimal line drawing of a pair of classic safari binoculars resting on the right side, minimal line drawing on a plain field, lots of empty space, flat graphic, not a photograph, thin strokes, single muted colour, left side empty plain background, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-15-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-15T10:00:00.000Z",
+    "createdAt": "2026-09-14T18:07:51.476Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-15-16-feature-spotlight",
+    "eyebrow": "Mfumo wa Bei",
+    "headline": "Hesabu za Dola na Shilingi bila makosa",
+    "body": "Operra inarekebisha viwango vya sarafu na kukokotoa bili za Dola na Shilingi mara moja bila kutumia kikokotoo cha mkononi.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wageni wa Zanzibar wakilipa kwa Dola au Shilingi, mahesabu ya mikono kwenye mapokezi huleta ucheleweshaji na makosa ya viwango vya kubadili fedha.\n\nOperra inafanya kazi ya kubadilisha sarafu papo hapo kwenye bili ya mgeni. Kila malipo yanaonekana kwa usahihi kwenye ripoti ya siku bila mkanganyiko.\n\nKazi ya mapokezi inakuwa rahisi na ya haraka.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#Operra",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "minimal line drawing of a small desktop acrylic display stand holding an exchange rate sheet, right-of-centre composition, flat graphic, thin strokes, single muted colour, plain background with empty space on the left side, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-15-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-15T13:00:00.000Z",
+    "createdAt": "2026-09-14T18:09:00.260Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-15-20-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Unposted room service slips delay morning checkouts",
+    "body": "When conference delegates depart Mwanza early, paper slips from late dining lag behind. Operra posts orders directly to the room folio instantly.",
+    "cta": "Book a demo",
+    "caption": "Morning checkout in Mwanza should not mean chasing paper slips from the kitchen.\n\nWhen a regional conference wraps up, dozens of guests leave at once. If room service or evening bar charges sit on paper tickets, your front desk team is left guessing or delaying departures.\n\nOperra connects your point of sale straight to the room folio. Every meal and drink posts in real time, so morning checkout stays fast and accurate.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelOperations",
+      "#EastAfricaHospitality",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Minimal line drawing of a simple ceramic coffee cup resting on a wooden tray alongside a folded paper order slip on a plain field, lots of empty space. Flat graphic, not a photograph. Thin strokes, single muted colour. Detail right-of-centre, left side plain empty space. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-15T17:00:00.000Z",
+    "createdAt": "2026-09-14T18:10:10.817Z",
+    "status": "pending"
   }
 ]
