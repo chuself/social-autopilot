@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-15T12:57:50.843Z"
+    "missedAt": "2026-09-15T13:58:24.447Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-15T12:57:50.838Z"
+    "missedAt": "2026-09-15T13:58:24.444Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-15T12:57:50.840Z",
+    "missedAt": "2026-09-15T13:58:24.445Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-15T12:57:50.840Z",
+    "missedAt": "2026-09-15T13:58:24.445Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-15T12:57:50.902Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-15T12:57:50.843Z"
+    "missedAt": "2026-09-15T13:58:24.447Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-09-15T12:57:50.843Z"
+    "missedAt": "2026-09-15T13:58:24.447Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -4985,7 +4985,7 @@
     ],
     "scheduledFor": "2026-09-15T13:00:00.000Z",
     "createdAt": "2026-09-14T18:09:00.260Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-15-16-feature-spotlight.mp4",
       "beats": [
@@ -4997,10 +4997,14 @@
       "narration": "Umechoka kupiga hesabu za dola na shilingi kwa mkono? Operra inabadili sarafu kiotomatiki na kukokotoa bili bila makosa. Okoa muda mapokezi na uendeshe hoteli yako kwa ufanisi mkubwa, hata kukiwa na mtandao mdogo.",
       "hasVoice": true,
       "builtAt": "2026-09-15T10:03:43.140Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-15T13:59:28.881Z",
+      "postIds": [
+        "instagram:18134319136648902",
+        "facebook:1789947415491807"
+      ]
     },
-    "lastAttempt": "2026-09-15T12:57:50.902Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-15T13:59:28.881Z"
   },
   {
     "id": "operra-2026-09-15-20-pain-point",

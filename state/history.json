@@ -1,21 +1,6 @@
 [
   {
     "platform": "facebook",
-    "postId": "1449734697078667",
-    "id": "operra-2026-08-22-16-number-that-lands",
-    "format": "reel",
-    "postedAt": "2026-08-21T13:54:47.701Z"
-  },
-  {
-    "platform": "tiktok",
-    "postId": "https://app.metricool.com/planner/calendar?blogId=6307384&openWithPostUuid=5803971490799897759",
-    "scheduledFor": "2026-08-21T17:00:48+03:00",
-    "id": "operra-2026-08-22-16-number-that-lands",
-    "format": "reel",
-    "postedAt": "2026-08-21T13:54:50.469Z"
-  },
-  {
-    "platform": "facebook",
     "postId": "1049514968255534_122140846587351110",
     "url": "https://facebook.com/1049514968255534_122140846587351110",
     "id": "operra-2026-08-21-20-number-that-lands",
@@ -1414,5 +1399,19 @@
     "id": "operra-2026-09-15-13-industry-note",
     "format": "reel",
     "postedAt": "2026-09-15T10:05:14.817Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18134319136648902",
+    "id": "operra-2026-09-15-16-feature-spotlight",
+    "format": "reel",
+    "postedAt": "2026-09-15T13:59:01.740Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1789947415491807",
+    "id": "operra-2026-09-15-16-feature-spotlight",
+    "format": "reel",
+    "postedAt": "2026-09-15T13:59:28.881Z"
   }
 ]
