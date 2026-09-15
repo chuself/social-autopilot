@@ -4935,7 +4935,7 @@
     ],
     "scheduledFor": "2026-09-15T10:00:00.000Z",
     "createdAt": "2026-09-14T18:07:51.476Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-15-13-industry-note.mp4",
       "beats": [
@@ -4947,10 +4947,14 @@
       "narration": "Managing group departures in Arusha shouldn't slow down your invoicing. With Operra, you can instantly reconcile safari vouchers and extra charges, even on low-bandwidth connections. Keep your front desk running smoothly and get paid by tour operators faster.",
       "hasVoice": true,
       "builtAt": "2026-09-14T18:32:24.108Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-15T10:05:14.817Z",
+      "postIds": [
+        "instagram:18106847210593725",
+        "facebook:1477486160884948"
+      ]
     },
-    "lastAttempt": "2026-09-15T09:46:13.976Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-15T10:05:14.817Z"
   },
   {
     "id": "operra-2026-09-15-16-feature-spotlight",
