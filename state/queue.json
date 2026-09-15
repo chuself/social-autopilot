@@ -4981,7 +4981,20 @@
     ],
     "scheduledFor": "2026-09-15T13:00:00.000Z",
     "createdAt": "2026-09-14T18:09:00.260Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-15-16-feature-spotlight.mp4",
+      "beats": [
+        "Acha kutumia kikokotoo",
+        "Badili dola na shilingi papo hapo",
+        "Epuka makosa ya hesabu mapokezi",
+        "Biashara yako bila hasara"
+      ],
+      "narration": "Umechoka kupiga hesabu za dola na shilingi kwa mkono? Operra inabadili sarafu kiotomatiki na kukokotoa bili bila makosa. Okoa muda mapokezi na uendeshe hoteli yako kwa ufanisi mkubwa, hata kukiwa na mtandao mdogo.",
+      "hasVoice": true,
+      "builtAt": "2026-09-15T10:03:43.140Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-15-20-pain-point",
