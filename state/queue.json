@@ -5042,5 +5042,145 @@
       "facebook:1049514968255534_122155643931351110",
       "instagram:18166752442466226"
     ]
+  },
+  {
+    "id": "operra-2026-09-16-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Moshi Peak",
+        "headline": "Internet drops during the climb arrivals?",
+        "body": "Dozens of climbers returning, but your connection is crawling. Operations grind to a halt."
+      },
+      {
+        "eyebrow": "Low Bandwidth",
+        "headline": "6 departments sync on weak signals",
+        "body": "Front desk, housekeeping, POS, pricing, reports, and audit trail. All active on minimal connection."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Keep Moshi lodges running smoothly",
+        "body": "Simplify your mountain lodge operations. Run flawlessly even when the internet fails you."
+      }
+    ],
+    "caption": "Peak trekking season in Moshi puts immense pressure on your lodge. When internet connectivity drops, your front desk shouldn't freeze. Operra keeps all 6 core departments—front desk, housekeeping, POS, pricing, reports, and your audit trail—fully synchronized even on low-bandwidth connections. No lost bills, no checkout delays, and no stressed staff. Keep your mountain lodge operating smoothly, no matter the signal strength.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "minimal line drawing of a sturdy canvas duffel bag resting on a wooden bench on a plain field, lots of empty space, flat graphic, not a photograph, thin strokes, single muted slate-blue colour, no text, no people, no logos",
+    "cta": "Simplify your lodge",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "backgroundPath": "state/bg/operra-2026-09-16-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-16T05:00:00.000Z",
+    "createdAt": "2026-09-15T18:04:07.055Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-16-08-number-that-lands-1.png",
+      "operra-2026-09-16-08-number-that-lands-2.png",
+      "operra-2026-09-16-08-number-that-lands-3.png"
+    ],
+    "headline": "Internet drops during the climb arrivals?"
+  },
+  {
+    "id": "operra-2026-09-16-13-client-proof",
+    "eyebrow": "Housekeeping",
+    "headline": "Dar hotel speeds up room readiness",
+    "body": "A high-turnover business hotel in Dar es Salaam uses Operra to sync housekeeping and the front desk instantly, even on low-bandwidth connections.",
+    "cta": "See it work",
+    "caption": "For corporate hotels in Dar es Salaam, early check-ins are the norm. One busy business property eliminated the wait by using Operra to connect their housekeeping directly with the front desk. Clean rooms are updated instantly, even on weak local networks, keeping arriving business travellers moving without delay.",
+    "hashtags": [
+      "#DarEsSalaam",
+      "#HotelOperations",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "minimal line drawing of a simple wooden clothes hanger resting on a plain surface. flat graphic, thin strokes, single muted colour, lots of empty space. details right-of-centre, left side visually calm. no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-16-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-16T10:00:00.000Z",
+    "createdAt": "2026-09-15T18:04:50.512Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-16-16-swahili-tip",
+    "eyebrow": "Mapokezi",
+    "headline": "Kagua oda za lunch box usiku uliopita",
+    "body": "Muda wa asubuhi ni mchache. Hakikisha jikoni na mapokezi wameoanisha idadi ya lunch box za safari kabla ya kulala.",
+    "cta": "Rahisisha uendeshaji",
+    "caption": "Arusha asubuhi haina subira. Magari ya safari yanapiga honi, na wageni wanawahi kuondoka mapema.\n\nUsinyosheane vidole na jikoni asubuhi kuhusu idadi ya lunch box au bili zake. Hakiki orodha yote saa mbili usiku. Linganisha wageni wanaocheki-out na oda za jikoni ili kila kitu kiwe tayari kabla ya jua kuchomoza.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelOperations",
+      "Operra"
+    ],
+    "imagePrompt": "minimal line drawing of a traditional metal lunch box with a small latch. flat graphic, thin strokes, single muted brown colour, lots of empty space, left side visually calm. no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-16-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-16T13:00:00.000Z",
+    "createdAt": "2026-09-15T18:05:35.490Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-16-20-industry-note",
+    "eyebrow": "Revenue Control",
+    "headline": "Track net resort revenue after OTA commissions",
+    "body": "Stop letting high booking platform fees cloud your actual cash flow. Keep room charges and commission expenses clearly separated.",
+    "cta": "See it work",
+    "caption": "Zanzibar resorts often see high occupancy but tight margins once OTA commissions and local taxes are deducted. Tracking what you actually take home requires clear, real-time reports.\n\nWith Operra, your front desk logs payments, splits folios, and tracks commission expenses instantly. You get a clear view of your actual net revenue without manual spreadsheet calculations at the end of the month.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#Operra",
+      "#HospitalityEA"
+    ],
+    "imagePrompt": "Minimal line drawing of a simple wooden ceiling fan with woven blades, flat graphic, thin strokes, single muted sandy-beige colour on a plain off-white background, lots of empty space. Detail is right-of-centre, left side is visually calm and empty. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-16-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-16T17:00:00.000Z",
+    "createdAt": "2026-09-15T18:06:41.207Z",
+    "status": "pending"
   }
 ]
