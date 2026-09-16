@@ -5126,7 +5126,20 @@
     ],
     "scheduledFor": "2026-09-16T10:00:00.000Z",
     "createdAt": "2026-09-15T18:04:50.512Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-16-13-client-proof.mp4",
+      "beats": [
+        "Wageni wanasubiri vyumba?",
+        "Unganisha mapokezi na usafi sasa",
+        "Inafanya kazi mtandao ukiwa hafifu",
+        "Kuharakisha huduma kwa wageni"
+      ],
+      "narration": "Je, unachelewa kuandaa vyumba kwa sababu ya mawasiliano duni? Operra inasaidia mahoteli ya Dar es Salaam kuunganisha mapokezi na usafi wa vyumba papo hapo. Inafanya kazi vizuri hata kwenye mtandao hafifu, ikiboresha huduma na kufanya wageni wako wafurahi haraka.",
+      "hasVoice": true,
+      "builtAt": "2026-09-16T09:35:54.303Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-16-16-swahili-tip",
