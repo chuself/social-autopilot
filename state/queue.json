@@ -5126,7 +5126,20 @@
     ],
     "scheduledFor": "2026-09-16T10:00:00.000Z",
     "createdAt": "2026-09-15T18:04:50.512Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-16-13-client-proof.mp4",
+      "beats": [
+        "Vyumba haviko tayari?",
+        "Unganisha mapokezi na usafi papo hapo",
+        "Inafanya kazi kwenye mtandao hafifu",
+        "Wageni wataingia vyumbani bila kuchelewa"
+      ],
+      "narration": "Kama hoteli yako ya Dar ina mzunguko mkubwa, Operra inaunganisha mapokezi na usafi wa vyumba papo hapo. Inafanya kazi vizuri hata kwenye mtandao hafifu, ikisimamia mauzo na ripoti zote kwa Kiswahili. Rahisisha kazi yako leo na uwaingize wageni vyumbani bila kuchelewa.",
+      "hasVoice": true,
+      "builtAt": "2026-09-16T07:11:32.583Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-16-16-swahili-tip",
