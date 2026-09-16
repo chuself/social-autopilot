@@ -5175,7 +5175,19 @@
     ],
     "scheduledFor": "2026-09-16T13:00:00.000Z",
     "createdAt": "2026-09-15T18:05:35.490Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-16-16-swahili-tip.mp4",
+      "beats": [
+        "Zogo la asubuhi",
+        "Oanisha mapokezi na jikoni usiku",
+        "Safari bila usumbufu asubuhi"
+      ],
+      "narration": "Muda wa asubuhi ni mchache sana wageni wanapoondoka kwenda safari. Hakikisha mapokezi na jikoni wameoanisha idadi ya lunch box usiku uliopita. Operra inasaidia kuunganisha idara hizi kwa Kiswahili, hata kukiwa na mtandao dhaifu.",
+      "hasVoice": true,
+      "builtAt": "2026-09-16T12:04:43.788Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-16-20-industry-note",
