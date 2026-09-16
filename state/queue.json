@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-16T06:03:04.747Z"
+    "missedAt": "2026-09-16T07:12:14.767Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-16T06:03:04.743Z"
+    "missedAt": "2026-09-16T07:12:14.762Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-16T06:03:04.745Z",
+    "missedAt": "2026-09-16T07:12:14.765Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-16T07:11:48.828Z",
+    "lastAttempt": "2026-09-16T07:12:14.823Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-16T06:03:04.745Z",
+    "missedAt": "2026-09-16T07:12:14.765Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-16T07:11:48.828Z",
+    "lastAttempt": "2026-09-16T07:12:14.823Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2479,9 +2479,9 @@
       "builtAt": "2026-09-02T12:02:28.884Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-16T07:11:48.828Z",
+    "lastAttempt": "2026-09-16T07:12:14.823Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-16T06:03:04.747Z"
+    "missedAt": "2026-09-16T07:12:14.767Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-09-16T06:03:04.747Z"
+    "missedAt": "2026-09-16T07:12:14.767Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -5126,22 +5126,7 @@
     ],
     "scheduledFor": "2026-09-16T10:00:00.000Z",
     "createdAt": "2026-09-15T18:04:50.512Z",
-    "status": "pending",
-    "reel": {
-      "file": "operra-2026-09-16-13-client-proof.mp4",
-      "beats": [
-        "Vyumba haviko tayari?",
-        "Unganisha mapokezi na usafi papo hapo",
-        "Inafanya kazi kwenye mtandao hafifu",
-        "Wageni wataingia vyumbani bila kuchelewa"
-      ],
-      "narration": "Kama hoteli yako ya Dar ina mzunguko mkubwa, Operra inaunganisha mapokezi na usafi wa vyumba papo hapo. Inafanya kazi vizuri hata kwenye mtandao hafifu, ikisimamia mauzo na ripoti zote kwa Kiswahili. Rahisisha kazi yako leo na uwaingize wageni vyumbani bila kuchelewa.",
-      "hasVoice": true,
-      "builtAt": "2026-09-16T07:11:32.583Z",
-      "status": "ready"
-    },
-    "lastAttempt": "2026-09-16T07:11:48.828Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "status": "pending"
   },
   {
     "id": "operra-2026-09-16-16-swahili-tip",
