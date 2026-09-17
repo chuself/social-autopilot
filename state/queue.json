@@ -5316,7 +5316,20 @@
     ],
     "scheduledFor": "2026-09-17T10:00:00.000Z",
     "createdAt": "2026-09-16T18:06:32.195Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-17-13-pain-point.mp4",
+      "beats": [
+        "Bili za vifaa vya mlimani zinapotea?",
+        "Usimamizi wa POS na huduma zote.",
+        "Inafanya kazi hata mtandao ukiwa chini.",
+        "Okoa mapato yote ya hoteli yako."
+      ],
+      "narration": "Wapanda mlima wako wakiondoka asubuhi, bili za kukodi vifaa na huduma za ziada zisipotee. Mfumo wetu wa Kiswahili na Kiingereza unaunganisha POS, mapokezi na ripoti kwa urahisi, hata kwenye mtandao mdogo, ili kulinda mapato yote ya hoteli yako.",
+      "hasVoice": true,
+      "builtAt": "2026-09-17T07:05:18.846Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-17-16-number-that-lands",
