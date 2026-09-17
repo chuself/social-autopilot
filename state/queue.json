@@ -5421,5 +5421,144 @@
       "facebook:1049514968255534_122156902551351110",
       "instagram:17948365764294844"
     ]
+  },
+  {
+    "id": "operra-2026-09-18-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Zanzibar Resorts",
+        "headline": "Mzozo wa bili siku ya checkout?",
+        "body": "Kukokotoa dola na shilingi dakika za mwisho kwa wageni wa muda mrefu huleta makosa ya viwango vya kubadilisha fedha."
+      },
+      {
+        "eyebrow": "Ushauri Wetu",
+        "headline": "Fanya ukaguzi kila siku tatu",
+        "body": "Hakiki huduma za ziada na viwango vya kubadilisha fedha mapema ili kuepuka foleni asubuhi ya kuondoka."
+      },
+      {
+        "eyebrow": "Mfumo Rahisi",
+        "headline": "Operra inarahisisha ukaguzi huu",
+        "body": "Dhibiti folios za sarafu mbili, gharama za POS na ripoti za housekeeping kwa urahisi kutoka popote."
+      }
+    ],
+    "caption": "Wageni wa muda mrefu Zanzibar wanapenda huduma bora, lakini mzozo wa bili wakati wa kuondoka unaweza kuharibu likizo yao yote. Kiwango cha kubadilisha fedha kikibadilika katikati ya safari, au huduma za ziada zisiporekodiwa mapema, asubuhi ya checkout inakuwa ya vurugu. Anza kufanya ukaguzi wa katikati ya safari kila baada ya siku tatu. Operra inafanya ukaguzi huu kuwa mwepesi, ikikuwezesha kusasisha folios za sarafu mbili na ripoti za POS papo hapo, hata kwenye mtandao mdogo.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "Operra",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "Exterior, wide, open horizon view of a traditional Zanzibar carved wooden chest resting on a sunlit stone veranda overlooking the ocean, bright, sunlit, airy, hard midday light and strong shadow shapes, no text, no people, no logos",
+    "cta": "Wasiliana nasi leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-09-18-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-18T05:00:00.000Z",
+    "createdAt": "2026-09-17T18:03:28.819Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-18-08-swahili-tip-1.png",
+      "operra-2026-09-18-08-swahili-tip-2.png",
+      "operra-2026-09-18-08-swahili-tip-3.png"
+    ],
+    "headline": "Mzozo wa bili siku ya checkout?"
+  },
+  {
+    "id": "operra-2026-09-18-13-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Track long-stay laundry and incidentals",
+    "body": "Technical consultants often stay for weeks. Tracking their daily laundry and incidental charges manually over a long stay leads to checkout disputes.",
+    "cta": "See the ledger",
+    "caption": "Mwanza is a hub for technical and mining consultants who often stay for weeks. For these long-stay guests, incidental charges like laundry can become a point of dispute during the final checkout.\n\nOperra logs every service against the room folio instantly. You can provide a clear, itemized list of all extras at any point during the month. Eliminate the guesswork and maintain the trust of your long-term guests.",
+    "hashtags": [
+      "#Mwanza",
+      "#HotelOperations",
+      "#Tanzania"
+    ],
+    "imagePrompt": "exterior, wide, open horizon view of a simple metal wire laundry basket resting right-of-centre on a sunlit stone floor. bright, sunlit, airy. hard midday light and strong shadow shapes. left side is empty space and sky. no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-18-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-18T10:00:00.000Z",
+    "createdAt": "2026-09-17T18:04:40.411Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-18-16-feature-spotlight",
+    "eyebrow": "Pricing",
+    "headline": "Switch to peak climbing season rates automatically",
+    "body": "Pre-set your Moshi lodge tariffs for the dry season. Operra updates your room rates automatically, preventing manual pricing errors at check-in.",
+    "cta": "See it work",
+    "caption": "Moshi's peak climbing seasons bring enough chaos without your reception team manually calculating different rates for different tour operators.\n\nWith Operra, you can pre-configure your seasonal tariffs and agent-specific rates in advance. The system automatically applies the correct pricing based on the arrival date. No manual overrides, no billing disputes, and no lost revenue during the busiest months.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelOperations",
+      "#KilimanjaroTrekking"
+    ],
+    "imagePrompt": "exterior, wide, open horizon view of a simple stone mountain lodge in Moshi, with a pair of classic wooden trekking poles leaning against the right-of-centre wall. Hard midday light and strong shadow shapes, bright, sunlit, airy. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-18-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-18T13:00:00.000Z",
+    "createdAt": "2026-09-17T18:05:26.186Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-18-20-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Company covers bed, guest bills dinner.",
+    "body": "Stop arguing over unauthorized extras at checkout. Operra flags non-inclusive charges instantly, keeping your morning departures on schedule.",
+    "cta": "See it work",
+    "caption": "Your corporate guest is checking out at 6 AM to catch a flight from Dar es Salaam. Then comes the debate: their LPO only covers room charges, but there is a dinner on the bill.\n\nWith Operra, your front desk knows exactly what the corporate account covers the moment a charge is posted. No checkout delays, no awkward arguments, and no unrecovered costs.",
+    "hashtags": [
+      "#DarEsSalaamHotels",
+      "#HotelOperations",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Exterior, wide, open horizon view of a sleek aluminum clipboard resting right-of-centre on a smooth concrete bench under harsh midday sun, casting a sharp shadow. The left side is a clean, empty concrete surface under a bright sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-18-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-18T17:00:00.000Z",
+    "createdAt": "2026-09-17T18:06:10.598Z",
+    "status": "pending"
   }
 ]

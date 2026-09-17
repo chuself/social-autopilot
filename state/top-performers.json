@@ -57,26 +57,6 @@
     ]
   },
   {
-    "id": "operra-2026-08-23-13-client-proof",
-    "platform": "instagram",
-    "pillar": "client-proof",
-    "format": "reel",
-    "language": "sw",
-    "look": "flatlay",
-    "headline": "Fast check-ins for trekking groups in Moshi",
-    "reach": 29,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 2,
-    "platforms": [
-      "instagram",
-      "facebook",
-      "tiktok"
-    ]
-  },
-  {
     "id": "operra-2026-08-30-13-pain-point",
     "platform": "instagram",
     "pillar": "pain-point",
@@ -90,6 +70,26 @@
     "shares": 0,
     "saves": 0,
     "engagement": 2,
+    "platforms": [
+      "instagram",
+      "facebook",
+      "tiktok"
+    ]
+  },
+  {
+    "id": "operra-2026-08-25-16-feature-spotlight",
+    "platform": "instagram",
+    "pillar": "feature-spotlight",
+    "format": "reel",
+    "language": "sw",
+    "look": "macro",
+    "headline": "Run smooth group check-ins during Mwanza peaks",
+    "reach": 11,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 1,
     "platforms": [
       "instagram",
       "facebook",
