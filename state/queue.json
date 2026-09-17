@@ -5362,7 +5362,19 @@
     ],
     "scheduledFor": "2026-09-17T13:00:00.000Z",
     "createdAt": "2026-09-16T18:07:18.670Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-17-16-number-that-lands.mp4",
+      "beats": [
+        "Slow hotel connection?",
+        "Manage everything on low bandwidth.",
+        "Fast, seamless corporate checkouts."
+      ],
+      "narration": "Don't let slow internet delay your guests in Dar es Salaam. With Operra, you can manage your front desk, housekeeping, POS, pricing, reports, and audit trails seamlessly, even on low-bandwidth connections. Choose between English or Kiswahili and keep your operations moving.",
+      "hasVoice": true,
+      "builtAt": "2026-09-17T10:04:01.738Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-17-20-client-proof",
