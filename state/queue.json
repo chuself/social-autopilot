@@ -5316,7 +5316,7 @@
     ],
     "scheduledFor": "2026-09-17T10:00:00.000Z",
     "createdAt": "2026-09-16T18:06:32.195Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-17-13-pain-point.mp4",
       "beats": [
@@ -5328,10 +5328,14 @@
       "narration": "Wapanda mlima wako wakiondoka asubuhi, bili za kukodi vifaa na huduma za ziada zisipotee. Mfumo wetu wa Kiswahili na Kiingereza unaunganisha POS, mapokezi na ripoti kwa urahisi, hata kwenye mtandao mdogo, ili kulinda mapato yote ya hoteli yako.",
       "hasVoice": true,
       "builtAt": "2026-09-17T07:05:18.846Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-17T10:06:09.638Z",
+      "postIds": [
+        "instagram:18110029781138407",
+        "facebook:1103323032233477"
+      ]
     },
-    "lastAttempt": "2026-09-17T09:35:45.193Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-17T10:06:09.638Z"
   },
   {
     "id": "operra-2026-09-17-16-number-that-lands",
