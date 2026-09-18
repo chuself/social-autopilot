@@ -5505,7 +5505,7 @@
     ],
     "scheduledFor": "2026-09-18T10:00:00.000Z",
     "createdAt": "2026-09-17T18:04:40.411Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-18-13-industry-note.mp4",
       "beats": [
@@ -5517,10 +5517,14 @@
       "narration": "When consultants stay for weeks, manual laundry and incidental tracking leads to arguments at checkout. Operra automates your front desk and POS even on low-bandwidth Tanzanian connections, ensuring accurate billing and happy guests on checkout day.",
       "hasVoice": true,
       "builtAt": "2026-09-18T07:04:11.031Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-18T10:06:06.416Z",
+      "postIds": [
+        "instagram:17935233525383092",
+        "facebook:39521955974070161"
+      ]
     },
-    "lastAttempt": "2026-09-18T09:01:12.608Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-18T10:06:06.416Z"
   },
   {
     "id": "operra-2026-09-18-16-feature-spotlight",
