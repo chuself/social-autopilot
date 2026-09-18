@@ -5550,7 +5550,20 @@
     ],
     "scheduledFor": "2026-09-18T13:00:00.000Z",
     "createdAt": "2026-09-17T18:05:26.186Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-18-16-feature-spotlight.mp4",
+      "beats": [
+        "Badili bei kiotomatiki",
+        "Weka bei za msimu wa kupanda",
+        "Zuia makosa ya bei mapokezi",
+        "Amani ya akili msimu wa kilele"
+      ],
+      "narration": "Msimu wa kupanda mlima ukifika Moshi, usihangaike kubadili bei za vyumba kwa mkono. Mfumo wetu unabadilisha ushuru kiotomatiki hata kwenye mtandao mdogo, ukiepusha makosa ya bei mapokezi. Fanya kazi kwa Kiswahili na upate faida unayostahili.",
+      "hasVoice": true,
+      "builtAt": "2026-09-18T10:04:48.721Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-18-20-pain-point",
