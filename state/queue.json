@@ -5554,7 +5554,20 @@
     ],
     "scheduledFor": "2026-09-18T13:00:00.000Z",
     "createdAt": "2026-09-17T18:05:26.186Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-18-16-feature-spotlight.mp4",
+      "beats": [
+        "Msimu wa Kili umeanza sasa",
+        "Badili tariffs za vyumba kiotomatiki",
+        "Okoa mapato bila makosa ya mapokezi",
+        "Usimamizi rahisi na faida zaidi"
+      ],
+      "narration": "Msimu wa kupanda mlima ukifika, usihangaike kubadili bei za vyumba kwa mkono kwenye lodge yako ya Moshi. Operra inabadilisha tariffs kiotomatiki ili kuzuia makosa ya mapokezi. Mfumo huu unafanya kazi hata kwa mtandao wa chini, kwa Kiswahili na Kiingereza.",
+      "hasVoice": true,
+      "builtAt": "2026-09-18T12:10:05.587Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-18-20-pain-point",
