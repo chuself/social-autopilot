@@ -5610,5 +5610,144 @@
       "facebook:1049514968255534_122157534123351110",
       "instagram:18183613186418761"
     ]
+  },
+  {
+    "id": "operra-2026-09-19-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Group bookings",
+        "headline": "Are your invoices accurate?",
+        "body": "Tracking multiple safari groups requires precision to avoid costly billing errors."
+      },
+      {
+        "eyebrow": "Revenue leakage",
+        "headline": "Stop the silent losses",
+        "body": "Unaccounted extras during peak safari season quickly erode your property's net profit."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Full financial control",
+        "body": "Operra provides a complete audit trail for every booking and transaction. See the difference."
+      }
+    ],
+    "caption": "Peak season in Arusha means constant movement. When safari groups rotate through your property, every unrecorded extra or miscalculated tour operator commission adds up. Relying on manual tracking is where revenue leaks happen. Operra simplifies your financial oversight by keeping a precise audit trail across your front desk, POS, and housekeeping departments. Stop guessing where the money went and start tracking every payment and discount as it happens. Keep your operations lean and your revenue clear.",
+    "hashtags": [
+      "ArushaHotels",
+      "TanzaniaHospitality",
+      "HotelManagement",
+      "Operra"
+    ],
+    "imagePrompt": "minimal line drawing of a stack of printed paper invoices with a heavy brass paperweight, exterior, wide, open horizon, bright, sunlit, airy, hard midday light and strong shadow shapes, no text, no people, no logos",
+    "cta": "Request a demo",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-09-19-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-19T05:00:00.000Z",
+    "createdAt": "2026-09-18T18:04:27.797Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-19-08-number-that-lands-1.png",
+      "operra-2026-09-19-08-number-that-lands-2.png",
+      "operra-2026-09-19-08-number-that-lands-3.png"
+    ],
+    "headline": "Are your invoices accurate?"
+  },
+  {
+    "id": "operra-2026-09-19-13-client-proof",
+    "eyebrow": "Ripoti Za Mapato",
+    "headline": "Ripoti moja kwa idara zote",
+    "body": "Resort moja ya Zanzibar sasa inadhibiti mauzo ya bar na vyumba kwa usahihi, bila kupoteza hata shilingi moja.",
+    "cta": "Onana nasi",
+    "caption": "Je, unajua mapato halisi ya kila idara kufikia jioni?\n\nMteja wetu mmoja Zanzibar ameweza kuunganisha mauzo ya bar na mgahawa moja kwa moja kwenye bili za vyumba. Hakuna tena karatasi za malipo zinazopotea au hesabu zinazogongana asubuhi wakati wa checkout. Operra inakupa ripoti ya uhakika kila siku, hata mtandao ukiwa unasumbua. 🧾",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#Operra",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "exterior, wide, open horizon view of a simple wooden chair resting right-of-centre on a sun-drenched balcony, bright sunlit airy, hard midday light and strong shadow shapes, left side is empty space and clear sky, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-19-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-19T10:00:00.000Z",
+    "createdAt": "2026-09-18T18:05:47.600Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-19-16-swahili-tip",
+    "eyebrow": "Mapokezi",
+    "headline": "Hakiki majina ya wageni wa mkutano mapema",
+    "body": "Asubuhi za mikutano Mwanza zina harakati nyingi. Thibitisha orodha ya majina na maelekezo ya malipo na muandaaji saa 12 jioni kabla ya siku ya tukio.",
+    "cta": "Jaribu Operra leo",
+    "caption": "Usajili wa asubuhi unakwama pale orodha inapokuwa na utata. Kukaa na muandaaji usiku uliopita kunaepusha mivutano ya nani yumo kwenye kifurushi cha kampuni na nani anajilipia mwenyewe. Hii inaruhusu timu yako ndogo kutoa huduma bora badala ya kupoteza muda kurekebisha makosa wakati wageni wakiingia. Operra inakuwezesha kuweka maelekezo ya bili mapema ili kuzuia usumbufu wakati wa checkout. 📋",
+    "hashtags": [
+      "Mwanza",
+      "HotelOperations",
+      "Tanzania"
+    ],
+    "imagePrompt": "exterior, wide, open horizon view of a stack of conference lanyards resting right-of-centre on a simple stone ledge. bright, sunlit, airy. hard midday light and strong shadow shapes. no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-19-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-19T13:00:00.000Z",
+    "createdAt": "2026-09-18T18:07:58.284Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-19-20-industry-note",
+    "eyebrow": "Front Desk",
+    "headline": "Managing Day Room occupancy",
+    "body": "Track short-stay bookings for climbers waiting for evening flights. Maximise your Moshi property’s revenue between the morning descent and the late-night departure.",
+    "cta": "See it work",
+    "caption": "Many Kilimanjaro climbers finish their trek in the morning but have late-night flights from JRO. This creates a high demand for Day Rooms in Moshi—a valuable revenue stream if managed correctly.\n\nIf your system cannot handle quick room turnovers and short-stay rates, you lose occupancy. Operra allows you to track day-use bookings and housekeeping status in real-time, ensuring every room is ready for the next arrival.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelOperations",
+      "#Kilimanjaro"
+    ],
+    "imagePrompt": "exterior, wide, open horizon view of a simple wooden window shutter right-of-centre, bright, sunlit, airy, hard midday light and strong shadow shapes, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-19-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-19T17:00:00.000Z",
+    "createdAt": "2026-09-18T18:10:53.020Z",
+    "status": "pending"
   }
 ]
