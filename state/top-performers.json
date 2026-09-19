@@ -77,14 +77,14 @@
     ]
   },
   {
-    "id": "operra-2026-08-25-16-feature-spotlight",
+    "id": "operra-2026-09-17-16-number-that-lands",
     "platform": "instagram",
-    "pillar": "feature-spotlight",
+    "pillar": "number-that-lands",
     "format": "reel",
-    "language": "sw",
-    "look": "macro",
-    "headline": "Run smooth group check-ins during Mwanza peaks",
-    "reach": 11,
+    "language": "en",
+    "look": "daylight",
+    "headline": "6 core departments on low bandwidth",
+    "reach": 4,
     "likes": 1,
     "comments": 0,
     "shares": 0,
@@ -92,8 +92,7 @@
     "engagement": 1,
     "platforms": [
       "instagram",
-      "facebook",
-      "tiktok"
+      "facebook"
     ]
   }
 ]

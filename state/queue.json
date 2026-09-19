@@ -5798,5 +5798,146 @@
       "facebook:1049514968255534_122158369869351110",
       "instagram:18325350244263419"
     ]
+  },
+  {
+    "id": "operra-2026-09-20-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Udhibiti wa Dar",
+        "headline": "Bili za mgahawa zinapotea mapokezi?",
+        "body": "Wageni wa kampuni wanapocheki asubuhi, bili zote lazima ziwe tayari. Operra inahakikisha kila oda inafika mapokezi papo hapo."
+      },
+      {
+        "eyebrow": "Ufanisi",
+        "headline": "Unganisha POS na akaunti ya mgeni",
+        "body": "Kila chakula au kinywaji kinachouzwa kinahamia kwenye folio ya mgeni bila kusubiri makaratasi au vocha za mkono."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Audit trail inayolinda kila senti",
+        "body": "Kagua kila muamala na ujue nani alifanya mabadiliko. Tunarahisisha usimamizi wa hoteli yako, hata ukiwa mbali."
+      }
+    ],
+    "caption": "Hoteli za biashara Dar es Salaam zina kasi kubwa. Wageni wa kampuni hawataki kusubiri bili zilizosahaulika wakati wa kuondoka kuelekea uwanja wa ndege wa JNIA. Operra inaunganisha idara zako zote—kuanzia POS hadi mapokezi—kuhakikisha kila huduma inalipiwa kwa wakati. Ukiwa na mfumo unaofanya kazi hata kwenye mtandao mdogo, unadhibiti mapato yako bila mivutano na wageni wakati wa checkout. Rahisisha kazi ya timu yako leo.",
+    "hashtags": [
+      "Operra",
+      "HotelManagement",
+      "TanzaniaHospitality",
+      "DarHotels"
+    ],
+    "imagePrompt": "Exterior at dusk, deep blue hour, cool and quiet, warm interior light glowing against a cool sky. Subject: a corner view of a modern glass-walled meeting room with a single leather portfolio on a table. No text, no people, no logos.",
+    "cta": "Anza na Operra",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "backgroundPath": null,
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-20T05:00:00.000Z",
+    "createdAt": "2026-09-19T18:04:53.270Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-20-08-feature-spotlight-1.png",
+      "operra-2026-09-20-08-feature-spotlight-2.png",
+      "operra-2026-09-20-08-feature-spotlight-3.png"
+    ],
+    "headline": "Bili za mgahawa zinapotea mapokezi?"
+  },
+  {
+    "id": "operra-2026-09-20-13-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Arusha safari invoices taking days to reconcile?",
+    "body": "Manual tour operator rates and vouchers shouldn't stall your departures. Track every agent agreement automatically.",
+    "cta": "See how it works",
+    "caption": "Peak safari season in Arusha means back-to-back group arrivals. But when tour operators use different pre-agreed rates, manual invoicing at checkout leads to long delays and missed extra charges.\n\nOperra keeps your front desk and back office in sync. Track specific agent rates, split bills instantly, and send clean invoices without the wait.\n\nBook a demo today.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelManagement",
+      "SafariLodge",
+      "Operra"
+    ],
+    "imagePrompt": "An elegant, open-air safari lodge reception pavilion in Arusha at dusk. A warm, golden light glows from inside the wooden structure, casting soft reflections on a gravel driveway. The background shows the silhouette of acacia trees against a deep blue, twilight sky. The right-of-centre features the glowing entryway, while the left side is visually calm with the dark sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-20T10:00:00.000Z",
+    "createdAt": "2026-09-19T18:05:38.319Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-20-16-number-that-lands",
+    "eyebrow": "Connectivity",
+    "headline": "Keep Zanzibar resort billing live on low bandwidth",
+    "body": "Operra runs front desk, housekeeping, POS, pricing, reports, and audit trails on low bandwidth.",
+    "cta": "See how it works",
+    "caption": "Unstable island internet shouldn't pause your front desk or beach bar checkouts. When connection drops in Zanzibar, property management often stalls, leaving guest folios incomplete.\n\nOperra keeps six core departments running seamlessly on low-bandwidth connections. Staff post charges instantly, manage multi-currency bills, and complete audit trails without waiting for the network.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HospitalityTech",
+      "#HotelManagement",
+      "#ResortOperations"
+    ],
+    "imagePrompt": "A compact weatherproof network router mounted on a whitewashed coral stone pillar right-of-centre, exterior at dusk, deep blue hour, cool and quiet, warm interior light glowing against a cool sky, left side visually calm with open twilight sky, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-20T13:00:00.000Z",
+    "createdAt": "2026-09-19T18:08:38.527Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-20-20-client-proof",
+    "eyebrow": "POS Billing",
+    "headline": "Mwanza lakeside hotel syncs dining bills instantly",
+    "body": "A busy property on Lake Victoria keeps restaurant charges connected to the front desk in real time, even on low-bandwidth connections.",
+    "cta": "See it work",
+    "caption": "Guests checking out of your lakeside property shouldn't have to wait while your team manually tracks down dinner slips from the bar.\n\nOperra keeps your dining POS and front desk folios perfectly synced in real time, even on the low-bandwidth networks common in Mwanza. Every meal, drink, and boat trip goes straight to the bill instantly.\n\nSimplify checkouts and protect your revenue.",
+    "hashtags": [
+      "HotelManagement",
+      "MwanzaHospitality",
+      "EastAfricaHotels"
+    ],
+    "imagePrompt": "An exterior shot of a wooden dining table on a lakeside deck at dusk. On the right-of-centre of the table sits a simple leather receipt folder and a clean drinking glass. Deep blue hour, cool and quiet. Warm yellow light glows from the lodge interior in the background, reflecting softly on the calm lake water. The left side is a visually calm open view of the dark, quiet lake and evening sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-20T17:00:00.000Z",
+    "createdAt": "2026-09-19T18:09:23.343Z",
+    "status": "pending"
   }
 ]
