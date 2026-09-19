@@ -5739,7 +5739,19 @@
     ],
     "scheduledFor": "2026-09-19T13:00:00.000Z",
     "createdAt": "2026-09-18T18:07:58.284Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-19-16-swahili-tip.mp4",
+      "beats": [
+        "Asubuhi za mikutano zina vurugu sana",
+        "Thibitisha orodha ya wageni jioni iliyopita",
+        "Uepuke msongamano mkubwa wa asubuhi"
+      ],
+      "narration": "Asubuhi za mikutano Mwanza zina harakati nyingi. Thibitisha orodha ya majina na malipo na muandaaji saa kumi na mbili jioni kabla ya tukio. Operra inarahisisha mapokezi na malipo hata kwenye mtandao wa kasi ya chini.",
+      "hasVoice": true,
+      "builtAt": "2026-09-19T10:06:30.890Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-19-20-industry-note",
