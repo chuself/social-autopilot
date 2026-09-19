@@ -5694,7 +5694,20 @@
     ],
     "scheduledFor": "2026-09-19T10:00:00.000Z",
     "createdAt": "2026-09-18T18:05:47.600Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-19-13-client-proof.mp4",
+      "beats": [
+        "Zuia upotevu sasa",
+        "Unganisha mapokezi, bar na vyumba",
+        "Inafanya kazi mtandao ukiwa chini",
+        "Udhibiti kamili wa mapato yako"
+      ],
+      "narration": "Zuia upotevu sasa. Resort moja ya Zanzibar inadhibiti mauzo yote ya vyumba na bar kwa usahihi. Ukiwa na Operra, unafanya ukaguzi na kupata ripoti kwa Kiswahili, hata mtandao ukiwa chini. Pata udhibiti kamili wa mapato yako leo.",
+      "hasVoice": true,
+      "builtAt": "2026-09-19T07:04:22.497Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-19-16-swahili-tip",
