@@ -5929,7 +5929,20 @@
     ],
     "scheduledFor": "2026-09-20T13:00:00.000Z",
     "createdAt": "2026-09-19T18:08:38.527Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-20-16-number-that-lands.mp4",
+      "beats": [
+        "Slow resort internet?",
+        "Run front desk, housekeeping, and POS.",
+        "Switch between Kiswahili and English.",
+        "Keep billing live on low bandwidth."
+      ],
+      "narration": "Slow resort internet shouldn't stop your daily operations. Easily manage front desk, housekeeping, POS, pricing, and reports even on low bandwidth connections in Tanzania. Switch seamlessly between Kiswahili and English to keep your resort billing live without interruption.",
+      "hasVoice": true,
+      "builtAt": "2026-09-20T10:04:16.422Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-20-20-client-proof",
