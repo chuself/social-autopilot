@@ -5883,7 +5883,7 @@
     ],
     "scheduledFor": "2026-09-20T10:00:00.000Z",
     "createdAt": "2026-09-19T18:05:38.319Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-20-13-pain-point.mp4",
       "beats": [
@@ -5895,10 +5895,14 @@
       "narration": "Kama ankara za safari na vocha za mawakala zinachelewesha wageni wako Arusha, Operra ndio suluhisho. Mfumo huu unarahisisha usimamizi wa mapokezi na ripoti kwa lugha ya Kiswahili na Kiingereza, hata kwenye mtandao hafifu. Badili makubaliano kuwa hesabu sahihi papo hapo.",
       "hasVoice": true,
       "builtAt": "2026-09-20T07:04:38.186Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-20T10:05:36.158Z",
+      "postIds": [
+        "instagram:17875973823565584",
+        "facebook:1412280554363860"
+      ]
     },
-    "lastAttempt": "2026-09-20T09:29:58.112Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-20T10:05:36.158Z"
   },
   {
     "id": "operra-2026-09-20-16-number-that-lands",
