@@ -6177,5 +6177,146 @@
       "facebook:1049514968255534_122159734203351110",
       "instagram:17894256993673301"
     ]
+  },
+  {
+    "id": "operra-2026-09-22-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Revenue leakage",
+        "headline": "Are your conference bills accurate?",
+        "body": "Small discrepancies in Mwanza meeting bookings add up fast when manual tracking fails."
+      },
+      {
+        "eyebrow": "The reality",
+        "headline": "Small gaps create large losses",
+        "body": "Unposted extras and meal charges often vanish between the dining area and the front desk."
+      },
+      {
+        "eyebrow": "Operra solution",
+        "headline": "Unified billing stops the leak",
+        "body": "Operra integrates your POS and front desk to capture every charge instantly. Book a demo."
+      }
+    ],
+    "caption": "In Mwanza, where regional conferences and lake tourism drive your occupancy, manual billing is a silent revenue killer. When dining bills or extra services aren't linked to the guest folio in real-time, you are likely losing margin on every corporate account. Operra connects your POS directly to your front desk, ensuring that every coffee, lunch, and meeting room extra is captured before the client checks out. Stop chasing missing invoices and get a clear picture of your actual daily revenue.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelManagement",
+      "#TanzaniaTourism",
+      "#Operra"
+    ],
+    "imagePrompt": "A close-up shot of an open, empty leather-bound conference notepad and a professional pen on a polished wooden table, exterior at dusk, deep blue hour, cool and quiet, warm interior light glowing against a cool sky, no text, no people, no logos.",
+    "cta": "Book a demo",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-09-22-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-22T05:00:00.000Z",
+    "createdAt": "2026-09-21T18:05:27.768Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-22-08-number-that-lands-1.png",
+      "operra-2026-09-22-08-number-that-lands-2.png",
+      "operra-2026-09-22-08-number-that-lands-3.png"
+    ],
+    "headline": "Are your conference bills accurate?"
+  },
+  {
+    "id": "operra-2026-09-22-13-client-proof",
+    "eyebrow": "Usimamizi wa Vikundi",
+    "headline": "Kundi la wapanda mlima likirejea Moshi",
+    "body": "Operra inasaidia kurahisisha malipo ya ziada na kuandaa vyumba kwa haraka, hata wakati mtandao wa eneo hilo unaposumbua wageni wakirudi kutoka mlimani.",
+    "cta": "Tazama jinsi inavyofanya kazi",
+    "caption": "Wageni wakirudi kutoka mlimani, mapokezi huwa na kazi nyingi. Bili za ziada, chakula, na malipo ya miongozo mara nyingi husababisha msongamano. Lodge moja huko Moshi imepunguza muda wa kusubiri kwa kutumia Operra kusimamia akaunti za vikundi kwa usahihi. Kila gharama huwekwa kwenye folio husika papo hapo, hivyo kurahisisha mchakato wa kuondoka na kuepuka malalamiko yasiyo ya lazima. Operra inafanya kazi hata kwenye mtandao wa kasi ndogo, ikikupa utulivu unapoandaa chumba kwa ajili ya kundi linalofuata. 🏔️",
+    "hashtags": [
+      "#KilimanjaroHotels",
+      "#OperraTech",
+      "#MoshiHospitality",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Light/tone: deep blue hour, cool and quiet. Treatment: warm interior light glowing against a cool sky. A set of worn mountain trekking boots placed neatly outside a wooden lodge door, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-22-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-22T10:00:00.000Z",
+    "createdAt": "2026-09-21T18:07:22.468Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-22-16-swahili-tip",
+    "eyebrow": "Bili za Makampuni",
+    "headline": "Tenga matumizi ya wageni wa makampuni mapema",
+    "body": "Tenganisha bili ya chumba inayolipwa na kampuni na matumizi binafsi ya mgeni wakati wa kuingia ili kuepuka mzozo wakati wa kuondoka.",
+    "cta": "Jifunze zaidi",
+    "caption": "Katika hoteli za biashara jijini Dar es Salaam, wageni wa makampuni mara nyingi huongeza matumizi ya bar au msosi kwenye bili ya chumba. Kampuni inapokataa kulipia gharama hizo baadaye, hoteli huingia kwenye mzozo.\n\nNjia bora ni kutenganisha bili ya kampuni na matumizi binafsi tangu siku ya kwanza. Mgeni anapoingia, fafanua kinacholipiwa na barua ya kampuni na kinacholipwa na mgeni mwenyewe. Hii inaondoa mtafaruku asubuhi ya checkout.",
+    "hashtags": [
+      "#HospitalityTZ",
+      "#DarEsSalaamHotels",
+      "#HotelOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "Exterior shot at dusk of a sleek leather document presenter and a metal ballpoint pen resting on a dark teak table on a hotel terrace overlooking the Dar es Salaam skyline. Deep blue hour, cool and quiet, with warm interior light glowing through glass doors in the background against a cool sky. Visual detail placed on the right side, leaving the left third dark and visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-22-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-22T13:00:00.000Z",
+    "createdAt": "2026-09-21T18:08:49.445Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-22-20-industry-note",
+    "eyebrow": "Invoicing",
+    "headline": "Reconcile safari group folios before checkout",
+    "body": "Arusha tour operators expect instant, accurate invoices. Reconcile group extras daily to keep departures on schedule.",
+    "cta": "See it work",
+    "caption": "When safari vehicles are idling in your driveway, there is no time to hunt for missing bills or extra drinks.\n\nAny delay at your front desk can throw off a tight Arusha itinerary. Reconciling your tour operator folios daily keeps departures on schedule. Operra simplifies group billing, letting you split and finalize invoices in seconds.",
+    "hashtags": [
+      "ArushaHotels",
+      "SafariLodge",
+      "HotelOperations"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Light/tone: deep blue hour, cool and quiet. Treatment: warm interior light glowing against a cool sky. Subject: A stack of metal clipboards holding printed safari guest itineraries, resting on a rustic wooden bench outside. The left third of the image is a plain, dark wooden wall in shadow, keeping the detail on the right. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-22-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-22T17:00:00.000Z",
+    "createdAt": "2026-09-21T18:09:34.358Z",
+    "status": "pending"
   }
 ]
