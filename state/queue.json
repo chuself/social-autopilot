@@ -6121,7 +6121,20 @@
     ],
     "scheduledFor": "2026-09-21T13:00:00.000Z",
     "createdAt": "2026-09-20T18:06:42.457Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-21-16-feature-spotlight.mp4",
+      "beats": [
+        "Magari ya safari",
+        "Bili za mawakala zinachelewesha?",
+        "Tenganisha bili kwa mbofyo mmoja",
+        "Wageni wawahi safari za Arusha"
+      ],
+      "narration": "Je, ankara za mawakala zinachelewesha wageni wako kuondoka Arusha? Ukiwa na mfumo unaofanya kazi hata kwa mtandao mdogo, unaweza kutenganisha bili za chumba na huduma za ziada kwa mbofyo mmoja tu. Safirisha wageni wako kwa wakati bila usumbufu wowote.",
+      "hasVoice": true,
+      "builtAt": "2026-09-21T10:07:02.757Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-21-20-pain-point",
