@@ -6071,7 +6071,20 @@
     ],
     "scheduledFor": "2026-09-21T10:00:00.000Z",
     "createdAt": "2026-09-20T18:05:55.788Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-21-13-industry-note.mp4",
+      "beats": [
+        "Stop invoice disputes now.",
+        "Track workshop incidentals daily.",
+        "Sync front desk with POS.",
+        "Enjoy faster corporate payouts."
+      ],
+      "narration": "Keep track of every workshop incidental, extra meal, and local transfer as it happens. By syncing front desk and POS billing daily, you eliminate end-of-stay corporate invoice disputes and secure faster payouts.",
+      "hasVoice": true,
+      "builtAt": "2026-09-21T07:04:00.929Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-21-16-feature-spotlight",
