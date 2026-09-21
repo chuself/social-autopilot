@@ -6256,7 +6256,20 @@
     ],
     "scheduledFor": "2026-09-22T10:00:00.000Z",
     "createdAt": "2026-09-21T18:07:22.468Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-22-13-client-proof.mp4",
+      "beats": [
+        "Wageni wakirudi mlimani",
+        "Mtandao ukisumbua usiwaze malipo",
+        "Andaa vyumba kwa haraka",
+        "Wageni wako watafurahi daima"
+      ],
+      "narration": "Kundi la wapanda mlima likirejea Moshi, mtandao usikukwamishe. Operra inarahisisha malipo ya ziada na maandalizi ya vyumba haraka hata kukiwa na intaneti dhaifu. Hakikisha wageni wako wanapata huduma bora na ya haraka bila usumbufu wowote.",
+      "hasVoice": true,
+      "builtAt": "2026-09-21T18:40:02.342Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-22-16-swahili-tip",
