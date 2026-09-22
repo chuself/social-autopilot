@@ -1,21 +1,6 @@
 [
   {
     "platform": "facebook",
-    "postId": "2139398937460750",
-    "id": "operra-2026-08-28-16-feature-spotlight",
-    "format": "reel",
-    "postedAt": "2026-08-28T13:52:25.352Z"
-  },
-  {
-    "platform": "tiktok",
-    "postId": "https://app.metricool.com/planner/calendar?blogId=6307384&openWithPostUuid=5215748273814980906",
-    "scheduledFor": "2026-08-28T16:58:26+03:00",
-    "id": "operra-2026-08-28-16-feature-spotlight",
-    "format": "reel",
-    "postedAt": "2026-08-28T13:52:28.884Z"
-  },
-  {
-    "platform": "facebook",
     "postId": "1049514968255534_122144584821351110",
     "url": "https://facebook.com/1049514968255534_122144584821351110",
     "id": "operra-2026-08-28-20-pain-point",
@@ -1409,5 +1394,19 @@
     "slides": 3,
     "id": "operra-2026-09-22-08-number-that-lands",
     "postedAt": "2026-09-22T05:12:09.933Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18086164676702115",
+    "id": "operra-2026-09-22-13-client-proof",
+    "format": "reel",
+    "postedAt": "2026-09-22T10:05:13.003Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1040437205696204",
+    "id": "operra-2026-09-22-13-client-proof",
+    "format": "reel",
+    "postedAt": "2026-09-22T10:05:40.962Z"
   }
 ]

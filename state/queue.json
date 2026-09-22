@@ -6262,7 +6262,7 @@
     ],
     "scheduledFor": "2026-09-22T10:00:00.000Z",
     "createdAt": "2026-09-21T18:07:22.468Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-22-13-client-proof.mp4",
       "beats": [
@@ -6274,10 +6274,14 @@
       "narration": "Kundi la wapanda mlima likirejea Moshi, mtandao usikukwamishe. Operra inarahisisha malipo ya ziada na maandalizi ya vyumba haraka hata kukiwa na intaneti dhaifu. Hakikisha wageni wako wanapata huduma bora na ya haraka bila usumbufu wowote.",
       "hasVoice": true,
       "builtAt": "2026-09-21T18:40:02.342Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-22T10:05:40.962Z",
+      "postIds": [
+        "instagram:18086164676702115",
+        "facebook:1040437205696204"
+      ]
     },
-    "lastAttempt": "2026-09-22T09:14:48.336Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-22T10:05:40.962Z"
   },
   {
     "id": "operra-2026-09-22-16-swahili-tip",
