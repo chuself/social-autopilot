@@ -6367,5 +6367,146 @@
       "facebook:1049514968255534_122160323595351110",
       "instagram:17883614670624328"
     ]
+  },
+  {
+    "id": "operra-2026-09-23-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Usimamizi wa Fedha",
+        "headline": "Bili za wageni wa nje zinachanganya?",
+        "body": "Kupokea malipo kwa Dola na Shilingi kunaweza kuleta makosa ya mahesabu kwenye risiti za wageni."
+      },
+      {
+        "eyebrow": "Operra POS",
+        "headline": "Usahihi wa fedha kiganjani",
+        "body": "Mfumo wetu unachakata bili za vyakula na vinywaji kwa usahihi, ukiondoa mkanganyiko wa viwango vya kubadilisha fedha."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Checkout bila mzozo",
+        "body": "Pata ripoti sahihi za mapato ya hoteli yako baada ya kutoa kamisheni za OTA. Panga onyesho sasa."
+      }
+    ],
+    "caption": "Kusimamia wageni wa kimataifa Zanzibar kunahitaji usahihi wa hali ya juu. Mara nyingi, mahesabu ya Dola na Shilingi yakichanganyika, mwisho wa siku faida hupungua bila sababu. Operra inakusaidia kuweka kila kitu sawa—kuanzia bili za mgahawa hadi mapato halisi baada ya OTA. Hakuna tena kupoteza muda kwenye mahesabu ya usiku kucha. Fanya biashara yako iwe ya kisasa na inayotabirika.",
+    "hashtags": [
+      "Operra",
+      "HoteliZanzibar",
+      "UsimamiziHoteli",
+      "UtaliiTanzania"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of a brass currency calculator resting on a polished mahogany guest folio desk, warm, golden low sun, long shadows, dark overall, soft window light, gentle film grain, no text, no people, no logos.",
+    "cta": "Panga onyesho sasa",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-09-23-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-23T05:00:00.000Z",
+    "createdAt": "2026-09-22T18:04:13.345Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-23-08-feature-spotlight-1.png",
+      "operra-2026-09-23-08-feature-spotlight-2.png",
+      "operra-2026-09-23-08-feature-spotlight-3.png"
+    ],
+    "headline": "Bili za wageni wa nje zinachanganya?"
+  },
+  {
+    "id": "operra-2026-09-23-13-pain-point",
+    "eyebrow": "Usimamizi",
+    "headline": "Mikutano Mwanza, hesabu gizani?",
+    "body": "Vikundi vya makampuni vikimaliza mkutano, kusuluhisha bili kwa mkono kunachelewesha wageni kuondoka.",
+    "cta": "Ona Operra",
+    "caption": "Mikutano mikubwa hapa Mwanza inaleta wageni wengi kwenye ukumbi mmoja. Lakini bili zikianza kuchanganyika kati ya chakula na malazi, mapokezi yanajaa lawama za kuchelewa.\n\nOperra inatunza kumbukumbu zote mahali pamoja ili ukaguzi wa mwisho usiwe kero.",
+    "hashtags": [
+      "HoteliTanzania",
+      "MwanzaHotels",
+      "HotelManagement"
+    ],
+    "imagePrompt": "A wide shot with deep perspective of a heavy glass water pitcher resting on a dark polished wooden conference table. Warm, golden low sun, long shadows, dark overall. Soft window light, gentle film grain. no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-23-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-23T10:00:00.000Z",
+    "createdAt": "2026-09-22T18:05:43.892Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-23-16-number-that-lands",
+    "eyebrow": "Operations",
+    "headline": "Run 6 core departments on low bandwidth",
+    "body": "Keep Moshi trekking groups moving without network delays across your entire property.",
+    "cta": "See it work",
+    "caption": "When Kilimanjaro trekking groups return to Moshi all at once, your property network takes the strain. Front desk, housekeeping, POS, pricing, reports, and audit trail need to stay online together. Operra runs smoothly on low-bandwidth connections common in Tanzanian properties, keeping your core operations live when internet drops threaten morning checkouts. 🏔️",
+    "hashtags": [
+      "MoshiHotels",
+      "Kilimanjaro",
+      "HotelManagement",
+      "TanzaniaHotels"
+    ],
+    "imagePrompt": "Composition: wide shot with deep perspective of a weathered canvas duffel bag and climbing boots on a wooden highland lodge porch, right-of-centre, leaving the left side visually calm with a plain timber wall in shadow. Light/tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-23-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-23T13:00:00.000Z",
+    "createdAt": "2026-09-22T18:08:25.789Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-23-20-client-proof",
+    "eyebrow": "Usimamizi wa Fedha",
+    "headline": "Bili za makampuni Dar zinakamilika kwa haraka",
+    "body": "Hoteli moja jijini Dar es Salaam imepunguza muda wa kusubiri malipo ya corporate kwa kutumia mfumo wetu unaounganisha idara zote bila makosa.",
+    "cta": "Tazama jinsi inavyofanya kazi",
+    "caption": "Mgeni wa kampuni anapomaliza mkutano wake, hataki kupoteza muda mwingi mapokezi akisubiri bili ikaguliwe. Hii ndiyo changamoto kubwa inayowakabili mameneja wengi jijini Dar es Salaam.\n\nHoteli moja imeweza kubadilisha hali hiyo. Sasa, bili zao zinajumlisha huduma zote za chakula na malazi kiotomatiki. Matokeo yake ni checkout ya haraka na bili sahihi kwa kila kampuni inayowahudumia wageni wao. 📈",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaam",
+      "#HospitalityTZ",
+      "#Operra"
+    ],
+    "imagePrompt": "A wide shot with deep perspective of a neatly folded corporate folio invoice resting on a polished dark wood hotel lobby side table. Light/tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-23-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-23T17:00:00.000Z",
+    "createdAt": "2026-09-22T18:10:34.818Z",
+    "status": "pending"
   }
 ]
