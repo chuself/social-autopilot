@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-22T12:15:59.483Z"
+    "missedAt": "2026-09-22T13:16:28.756Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-22T12:15:59.478Z"
+    "missedAt": "2026-09-22T13:16:28.751Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-22T12:15:59.480Z",
+    "missedAt": "2026-09-22T13:16:28.753Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-22T12:15:59.480Z",
+    "missedAt": "2026-09-22T13:16:28.753Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-22T12:15:59.544Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-22T12:15:59.483Z"
+    "missedAt": "2026-09-22T13:16:28.756Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-09-22T12:15:59.483Z"
+    "missedAt": "2026-09-22T13:16:28.756Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-09-22T12:15:59.483Z"
+    "missedAt": "2026-09-22T13:16:28.756Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -6312,7 +6312,7 @@
     ],
     "scheduledFor": "2026-09-22T13:00:00.000Z",
     "createdAt": "2026-09-21T18:08:49.445Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-22-16-swahili-tip.mp4",
       "beats": [
@@ -6323,10 +6323,14 @@
       "narration": "Je, umechoka na migogoro ya bili wageni wa makampuni wanapoondoka? Ukiwa na Operra, tenganisha bili ya chumba na matumizi binafsi wakati wa kuingia. Mfumo unafanya kazi kwenye mtandao dhaifu ili kuepuka usumbufu mapokezi.",
       "hasVoice": true,
       "builtAt": "2026-09-22T10:04:15.514Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-22T13:17:35.953Z",
+      "postIds": [
+        "instagram:18095405783531394",
+        "facebook:4495092014042902"
+      ]
     },
-    "lastAttempt": "2026-09-22T12:15:59.544Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-22T13:17:35.953Z"
   },
   {
     "id": "operra-2026-09-22-20-industry-note",
