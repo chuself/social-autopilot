@@ -6497,7 +6497,20 @@
     ],
     "scheduledFor": "2026-09-23T13:00:00.000Z",
     "createdAt": "2026-09-22T18:08:25.789Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-23-16-number-that-lands.mp4",
+      "beats": [
+        "Slow network again?",
+        "Manage six departments on low bandwidth.",
+        "Available in English and Kiswahili.",
+        "Keep guest check-ins moving smoothly."
+      ],
+      "narration": "Slow network connection? Operra handles your front desk, housekeeping, POS, pricing, reports, and audit trail on low bandwidth. With Kiswahili and English interfaces, your staff keeps guest operations moving completely free from network delays.",
+      "hasVoice": true,
+      "builtAt": "2026-09-23T10:08:32.262Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-23-20-client-proof",
