@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-23T12:47:47.922Z"
+    "missedAt": "2026-09-23T13:17:47.919Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-23T12:47:47.917Z"
+    "missedAt": "2026-09-23T13:17:47.913Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-23T12:47:47.919Z",
+    "missedAt": "2026-09-23T13:17:47.915Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-23T12:47:47.919Z",
+    "missedAt": "2026-09-23T13:17:47.915Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-23T12:47:47.984Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-23T12:47:47.922Z"
+    "missedAt": "2026-09-23T13:17:47.919Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-09-23T12:47:47.922Z"
+    "missedAt": "2026-09-23T13:17:47.919Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-09-23T12:47:47.922Z"
+    "missedAt": "2026-09-23T13:17:47.919Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -6501,7 +6501,7 @@
     ],
     "scheduledFor": "2026-09-23T13:00:00.000Z",
     "createdAt": "2026-09-22T18:08:25.789Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-23-16-number-that-lands.mp4",
       "beats": [
@@ -6513,10 +6513,14 @@
       "narration": "Slow network connection? Operra handles your front desk, housekeeping, POS, pricing, reports, and audit trail on low bandwidth. With Kiswahili and English interfaces, your staff keeps guest operations moving completely free from network delays.",
       "hasVoice": true,
       "builtAt": "2026-09-23T10:08:32.262Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-23T13:19:16.569Z",
+      "postIds": [
+        "instagram:17958647001210615",
+        "facebook:1823064289113721"
+      ]
     },
-    "lastAttempt": "2026-09-23T12:47:47.984Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-23T13:19:16.569Z"
   },
   {
     "id": "operra-2026-09-23-20-client-proof",
