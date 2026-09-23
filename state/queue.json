@@ -6558,5 +6558,148 @@
       "facebook:1049514968255534_122161054401351110",
       "instagram:18113432009586085"
     ]
+  },
+  {
+    "id": "operra-2026-09-24-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Usimamizi wa Safari",
+        "headline": "Msimu wa watalii umefika Arusha",
+        "body": "Je, unajua jinsi ya kuepuka msongamano wa wageni wa kundi wakati wa kufunga hesabu?"
+      },
+      {
+        "eyebrow": "Kidokezo cha Kitaalamu",
+        "headline": "Tenganisha bili za ziada mapema",
+        "body": "Weka gharama za ziada za kila mgeni kwenye folio yake kabla ya siku ya kuondoka."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Checkout za haraka kwa wageni",
+        "body": "Bili sahihi huondoa malalamiko. Tumia mfumo wetu kufunga hesabu za safari haraka bila makosa. Wasiliana nasi leo."
+      }
+    ],
+    "caption": "Msimu wa safari hapa Arusha unaleta changamoto nyingi kwenye mapokezi. Wageni wa kundi wakifika, foleni za asubuhi zinaweza kuwa ndefu sana kama bili hazijakamilika. Siri ya mafanikio ni kuhakikisha kila huduma ya ziada inarekodiwa kwenye folio ya mgeni mara tu inapofanyika. Hii inasaidia kuepuka majadiliano marefu siku ya kuondoka na kuhakikisha wageni wanaondoka kwa wakati kuelekea mbugani. Operra inakusaidia kuweka hesabu zako sawa na kufanya checkout kuwa ya haraka na rahisi.",
+    "hashtags": [
+      "#HoteliTanzania",
+      "#ArushaHoteliers",
+      "#SafariTanzania",
+      "#UsimamiziHoteli"
+    ],
+    "imagePrompt": "a stack of leather-bound luggage tags with handwritten room numbers resting on a polished mahogany side table, wide shot with deep perspective, warm, golden low sun, long shadows, dark overall, soft window light, gentle film grain, no text, no people, no logos",
+    "cta": "Wasiliana nasi sasa",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-09-24-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-24T05:00:00.000Z",
+    "createdAt": "2026-09-23T18:07:31.417Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-24-08-swahili-tip-1.png",
+      "operra-2026-09-24-08-swahili-tip-2.png",
+      "operra-2026-09-24-08-swahili-tip-3.png"
+    ],
+    "headline": "Msimu wa watalii umefika Arusha"
+  },
+  {
+    "id": "operra-2026-09-24-13-industry-note",
+    "eyebrow": "Industry Note",
+    "headline": "Managing Zanzibar resort channel commissions",
+    "body": "OTA commissions eat resort margins unless you track net revenue cleanly across currencies.",
+    "cta": "See it work",
+    "caption": "Zanzibar resort managers juggle multi-channel bookings and heavy OTA commissions daily. When rates fluctuate between US Dollars and Tanzanian Shillings, net revenue tracking gets complicated fast. Keep your resort accounts clear and protect your bottom line by reconciling net earnings directly from your property system.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "HospitalityAfrica",
+      "Operra"
+    ],
+    "imagePrompt": "Composition: wide shot with deep perspective of a heavy brass calculating machine resting on a carved wooden desk. Light/tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-24-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-24T10:00:00.000Z",
+    "createdAt": "2026-09-23T18:08:41.716Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-24-16-feature-spotlight",
+    "eyebrow": "Audit trail",
+    "headline": "Kila shilingi inaonekana wazi",
+    "body": "Operra inatunza kila malipo na punguzo kwa usahihi. Hautapoteza mapato tena katika shughuli za mikutano au migahawa ya mahoteli yako hapa Mwanza.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Unapokuwa na mkutano mkubwa hapa Mwanza, bili za vinywaji na chakula zinaweza kuchanganya mapokezi. Badala ya kusubiri mwisho wa mwezi kujua kama kuna upungufu, Operra inakuonyesha kila muamala unavyotokea.\n\nKila punguzo unalotoa au malipo yanayopokelewa yanarekodiwa moja kwa moja kwenye mfumo wetu. Hakuna tena kutafuta risiti zilizopotea au kujiuliza nani alifuta bili. Una uhakika na hesabu zako kila siku bila usumbufu wa makaratasi. 📊",
+    "hashtags": [
+      "#HoteliTanzania",
+      "#MwanzaHotels",
+      "#Operra",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Composition: wide shot with deep perspective of an antique wooden ledger book open on a dark table. Light/tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-24-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-24T13:00:00.000Z",
+    "createdAt": "2026-09-23T18:11:21.882Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-24-20-pain-point",
+    "eyebrow": "Usimamizi wa Kambi",
+    "headline": "Kundi la wapanda mlima likirejea kwa kasi",
+    "body": "Bili za vyakula na vifaa zinapotea mlima unaposhuka? Operra inakusaidia kuweka kila gharama kwenye folio moja ya kundi bila kusahau chochote.",
+    "cta": "Tazama jinsi inavyofanya kazi",
+    "caption": "Kundi la wapanda mlima likirejea Moshi, mapokezi huwa na shinikizo kubwa. Bili za ziada, mizigo, na huduma za chumba mara nyingi husahaulika kwenye madaftari. Unapochelewa kuunganisha bili hizi, unapoteza mapato na kuchelewesha safari za kurudi nyumbani. 🏔️\n\nOperra inakusaidia kuweka hesabu zote za wageni wako kwenye mfumo mmoja unaoaminika, hata kama mtandao unayumba. Epuka msongamano wa asubuhi na hakikisha kila shilingi inahesabika kabla kundi halijaondoka hotelini kwako.",
+    "hashtags": [
+      "#KilimanjaroHotels",
+      "#MoshiHotels",
+      "#HotelOperations",
+      "#Operra",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "A worn pair of heavy leather hiking boots with thick laces and dust, resting on a wooden porch. Composition: wide shot with deep perspective. Light/tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-24-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-24T17:00:00.000Z",
+    "createdAt": "2026-09-23T18:13:21.102Z",
+    "status": "pending"
   }
 ]
