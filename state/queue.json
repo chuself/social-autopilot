@@ -6688,7 +6688,20 @@
     ],
     "scheduledFor": "2026-09-24T13:00:00.000Z",
     "createdAt": "2026-09-23T18:11:21.882Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-24-16-feature-spotlight.mp4",
+      "beats": [
+        "Unapoteza mapato yako?",
+        "Dhibiti migahawa na mikutano",
+        "Hata kwenye mtandao hafifu",
+        "Linda faida ya hoteli"
+      ],
+      "narration": "Umechoka kupoteza mapato kwenye migahawa na mikutano ya hoteli yako hapa Mwanza? Operra inafuatilia kila malipo na punguzo kwa usahihi, hata kukiwa na mtandao wa kusuasua. Anza sasa kudhibiti huduma zote na kulinda kila shilingi ya faida yako.",
+      "hasVoice": true,
+      "builtAt": "2026-09-24T10:04:48.127Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-24-20-pain-point",
