@@ -6642,7 +6642,7 @@
     ],
     "scheduledFor": "2026-09-24T10:00:00.000Z",
     "createdAt": "2026-09-23T18:08:41.716Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-24-13-industry-note.mp4",
       "beats": [
@@ -6654,10 +6654,14 @@
       "narration": "Are high OTA commissions draining your Zanzibar resort's profits? Operra lets you track net revenue across currencies, even on low-bandwidth connections. Manage your front desk, pricing, and reports in English or Kiswahili, and protect your hard-earned margins.",
       "hasVoice": true,
       "builtAt": "2026-09-24T07:04:13.930Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-24T10:06:10.577Z",
+      "postIds": [
+        "instagram:18115035193961050",
+        "facebook:1066793946350563"
+      ]
     },
-    "lastAttempt": "2026-09-24T09:27:11.435Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-24T10:06:10.577Z"
   },
   {
     "id": "operra-2026-09-24-16-feature-spotlight",
