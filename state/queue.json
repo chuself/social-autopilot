@@ -6750,5 +6750,147 @@
       "facebook:1049514968255534_122161728057351110",
       "instagram:18177665644427567"
     ]
+  },
+  {
+    "id": "operra-2026-09-25-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Dar es Salaam",
+        "headline": "Corporate billing delays block morning checkouts",
+        "body": "When company accounts take hours to reconcile, your morning queue backs up fast."
+      },
+      {
+        "eyebrow": "Operations",
+        "headline": "Six core departments on one system",
+        "body": "Front desk, housekeeping, POS, pricing, reports, and audit trail stay synchronized without delay."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Keep your hotel running smoothly",
+        "body": "Manage Dar es Salaam corporate accounts instantly.",
+        "cta": "See Operra in action"
+      }
+    ],
+    "caption": "Morning checkouts in Dar es Salaam should never stall because corporate billing takes too long to reconcile. When your front desk, POS, and audit trail operate on a single system, company folios close instantly. Operra covers front desk, housekeeping, POS, pricing, reports, and an audit trail—built for properties across Tanzania.",
+    "hashtags": [
+      "DarEsSalaam",
+      "HotelManagement",
+      "OperraTech",
+      "HospitalityTanzania"
+    ],
+    "imagePrompt": "Composition wide shot with deep perspective of a neatly bound corporate meeting agenda on a dark wooden table, tone warm, golden low sun, long shadows, dark overall, treatment soft window light, gentle film grain, no text, no people, no logos",
+    "cta": "See Operra in action",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-09-25-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-25T05:00:00.000Z",
+    "createdAt": "2026-09-24T18:04:47.928Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-25-08-number-that-lands-1.png",
+      "operra-2026-09-25-08-number-that-lands-2.png",
+      "operra-2026-09-25-08-number-that-lands-3.png"
+    ],
+    "headline": "Corporate billing delays block morning checkouts"
+  },
+  {
+    "id": "operra-2026-09-25-13-client-proof",
+    "eyebrow": "Uthibitisho",
+    "headline": "Arusha inalipa bila kusubiri mtandao",
+    "body": "Hoteli za Arusha zinatulia hata mtandao ukiwa hafifu wakati wa wageni wengi.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Msimu wa watalii ukileta wageni wengi Arusha, mifumo ya kawaida huanza kukwama mtandao ukisumbua. Hoteli inayotumia Operra inaendelea kupokea wageni na kutoa bili bila kujali mtandao kuwa mdogo. Shughuli zote sita za msingi zinakaa hewani. Hata mbali na mji mkuu, mapokezi yako hayakwemi.",
+    "hashtags": [
+      "HoteliTanzania",
+      "ArushaHotels",
+      "OperraTech",
+      "UsimamiziWaHoteli"
+    ],
+    "imagePrompt": "Composition: wide shot with deep perspective of a weathered wooden reception counter with a brass bell on the right side, leaving the left side in soft shadow. Light/tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-25-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-25T10:00:00.000Z",
+    "createdAt": "2026-09-24T18:06:32.393Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-25-16-swahili-tip",
+    "eyebrow": "Ushauri",
+    "headline": "Tenga fedha za OTA mapema",
+    "body": "Pesa za mawakala zinapoingia Zanzibar, hakikisha kamisheni inakatwa kabla ya kuhamisha kwenye akaunti nyingine.",
+    "cta": "Tazama mfumo",
+    "caption": "Hoteli za Zanzibar zinapokea wageni kupitia mifumo mingi ya mtandaoni, lakini kamisheni za OTA zikitulia kwenye akaunti bila mpangilio, hesabu za mwisho wa mwezi zinakuwa ngumu. Tenga kiasi cha kamisheni kila siku ili usipate hasara msimu unapoisha.",
+    "hashtags": [
+      "OperraTech",
+      "ZanzibarHotels",
+      "HotelManagement"
+    ],
+    "imagePrompt": "Composition: wide shot with deep perspective of a stack of ledger sheets and a brass calculator resting on a wooden table. Light/tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-25T13:00:00.000Z",
+    "createdAt": "2026-09-24T18:07:15.457Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-25-20-industry-note",
+    "eyebrow": "Regional Operations",
+    "headline": "Managing Lake Victoria conference delegates",
+    "body": "Conference guests often charge meals to their room. Keep Mwanza lakeside dining and room folios synchronized to avoid confusion during the final checkout rush.",
+    "cta": "See it work",
+    "caption": "Conference guests in Mwanza often move quickly between the meeting room and the lakeside restaurant. When charges aren't updated in real-time, the final checkout becomes a bottleneck. Avoid the manual reconciliation scramble by ensuring your point-of-sale and front desk systems talk to each other instantly. Keep your guest accounts clean and your morning departure process moving efficiently, even when the property is at full capacity. ☕",
+    "hashtags": [
+      "#MwanzaHoteliers",
+      "#HotelOperations",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition: wide shot with deep perspective of a neatly arranged breakfast coffee setting on a wooden table. Light/tone: warm, golden low sun, long shadows, dark overall. Treatment: soft window light, gentle film grain, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-25-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-25T17:00:00.000Z",
+    "createdAt": "2026-09-24T18:08:09.622Z",
+    "status": "pending"
   }
 ]

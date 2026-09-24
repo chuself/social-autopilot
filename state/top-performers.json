@@ -38,45 +38,6 @@
     ]
   },
   {
-    "id": "operra-2026-08-30-16-number-that-lands",
-    "platform": "instagram",
-    "pillar": "number-that-lands",
-    "format": "reel",
-    "language": "en",
-    "look": "daylight",
-    "headline": "Keep your lakeside front desk online",
-    "reach": 106,
-    "likes": 3,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 3,
-    "platforms": [
-      "instagram",
-      "facebook"
-    ]
-  },
-  {
-    "id": "operra-2026-08-30-13-pain-point",
-    "platform": "instagram",
-    "pillar": "pain-point",
-    "format": "reel",
-    "language": "sw",
-    "look": "daylight",
-    "headline": "Bili za tours na transfers zinasahaulika wageni wakiondoka?",
-    "reach": 21,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 2,
-    "platforms": [
-      "instagram",
-      "facebook",
-      "tiktok"
-    ]
-  },
-  {
     "id": "operra-2026-09-20-16-number-that-lands",
     "platform": "instagram",
     "pillar": "number-that-lands",
@@ -93,6 +54,44 @@
     "platforms": [
       "instagram",
       "facebook"
+    ]
+  },
+  {
+    "id": "operra-2026-09-17-16-number-that-lands",
+    "platform": "instagram",
+    "pillar": "number-that-lands",
+    "format": "reel",
+    "language": "en",
+    "look": "daylight",
+    "headline": "6 core departments on low bandwidth",
+    "reach": 5,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 2,
+    "platforms": [
+      "instagram",
+      "facebook"
+    ]
+  },
+  {
+    "id": "operra-2026-09-12-08-swahili-tip",
+    "platform": "facebook",
+    "pillar": "swahili-tip",
+    "format": "carousel",
+    "language": "sw",
+    "look": "macro",
+    "headline": "Mkutano mkubwa, timu ndogo ya mapokezi?",
+    "reach": 3,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 2,
+    "platforms": [
+      "facebook",
+      "instagram"
     ]
   }
 ]
