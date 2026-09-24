@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-24T04:24:47.417Z"
+    "missedAt": "2026-09-24T05:25:18.960Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-24T04:24:47.411Z"
+    "missedAt": "2026-09-24T05:25:18.954Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-24T04:24:47.413Z",
+    "missedAt": "2026-09-24T05:25:18.957Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-24T04:24:47.489Z",
+    "lastAttempt": "2026-09-24T05:25:58.728Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-24T04:24:47.413Z",
+    "missedAt": "2026-09-24T05:25:18.957Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-24T04:24:47.489Z",
+    "lastAttempt": "2026-09-24T05:25:58.728Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2479,9 +2479,9 @@
       "builtAt": "2026-09-02T12:02:28.884Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-09-24T04:24:47.489Z",
+    "lastAttempt": "2026-09-24T05:25:58.728Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-24T04:24:47.417Z"
+    "missedAt": "2026-09-24T05:25:18.960Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-09-24T04:24:47.417Z"
+    "missedAt": "2026-09-24T05:25:18.960Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-09-24T04:24:47.417Z"
+    "missedAt": "2026-09-24T05:25:18.960Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -6600,13 +6600,18 @@
     ],
     "scheduledFor": "2026-09-24T05:00:00.000Z",
     "createdAt": "2026-09-23T18:07:31.417Z",
-    "status": "pending",
+    "status": "posted",
     "slideFiles": [
       "operra-2026-09-24-08-swahili-tip-1.png",
       "operra-2026-09-24-08-swahili-tip-2.png",
       "operra-2026-09-24-08-swahili-tip-3.png"
     ],
-    "headline": "Msimu wa watalii umefika Arusha"
+    "headline": "Msimu wa watalii umefika Arusha",
+    "lastAttempt": "2026-09-24T05:25:58.649Z",
+    "postedAt": "2026-09-24T05:25:58.649Z",
+    "postIds": [
+      "facebook:1049514968255534_122161424793351110"
+    ]
   },
   {
     "id": "operra-2026-09-24-13-industry-note",
