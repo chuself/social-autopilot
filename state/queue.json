@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-24T12:01:58.571Z"
+    "missedAt": "2026-09-24T13:02:22.933Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-24T12:01:58.565Z"
+    "missedAt": "2026-09-24T13:02:22.927Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-24T12:01:58.568Z",
+    "missedAt": "2026-09-24T13:02:22.929Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-24T12:01:58.568Z",
+    "missedAt": "2026-09-24T13:02:22.929Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-24T12:01:58.637Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-24T12:01:58.571Z"
+    "missedAt": "2026-09-24T13:02:22.933Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-09-24T12:01:58.571Z"
+    "missedAt": "2026-09-24T13:02:22.933Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-09-24T12:01:58.571Z"
+    "missedAt": "2026-09-24T13:02:22.933Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -6692,7 +6692,7 @@
     ],
     "scheduledFor": "2026-09-24T13:00:00.000Z",
     "createdAt": "2026-09-23T18:11:21.882Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-24-16-feature-spotlight.mp4",
       "beats": [
@@ -6704,10 +6704,14 @@
       "narration": "Umechoka kupoteza mapato kwenye migahawa na mikutano ya hoteli yako hapa Mwanza? Operra inafuatilia kila malipo na punguzo kwa usahihi, hata kukiwa na mtandao wa kusuasua. Anza sasa kudhibiti huduma zote na kulinda kila shilingi ya faida yako.",
       "hasVoice": true,
       "builtAt": "2026-09-24T10:04:48.127Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-24T13:04:11.372Z",
+      "postIds": [
+        "instagram:18107344928581781",
+        "facebook:2259016878278631"
+      ]
     },
-    "lastAttempt": "2026-09-24T12:01:58.637Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-24T13:04:11.372Z"
   },
   {
     "id": "operra-2026-09-24-20-pain-point",
