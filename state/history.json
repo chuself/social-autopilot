@@ -1,21 +1,6 @@
 [
   {
     "platform": "facebook",
-    "postId": "1804427857578981",
-    "id": "operra-2026-08-31-16-feature-spotlight",
-    "format": "reel",
-    "postedAt": "2026-08-31T13:29:55.141Z"
-  },
-  {
-    "platform": "tiktok",
-    "postId": "https://app.metricool.com/planner/calendar?blogId=6307384&openWithPostUuid=-7167895094319757118",
-    "scheduledFor": "2026-08-31T16:35:56+03:00",
-    "id": "operra-2026-08-31-16-feature-spotlight",
-    "format": "reel",
-    "postedAt": "2026-08-31T13:30:01.231Z"
-  },
-  {
-    "platform": "facebook",
     "postId": "1049514968255534_122146079793351110",
     "url": "https://facebook.com/1049514968255534_122146079793351110",
     "id": "operra-2026-08-31-20-pain-point",
@@ -1406,5 +1391,19 @@
     "id": "operra-2026-09-25-16-swahili-tip",
     "format": "reel",
     "postedAt": "2026-09-25T13:23:35.104Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1049514968255534_122162569719351110",
+    "url": "https://facebook.com/1049514968255534_122162569719351110",
+    "id": "operra-2026-09-25-20-industry-note",
+    "postedAt": "2026-09-25T17:58:25.806Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18108417641225384",
+    "url": null,
+    "id": "operra-2026-09-25-20-industry-note",
+    "postedAt": "2026-09-25T17:58:45.841Z"
   }
 ]
