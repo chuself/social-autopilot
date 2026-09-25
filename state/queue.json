@@ -6836,7 +6836,20 @@
     ],
     "scheduledFor": "2026-09-25T10:00:00.000Z",
     "createdAt": "2026-09-24T18:06:32.393Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-25-13-client-proof.mp4",
+      "beats": [
+        "Mtandao ukisumbua hoteli usiwaze kabisa",
+        "Fanya kazi vizuri mtandao ukiwa hafifu",
+        "Rahisisha usafi na hesabu kwa Kiswahili",
+        "Wageni wafurahi na amani ya moyo"
+      ],
+      "narration": "Hata mtandao ukiyumba Arusha, hoteli yako isisimame. Mfumo wetu unarahisisha mapokezi, usafi na hesabu kwa Kiswahili au Kiingereza, hata kwenye mtandao hafifu. Hakikisha wageni wako wanapata huduma bora bila usumbufu, na ufurahie amani ya moyo.",
+      "hasVoice": true,
+      "builtAt": "2026-09-25T07:04:18.444Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-25-16-swahili-tip",
