@@ -6881,7 +6881,20 @@
     ],
     "scheduledFor": "2026-09-25T13:00:00.000Z",
     "createdAt": "2026-09-24T18:07:15.457Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-25-16-swahili-tip.mp4",
+      "beats": [
+        "Zilinde fedha zako",
+        "Tenga kamisheni ya OTA mapema",
+        "Mfumo unaofanya kazi intaneti hafifu",
+        "Udhibiti kamili wa mapato yako"
+      ],
+      "narration": "Pesa za mawakala zinapoingia Zanzibar, ni lazima uhakikishe kamisheni inakatwa mapema kabla ya kufanya uhamisho wowote. Operra inarahisisha usimamizi wa mapato na ripoti kwa Kiswahili, huku ikifanya kazi vizuri kwenye intaneti hafifu. Pata udhibiti wa uhakika wa fedha za hoteli yako.",
+      "hasVoice": true,
+      "builtAt": "2026-09-25T10:04:56.197Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-25-20-industry-note",
