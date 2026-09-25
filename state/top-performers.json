@@ -19,25 +19,6 @@
     ]
   },
   {
-    "id": "operra-2026-08-31-13-industry-note",
-    "platform": "instagram",
-    "pillar": "industry-note",
-    "format": "reel",
-    "language": "en",
-    "look": "daylight",
-    "headline": "Keep Arusha safari departures on schedule",
-    "reach": 118,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 2,
-    "platforms": [
-      "instagram",
-      "facebook"
-    ]
-  },
-  {
     "id": "operra-2026-09-20-16-number-that-lands",
     "platform": "instagram",
     "pillar": "number-that-lands",
@@ -76,22 +57,41 @@
     ]
   },
   {
-    "id": "operra-2026-09-12-08-swahili-tip",
+    "id": "operra-2026-09-23-20-client-proof",
     "platform": "facebook",
-    "pillar": "swahili-tip",
-    "format": "carousel",
+    "pillar": "client-proof",
+    "format": "poster",
     "language": "sw",
-    "look": "macro",
-    "headline": "Mkutano mkubwa, timu ndogo ya mapokezi?",
-    "reach": 3,
-    "likes": 2,
+    "look": "goldenhour",
+    "headline": "Bili za makampuni Dar zinakamilika kwa haraka",
+    "reach": 4,
+    "likes": 3,
     "comments": 0,
     "shares": 0,
     "saves": 0,
-    "engagement": 2,
+    "engagement": 3,
     "platforms": [
       "facebook",
       "instagram"
+    ]
+  },
+  {
+    "id": "operra-2026-09-23-13-pain-point",
+    "platform": "instagram",
+    "pillar": "pain-point",
+    "format": "reel",
+    "language": "sw",
+    "look": "goldenhour",
+    "headline": "Mikutano Mwanza, hesabu gizani?",
+    "reach": 3,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 3,
+    "platforms": [
+      "instagram",
+      "facebook"
     ]
   }
 ]

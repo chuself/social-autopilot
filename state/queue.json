@@ -6942,5 +6942,152 @@
       "facebook:1049514968255534_122162569719351110",
       "instagram:18108417641225384"
     ]
+  },
+  {
+    "id": "operra-2026-09-26-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Moshi",
+        "headline": "Kundi la wapandaji mlima limefika mapema?",
+        "body": "Wageni wamechoka na wanahitaji vyumba vyao haraka baada ya safari ndefu ya kileleni."
+      },
+      {
+        "eyebrow": "Changamoto",
+        "headline": "Mawasiliano ya simu yanachelewesha check-in",
+        "body": "Kupiga simu housekeeping kukagua usafi wa vyumba kunaleta usumbufu na kuchelewesha wageni mapokezi."
+      },
+      {
+        "eyebrow": "Suluhisho",
+        "headline": "Hali ya vyumba inaonekana papo hapo",
+        "body": "Operra inaunganisha housekeeping na mapokezi. Chumba kikimalizika, taarifa inafika mapokezi bila kuhitaji simu."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Huduma ya haraka, wageni wenye furaha",
+        "body": "Punguza muda wa kusubiri na uongoze timu yako kwa weledi msimu huu wa watalii."
+      }
+    ],
+    "caption": "Msimu wa kupanda mlima Moshi unahitaji kasi na umakini. Wageni wanaporudi kutoka kileleni wakiwa wamechoka, kila dakika ya kusubiri chumba inahesabika. Operra inaunganisha housekeeping na mapokezi moja kwa moja. Chumba kikisafishwa, mapokezi wanapata taarifa papo hapo kwenye mfumo. Hii inapunguza kelele za simu na usumbufu usio wa lazima mapokezi. Simamia hoteli yako kwa weledi, kuanzia front desk hadi ripoti za mapato, hata kwenye mtandao wa hali ya chini.",
+    "hashtags": [
+      "MoshiHotels",
+      "HotelManagementTanzania",
+      "OperraTech"
+    ],
+    "imagePrompt": "Overhead flat-lay, looking straight down onto a surface of a stack of crisp, neatly folded white cotton towels and a small wooden room number plaque resting on a natural linen cloth. Tone is mid-tone with even soft daylight. Neat arrangement with shallow shadows. No text, no people, no logos.",
+    "cta": "Rahisisha operesheni zako sasa",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Moshi",
+    "backgroundPath": "state/bg/operra-2026-09-26-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-26T05:00:00.000Z",
+    "createdAt": "2026-09-25T18:04:59.781Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-26-08-feature-spotlight-1.png",
+      "operra-2026-09-26-08-feature-spotlight-2.png",
+      "operra-2026-09-26-08-feature-spotlight-3.png",
+      "operra-2026-09-26-08-feature-spotlight-4.png"
+    ],
+    "headline": "Kundi la wapandaji mlima limefika mapema?"
+  },
+  {
+    "id": "operra-2026-09-26-13-pain-point",
+    "eyebrow": "Ankara za Makampuni",
+    "headline": "Kikomo cha mkopo kimefikiwa?",
+    "body": "Usubiri hadi mgeni anacheki ndipo ugundue deni limezidi makubaliano ya kampuni. Operra inafuatilia viko vya mikopo vya makampuni kwa wakati halisi.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Hoteli nyingi Dar es Salaam zinategemea biashara za makampuni, lakini kufuatilia 'credit limits' ni kero ya kila siku. Mara nyingi unagundua kampuni imezidi kikomo wakati mgeni yuko mbele ya mapokezi akitaka kuondoka.\n\nHali hii inaleta mzozo wa nani alipe ziada hiyo. Operra inakusaidia kuweka viko vya mikopo kwa kila akaunti ya kampuni. Mfumo unakupa tahadhari matumizi yanapokaribia kikomo, hivyo unachukua hatua mapema. 📈",
+    "hashtags": [
+      "DarHotels",
+      "HotelManagement",
+      "OperraTech",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface. Light/tone: mid-tone, even soft daylight. Treatment: neat arrangement, shallow shadows. Subject: A printed business purchase order document with an official blue stamp and a professional silver calculator on a clean gray office desk. The left side of the frame is empty, providing a clear gray surface. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-26-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-26T10:00:00.000Z",
+    "createdAt": "2026-09-25T18:06:03.534Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-26-16-number-that-lands",
+    "eyebrow": "Revenue Audit",
+    "headline": "Stop losing revenue to shaky internet",
+    "body": "Safari arrivals in Arusha rely on constant systems. Operra runs on low-bandwidth connections, ensuring every invoice stays live even when the local network drops.",
+    "cta": "See it work",
+    "caption": "The peak safari season in Arusha puts immense pressure on your front office team. When the internet connection flickers, are your invoices still tracking correctly? \n\nOperra ensures your operations run on low-bandwidth connections, so you never lose data when the network drops. Keep your billing accurate and your service fast, regardless of connectivity issues. Reliable systems keep your tour operators happy and your cash flow steady throughout the busy months. 🌐",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariSeason",
+      "#HotelTech",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface. A single, weathered Ethernet cable coiled neatly on the right side against a plain, light grey wooden table surface. Light/tone: mid-tone, even soft daylight. Treatment: neat arrangement, shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-26-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-26T13:00:00.000Z",
+    "createdAt": "2026-09-25T18:06:48.392Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-26-20-client-proof",
+    "eyebrow": "Usimamizi wa Fedha",
+    "headline": "Ripoti sahihi za mapato Zanzibar",
+    "body": "Resort moja ya Zanzibar inafuatilia mapato yao baada ya kamisheni za OTA kwa usahihi. Operra inasaidia kufunga hesabu za fedha za kigeni bila kupoteza muda.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Kusubiri mwisho wa mwezi ili kuona kiasi halisi cha mapato baada ya kamisheni za OTA ni kazi ngumu. Resort moja kule Zanzibar sasa inatumia Operra kurahisisha hesabu za fedha za kigeni na kufuatilia mapato yao kwa usahihi kabisa kila siku. Hakuna tena kuchanganyikiwa na hesabu za mawakala; kila kitu kinaonekana wazi kwenye ripoti moja. 📉",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#Operra",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface. Light/tone: mid-tone, even soft daylight. Treatment: neat arrangement, shallow shadows. Subject: A small pile of various foreign currency notes and a clean, printed financial report on a wooden table, keeping the left side of the frame empty for text. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-26-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-26T17:00:00.000Z",
+    "createdAt": "2026-09-25T18:07:33.170Z",
+    "status": "pending"
   }
 ]
