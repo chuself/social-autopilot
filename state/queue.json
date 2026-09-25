@@ -6836,7 +6836,7 @@
     ],
     "scheduledFor": "2026-09-25T10:00:00.000Z",
     "createdAt": "2026-09-24T18:06:32.393Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-25-13-client-proof.mp4",
       "beats": [
@@ -6848,10 +6848,14 @@
       "narration": "Hata mtandao ukiyumba Arusha, hoteli yako isisimame. Mfumo wetu unarahisisha mapokezi, usafi na hesabu kwa Kiswahili au Kiingereza, hata kwenye mtandao hafifu. Hakikisha wageni wako wanapata huduma bora bila usumbufu, na ufurahie amani ya moyo.",
       "hasVoice": true,
       "builtAt": "2026-09-25T07:04:18.444Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-25T10:06:29.229Z",
+      "postIds": [
+        "instagram:18134332177629197",
+        "facebook:2178390126355910"
+      ]
     },
-    "lastAttempt": "2026-09-25T09:19:23.960Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-25T10:06:29.229Z"
   },
   {
     "id": "operra-2026-09-25-16-swahili-tip",
