@@ -7078,7 +7078,20 @@
     ],
     "scheduledFor": "2026-09-26T13:00:00.000Z",
     "createdAt": "2026-09-25T18:06:48.392Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-26-16-number-that-lands.mp4",
+      "beats": [
+        "Internet down again?",
+        "Operra thrives on low bandwidth.",
+        "Covers front desk to POS.",
+        "Uninterrupted operations every day."
+      ],
+      "narration": "When shaky internet threatens daily check-ins, your property cannot afford to stop. Operra runs reliably on low-bandwidth connections, keeping your front desk, housekeeping, and POS running smoothly in English and Kiswahili so operations never freeze.",
+      "hasVoice": true,
+      "builtAt": "2026-09-26T10:06:01.286Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-26-20-client-proof",
