@@ -7139,5 +7139,145 @@
       "facebook:1049514968255534_122163299271351110",
       "instagram:18098608304180509"
     ]
+  },
+  {
+    "id": "operra-2026-09-27-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Mwanza",
+        "headline": "Vikao vya ghafla vinavuruga hesabu?",
+        "body": "Mikutano inapoisha, wageni huagiza huduma za ziada kwa haraka. Timu ndogo hushindwa kurekodi kila kitu."
+      },
+      {
+        "eyebrow": "Mbinu",
+        "headline": "Anza na mfumo wa 'Kadi Moja'",
+        "body": "Tenga kadi moja ya huduma kila mkutano. Kila maji au chai ya ziada iandikwe kabla haijatoka jikoni."
+      },
+      {
+        "eyebrow": "Suluhisho",
+        "headline": "Operra inamaliza upotevu wa gharama",
+        "body": "Unganisha huduma za mkutano na mfumo wa malipo papo hapo. Timu yako ndogo inadhibiti kila shilingi kwa urahisi."
+      }
+    ],
+    "caption": "Kwenye hoteli za Mwanza, mikutano ya mara kwa mara ni fursa nzuri, lakini timu ndogo inaweza kuzidiwa na maombi ya ziada ya wageni. Kutumia kadi moja ya kufuatilia maji, vinywaji au huduma za ziada jikoni kunasaidia kuzuia upotevu wa mapato kabla hata ya kuandaa ankara. Operra inarahisisha usimamizi huu kwa kuunganisha idara zote kwenye mfumo mmoja unaofanya kazi hata kwenye mtandao mdogo. Udhibiti rahisi, mapato salama.",
+    "hashtags": [
+      "HoteliTanzania",
+      "MwanzaHotels",
+      "OperraTech",
+      "UsimamiziWaHoteli"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface of a dark wooden conference table. On the table is a single glass of fresh water, a clean blank paper notepad with a simple silver pen beside it, and a small brass coaster, arranged neatly. Tone: mid-tone, even soft daylight. Treatment: neat arrangement, shallow shadows. No text, no people, no logos.",
+    "cta": "Anza sasa",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-09-27-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-27T05:00:00.000Z",
+    "createdAt": "2026-09-26T18:04:23.183Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-27-08-swahili-tip-1.png",
+      "operra-2026-09-27-08-swahili-tip-2.png",
+      "operra-2026-09-27-08-swahili-tip-3.png"
+    ],
+    "headline": "Vikao vya ghafla vinavuruga hesabu?"
+  },
+  {
+    "id": "operra-2026-09-27-13-industry-note",
+    "eyebrow": "Group Folios",
+    "headline": "Track climbing group packages",
+    "body": "Separate guest incidentals from tour operator fees instantly, keeping your Moshi lodge ledgers clean.",
+    "cta": "See it work",
+    "caption": "Kilimanjaro climbing groups bring complex billing. Between park fees, guide allowances, and guest bar tabs, manual split-billing leads to checkout errors.\n\nHoteliers in Moshi are moving to automated package splitting. By separating operator packages from personal incidentals at check-in, you protect your revenue and keep departures smooth.",
+    "hashtags": [
+      "MoshiHotels",
+      "HotelOperations",
+      "Operra"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface of smooth, light-grey slate. On the right side, a neatly folded topographical trail map of Mount Kilimanjaro with a small brass pocket compass and a sleek modern metal calculator resting on top of it. Light/tone: mid-tone, even soft daylight. Treatment: neat arrangement, shallow shadows. The left side of the slate is visually calm and empty. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-27-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-27T10:00:00.000Z",
+    "createdAt": "2026-09-26T18:05:09.551Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-27-16-feature-spotlight",
+    "eyebrow": "Housekeeping",
+    "headline": "Badili hali ya vyumba papo hapo kwa ajili ya wageni Dar",
+    "body": "Unganisha timu ya usafi na mapokezi papo hapo. Jua chumba gani kiko tayari kwa ajili ya mgeni wa biashara bila kupiga simu wala kutuma mtu.",
+    "cta": "Pata maelezo",
+    "caption": "Kwa hoteli za Dar es Salaam, kasi ni kila kitu. Wageni wa biashara wanapowasili mapema, wanategemea chumba kiwe tayari bila kusubiri.\n\nOperra inaondoa usumbufu wa mawasiliano kati ya mapokezi na timu ya usafi. Chumba kikimalizika kufanyiwa usafi, hali yake inabadilika kwenye mfumo papo hapo. Hii inasaidia kupunguza foleni mapokezi na kuhakikisha unatoa huduma bora kwa wakati.",
+    "hashtags": [
+      "#Operra",
+      "#HotelManagement",
+      "#Tanzania",
+      "#DarEsSalaam"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface of a professional housekeeping room-status checklist on a wooden clipboard with a metallic pen. Light/tone: mid-tone, even soft daylight. Treatment: neat arrangement, shallow shadows. Detail right-of-centre, left side visually calm. no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-27T13:00:00.000Z",
+    "createdAt": "2026-09-26T18:06:56.445Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-27-20-pain-point",
+    "eyebrow": "Group Billing",
+    "headline": "Safari group extras on the wrong invoice?",
+    "body": "Keep tour operator packages and guest incidentals strictly separate. Prevent manual billing disputes at checkout.",
+    "cta": "Book a demo",
+    "caption": "Your Arusha safari group is boarding the cruisers, engines idling. Then the guide disputes a bar bill.\n\nWhen agencies cover the rooms but guests pay for their own drinks, split-billing errors cause costly delays.\n\nOperra separates operator folios from personal guest extras automatically. No manual math while the safari vehicles wait.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelManagement",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface. A printed paper hotel invoice next to a pair of classic brass binoculars and a single brass room key on a weathered dark wooden desk. Mid-tone, even soft daylight. Neat arrangement, shallow shadows. The left third of the image is empty dark wood. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-27-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-27T17:00:00.000Z",
+    "createdAt": "2026-09-26T18:07:45.219Z",
+    "status": "pending"
   }
 ]

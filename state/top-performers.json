@@ -1,24 +1,5 @@
 [
   {
-    "id": "operra-2026-09-01-16-swahili-tip",
-    "platform": "instagram",
-    "pillar": "swahili-tip",
-    "format": "reel",
-    "language": "sw",
-    "look": "daylight",
-    "headline": "Hakiki vocha za ma-agent wageni wakifika",
-    "reach": 124,
-    "likes": 1,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 1,
-    "platforms": [
-      "instagram",
-      "facebook"
-    ]
-  },
-  {
     "id": "operra-2026-09-20-16-number-that-lands",
     "platform": "instagram",
     "pillar": "number-that-lands",
@@ -92,6 +73,25 @@
     "platforms": [
       "instagram",
       "facebook"
+    ]
+  },
+  {
+    "id": "operra-2026-09-12-08-swahili-tip",
+    "platform": "facebook",
+    "pillar": "swahili-tip",
+    "format": "carousel",
+    "language": "sw",
+    "look": "macro",
+    "headline": "Mkutano mkubwa, timu ndogo ya mapokezi?",
+    "reach": 3,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 2,
+    "platforms": [
+      "facebook",
+      "instagram"
     ]
   }
 ]
