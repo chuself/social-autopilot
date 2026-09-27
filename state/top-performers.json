@@ -57,6 +57,25 @@
     ]
   },
   {
+    "id": "operra-2026-09-23-16-number-that-lands",
+    "platform": "instagram",
+    "pillar": "number-that-lands",
+    "format": "reel",
+    "language": "en",
+    "look": "goldenhour",
+    "headline": "Run 6 core departments on low bandwidth",
+    "reach": 4,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 2,
+    "platforms": [
+      "instagram",
+      "facebook"
+    ]
+  },
+  {
     "id": "operra-2026-09-23-13-pain-point",
     "platform": "instagram",
     "pillar": "pain-point",
@@ -73,25 +92,6 @@
     "platforms": [
       "instagram",
       "facebook"
-    ]
-  },
-  {
-    "id": "operra-2026-09-12-08-swahili-tip",
-    "platform": "facebook",
-    "pillar": "swahili-tip",
-    "format": "carousel",
-    "language": "sw",
-    "look": "macro",
-    "headline": "Mkutano mkubwa, timu ndogo ya mapokezi?",
-    "reach": 3,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 2,
-    "platforms": [
-      "facebook",
-      "instagram"
     ]
   }
 ]

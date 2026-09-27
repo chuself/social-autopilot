@@ -7329,5 +7329,152 @@
       "facebook:1049514968255534_122163907371351110",
       "instagram:17920779918441221"
     ]
+  },
+  {
+    "id": "operra-2026-09-28-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Resort Folios",
+        "headline": "Foreign currency tabs create billing discrepancies",
+        "body": "Long stays and multiple outlet bills make night audits slow and prone to manual error."
+      },
+      {
+        "eyebrow": "Revenue Leakage",
+        "headline": "Untracked folio edits hide real margins",
+        "body": "Unrecorded rate changes, delayed restaurant slips, and manual currency conversions distort your daily revenue."
+      },
+      {
+        "eyebrow": "Audit Trail",
+        "headline": "Inspect every transaction across operations",
+        "body": "Connect front desk, POS, and housekeeping directly to reports with complete staff accountability."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Reliable resort management on low bandwidth",
+        "body": "Operra unifies front desk, pricing, and audit trails so Zanzibar resorts stay in control."
+      }
+    ],
+    "caption": "In Zanzibar resorts, long stays and multi-currency transactions complicate daily accounting. When restaurant bills, activity add-ons, and OTA adjustments live on disconnected slips, night audits stretch for hours. Operra unites your front desk, POS, pricing, and reports with a built-in audit trail that tracks every change. Even on low-bandwidth island connections, your accounts stay reconciled and transparent. Stop guessing your numbers at checkout.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HospitalityEastAfrica",
+      "#HotelManagement",
+      "#ResortOperations"
+    ],
+    "imagePrompt": "overhead flat-lay, looking straight down onto a surface of dark coconut wood with a smooth carved wooden clipboard, a minimalist brass ruler, and two polished dark sea stones, mid-tone, even soft daylight, neat arrangement, shallow shadows, no text, no people, no logos",
+    "cta": "See Operra live",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "backgroundPath": null,
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-28T05:00:00.000Z",
+    "createdAt": "2026-09-27T18:04:58.621Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-28-08-number-that-lands-1.png",
+      "operra-2026-09-28-08-number-that-lands-2.png",
+      "operra-2026-09-28-08-number-that-lands-3.png",
+      "operra-2026-09-28-08-number-that-lands-4.png"
+    ],
+    "headline": "Foreign currency tabs create billing discrepancies"
+  },
+  {
+    "id": "operra-2026-09-28-13-client-proof",
+    "eyebrow": "Operations",
+    "headline": "Mwanza venue runs front desk and POS on low bandwidth",
+    "body": "A lakeside property keeps regional conference bookings and dining bills perfectly aligned, even with unstable internet connections.",
+    "cta": "See how it works",
+    "caption": "When regional conferences fill your rooms in Mwanza, you cannot afford to lose track of dining bills or room charges.\n\nOne lakeside property keeps their front desk and POS fully coordinated using Operra. Even when the internet fluctuates, every transaction is recorded safely. No missed extras, no delayed checkouts.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#EastAfricaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface of a light-colored wooden table. On the right side, a single fabric conference lanyard and a blank plastic event badge sit neatly. The left side is plain, empty wooden space. Light/tone: mid-tone, even soft daylight. Treatment: neat arrangement, shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-28-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-28T10:00:00.000Z",
+    "createdAt": "2026-09-27T18:06:04.043Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-28-16-swahili-tip",
+    "eyebrow": "Operations",
+    "headline": "Keep your lobby clear during climb briefings",
+    "body": "Move guide and climber briefing sessions out of the reception area to keep check-ins smooth.",
+    "cta": "See Operra",
+    "caption": "Moshi climbing groups arrive with heavy gear, guides, and plenty of questions. Hosting climb briefings right at your front desk blocks the lobby and slows down check-ins.\n\nMove briefings to a dedicated garden table or side room. Your lobby stays clear, guides have space to spread out maps, and your reception team can focus on guest check-ins.",
+    "hashtags": [
+      "HotelOperations",
+      "KilimanjaroTrekking",
+      "MoshiHotels"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface of light pine wood planks. A neatly arranged topographic mountain trail map, a brass compass, and a small notebook on the right side. The left side is a clean, empty wooden surface with soft, even daylight and shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-28T13:00:00.000Z",
+    "createdAt": "2026-09-27T18:06:30.345Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-28-20-industry-note",
+    "eyebrow": "Corporate accounts",
+    "headline": "Keep corporate guest allowances clear",
+    "body": "Separate room rates from personal extras automatically before checkout to prevent billing disputes with company sponsors.",
+    "cta": "See how it works",
+    "caption": "In Dar es Salaam, business travel moves fast. Corporate clients expect clean invoices that match their pre-agreed daily limits, while guests often add personal dining or laundry to the room. When these charges mix, checkout delays stall your front desk and hold up corporate payments.\n\nSeparating room charges from extra expenses automatically keeps your daily accounts clean. You get paid faster and companies receive clear statements without back-and-forth emails.",
+    "hashtags": [
+      "#HospitalityTanzania",
+      "#DarEsSalaamHotels",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "Overhead flat-lay, looking straight down onto a surface of smooth grey linen cloth. On the right side, a neat arrangement of a polished metallic pen, a compact sleek notebook, a ceramic espresso cup on a saucer, and a folded leather document holder. The left third is clear and visually calm empty fabric space. Mid-tone, even soft daylight, neat arrangement, shallow shadows. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-28-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-28T17:00:00.000Z",
+    "createdAt": "2026-09-27T18:07:20.902Z",
+    "status": "pending"
   }
 ]
