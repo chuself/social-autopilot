@@ -7269,7 +7269,20 @@
     ],
     "scheduledFor": "2026-09-27T13:00:00.000Z",
     "createdAt": "2026-09-26T18:06:56.445Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-27-16-feature-spotlight.mp4",
+      "beats": [
+        "Wageni wanasubiri vyumba hapo mapokezi?",
+        "Unganisha usafi na mapokezi papo hapo",
+        "Fuatilia hali ya vyumba bila kupiga simu",
+        "Wageni wapate huduma ya haraka"
+      ],
+      "narration": "Ondoa usumbufu wa kupiga simu kuulizia usafi wa vyumba. Operra inaunganisha mapokezi na timu ya usafi papo hapo, hata kwenye mtandao mdogo. Unaona vyumba vilivyo tayari kwa Kiswahili au Kiingereza, na kuwahudumia wageni wako haraka bila kuchelewa.",
+      "hasVoice": true,
+      "builtAt": "2026-09-27T10:03:57.618Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-27-20-pain-point",
