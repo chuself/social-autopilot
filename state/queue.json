@@ -7223,7 +7223,20 @@
     ],
     "scheduledFor": "2026-09-27T10:00:00.000Z",
     "createdAt": "2026-09-26T18:05:09.551Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-27-13-industry-note.mp4",
+      "beats": [
+        "Messy group ledgers?",
+        "Instantly split operator fees.",
+        "Runs on low bandwidth.",
+        "Spotless Moshi lodge accounts."
+      ],
+      "narration": "Tired of untangling Kilimanjaro climb packages? Operra lets you isolate guest extras from tour operator charges in seconds, keeping your Moshi lodge accounts perfectly organized. Best of all, it works flawlessly on slow, low-bandwidth connections in English and Kiswahili.",
+      "hasVoice": true,
+      "builtAt": "2026-09-27T07:05:46.121Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-27-16-feature-spotlight",
