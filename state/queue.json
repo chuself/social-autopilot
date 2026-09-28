@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-09-28T12:29:37.464Z"
+    "missedAt": "2026-09-28T13:30:12.713Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-09-28T12:29:37.461Z"
+    "missedAt": "2026-09-28T13:30:12.708Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-09-28T12:29:37.462Z",
+    "missedAt": "2026-09-28T13:30:12.710Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-09-28T12:29:37.462Z",
+    "missedAt": "2026-09-28T13:30:12.710Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-09-28T12:29:37.513Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-09-28T12:29:37.465Z"
+    "missedAt": "2026-09-28T13:30:12.713Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-09-28T12:29:37.465Z"
+    "missedAt": "2026-09-28T13:30:12.714Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-09-28T12:29:37.465Z"
+    "missedAt": "2026-09-28T13:30:12.714Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -7469,7 +7469,7 @@
     ],
     "scheduledFor": "2026-09-28T13:00:00.000Z",
     "createdAt": "2026-09-27T18:06:30.345Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-28-16-swahili-tip.mp4",
       "beats": [
@@ -7481,10 +7481,14 @@
       "narration": "Wageni wa mlimani wakifanya briefing mapokezi, wageni wengine wanakosa nafasi ya kuingia. Hamisha vikao hivyo na uendeshe mfumo wako wa front desk na POS hata mtandao ukiwa dhaifu. Wageni wote watapata huduma ya haraka na utulivu.",
       "hasVoice": true,
       "builtAt": "2026-09-28T10:05:23.126Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-28T13:31:32.085Z",
+      "postIds": [
+        "instagram:17884110513502900",
+        "facebook:2971161499886877"
+      ]
     },
-    "lastAttempt": "2026-09-28T12:29:37.513Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-09-28T13:31:32.085Z"
   },
   {
     "id": "operra-2026-09-28-20-industry-note",
