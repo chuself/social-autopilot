@@ -7465,7 +7465,20 @@
     ],
     "scheduledFor": "2026-09-28T13:00:00.000Z",
     "createdAt": "2026-09-27T18:06:30.345Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-28-16-swahili-tip.mp4",
+      "beats": [
+        "Mapokezi yamejaa briefing za mlimani?",
+        "Tenganisha briefing na huduma za mapokezi.",
+        "Inafanya kazi hata mtandao ukiwa chini.",
+        "Kuingia wageni bila msongamano wowote."
+      ],
+      "narration": "Wageni wa mlimani wakifanya briefing mapokezi, wageni wengine wanakosa nafasi ya kuingia. Hamisha vikao hivyo na uendeshe mfumo wako wa front desk na POS hata mtandao ukiwa dhaifu. Wageni wote watapata huduma ya haraka na utulivu.",
+      "hasVoice": true,
+      "builtAt": "2026-09-28T10:05:23.126Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-28-20-industry-note",
