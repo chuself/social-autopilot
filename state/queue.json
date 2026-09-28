@@ -7606,7 +7606,20 @@
     ],
     "scheduledFor": "2026-09-29T10:00:00.000Z",
     "createdAt": "2026-09-28T18:07:17.695Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-29-13-pain-point.mp4",
+      "beats": [
+        "Bili za dola zinakata faida?",
+        "Mapato yanapotea kwa hesabu mbovu",
+        "Operra inasimamia ripoti na bei",
+        "Linda kila senti ya hoteli yako"
+      ],
+      "narration": "Je, unajua mabadiliko ya viwango vya kubadilisha fedha yanavyomeza faida ya hoteli yako Zanzibar? Operra inakusaidia kusimamia mapokezi, ripoti, na bei kwa usahihi hata kukiwa na mtandao dhaifu. Pata mfumo wa Kiswahili unaohakikisha kila senti inaonekana na kulinda mapato yako leo.",
+      "hasVoice": true,
+      "builtAt": "2026-09-28T20:09:06.227Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-29-16-number-that-lands",
