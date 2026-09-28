@@ -7526,5 +7526,149 @@
       "facebook:1049514968255534_122164397535351110",
       "instagram:17958897327252432"
     ]
+  },
+  {
+    "id": "operra-2026-09-29-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Kazi za makundi",
+        "headline": "Ankara za safari zinachukua muda mrefu?",
+        "body": "Kuandika bili za wageni wengi wa safari kwa mkono kunachelewesha magari asubuhi."
+      },
+      {
+        "eyebrow": "Usimamizi kamili",
+        "headline": "Idara zote zinakaa kwenye mfumo mmoja",
+        "body": "Front desk, POS, na ripoti zinazungumza lugha moja bila kupoteza taarifa za wageni."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Ondoa usumbufu wa kuhesabu mara mbili",
+        "body": "Fanya kazi kwa uhakika hata mtandao ukiwa hafifu msimu huu wa watalii Arusha.",
+        "cta": "Wasiliana nasi"
+      }
+    ],
+    "caption": "Msimu wa watalii ukianza Arusha, foleni za kulipa bili zinatakiwa kuwa fupi. Usiruhusu kuandika ankara kwa mkono kuchelewesha safari za wageni wako. Operra inakupa mfumo unaounganisha mapokezi na migahawa ili kila shilingi ionekane wazi na kwa wakati. Hotel management imerahisishwa kwa ajili yako.",
+    "hashtags": [
+      "HoteliTanzania",
+      "ArushaHotels",
+      "UsimamiziWaHoteli",
+      "Operra"
+    ],
+    "imagePrompt": "a stack of crisp printed paper folios and a silver metal calculator resting on a surface of pale polished terrazzo, composition extreme close-up filling the frame, tone light, high-key, clean, treatment shallow depth of field, fine texture detail, no text, no people, no logos",
+    "cta": "Wasiliana nasi",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-09-29-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-29T05:00:00.000Z",
+    "createdAt": "2026-09-28T18:06:10.099Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-09-29-08-feature-spotlight-1.png",
+      "operra-2026-09-29-08-feature-spotlight-2.png",
+      "operra-2026-09-29-08-feature-spotlight-3.png"
+    ],
+    "headline": "Ankara za safari zinachukua muda mrefu?"
+  },
+  {
+    "id": "operra-2026-09-29-13-pain-point",
+    "eyebrow": "Fedha za Kigeni",
+    "headline": "Bili za Dola zinakata faida",
+    "body": "Mabadiliko ya viwango vya fedha za kigeni yanapoteza mapato ya hoteli Zanzibar kama hesabu hazisomeki wazi.",
+    "cta": "Ona suluhisho",
+    "caption": "Hoteli nyingi za Zanzibar zinapokea wageni kwa Dola na Shilingi lakini kuunganisha mabadiliko ya sarafu kwenye mfumo wa malipo kunachukua muda mwingi. Hesabu zikikosekana wakati wa usiku, ripoti za mwisho wa mwezi zinavurugika.\n\nOperra inatunza kumbukumbu za sarafu zote kwa usahihi bila kukosekana kwa shilingi hata moja. Acha kupoteza mapato kwenye viwango vya ubadilishaji.",
+    "hashtags": [
+      "OperraTech",
+      "ZanzibarHotels",
+      "HotelManagement",
+      "Tanzania"
+    ],
+    "imagePrompt": "Composition : extreme close-up filling the frame, Light/tone : light, high-key, clean, Treatment : shallow depth of field, fine texture detail, subject is a stack of foreign currency notes and a metal calculator resting on a plain wooden counter, leaving the left side visually calm with soft shadow, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-09-29-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-29T10:00:00.000Z",
+    "createdAt": "2026-09-28T18:07:17.695Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-29-16-number-that-lands",
+    "eyebrow": "Operations data",
+    "headline": "Operra works on low bandwidth in Mwanza",
+    "body": "System stability keeps your hotel running during high-traffic conference days when the internet fluctuates. No data loss, just consistent performance for your staff.",
+    "cta": "See it work",
+    "caption": "Conference season in Mwanza brings high pressure to your front desk and POS systems. When the internet fluctuates, your operations shouldn't grind to a halt. \n\nOperra is built to run on the low-bandwidth connections common in our region. This means your billing stays live, reports remain accurate, and your team stays productive even when the network is shaky. 🌐\n\nReliability where it matters most for your property.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelTech",
+      "#TanzaniaTourism",
+      "#Operra",
+      "#HospitalityManagement"
+    ],
+    "imagePrompt": "A single ethernet cable port on a clean, light-colored wall. Composition : extreme close-up filling the frame. Light/tone : light, high-key, clean. Treatment : shallow depth of field, fine texture detail. The left third is clear space, with the port focused on the right side. no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-29T13:00:00.000Z",
+    "createdAt": "2026-09-28T18:08:44.211Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-09-29-20-client-proof",
+    "eyebrow": "Uthibitisho",
+    "headline": "Moshi wanapokea wageni bila mtandao kukata",
+    "body": "Hoteli ya Moshi inaendesha idara zote sita kwa ufanisi hata wakati mtandao wa eneo hilo unapoyumba.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Msimu wa kupanda mlima ukianza hapa Moshi, kupoteza mtandao hakumaanishi kusimama kwa kazi.\n\nHoteli moja hapa mjini inatumia mfumo unaofanya kazi hata kwenye mtandao mdogo. Mapokezi, mgahawa, na utunzaji wa nyumba vinasoma pamoja bila kukwama.\n\nHesabu zinabaki wazi, wageni wanaondoka kwa wakati.\n\nJe, hoteli yako inavumilia mtandao hafifu au inafanya kazi?",
+    "hashtags": [
+      "HoteliTanzania",
+      "MoshiHotels",
+      "UsimamiziWaHoteli",
+      "Operra"
+    ],
+    "imagePrompt": "Composition : extreme close-up filling the frame, Light/tone : light, high-key, clean, Treatment : shallow depth of field, fine texture detail, focusing on a wooden walking stick leaning against a textured stone wall in Moshi, leaving the left side visually calm with empty space, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-09-29T17:00:00.000Z",
+    "createdAt": "2026-09-28T18:11:04.126Z",
+    "status": "pending"
   }
 ]
