@@ -7420,7 +7420,7 @@
     ],
     "scheduledFor": "2026-09-28T10:00:00.000Z",
     "createdAt": "2026-09-27T18:06:04.043Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-28-13-client-proof.mp4",
       "beats": [
@@ -7432,10 +7432,14 @@
       "narration": "Hata mtandao ukisumbua Mwanza, Operra inahakikisha mapokezi na POS zinafanya kazi bila kukwama. Mfumo huu wa Kiswahili na Kiingereza unaratibu vyumba, usafi, bili na taarifa zote kwa urahisi. Mteja wako anapata huduma bora, na biashara yako inaenda vizuri kabisa.",
       "hasVoice": true,
       "builtAt": "2026-09-28T07:06:18.028Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-28T10:07:29.822Z",
+      "postIds": [
+        "instagram:18135873850712609",
+        "facebook:1891353295199902"
+      ]
     },
-    "lastAttempt": "2026-09-28T09:53:24.518Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-28T10:07:29.822Z"
   },
   {
     "id": "operra-2026-09-28-16-swahili-tip",
