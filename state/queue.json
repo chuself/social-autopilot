@@ -7663,7 +7663,20 @@
     ],
     "scheduledFor": "2026-09-29T13:00:00.000Z",
     "createdAt": "2026-09-28T18:08:44.211Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-29-16-number-that-lands.mp4",
+      "beats": [
+        "Unstable hotel internet?",
+        "Operra thrives on low bandwidth",
+        "English and Kiswahili interface included",
+        "Total control without data loss"
+      ],
+      "narration": "High traffic conferences in Mwanza shouldn't crash your system. Operra is built for Tanzanian properties, running reliably on low bandwidth connections. From the front desk to housekeeping, your team stays productive in English or Kiswahili, ensuring consistent performance and zero data loss.",
+      "hasVoice": true,
+      "builtAt": "2026-09-29T10:07:35.456Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-29-20-client-proof",
