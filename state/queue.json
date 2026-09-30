@@ -7804,7 +7804,7 @@
     ],
     "scheduledFor": "2026-09-30T10:00:00.000Z",
     "createdAt": "2026-09-29T22:13:08.641Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-09-30-13-industry-note.mp4",
       "beats": [
@@ -7816,10 +7816,14 @@
       "narration": "When safari vehicles arrive in Arusha, checkout delays ruin the guest experience. Operra lets you consolidate laundry and bar extras to the master folio every evening. Even on low-bandwidth connections, keep your front desk running smoothly in English or Kiswahili.",
       "hasVoice": true,
       "builtAt": "2026-09-30T07:03:33.044Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-09-30T10:08:32.080Z",
+      "postIds": [
+        "instagram:18062187059787945",
+        "facebook:1882167749430229"
+      ]
     },
-    "lastAttempt": "2026-09-30T09:36:34.810Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-09-30T10:08:32.080Z"
   },
   {
     "id": "operra-2026-09-30-16-feature-spotlight",
