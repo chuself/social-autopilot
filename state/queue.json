@@ -7911,5 +7911,145 @@
       "facebook:1049514968255534_122165558511351110",
       "instagram:18113662109043957"
     ]
+  },
+  {
+    "id": "operra-2026-10-01-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Moshi Peak",
+        "headline": "Trekking groups shouldn't break your system",
+        "body": "When thirty climbers arrive simultaneously, your front desk and stores must stay perfectly synced to avoid errors."
+      },
+      {
+        "eyebrow": "Reliable Sync",
+        "headline": "6 core departments on one system",
+        "body": "Front desk, POS, and housekeeping communicate instantly, even on the low-bandwidth connections common in Tanzanian properties."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Reliable management for Kilimanjaro hotels",
+        "body": "Keep your audit trail clear and your billing accurate throughout the busiest trekking season. Simplified hotel management."
+      }
+    ],
+    "caption": "Moshi's high season demands precision. Between early morning briefings and gear storage, your team shouldn't have to fight with a slow or disconnected system. Operra is built specifically for Tanzanian connectivity, ensuring your front desk, POS, and housekeeping stay synced on low-bandwidth networks. Whether you are reconciling trekking extras or managing rapid room turns, our 6 core modules keep your data secure and your audit trail intact. Manage your property with confidence.",
+    "hashtags": [
+      "MoshiHotels",
+      "KilimanjaroHospitality",
+      "HotelTech",
+      "Operra"
+    ],
+    "imagePrompt": "extreme close-up filling the frame of a thick, braided nylon climbing rope with visible fiber detail, light, high-key, clean, shallow depth of field, fine texture detail, no text, no people, no logos",
+    "cta": "Simplify now",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "backgroundPath": "state/bg/operra-2026-10-01-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-01T05:00:00.000Z",
+    "createdAt": "2026-09-30T18:04:23.737Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-01-08-number-that-lands-1.png",
+      "operra-2026-10-01-08-number-that-lands-2.png",
+      "operra-2026-10-01-08-number-that-lands-3.png"
+    ],
+    "headline": "Trekking groups shouldn't break your system"
+  },
+  {
+    "id": "operra-2026-10-01-13-client-proof",
+    "eyebrow": "Front Desk",
+    "headline": "Fast business checkouts in Dar",
+    "body": "Generate accurate corporate bills instantly. Operra syncs front desk and POS orders smoothly, even on low-bandwidth connections.",
+    "cta": "Book a demo",
+    "caption": "Corporate checkouts in Dar es Salaam shouldn't stall when the internet fluctuates. When business guests need to catch a flight, every second counts.\n\nOperra keeps your front desk and restaurant POS perfectly synced. Even on low-bandwidth networks, your team can pull up accurate final bills without delays. Keep checkouts fast and corporate clients happy.",
+    "hashtags": [
+      "#DarEsSalaam",
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition: extreme close-up filling the frame of a modern, light-tan leather receipt presenter folder. Light, high-key, clean tone with a shallow depth of field, showing the fine leather grain. The left side is visually calm, showing a smooth, light oak desk surface. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-01-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-01T10:00:00.000Z",
+    "createdAt": "2026-09-30T18:05:19.829Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-01-16-swahili-tip",
+    "eyebrow": "Operations",
+    "headline": "Secure the guide's signature on extra folios",
+    "body": "In Arusha, ensure the tour leader signs off on guest extras before departure. This prevents disputes when invoicing agents at the end of the month.",
+    "cta": "Streamline your billing",
+    "caption": "Safari mornings in Arusha are hectic. Between briefings and packing the vehicles, guest extras like laundry or bar bills often get overlooked or disputed later.\n\nBefore the Land Cruisers depart, have the tour leader sign off on all incidental folios. This small step eliminates friction during the monthly reconciliation process with your partner agents. Operra keeps these bills updated in real-time, so you can close the loop without delaying the guests' trip to the park.",
+    "hashtags": [
+      "ArushaHospitality",
+      "SafariOperations",
+      "HotelManagement"
+    ],
+    "imagePrompt": "Composition: extreme close-up filling the frame of a rugged, weathered leather binocular strap with detailed brass fittings. Light/tone: light, high-key, clean. Treatment: shallow depth of field, fine texture detail. The detail is right-of-centre, leaving the left third visually calm with a plain, light-toned background. no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-01-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-01T13:00:00.000Z",
+    "createdAt": "2026-09-30T18:08:08.735Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-01-20-industry-note",
+    "eyebrow": "Front Desk",
+    "headline": "Lock exchange rates at check-in",
+    "body": "Avoid billing discrepancies on long-stay checkouts. Operra secures your conversion rates on day one, even on low bandwidth.",
+    "cta": "Book a demo",
+    "caption": "Zanzibar resorts lose margin when exchange rates shift during a long guest stay.\n\nIf a guest checks in for two weeks, billing them in USD but settling in TZS at checkout shouldn't involve manual math or outdated rates.\n\nOperra locks the conversion rate at check-in. Your front desk gets clean, accurate folios instantly, even on weak coastal internet. Keep your revenue secure from day one.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelOperations",
+      "Operra"
+    ],
+    "imagePrompt": "Composition: extreme close-up filling the frame of an intricate brass latch on a whitewashed Zanzibar wooden chest. Light/tone: light, high-key, clean. Treatment: shallow depth of field, fine texture detail. The left side of the frame is a plain, softly lit whitewashed wood wall, keeping it visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-01T17:00:00.000Z",
+    "createdAt": "2026-09-30T18:08:23.391Z",
+    "status": "pending"
   }
 ]
