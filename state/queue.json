@@ -7850,7 +7850,20 @@
     ],
     "scheduledFor": "2026-09-30T13:00:00.000Z",
     "createdAt": "2026-09-29T22:13:40.843Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-09-30-16-feature-spotlight.mp4",
+      "beats": [
+        "Miamala inapotea kisiri?",
+        "Fuatilia mabadiliko yote ya miamala",
+        "Inafanya kazi hata mtandao ukiwa hafifu",
+        "Ulinzi kamili wa mapato yako"
+      ],
+      "narration": "Je, unajua kila mabadiliko ya kifedha kwenye hoteli yako? Operra inarekodi kila mabadiliko na kufuta miamala papo hapo, hata mtandao ukiwa dhaifu. Tumia mfumo kwa Kiswahili au Kiingereza kupata udhibiti kamili wa mapato yako.",
+      "hasVoice": true,
+      "builtAt": "2026-09-30T10:07:04.317Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-09-30-20-pain-point",
