@@ -8041,7 +8041,20 @@
     ],
     "scheduledFor": "2026-10-01T13:00:00.000Z",
     "createdAt": "2026-09-30T18:08:08.735Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-01-16-swahili-tip.mp4",
+      "beats": [
+        "Saini ya kiongozi?",
+        "Sainisha folios kabla ya kuondoka.",
+        "Inafanya kazi mtandao ukiwa hafifu.",
+        "Invois bila mizozo mwisho wa mwezi."
+      ],
+      "narration": "Kule Arusha, hakikisha kiongozi wa watalii anasaini ankara za ziada kabla ya kuondoka hotelini. Operra inakusaidia kuratibu huduma hizi hata kwenye mtandao hafifu, ili kuepuka mizozo ya malipo wakati wa kutuma ankara mwishoni mwa mwezi.",
+      "hasVoice": true,
+      "builtAt": "2026-10-01T10:07:17.898Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-01-20-industry-note",
