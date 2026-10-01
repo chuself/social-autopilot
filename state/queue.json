@@ -7996,7 +7996,7 @@
     ],
     "scheduledFor": "2026-10-01T10:00:00.000Z",
     "createdAt": "2026-09-30T18:05:19.829Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-01-13-client-proof.mp4",
       "beats": [
@@ -8008,10 +8008,14 @@
       "narration": "Sasa unaweza kutoa bili sahihi za makampuni kwa haraka zaidi jijini Dar es Salaam. Mfumo wa Operra unaunganisha mapokezi na mgahawa kwa urahisi, hata kama mtandao wako ni dhaifu. Rahisisha usimamizi wa hoteli yako leo kwa lugha ya Kiswahili au Kiingereza.",
       "hasVoice": true,
       "builtAt": "2026-09-30T18:29:25.642Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-01T10:08:41.136Z",
+      "postIds": [
+        "instagram:17966793045196485",
+        "facebook:1629708685514078"
+      ]
     },
-    "lastAttempt": "2026-10-01T09:14:43.344Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-01T10:08:41.136Z"
   },
   {
     "id": "operra-2026-10-01-16-swahili-tip",
