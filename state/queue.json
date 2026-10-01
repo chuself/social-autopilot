@@ -8180,7 +8180,20 @@
     ],
     "scheduledFor": "2026-10-02T10:00:00.000Z",
     "createdAt": "2026-10-01T18:14:54.695Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-02-13-pain-point.mp4",
+      "beats": [
+        "Watalii wamechoka sana?",
+        "Gawa bili kwa sekunde",
+        "Mfumo unaofanya kazi popote",
+        "Mapokezi yenye utaratibu mzuri"
+      ],
+      "narration": "Watalii wanaporudi kutoka milimani wamechoka, usiruhusu bili kuchelewesha mapumziko yao. Operra inakusaidia kutenganisha gharama za kitalii na zile za binafsi kwa haraka. Mfumo wetu una lugha ya Kiswahili na Kiingereza, ukifanya kazi vizuri hata kwenye mtandao mdogo ili kurahisisha kazi yako.",
+      "hasVoice": true,
+      "builtAt": "2026-10-01T18:50:57.436Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-02-16-number-that-lands",
