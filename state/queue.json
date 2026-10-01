@@ -8101,5 +8101,148 @@
       "facebook:1049514968255534_122166038427351110",
       "instagram:17999498313001308"
     ]
+  },
+  {
+    "id": "operra-2026-10-02-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Hali ya vyumba",
+        "headline": "Mgeni amefika, chumba bado hakiko tayari?",
+        "body": "Wageni wa mikutano Mwanza hawapendi kusubiri mapokezi wakati usafi ukiendelea bila taarifa kamili."
+      },
+      {
+        "eyebrow": "Usafi papo hapo",
+        "headline": "Badili hali ya chumba mara moja",
+        "body": "Housekeeping wakimaliza usafi, hali ya chumba inabadilika kwenye mfumo bila kuhitaji simu au karatasi."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Mapokezi na usafi sasa ni kitu kimoja",
+        "body": "Punguza foleni za asubuhi. Mfumo unafanya kazi vizuri hata kama mtandao wa intaneti ni mdogo."
+      }
+    ],
+    "caption": "Kwenye hoteli za Mwanza, muda ni kila kitu. Wageni wa mikutano wanahitaji vyumba vyao mapema ili kujiandaa na ratiba zao. Usipoteze muda kupiga simu au kutuma watu kwenda kuangalia kama usafi umekamilika. Operra inakuwezesha kuona hali ya vyumba vyako vyote kwa wakati mmoja, kuanzia mapokezi hadi housekeeping. Kila hatua inaonekana wazi, hata kama intaneti inasumbua. Rahisisha kazi ya timu yako ndogo na uongeze ufanisi leo.",
+    "hashtags": [
+      "HoteliMwanza",
+      "UsimamiziWaHoteli",
+      "TanzaniaHospitality",
+      "Operra"
+    ],
+    "imagePrompt": "minimal line drawing of a simple spray bottle and a neatly folded towel on a plain field, lots of empty space, flat graphic, not a photograph, thin strokes, single muted teal colour, no text, no people, no logos",
+    "cta": "Tuandikie ujumbe sasa",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "backgroundPath": null,
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-02T05:00:00.000Z",
+    "createdAt": "2026-10-01T18:14:37.538Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-02-08-feature-spotlight-1.png",
+      "operra-2026-10-02-08-feature-spotlight-2.png",
+      "operra-2026-10-02-08-feature-spotlight-3.png"
+    ],
+    "headline": "Mgeni amefika, chumba bado hakiko tayari?"
+  },
+  {
+    "id": "operra-2026-10-02-13-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Split bills shouldn't delay exhausted climbers",
+    "body": "Keep your lobby moving when trekking groups return. Separate tour operator packages from personal bar bills instantly on one screen.",
+    "cta": "Simplify your billing",
+    "caption": "They've just spent seven days on Kilimanjaro. They are exhausted, dusty, and desperate for a hot shower.\n\nBut instead of heading straight to their rooms, your Moshi reception desk is at a standstill. Your team is manually sorting which extra drinks, laundry, and meals go to the tour operator's invoice, and which ones the guests must pay themselves.\n\nOperra lets you split corporate packages and personal incidentals automatically. No manual math, no delays, just fast check-ins.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#KilimanjaroTourism",
+      "#HotelOperations",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "Composition: minimal line drawing of a single classic leather hiking boot on a solid warm cream background, lots of empty space. Light/tone: flat graphic, not a photograph. Treatment: thin charcoal strokes, single muted slate grey colour. The boot is placed on the right-of-centre, leaving the left side completely empty and visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-02T10:00:00.000Z",
+    "createdAt": "2026-10-01T18:14:54.695Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-02-16-number-that-lands",
+    "eyebrow": "Operations",
+    "headline": "Connect 6 departments on one Dar dashboard",
+    "body": "Manage front desk, POS, and housekeeping in real-time. Keep corporate folios accurate even on low bandwidth connections.",
+    "cta": "Book a demo",
+    "caption": "Business travelers in Dar es Salaam operate on tight schedules. Morning checkouts often stall when laundry or bar bills haven't reached the front desk in time. \n\nOperra syncs 6 core departments on a single platform. Even on low bandwidth, every transaction is visible instantly. Clear your lobby faster and ensure company invoices are 100% accurate before the guest leaves for the airport.",
+    "hashtags": [
+      "DarEsSalaamHotels",
+      "HotelManagement",
+      "HospitalityTech"
+    ],
+    "imagePrompt": "Composition: minimal line drawing of a single corporate lanyard with a badge holder on a plain field, lots of empty space. Detail right-of-centre, left side visually calm. Light/tone: flat graphic, not a photograph. Treatment: thin strokes, single muted slate colour. no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-02T13:00:00.000Z",
+    "createdAt": "2026-10-01T18:15:33.768Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "100%"
+    ]
+  },
+  {
+    "id": "operra-2026-10-02-20-client-proof",
+    "eyebrow": "Malipo",
+    "headline": "Malipo yanapokelewa papo hapo bila mtandao",
+    "body": "Operra imewezesha hoteli ya Arusha kupokea malipo ya wageni haraka, hata wakati intaneti iko duni, bila kusubiri uthibitisho.",
+    "cta": "Jaribu sasa",
+    "caption": "Umeshindwa kukamilisha malipo kwa sababu intaneti ina kata?\nKampuni ya Operra imesaidia hoteli ya Arusha kupokea malipo ya wageni papo hapo, bila kusubiri muunganisho wa mtandao. Timu ya mapokezi iliona kupungua kwa muda wa kusubiri hadi sekunde chache, na wageni walifurahia huduma ya haraka. Hii inaongeza kuridhika, hasa wakati wa msimu wa safari na makundi makubwa.",
+    "hashtags": [
+      "#Arusha",
+      "#HotelTech",
+      "#SafariSeason"
+    ],
+    "imagePrompt": "receipt printer on a plain desk, minimal line drawing on a plain field, lots of empty space, flat graphic, thin strokes, single muted colour, composition left third empty, detail right‑of‑centre, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-02T17:00:00.000Z",
+    "createdAt": "2026-10-01T18:17:29.438Z",
+    "status": "pending"
   }
 ]
