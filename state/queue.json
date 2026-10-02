@@ -8186,7 +8186,7 @@
     ],
     "scheduledFor": "2026-10-02T10:00:00.000Z",
     "createdAt": "2026-10-01T18:14:54.695Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-02-13-pain-point.mp4",
       "beats": [
@@ -8198,10 +8198,13 @@
       "narration": "Watalii wanaporudi kutoka milimani wamechoka, usiruhusu bili kuchelewesha mapumziko yao. Operra inakusaidia kutenganisha gharama za kitalii na zile za binafsi kwa haraka. Mfumo wetu una lugha ya Kiswahili na Kiingereza, ukifanya kazi vizuri hata kwenye mtandao mdogo ili kurahisisha kazi yako.",
       "hasVoice": true,
       "builtAt": "2026-10-01T18:50:57.436Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-02T10:41:20.110Z",
+      "postIds": [
+        "instagram:18098419829623181"
+      ]
     },
-    "lastAttempt": "2026-10-02T09:39:16.480Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-02T10:41:20.110Z"
   },
   {
     "id": "operra-2026-10-02-16-number-that-lands",
