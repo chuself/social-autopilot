@@ -8237,7 +8237,20 @@
     "status": "needs-review",
     "heldFigures": [
       "100%"
-    ]
+    ],
+    "reel": {
+      "file": "operra-2026-10-02-16-number-that-lands.mp4",
+      "beats": [
+        "Six hotel departments, one dashboard.",
+        "Runs on low-bandwidth connections.",
+        "Built for Kiswahili and English.",
+        "Complete control over property operations."
+      ],
+      "narration": "Easily manage front desk, housekeeping, POS, pricing, reports, and audit trails from one dashboard. Operra works smoothly on low-bandwidth Tanzanian connections, offering both Kiswahili and English interfaces to deliver total operational clarity for your hotel.",
+      "hasVoice": true,
+      "builtAt": "2026-10-02T18:23:57.800Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-02-20-client-proof",
