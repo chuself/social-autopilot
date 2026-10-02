@@ -8237,7 +8237,20 @@
     "status": "needs-review",
     "heldFigures": [
       "100%"
-    ]
+    ],
+    "reel": {
+      "file": "operra-2026-10-02-16-number-that-lands.mp4",
+      "beats": [
+        "Tanzanian hotel owners",
+        "Connect six departments seamlessly",
+        "Works on slow internet",
+        "Smooth daily hotel operations"
+      ],
+      "narration": "Managing a Tanzanian hotel shouldn't mean constantly battling slow internet. Seamlessly connect your front desk, housekeeping, and billing in English or Kiswahili on one simple dashboard. Keep your property running smoothly and your guests happy, even on low bandwidth.",
+      "hasVoice": true,
+      "builtAt": "2026-10-02T13:43:52.437Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-02-20-client-proof",
