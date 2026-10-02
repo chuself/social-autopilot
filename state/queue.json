@@ -8274,5 +8274,149 @@
       "facebook:1049514968255534_122166547365351110",
       "instagram:18105611021191549"
     ]
+  },
+  {
+    "id": "operra-2026-10-03-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "ZANZIBAR",
+        "headline": "Mzozo wa bili siku ya check-out?",
+        "body": "Mgeni wa wiki mbili anapohoji gharama za vinywaji na laundry asubuhi ya kuondoka."
+      },
+      {
+        "eyebrow": "USHAURI",
+        "headline": "Hakiki huduma za ziada kila siku",
+        "body": "Tuma bili ya huduma kwenye chumba chake kila jioni, badala ya kusubiri siku ya mwisho."
+      },
+      {
+        "eyebrow": "SULUHISHO",
+        "headline": "Operra inaweka kila huduma wazi",
+        "body": "Housekeeping, POS na Front Desk zinasomana papo hapo. Hakuna bili inayopotea wala kubishiwa."
+      }
+    ],
+    "caption": "Wageni wanaokaa muda mrefu Zanzibar hupenda kufurahia huduma mbalimbali kama spa, laundry, na vinywaji. Lakini mzozo mmoja tu wa bili asubuhi ya check-out unaweza kufuta kumbukumbu zote nzuri za likizo yao. Ili kuepuka hili, weka utaratibu wa kusasisha bili za vyumba kila siku na kuruhusu wageni kuzihakiki mapema. Operra inaunganisha idara zote ili kila huduma inayotolewa iandikshwe kwenye mfumo papo hapo bila kuchelewa.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "Operra",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "minimal line drawing of a single wooden clothes hanger with a paper laundry slip on a plain field, lots of empty space. Flat graphic, not a photograph. Thin strokes, single muted blue colour. no text, no people, no logos",
+    "cta": "Anza na Operra",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "backgroundPath": null,
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-03T05:00:00.000Z",
+    "createdAt": "2026-10-02T18:03:39.990Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-03-08-swahili-tip-1.png",
+      "operra-2026-10-03-08-swahili-tip-2.png",
+      "operra-2026-10-03-08-swahili-tip-3.png"
+    ],
+    "headline": "Mzozo wa bili siku ya check-out?"
+  },
+  {
+    "id": "operra-2026-10-03-13-industry-note",
+    "eyebrow": "Group billing",
+    "headline": "Separate conference extras from main event bills",
+    "body": "Smaller hotel teams in Mwanza often manage group arrivals and daily delegate extras at once. Streamlining event folios keeps front desk operations clear.",
+    "cta": "See it work",
+    "caption": "Regional conference delegates in Mwanza often order extras outside official event packages. When dining or laundry expenses mix with corporate room billing, post-event audits become a hassle for smaller teams.\n\nSplitting individual guest folios from master group bills at check-in keeps corporate accounts clean and eliminates long checkout delays. Clear reporting gives your team full control.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HospitalityTanzania",
+      "#HotelManagement",
+      "#EastAfricaTourism"
+    ],
+    "imagePrompt": "Minimal line drawing of a glass water pitcher and tumbler on a plain field, detail positioned right-of-centre, left side completely empty. Flat graphic, not a photograph. Thin strokes, single muted slate blue colour, lots of empty space, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-03-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-03T10:00:00.000Z",
+    "createdAt": "2026-10-02T18:05:12.941Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-03-16-feature-spotlight",
+    "eyebrow": "Housekeeping",
+    "headline": "Vyumba viko tayari? Mapokezi wanajua papo hapo",
+    "body": "Housekeeping wakimaliza kusafisha, mfumo unasasisha hali ya chumba papo hapo. Hakuna kupigiana simu wala kukimbizana ghorofani wageni wakisubiri.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Makundi ya watalii yanaposhuka mlimani Moshi, wanahitaji kupumzika haraka. Hakuna anayependa kusubiri mapokezi wakati chumba kimeshasafishwa lakini taarifa haijafika.\n\nOperra inaunganisha timu ya usafi na mapokezi moja kwa moja. Chumba kikimalizika kusafishwa, mfumo unajisasisha papo hapo. Wageni wako wanaingia vyumbani bila kuchelewa, na timu yako inafanya kazi kwa urahisi bila kelele za simu.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelManagementTanzania",
+      "#Operra",
+      "#Housekeeping"
+    ],
+    "imagePrompt": "Composition: minimal line drawing of a neat stack of folded bath towels on a rustic wooden stool, placed right-of-centre, lots of empty space on the left. Light/tone: flat graphic, not a photograph. Treatment: thin strokes, single muted slate-grey colour on a warm off-white background. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-03T13:00:00.000Z",
+    "createdAt": "2026-10-02T18:05:30.944Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-03-20-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "The 6 AM scramble for JNIA departures",
+    "body": "Stop chasing corporate extras while guests rush for their flights. Operra connects your POS and reception instantly.",
+    "cta": "Simplify your billing",
+    "caption": "A corporate guest is checking out at 6:00 AM to catch a flight at JNIA. They are in a rush. But their dinner from last night hasn't cleared on the reception system yet.\n\nYou either delay them to verify the bill, or let them go and risk losing the revenue.\n\nOperra links your restaurant and front desk in real-time, even on low bandwidth. No missing extras. No awkward delays.",
+    "hashtags": [
+      "#DarEsSalaam",
+      "#HotelOperations",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "Composition: minimal line drawing of a single vintage paper luggage tag on a plain field, lots of empty space. Light/tone: flat graphic, not a photograph. Treatment: thin strokes, single muted blue colour. Visual detail on the right-of-centre, left side visually calm and plain. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-03T17:00:00.000Z",
+    "createdAt": "2026-10-02T18:05:50.220Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "00"
+    ]
   }
 ]
