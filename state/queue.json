@@ -8425,7 +8425,20 @@
     ],
     "scheduledFor": "2026-10-03T13:00:00.000Z",
     "createdAt": "2026-10-02T18:05:30.944Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-03-16-feature-spotlight.mp4",
+      "beats": [
+        "Vyumba viko tayari?",
+        "Housekeeping wakisafisha, mfumo unasasisha",
+        "Mwisho wa kupigiana simu",
+        "Wageni wako wanaingia haraka"
+      ],
+      "narration": "Kwanini upige simu kuulizia kama chumba kiko tayari? Housekeeping wakimaliza kusafisha, mfumo wa Operra unasasisha hali ya chumba hapo hapo. Mapokezi wanaona papo hapo, na wageni wako wanaingia bila kusubiri wala usumbufu, hata kwenye mtandao wa chini.",
+      "hasVoice": true,
+      "builtAt": "2026-10-03T12:18:42.873Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-03-20-pain-point",
