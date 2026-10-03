@@ -8425,7 +8425,20 @@
     ],
     "scheduledFor": "2026-10-03T13:00:00.000Z",
     "createdAt": "2026-10-02T18:05:30.944Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-03-16-feature-spotlight.mp4",
+      "beats": [
+        "Vyumba viko tayari?",
+        "Housekeeping wakisafisha, mapokezi wanajua",
+        "Bila kupigiana simu ghorofani",
+        "Wageni wako wanafurahia huduma"
+      ],
+      "narration": "Umechoka kukimbizana ghorofani kukagua vyumba? Housekeeping wakimaliza kusafisha, mfumo wa Operra unasasisha mapokezi papo hapo, hata kwa mtandao wa chini. Hakuna kupigiana simu huku wageni wakisubiri. Rahisisha usimamizi kwa Kiswahili na Kiingereza leo.",
+      "hasVoice": true,
+      "builtAt": "2026-10-03T12:05:24.828Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-03-20-pain-point",
