@@ -8477,5 +8477,145 @@
     "heldFigures": [
       "00"
     ]
+  },
+  {
+    "id": "operra-2026-10-04-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Peak Season",
+        "headline": "Invoices shouldn't delay your safari groups",
+        "body": "Arusha is buzzing. Tour operators are waiting. But manual billing is slowing down your checkouts."
+      },
+      {
+        "eyebrow": "The Bottleneck",
+        "headline": "One internet drop halts your invoicing",
+        "body": "When the connection flags, your front desk freezes. Guests miss departures while you struggle to print folios."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Run your peak season on low-bandwidth",
+        "body": "Operra keeps your front desk, POS, and invoicing moving smoothly—even on weak Tanzanian connections."
+      }
+    ],
+    "caption": "Peak safari season in Arusha leaves no room for billing delays. When tour operators are waiting and guests are heading out, a slow internet connection shouldn't stall your front desk. Operra is built for East African conditions, running smoothly on low-bandwidth networks to keep your invoicing, POS, and checkouts moving without interruption. Keep your guests on schedule and your accounts accurate.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelManagement",
+      "HospitalityTanzania",
+      "Operra"
+    ],
+    "imagePrompt": "minimal line drawing of a classic desktop calculator on a plain field, lots of empty space, flat graphic, not a photograph, thin strokes, single muted colour, no text, no people, no logos",
+    "cta": "Simplify your front desk",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-10-04-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-04T05:00:00.000Z",
+    "createdAt": "2026-10-03T18:03:44.710Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-04-08-number-that-lands-1.png",
+      "operra-2026-10-04-08-number-that-lands-2.png",
+      "operra-2026-10-04-08-number-that-lands-3.png"
+    ],
+    "headline": "Invoices shouldn't delay your safari groups"
+  },
+  {
+    "id": "operra-2026-10-04-13-client-proof",
+    "eyebrow": "Usimamizi wa Hoteli",
+    "headline": "Resort za Zanzibar zinaendesha idara zote kwa mtandao hafifu",
+    "body": "Operra inasawazisha mapokezi, migahawa ya POS na usafi wa vyumba papo hapo, hata kwenye intaneti ya kusuasua visiwani.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mtandao ukisumbua visiwani, huduma kwa wageni haitakiwi kusimama hata kidogo.\n\nResort nyingi Zanzibar sasa zinatumia Operra kuratibu mapokezi, migahawa, na usafi wa vyumba bila hofu ya intaneti kukatika. Kila idara inapata taarifa sahihi, na bili za wageni zinajumlishwa vizuri bila makosa ya kupoteza mapato.\n\nHakuna foleni wala kuchelewesha wageni wakati wa check-out.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#OperraTech",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "Composition: minimal line drawing of a single traditional wooden beach lounge chair with a simple woven fabric. Flat graphic, not a photograph. Thin strokes, single muted sandy-beige colour on a plain off-white field, lots of empty space. The chair is positioned on the right third of the frame, leaving the left side visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-04T10:00:00.000Z",
+    "createdAt": "2026-10-03T18:04:05.765Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-04-16-swahili-tip",
+    "eyebrow": "Front Desk",
+    "headline": "Track conference extras on day one",
+    "body": "Keep lake trips and lunchboxes off the main room bill to prevent checkout delays.",
+    "cta": "See how it works",
+    "caption": "Mwanza conference delegates often book afternoon lake trips before heading to the airport. Avoid the checkout rush by splitting event extras from room charges on day one.\n\nWhen lunchboxes and shuttle fees are posted immediately to a separate group folio, your front desk can check out entire groups in minutes. No manual calculations required.",
+    "hashtags": [
+      "MwanzaHotels",
+      "HotelOperations",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "Composition: minimal line drawing of a single marine boat cleat on a plain dock surface, lots of empty space. Light/tone: flat graphic, not a photograph. Treatment: thin strokes, single muted blue colour. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-04T13:00:00.000Z",
+    "createdAt": "2026-10-03T18:04:15.179Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-04-20-industry-note",
+    "eyebrow": "Group Booking",
+    "headline": "Separate climber extras from operator bills",
+    "body": "Keep local agency accounts clear. Route personal climber tabs to individual folios instantly, even under heavy seasonal traffic.",
+    "cta": "Book a demo",
+    "caption": "Moshi's climbing season brings intense pressure to the front desk. When a group of twelve returns from Kilimanjaro, separating the agency's package from individual bar and laundry bills shouldn't cause a queue. \n\nOperra helps you split and route folio charges instantly. Keep your operator relationships clean and your checkouts fast, even on low-bandwidth connections. Clear bills mean faster departures.",
+    "hashtags": [
+      "MoshiHotels",
+      "KilimanjaroHospitality",
+      "HotelOperations"
+    ],
+    "imagePrompt": "Composition: minimal line drawing of a pair of classic leather trekking boots, lots of empty space. Flat graphic, not a photograph. Thin strokes, single muted slate blue colour on a plain off-white field. Detail is on the right, leaving the left side visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-04T17:00:00.000Z",
+    "createdAt": "2026-10-03T18:04:24.803Z",
+    "status": "pending"
   }
 ]
