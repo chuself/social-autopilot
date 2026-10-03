@@ -5,7 +5,9 @@
  * Everything no-ops silently when unconfigured, so the pipeline never fails
  * just because notifications are not set up yet.
  */
-const API = "https://api.telegram.org/bot";
+// TELEGRAM_API_BASE lets the command center stand in for Telegram (same API).
+const TG = () => (process.env.TELEGRAM_API_BASE || "https://api.telegram.org").replace(/\/$/, "");
+const API = () => `${TG()}/bot`;
 
 export function notifyConfigured() {
   return Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
@@ -60,7 +62,7 @@ function keyboard(buttons) {
 }
 
 async function sendTelegram(text, silent, buttons) {
-  const res = await fetch(`${API}${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+  const res = await fetch(`${API()}${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
@@ -86,7 +88,7 @@ async function sendTelegram(text, silent, buttons) {
  */
 export async function answerCallback(callbackId, text = "") {
   if (!process.env.TELEGRAM_BOT_TOKEN) return false;
-  const res = await fetch(`${API}${process.env.TELEGRAM_BOT_TOKEN}/answerCallbackQuery`, {
+  const res = await fetch(`${API()}${process.env.TELEGRAM_BOT_TOKEN}/answerCallbackQuery`, {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ callback_query_id: callbackId, text: text.slice(0, 200) }),
@@ -97,7 +99,7 @@ export async function answerCallback(callbackId, text = "") {
 /** Take the buttons off a message once its decision has been made. */
 export async function clearButtons(chatId, messageId, newText = null) {
   if (!process.env.TELEGRAM_BOT_TOKEN) return false;
-  const base = `${API}${process.env.TELEGRAM_BOT_TOKEN}`;
+  const base = `${API()}${process.env.TELEGRAM_BOT_TOKEN}`;
   const body = { chat_id: chatId, message_id: messageId };
   const endpoint = newText ? "editMessageText" : "editMessageReplyMarkup";
   if (newText) {
@@ -128,10 +130,10 @@ export async function downloadTelegramFile(fileId, destPath) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   if (!token) throw new Error("TELEGRAM_BOT_TOKEN is not set");
 
-  const meta = await (await fetch(`${API}${token}/getFile?file_id=${encodeURIComponent(fileId)}`)).json();
+  const meta = await (await fetch(`${API()}${token}/getFile?file_id=${encodeURIComponent(fileId)}`)).json();
   if (!meta.ok) throw new Error(`getFile failed: ${meta.description}`);
 
-  const res = await fetch(`https://api.telegram.org/file/bot${token}/${meta.result.file_path}`);
+  const res = await fetch(`${TG()}/file/bot${token}/${meta.result.file_path}`);
   if (!res.ok) throw new Error(`file download returned ${res.status}`);
 
   const { writeFile, mkdir } = await import("node:fs/promises");
@@ -190,7 +192,7 @@ export async function sendVideo(videoUrl, caption) {
     console.log(`[video not sent — Telegram not configured] ${videoUrl}`);
     return false;
   }
-  const res = await fetch(`${API}${process.env.TELEGRAM_BOT_TOKEN}/sendVideo`, {
+  const res = await fetch(`${API()}${process.env.TELEGRAM_BOT_TOKEN}/sendVideo`, {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
@@ -236,7 +238,7 @@ export async function sendPhoto(filePath, caption, { buttons = null } = {}) {
   if (markup) form.append("reply_markup", JSON.stringify(markup));
   form.append("photo", new Blob([bytes], { type: "image/png" }), path.basename(filePath));
 
-  const res = await fetch(`${API}${process.env.TELEGRAM_BOT_TOKEN}/sendPhoto`, {
+  const res = await fetch(`${API()}${process.env.TELEGRAM_BOT_TOKEN}/sendPhoto`, {
     method: "POST",
     body: form,
   });
