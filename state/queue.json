@@ -8375,7 +8375,20 @@
     ],
     "scheduledFor": "2026-10-03T10:00:00.000Z",
     "createdAt": "2026-10-02T18:05:12.941Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-03-13-industry-note.mp4",
+      "beats": [
+        "Messy conference bills slow everything down.",
+        "Delegate extras crowd the main event.",
+        "Operra keeps front desk folios distinct.",
+        "Fast, spotless checkouts for every delegate."
+      ],
+      "narration": "When large conferences arrive, sorting daily delegate extras from the master bill slows your front desk down. Operra keeps event folios organized even on low-bandwidth connections, giving your team faster checkouts and completely clear accounts every single time.",
+      "hasVoice": true,
+      "builtAt": "2026-10-03T09:34:50.758Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-03-16-feature-spotlight",
