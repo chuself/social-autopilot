@@ -8375,7 +8375,20 @@
     ],
     "scheduledFor": "2026-10-03T10:00:00.000Z",
     "createdAt": "2026-10-02T18:05:12.941Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-03-13-industry-note.mp4",
+      "beats": [
+        "Messy group bills?",
+        "Separate conference extras instantly.",
+        "Keep front desk operations clear.",
+        "Flawless checkouts for guests."
+      ],
+      "narration": "Managing group arrivals in Mwanza while tracking daily delegate extras can overwhelm your front desk. Operra lets you separate conference extras from main event bills instantly, keeping your operations clear on English and Kiswahili interfaces. Enjoy faster, error-free checkouts.",
+      "hasVoice": true,
+      "builtAt": "2026-10-03T07:04:06.907Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-03-16-feature-spotlight",
