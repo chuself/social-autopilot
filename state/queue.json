@@ -8668,5 +8668,147 @@
       "facebook:1049514968255534_122167590801351110",
       "instagram:18104674088198882"
     ]
+  },
+  {
+    "id": "operra-2026-10-05-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "BIASHARA DAR",
+        "headline": "Bei za vyumba zinabadilika bila taarifa?",
+        "body": "Kupunguza bei kiholela mapokezi kunapunguza faida yako ya mwezi bila wewe kujua."
+      },
+      {
+        "eyebrow": "MFUMO IMARA",
+        "headline": "Kila mabadiliko ya bei yanafuatiliwa",
+        "body": "Operra inarekodi kila override ya bei na sababu yake kwenye mfumo papo hapo."
+      },
+      {
+        "eyebrow": "RIPOTI SAHIHI",
+        "headline": "Hakuna mabadiliko ya siri ya bei",
+        "body": "Dhibiti mapato ya hoteli yako kwa mfumo unaorekodi kila hatua ya mfanyakazi."
+      }
+    ],
+    "caption": "Kama mmiliki wa hoteli Dar es Salaam, huwezi kuwepo mapokezi saa 24. Lakini unahitaji kuwa na uhakika kwamba kila chumba kinauzwa kwa bei sahihi. Operra inakupa audit trail thabiti inayorekodi kila mabadiliko ya bei, punguzo, au kufuta muamala. Hakuna mabadiliko ya siri yanayoweza kupita bila idhini yako. Unapata ripoti safi na zisizo na shaka kila asubuhi.",
+    "hashtags": [
+      "Operra",
+      "HotelManagement",
+      "DarEsSalaam",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "Modern concrete building facade with clean geometric balcony lines in Dar es Salaam, exterior, wide, open horizon, bright, sunlit, airy, hard midday light and strong shadow shapes, no text, no people, no logos",
+    "cta": "Anza na Operra",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-10-05-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-05T05:00:00.000Z",
+    "createdAt": "2026-10-04T21:14:33.481Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "24."
+    ],
+    "slideFiles": [
+      "operra-2026-10-05-08-feature-spotlight-1.png",
+      "operra-2026-10-05-08-feature-spotlight-2.png",
+      "operra-2026-10-05-08-feature-spotlight-3.png"
+    ],
+    "headline": "Bei za vyumba zinabadilika bila taarifa?"
+  },
+  {
+    "id": "operra-2026-10-05-13-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Lost safari extras on operator bills?",
+    "body": "Stop losing revenue to untracked room changes and lunch boxes during the peak Arusha safari season.",
+    "cta": "See how it works",
+    "caption": "Peak safari season in Arusha means rapid changes. A guide requests five extra lunch boxes, or a triple room becomes a double at midnight. If these details aren't logged instantly, they slip off the final operator invoice.\n\nYou only notice weeks later during audit—long after the group has left.\n\nOperra syncs your front desk and billing. Capture every amendment instantly, keeping your invoices accurate and your revenue secure.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariLodge",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "An exterior wide shot of a dusty gravel driveway outside an Arusha safari lodge under a bright, sunlit sky. On the right-of-centre, a stack of vintage canvas safari bags rests under the hard midday light, casting strong, sharp shadow shapes on the ground. The left side of the frame is a visually calm, empty open horizon of dry savannah. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-05T10:00:00.000Z",
+    "createdAt": "2026-10-04T21:14:48.837Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-05-16-number-that-lands",
+    "eyebrow": "Connectivity",
+    "headline": "6 resort modules on low bandwidth",
+    "body": "Operra runs your front desk, housekeeping, POS, pricing, reports, and audit trail smoothly on Zanzibar's slowest connections.",
+    "cta": "See how",
+    "caption": "Shaky internet shouldn't stall your Zanzibar resort operations. \n\nOperra runs all 6 core departments—from beachside POS to front desk audits—on low bandwidth. No lost orders, no delayed checkouts, and no offline data gaps. Keep your team connected even when the connection drops.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition: exterior, wide, open horizon. A single satellite dish mounted on a rustic white coral-stone wall, positioned on the far right. Light/tone: bright, sunlit, airy. Treatment: hard midday light and strong shadow shapes. A vast, clear blue sky occupies the left side of the frame, leaving it visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-05-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-05T13:00:00.000Z",
+    "createdAt": "2026-10-04T21:15:51.694Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-05-20-client-proof",
+    "eyebrow": "Operations",
+    "headline": "Mwanza hotel coordinates rooms on low bandwidth",
+    "body": "Operra connects reception and housekeeping instantly on weak networks, ensuring rooms are ready the moment corporate delegates arrive.",
+    "cta": "See how",
+    "caption": "When regional conferences bring large groups to Mwanza, room turnover has to be fast. One lakeside property uses Operra to sync housekeeping and the front desk on a low-bandwidth connection. No waiting for system updates, no manual room checks—just instant status changes that keep check-ins moving smoothly.",
+    "hashtags": [
+      "MwanzaHotels",
+      "HotelOperations",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "An exterior wide shot of a clean stone-paved terrace overlooking a vast, calm lake under a bright, clear sky. Hard midday light casting strong shadow shapes. The left third of the frame is a plain, sun-bleached concrete wall in shadow. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-05T17:00:00.000Z",
+    "createdAt": "2026-10-04T21:16:27.326Z",
+    "status": "pending"
   }
 ]
