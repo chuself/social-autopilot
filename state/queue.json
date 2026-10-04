@@ -8608,7 +8608,20 @@
     ],
     "scheduledFor": "2026-10-04T13:00:00.000Z",
     "createdAt": "2026-10-03T18:04:15.179Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-04-16-swahili-tip.mp4",
+      "beats": [
+        "Zuia ucheleweshaji check-out",
+        "Tenga gharama za safari mapema",
+        "Mfumo wetu unarahisisha kazi",
+        "Wageni waondoke haraka kwa tabasamu"
+      ],
+      "narration": "Epuka vurugu wakati wa check-out kwa kutenga gharama za safari na chakula cha mikutano mapema. Mfumo wetu unasaidia kuratibu huduma hizi hata kwenye mtandao hafifu, ili wageni wako waondoke kwa haraka na tabasamu bila kusubiri ankara.",
+      "hasVoice": true,
+      "builtAt": "2026-10-04T10:04:33.106Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-04-20-industry-note",
