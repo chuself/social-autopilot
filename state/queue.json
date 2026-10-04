@@ -8563,7 +8563,7 @@
     ],
     "scheduledFor": "2026-10-04T10:00:00.000Z",
     "createdAt": "2026-10-03T18:04:05.765Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-04-13-client-proof.mp4",
       "beats": [
@@ -8575,10 +8575,14 @@
       "narration": "Je, mtandao unasumbua kwenye resort yako? Operra inakusaidia kuunganisha mapokezi, usafi wa vyumba, na migahawa kwa urahisi, hata kukiwa na intaneti ya kusuasua. Simamia kila idara kwa Kiswahili au Kiingereza bila kukwama na uongeze ufanisi wa hoteli yako sasa.",
       "hasVoice": true,
       "builtAt": "2026-10-04T07:04:31.890Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-04T10:05:54.218Z",
+      "postIds": [
+        "instagram:18143400688570352",
+        "facebook:2212440909615451"
+      ]
     },
-    "lastAttempt": "2026-10-04T09:17:27.913Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-04T10:05:54.218Z"
   },
   {
     "id": "operra-2026-10-04-16-swahili-tip",
