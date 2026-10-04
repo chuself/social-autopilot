@@ -8562,7 +8562,20 @@
     ],
     "scheduledFor": "2026-10-04T10:00:00.000Z",
     "createdAt": "2026-10-03T18:04:05.765Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-04-13-client-proof.mp4",
+      "beats": [
+        "Mtandao hafifu hotelini?",
+        "Unganisha mapokezi na migahawa",
+        "Inafanya kazi intaneti ikisumbua",
+        "Usimamizi rahisi usio na kikomo"
+      ],
+      "narration": "Je, mtandao unasumbua kwenye resort yako? Operra inakusaidia kuunganisha mapokezi, usafi wa vyumba, na migahawa kwa urahisi, hata kukiwa na intaneti ya kusuasua. Simamia kila idara kwa Kiswahili au Kiingereza bila kukwama na uongeze ufanisi wa hoteli yako sasa.",
+      "hasVoice": true,
+      "builtAt": "2026-10-04T07:04:31.890Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-04-16-swahili-tip",
