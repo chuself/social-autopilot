@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-10-04T04:14:48.482Z"
+    "missedAt": "2026-10-04T05:15:26.893Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-10-04T04:14:48.476Z"
+    "missedAt": "2026-10-04T05:15:26.888Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-10-04T04:14:48.478Z",
+    "missedAt": "2026-10-04T05:15:26.890Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-04T04:14:48.548Z",
+    "lastAttempt": "2026-10-04T05:16:04.511Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-10-04T04:14:48.478Z",
+    "missedAt": "2026-10-04T05:15:26.890Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-04T04:14:48.549Z",
+    "lastAttempt": "2026-10-04T05:16:04.511Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2479,9 +2479,9 @@
       "builtAt": "2026-09-02T12:02:28.884Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-04T04:14:48.549Z",
+    "lastAttempt": "2026-10-04T05:16:04.511Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-04T04:14:48.482Z"
+    "missedAt": "2026-10-04T05:15:26.893Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-10-04T04:14:48.482Z"
+    "missedAt": "2026-10-04T05:15:26.893Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-10-04T04:14:48.482Z"
+    "missedAt": "2026-10-04T05:15:26.893Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -8251,9 +8251,9 @@
       "builtAt": "2026-10-02T18:23:57.800Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-04T04:14:48.549Z",
+    "lastAttempt": "2026-10-04T05:16:04.511Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-04T04:14:48.482Z"
+    "missedAt": "2026-10-04T05:15:26.893Z"
   },
   {
     "id": "operra-2026-10-02-20-client-proof",
@@ -8519,13 +8519,19 @@
     ],
     "scheduledFor": "2026-10-04T05:00:00.000Z",
     "createdAt": "2026-10-03T18:03:44.710Z",
-    "status": "pending",
+    "status": "posted",
     "slideFiles": [
       "operra-2026-10-04-08-number-that-lands-1.png",
       "operra-2026-10-04-08-number-that-lands-2.png",
       "operra-2026-10-04-08-number-that-lands-3.png"
     ],
-    "headline": "Invoices shouldn't delay your safari groups"
+    "headline": "Invoices shouldn't delay your safari groups",
+    "lastAttempt": "2026-10-04T05:16:04.456Z",
+    "postedAt": "2026-10-04T05:16:04.456Z",
+    "postIds": [
+      "facebook:1049514968255534_122167345479351110",
+      "instagram:18124333555912499"
+    ]
   },
   {
     "id": "operra-2026-10-04-13-client-proof",
