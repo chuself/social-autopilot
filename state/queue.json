@@ -8749,7 +8749,20 @@
     ],
     "scheduledFor": "2026-10-05T10:00:00.000Z",
     "createdAt": "2026-10-04T21:14:48.837Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-05-13-pain-point.mp4",
+      "beats": [
+        "Mapato ya safari yanapotea?",
+        "Dhibiti lunch boxes na mabadiliko.",
+        "Mfumo wa Kiswahili, mtandao wowote.",
+        "Mapato yote yanabaki kwako."
+      ],
+      "narration": "Je unashindwa kufuatilia gharama za lunch boxes na mabadiliko ya vyumba msimu huu wa safari? Operra inakusaidia kuratibu kila kitu kuanzia front desk hadi ripoti za ukaguzi. Inafanya kazi hata kwenye mtandao hafifu kwa Kiswahili na Kiingereza ili usipoteze hata shilingi moja.",
+      "hasVoice": true,
+      "builtAt": "2026-10-05T07:04:41.626Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-05-16-number-that-lands",
