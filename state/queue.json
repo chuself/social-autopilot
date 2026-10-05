@@ -8933,7 +8933,19 @@
     ],
     "scheduledFor": "2026-10-06T10:00:00.000Z",
     "createdAt": "2026-10-05T18:06:36.378Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-06-13-industry-note.mp4",
+      "beats": [
+        "Stop manual checks",
+        "Automate your corporate rates",
+        "Error-free hotel billing"
+      ],
+      "narration": "Tired of manually checking corporate rates for your Dar es Salaam guests? Load recurring business profiles easily. Our system operates smoothly on low-bandwidth connections in Kiswahili and English, ensuring accurate billing and seamless front desk operations.",
+      "hasVoice": true,
+      "builtAt": "2026-10-05T21:11:54.066Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-06-16-feature-spotlight",
