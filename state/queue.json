@@ -8794,7 +8794,20 @@
     ],
     "scheduledFor": "2026-10-05T13:00:00.000Z",
     "createdAt": "2026-10-04T21:15:51.694Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-05-16-number-that-lands.mp4",
+      "beats": [
+        "Slow hotel internet?",
+        "Run six crucial resort modules",
+        "Switch between English and Kiswahili",
+        "Effortless Tanzanian resort management"
+      ],
+      "narration": "If slow connections disrupt your Tanzanian property, run your front desk, housekeeping, POS, and reports smoothly. Our dual Kiswahili and English system keeps your resort fully operational and guest-ready, even on the lowest bandwidth.",
+      "hasVoice": true,
+      "builtAt": "2026-10-05T10:04:59.062Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-05-20-client-proof",
