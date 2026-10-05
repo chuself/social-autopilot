@@ -8854,5 +8854,146 @@
       "facebook:1049514968255534_122167997205351110",
       "instagram:18111029216270044"
     ]
+  },
+  {
+    "id": "operra-2026-10-06-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Usimamizi wa safari",
+        "headline": "Kundi la wapandaji limefika Moshi?",
+        "body": "Changamoto kubwa ni kurekodi matumizi ya ziada ya kila mpandaji kwa usahihi wakati wa pilikapilika."
+      },
+      {
+        "eyebrow": "Kidokezo cha kazi",
+        "headline": "Tenganisha bili za watu binafsi",
+        "body": "Usichanganye gharama za ziada za wapandaji na bili kuu ya kundi. Rekodi kila kitu kikiwa bado kipya."
+      },
+      {
+        "eyebrow": "Operra inasaidia",
+        "headline": "Punguza utata wa malipo",
+        "body": "Tumia mfumo kusajili kila huduma ya ziada papo hapo. Ondoa mzozo wa bili wakati wa kuondoka. Wasiliana nasi."
+      }
+    ],
+    "caption": "Msimu wa wapandaji mlima Kilimanjaro unapoanza, hoteli nyingi Moshi hukumbwa na mrundikano wa bili za ziada. Kundi linafika, kila mtu ana mahitaji tofauti, na mwisho wa siku hesabu hazilingani. Njia bora ni kurekodi kila huduma ya ziada mara tu inapotolewa. Usisubiri muda wa check-out. Kwa kutumia mfumo wa Operra, unaweza kufuatilia kila shughuli kwa usahihi na kuweka bili za makundi na watu binafsi zikiwa zimetenganishwa vyema. Hii inakupa amani ya moyo na wageni wanaondoka wakiwa na imani na huduma yako.",
+    "hashtags": [
+      "#HoteliTanzania",
+      "#MoshiHospitality",
+      "#KilimanjaroTourism",
+      "#Operra"
+    ],
+    "imagePrompt": "minimal line drawing of a leather luggage tag attached to a hiking backpack, composition exterior, wide, open horizon, tone bright, sunlit, airy, treatment hard midday light and strong shadow shapes, no text, no people, no logos",
+    "cta": "Wasiliana nasi leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "backgroundPath": "state/bg/operra-2026-10-06-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-06T05:00:00.000Z",
+    "createdAt": "2026-10-05T18:05:15.342Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-06-08-swahili-tip-1.png",
+      "operra-2026-10-06-08-swahili-tip-2.png",
+      "operra-2026-10-06-08-swahili-tip-3.png"
+    ],
+    "headline": "Kundi la wapandaji limefika Moshi?"
+  },
+  {
+    "id": "operra-2026-10-06-13-industry-note",
+    "eyebrow": "Front Office",
+    "headline": "Automate negotiated corporate rates",
+    "body": "Load recurring business profiles to ensure rate accuracy. Eliminate manual checks for Dar es Salaam corporate accounts.",
+    "cta": "See it work",
+    "caption": "Dar es Salaam business guests expect speed. When corporate travelers return, their negotiated rates and room preferences should be ready before they reach the desk.\n\nOperra keeps corporate profiles updated in real-time. This removes the need to search for old emails to verify a rate. You keep the morning checkout flow fast and your corporate accounts accurate. 💼",
+    "hashtags": [
+      "#DarEsSalaam",
+      "#HotelManagement",
+      "#HospitalityTech"
+    ],
+    "imagePrompt": "Composition: exterior, wide, open horizon. A single professional leather briefcase sits on a clean, sun-bleached stone terrace. Light: bright, sunlit, airy with hard midday light and strong shadow shapes. The left third is an empty, calm stone floor. Right-of-centre focus. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-06-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-06T10:00:00.000Z",
+    "createdAt": "2026-10-05T18:06:36.378Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-06-16-feature-spotlight",
+    "eyebrow": "Audit Trail",
+    "headline": "Kila mabadiliko kwenye ankara yanaonekana",
+    "body": "Operra inatunza historia kamili ya kila shilingi. Hakuna mabadiliko yanayofanyika kwenye ankara za safari bila kuacha alama wazi kwa ajili ya usimamizi wako.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Msimu wa safari hapa Arusha umeshika kasi. Wageni wengi, magari mengi, na foleni ndefu wakati wa kuondoka. Mara nyingi, mabadiliko ya ghafla kwenye ankara za mawakala huleta utata wakati wa kufunga hesabu.\n\nOperra inakupa uhakika kwa kuonyesha kila mabadiliko kwenye ankara ya mgeni papo hapo. Unajua nani alibadilisha nini na lini. Hakuna tena kupoteza muda kuuliza kwanini hesabu hazilingani mwisho wa mwezi. 🔍",
+    "hashtags": [
+      "#HotelManagement",
+      "#ArushaHotels",
+      "#Operra",
+      "#TanzaniaTourism"
+    ],
+    "imagePrompt": "Composition: exterior, wide, open horizon. Light/tone: bright, sunlit, airy. Treatment: hard midday light and strong shadow shapes. Subject: a stack of crisp, printed paper invoices resting on a weathered wooden safari table in an open-air lodge corridor. The left side is a clean, sun-bleached stone wall providing negative space for text. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-06-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-06T13:00:00.000Z",
+    "createdAt": "2026-10-05T18:07:27.711Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-06-20-pain-point",
+    "eyebrow": "Usimamizi wa Fedha",
+    "headline": "Mivurugiko ya fedha za kigeni Zanzibar",
+    "body": "Bili za Dola zinapopanda na kushuka, faida inapotea. Operra inakupa usahihi wa kila shilingi unayopokea kwenye resort yako bila kujali mabadiliko ya soko.",
+    "cta": "Tazama jinsi inavyofanya kazi",
+    "caption": "Wageni wengi Zanzibar wanalipa kwa sarafu tofauti, lakini je, hesabu zako ziko sawa mwisho wa siku? Mara nyingi, mivurugiko ya viwango vya kubadilishia fedha inafuta faida uliyotarajia. \n\nUsikubali kupoteza mapato kwenye kila shilingi. Operra inakupa mwonekano kamili wa mapato yako, ikiondoa utata wa bili za Dola na TZS. Endesha resort yako kwa usahihi na uhakika, hata mtandao unapokuwa hafifu. 💸",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition: exterior, wide, open horizon. Light/tone: bright, sunlit, airy. Treatment: hard midday light and strong shadow shapes. A single, weathered brass currency exchange sign leaning against a whitewashed coral stone wall. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-06-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-06T17:00:00.000Z",
+    "createdAt": "2026-10-05T18:08:22.829Z",
+    "status": "pending"
   }
 ]
