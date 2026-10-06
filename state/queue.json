@@ -8983,7 +8983,20 @@
     ],
     "scheduledFor": "2026-10-06T13:00:00.000Z",
     "createdAt": "2026-10-05T18:07:27.711Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-06-16-feature-spotlight.mp4",
+      "beats": [
+        "Kila shilingi inaonekana",
+        "Hakuna mabadiliko ya siri",
+        "Historia kamili ya ankara",
+        "Udhibiti kamili wa biashara"
+      ],
+      "narration": "Kama mmiliki wa hoteli, unahitaji uhakika wa kila muamala. Operra inatunza historia kamili ya kila mabadiliko yanayofanyika kwenye ankara zako. Hakuna shilingi itakayopotea bila kuacha alama. Hata ukiwa mbali, mfumo wetu unakupa udhibiti wa kisasa na ripoti za uhakika kwa usalama wa biashara yako.",
+      "hasVoice": true,
+      "builtAt": "2026-10-06T10:05:34.700Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-06-20-pain-point",
