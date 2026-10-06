@@ -9044,5 +9044,146 @@
       "facebook:1049514968255534_122168423553351110",
       "instagram:18071187413780980"
     ]
+  },
+  {
+    "id": "operra-2026-10-07-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Operations Check",
+        "headline": "Mwanza conferences shouldn't cause losses",
+        "body": "Small teams often struggle to reconcile conference extras before guests depart."
+      },
+      {
+        "eyebrow": "The Reality",
+        "headline": "Track every transaction change",
+        "body": "Unrecorded extras during peak conference days directly impact your hotel's bottom line."
+      },
+      {
+        "eyebrow": "The Operra Way",
+        "headline": "Audit trail for every bill",
+        "body": "Operra provides a complete audit trail so nothing slips through the cracks. Book your demo."
+      }
+    ],
+    "caption": "Mwanza hotel managers know the pressure of busy conference days. When a meeting room booking turns into extra catering, room service, and AV charges, tracking those items manually is a recipe for revenue leakage. Operra ensures every change to an invoice is logged and visible. By maintaining a clean audit trail, you stop losing money on unrecorded extras. Keep your conference billing tight and your operations running smoothly, even with a small team.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelOperations",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition, a neat stack of leather-bound conference notebooks on a mahogany table. Exterior, wide, open horizon, bright, sunlit, airy. Hard midday light and strong shadow shapes. No text, no people, no logos.",
+    "cta": "Book your demo",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-10-07-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-07T05:00:00.000Z",
+    "createdAt": "2026-10-06T22:40:43.216Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-07-08-number-that-lands-1.png",
+      "operra-2026-10-07-08-number-that-lands-2.png",
+      "operra-2026-10-07-08-number-that-lands-3.png"
+    ],
+    "headline": "Mwanza conferences shouldn't cause losses"
+  },
+  {
+    "id": "operra-2026-10-07-13-client-proof",
+    "eyebrow": "Mapokezi",
+    "headline": "Ankara za makundi Moshi sasa ni dakika chache",
+    "body": "Lodges za Moshi zinakamilisha bili za safari na wapagazi bila makosa. Kila huduma ya ziada inarekodiwa papo hapo kwenye mfumo.",
+    "cta": "Jaribu Operra",
+    "caption": "Wageni wakishuka mlimani wanahitaji huduma ya haraka na sahihi. Operra inasaidia hoteli za Moshi kuunganisha bili za vinywaji, chakula, na gharama za makampuni ya safari bila kusubiri mtandao wa kasi. Hakuna tena kupoteza mapato kwa sababu ya bili zilizosahaulika au kukokotoa kwa mkono wakati wa haraka. Hesabu zako zinabaki salama na wazi kwa kila muamala.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#Kilimanjaro",
+      "#OperraTech"
+    ],
+    "imagePrompt": "Composition: exterior, wide, open horizon. Subject: A heavy, professional metal flask and a folded trail map on a bright stone terrace. Light/tone: bright, sunlit, airy. Treatment: hard midday light and strong shadow shapes. Left side visually calm with empty sky and stone wall, detail concentrated on the right. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-07T10:00:00.000Z",
+    "createdAt": "2026-10-06T22:42:15.267Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-07-16-swahili-tip",
+    "eyebrow": "Mapokezi",
+    "headline": "Hakiki LPO za makampuni kabla ya mgeni kufika",
+    "body": "Epuka foleni za asubuhi Dar kwa kukamilisha uthibitisho wa malipo ya makampuni mapema kabla ya mgeni kufika.",
+    "cta": "Jaribu Operra leo",
+    "caption": "Wageni wa makampuni Dar es Salaam hawapendi kuchelewa asubuhi. Foleni ya check-out inapotokea kisa LPO haijathibitishwa, unamharibia mteja siku yake.\n\nHakiki LPO zote siku moja kabla. Operra inakusaidia kuweka kumbukumbu hizi vizuri ili asubuhi ya check-out iwe ya sekunde chache tu.",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaam",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition: exterior, wide, open horizon. A clean wooden clipboard holding a printed corporate invoice and a metal pen on an outdoor concrete terrace table. Light/tone: bright, sunlit, airy. Treatment: hard midday light and strong shadow shapes. The clipboard is placed on the right-of-centre, leaving the left side visually calm with a clean, sun-drenched concrete surface and sharp shadows. no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-07T13:00:00.000Z",
+    "createdAt": "2026-10-06T22:42:37.374Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-07-20-industry-note",
+    "eyebrow": "Operations Strategy",
+    "headline": "Standardize your safari operator billing in Arusha",
+    "body": "Peak season creates messy paperwork. Establish a single folio system for all safari extras to ensure instant reconciliation and faster checkout for tour operators and agents.",
+    "cta": "See how it works",
+    "caption": "Arusha is buzzing as safari groups start arriving in full force. Managing group billing shouldn't keep you awake past midnight. When tour operator extras are tracked on separate, shifting sheets, your profit leaks out the door before the final invoice is even printed. Standardize your billing process now to ensure every lunch, laundry service, and park fee is captured in real-time. Keep your records clean and your departures smooth this season. 🦒",
+    "hashtags": [
+      "#ArushaHoteliers",
+      "#TanzaniaTourism",
+      "#SafariOperations",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "A single set of leather-bound binoculars resting on a rough-hewn acacia wood table. Composition: exterior, wide, open horizon. Light/tone: bright, sunlit, airy. Treatment: hard midday light and strong shadow shapes, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-07-20-industry-note.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-07T17:00:00.000Z",
+    "createdAt": "2026-10-06T22:45:45.082Z",
+    "status": "pending"
   }
 ]
