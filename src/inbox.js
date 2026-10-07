@@ -44,6 +44,89 @@ export async function writeOffset(offset) {
   await writeFile(OFFSET, JSON.stringify({ offset }, null, 2));
 }
 
+/** Where the hub's update stream is up to: a separate count from Telegram's. */
+export const HUB_OFFSET = path.join(ROOT, "state", "hub-offset.json");
+
+/**
+ * Instructions sent through the command center: by Ellie (send_to_agent) or by
+ * the owner in Alice's hub chat. Handled exactly like a Telegram message, inside
+ * channel "hub" so button answers and photo downloads go back to the hub, and
+ * what was asked is echoed to Telegram so the owner's phone shows the whole
+ * conversation. The hub key is the authentication: only the owner's hub can
+ * write there, so its updates are the owner's.
+ *
+ * Never throws; returns what the caller needs to persist and dispatch.
+ */
+export async function pollHub() {
+  const out = { handled: 0, changed: false, replan: false, preview: false, dispatch: [] };
+  const { hubConfigured, channel, notify: say } = await import("./notify.js");
+  if (!hubConfigured()) return out;
+  let offset = 0;
+  try {
+    offset = existsSync(HUB_OFFSET) ? JSON.parse(await readFile(HUB_OFFSET, "utf8")).offset ?? 0 : 0;
+  } catch {
+    offset = 0;
+  }
+  let updates = [];
+  try {
+    const base = process.env.HUB_TG_BASE.replace(/\/$/, "");
+    const res = await fetch(`${base}/bot${process.env.HUB_BOT_TOKEN}/getUpdates?offset=${offset}&timeout=0`, {
+      signal: AbortSignal.timeout(20_000),
+    });
+    const json = await res.json();
+    if (!json.ok) throw new Error(json.description ?? `HTTP ${res.status}`);
+    updates = json.result ?? [];
+  } catch (err) {
+    console.warn(`hub poll: ${err.message.slice(0, 120)}`);
+    return out;
+  }
+  if (!updates.length) return out;
+
+  const owner = String(process.env.TELEGRAM_CHAT_ID);
+  let next = offset;
+  for (const u of updates) {
+    next = Math.max(next, u.update_id + 1);
+    const cbq = u.callback_query;
+    const msg = u.message;
+    if (cbq?.message?.chat) cbq.message.chat.id = owner;
+    if (msg?.chat) msg.chat.id = owner;
+    const isPhoto = Boolean(msg?.photo?.length || msg?.document);
+    if (!cbq && !isPhoto && !msg?.text) continue;
+    try {
+      // The owner's phone sees what was asked, not only Alice's answer.
+      if (msg?.text) {
+        await echoToTelegram(`💬 <i>Via the command center:</i> ${escapeHtml(msg.text.slice(0, 500))}`);
+      }
+      const r = await channel.run("hub", () =>
+        cbq ? handleCallback(cbq) : isPhoto ? handlePhoto(msg, owner) : handleMessage(msg.text, owner)
+      );
+      out.handled++;
+      out.changed ||= Boolean(r.changed);
+      out.replan ||= Boolean(r.replan);
+      out.preview ||= Boolean(r.preview);
+      out.dispatch.push(...(r.dispatch ?? []));
+      console.log(`[hub ${r.kind}] ${cbq ? "button" : isPhoto ? "photo" : `"${msg.text.slice(0, 50)}"`}`);
+    } catch (err) {
+      console.error(`hub handling failed: ${err.message}`);
+      await say(`I could not handle that — ${err.message.slice(0, 120)}`).catch(() => {});
+    }
+  }
+  await writeFile(HUB_OFFSET, JSON.stringify({ offset: next }, null, 2));
+  out.changed = true; // the offset itself must be committed
+  return out;
+}
+
+/** A line on Telegram only (no hub copy: the hub already shows the message). */
+async function echoToTelegram(text) {
+  if (!process.env.TELEGRAM_BOT_TOKEN || !process.env.TELEGRAM_CHAT_ID) return;
+  const base = (process.env.TELEGRAM_API_BASE || "https://api.telegram.org").replace(/\/$/, "");
+  await fetch(`${base}/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ chat_id: process.env.TELEGRAM_CHAT_ID, text, parse_mode: "HTML", disable_notification: true }),
+  }).catch(() => {});
+}
+
 /**
  * @param {number} offset
  * @param {number} timeoutSec  0 = return immediately; >0 = hold the connection

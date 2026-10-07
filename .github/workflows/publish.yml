@@ -82,6 +82,8 @@ jobs:
           METRICOOL_USER_ID: ${{ vars.METRICOOL_USER_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
+          HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: node src/cli-publish-reel.js
@@ -106,6 +108,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
+          HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: node -e "import('./src/notify.js').then(m=>m.notifyFailure('Publishing FAILED.','See the Actions log.'))"

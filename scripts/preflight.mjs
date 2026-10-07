@@ -761,13 +761,28 @@ await check(
   "telegram reachable",
   async () => {
     if (!process.env.TELEGRAM_BOT_TOKEN) throw new Error("TELEGRAM_BOT_TOKEN is not set");
-    const r = await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/getMe`);
+    const base = (process.env.TELEGRAM_API_BASE || "https://api.telegram.org").replace(/\/$/, "");
+    const r = await fetch(`${base}/bot${process.env.TELEGRAM_BOT_TOKEN}/getMe`);
     const j = await r.json();
     if (!j.ok) throw new Error(j.description ?? "getMe failed");
     if (!process.env.TELEGRAM_CHAT_ID) return { warn: `@${j.result.username}, but TELEGRAM_CHAT_ID is not set` };
     return `@${j.result.username}`;
   },
   { group: "creds", net: true }
+);
+
+// The command center (Ellie's hub): optional second channel beside Telegram.
+await check(
+  "command center link",
+  async () => {
+    const { hubConfigured } = await import("../src/notify.js");
+    if (!hubConfigured()) return { warn: "not linked - Ellie cannot see or instruct Alice (set HUB_TG_BASE and HUB_BOT_TOKEN)" };
+    const r = await fetch(`${process.env.HUB_TG_BASE.replace(/\/$/, "")}/bot${process.env.HUB_BOT_TOKEN}/getMe`, { signal: AbortSignal.timeout(15_000) });
+    const j = await r.json().catch(() => ({}));
+    if (!j.ok) throw new Error(j.description ?? `HTTP ${r.status}`);
+    return `linked as ${j.result.first_name}`;
+  },
+  { group: "creds", net: true, level: "warn" }
 );
 
 await check(

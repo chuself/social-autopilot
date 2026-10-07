@@ -6,7 +6,7 @@
  * This runs on a schedule so a message still lands if that chain ever breaks.
  */
 import {
-  botToken, readOffset, writeOffset, fetchUpdates, handleMessage, handlePhoto, handleCallback,
+  botToken, readOffset, writeOffset, fetchUpdates, handleMessage, handlePhoto, handleCallback, pollHub,
 } from "./inbox.js";
 
 if (!botToken()) {
@@ -14,10 +14,15 @@ if (!botToken()) {
   process.exit(0);
 }
 
+// The command center's instructions too, so the safety net covers both channels.
+const hub = await pollHub();
+if (hub.handled) console.log(`hub: ${hub.handled} message(s)`);
+if (hub.replan) console.log("REPLAN_REQUESTED");
+
 const offset = await readOffset();
 const updates = await fetchUpdates(offset, 0);
 
-if (!updates.length) {
+if (!updates.length && !hub.dispatch.length) {
   console.log("no new messages");
   process.exit(0);
 }
@@ -25,7 +30,7 @@ if (!updates.length) {
 let newOffset = offset;
 let replan = false;
 let handled = 0;
-const toDispatch = new Set();
+const toDispatch = new Set(hub.dispatch);
 
 for (const u of updates) {
   newOffset = Math.max(newOffset, u.update_id + 1);
@@ -49,7 +54,7 @@ for (const u of updates) {
   console.log(`[${r.kind}] ${cbq ? "button" : isPhoto ? "photo" : msg.text.slice(0, 60)}`);
 }
 
-await writeOffset(newOffset);
+if (updates.length) await writeOffset(newOffset);
 console.log(`processed ${updates.length} update(s), ${handled} message(s)`);
 if (replan) console.log("REPLAN_REQUESTED");
 

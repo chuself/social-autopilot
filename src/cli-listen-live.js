@@ -14,8 +14,9 @@ import { promisify } from "node:util";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import {
-  botToken, readOffset, writeOffset, fetchUpdates, handleMessage, handlePhoto, handleCallback, REPLAN,
+  botToken, readOffset, writeOffset, fetchUpdates, handleMessage, handlePhoto, handleCallback, REPLAN, pollHub,
 } from "./inbox.js";
+import { hubConfigured } from "./notify.js";
 import { heartbeat, lastRunTimes } from "./heartbeat.js";
 
 const run = promisify(execFile);
@@ -28,7 +29,9 @@ if (!botToken()) {
 
 const minutes = Number(process.env.LIVE_MINUTES ?? 55);
 const deadline = Date.now() + minutes * 60_000;
-const POLL_SECONDS = Number(process.env.POLL_SECONDS ?? 45);
+// With the command center connected, a shorter Telegram hold means Ellie's
+// instructions (polled between holds) wait at most ~20 s, not 45.
+const POLL_SECONDS = Number(process.env.POLL_SECONDS ?? (hubConfigured() ? 20 : 45));
 
 console.log(`listening for ${minutes} minutes (long poll ${POLL_SECONDS}s)…`);
 let handled = 0;
@@ -52,6 +55,16 @@ while (Date.now() < deadline) {
   // Before the long poll, not after: a poll that blocks for 45 seconds must
   // never be what delays a due post.
   await tick();
+
+  // The command center first: instant (no hold), so it never delays Telegram.
+  const hub = await pollHub();
+  if (hub.handled || hub.changed) {
+    handled += hub.handled;
+    if (hub.changed) await commitState();
+    if (hub.replan) await triggerReplan();
+    if (hub.preview) await dispatch("looks-preview");
+    for (const w of new Set(hub.dispatch)) await dispatch(w);
+  }
 
   let updates = [];
   try {

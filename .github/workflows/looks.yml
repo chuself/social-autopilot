@@ -25,6 +25,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
+          HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
         run: node src/cli-looks.js
 
       - name: Clear the request

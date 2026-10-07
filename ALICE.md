@@ -40,13 +40,23 @@ The owner's entire involvement is a Telegram conversation.
 | image.pollinations.ai | Backgrounds | Free, keyless |
 | Microsoft Edge TTS | Voice fallback, real `sw-TZ` | Free, keyless |
 | Telegram Bot API | Control channel | Free |
+| Command center (Ellie's hub) | Second channel: Ellie reads and instructs her | Own AWS |
 | CallMeBot | WhatsApp alert mirror | Free, one-way |
 | Google Sheets | Human review surface | Free |
 
 **Credentials she holds:** `FB_PAGE_ID`, `FB_PAGE_ACCESS_TOKEN` (never expires),
 `IG_USER_ID`, `GEMINI_API_KEY`, `GROQ_API_KEY`, `TELEGRAM_BOT_TOKEN`,
 `TELEGRAM_CHAT_ID`, `METRICOOL_KEY`, `METRICOOL_OAUTH`, `CALLMEBOT_*`,
-`GOOGLE_SERVICE_ACCOUNT_JSON`, `SHEET_ID`.
+`GOOGLE_SERVICE_ACCOUNT_JSON`, `SHEET_ID`, and optionally `HUB_TG_BASE` + `HUB_BOT_TOKEN`.
+
+**Linked to Ellie (2026-10-07).** With `HUB_TG_BASE` (`https://<hub>/tg`) and
+`HUB_BOT_TOKEN` (Alice's agent key on the hub) set, everything she sends on
+Telegram is copied to her chat in the command center, and the listeners poll the
+hub for instructions between Telegram polls. Ellie (or the owner, in the hub)
+sends her a message; she answers on both, and the hub relays her answer to
+Ellie's chat. Telegram stays the primary channel and is untouched if the hub is
+down. A hub button is answered on the hub, never on Telegram (message ids differ).
+Offline test: `node scripts/test-hub-bridge.mjs`.
 
 **What she cannot do:** re-authorise OAuth, connect a new platform account, pass
 Meta app review, or spend money.

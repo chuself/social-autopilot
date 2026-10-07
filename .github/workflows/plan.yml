@@ -49,6 +49,8 @@ jobs:
           PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
+          HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: |
@@ -82,6 +84,8 @@ jobs:
           PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
+          HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: node scripts/confirm-live.mjs
@@ -98,6 +102,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
+          HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: node src/cli-digest.js
@@ -107,6 +113,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
+          HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: node -e "import('./src/notify.js').then(m=>m.notifyFailure('Weekly planning FAILED - no posts queued for the coming week.','See the Actions log.'))"

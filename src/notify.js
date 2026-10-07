@@ -5,9 +5,50 @@
  * Everything no-ops silently when unconfigured, so the pipeline never fails
  * just because notifications are not set up yet.
  */
+import { AsyncLocalStorage } from "node:async_hooks";
+
 // TELEGRAM_API_BASE lets the command center stand in for Telegram (same API).
-const TG = () => (process.env.TELEGRAM_API_BASE || "https://api.telegram.org").replace(/\/$/, "");
+const TG_BASE = () => (process.env.TELEGRAM_API_BASE || "https://api.telegram.org").replace(/\/$/, "");
+
+/**
+ * The command center (Ellie's hub) as a second channel beside Telegram, not
+ * instead of it. HUB_TG_BASE is the hub's Telegram look-alike
+ * (https://<hub>/tg) and HUB_BOT_TOKEN is Alice's agent key there. Everything
+ * Alice says on Telegram is copied to her hub chat, where Ellie can read it, and
+ * the hub is polled for instructions alongside Telegram (inbox.js pollHub). A
+ * hub failure never touches the Telegram path.
+ */
+const HUB_BASE = () => (process.env.HUB_TG_BASE || "").replace(/\/$/, "");
+export function hubConfigured() {
+  return Boolean(HUB_BASE() && process.env.HUB_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
+}
+
+/** "hub" while handling an update that came from the hub: button answers and downloads go back there. */
+export const channel = new AsyncLocalStorage();
+const fromHub = () => channel.getStore() === "hub" && hubConfigured();
+const TG = () => (fromHub() ? HUB_BASE() : TG_BASE());
 const API = () => `${TG()}/bot`;
+const TOKEN = () => (fromHub() ? process.env.HUB_BOT_TOKEN : process.env.TELEGRAM_BOT_TOKEN);
+
+/** Copy one Telegram call to the hub. Best effort: logged, never thrown. */
+async function mirrorToHub(method, body) {
+  if (!hubConfigured()) return false;
+  try {
+    const isForm = body instanceof FormData;
+    const res = await fetch(`${HUB_BASE()}/bot${process.env.HUB_BOT_TOKEN}/${method}`, {
+      method: "POST",
+      headers: isForm ? undefined : { "content-type": "application/json" },
+      body: isForm ? body : JSON.stringify(body),
+      signal: AbortSignal.timeout(30_000),
+    });
+    const json = await res.json().catch(() => ({}));
+    if (!json.ok) console.warn(`hub ${method} failed: ${json.description ?? res.status}`);
+    return json.ok === true;
+  } catch (err) {
+    console.warn(`hub ${method} failed: ${err.message.slice(0, 120)}`);
+    return false;
+  }
+}
 
 export function notifyConfigured() {
   return Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
@@ -62,18 +103,20 @@ function keyboard(buttons) {
 }
 
 async function sendTelegram(text, silent, buttons) {
-  const res = await fetch(`${API()}${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+  const body = {
+    chat_id: process.env.TELEGRAM_CHAT_ID,
+    text,
+    parse_mode: "HTML",
+    disable_web_page_preview: true,
+    disable_notification: silent,
+    reply_markup: keyboard(buttons),
+  };
+  const res = await fetch(`${TG_BASE()}/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({
-      chat_id: process.env.TELEGRAM_CHAT_ID,
-      text,
-      parse_mode: "HTML",
-      disable_web_page_preview: true,
-      disable_notification: silent,
-      reply_markup: keyboard(buttons),
-    }),
+    body: JSON.stringify(body),
   });
+  await mirrorToHub("sendMessage", body);
   const json = await res.json();
   if (!json.ok) {
     console.error(`Telegram failed: ${json.description ?? res.status}`);
@@ -87,8 +130,8 @@ async function sendTelegram(text, silent, buttons) {
  * then marks the tap as failed, so this has to happen before any slow work.
  */
 export async function answerCallback(callbackId, text = "") {
-  if (!process.env.TELEGRAM_BOT_TOKEN) return false;
-  const res = await fetch(`${API()}${process.env.TELEGRAM_BOT_TOKEN}/answerCallbackQuery`, {
+  if (!TOKEN()) return false;
+  const res = await fetch(`${API()}${TOKEN()}/answerCallbackQuery`, {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ callback_query_id: callbackId, text: text.slice(0, 200) }),
@@ -98,8 +141,10 @@ export async function answerCallback(callbackId, text = "") {
 
 /** Take the buttons off a message once its decision has been made. */
 export async function clearButtons(chatId, messageId, newText = null) {
-  if (!process.env.TELEGRAM_BOT_TOKEN) return false;
-  const base = `${API()}${process.env.TELEGRAM_BOT_TOKEN}`;
+  // A hub message id is not a Telegram one: editing "message 41" on the wrong
+  // channel would rewrite an unrelated message, so this goes where the tap came from.
+  if (!TOKEN()) return false;
+  const base = `${API()}${TOKEN()}`;
   const body = { chat_id: chatId, message_id: messageId };
   const endpoint = newText ? "editMessageText" : "editMessageReplyMarkup";
   if (newText) {
@@ -127,7 +172,7 @@ export async function clearButtons(chatId, messageId, newText = null) {
  * and the path expires within the hour — so fetch it now, not later.
  */
 export async function downloadTelegramFile(fileId, destPath) {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const token = TOKEN();
   if (!token) throw new Error("TELEGRAM_BOT_TOKEN is not set");
 
   const meta = await (await fetch(`${API()}${token}/getFile?file_id=${encodeURIComponent(fileId)}`)).json();
@@ -192,17 +237,19 @@ export async function sendVideo(videoUrl, caption) {
     console.log(`[video not sent — Telegram not configured] ${videoUrl}`);
     return false;
   }
-  const res = await fetch(`${API()}${process.env.TELEGRAM_BOT_TOKEN}/sendVideo`, {
+  const body = {
+    chat_id: process.env.TELEGRAM_CHAT_ID,
+    video: videoUrl,
+    caption: caption.slice(0, 1000),
+    parse_mode: "HTML",
+    supports_streaming: true,
+  };
+  const res = await fetch(`${TG_BASE()}/bot${process.env.TELEGRAM_BOT_TOKEN}/sendVideo`, {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify({
-      chat_id: process.env.TELEGRAM_CHAT_ID,
-      video: videoUrl,
-      caption: caption.slice(0, 1000),
-      parse_mode: "HTML",
-      supports_streaming: true,
-    }),
+    body: JSON.stringify(body),
   });
+  await mirrorToHub("sendVideo", body);
   const json = await res.json();
   if (!json.ok) {
     console.error(`sendVideo failed: ${json.description ?? res.status}`);
@@ -238,10 +285,11 @@ export async function sendPhoto(filePath, caption, { buttons = null } = {}) {
   if (markup) form.append("reply_markup", JSON.stringify(markup));
   form.append("photo", new Blob([bytes], { type: "image/png" }), path.basename(filePath));
 
-  const res = await fetch(`${API()}${process.env.TELEGRAM_BOT_TOKEN}/sendPhoto`, {
+  const res = await fetch(`${TG_BASE()}/bot${process.env.TELEGRAM_BOT_TOKEN}/sendPhoto`, {
     method: "POST",
     body: form,
   });
+  await mirrorToHub("sendPhoto", form);
   const json = await res.json();
   if (!json.ok) {
     console.error(`sendPhoto failed: ${json.description ?? res.status}`);
