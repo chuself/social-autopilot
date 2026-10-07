@@ -9235,5 +9235,146 @@
       "facebook:1049514968255534_122168837901351110",
       "instagram:18115520333047268"
     ]
+  },
+  {
+    "id": "operra-2026-10-08-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Zanzibar",
+        "headline": "Mapato ya Dola yanapungua kimya kimya?",
+        "body": "Mabadiliko ya viwango vya fedha na kamisheni za OTA zinameza faida ya resort yako bila wewe kujua."
+      },
+      {
+        "eyebrow": "Ripoti halisi",
+        "headline": "Linganisha mapato na makato ya mawakala",
+        "body": "Operra inatenganisha kodi na kamisheni za mawakala kiotomatiki. Unaona kiasi kinachobaki mfukoni kila siku."
+      },
+      {
+        "eyebrow": "Udhibiti",
+        "headline": "Jua faida halisi baada ya makato",
+        "body": "Hakuna tena mkanganyiko wa mahesabu ya Dola mwisho wa mwezi. Pata ripoti sahihi za faida yako halisi."
+      }
+    ],
+    "caption": "Kwa hoteli za Zanzibar, changamoto si kupata wageni tu, bali ni kulinda faida baada ya makato ya OTA na mabadiliko ya thamani ya Shilingi. Operra inarahisisha mahesabu haya magumu. Ripoti zetu zinakuonyesha mapato ghafi na mapato halisi baada ya kuondoa kamisheni na tofauti za viwango vya kubadilishia fedha. Unapata takwimu sahihi za biashara yako bila kutumia masaa mengi kwenye Excel. Simamia resort yako kwa uwazi zaidi leo.",
+    "hashtags": [
+      "Operra",
+      "ZanzibarHospitality",
+      "HotelManagementTZ",
+      "UtaliiZanzibar"
+    ],
+    "imagePrompt": "A traditional Zanzibar brass-studded wooden chest (Sanduku la Sifa) sitting on a stone veranda. Exterior at dusk, deep blue hour, cool and quiet. Warm interior light glowing from a doorway in the background against a cool sky. No text, no people, no logos.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-10-08-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-08T05:00:00.000Z",
+    "createdAt": "2026-10-07T18:06:31.777Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-08-08-feature-spotlight-1.png",
+      "operra-2026-10-08-08-feature-spotlight-2.png",
+      "operra-2026-10-08-08-feature-spotlight-3.png"
+    ],
+    "headline": "Mapato ya Dola yanapungua kimya kimya?"
+  },
+  {
+    "id": "operra-2026-10-08-13-pain-point",
+    "eyebrow": "Usimamizi wa POS",
+    "headline": "Bili za baa zinapotea Mwanza",
+    "body": "Vinywaji vinavyotolewa kwenye baa mara nyingi havina rekodi sahihi mwisho wa siku. Operra inafunga mianya hii kwa POS inayokaa kwenye mtandao wako.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Unapoona hesabu za baa hazilingani na stoku mwishoni mwa zamu, jua kuna kitu kimepotea. Hili ni tatizo la kawaida kwa mahoteli mengi Mwanza wakati wa mikutano mikubwa. Badala ya kupoteza mapato kwenye vitu vidogo, tumia mfumo unaorekodi kila kinywaji papo hapo. Operra inafanya kazi hata mtandao ukiwa hafifu, ikikupa uhakika wa mapato yako kila unapofunga hesabu za siku. 🍹",
+    "hashtags": [
+      "#HoteliTanzania",
+      "#MwanzaHotels",
+      "#Operra",
+      "#HospitalityTZ"
+    ],
+    "imagePrompt": "A single, empty crystal glass resting on a polished dark mahogany bar counter. Composition : exterior at dusk. Light/tone : deep blue hour, cool and quiet. Treatment : warm interior light glowing against a cool sky. The glass is positioned on the right-of-centre, leaving the left side of the image as a dark, empty shadow. no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-08-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-08T10:00:00.000Z",
+    "createdAt": "2026-10-07T18:15:48.835Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-08-16-number-that-lands",
+    "eyebrow": "Operations",
+    "headline": "Sync 6 departments on low bandwidth",
+    "body": "Coordinate front desk, housekeeping, and POS in Moshi. Stay updated during the climbing season even when the connection is weak.",
+    "cta": "Book a demo",
+    "caption": "Kilimanjaro groups bring a specific kind of pressure to Moshi properties. Between laundry for trekking gear and high-volume bar tabs, manual tracking leads to leakage.\n\nOperra runs 6 core departments on a single dashboard designed for low bandwidth. You see every transaction across the property instantly. Keep your billing accurate and your audit trail clean without relying on a perfect internet connection.",
+    "hashtags": [
+      "MoshiHotels",
+      "KilimanjaroHospitality",
+      "OperraTech",
+      "HotelOperations"
+    ],
+    "imagePrompt": "A set of professional trekking poles leaning against a dark stone pillar on a quiet veranda. Composition: exterior at dusk. Light/tone: deep blue hour, cool and quiet. Treatment: warm interior light glowing from a nearby window against a cool sky. Detail is right-of-centre, with the left third being a visually calm, dark shadowy wall. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-08-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-08T13:00:00.000Z",
+    "createdAt": "2026-10-07T18:19:02.010Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-08-20-client-proof",
+    "eyebrow": "Ankara",
+    "headline": "Ankara za mikutano bila mivutano Dar",
+    "body": "Hoteli za biashara sasa zinakamilisha bili za makampuni kwa usahihi, huku kila muamala ukiwa na rekodi inayoeleweka.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wageni wa makampuni wakimaliza mikutano, wanahitaji ankara zao zikiwa tayari bila makosa. Dar es Salaam, kasi ya biashara hairuhusu ucheleweshaji.\n\nHoteli zinazotumia Operra sasa zinakamilisha bili za mikutano mikubwa kwa urahisi. Mfumo unaunganisha mapokezi na POS, hivyo kila oda inaingia kwenye ankara moja kwa moja. Hakuna tena malumbano na wateja kuhusu huduma za ziada, kwani kila kitu kinaonekana kwenye audit trail. 💼",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaam",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "A professional leather bill folder resting on a clean stone table on a terrace. Composition: exterior at dusk. Light/tone: deep blue hour, cool and quiet. Treatment: warm interior light glowing against a cool sky. The folder is placed right-of-centre, leaving the left side visually calm with empty space. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-08-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-08T17:00:00.000Z",
+    "createdAt": "2026-10-07T18:20:19.418Z",
+    "status": "pending"
   }
 ]
