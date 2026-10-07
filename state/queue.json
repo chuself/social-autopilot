@@ -9128,7 +9128,20 @@
     ],
     "scheduledFor": "2026-10-07T10:00:00.000Z",
     "createdAt": "2026-10-06T22:42:15.267Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-07-13-client-proof.mp4",
+      "beats": [
+        "Ankara za makundi",
+        "Bili za wapagazi bila makosa",
+        "Inafanya kazi mtandao ukiwa chini",
+        "Usimamizi wa lodge bila usumbufu"
+      ],
+      "narration": "Kufanya hesabu za makundi ya safari na wapagazi huko Moshi sasa ni rahisi sana. Ukiwa na Operra, kila huduma inarekodiwa papo hapo, hata kukiwa na changamoto za mtandao. Rahisisha mapokezi na uondoe makosa yote ya ankara leo.",
+      "hasVoice": true,
+      "builtAt": "2026-10-07T07:04:07.909Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-07-16-swahili-tip",
