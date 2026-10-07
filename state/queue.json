@@ -9174,7 +9174,20 @@
     ],
     "scheduledFor": "2026-10-07T13:00:00.000Z",
     "createdAt": "2026-10-06T22:42:37.374Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-07-16-swahili-tip.mp4",
+      "beats": [
+        "Epuka foleni za asubuhi mapokezi",
+        "Hakiki LPO zote mapema sana",
+        "Mfumo unafanya kazi mtandao ukiwa chini",
+        "Wageni wako wataondoka kwa tabasamu"
+      ],
+      "narration": "Ondoa usumbufu wa foleni za asubuhi mapokezi kwako. Ukiwa na Operra, unaweza kuhakiki LPO za makampuni mapema kabla wageni hawajafika. Mfumo wetu unafanya kazi vizuri hata mtandao ukiwa wa chini, ukihakikisha wageni wako wanahudumiwa kwa haraka na amani.",
+      "hasVoice": true,
+      "builtAt": "2026-10-07T10:03:51.168Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-07-20-industry-note",
