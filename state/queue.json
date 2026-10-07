@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-07T06:19:22.349Z",
+    "lastAttempt": "2026-10-07T07:04:21.486Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-07T06:19:22.350Z",
+    "lastAttempt": "2026-10-07T07:04:21.486Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2479,7 +2479,7 @@
       "builtAt": "2026-09-02T12:02:28.884Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-07T06:19:22.350Z",
+    "lastAttempt": "2026-10-07T07:04:21.486Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-10-07T06:19:22.302Z"
   },
@@ -8251,7 +8251,7 @@
       "builtAt": "2026-10-02T18:23:57.800Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-07T06:19:22.350Z",
+    "lastAttempt": "2026-10-07T07:04:21.486Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-10-07T06:19:22.302Z"
   },
@@ -9141,7 +9141,9 @@
       "hasVoice": true,
       "builtAt": "2026-10-07T07:04:07.909Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-07T07:04:21.487Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-10-07-16-swahili-tip",
