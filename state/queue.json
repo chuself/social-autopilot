@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-10-07T12:21:39.622Z"
+    "missedAt": "2026-10-07T13:21:56.293Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-10-07T12:21:39.617Z"
+    "missedAt": "2026-10-07T13:21:56.286Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-10-07T12:21:39.619Z",
+    "missedAt": "2026-10-07T13:21:56.288Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-10-07T12:21:39.619Z",
+    "missedAt": "2026-10-07T13:21:56.289Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-10-07T12:21:39.675Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-07T12:21:39.622Z"
+    "missedAt": "2026-10-07T13:21:56.293Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-10-07T12:21:39.622Z"
+    "missedAt": "2026-10-07T13:21:56.293Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-10-07T12:21:39.622Z"
+    "missedAt": "2026-10-07T13:21:56.293Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -8253,7 +8253,7 @@
     },
     "lastAttempt": "2026-10-07T12:21:39.675Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-07T12:21:39.622Z"
+    "missedAt": "2026-10-07T13:21:56.293Z"
   },
   {
     "id": "operra-2026-10-02-20-client-proof",
@@ -8477,7 +8477,7 @@
     "heldFigures": [
       "00"
     ],
-    "missedAt": "2026-10-07T12:21:39.622Z"
+    "missedAt": "2026-10-07T13:21:56.293Z"
   },
   {
     "id": "operra-2026-10-04-08-number-that-lands",
@@ -8720,7 +8720,7 @@
       "operra-2026-10-05-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinabadilika bila taarifa?",
-    "missedAt": "2026-10-07T12:21:39.622Z"
+    "missedAt": "2026-10-07T13:21:56.293Z"
   },
   {
     "id": "operra-2026-10-05-13-pain-point",
@@ -9178,7 +9178,7 @@
     ],
     "scheduledFor": "2026-10-07T13:00:00.000Z",
     "createdAt": "2026-10-06T22:42:37.374Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-07-16-swahili-tip.mp4",
       "beats": [
@@ -9190,10 +9190,14 @@
       "narration": "Ondoa usumbufu wa foleni za asubuhi mapokezi kwako. Ukiwa na Operra, unaweza kuhakiki LPO za makampuni mapema kabla wageni hawajafika. Mfumo wetu unafanya kazi vizuri hata mtandao ukiwa wa chini, ukihakikisha wageni wako wanahudumiwa kwa haraka na amani.",
       "hasVoice": true,
       "builtAt": "2026-10-07T10:03:51.168Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-07T13:23:06.200Z",
+      "postIds": [
+        "instagram:18064682720788185",
+        "facebook:1089904667114797"
+      ]
     },
-    "lastAttempt": "2026-10-07T12:21:39.675Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-07T13:23:06.200Z"
   },
   {
     "id": "operra-2026-10-07-20-industry-note",
