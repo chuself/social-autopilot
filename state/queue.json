@@ -9423,5 +9423,144 @@
       "facebook:1049514968255534_122169299637351110",
       "instagram:17908951425561011"
     ]
+  },
+  {
+    "id": "operra-2026-10-09-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Msimu wa Safari",
+        "headline": "Bili za wageni wa vikundi zinachanganya?",
+        "body": "Msimu wa watalii ukiwa kileleni Arusha, ankara za huduma za ziada hupotea kwa urahisi sana."
+      },
+      {
+        "eyebrow": "Ushauri wa Leo",
+        "headline": "Tenganisha vinywaji na 'extras' mapema",
+        "body": "Usiwasubiri wageni waondoke. Rekodi kila oda ya ziada kwenye chumba chake maalum papo hapo."
+      },
+      {
+        "eyebrow": "Operra Suluhisho",
+        "headline": "Ankara za 'operators' ziko tayari",
+        "body": "Idara zote sita zinasawazishwa kwa pamoja kwenye dashibodi moja, hata kukiwa na mtandao hafifu."
+      }
+    ],
+    "caption": "Msimu wa watalii Arusha unakuja na changamoto ya ankara za 'extras' kama vinywaji na huduma za ziada. Mara nyingi, ankara hizi hupotea au kuchanganyikana na vocha kuu ya wakala wa safari (Tour Operator). Ushauri wetu: weka mfumo unaotenganisha gharama hizi tangu siku ya kwanza. Operra inakuwezesha kusimamia mapokezi, baa, na migahawa kwa pamoja, hata kwenye mtandao hafifu wa intaneti. Zuia upotevu wa mapato msimu huu.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelManagement",
+      "OperraTech"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Subject: A stack of clean canvas safari duffel bags stacked neatly on a rustic wooden luggage rack. Tone: deep blue hour, cool and quiet. Treatment: warm interior light glowing against a cool sky. No text, no people, no logos",
+    "cta": "Jaribu Operra sasa",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-10-09-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-09T05:00:00.000Z",
+    "createdAt": "2026-10-08T18:04:15.130Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-09-08-swahili-tip-1.png",
+      "operra-2026-10-09-08-swahili-tip-2.png",
+      "operra-2026-10-09-08-swahili-tip-3.png"
+    ],
+    "headline": "Bili za wageni wa vikundi zinachanganya?"
+  },
+  {
+    "id": "operra-2026-10-09-13-industry-note",
+    "eyebrow": "Resort Operations",
+    "headline": "Reconcile long-stay folios daily",
+    "body": "Stop letting weeks of F&B and room charges pile up. Sync your front desk and POS to avoid check-out delays.",
+    "cta": "Book a demo",
+    "caption": "Extended stays are booming in Zanzibar, but they come with a billing challenge. Weeks of resort dining, laundry, and room charges quickly turn into a complex multi-currency folio.\n\nWaiting until check-out to reconcile these leads to long disputes at the front desk. Successful resorts post POS charges to the room bill instantly.\n\nOperra keeps your front desk and POS connected on low-bandwidth connections, making check-out seamless.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelOperations",
+      "ResortManagement"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Subject: A neat stack of folded white resort towels with a single fresh frangipani flower on top, resting on a weathered teak sunlounger on a terrace. Light/tone: deep blue hour, cool and quiet. Treatment: warm interior light from a nearby villa glowing against a cool sky. No text, no people, no logos. Keep the left third visually calm with empty twilight sky.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-09T10:00:00.000Z",
+    "createdAt": "2026-10-08T18:04:29.881Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-09-16-feature-spotlight",
+    "eyebrow": "POS Billing",
+    "headline": "Post restaurant bills straight to guest rooms",
+    "body": "Your lakeside restaurant and front desk sync instantly. No more lost dining chits or delayed morning checkouts.",
+    "cta": "See it work",
+    "caption": "A corporate guest is rushing to catch their flight from Mwanza, but their dinner bill from last night is still sitting as a paper slip at the bar.\n\nOperra connects your restaurant POS directly to the front desk. The moment a transaction is closed, it updates the guest's folio. No manual posting, no lost revenue, and zero checkout delays.\n\nKeep your departments perfectly in sync.",
+    "hashtags": [
+      "HotelManagement",
+      "MwanzaHotels",
+      "HotelPOS",
+      "Operra"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Subject: A modern thermal receipt printer with a clean paper receipt curling out, sitting on a dark wooden bar counter. Light/tone: deep blue hour, cool and quiet. Treatment: warm interior light glowing against a cool sky. The printer is positioned on the right-of-centre, leaving the left side visually calm with a soft, out-of-focus background of quiet lake waters. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-09T13:00:00.000Z",
+    "createdAt": "2026-10-08T18:04:47.090Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-09-20-pain-point",
+    "eyebrow": "Reservations",
+    "headline": "Double-booked during the Moshi peak season?",
+    "body": "Stop scrambling when walk-in climbing operators and online channels claim the same room. Keep your inventory synced instantly.",
+    "cta": "See it work",
+    "caption": "When peak climbing season hits Moshi, a manual reservation book is a liability. A local tour leader walks in to secure rooms for a descending group, just as an online booking drops.\n\nWith Operra, your front desk and booking channels stay in sync. No double-bookings, no awkward conversations in the lobby, and no frantic room shuffling. Just smooth arrivals.",
+    "hashtags": [
+      "MoshiHotels",
+      "HotelManagement",
+      "Operra"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Subject: A pair of professional trekking boots resting on a clean stone veranda of a mountain lodge. Light/tone: deep blue hour, cool and quiet. Treatment: warm golden light glowing from the lodge window in the background. The boots are placed right-of-centre, leaving the left side of the frame as a clean, soft-focus stone wall. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-09T17:00:00.000Z",
+    "createdAt": "2026-10-08T18:05:03.563Z",
+    "status": "pending"
   }
 ]
