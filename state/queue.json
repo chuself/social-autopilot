@@ -9320,7 +9320,7 @@
     ],
     "scheduledFor": "2026-10-08T10:00:00.000Z",
     "createdAt": "2026-10-07T18:15:48.835Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-08-13-pain-point.mp4",
       "beats": [
@@ -9332,10 +9332,13 @@
       "narration": "Je, unajua vinywaji vingapi vinatoka bila risiti kwenye baa yako? Operra inakupa mfumo wa POS unaofanya kazi hata kwenye mtandao hafifu wa hapa nchini. Ziba mianya yote ya upotevu na uanze kupata ripoti sahihi za mauzo yako kila siku.",
       "hasVoice": true,
       "builtAt": "2026-10-08T07:04:40.954Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-08T10:04:45.230Z",
+      "postIds": [
+        "instagram:18152603881476923"
+      ]
     },
-    "lastAttempt": "2026-10-08T09:53:03.063Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-08T10:04:45.230Z"
   },
   {
     "id": "operra-2026-10-08-16-number-that-lands",
