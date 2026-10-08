@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-10-08T12:54:50.743Z"
+    "missedAt": "2026-10-08T13:55:21.387Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-10-08T12:54:50.736Z"
+    "missedAt": "2026-10-08T13:55:21.380Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-10-08T12:54:50.739Z",
+    "missedAt": "2026-10-08T13:55:21.383Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-10-08T12:54:50.739Z",
+    "missedAt": "2026-10-08T13:55:21.383Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-10-08T12:54:50.823Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-08T12:54:50.743Z"
+    "missedAt": "2026-10-08T13:55:21.387Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-10-08T12:54:50.743Z"
+    "missedAt": "2026-10-08T13:55:21.387Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-10-08T12:54:50.743Z"
+    "missedAt": "2026-10-08T13:55:21.387Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -8253,7 +8253,7 @@
     },
     "lastAttempt": "2026-10-08T12:54:50.823Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-08T12:54:50.743Z"
+    "missedAt": "2026-10-08T13:55:21.388Z"
   },
   {
     "id": "operra-2026-10-02-20-client-proof",
@@ -8477,7 +8477,7 @@
     "heldFigures": [
       "00"
     ],
-    "missedAt": "2026-10-08T12:54:50.743Z"
+    "missedAt": "2026-10-08T13:55:21.388Z"
   },
   {
     "id": "operra-2026-10-04-08-number-that-lands",
@@ -8720,7 +8720,7 @@
       "operra-2026-10-05-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinabadilika bila taarifa?",
-    "missedAt": "2026-10-08T12:54:50.743Z"
+    "missedAt": "2026-10-08T13:55:21.388Z"
   },
   {
     "id": "operra-2026-10-05-13-pain-point",
@@ -9369,7 +9369,7 @@
     ],
     "scheduledFor": "2026-10-08T13:00:00.000Z",
     "createdAt": "2026-10-07T18:19:02.010Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-08-16-number-that-lands.mp4",
       "beats": [
@@ -9380,10 +9380,13 @@
       "narration": "When the climbing season hits Moshi, slow connections shouldn't stop your business. Seamlessly coordinate housekeeping, front desk, and POS in English or Kiswahili. Keep your property running flawlessly even on low bandwidth.",
       "hasVoice": true,
       "builtAt": "2026-10-08T10:03:28.788Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-08T13:56:04.208Z",
+      "postIds": [
+        "instagram:17905583877583072"
+      ]
     },
-    "lastAttempt": "2026-10-08T12:54:50.823Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-08T13:56:04.208Z"
   },
   {
     "id": "operra-2026-10-08-20-client-proof",
