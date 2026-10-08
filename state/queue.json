@@ -9500,7 +9500,20 @@
     ],
     "scheduledFor": "2026-10-09T10:00:00.000Z",
     "createdAt": "2026-10-08T18:04:29.881Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-09-13-industry-note.mp4",
+      "beats": [
+        "Stop check-out delays",
+        "Reconcile long-stay folios daily",
+        "Sync front desk and POS",
+        "Faster, stress-free guest departures"
+      ],
+      "narration": "Don't let weeks of restaurant and room charges pile up. Operra syncs your front desk and POS instantly, even on low-bandwidth Tanzanian connections. Reconcile long-stay folios daily to prevent frustrating check-out delays and keep your guests smiling.",
+      "hasVoice": true,
+      "builtAt": "2026-10-08T19:15:59.884Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-09-16-feature-spotlight",
