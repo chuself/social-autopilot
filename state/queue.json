@@ -9366,7 +9366,19 @@
     ],
     "scheduledFor": "2026-10-08T13:00:00.000Z",
     "createdAt": "2026-10-07T18:19:02.010Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-08-16-number-that-lands.mp4",
+      "beats": [
+        "Weak hotel internet?",
+        "Sync all six departments easily.",
+        "Flawless peak season operations."
+      ],
+      "narration": "When the climbing season hits Moshi, slow connections shouldn't stop your business. Seamlessly coordinate housekeeping, front desk, and POS in English or Kiswahili. Keep your property running flawlessly even on low bandwidth.",
+      "hasVoice": true,
+      "builtAt": "2026-10-08T10:03:28.788Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-08-20-client-proof",
