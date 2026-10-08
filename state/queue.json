@@ -9320,7 +9320,20 @@
     ],
     "scheduledFor": "2026-10-08T10:00:00.000Z",
     "createdAt": "2026-10-07T18:15:48.835Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-08-13-pain-point.mp4",
+      "beats": [
+        "Bili zinapotea baa",
+        "Vinywaji vinatoka bila rekodi",
+        "Inafanya kazi mtandao hafifu",
+        "Udhibiti kamili wa mapato yako"
+      ],
+      "narration": "Je, unajua vinywaji vingapi vinatoka bila risiti kwenye baa yako? Operra inakupa mfumo wa POS unaofanya kazi hata kwenye mtandao hafifu wa hapa nchini. Ziba mianya yote ya upotevu na uanze kupata ripoti sahihi za mauzo yako kila siku.",
+      "hasVoice": true,
+      "builtAt": "2026-10-08T07:04:40.954Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-08-16-number-that-lands",
