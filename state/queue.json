@@ -9612,5 +9612,146 @@
       "facebook:1049514968255534_122169786651351110",
       "instagram:18137375569628119"
     ]
+  },
+  {
+    "id": "operra-2026-10-10-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Corporate Rush",
+        "headline": "Morning corporate checkouts allow no delays",
+        "body": "Dar business travellers expect prompt folios. Language friction in your software slows down morning departures."
+      },
+      {
+        "eyebrow": "Shift Handovers",
+        "headline": "English-only platforms cause costly billing mistakes",
+        "body": "When night auditors struggle with complex terminology, corporate meal allowances and taxes get misapplied."
+      },
+      {
+        "eyebrow": "Total Clarity",
+        "headline": "Full Kiswahili and English interface",
+        "body": "Operra keeps front desk, POS, and audit trails clear in both languages for faster corporate checkouts."
+      }
+    ],
+    "caption": "Dar es Salaam business hotels move fast. When corporate guests check out for morning flights or early board meetings, delays at the desk cost you corporate contracts. Operra features a native Kiswahili and English interface across front desk, housekeeping, POS, pricing, reports, and the audit trail. Give your team the operational clarity to post accurately, close folios faster, and keep corporate accounts returning.",
+    "hashtags": [
+      "#DarHotels",
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#OperraTech"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Tone: deep blue hour, cool and quiet. Treatment: warm interior light glowing against a cool sky. Subject: A slim, tailored executive leather briefcase sitting upright beside an outdoor teak lounge chair on a hotel veranda, with floor-to-ceiling glass windows revealing a warm, lit lobby interior behind. No text, no people, no logos.",
+    "cta": "Simplify your operations",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-10-10-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-10T05:00:00.000Z",
+    "createdAt": "2026-10-09T18:05:30.993Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-10-08-number-that-lands-1.png",
+      "operra-2026-10-10-08-number-that-lands-2.png",
+      "operra-2026-10-10-08-number-that-lands-3.png"
+    ],
+    "headline": "Morning corporate checkouts allow no delays"
+  },
+  {
+    "id": "operra-2026-10-10-13-client-proof",
+    "eyebrow": "Front Desk",
+    "headline": "Fast safari checkouts in Arusha",
+    "body": "An Arusha safari lodge coordinates group departures smoothly on low bandwidth, keeping billing accurate without relying on high-speed internet.",
+    "cta": "See it work",
+    "caption": "When a safari group is departing for the parks at dawn, there is no room for billing delays.\n\nAn Arusha lodge manages peak-season checkouts smoothly using Operra on low bandwidth. Front desk and restaurant bills stay synced even when connection drops, keeping departures strictly on schedule.\n\nSimplify your lodge operations.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariLodge",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Subject: A neat stack of classic canvas and leather safari duffel bags resting on a polished wooden veranda floor. Light/tone: deep blue hour, cool and quiet. Treatment: warm interior light from a lodge window glowing against a cool sky. The left side is visually calm with soft shadows, keeping the main subject right-of-centre. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-10T10:00:00.000Z",
+    "createdAt": "2026-10-09T18:08:57.281Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-10-16-swahili-tip",
+    "eyebrow": "Bili na Fedha",
+    "headline": "Dhibiti bili za wageni wa muda mrefu Zanzibar",
+    "body": "Usisubiri siku ya kuondoka kuhakiki matumizi yao. Kagua na utoe ankara za majaribio kila baada ya siku saba.",
+    "cta": "Jaribu Operra",
+    "caption": "Wageni wa muda mrefu kwenye resort za Zanzibar wakikaa wiki mbili au tatu, bili zao za ziada (extras) zinaweza kuwa ndefu sana. Usisubiri siku ya kuondoka kufanya ukaguzi.\n\nFanya hivi: Kagua na uchapishe ankara ya majaribio kila baada ya siku saba. Mgeni athibitishe matumizi yake ya dola au shilingi mapema ili kuepuka mivutano ya viwango vya kubadilisha fedha asubuhi ya check-out.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelOperations",
+      "#Operra",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Subject: A single, clean white ceramic coffee cup on a saucer, resting on a dark wooden table on an open-air resort veranda. Tone: deep blue hour, cool and quiet. Treatment: warm interior light from the villa glowing against a cool twilight sky. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-10T13:00:00.000Z",
+    "createdAt": "2026-10-09T18:10:01.424Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-10-20-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Manage regional workshops with a lean team",
+    "body": "Coordinate your front desk, hall bookings, and restaurant orders on one simple system built for small teams.",
+    "cta": "See it work",
+    "caption": "Mwanza is seeing a steady rise in regional corporate workshops, but managing them shouldn't overwhelm a small team. When staff must manually track conference halls, room packages, and restaurant bills, errors happen.\n\nOperra simplifies your operations. Coordinate your front desk, POS, and daily billing on a single dashboard that runs reliably even on low-bandwidth connections. Keep your team lean and your billing precise.",
+    "hashtags": [
+      "MwanzaHotels",
+      "HotelManagement",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "Composition: exterior at dusk. Subject: A single classic brass desk bell resting on a polished dark wooden terrace table. Light/tone: deep blue hour, cool and quiet. Treatment: warm interior light from a lobby window glowing in the background against a cool sky, with the left third of the frame kept as empty dark space. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-10T17:00:00.000Z",
+    "createdAt": "2026-10-09T18:10:16.260Z",
+    "status": "pending"
   }
 ]
