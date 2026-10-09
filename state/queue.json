@@ -9552,7 +9552,20 @@
     ],
     "scheduledFor": "2026-10-09T13:00:00.000Z",
     "createdAt": "2026-10-08T18:04:47.090Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-09-16-feature-spotlight.mp4",
+      "beats": [
+        "Bili za migahawa",
+        "Zinaenda moja kwa moja chumbani",
+        "Bila intaneti ya kasi",
+        "Check-out ya haraka asubuhi"
+      ],
+      "narration": "Uchovu wa kupoteza risiti za chakula umeisha. Operra inaunganisha mgahawa wako na mapokezi papo hapo, hata kwa mtandao wa chini. Bili zote za wateja zinaenda moja kwa moja kwenye vyumba vyao. Furahia check-out ya haraka asubuhi bila usumbufu wowote.",
+      "hasVoice": true,
+      "builtAt": "2026-10-09T10:14:39.946Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-09-20-pain-point",
