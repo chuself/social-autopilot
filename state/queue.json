@@ -9691,7 +9691,20 @@
     ],
     "scheduledFor": "2026-10-10T10:00:00.000Z",
     "createdAt": "2026-10-09T18:08:57.281Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-10-13-client-proof.mp4",
+      "beats": [
+        "Checkout za haraka",
+        "Hata kukiwa na mtandao mdogo",
+        "Dhibiti mapokezi na hesabu zote",
+        "Wageni wanaondoka kwa furaha"
+      ],
+      "narration": "Karatasi na mtandao mzito havipaswi kuchelewesha wageni wako wa safari Arusha. Mfumo wetu unarahisisha checkout ya vikundi hata kukiwa na mtandao mdogo. Simamia mapokezi, huduma za vyumba na malipo kwa usahihi, kwa Kiswahili au Kiingereza, ili wageni waondoke kwa furaha.",
+      "hasVoice": true,
+      "builtAt": "2026-10-09T18:48:35.152Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-10-16-swahili-tip",
