@@ -9747,7 +9747,20 @@
     ],
     "scheduledFor": "2026-10-10T13:00:00.000Z",
     "createdAt": "2026-10-09T18:10:01.424Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-10-16-swahili-tip.mp4",
+      "beats": [
+        "Bili za wageni zinakuumiza kichwa Zanzibar?",
+        "Toa ankara kila siku saba.",
+        "Fuatilia ripoti hata mtandao ukiwa hafifu.",
+        "Hakuna hasara siku ya check-out."
+      ],
+      "narration": "Usisubiri mgeni wa muda mrefu aondoke ndipo ukague bili zake. Ukiwa na Operra, unafuatilia mapokezi, POS na ripoti hata mtandao ukiwa hafifu, kwa Kiswahili safi. Toa ankara kila wiki, dhibiti mapato yako, na uepuke migogoro wakati wa kuondoka.",
+      "hasVoice": true,
+      "builtAt": "2026-10-10T12:35:40.863Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-10-20-industry-note",
