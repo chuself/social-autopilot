@@ -9743,7 +9743,20 @@
     ],
     "scheduledFor": "2026-10-10T13:00:00.000Z",
     "createdAt": "2026-10-09T18:10:01.424Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-10-16-swahili-tip.mp4",
+      "beats": [
+        "Usisubiri mpaka mgeni aondoke",
+        "Dhibiti bili za wageni Zanzibar",
+        "Toa ankara kila siku saba",
+        "Epuka hasara za malipo hotellini"
+      ],
+      "narration": "Usisubiri mpaka mgeni wa muda mrefu aondoke ndio ukague bili yake. Dhibiti matumizi ya wageni wako Zanzibar kwa kutoa ankara za majaribio kila baada ya siku saba. Mfumo wa Operra unakuwezesha kufuatilia mauzo na ripoti kwa Kiswahili na Kiingereza bila usumbufu.",
+      "hasVoice": true,
+      "builtAt": "2026-10-10T10:03:56.525Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-10-20-industry-note",
