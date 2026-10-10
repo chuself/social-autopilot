@@ -9802,5 +9802,147 @@
       "facebook:1049514968255534_122170234449351110",
       "instagram:18125730380510328"
     ]
+  },
+  {
+    "id": "operra-2026-10-11-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Msimu wa Moshi",
+        "headline": "Makundi ya mlimani yanafika kwa pamoja?",
+        "body": "Wageni wamechoka wanahitaji vyumba haraka. Mapokezi bado yanapiga simu kuuliza kama vyumba viko tayari?"
+      },
+      {
+        "eyebrow": "Taarifa za Usafi",
+        "headline": "Hali ya chumba inasasishwa papo hapo",
+        "body": "Housekeeping wakimaliza kusafisha, mfumo unasasisha taarifa mara moja bila uhitaji wa simu au karatasi."
+      },
+      {
+        "eyebrow": "Bila Ucheleweshaji",
+        "headline": "Check-in ya haraka kwa wageni wote",
+        "body": "Operra inasaidia kugawa vyumba mara moja na kuondoa msongamano mapokezi wakati wa msimu wa kilele."
+      }
+    ],
+    "caption": "Wageni wanapotoka Mlima Kilimanjaro, wanahitaji maji ya moto na chumba safi bila kuchelewa. Kupigiana simu kati ya mapokezi na idara ya usafi wakati wa msimu wa kilele huleta kero na kuchelewesha check-in. Operra inaunganisha housekeeping na mapokezi ili chumba kikisafishwa, taarifa ionekane papo hapo. Wageni wako wanaingia vyumbani mapema bila msongamano.",
+    "hashtags": [
+      "MoshiHotels",
+      "TanzaniaHospitality",
+      "HotelManagement",
+      "OperraTech"
+    ],
+    "imagePrompt": "A heavy canvas travel duffel bag resting on a dark wooden bench in a hotel hallway, wide shot with deep perspective, tone warm, golden low sun, long shadows, dark overall, treatment soft window light, gentle film grain, no text, no people, no logos",
+    "cta": "Anza na Operra",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Moshi",
+    "backgroundPath": null,
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-11T05:00:00.000Z",
+    "createdAt": "2026-10-10T18:03:19.077Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-11-08-feature-spotlight-1.png",
+      "operra-2026-10-11-08-feature-spotlight-2.png",
+      "operra-2026-10-11-08-feature-spotlight-3.png"
+    ],
+    "headline": "Makundi ya mlimani yanafika kwa pamoja?"
+  },
+  {
+    "id": "operra-2026-10-11-13-pain-point",
+    "eyebrow": "Corporate Billing",
+    "headline": "Unbilled corporate extras at month-end?",
+    "body": "When corporate guests in Dar es Salaam check out without posted restaurant tabs, your finance team spends days untangling city ledger disputes instead of collecting payments.",
+    "cta": "See Operra live",
+    "caption": "Corporate clients expect clean, accurate monthly statements. But when restaurant or room service extras in Dar es Salaam are posted late, month-end billing turns into endless phone calls and unpaid invoices.\n\nOperra keeps your front desk and POS synced across departments, even on low-bandwidth connections. Every charge hits the guest folio instantly, so corporate invoices are ready for approval the moment check-out happens. Keep your city ledger accurate and cash flow moving.",
+    "hashtags": [
+      "#DarEsSalaamHotels",
+      "#HotelManagement",
+      "#HospitalityTanzania",
+      "#Operra"
+    ],
+    "imagePrompt": "Wide shot with deep perspective. A neatly organized stack of printed invoices and a fountain pen resting on a dark wooden executive desk on the right side. Warm, golden low sun coming through a window, long shadows, dark overall tone. Soft window light, gentle film grain. Left side is plain dark wall in soft shadow. No text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-11T10:00:00.000Z",
+    "createdAt": "2026-10-10T18:03:34.444Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-11-16-number-that-lands",
+    "eyebrow": "Lodge Operations",
+    "headline": "Run 6 core departments on low bandwidth",
+    "body": "Keep front desk, housekeeping, POS, pricing, reports, and audit trails connected seamlessly in Arusha, even when safari season internet connection drops.",
+    "cta": "See it work",
+    "caption": "When peak safari season hits Arusha, tour operator checkouts cannot wait for a dropped internet connection. Delayed group folios mean missed departure schedules and untracked extras. Operra keeps front desk, housekeeping, POS, pricing, reports, and audit trails fully synchronized on low-bandwidth connections. Keep your safari lodge billing running without missing a beat.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariLodge",
+      "#TanzaniaHospitality",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of vintage safari binoculars resting on a dark teak table on a lodge veranda, with shadowed acacia tree silhouettes off to the right. Warm, golden low sun, long shadows, dark overall tone. Soft window light, gentle film grain. The left side is a calm shadowed veranda wall. no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-11T13:00:00.000Z",
+    "createdAt": "2026-10-10T18:03:46.076Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-11-20-client-proof",
+    "eyebrow": "Front Desk",
+    "headline": "Keep Zanzibar guest folios updated on low bandwidth",
+    "body": "Front desk, housekeeping, and POS stay fully connected across your resort, even when island internet slows down.",
+    "cta": "See it work",
+    "caption": "Unstable internet shouldn't slow down checkouts or room postings at your property in Zanzibar. Resorts across the island rely on Operra to keep front desk, housekeeping, and POS running smoothly on low-bandwidth connections. Every charge posts directly to the folio without delays or missing records.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#HospitalityTech",
+      "#Operra"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of a traditional carved Zanzibar teak table with a dark guest folio folder on the right side. Warm, golden low sun casting long shadows, dark overall tone. Soft window light with gentle film grain. Plain dark wall and deep shadows on the left third. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-11T17:00:00.000Z",
+    "createdAt": "2026-10-10T18:04:04.311Z",
+    "status": "pending"
   }
 ]
