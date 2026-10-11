@@ -9887,7 +9887,7 @@
     ],
     "scheduledFor": "2026-10-11T10:00:00.000Z",
     "createdAt": "2026-10-10T18:03:34.444Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-11-13-pain-point.mp4",
       "beats": [
@@ -9899,10 +9899,14 @@
       "narration": "Wageni wa makampuni wanapoondoka bila bill zao za mgahawa kuwekwa kwenye mfumo, timu yako ya fedha inapoteza siku nyingi kutatua migogoro badala ya kukusanya fedha. Unganisha mapokezi na mgahawa kwa mfumo unaofanya kazi hata mtandao ukiwa chini.",
       "hasVoice": true,
       "builtAt": "2026-10-11T07:03:10.599Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-11T10:05:46.435Z",
+      "postIds": [
+        "instagram:17948049657344058",
+        "facebook:2206830370717669"
+      ]
     },
-    "lastAttempt": "2026-10-11T09:20:33.950Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-11T10:05:46.435Z"
   },
   {
     "id": "operra-2026-10-11-16-number-that-lands",
