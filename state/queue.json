@@ -9994,5 +9994,147 @@
       "facebook:1049514968255534_122170617975351110",
       "instagram:17913312975472021"
     ]
+  },
+  {
+    "id": "operra-2026-10-12-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Tip ya Operesheni",
+        "headline": "Mikutano Mwanza: Timu yako inazidiwa?",
+        "body": "Wageni wa mikutano wakifika kwa pamoja asubuhi, uratibu wa vyumba na huduma unakuwa mgumu."
+      },
+      {
+        "eyebrow": "Hatua Rahisi",
+        "headline": "Tenga vyumba siku moja kabla",
+        "body": "Panga vyumba vya washiriki mapema. Housekeeping iwe na orodha kamili kabla ukumbi haujafunguliwa."
+      },
+      {
+        "eyebrow": "Ufumbuzi",
+        "headline": "Unganisha mapokezi na usafi papo hapo",
+        "body": "Operra inaonyesha hali ya vyumba mara moja kwa mtandao wowote. Punguza mshikemshike mapokezi."
+      }
+    ],
+    "caption": "Kuendesha hoteli Mwanza wakati wa mikutano ya kikanda kunahitaji kasi, hata ukiwa na timu ndogo. Ukiandaa orodha ya vyumba mapema na kuipa timu ya usafi taarifa kabla ya wageni kuwasili, unapunguza kero mapokezi. Operra inaunganisha mapokezi na housekeeping kwenye mfumo mmoja unaofanya kazi hata mtandao ukiwa dhaifu. Okoa muda na uongeze ufanisi.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelTanzania",
+      "#HospitalityTZ",
+      "#OperraTech"
+    ],
+    "imagePrompt": "wide shot with deep perspective of a polished wooden tray with neatly stacked ceramic tea cups and a silver thermos flask prepared for a conference break, warm, golden low sun, long shadows, dark overall, soft window light, gentle film grain, no text, no people, no logos",
+    "cta": "Anza na Operra",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-10-12-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-12T05:00:00.000Z",
+    "createdAt": "2026-10-11T18:04:04.813Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-12-08-swahili-tip-1.png",
+      "operra-2026-10-12-08-swahili-tip-2.png",
+      "operra-2026-10-12-08-swahili-tip-3.png"
+    ],
+    "headline": "Mikutano Mwanza: Timu yako inazidiwa?"
+  },
+  {
+    "id": "operra-2026-10-12-13-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Keep mountain guide tabs distinct from group stays",
+    "body": "Moshi peak season surges bring rapid turnovers. Separate crew allowances and climber folios early to eliminate end-of-trek billing disputes.",
+    "cta": "See how it works",
+    "caption": "High season in Moshi brings dozens of climbing groups through your doors at once. Between gear storage, crew meals, and last-minute room adjustments, billing can quickly turn chaotic.\n\nKeep guide allowances, extra luggage fees, and client room charges clearly separated on individual folios from day one. When tour operators settle the final bill, every line item is already verified.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of sturdy wooden walking poles leaning near a dark timber luggage rack in a lodge entryway. Warm, golden low sun, long shadows, dark overall tone. Soft window light, gentle film grain. The left side is an empty dark wall in deep shadow, main detail right of centre. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-12T10:00:00.000Z",
+    "createdAt": "2026-10-11T18:04:21.739Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-12-16-feature-spotlight",
+    "eyebrow": "Mapokezi",
+    "headline": "Mahesabu ya zamu ya mapokezi yakamilike kwa haraka",
+    "body": "Operra inakusanya malipo yote ya taslimu, kadi na ankara za makampuni papo hapo. Hakuna mahesabu yanayokwama au kupotea wakati wa kubadili zamu Dar es Salaam.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Saa ya kubadili zamu mapokezi ikifika, mahesabu ya pesa taslimu na kadi yanatakiwa yalingane bila kuchelewa. Hoteli za biashara Dar es Salaam zina mzunguko mkubwa wa wageni siku nzima.\n\nOperra inaratibu kila muamala wa zamu—kuanzia malipo ya chumba hadi ankara za makampuni—katika ripoti moja iliyo wazi. Hakuna haja ya kupitia risiti moja baada ya nyingine au kutafuta fedha zilizopungua. Zamu inakamilika haraka na kwa amani.",
+    "hashtags": [
+      "#TanzaniaHospitality",
+      "#DarEsSalaamHotels",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "A wide shot with deep perspective of a dark leather folio folder resting on a dark mahogany reception counter, right of centre. Left side features a plain dark shadowed wall in soft focus. Warm, golden low sun, long shadows, dark overall. Soft window light, gentle film grain. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-12-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-12T13:00:00.000Z",
+    "createdAt": "2026-10-11T18:11:57.439Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-12-20-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Tour operator rooming lists changing on arrival?",
+    "body": "When safari vehicles pull into Arusha with swapped room allocations, front desk needs instant room reassignment without losing track of housekeeping status.",
+    "cta": "Book a demo",
+    "caption": "A tour operator confirms a rooming list on Monday, but the safari vehicles arrive in Arusha with swapped pairings and last-minute twin bed requests.\n\nFront desk scrambles. Housekeeping has no idea which rooms need turning over, and check-in stalls while weary guests wait in the lobby.\n\nOperra reassigns rooms and updates housekeeping instantly across a shared dashboard. Even on low-bandwidth connections, your front desk handles peak season arrivals without missing a beat.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HotelOperations",
+      "#FrontDeskManagement",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of a heavy wooden clipboard holding a blank group manifest sheet resting on a dark timber console table positioned right-of-centre. Warm, golden low sun cutting across the room, casting long shadows, dark overall. The left third is visually calm with deep shadow and an uncluttered textured plaster wall. Soft window light, gentle film grain, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-12-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-12T17:00:00.000Z",
+    "createdAt": "2026-10-11T18:13:50.080Z",
+    "status": "pending"
   }
 ]
