@@ -10264,7 +10264,20 @@
     ],
     "scheduledFor": "2026-10-13T10:00:00.000Z",
     "createdAt": "2026-10-12T18:06:10.642Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-13-13-client-proof.mp4",
+      "beats": [
+        "Ripoti zinachelewa tena?",
+        "Mtandao hafifu sio kizuizi tena.",
+        "Unganisha mapokezi na mgahawa kwa urahisi.",
+        "Hesabu kamili kwa wakati bila kuchelewa."
+      ],
+      "narration": "Msimu wa mikutano ukichangamka, mtandao hafifu usikwamishe hoteli yako. Ukiwa na mfumo unaounganisha mapokezi na mgahawa hata intaneti ikiwa ya kusuasua, unafunga ripoti kwa haraka na kuweka hesabu zote sawa bila kuchelewa hata kidogo.",
+      "hasVoice": true,
+      "builtAt": "2026-10-12T21:43:29.130Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-13-16-swahili-tip",
