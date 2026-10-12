@@ -10185,5 +10185,147 @@
       "facebook:1049514968255534_122171058099351110",
       "instagram:17992966674061223"
     ]
+  },
+  {
+    "id": "operra-2026-10-13-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Zanzibar resorts",
+        "headline": "Foreign currency gaps erode resort margins",
+        "body": "Guests arrive on foreign currency bookings while local extras accumulate in Shillings. Manual conversions invite disputes."
+      },
+      {
+        "eyebrow": "Audit trail",
+        "headline": "Lock conversion rates across pricing",
+        "body": "Apply set rates directly to front desk and POS folios. Every change stays recorded in the audit trail."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Clear settlements for resort stays",
+        "body": "Operra unifies front desk, POS, pricing, and reports. Low-bandwidth reliability for Zanzibar coastal properties."
+      }
+    ],
+    "caption": "Zanzibar resorts balance foreign currency deposits against local on-property spend every day. When front desk and restaurant tabs rely on manual exchange calculations, checkout disputes follow. Operra connects front desk, POS, pricing, and reports with a built-in audit trail. Keep guest folios accurate, protect your margins, and run smoothly even on low-bandwidth island connections. Explore simplified resort management built for East Africa.",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelOperations",
+      "ResortManagement",
+      "EastAfricaHospitality"
+    ],
+    "imagePrompt": "wide shot with deep perspective of a wall-mounted wooden rate exchange board with slotted brass channels beside an arched lime-plastered coastal window, warm, golden low sun, long shadows, dark overall, soft window light, gentle film grain, no text, no people, no logos",
+    "cta": "See Operra live",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-10-13-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-13T05:00:00.000Z",
+    "createdAt": "2026-10-12T18:05:13.163Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-13-08-number-that-lands-1.png",
+      "operra-2026-10-13-08-number-that-lands-2.png",
+      "operra-2026-10-13-08-number-that-lands-3.png"
+    ],
+    "headline": "Foreign currency gaps erode resort margins"
+  },
+  {
+    "id": "operra-2026-10-13-13-client-proof",
+    "eyebrow": "Ripoti",
+    "headline": "Ripoti za mikutano Mwanza zinafungwa bila kuchelewa",
+    "body": "Hoteli za Mwanza zinazohudumia mikutano zinafunga ripoti za mapokezi na migahawa kwa wakati, hata mtandao ukiwa wa kusuasua.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mkutano wa kikanda umemalizika, lakini kupata ripoti safi ya mapato inakuwa kazi ya usiku kucha?\n\nHoteli ya mikutano jijini Mwanza sasa inafunga mahesabu ya siku bila kupoteza muda. Timu yao ndogo inaoanisha mapokezi, mgahawa na ukumbi kupitia Operra hata pale mtandao unapokuwa hafifu.\n\nKila muamala una ukaguzi wa kina kwa Kiswahili na Kiingereza, hivyo msimamizi anapata taarifa kamili bila kubahatisha.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelManagement",
+      "#HospitalityTanzania",
+      "#Operra"
+    ],
+    "imagePrompt": "A clean white ceramic coffee cup beside an acoustic conference microphone on a dark mahogany seminar table. Wide shot with deep perspective. Warm, golden low sun, long shadows, dark overall. Soft window light, gentle film grain. Main subject positioned right-of-centre, left third open and calm in deep shadow. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-13T10:00:00.000Z",
+    "createdAt": "2026-10-12T18:06:10.642Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-13-16-swahili-tip",
+    "eyebrow": "Housekeeping",
+    "headline": "Flag summit descent rooms before climbers arrive",
+    "body": "Climbers returning from the mountain need hot showers immediately. Sync descent dates between front desk and housekeeping so arrival blocks are inspected and ready early.",
+    "cta": "See Operra work",
+    "caption": "Kilimanjaro groups do not arrive on a gentle schedule. When a trekking party finishes their descent into Moshi, they walk into your lobby exhausted, dusty, and wanting hot showers right away.\n\nIf housekeeping is still turning those rooms over mid-afternoon, front desk absorbs the frustration.\n\nFlag descent blocks on your room board a day ahead. Housekeeping clears those turnarounds first thing in the morning, and returning climbers walk straight to their rooms.",
+    "hashtags": [
+      "#HotelOperations",
+      "#MoshiHotels",
+      "#KilimanjaroHospitality",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Wide shot with deep perspective of a quiet timber-floored lodge hallway, with a dark wooden housekeeping trolley carrying neatly rolled white cotton towels placed right-of-centre. Left third is an empty, calm hallway wall in deep shadow. Warm, golden low sun streaming from a distant archway, long shadows, dark overall. Soft window light, gentle film grain, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-13-16-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-13T13:00:00.000Z",
+    "createdAt": "2026-10-12T18:11:38.521Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-13-20-industry-note",
+    "eyebrow": "Audit Trail",
+    "headline": "Protect corporate billing with full audit logs",
+    "body": "Dar corporate finance teams delay settlement when line items cannot be verified. Detailed audit trails ensure every room charge and restaurant bill is cleanly accounted for.",
+    "cta": "See it work",
+    "caption": "When corporate finance teams in Dar es Salaam audit monthly company invoices, a single untracked meal can delay payment for the entire account.\n\nCorporate accounts require strict transaction accountability. Operra tracks every folio change across your front desk and POS with a clear audit trail. Your front office settles corporate folios faster and eliminates disputed charges before billing statements go out.",
+    "hashtags": [
+      "#HospitalityTanzania",
+      "#HotelOperations",
+      "#HotelManagement",
+      "#DarEsSalaam"
+    ],
+    "imagePrompt": "wide shot with deep perspective of a tinted glass water carafe with an inverted drinking glass resting on a dark polished executive credenza, warm, golden low sun, long shadows, dark overall, soft window light, gentle film grain, subject placed right of center, left side calm in shadow, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-13T17:00:00.000Z",
+    "createdAt": "2026-10-12T18:12:13.807Z",
+    "status": "pending"
   }
 ]
