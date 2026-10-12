@@ -10125,7 +10125,20 @@
     ],
     "scheduledFor": "2026-10-12T13:00:00.000Z",
     "createdAt": "2026-10-11T18:11:57.439Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-12-16-feature-spotlight.mp4",
+      "beats": [
+        "Kukabidhi zamu kero?",
+        "Malipo yote yanajipanga hapa",
+        "Inafanya kazi internet ikiwa hafifu",
+        "Ripoti sahihi na amani ya moyo"
+      ],
+      "narration": "Siku ikiisha, kupiga hesabu za mapokezi kusiwe maumivu ya kichwa. Operra inajumuisha malipo ya kadi, taslimu na ankara za makampuni papo hapo ili kurahisisha makabidhiano. Hata internet ikiwa ya kusuasua, mfumo wetu unahakikisha kila senti inaonekana kwenye ripoti bila usumbufu wowote.",
+      "hasVoice": true,
+      "builtAt": "2026-10-12T10:05:30.583Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-12-20-pain-point",
