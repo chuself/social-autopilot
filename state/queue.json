@@ -10079,7 +10079,7 @@
     ],
     "scheduledFor": "2026-10-12T10:00:00.000Z",
     "createdAt": "2026-10-11T18:04:21.739Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-12-13-industry-note.mp4",
       "beats": [
@@ -10091,10 +10091,13 @@
       "narration": "Moshi peak season brings rapid turnovers that lead to billing headaches. Use Operra to separate climber and crew folios early. Operra manages your front desk, housekeeping, and POS, even on low-bandwidth connections, ensuring smooth operations during your busiest season.",
       "hasVoice": true,
       "builtAt": "2026-10-12T07:04:26.138Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-12T10:06:33.863Z",
+      "postIds": [
+        "instagram:18014643716989342"
+      ]
     },
-    "lastAttempt": "2026-10-12T09:56:09.930Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-12T10:06:33.863Z"
   },
   {
     "id": "operra-2026-10-12-16-feature-spotlight",
