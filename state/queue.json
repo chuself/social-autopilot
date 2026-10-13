@@ -10316,7 +10316,20 @@
     ],
     "scheduledFor": "2026-10-13T13:00:00.000Z",
     "createdAt": "2026-10-12T18:11:38.521Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-13-16-swahili-tip.mp4",
+      "beats": [
+        "Wapandaji wanashuka mlimani",
+        "Unganisha mapokezi na usafi sasa",
+        "Kagua vyumba kabla hawajawasili",
+        "Wageni wanapumzika bila kuchelewa"
+      ],
+      "narration": "Wapandaji wakishuka mlimani wanahitaji vyumba safi na maji moto mara moja. Kupitia Operra, unganisha mapokezi na wafanyakazi wa usafi ili vyumba vikaguliwe mapema hata kwenye mtandao hafifu. Wageni wako watafurahia huduma bora bila usumbufu wowote.",
+      "hasVoice": true,
+      "builtAt": "2026-10-13T10:06:33.813Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-13-20-industry-note",
