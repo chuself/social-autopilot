@@ -10462,7 +10462,20 @@
     ],
     "scheduledFor": "2026-10-14T10:00:00.000Z",
     "createdAt": "2026-10-13T18:06:28.620Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-14-13-pain-point.mp4",
+      "beats": [
+        "Kamisheni za OTA zinamaliza faida yako?",
+        "Makato ya fedha yanaleta mkanganyiko mkubwa.",
+        "Fuatilia mahesabu hata mtandao ukiwa hafifu.",
+        "Pata usahihi kamili wa mapato yako."
+      ],
+      "narration": "Kupokea malipo ya dola huku ukikabiliana na makato ya OTA huleta mkanganyiko mkubwa wa mahesabu. Operra inakusaidia kuratibu bei, ripoti, na mapokezi kwa usahihi kwa Kiswahili au Kiingereza, hata pale mtandao unapokuwa wa kusuasua, ili ubaki na faida yako yote halisi.",
+      "hasVoice": true,
+      "builtAt": "2026-10-13T19:55:06.080Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-14-16-number-that-lands",
