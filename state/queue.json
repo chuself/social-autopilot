@@ -10514,7 +10514,20 @@
     ],
     "scheduledFor": "2026-10-14T13:00:00.000Z",
     "createdAt": "2026-10-13T18:07:01.202Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-14-16-number-that-lands.mp4",
+      "beats": [
+        "Internet cuts out? Keep rooms moving.",
+        "Front desk, housekeeping, POS, fully connected.",
+        "Built for low-bandwidth Tanzanian properties.",
+        "Total control in English and Kiswahili."
+      ],
+      "narration": "When the network fluctuates, your hotel cannot afford to freeze. Operra connects your front desk, housekeeping, POS, pricing, reports, and audit trail on low-bandwidth Tanzanian connections, giving your team complete control in both Kiswahili and English.",
+      "hasVoice": true,
+      "builtAt": "2026-10-14T10:06:34.337Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-14-20-client-proof",
