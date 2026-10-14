@@ -10467,7 +10467,7 @@
     ],
     "scheduledFor": "2026-10-14T10:00:00.000Z",
     "createdAt": "2026-10-13T18:06:28.620Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-14-13-pain-point.mp4",
       "beats": [
@@ -10479,10 +10479,14 @@
       "narration": "Kupokea malipo ya dola huku ukikabiliana na makato ya OTA huleta mkanganyiko mkubwa wa mahesabu. Operra inakusaidia kuratibu bei, ripoti, na mapokezi kwa usahihi kwa Kiswahili au Kiingereza, hata pale mtandao unapokuwa wa kusuasua, ili ubaki na faida yako yote halisi.",
       "hasVoice": true,
       "builtAt": "2026-10-13T19:55:06.080Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-14T10:07:55.542Z",
+      "postIds": [
+        "instagram:17954701329271585",
+        "facebook:1421948142719298"
+      ]
     },
-    "lastAttempt": "2026-10-14T09:47:37.403Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-14T10:07:55.542Z"
   },
   {
     "id": "operra-2026-10-14-16-number-that-lands",
