@@ -10574,5 +10574,146 @@
       "facebook:1049514968255534_122171802303351110",
       "instagram:18022909496933224"
     ]
+  },
+  {
+    "id": "operra-2026-10-15-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Usimamizi wa Vyumba",
+        "headline": "Bili za makampuni zinapoteza fedha?",
+        "body": "Bili za mikutano na malazi ya makampuni mara nyingi hupoteza mapato kutokana na makosa ya kurekodi."
+      },
+      {
+        "eyebrow": "Hatua kwa Hatua",
+        "headline": "Rekodi kila matumizi mara moja",
+        "body": "Usiweke matumizi ya ziada kwenye karatasi. Ingiza kila bili ya chakula au huduma kwenye mfumo mara tu inapotokea."
+      },
+      {
+        "eyebrow": "Ufanisi wa Biashara",
+        "headline": "Funga hesabu kabla ya mgeni kuondoka",
+        "body": "Hakikisha bili zote zimeunganishwa na mfumo ili kupata malipo kamili. Operra inasaidia kufunga hesabu kwa usahihi. Wasiliana nasi."
+      }
+    ],
+    "caption": "Mgeni wa kampuni akiondoka bila kulipia huduma za ziada, faida yako inapungua. Katika hoteli zenye mzunguko mkubwa wa wageni Dar es Salaam, usahihi wa bili ni muhimu. Usisubiri mwisho wa mwezi ili kuanza kutafuta risiti zilizopotea. Anza kurekodi kila matumizi ya ziada kwenye mfumo wako wa Operra wakati huduma inapotolewa. Hii inakusaidia kuepuka mabishano na wahasibu wa makampuni na kuhakikisha kila shilingi inaingia kwenye akaunti yako. Je, mfumo wako unakuruhusu kufunga bili za makampuni kwa haraka?",
+    "hashtags": [
+      "#HoteliTanzania",
+      "#UsimamiziWaHoteli",
+      "#DarEsSalaamHoteliers",
+      "#OperraTech"
+    ],
+    "imagePrompt": "overhead flat-lay, looking straight down onto a surface of a dark textured office desk. Subject: A clean, printed invoice folio with a simple ballpoint pen and a professional business lanyard resting neatly beside it, mid-tone, even soft daylight, neat arrangement, shallow shadows, no text, no people, no logos",
+    "cta": "Wasiliana nasi sasa",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-10-15-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-15T05:00:00.000Z",
+    "createdAt": "2026-10-14T18:04:59.272Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-15-08-swahili-tip-1.png",
+      "operra-2026-10-15-08-swahili-tip-2.png",
+      "operra-2026-10-15-08-swahili-tip-3.png"
+    ],
+    "headline": "Bili za makampuni zinapoteza fedha?"
+  },
+  {
+    "id": "operra-2026-10-15-13-industry-note",
+    "eyebrow": "Operator Billing",
+    "headline": "Prevent safari voucher disputes at checkout",
+    "body": "Tour operators in Arusha often dispute unverified bar or laundry tabs. Verify package inclusions against the primary folio before guests depart for the parks.",
+    "cta": "See Operra work",
+    "caption": "When a safari group leaves Arusha at dawn for the Serengeti, billing questions cannot wait.\n\nTour operators often dispute extras when package inclusions are unclear at check-in. If bar tabs, laundry, and packed lunches get mixed into the main group invoice, reconciling payment takes weeks.\n\nLock in agreed package inclusions at the front desk before safari vehicles arrive. Keep extras assigned directly to individual guests so operator accounts clear without delays.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariLodge",
+      "#HotelOperations",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a light stone desk surface. Subject: a heavy canvas safari dispatch folder with brass binder clips and a matte metal pen arranged neatly on the right side, leaving the left third open, clean, and empty. Light/tone: mid-tone, even soft daylight. Treatment: neat arrangement, shallow shadows, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-15T10:00:00.000Z",
+    "createdAt": "2026-10-14T18:07:27.717Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-15-16-feature-spotlight",
+    "eyebrow": "Fedha za Kigeni",
+    "headline": "Bili za sarafu mbili kwa resort za Zanzibar",
+    "body": "Badili Shilingi na Dola papo hapo bila makosa ya hesabu. Mfumo unatumia viwango vya kubadilisha fedha kwenye kila oda ya mgahawa na huduma za chumba.",
+    "cta": "Pata maelezo zaidi",
+    "caption": "Resort za Zanzibar zina mzunguko wa sarafu tofauti kila siku. Wageni wanahifadhi vyumba kwa Dola, lakini wanatumia Shilingi kwenye baa na spa.\n\nOperra inasaidia timu yako kutoa bili sahihi bila kukokotoa kwa mkono. Viwango vya kubadilisha fedha vinaingizwa mara moja na kutumika kwenye idara zote. Hii inazuia upotevu wa mapato na kuondoa mivutano wakati mgeni anataka kuondoka kuwahi ndege. 🏝️",
+    "hashtags": [
+      "ZanzibarHospitality",
+      "HotelManagement",
+      "OperraTech",
+      "Tanzania"
+    ],
+    "imagePrompt": "Composition: overhead flat-lay, looking straight down onto a surface of a light-colored coral stone tabletop. Subject: A woven palm-leaf coaster with a glass of tropical juice next to a printed guest folio and a few currency notes. Neat arrangement, shallow shadows. Soft daylight. Left side visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-15-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-15T13:00:00.000Z",
+    "createdAt": "2026-10-14T18:13:25.851Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-15-20-pain-point",
+    "eyebrow": "Mkahawa",
+    "headline": "Vinywaji vya bar vinapotea bure Mwanza",
+    "body": "Hesabu za jioni hazilingani na mzigo uliotoka stoo? Zuia upotevu wa mapato ya vinywaji.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Meneja wa Mwanza unamalizaje zamu wakati hesabu za baa hazisomi vizuri na stoo? Mfumo wetu unaunganisha mauzo ya baa na mapokezi moja kwa moja ili kila chupa ionekane. Operra inakupa udhibiti kamili wa mali zako hata kama mtandao unachechemea. 📊",
+    "hashtags": [
+      "Operra",
+      "HoteliTanzania",
+      "MwanzaHotels"
+    ],
+    "imagePrompt": "Composition : overhead flat-lay, looking straight down onto a surface of a dark mahogany desk. Subject: A pair of empty amber beer bottles beside a printed daily sales tally sheet. Light/tone : mid-tone, even soft daylight. Treatment : neat arrangement, shallow shadows. no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-15-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-15T17:00:00.000Z",
+    "createdAt": "2026-10-14T18:14:31.327Z",
+    "status": "pending"
   }
 ]
