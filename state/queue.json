@@ -10705,7 +10705,20 @@
     ],
     "scheduledFor": "2026-10-15T13:00:00.000Z",
     "createdAt": "2026-10-14T18:13:25.851Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-15-16-feature-spotlight.mp4",
+      "beats": [
+        "Bili za Dola?",
+        "Shilingi na Dola papo hapo.",
+        "Hakuna makosa ya hesabu tena.",
+        "Usimamizi bora wa resort yako."
+      ],
+      "narration": "Kupiga hesabu za Shilingi na Dola kwenye resort yako kunaweza kuchosha. Operra inabadili fedha papo hapo kwenye kila oda ya chakula au chumba bila makosa. Mfumo huu unafanya kazi hata kwenye mtandao dhaifu kwa Kiswahili na Kiingereza.",
+      "hasVoice": true,
+      "builtAt": "2026-10-15T10:05:21.417Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-15-20-pain-point",
