@@ -10659,7 +10659,7 @@
     ],
     "scheduledFor": "2026-10-15T10:00:00.000Z",
     "createdAt": "2026-10-14T18:07:27.717Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-15-13-industry-note.mp4",
       "beats": [
@@ -10671,10 +10671,14 @@
       "narration": "Don’t let unverified bar or laundry tabs lead to safari voucher disputes. Operra helps you verify package inclusions against the primary folio before guests depart. Use our bilingual interface and audit trail to ensure your tour operator payments are always accurate.",
       "hasVoice": true,
       "builtAt": "2026-10-15T07:04:06.609Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-15T10:06:50.895Z",
+      "postIds": [
+        "instagram:18172294978475636",
+        "facebook:2270948197095003"
+      ]
     },
-    "lastAttempt": "2026-10-15T09:06:18.127Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-15T10:06:50.895Z"
   },
   {
     "id": "operra-2026-10-15-16-feature-spotlight",
