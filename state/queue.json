@@ -10897,7 +10897,20 @@
     ],
     "scheduledFor": "2026-10-16T13:00:00.000Z",
     "createdAt": "2026-10-15T18:12:59.190Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-16-16-swahili-tip.mp4",
+      "beats": [
+        "Punguza upotevu wa lunch boxes Arusha",
+        "Hakiki wageni wanaotoka safari asubuhi",
+        "Jiko liandae chakula sahihi pekee",
+        "Kinga na uokoe fedha za hoteli"
+      ],
+      "narration": "Wafanyakazi wa jikoni Arusha mara nyingi wanaandaa lunch box nyingi kuliko wageni waliopo. Ukikagua idadi kamili ya wageni wanaotoka safari mapema asubuhi, unasaidia jiko kuandaa chakula sahihi na kuzuia upotevu wa fedha za hoteli.",
+      "hasVoice": true,
+      "builtAt": "2026-10-16T10:05:05.441Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-16-20-industry-note",
