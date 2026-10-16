@@ -10852,7 +10852,20 @@
     ],
     "scheduledFor": "2026-10-16T10:00:00.000Z",
     "createdAt": "2026-10-15T18:06:23.106Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-16-13-client-proof.mp4",
+      "beats": [
+        "Mtandao ukiwa chini, kazi haisimami.",
+        "Simamia mapokezi, usafi na mauzo yote.",
+        "Inatumia lugha ya Kiswahili na Kiingereza.",
+        "Endesha hoteli yako kwa amani kabisa."
+      ],
+      "narration": "Hata kama mtandao ni wa kusuasua, mfumo huu unakuwezesha kusimamia mapokezi, usafi wa vyumba, na mauzo bila shida. Unapatikana kwa Kiswahili na Kiingereza, ukikupa ripoti kamili na ukaguzi wa hesabu ili uendeshe hoteli yako kwa amani kabisa.",
+      "hasVoice": true,
+      "builtAt": "2026-10-16T07:04:14.286Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-16-16-swahili-tip",
