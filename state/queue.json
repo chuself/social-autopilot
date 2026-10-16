@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-10-16T12:36:09.853Z"
+    "missedAt": "2026-10-16T13:36:25.523Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-10-16T12:36:09.844Z"
+    "missedAt": "2026-10-16T13:36:25.515Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-10-16T12:36:09.846Z",
+    "missedAt": "2026-10-16T13:36:25.517Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-10-16T12:36:09.846Z",
+    "missedAt": "2026-10-16T13:36:25.517Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-10-16T12:36:09.926Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-16T12:36:09.853Z"
+    "missedAt": "2026-10-16T13:36:25.523Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-10-16T12:36:09.853Z"
+    "missedAt": "2026-10-16T13:36:25.523Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-10-16T12:36:09.853Z"
+    "missedAt": "2026-10-16T13:36:25.523Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -8253,7 +8253,7 @@
     },
     "lastAttempt": "2026-10-16T12:36:09.927Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-16T12:36:09.853Z"
+    "missedAt": "2026-10-16T13:36:25.523Z"
   },
   {
     "id": "operra-2026-10-02-20-client-proof",
@@ -8477,7 +8477,7 @@
     "heldFigures": [
       "00"
     ],
-    "missedAt": "2026-10-16T12:36:09.853Z"
+    "missedAt": "2026-10-16T13:36:25.524Z"
   },
   {
     "id": "operra-2026-10-04-08-number-that-lands",
@@ -8720,7 +8720,7 @@
       "operra-2026-10-05-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinabadilika bila taarifa?",
-    "missedAt": "2026-10-16T12:36:09.853Z"
+    "missedAt": "2026-10-16T13:36:25.524Z"
   },
   {
     "id": "operra-2026-10-05-13-pain-point",
@@ -10901,7 +10901,7 @@
     ],
     "scheduledFor": "2026-10-16T13:00:00.000Z",
     "createdAt": "2026-10-15T18:12:59.190Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-16-16-swahili-tip.mp4",
       "beats": [
@@ -10913,10 +10913,14 @@
       "narration": "Wafanyakazi wa jikoni Arusha mara nyingi wanaandaa lunch box nyingi kuliko wageni waliopo. Ukikagua idadi kamili ya wageni wanaotoka safari mapema asubuhi, unasaidia jiko kuandaa chakula sahihi na kuzuia upotevu wa fedha za hoteli.",
       "hasVoice": true,
       "builtAt": "2026-10-16T10:05:05.441Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-16T13:37:27.199Z",
+      "postIds": [
+        "instagram:18042336659841493",
+        "facebook:2708768809582344"
+      ]
     },
-    "lastAttempt": "2026-10-16T12:36:09.927Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-16T13:37:27.199Z"
   },
   {
     "id": "operra-2026-10-16-20-industry-note",
