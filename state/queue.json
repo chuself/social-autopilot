@@ -10958,5 +10958,147 @@
       "facebook:1049514968255534_122172511641351110",
       "instagram:18122847919977786"
     ]
+  },
+  {
+    "id": "operra-2026-10-17-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Mwanza",
+        "headline": "Mikutano mikubwa inaleta fujo mapokezi?",
+        "body": "Wageni wa mkutano wanasubiri sana vyumba vifunguliwe ukumbi unapokamilika."
+      },
+      {
+        "eyebrow": "Udhibiti",
+        "headline": "Sajili shughuli sita muhimu sehemu moja",
+        "body": "Front desk, housekeeping, POS, pricing, ripoti na audit trail zinafanya kazi kwa pamoja."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Punguza foleni na huduma za haraka",
+        "body": "Wageni wako wanalipia na kuingia bila kukwama. Jaribu Operra leo."
+      }
+    ],
+    "caption": "Hoteli nyingi za Mwanza zinapokea makundi makubwa ya mikutano na watalii wa ziwa kwa wakati mmoja. Mapokezi yanapozidiwa na shughuli nyingi, wageni wanalalamika kuhusu muda wa kusubiri. Operra inakuweanisha mifumo sita muhimu kwenye skrini moja ili kupunguza msongamano na kuharakisha huduma bila makosa. Tembelea operra.tech kujua zaidi.",
+    "hashtags": [
+      "OperraHoteli",
+      "MwanzaHotels",
+      "HoteliTanzania",
+      "UsimamiziWaHoteli"
+    ],
+    "imagePrompt": "A stack of printed conference name tags and a black metal ballpoint pen on a white wooden conference table, composition extreme close-up filling the frame, tone light, high-key, clean, treatment shallow depth of field, fine texture detail. no text, no people, no logos",
+    "cta": "Ona Operra kazini",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-10-17-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-17T05:00:00.000Z",
+    "createdAt": "2026-10-16T18:03:24.072Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-17-08-feature-spotlight-1.png",
+      "operra-2026-10-17-08-feature-spotlight-2.png",
+      "operra-2026-10-17-08-feature-spotlight-3.png"
+    ],
+    "headline": "Mikutano mikubwa inaleta fujo mapokezi?"
+  },
+  {
+    "id": "operra-2026-10-17-13-pain-point",
+    "eyebrow": "Housekeeping",
+    "headline": "Gharama za dobi za wageni wa mlima zinapotea?",
+    "body": "Wapandaji wakishuka Kilimanjaro, nguo zao huenda dobi kwa haraka. Wakati wa kuondoka, bili inakuwa haijafika mapokezi. Hoteli inabaki kubeba hasara kimya kimya.",
+    "cta": "Ona Operra kazini",
+    "caption": "Msimu wa kupanda mlima ukifika Moshi, wageni wakirudi kutoka kileleni huleta mifuko ya nguo zenye matope kwa ajili ya dobi ya dharura.\n\nChangamoto inaanza wakati wa check-out ya asubuhi na mapema. Kama mfumo wa housekeeping haujaunganishwa na mapokezi, huduma ya dobi haionekani kwenye bili ya chumba hadi mgeni awe tayari ameondoka kuelekea uwanja wa ndege.\n\nUkiwa na Operra, idara ya housekeeping inarekodi gharama moja kwa moja kwenye ankara ya chumba papo hapo. Hakuna malipo yanayosahaulika.",
+    "hashtags": [
+      "#HotelOperations",
+      "#MoshiHotels",
+      "#TanzaniaHospitality",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Composition: extreme close-up filling the frame. Light/tone: light, high-key, clean. Treatment: shallow depth of field, fine texture detail. Subject: A bundle of natural coarse woven canvas laundry bags tied with a thick twisted cotton cord, set right-of-centre with rich fabric grain in sharp focus. The left third is an empty, softly blurred expanse of a light cream plaster wall, providing a clean negative space. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-17-13-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-17T10:00:00.000Z",
+    "createdAt": "2026-10-16T18:08:18.660Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-17-16-number-that-lands",
+    "eyebrow": "Operations",
+    "headline": "Two interface languages built for your team",
+    "body": "Switch between Kiswahili and English across your front desk, housekeeping, and POS. Keep daily shift reports and corporate guest folios completely accurate.",
+    "cta": "See it work",
+    "caption": "Corporate hotels in Dar es Salaam move fast. When shift handovers happen between teams, language barriers shouldn’t slow down room turnover or guest billing.\n\nOperra offers a complete interface in both Kiswahili and English. Housekeeping updates room statuses in Kiswahili, while your front desk prints corporate folios and audit trails in English. Everyone works with total clarity on the same system, even over low-bandwidth connections.",
+    "hashtags": [
+      "#TanzaniaHospitality",
+      "#DarHotels",
+      "#HotelManagement",
+      "#OperraPMS"
+    ],
+    "imagePrompt": "Composition: extreme close-up filling the frame. Light/tone: light, high-key, clean. Treatment: shallow depth of field, fine texture detail. Subject: A polished chrome swivel clasp of a woven corporate lanyard resting right-of-centre, showing intricate fabric weave texture and clean metallic reflections, with the left third left open and visually calm as smooth, soft white space. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-17-16-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-17T13:00:00.000Z",
+    "createdAt": "2026-10-16T18:09:04.457Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-17-20-client-proof",
+    "eyebrow": "Uthibitisho",
+    "headline": "Ankara za safari za Arusha sasa hazichelewi",
+    "body": "Operra imesaidia hoteli moja ya Arusha kukamilisha hesabu za makundi ya safari kwa haraka, bila kujali hali ya mtandao wakati wa malipo.",
+    "cta": "Tazama mfumo",
+    "caption": "Msimu wa watalii umefika na foleni za malipo mapokezi hazikwepeki. Hoteli moja kubwa hapa Arusha imeweza kuondoa kabisa mivutano ya ankara na makampuni ya utalii. Kwa kutumia mfumo unaokubali mtandao hafifu, hesabu zote zinakamilika papo hapo wakati wa check-out. Hakuna tena kusubiri mfumo urudi au wageni kulalamika kuhusu muda. Ufanisi huu unaleta utulivu kwa timu yako na kuridhika kwa wageni wanaowahi safari zao. 🦓",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariTanzania",
+      "#HospitalityTZ",
+      "#Operra"
+    ],
+    "imagePrompt": "A single, well-worn safari leather luggage tag hanging on a clean brass hook. Composition : extreme close-up filling the frame. Light/tone : light, high-key, clean. Treatment : shallow depth of field, fine texture detail, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-17T17:00:00.000Z",
+    "createdAt": "2026-10-16T18:09:32.742Z",
+    "status": "pending"
   }
 ]
