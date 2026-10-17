@@ -11093,7 +11093,20 @@
     ],
     "scheduledFor": "2026-10-17T13:00:00.000Z",
     "createdAt": "2026-10-16T18:09:04.457Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-17-16-number-that-lands.mp4",
+      "beats": [
+        "Lost in translation across your property?",
+        "Switch between Kiswahili and English effortlessly",
+        "Front desk, housekeeping, and POS connected",
+        "Accurate reports and seamless daily shifts"
+      ],
+      "narration": "Empower your entire staff by switching between Kiswahili and English across front desk, housekeeping, and POS. Operra keeps daily shift reports completely accurate even on low-bandwidth connections, helping your Tanzanian property run without miscommunication.",
+      "hasVoice": true,
+      "builtAt": "2026-10-17T11:30:20.501Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-17-20-client-proof",
