@@ -1,20 +1,6 @@
 [
   {
     "platform": "instagram",
-    "postId": "18325350244263419",
-    "url": null,
-    "id": "operra-2026-09-19-20-industry-note",
-    "postedAt": "2026-09-19T17:16:44.871Z"
-  },
-  {
-    "platform": "facebook",
-    "postId": "1049514968255534_122158702797351110",
-    "slides": 3,
-    "id": "operra-2026-09-20-08-feature-spotlight",
-    "postedAt": "2026-09-20T05:27:57.557Z"
-  },
-  {
-    "platform": "instagram",
     "postId": "17910548838531106",
     "slides": 3,
     "id": "operra-2026-09-20-08-feature-spotlight",
@@ -1398,5 +1384,19 @@
     "slides": 3,
     "id": "operra-2026-10-17-08-feature-spotlight",
     "postedAt": "2026-10-17T05:29:10.234Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18119190947069276",
+    "id": "operra-2026-10-17-13-pain-point",
+    "format": "reel",
+    "postedAt": "2026-10-17T10:05:28.441Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1087191633952026",
+    "id": "operra-2026-10-17-13-pain-point",
+    "format": "reel",
+    "postedAt": "2026-10-17T10:06:01.943Z"
   }
 ]

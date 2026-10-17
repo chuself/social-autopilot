@@ -11043,7 +11043,7 @@
     ],
     "scheduledFor": "2026-10-17T10:00:00.000Z",
     "createdAt": "2026-10-16T18:08:18.660Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-17-13-pain-point.mp4",
       "beats": [
@@ -11055,10 +11055,14 @@
       "narration": "Wapandaji mlima wakishuka Kilimanjaro, nguo huenda dobi haraka lakini mgeni anaondoka kabla bili kuingia mapokezi. Hoteli inabeba hasara kimya kimya. Unganisha mapokezi, dobi na taarifa zote kwa mfumo wa Kiswahili na Kiingereza ili kulinda mapato.",
       "hasVoice": true,
       "builtAt": "2026-10-17T07:05:57.486Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-17T10:06:01.943Z",
+      "postIds": [
+        "instagram:18119190947069276",
+        "facebook:1087191633952026"
+      ]
     },
-    "lastAttempt": "2026-10-17T09:33:22.374Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-17T10:06:01.943Z"
   },
   {
     "id": "operra-2026-10-17-16-number-that-lands",
