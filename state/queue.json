@@ -11089,7 +11089,20 @@
     ],
     "scheduledFor": "2026-10-17T13:00:00.000Z",
     "createdAt": "2026-10-16T18:09:04.457Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-17-16-number-that-lands.mp4",
+      "beats": [
+        "Stop shift miscommunications",
+        "Switch Kiswahili and English easily",
+        "Runs on low bandwidth connections",
+        "Get perfectly accurate shift reports"
+      ],
+      "narration": "Tired of shift miscommunications? Easily switch between Kiswahili and English across your front desk, housekeeping, and POS. Our system runs reliably on low bandwidth connections, keeping your daily reports and guest records completely accurate every single shift.",
+      "hasVoice": true,
+      "builtAt": "2026-10-17T10:04:31.592Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-17-20-client-proof",
