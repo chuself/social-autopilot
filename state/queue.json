@@ -919,7 +919,7 @@
       "operra-2026-08-25-08-swahili-tip-3.png"
     ],
     "headline": "Wageni wa safari wamechoka, foleni mapokezi?",
-    "missedAt": "2026-10-17T09:33:22.313Z"
+    "missedAt": "2026-10-17T10:06:34.969Z"
   },
   {
     "id": "operra-2026-08-25-13-industry-note",
@@ -1293,7 +1293,7 @@
       "operra-2026-08-27-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinachanganya mapokezi?",
-    "missedAt": "2026-10-17T09:33:22.307Z"
+    "missedAt": "2026-10-17T10:06:34.961Z"
   },
   {
     "id": "operra-2026-08-27-13-pain-point",
@@ -1325,7 +1325,7 @@
     "scheduledFor": "2026-08-27T10:00:00.000Z",
     "createdAt": "2026-08-26T19:59:28.841Z",
     "status": "missed",
-    "missedAt": "2026-10-17T09:33:22.309Z",
+    "missedAt": "2026-10-17T10:06:34.963Z",
     "reel": {
       "file": "operra-2026-08-27-13-pain-point.mp4",
       "beats": [
@@ -1374,7 +1374,7 @@
       "mediaId": "operra-mtbb32kp-f9bc",
       "appliedAt": "2026-08-27T10:26:55.690Z"
     },
-    "missedAt": "2026-10-17T09:33:22.309Z",
+    "missedAt": "2026-10-17T10:06:34.963Z",
     "reel": {
       "file": "operra-2026-08-27-16-number-that-lands.mp4",
       "beats": [
@@ -2481,7 +2481,7 @@
     },
     "lastAttempt": "2026-10-17T09:33:22.374Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-17T09:33:22.314Z"
+    "missedAt": "2026-10-17T10:06:34.969Z"
   },
   {
     "id": "operra-2026-09-02-16-number-that-lands",
@@ -4469,7 +4469,7 @@
     "heldFigures": [
       "100%"
     ],
-    "missedAt": "2026-10-17T09:33:22.314Z"
+    "missedAt": "2026-10-17T10:06:34.969Z"
   },
   {
     "id": "operra-2026-09-13-08-number-that-lands",
@@ -6041,7 +6041,7 @@
       "operra-2026-09-21-08-swahili-tip-3.png"
     ],
     "headline": "Mizigo ya mlimani inachanganya stoo?",
-    "missedAt": "2026-10-17T09:33:22.314Z"
+    "missedAt": "2026-10-17T10:06:34.970Z"
   },
   {
     "id": "operra-2026-09-21-13-industry-note",
@@ -8253,7 +8253,7 @@
     },
     "lastAttempt": "2026-10-17T09:33:22.374Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-10-17T09:33:22.314Z"
+    "missedAt": "2026-10-17T10:06:34.970Z"
   },
   {
     "id": "operra-2026-10-02-20-client-proof",
@@ -8477,7 +8477,7 @@
     "heldFigures": [
       "00"
     ],
-    "missedAt": "2026-10-17T09:33:22.314Z"
+    "missedAt": "2026-10-17T10:06:34.970Z"
   },
   {
     "id": "operra-2026-10-04-08-number-that-lands",
@@ -8720,7 +8720,7 @@
       "operra-2026-10-05-08-feature-spotlight-3.png"
     ],
     "headline": "Bei za vyumba zinabadilika bila taarifa?",
-    "missedAt": "2026-10-17T09:33:22.314Z"
+    "missedAt": "2026-10-17T10:06:34.970Z"
   },
   {
     "id": "operra-2026-10-05-13-pain-point",
@@ -11056,13 +11056,13 @@
       "hasVoice": true,
       "builtAt": "2026-10-17T07:05:57.486Z",
       "status": "posted",
-      "postedAt": "2026-10-17T10:06:01.943Z",
+      "postedAt": "2026-10-17T10:08:34.914Z",
       "postIds": [
-        "instagram:18119190947069276",
-        "facebook:1087191633952026"
+        "instagram:18126960082905620",
+        "facebook:1016807304816619"
       ]
     },
-    "lastAttempt": "2026-10-17T10:06:01.943Z"
+    "lastAttempt": "2026-10-17T10:08:34.914Z"
   },
   {
     "id": "operra-2026-10-17-16-number-that-lands",
@@ -11093,20 +11093,7 @@
     ],
     "scheduledFor": "2026-10-17T13:00:00.000Z",
     "createdAt": "2026-10-16T18:09:04.457Z",
-    "status": "pending",
-    "reel": {
-      "file": "operra-2026-10-17-16-number-that-lands.mp4",
-      "beats": [
-        "Stop shift miscommunications",
-        "Switch Kiswahili and English easily",
-        "Runs on low bandwidth connections",
-        "Get perfectly accurate shift reports"
-      ],
-      "narration": "Tired of shift miscommunications? Easily switch between Kiswahili and English across your front desk, housekeeping, and POS. Our system runs reliably on low bandwidth connections, keeping your daily reports and guest records completely accurate every single shift.",
-      "hasVoice": true,
-      "builtAt": "2026-10-17T10:04:31.592Z",
-      "status": "ready"
-    }
+    "status": "pending"
   },
   {
     "id": "operra-2026-10-17-20-client-proof",
