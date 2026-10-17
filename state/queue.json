@@ -11150,5 +11150,147 @@
       "facebook:1049514968255534_122172870099351110",
       "instagram:18333823024263459"
     ]
+  },
+  {
+    "id": "operra-2026-10-18-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "USHAURI WA LEO",
+        "headline": "Ongeza faida kwenye wageni wa OTA",
+        "body": "Mgeni aliyekuja kupitia OTA akiongeza siku Zanzibar, usipitishe tena booking hiyo mtandaoni."
+      },
+      {
+        "eyebrow": "HATUA KUU",
+        "headline": "Tenganisha booking ya ziada mapokezi",
+        "body": "Funga folio ya kwanza ya OTA. Fungua booking mpya ya direct kwenye mfumo wa mapokezi."
+      },
+      {
+        "eyebrow": "MATOKEO",
+        "headline": "Okoa kamisheni bila kupoteza kumbukumbu",
+        "body": "Unahifadhi faida yako mara moja. Operra inatenganisha folios kwa urahisi hata kwenye intaneti ya chini."
+      }
+    ],
+    "caption": "Mgeni wako wa Zanzibar aliyekuja kupitia mtandao wa OTA akiamua kuongeza siku resort kwako, hiyo ni fursa ya direct booking. Usirudie kupitisha siku hizo mpya kwenye OTA na kulipa kamisheni isiyo na lazima. Tenganisha folio ya ziada mapokezi na uokoe faida yako. Mfumo wa Operra unakurahisishia kusimamia folios, mapokezi, na ripoti za mapato hata kwenye intaneti ya chini. Hifadhi ushauri huu kwa ajili ya timu yako ya mapokezi.",
+    "hashtags": [
+      "#UtaliiZanzibar",
+      "#UsimamiziWaHoteli",
+      "#OperraTech",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "A hand-woven natural tropical rattan weave texture on a resort sunbed. Composition: extreme close-up filling the frame. Light/tone: light, high-key, clean. Treatment: shallow depth of field, fine texture detail. no text, no people, no logos",
+    "cta": "Panga demo leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-10-18-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-18T05:00:00.000Z",
+    "createdAt": "2026-10-17T18:04:02.941Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-18-08-swahili-tip-1.png",
+      "operra-2026-10-18-08-swahili-tip-2.png",
+      "operra-2026-10-18-08-swahili-tip-3.png"
+    ],
+    "headline": "Ongeza faida kwenye wageni wa OTA"
+  },
+  {
+    "id": "operra-2026-10-18-13-industry-note",
+    "eyebrow": "Conference POS",
+    "headline": "Reconcile workshop extras before final checkout",
+    "body": "Mwanza regional conferences move fast. Capture hall extensions and extra meal charges on a single folio before organizers leave.",
+    "cta": "See how it works",
+    "caption": "Regional workshops in Mwanza often bring last-minute hall extensions, extra tea breaks, and shifting guest lists. When small hotel teams track these extras on paper, final invoices get delayed or disputed at checkout.\n\nLinking event POS directly to group folios ensures every extra meal or extra hour is logged instantly. Keep your billing accurate and your checkout quick without stressing your team.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HospitalityTech",
+      "#HotelManagement",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "Extreme close-up filling the frame of a white ceramic coffee cup sitting on a polished light timber conference table, light, high-key, clean lighting, shallow depth of field, fine texture detail of porcelain and wood grain, left side visually calm with soft blurred tabletop, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-18T10:00:00.000Z",
+    "createdAt": "2026-10-17T18:04:14.765Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-18-16-feature-spotlight",
+    "eyebrow": "Daily Reports",
+    "headline": "Daily lodge reports without the midnight audit",
+    "body": "Operra pulls front desk folios, dining charges, and housekeeping updates into one clear summary. Review your numbers in Moshi without chasing paper.",
+    "cta": "See it work",
+    "caption": "Peak climbing season in Moshi leaves front desk teams reconciling tabs late into the night. When groups return from Kilimanjaro, restaurant chits, laundry slips, and room folios pile up quickly.\n\nOperra compiles your front desk, dining, and room status into automated reports as shifts close. You see daily revenue, room turnover, and open balances without waiting for an exhausted night auditor.\n\nRun your lodge on accurate data, even on low bandwidth.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelManagement",
+      "#KilimanjaroLodge",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "Composition: extreme close-up filling the frame. Light/tone: light, high-key, clean. Treatment: shallow depth of field, fine texture detail. Subject: A solid brass buckle and thick woven nylon strap of an expedition duffel bag resting on pale timber, positioned right of centre. The left third is smooth, out-of-focus light wood grain providing calm negative space. Crisp textile weave and soft metallic highlights, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-18-16-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-18T13:00:00.000Z",
+    "createdAt": "2026-10-17T18:07:48.752Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-18-20-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "One personal tab stalls a whole company invoice",
+    "body": "When personal extras get mixed into corporate room charges, Dar accounting teams reject the entire folio. Operra splits company and personal folios automatically at check-in.",
+    "cta": "Book a demo",
+    "caption": "A corporate client in Dar es Salaam sends back an entire month of invoices because one visiting manager charged room service to the company account.\n\nFinance teams will not approve payment until the folios are untangled and reissued. Meanwhile, your cash flow sits blocked for weeks.\n\nOperra separates corporate room rates from personal guest extras the moment the booking is created. Room charges go to the company ledger. Drinks, laundry, and meals stay on the guest folio.\n\nCheckout stays clean. Invoices get settled on time.",
+    "hashtags": [
+      "#DarHotels",
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "Extreme close-up filling the frame of a sleek matte metal ballpoint pen resting on crisp white textured stationery, positioned right-of-centre, with the left third kept as an empty, smooth, out-of-focus soft white paper surface. Light, high-key, clean daylight, shallow depth of field, fine paper fiber and brushed metal texture detail, no text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-18-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-18T17:00:00.000Z",
+    "createdAt": "2026-10-17T18:18:03.054Z",
+    "status": "pending"
   }
 ]
