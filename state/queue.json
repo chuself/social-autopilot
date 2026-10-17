@@ -11043,7 +11043,20 @@
     ],
     "scheduledFor": "2026-10-17T10:00:00.000Z",
     "createdAt": "2026-10-16T18:08:18.660Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-17-13-pain-point.mp4",
+      "beats": [
+        "Gharama za dobi zinapotea bure?",
+        "Wageni wanaondoka bili haijafika mapokezi.",
+        "Unganisha mapokezi na huduma zote.",
+        "Komesha hasara za dobi hotelini kwako."
+      ],
+      "narration": "Wapandaji mlima wakishuka Kilimanjaro, nguo huenda dobi haraka lakini mgeni anaondoka kabla bili kuingia mapokezi. Hoteli inabeba hasara kimya kimya. Unganisha mapokezi, dobi na taarifa zote kwa mfumo wa Kiswahili na Kiingereza ili kulinda mapato.",
+      "hasVoice": true,
+      "builtAt": "2026-10-17T07:05:57.486Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-17-16-number-that-lands",
