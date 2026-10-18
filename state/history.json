@@ -1,19 +1,5 @@
 [
   {
-    "platform": "facebook",
-    "postId": "1400609592272209",
-    "id": "operra-2026-09-21-16-feature-spotlight",
-    "format": "reel",
-    "postedAt": "2026-09-21T13:05:04.904Z"
-  },
-  {
-    "platform": "facebook",
-    "postId": "1049514968255534_122159734203351110",
-    "url": "https://facebook.com/1049514968255534_122159734203351110",
-    "id": "operra-2026-09-21-20-pain-point",
-    "postedAt": "2026-09-21T17:05:56.283Z"
-  },
-  {
     "platform": "instagram",
     "postId": "17894256993673301",
     "url": null,
@@ -1398,5 +1384,19 @@
     "id": "operra-2026-10-18-16-feature-spotlight",
     "format": "reel",
     "postedAt": "2026-10-18T13:28:19.980Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1049514968255534_122173280961351110",
+    "url": "https://facebook.com/1049514968255534_122173280961351110",
+    "id": "operra-2026-10-18-20-pain-point",
+    "postedAt": "2026-10-18T17:28:42.834Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "17877903171633000",
+    "url": null,
+    "id": "operra-2026-10-18-20-pain-point",
+    "postedAt": "2026-10-18T17:29:04.921Z"
   }
 ]
