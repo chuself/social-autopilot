@@ -11342,5 +11342,147 @@
       "facebook:1049514968255534_122173280961351110",
       "instagram:17877903171633000"
     ]
+  },
+  {
+    "id": "operra-2026-10-19-08-number-that-lands",
+    "slides": [
+      {
+        "eyebrow": "Arusha peak",
+        "headline": "Safari group invoices cannot stall at departure",
+        "body": "Tour operators delay entire settlements when restaurant or laundry extras are missing."
+      },
+      {
+        "eyebrow": "The leak",
+        "headline": "Scattered tabs create costly payment disputes",
+        "body": "Manual chits between bar, dining, and reception cause friction during fast morning checkouts."
+      },
+      {
+        "eyebrow": "One system",
+        "headline": "Six core departments linked on low bandwidth",
+        "body": "Operra connects front desk, housekeeping, POS, pricing, reports, and audit trail instantly."
+      }
+    ],
+    "caption": "Peak safari season in Arusha leaves no room for missing extras. When large groups depart, tour operators expect accurate invoices immediately. A single unposted lunch box or bar drink delays the whole account.\n\nOperra unites your front desk, housekeeping, POS, pricing, reports, and audit trail on the low-bandwidth connections typical in Tanzanian lodges. Close every departure folio on time.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#SafariLodges",
+      "#TanzaniaHospitality",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "Brushed brass wire paper clip securing thick textured cream invoice sheets, composition extreme close-up filling the frame, light, high-key, clean, shallow depth of field, fine texture detail, no text, no people, no logos",
+    "cta": "See Operra live",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "backgroundPath": "state/bg/operra-2026-10-19-08-number-that-lands.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-19T05:00:00.000Z",
+    "createdAt": "2026-10-18T18:03:35.168Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-19-08-number-that-lands-1.png",
+      "operra-2026-10-19-08-number-that-lands-2.png",
+      "operra-2026-10-19-08-number-that-lands-3.png"
+    ],
+    "headline": "Safari group invoices cannot stall at departure"
+  },
+  {
+    "id": "operra-2026-10-19-13-client-proof",
+    "eyebrow": "Audit Trail",
+    "headline": "Clear audit logs for Zanzibar long-stay folios",
+    "body": "Resort front desk teams manage weeks of guest charges with confidence. Every voided item, rate change, and folio adjustment is logged automatically.",
+    "cta": "See it work",
+    "caption": "Long-stay guests in Zanzibar can build up pages of restaurant, spa, and room charges before checkout day.\n\nWhen an unexpected discount appears on the final invoice, tracing who made the edit often leads to finger-pointing.\n\nOperra logs every price override, void, and bill split with an automatic audit trail. Front desk teams keep guest accounts accurate, and management stays in control of room rates and revenue.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#HospitalityTech",
+      "#ResortOperations"
+    ],
+    "imagePrompt": "Composition: extreme close-up filling the frame. Light/tone: light, high-key, clean. Treatment: shallow depth of field, fine texture detail. A smooth, pale bleached teak wood receipt tray with delicate natural wood grain, positioned right-of-centre, while the left third remains smooth, calm, and empty with soft ambient sunlight. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-19-13-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-19T10:00:00.000Z",
+    "createdAt": "2026-10-18T18:06:05.109Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-19-16-swahili-tip",
+    "eyebrow": "Usimamizi wa Ukumbi",
+    "headline": "Funga hesabu za mikutano kabla ya washiriki kuondoka",
+    "body": "Mikutano ya Mwanza inapohitaji vifaa vya ziada au vinywaji, ziingize kwenye mfumo mara moja ili kuepuka mivutano ya ankara wakati wa kuondoka.",
+    "cta": "Tazama mfumo wetu",
+    "caption": "Mkutano ukimalizika Mwanza, mteja anataka ankara kamili papo hapo. Timu ikiwa ndogo, kutafuta risiti za ziada jioni huleta mivutano na kuchelewesha malipo.\n\nNjia rahisi: ingiza kila huduma ya ziada kwenye mfumo mara moja. Mkutano unapofungwa, ankara inakuwa tayari bila presha.",
+    "hashtags": [
+      "#HotelierTanzania",
+      "#MwanzaHotels",
+      "#HospitalityTZ",
+      "#Operra"
+    ],
+    "imagePrompt": "Extreme close-up filling the frame of a sleek wireless presenter remote control lying on a crisp white cotton conference table runner. Light, high-key, clean tone with shallow depth of field, fine texture detail on fabric weave. Visual detail right-of-centre, left side visually calm empty surface. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-19T13:00:00.000Z",
+    "createdAt": "2026-10-18T18:06:20.686Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-19-20-industry-note",
+    "eyebrow": "Group Stays",
+    "headline": "Speed up mountain group turnarounds in Moshi",
+    "body": "Trekking operators need quick check-ins and clean billing. Track room readiness and active group folios without administrative delays.",
+    "cta": "See it work",
+    "caption": "When trekking groups descend Kilimanjaro, Moshi properties face an immediate turnaround rush. Gear storage, quick laundry turns, and sudden departure updates happen all at once.\n\nOperra runs on low-bandwidth connections to keep front desk and housekeeping updated in real time. Your team can assign clean rooms, update group billing, and handle turnarounds smoothly even during peak mountain seasons.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HospitalityManagement",
+      "#HotelOperations",
+      "#TanzaniaTourism"
+    ],
+    "imagePrompt": "A pair of heavy mountain trekking boot laces neatly coiled beside a crisp folded topography map on a light stone surface, right-of-centre. Composition: extreme close-up filling the frame. Light/tone: light, high-key, clean. Treatment: shallow depth of field, fine texture detail. Left side visually calm plain surface. no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-19T17:00:00.000Z",
+    "createdAt": "2026-10-18T18:06:31.708Z",
+    "status": "pending"
   }
 ]
