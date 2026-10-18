@@ -11235,7 +11235,7 @@
     ],
     "scheduledFor": "2026-10-18T10:00:00.000Z",
     "createdAt": "2026-10-17T18:04:14.765Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-18-13-industry-note.mp4",
       "beats": [
@@ -11247,10 +11247,14 @@
       "narration": "Fast-moving regional conferences make it easy to miss hall extensions and extra meals. Operra links your POS directly to the front desk folio, even on low-bandwidth connections, ensuring organizers settle every single charge before stepping out the door.",
       "hasVoice": true,
       "builtAt": "2026-10-18T07:04:07.115Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-18T10:06:16.579Z",
+      "postIds": [
+        "instagram:18641317039015654",
+        "facebook:1062291933524933"
+      ]
     },
-    "lastAttempt": "2026-10-18T09:24:46.809Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-18T10:06:16.579Z"
   },
   {
     "id": "operra-2026-10-18-16-feature-spotlight",
