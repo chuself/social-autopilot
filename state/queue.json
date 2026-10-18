@@ -11281,7 +11281,20 @@
     ],
     "scheduledFor": "2026-10-18T13:00:00.000Z",
     "createdAt": "2026-10-17T18:07:48.752Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-18-16-feature-spotlight.mp4",
+      "beats": [
+        "Acha ukaguzi usiku",
+        "Unganisha mapokezi, mauzo na usafi",
+        "Inafanya kazi mtandao ukiwa dhaifu",
+        "Pata ripoti zote bila usumbufu"
+      ],
+      "narration": "Acha ukaguzi usiku na mambo ya kufuatilia karatasi. Mfumo huu unaunganisha taarifa za mapokezi, mauzo ya chakula na usafi mahali pamoja. Unafanya kazi vizuri hata mtandao ukiwa dhaifu. Unaweza kuangalia ripoti zako zote za hoteli kwa urahisi bila usumbufu wowote.",
+      "hasVoice": true,
+      "builtAt": "2026-10-18T10:04:55.723Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-18-20-pain-point",
