@@ -11534,5 +11534,153 @@
       "facebook:1049514968255534_122173660329351110",
       "instagram:18465787459184858"
     ]
+  },
+  {
+    "id": "operra-2026-10-20-08-feature-spotlight",
+    "slides": [
+      {
+        "eyebrow": "Dar es Salaam",
+        "headline": "Mgeni anasubiri chumba ambacho kiko tayari?",
+        "body": "Wageni wa asubuhi wanasubiri mapokezi wakati chumba kimeshasafishwa ghorofani bila taarifa kufika."
+      },
+      {
+        "eyebrow": "Changamoto",
+        "headline": "Kupiga simu mara kwa mara kunachelewesha",
+        "body": "Mapokezi wanapiga simu kuuliza hali ya chumba, huku mgeni wa biashara akiangalia saa."
+      },
+      {
+        "eyebrow": "Ushirikiano",
+        "headline": "Housekeeping na mapokezi wanasoma mfumo mmoja",
+        "body": "Chumba kikisafishwa, taarifa inaonekana mapokezi mara moja bila wafanyakazi kupigiana simu."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Wageni wa biashara hawasubiri tena",
+        "body": "Operra inakupa muunganiko wa haraka kati ya mapokezi na housekeeping kwa urahisi."
+      }
+    ],
+    "caption": "Hoteli za Dar es Salaam zina mzunguko wa haraka wa wageni wa kibiashara. Wengi wanafika asubuhi na wanahitaji kuingia chumbani mara moja kujiandaa na kazi. Kama housekeeping wamesafisha lakini mapokezi hawana taarifa, mgeni anapoteza muda bure. Operra inaunganisha housekeeping na mapokezi kwenye mfumo mmoja ili wageni wako wahudumiwe bila kuchelewa.",
+    "hashtags": [
+      "HoteliTanzania",
+      "UsimamiziWaHoteli",
+      "DarHotels",
+      "OperraTech"
+    ],
+    "imagePrompt": "A single minimalist wooden clothes hanger hanging from a thin horizontal rail. Composition: minimal line drawing on a plain field, lots of empty space. Tone: flat graphic, not a photograph. Treatment: thin strokes, single muted colour. No text, no people, no logos.",
+    "cta": "Rahisisha mapokezi leo",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "backgroundPath": "state/bg/operra-2026-10-20-08-feature-spotlight.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-20T05:00:00.000Z",
+    "createdAt": "2026-10-19T18:03:10.399Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-20-08-feature-spotlight-1.png",
+      "operra-2026-10-20-08-feature-spotlight-2.png",
+      "operra-2026-10-20-08-feature-spotlight-3.png",
+      "operra-2026-10-20-08-feature-spotlight-4.png"
+    ],
+    "headline": "Mgeni anasubiri chumba ambacho kiko tayari?"
+  },
+  {
+    "id": "operra-2026-10-20-13-pain-point",
+    "eyebrow": "Upangaji Bei",
+    "headline": "Ankara inakataliwa kwa makosa ya viwango vya msimu?",
+    "body": "Wakati wa msimu wa safari Arusha, mawakala wana viwango tofauti vya mikataba. Mapokezi yakikosea kiwango kimoja, malipo ya ankara yanakwama mwezi mzima.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Msimu wa watalii unapochanganya Arusha, mawakala wa safari huleta wageni mfululizo chini ya mikataba tofauti. Kila kampuni ina bei zake maalum kulingana na msimu.\n\nMapokezi yakipiga hesabu kwa bei isiyo sahihi badala ya kiwango cha mkataba husika, uhasibu wa wakala unakataa ankara nzima. Bili inarudishwa, na malipo yenu yanachelewa kwa majuma kadhaa.\n\nOperra inafunga viwango maalum vya kila wakala moja kwa moja kwenye mfumo. Hakuna kubahatisha mapokezi, hakuna ankara inayokataliwa.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#SafariLodge"
+    ],
+    "imagePrompt": "Minimal line drawing of a traditional wooden desk stamp resting on a plain field, lots of empty space. Flat graphic, not a photograph. Thin strokes, single muted ochre colour on an off-white background. Detail kept right-of-centre, leaving the left side visually calm and empty, no text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-20T10:00:00.000Z",
+    "createdAt": "2026-10-19T18:06:46.492Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-20-16-number-that-lands",
+    "eyebrow": "Resort Operations",
+    "headline": "Low bandwidth shouldn't disrupt Zanzibar resort billing",
+    "body": "Run front desk, housekeeping, POS, pricing, reports, and audit trails seamlessly even on unstable island connections.",
+    "cta": "See it work",
+    "caption": "Coastal connectivity in Zanzibar shouldn't mean delayed guest folios or unbilled bar tabs at checkout. When island network signals drop, daily operations cannot stall.\n\nOperra keeps your front desk, housekeeping, POS, pricing, reports, and audit trail synced on low-bandwidth connections. Keep your resort checkouts fast and accurate.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#ResortManagement",
+      "#HotelOps",
+      "#Operra"
+    ],
+    "imagePrompt": "Minimal line drawing of an Ethernet network cable plug resting on a plain field, lots of empty space. Flat graphic, thin strokes, single muted slate blue colour. Detail placed on the right side, keeping the left third plain. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-20T13:00:00.000Z",
+    "createdAt": "2026-10-19T18:08:33.987Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-20-20-client-proof",
+    "eyebrow": "Guest Billing",
+    "headline": "Conference meal tabs post directly to room folios",
+    "body": "A hotel team in Mwanza links restaurant orders directly to accommodation accounts, ending paper chit confusion before attendees check out.",
+    "cta": "See how it works",
+    "caption": "Running a regional workshop means restaurant orders fly in all day. When paper receipts sit in the kitchen, front desk staff face billing disputes at checkout.\n\nA property in Mwanza solved this by routing restaurant charges directly to room folios in real time. The team prints clean corporate invoices the moment delegates leave, without chasing missing kitchen chits.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#MwanzaHotels",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "Minimal line drawing of a metal receipt spindle spike holding a restaurant chit on a clean plain field, lots of empty space. Flat graphic, not a photograph. Thin strokes, single muted warm grey colour. Detail positioned right of centre, left half completely empty and calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-20-20-client-proof.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-20T17:00:00.000Z",
+    "createdAt": "2026-10-19T18:10:23.323Z",
+    "status": "pending"
   }
 ]
