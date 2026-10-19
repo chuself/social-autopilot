@@ -11619,7 +11619,20 @@
     ],
     "scheduledFor": "2026-10-20T10:00:00.000Z",
     "createdAt": "2026-10-19T18:06:46.492Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-20-13-pain-point.mp4",
+      "beats": [
+        "Ankara inakataliwa tena msimu huu?",
+        "Bei ya wakala imekosewa mapokezi?",
+        "Operra inadhibiti viwango na mapokezi.",
+        "Malipo ya msimu yanaingia bila usumbufu."
+      ],
+      "narration": "Wakati wa msimu wa safari, mawakala wana mikataba yenye viwango tofauti. Kosa dogo la bei mapokezi linakwamisha ankara mwezi mzima. Operra inadhibiti viwango hivyo kwa Kiswahili na Kiingereza, hata kwenye mtandao mdogo, ili hoteli yako ipokee malipo bila usumbufu.",
+      "hasVoice": true,
+      "builtAt": "2026-10-19T19:15:51.400Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-20-16-number-that-lands",
