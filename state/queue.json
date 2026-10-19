@@ -11473,7 +11473,20 @@
     ],
     "scheduledFor": "2026-10-19T13:00:00.000Z",
     "createdAt": "2026-10-18T18:06:20.686Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-19-16-swahili-tip.mp4",
+      "beats": [
+        "Mivutano ya ankara mwisho wa mkutano?",
+        "Ingiza gharama za ziada papo hapo.",
+        "Funga hesabu kabla hawajaondoka.",
+        "Malipo bila migogoro mapokezi."
+      ],
+      "narration": "Wageni wa mikutano wakitaka huduma za ziada kama vinywaji au vifaa, ziingize kwenye mfumo mara moja. Mfumo unafanya kazi hata mtandao ukisua na kwa Kiswahili. Funga hesabu mapema uepuke mivutano ya ankara mapokezi wageni wanapoondoka.",
+      "hasVoice": true,
+      "builtAt": "2026-10-19T10:03:25.210Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-19-20-industry-note",
