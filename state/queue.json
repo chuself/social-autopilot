@@ -11427,7 +11427,7 @@
     ],
     "scheduledFor": "2026-10-19T10:00:00.000Z",
     "createdAt": "2026-10-18T18:06:05.109Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-19-13-client-proof.mp4",
       "beats": [
@@ -11439,10 +11439,14 @@
       "narration": "Fuatilia mabadiliko yote ya folios na bei za wageni wako bila hofu. Operra inarekodi kila marekebisho kiatomati kwenye audit trail, hata ukiwa na mtandao mdogo. Tumia lugha ya Kiswahili au Kiingereza kuendesha mapokezi na kupata amani kamili ya usimamizi.",
       "hasVoice": true,
       "builtAt": "2026-10-19T07:04:54.007Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-19T10:04:47.574Z",
+      "postIds": [
+        "instagram:17952553590290066",
+        "facebook:28921905137489940"
+      ]
     },
-    "lastAttempt": "2026-10-19T09:41:29.979Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-19T10:04:47.574Z"
   },
   {
     "id": "operra-2026-10-19-16-swahili-tip",
