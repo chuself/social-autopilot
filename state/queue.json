@@ -11625,7 +11625,7 @@
     ],
     "scheduledFor": "2026-10-20T10:00:00.000Z",
     "createdAt": "2026-10-19T18:06:46.492Z",
-    "status": "pending",
+    "status": "posted",
     "reel": {
       "file": "operra-2026-10-20-13-pain-point.mp4",
       "beats": [
@@ -11637,10 +11637,14 @@
       "narration": "Wakati wa msimu wa safari, mawakala wana mikataba yenye viwango tofauti. Kosa dogo la bei mapokezi linakwamisha ankara mwezi mzima. Operra inadhibiti viwango hivyo kwa Kiswahili na Kiingereza, hata kwenye mtandao mdogo, ili hoteli yako ipokee malipo bila usumbufu.",
       "hasVoice": true,
       "builtAt": "2026-10-19T19:15:51.400Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-20T10:06:01.167Z",
+      "postIds": [
+        "instagram:18130332565765945",
+        "facebook:2215315052361635"
+      ]
     },
-    "lastAttempt": "2026-10-20T09:05:13.123Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-20T10:06:01.167Z"
   },
   {
     "id": "operra-2026-10-20-16-number-that-lands",
