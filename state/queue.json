@@ -11732,5 +11732,152 @@
       "facebook:1049514968255534_122174088765351110",
       "instagram:18119495875956865"
     ]
+  },
+  {
+    "id": "operra-2026-10-21-08-swahili-tip",
+    "slides": [
+      {
+        "eyebrow": "Moshi Tips",
+        "headline": "Mizigo ya mlimani inasumbua ikirudi hotelini?",
+        "body": "Wapandaji wakienda kileleni, huacha mizigo mingi. Wakirudi wakiwa wamechoka, msako wa begi unachelewesha mapokezi."
+      },
+      {
+        "eyebrow": "Lebo maalum",
+        "headline": "Gawa lebo kulingana na kundi na chumba",
+        "body": "Weka nambari ya chumba cha awali na tarehe rasmi ya wao kushuka toka mlimani."
+      },
+      {
+        "eyebrow": "Mpangilio sahihi",
+        "headline": "Panga stoo kwa tarehe ya kurudi",
+        "body": "Mabegi ya wanaoshuka leo yawe mbele. Wafanyakazi hawatapoteza nusu saa kutafuta begi la mgeni aliyechoka."
+      },
+      {
+        "eyebrow": "Matokeo chanya",
+        "headline": "Weka taarifa za kundi kwenye mfumo",
+        "body": "Operra inaweka wazi maelezo ya kila chumba na kundi ili mapokezi yafanye kazi bila presha."
+      }
+    ],
+    "caption": "Msimu wa kupanda mlima ukichangamka Moshi, stoo ya mizigo inajaa haraka. Wageni wanapoelekea kileleni kwa siku sita au saba, huacha sehemu kubwa ya mizigo yao hotelini. Shida huanza wanaporudi wakiwa wamechoka, halafu inachukua muda mrefu kupata begi moja.\n\nKupanga mizigo kwa tarehe ya kushuka na lebo wazi kunaokoa muda wa mapokezi na kulinda heshima ya hoteli yako. Operra inakusaidia kuratibu wageni na vyumba bila msongamano.",
+    "hashtags": [
+      "MoshiHotels",
+      "KilimanjaroHospitality",
+      "HotelOperations",
+      "TanzaniaHotels"
+    ],
+    "imagePrompt": "composition: minimal line drawing of a single aluminum carabiner clip on a plain field, lots of empty space, tone: flat graphic, not a photograph, treatment: thin strokes, single muted colour. No text, no people, no logos",
+    "cta": "Wasiliana nasi leo",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "backgroundPath": "state/bg/operra-2026-10-21-08-swahili-tip.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-21T05:00:00.000Z",
+    "createdAt": "2026-10-20T18:06:39.620Z",
+    "status": "pending",
+    "slideFiles": [
+      "operra-2026-10-21-08-swahili-tip-1.png",
+      "operra-2026-10-21-08-swahili-tip-2.png",
+      "operra-2026-10-21-08-swahili-tip-3.png",
+      "operra-2026-10-21-08-swahili-tip-4.png"
+    ],
+    "headline": "Mizigo ya mlimani inasumbua ikirudi hotelini?"
+  },
+  {
+    "id": "operra-2026-10-21-13-industry-note",
+    "eyebrow": "Corporate Billing",
+    "headline": "Keep corporate LPOs clean during peak departures",
+    "body": "Route company-covered charges directly to the main master account while personal room extras stay separate. Prevent invoice disputes before guests leave.",
+    "cta": "See it work",
+    "caption": "Morning checkouts at Dar es Salaam business hotels leave zero room for billing confusion. When a corporate traveler departs, mixing personal extras with the company LPO delays the entire front desk line.\n\nOperra automatically splits room tariffs and corporate inclusions from personal extras at check-in. Your team closes clean company folios in seconds without manual recalculations.",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#HospitalityTech",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "Minimal line drawing of a sleek business conference lanyard badge on a plain field, lots of empty space. Flat graphic, not a photograph. Thin strokes, single muted colour. Object positioned on the right side of the frame, leaving the left side visually calm and empty. No text, no people, no logos",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-21-13-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-21T10:00:00.000Z",
+    "createdAt": "2026-10-20T18:07:40.010Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-21-16-feature-spotlight",
+    "eyebrow": "Ankara za Makundi",
+    "headline": "Ankara za tour operator hazicheleweshi safari",
+    "body": "Tenga bili za makampuni na matumizi binafsi ya wageni papo hapo. Ankara inatoka kwa usahihi bila kuchelewesha msafara.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Magari ya safari yapo nje Arusha, lakini ankara ya tour operator bado inakaguliwa kwa mikono? Operra inatenganisha bili kuu ya kampuni na matumizi binafsi ya kila mgeni papo hapo. Kila kitu kinakuwa wazi mapokezi kabla msafara hujaondoka. Hakuna mivutano wala kuchelewa.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HospitalityTanzania",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "Minimal line drawing of a canvas safari duffel bag with a luggage tag positioned on the right side of a plain field, lots of empty space on the left. Flat graphic, thin strokes, single muted olive green colour on an off-white background. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-21T13:00:00.000Z",
+    "createdAt": "2026-10-20T18:08:05.272Z",
+    "status": "pending"
+  },
+  {
+    "id": "operra-2026-10-21-20-pain-point",
+    "eyebrow": "Uhusiano wa Wageni",
+    "headline": "Mgeni anachelewa ndege kisa bili ya dobi?",
+    "body": "Zanzibar, malumbano ya ankara wakati wa kuondoka yanaharibu sifa ya resort yako. Hakikisha kila huduma inaingia kwenye mfumo papo hapo bila kuchelewa.",
+    "cta": "Ona Operra inavyofanya kazi",
+    "caption": "Hakuna kitu kibaya kama kumuweka mgeni asubiri bili wakati taxi ya uwanja wa ndege inasubiri nje.\n\nZanzibar, ankara za karatasi zinapochelewa kufika mapokezi, unajikuta unasamehe bili ili mgeni asikose ndege. Operra inahakikisha kila huduma—kuanzia bar hadi dobi—inaonekana kwenye folio ya mgeni ndani ya sekunde moja, hata kwenye internet dhaifu.\n\nDhibiti kila senti bila kupoteza tabasamu la mgeni wako. 🏨",
+    "hashtags": [
+      "ZanzibarResorts",
+      "HotelEfficiency",
+      "Operra"
+    ],
+    "imagePrompt": "Composition: minimal line drawing of a single paper luggage tag with a string on a plain field. Light/tone: flat graphic, not a photograph. Treatment: thin strokes, single muted navy blue colour. Detail right-of-centre, left side visually calm. No text, no people, no logos.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-21-20-pain-point.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-21T17:00:00.000Z",
+    "createdAt": "2026-10-20T18:10:23.607Z",
+    "status": "pending"
   }
 ]
