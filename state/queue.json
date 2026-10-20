@@ -11671,7 +11671,20 @@
     ],
     "scheduledFor": "2026-10-20T13:00:00.000Z",
     "createdAt": "2026-10-19T18:08:33.987Z",
-    "status": "pending"
+    "status": "pending",
+    "reel": {
+      "file": "operra-2026-10-20-16-number-that-lands.mp4",
+      "beats": [
+        "Unstable island connections?",
+        "Keep Zanzibar billing running",
+        "Front desk to POS",
+        "Work without internet stress"
+      ],
+      "narration": "Unstable island connections? Keep your Zanzibar resort billing running smoothly. Operra covers front desk, housekeeping, POS, pricing, reports, and audit trails. Designed for low bandwidth properties in Tanzania with English and Kiswahili interfaces.",
+      "hasVoice": true,
+      "builtAt": "2026-10-20T10:04:44.180Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-20-20-client-proof",
