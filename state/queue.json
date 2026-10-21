@@ -11406,7 +11406,20 @@
     "createdAt": "2026-10-21T09:13:12.759Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1309892125
+    "bgSeed": 1309892125,
+    "reel": {
+      "file": "operra-2026-10-21-16-client-proof.mp4",
+      "beats": [
+        "Wageni wa safari wanaondoka sasa?",
+        "Front desk na POS zinaungana vizuri.",
+        "Inafanya kazi hata mtandao ukiwa hafifu.",
+        "Bili sahihi kabla wageni hawajaondoka."
+      ],
+      "narration": "Wageni wa safari wakijiandaa kuondoka, bili zote za front desk na POS zinasawazishwa moja kwa moja. Hata mtandao ukiwa hafifu hotelini kwako, mfumo unatoa ripoti na mahesabu sahihi kwa Kiswahili na Kiingereza, bila kuchelewesha msafara.",
+      "hasVoice": true,
+      "builtAt": "2026-10-21T12:07:37.120Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-21-20-swahili-tip",
