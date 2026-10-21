@@ -11823,7 +11823,8 @@
     ],
     "scheduledFor": "2026-10-21T10:00:00.000Z",
     "createdAt": "2026-10-20T18:07:40.010Z",
-    "status": "pending"
+    "status": "pending",
+    "bgProvider": "moss"
   },
   {
     "id": "operra-2026-10-21-16-feature-spotlight",
@@ -11846,7 +11847,7 @@
     "look": "blueprint",
     "city": "Arusha",
     "series": null,
-    "backgroundPath": null,
+    "backgroundPath": "state/bg/operra-2026-10-21-16-feature-spotlight.png",
     "format": "reel",
     "platforms": [
       "facebook",
@@ -11854,7 +11855,8 @@
     ],
     "scheduledFor": "2026-10-21T13:00:00.000Z",
     "createdAt": "2026-10-20T18:08:05.272Z",
-    "status": "pending"
+    "status": "pending",
+    "bgProvider": "moss"
   },
   {
     "id": "operra-2026-10-21-20-pain-point",
@@ -11884,6 +11886,7 @@
     ],
     "scheduledFor": "2026-10-21T17:00:00.000Z",
     "createdAt": "2026-10-20T18:10:23.607Z",
-    "status": "pending"
+    "status": "pending",
+    "bgProvider": "moss"
   }
 ]
