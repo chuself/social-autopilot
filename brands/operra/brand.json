@@ -38,80 +38,103 @@
   "lookRotationDays": 3,
   "looks": [
     {
-      "name": "goldenhour",
       "accent": "#a478ff",
-      "tone": "warm, golden low sun, long shadows, dark overall",
-      "composition": "wide shot with deep perspective",
-      "treatment": "soft window light, gentle film grain",
       "scrim": 0.85,
-      "panel": 0.3
+      "panel": 0.3,
+      "name": "goldenhour",
+      "composition": "layered depth: one sharp foreground detail on the right, the working scene unfolding in soft focus behind it",
+      "tone": "late-afternoon golden light raking low through a doorway or window, long warm shadows, darker overall",
+      "treatment": "35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography"
     },
     {
-      "name": "flatlay",
       "accent": "#36d2ba",
-      "tone": "mid-tone, even soft daylight",
-      "composition": "overhead flat-lay, looking straight down onto a surface",
-      "treatment": "neat arrangement, shallow shadows",
       "scrim": 0.55,
-      "panel": 0.55
+      "panel": 0.55,
+      "name": "flatlay",
+      "composition": "overhead view looking straight down onto a work surface where the story is laid out: six to nine related objects arranged with intent",
+      "tone": "even soft daylight from a nearby window, mid-tone, true colours",
+      "treatment": "crisp editorial still-life photography, soft natural shadows, tactile materials"
     },
     {
-      "name": "macro",
       "accent": "#8fd0ff",
-      "tone": "light, high-key, clean",
-      "composition": "extreme close-up filling the frame",
-      "treatment": "shallow depth of field, fine texture detail",
       "scrim": 0.3,
-      "panel": 0.95
+      "panel": 0.95,
+      "name": "macro",
+      "composition": "a close detail filling the right half of the frame, with the wider room still readable in the soft background",
+      "tone": "light, high-key, clean and airy",
+      "treatment": "100mm macro lens at f/4, fine texture detail — wood grain, brass, linen, paper fibre"
     },
     {
-      "name": "blueprint",
       "accent": "#8b9dff",
-      "tone": "flat graphic, not a photograph",
-      "composition": "minimal line drawing on a plain field, lots of empty space",
-      "treatment": "thin strokes, single muted colour",
       "scrim": 0.45,
-      "panel": 0.75
+      "panel": 0.75,
+      "name": "blueprint",
+      "composition": "an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration",
+      "tone": "muted harmonious palette of four or five colours, soft flat light",
+      "treatment": "gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph"
     },
     {
-      "name": "daylight",
       "accent": "#3fb6c9",
-      "tone": "bright, sunlit, airy",
-      "composition": "exterior, wide, open horizon",
-      "treatment": "hard midday light and strong shadow shapes",
       "scrim": 0.25,
-      "panel": 0.95
+      "panel": 0.95,
+      "name": "daylight",
+      "composition": "wide establishing view of the property in its setting, the landscape giving a strong sense of place",
+      "tone": "bright, sunlit, airy, saturated but natural sky",
+      "treatment": "24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography"
     },
     {
-      "name": "nightfall",
       "accent": "#c98a86",
-      "tone": "deep blue hour, cool and quiet",
-      "composition": "exterior at dusk",
-      "treatment": "warm interior light glowing against a cool sky",
       "scrim": 0.8,
-      "panel": 0.35
+      "panel": 0.35,
+      "name": "nightfall",
+      "composition": "exterior or terrace at dusk, lit windows and lanterns, the building framed against the sky",
+      "tone": "deep blue hour, cool sky against warm practical light, quiet",
+      "treatment": "35mm lens, long-exposure feel, glowing interiors, calm cinematic mood"
+    },
+    {
+      "accent": "#e0a35f",
+      "scrim": 0.7,
+      "panel": 0.45,
+      "name": "interior",
+      "composition": "a lived-in interior at working pace — lobby, back office, housekeeping store or kitchen pass — people only as soft-focus figures",
+      "tone": "warm practical lamps mixed with window daylight",
+      "treatment": "documentary editorial photography, 28mm lens, natural imperfections, honest textures"
+    },
+    {
+      "accent": "#5fc7a0",
+      "scrim": 0.6,
+      "panel": 0.6,
+      "name": "aerial",
+      "composition": "high aerial drone view looking down at an angle onto the property and its surroundings, the building small in a big place",
+      "tone": "clear late-morning light, rich landscape colour",
+      "treatment": "drone photography, sharp landscape detail, strong sense of geography"
     }
   ],
   "cities": [
     {
       "name": "Dar es Salaam",
-      "note": "business travel, high turnover, corporate accounts"
+      "note": "business travel, high turnover, corporate accounts",
+      "visual": "glass business towers along the Kivukoni waterfront, harbour cranes and dhows offshore, corporate hotel lobbies, humid Indian Ocean light"
     },
     {
       "name": "Arusha",
-      "note": "safari season peaks, group bookings, tour operator invoicing"
+      "note": "safari season peaks, group bookings, tour operator invoicing",
+      "visual": "jacaranda-lined avenues, Mount Meru on the horizon, safari Land Cruisers with pop-up roofs, coffee estates, timber lodge verandas"
     },
     {
       "name": "Zanzibar",
-      "note": "resorts, long stays, foreign currency and OTA commissions"
+      "note": "resorts, long stays, foreign currency and OTA commissions",
+      "visual": "Stone Town coral-stone walls and carved brass-studded doors, makuti-thatched beach resorts, turquoise shallows, dhows with lateen sails"
     },
     {
       "name": "Mwanza",
-      "note": "lake tourism and regional conferences, smaller teams"
+      "note": "lake tourism and regional conferences, smaller teams",
+      "visual": "granite boulders rising out of Lake Victoria, Bismarck Rock, lakeside conference hotels, fishing boats pulled up at dawn"
     },
     {
       "name": "Moshi",
-      "note": "Kilimanjaro trekking groups, seasonal spikes, porters and guides"
+      "note": "Kilimanjaro trekking groups, seasonal spikes, porters and guides",
+      "visual": "Kilimanjaro's snow cap above banana and coffee farms, trekking duffels and boots, porters' kit, highland lodges with stone fireplaces"
     }
   ]
 }

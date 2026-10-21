@@ -8,7 +8,7 @@
  */
 import path from "node:path";
 import { writePost, writeCarousel, nextPillar, findUnapprovedFigures, cityForIndex } from "./brain.js";
-import { generateBackground } from "./background.js";
+import { generateBackgrounds } from "./background.js";
 import { renderPoster } from "./render.js";
 import { readQueue, writeQueue, recentPosts } from "./queue.js";
 import { readConfig } from "./config.js";
@@ -190,7 +190,7 @@ for (let n = 0; n < timetable.length; n++) {
     post =
       format === "carousel"
         ? await writeCarousel({ brandId, pillar, recent, note: slotNote, city, language: onCampaign ? campaign.language ?? undefined : undefined })
-        : await writePost({ brandId, pillar, recent, note: slotNote, city, language: onCampaign ? campaign.language ?? undefined : undefined });
+        : await writePost({ brandId, pillar, recent, note: slotNote, city, format, language: onCampaign ? campaign.language ?? undefined : undefined });
   } catch (err) {
     console.error(`slot ${n + 1} (${pillar}): brain failed — ${err.message}`);
     continue;
@@ -206,17 +206,10 @@ for (let n = 0; n < timetable.length; n++) {
     console.warn(`  ${id}: unapproved figures ${figures.join(", ")} — held for review`);
   }
 
-  const bgPath = post.imagePrompt
-    ? await generateBackground(post.imagePrompt, path.join(ROOT, "state", "bg", `${id}.png`), {
-        aspect: format === "reel" ? "9:16" : "4:5",
-      })
-    : null;
-
   const record = {
     id,
     ...post,
-    // Relative to the repo root: an absolute runner path is meaningless anywhere else.
-    backgroundPath: bgPath ? path.relative(ROOT, bgPath).split(path.sep).join("/") : null,
+    backgroundPath: null, // drawn below, with the rest of the plan, in one burst
     format,
     platforms: ["facebook", "instagram"],
     scheduledFor: scheduledFor.toISOString(),
@@ -225,36 +218,64 @@ for (let n = 0; n < timetable.length; n++) {
     heldFigures: figures.length ? figures : undefined,
   };
 
-  if (format === "carousel") {
-    // One PNG per slide, numbered in swipe order.
-    record.slideFiles = [];
-    for (const [i, slide] of (post.slides ?? []).entries()) {
-      const file = `${id}-${i + 1}.png`;
-      await renderPoster(
-        {
-          ...record,
-          ...slide,
-          // Only the last slide asks for anything.
-          cta: i === (post.slides.length - 1) ? post.cta ?? record.cta : "",
-        },
-        brandId,
-        path.join(ROOT, "public", file)
-      );
-      record.slideFiles.push(file);
-    }
-    record.headline = post.slides?.[0]?.headline ?? post.caption?.slice(0, 50) ?? id;
-    console.log(`planned ${id} [carousel ${record.slideFiles.length} slides] [${record.status}] — "${record.headline}"`);
-  } else {
-    await renderPoster(record, brandId, path.join(ROOT, "public", `${id}.png`));
-    console.log(`planned ${id} [${format}] [${record.status}] — "${post.headline}"`);
-  }
-
   // On the record, not the draft: `record` is what reaches the queue.
   if (onCampaign) {
     record.campaign = campaign.id;
     record.campaignName = campaign.name;
   }
   planned.push(record);
+}
+
+// Draw every background in ONE burst, after all the writing is done.
+//
+// MOSS bills container wall time. Drawing inside the loop kept the GPU
+// running — and billed — through every Gemini call that wrote the next post,
+// and an image is the cheap part: about 7 s in fast mode against a fixed boot,
+// load and 120 s idle tail. One burst pays those once and nothing in between.
+const drawable = planned.filter((r) => r.imagePrompt);
+const drawn = await generateBackgrounds(
+  drawable.map((r) => ({
+    prompt: r.imagePrompt,
+    outFile: path.join(ROOT, "state", "bg", `${r.id}.png`),
+    aspect: r.format === "reel" ? "9:16" : "4:5",
+  }))
+);
+drawable.forEach((r, i) => {
+  const d = drawn[i];
+  // Relative to the repo root: an absolute runner path is meaningless anywhere else.
+  r.backgroundPath = d.file ? path.relative(ROOT, d.file).split(path.sep).join("/") : null;
+  r.bgProvider = d.provider;
+  // Recorded so a background can be drawn again identically, the same way
+  // the look and the reel's motion style are pinned to the post.
+  if (d.seed) r.bgSeed = d.seed;
+});
+
+for (const record of planned) {
+  const id = record.id;
+  if (record.format === "carousel") {
+    // One PNG per slide, numbered in swipe order.
+    const slides = record.slides ?? [];
+    record.slideFiles = [];
+    for (const [i, slide] of slides.entries()) {
+      const file = `${id}-${i + 1}.png`;
+      await renderPoster(
+        {
+          ...record,
+          ...slide,
+          // Only the last slide asks for anything.
+          cta: i === slides.length - 1 ? record.cta : "",
+        },
+        brandId,
+        path.join(ROOT, "public", file)
+      );
+      record.slideFiles.push(file);
+    }
+    record.headline = slides[0]?.headline ?? record.caption?.slice(0, 50) ?? id;
+    console.log(`planned ${id} [carousel ${record.slideFiles.length} slides] [${record.status}] — "${record.headline}"`);
+  } else {
+    await renderPoster(record, brandId, path.join(ROOT, "public", `${id}.png`));
+    console.log(`planned ${id} [${record.format}] [${record.status}] — "${record.headline}"`);
+  }
 }
 
 await writeQueue([...queue, ...planned]);

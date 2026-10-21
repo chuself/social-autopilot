@@ -570,25 +570,46 @@ await check(
 await check(
   "one bad item cannot kill publish",
   async () => {
+    // This runs the real publisher for real, so it must not touch real state.
+    // It used to write skip reasons into the live queue — which is what turned a
+    // routine `git pull` into a merge conflict — and its notifyOnce left a
+    // fingerprint in the live alerts.json that would have silenced a GENUINE
+    // "reel not live" alert for that post for three hours. The queue goes to a
+    // scratch copy; alerts.json is put back exactly as it was.
+    const { mkdir, copyFile, writeFile: write } = await import("node:fs/promises");
+    await mkdir(path.join(ROOT, "state", "frames"), { recursive: true });
+    const scratchQueue = path.join("state", "frames", "preflight-queue.json");
+    await copyFile(path.join(ROOT, "state", "queue.json"), path.join(ROOT, scratchQueue));
+    const alertsFile = path.join(ROOT, "state", "alerts.json");
+    const alertsBefore = existsSync(alertsFile) ? await readFile(alertsFile, "utf8") : null;
+
     const { stdout, stderr } = await run(process.execPath, ["src/cli-publish-reel.js"], {
       cwd: ROOT,
       env: {
         ...process.env,
         DRY_RUN: "0",
+        QUEUE_FILE: scratchQueue,
         // A host that resolves to nothing: every reachability check fails.
         PUBLIC_ASSET_BASE: "https://127.0.0.1:9",
-        // Never let this test reach Telegram or a platform.
+        // Never let this test reach Telegram, the hub or a platform.
         TELEGRAM_BOT_TOKEN: "",
         TELEGRAM_CHAT_ID: "",
+        HUB_TG_BASE: "",
+        HUB_BOT_TOKEN: "",
         CALLMEBOT_PHONE: "",
         CALLMEBOT_APIKEY: "",
         GITHUB_OUTPUT: "",
       },
-    }).catch((err) => {
-      throw new Error(
-        `it exited ${err.code} instead of skipping — one unreachable asset would fail the whole run`
-      );
-    });
+    })
+      .catch((err) => {
+        throw new Error(
+          `it exited ${err.code} instead of skipping — one unreachable asset would fail the whole run`
+        );
+      })
+      .finally(async () => {
+        if (alertsBefore === null) await rm(alertsFile, { force: true });
+        else await write(alertsFile, alertsBefore);
+      });
     const out = `${stdout}\n${stderr}`;
     if (/ReferenceError|TypeError/.test(out)) throw new Error(out.slice(0, 140));
     return "survives an unreachable asset";

@@ -208,10 +208,8 @@ Rules:
 - Slide 1 is the hook: a problem the reader recognises. No product name.
 - Middle slides carry ONE idea each and must build, not restate.
 - The last slide names the payoff and carries the call to action.
-- "imagePrompt": choose a SUBJECT that connects to this carousel's topic, then shoot
-  it as composition «${look?.composition ?? "wide"}», tone «${look?.tone ?? "dark"}»,
-  treatment «${look?.treatment ?? "plain"}». Obey the tone.
-  End with "no text, no people, no logos".
+${sceneBrief(look, city, "carousel")}
+  One picture sits behind every slide, so make it about the carousel's whole idea.
 - ${language === "sw"
       ? "Write EVERY field in natural Tanzanian Kiswahili, as a hotelier speaks."
       : "Write in English."}
@@ -248,13 +246,63 @@ export function lookForDate(brand, date = new Date()) {
  * real places rather than addressing a generic "hotel" — a Zanzibar resort and
  * an Arusha safari lodge have very different problems.
  */
+/**
+ * How to write the background, for a model that can hold a whole scene.
+ *
+ * The old instruction asked for "one concrete object" because the old
+ * generator could manage nothing more: everything else came out as mush, so
+ * the feed was keys and luggage tags on plain fields. MOSS composes a full
+ * scene — place, moment, props, people at a distance, light, lens — and a rich
+ * prompt is what it is good at (it takes up to ~4K tokens). So the writer now
+ * builds a scene in a fixed order, grounded in the city the post speaks to.
+ *
+ * People are allowed only at a distance. A face turned to camera is the thing
+ * an image model gets most visibly wrong, and it would also read as a real
+ * member of some hotel's staff.
+ */
+export function sceneBrief(look, city, format = "poster") {
+  // Where the words sit, so the picture leaves room for them.
+  // Measured off the rendered templates, not guessed: the poster's text column
+  // runs across the left ~58% from the middle of the frame down, so "left third"
+  // put binoculars and a mug directly under the body copy.
+  const zone =
+    format === "reel"
+      ? "the centre band of the frame, where the captions run"
+      : "the left half of the frame, from the middle down to the bottom, where the headline and body text sit";
+  return `- "imagePrompt": the background, written as ONE rich scene description of 70-130 words,
+  in plain descriptive English sentences. Build it in this order:
+  1. Place — a believable setting in ${city?.name ?? "Tanzania"}${
+    city?.visual ? `: ${city.visual}` : ""
+  }. Name real local materials and architecture, never just "a hotel".
+  2. Moment — the hotel at work in a way that shows THIS post's problem or payoff. A post
+     about corporate invoices shows a back office at month-end; one about trekking groups
+     shows duffels and boots piled by a lodge door at dawn; never a beach for a mountain story.
+  3. Hero detail — one sharp, specific object that carries the idea, right of centre.
+     NEVER name a document, book, folder or sign by its purpose ("departure folios",
+     "guest ledger", "invoice", "menu") — the image model will letter that name onto
+     it. Describe it only by material and colour, and say it is plain and untitled:
+     "a stack of plain, untitled olive-green clothbound folders". Tested on the same
+     seed: the first wording printed gibberish titles, the second printed nothing.
+  4. Story props — three to five smaller details that make the scene believable.
+  5. People — only as soft-focus figures in the background, seen from behind, or hands at
+     work. Never a face turned to the camera, never a posed portrait.
+  6. Look — obey THIS BLOCK'S style exactly:
+       Composition : ${look?.composition ?? "wide shot with depth"}
+       Light/tone  : ${look?.tone ?? "natural light"}
+       Treatment   : ${look?.treatment ?? "editorial photography"}
+     Do not darken a bright look or brighten a dark one.
+  7. Calm zone — keep ${zone} visually quiet: plain wall, sky, shadow or soft blur.
+  Screens, papers and signs are turned away, blank or blurred, so nothing is legible.
+  Never say where the picture will be used — no "post", "poster", "Instagram" or "ad".`;
+}
+
 export function cityForIndex(brand, i) {
   const cities = brand.cities ?? [];
   if (!cities.length) return null;
   return cities[Math.abs(i) % cities.length];
 }
 
-export async function writePost({ brandId = "operra", pillar, recent = [], language, note, city = null, series = null }) {
+export async function writePost({ brandId = "operra", pillar, recent = [], language, note, city = null, series = null, format = "poster" }) {
   language ??= PILLAR_LANGUAGE[pillar] ?? "en";
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
@@ -353,19 +401,7 @@ Return ONLY a JSON object with these keys:
   Do NOT include any URL or phone number — the link is appended automatically.
   Line breaks allowed. At most one emoji, only if it genuinely helps.
 - "hashtags": array of 3-5 hashtags, relevant, no spam.
-- "imagePrompt": the background image.
-  YOU choose the SUBJECT — it must visually connect to what THIS post is about.
-  A post about bar bills shows bar glassware or a till roll; a post about mountain
-  trekkers shows boots or a highland lodge, never a beach. Pick one concrete object
-  or place a Tanzanian hotelier would recognise from the headline.
-  Then shoot that subject in THIS BLOCK'S style, which you must obey exactly:
-    Composition : ${look?.composition ?? "wide shot"}
-    Light/tone  : ${look?.tone ?? "dark, low contrast"}
-    Treatment   : ${look?.treatment ?? "plain"}
-  Do NOT add "dark colour grade" unless the tone says dark — a bright look stays bright.
-  End with "no text, no people, no logos".
-  The headline sits over the left third, so keep the detail right-of-centre and
-  leave the left side visually calm — plain wall, sky, shadow or empty space.
+${sceneBrief(look, city, format)}
 - "template": "spotlight"
 
 ${language === "sw"

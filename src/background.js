@@ -22,10 +22,11 @@ const GEMINI_IMAGE_MODEL = process.env.GEMINI_IMAGE_MODEL ?? "gemini-3.1-flash-i
  *   about 0.6 megapixels whatever size we request, but it DOES honour aspect —
  *   so asking in the right shape avoids stretching a 4:5 image into 9:16.
  */
-export async function generateBackground(prompt, outFile, { aspect = "4:5" } = {}) {
+export async function generateBackground(prompt, outFile, { aspect = "4:5", skipMoss = false } = {}) {
   if (process.env.SKIP_IMAGE === "1") return null;
 
-  for (const provider of [moss, geminiImage, cloudflareFlux, pollinations]) {
+  const chain = [moss, geminiImage, cloudflareFlux, pollinations].filter((p) => !(skipMoss && p === moss));
+  for (const provider of chain) {
     if (!provider.available()) continue;
     try {
       const bytes = await provider.run(prompt, aspect);
@@ -63,36 +64,140 @@ const moss = {
   name: "moss",
   available: () => Boolean(process.env.MOSS_URL && process.env.MOSS_API_KEY),
   async run(prompt, aspect = "4:5") {
-    const base = process.env.MOSS_URL.replace(/\/$/, "");
-    const key = process.env.MOSS_API_KEY;
-    const headers = { authorization: `Bearer ${key}`, "content-type": "application/json" };
-    // Multiples of 16 (the model's requirement) and at or above the canvas in
-    // BOTH directions, so the fit afterwards is a scale and nothing more.
-    // 1024x1280 looks big enough and is not: 1024 < 1080, so it tripped the
-    // upscale rescue and put film grain over an already sharp picture.
-    const [width, height] = aspect === "9:16" ? [1088, 1936] : [1088, 1360];
-
-    const submit = await fetch(`${base}/jobs`, {
-      method: "POST",
-      headers,
-      body: JSON.stringify({ prompt: withoutWriting(prompt), width, height, steps: 50 }),
-      signal: AbortSignal.timeout(60_000),
-    });
-    if (!submit.ok) throw new Error(`submit HTTP ${submit.status}: ${(await submit.text()).slice(0, 120)}`);
-    const { id } = await submit.json();
-
-    // Poll. A cold GPU plus a queue ahead of us is the slow case; past this it
-    // is better to fall through to a free provider than to hold up the plan.
-    const deadline = Date.now() + Number(process.env.MOSS_MAX_WAIT_MS ?? 6 * 60_000);
-    while (Date.now() < deadline) {
-      const res = await fetch(`${base}/jobs/${id}`, { headers, signal: AbortSignal.timeout(60_000) });
-      if (res.status === 200) return Buffer.from(await res.arrayBuffer());
-      if (res.status !== 202) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`);
-      await new Promise((r) => setTimeout(r, 5_000));
-    }
-    throw new Error("still running after the wait window");
+    const id = await mossSubmit(prompt, aspect);
+    return (await mossCollect(id)).png;
   },
 };
+
+/**
+ * Fast or quality.
+ *
+ * Fast is a DMD distillation of the same model: 8 network evaluations and no
+ * CFG, against 50 steps with CFG's second pass — 100 evaluations. Measured on
+ * the live service with the same prompt and seed: 6.8 s against 61.3 s of GPU,
+ * nine times cheaper, and the picture is the same scene with marginally less
+ * micro-texture — invisible under a scrim with a headline over it. So fast is
+ * the default; MOSS_MODE=quality buys back the last few per cent.
+ */
+const FAST = (process.env.MOSS_MODE ?? "fast") !== "quality";
+
+/**
+ * Said in the prompt for fast mode, and as a negative prompt for quality mode.
+ * Fast runs without CFG, so it has no negative pass to put a negative prompt in.
+ * MOSS lettered "Invoice" across a clipboard when "no text" was only asked once.
+ */
+const NEGATIVE =
+  "text, letters, words, numbers, writing, signage, labels, watermark, logo, " +
+  "face looking at camera, distorted hands, extra fingers, deformed face, worst quality, jpeg artifact";
+
+function mossConfig() {
+  const base = process.env.MOSS_URL.replace(/\/$/, "");
+  const headers = { authorization: `Bearer ${process.env.MOSS_API_KEY}`, "content-type": "application/json" };
+  return { base, headers };
+}
+
+/** Queue one image and return its job id at once. */
+async function mossSubmit(prompt, aspect, seed) {
+  const { base, headers } = mossConfig();
+  // Multiples of 16 (the model's requirement) and at or above the canvas in
+  // BOTH directions, so the fit afterwards is a scale and nothing more.
+  // 1024x1280 looks big enough and is not: 1024 < 1080, so it tripped the
+  // upscale rescue and put film grain over an already sharp picture.
+  const [width, height] = aspect === "9:16" ? [1088, 1936] : [1088, 1360];
+  const job = FAST
+    ? { prompt: withoutWriting(prompt), width, height, fast: true }
+    : { prompt: withoutWriting(prompt), width, height, steps: 50, negative_prompt: NEGATIVE };
+  if (Number.isInteger(seed)) job.seed = seed;
+
+  const res = await fetch(`${base}/jobs`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(job),
+    signal: AbortSignal.timeout(60_000),
+  });
+  if (!res.ok) throw new Error(`submit HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`);
+  return (await res.json()).id;
+}
+
+/** Wait for a queued image. Returns { png, seed, mode }. */
+async function mossCollect(id) {
+  const { base, headers } = mossConfig();
+  // A cold GPU plus a queue ahead of us is the slow case; past this it is
+  // better to fall through to a free provider than to hold up the plan.
+  const deadline = Date.now() + Number(process.env.MOSS_MAX_WAIT_MS ?? 8 * 60_000);
+  while (Date.now() < deadline) {
+    const res = await fetch(`${base}/jobs/${id}`, { headers, signal: AbortSignal.timeout(60_000) });
+    if (res.status === 200) {
+      return {
+        png: Buffer.from(await res.arrayBuffer()),
+        seed: Number(res.headers.get("x-moss-seed")) || null,
+        mode: res.headers.get("x-moss-mode") ?? (FAST ? "fast" : "normal"),
+      };
+    }
+    if (res.status !== 202) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`);
+    await new Promise((r) => setTimeout(r, 4_000));
+  }
+  throw new Error("still running after the wait window");
+}
+
+/**
+ * Generate many backgrounds in ONE burst.
+ *
+ * MOSS is billed by container wall time, and the cheap part is the image: in
+ * fast mode a poster is about 7 s of GPU. The expensive parts are fixed — boot
+ * and model load, then a 120 s idle tail before the container shuts down — and
+ * the GPU idling while Gemini writes the next post. Planning used to alternate
+ * write, draw, write, draw, so the GPU sat billed through every write. Submitting
+ * the whole plan at once pays the fixed costs once and nothing in between.
+ *
+ * @param {Array<{prompt: string, outFile: string, aspect?: string, seed?: number}>} jobs
+ *   `seed` redraws a recorded background identically (post.bgSeed).
+ * @returns {Promise<Array<{file: string|null, provider: string|null, seed: number|null}>>}
+ *   same order as `jobs`; an item MOSS could not draw falls back to the free
+ *   providers one at a time, so a failure costs that item quality, not the run.
+ */
+export async function generateBackgrounds(jobs) {
+  if (process.env.SKIP_IMAGE === "1") return jobs.map(() => ({ file: null, provider: null, seed: null }));
+
+  const results = jobs.map(() => null);
+
+  if (moss.available()) {
+    const ids = await Promise.all(
+      jobs.map((j) => mossSubmit(j.prompt, j.aspect ?? "4:5", j.seed).catch((err) => {
+        console.warn(`background via moss could not queue: ${err.message}`);
+        return null;
+      }))
+    );
+    console.log(`queued ${ids.filter(Boolean).length}/${jobs.length} background(s) on MOSS in one burst`);
+    await Promise.all(
+      ids.map(async (id, i) => {
+        if (!id) return;
+        try {
+          const { png, seed, mode } = await mossCollect(id);
+          const { outFile, aspect = "4:5" } = jobs[i];
+          await mkdir(path.dirname(outFile), { recursive: true });
+          await writeFile(outFile, png);
+          await sharpen(outFile, aspect);
+          console.log(`background via moss (${mode}) -> ${path.basename(outFile)}`);
+          results[i] = { file: outFile, provider: `moss-${mode}`, seed };
+        } catch (err) {
+          console.warn(`background via moss failed for ${path.basename(jobs[i].outFile)}: ${err.message}`);
+        }
+      })
+    );
+  }
+
+  // Whatever MOSS did not deliver gets the old chain, minus MOSS.
+  for (let i = 0; i < jobs.length; i++) {
+    if (results[i]) continue;
+    const file = await generateBackground(jobs[i].prompt, jobs[i].outFile, {
+      aspect: jobs[i].aspect ?? "4:5",
+      skipMoss: true,
+    });
+    results[i] = { file, provider: file ? "fallback" : null, seed: null };
+  }
+  return results;
+}
 
 /**
  * The writers already end every prompt with "no text, no people, no logos" and
@@ -101,7 +206,15 @@ const moss = {
  * disaster — but it is worth asking twice, and more plainly.
  */
 function withoutWriting(prompt) {
-  return `${prompt} The image contains absolutely no writing, letters, numbers, labels, signage, watermarks or logos of any kind.`;
+  // MOSS is unusually GOOD at text, which is the problem: name a ledger and it
+  // titles the spine ("DEPARTURE FOLURS"); show a device and it prints a model
+  // name on it. Fast mode has no negative pass, so the only lever is to make
+  // every object that would naturally carry words explicitly blank.
+  return (
+    `${prompt} The image contains absolutely no writing, letters, numbers, labels, signage, ` +
+    `watermarks or logos of any kind. Every book cover and spine, ledger, folder, sign, ` +
+    `screen, keypad and device is plain, untitled and unmarked.`
+  );
 }
 
 const geminiImage = {
