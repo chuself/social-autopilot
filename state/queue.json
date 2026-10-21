@@ -11404,7 +11404,7 @@
     ],
     "scheduledFor": "2026-10-21T13:00:00.000Z",
     "createdAt": "2026-10-21T09:13:12.759Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 1309892125,
     "reel": {
@@ -11418,10 +11418,14 @@
       "narration": "Wageni wa safari wakijiandaa kuondoka, bili zote za front desk na POS zinasawazishwa moja kwa moja. Hata mtandao ukiwa hafifu hotelini kwako, mfumo unatoa ripoti na mahesabu sahihi kwa Kiswahili na Kiingereza, bila kuchelewesha msafara.",
       "hasVoice": true,
       "builtAt": "2026-10-21T12:07:37.120Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-21T13:50:05.318Z",
+      "postIds": [
+        "instagram:17864094954693689",
+        "facebook:2082876642361389"
+      ]
     },
-    "lastAttempt": "2026-10-21T12:48:36.541Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-21T13:50:05.318Z"
   },
   {
     "id": "operra-2026-10-21-20-swahili-tip",
