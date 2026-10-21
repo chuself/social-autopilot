@@ -11824,7 +11824,20 @@
     "scheduledFor": "2026-10-21T10:00:00.000Z",
     "createdAt": "2026-10-20T18:07:40.010Z",
     "status": "pending",
-    "bgProvider": "moss"
+    "bgProvider": "moss",
+    "reel": {
+      "file": "operra-2026-10-21-13-industry-note.mp4",
+      "beats": [
+        "Messy corporate checkouts?",
+        "Route company charges to master accounts.",
+        "Keep personal extras completely separate.",
+        "Zero corporate billing disputes."
+      ],
+      "narration": "Peak departures should not mean invoice chaos. With Operra, your front desk routes company-covered charges straight to the master account while personal extras stay separate. You protect your corporate LPOs and stop billing disputes before guests even leave.",
+      "hasVoice": true,
+      "builtAt": "2026-10-21T07:03:44.731Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-21-16-feature-spotlight",
