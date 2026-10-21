@@ -11353,7 +11353,7 @@
     ],
     "scheduledFor": "2026-10-21T10:00:00.000Z",
     "createdAt": "2026-10-21T09:11:24.707Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 1108861956,
     "reel": {
@@ -11366,10 +11366,14 @@
       "narration": "When internet connections drop during morning departures, your front desk cannot afford to freeze. Operra runs reliably on low bandwidth common across Tanzania, keeping your billing, POS, and guest checkouts moving without any delay.",
       "hasVoice": true,
       "builtAt": "2026-10-21T09:37:31.610Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-21T10:28:55.195Z",
+      "postIds": [
+        "instagram:18039227840653383",
+        "facebook:1429820121885799"
+      ]
     },
-    "lastAttempt": "2026-10-21T09:38:16.143Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-21T10:28:55.195Z"
   },
   {
     "id": "operra-2026-10-21-16-client-proof",
