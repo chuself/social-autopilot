@@ -25,7 +25,7 @@ const GEMINI_IMAGE_MODEL = process.env.GEMINI_IMAGE_MODEL ?? "gemini-3.1-flash-i
 export async function generateBackground(prompt, outFile, { aspect = "4:5" } = {}) {
   if (process.env.SKIP_IMAGE === "1") return null;
 
-  for (const provider of [geminiImage, cloudflareFlux, pollinations]) {
+  for (const provider of [moss, geminiImage, cloudflareFlux, pollinations]) {
     if (!provider.available()) continue;
     try {
       const bytes = await provider.run(prompt, aspect);
@@ -40,6 +40,68 @@ export async function generateBackground(prompt, outFile, { aspect = "4:5" } = {
   }
   console.warn("no background generated — falling back to the branded gradient");
   return null;
+}
+
+/**
+ * MOSS-Image on a shared Modal GPU. The best picture available here by a wide
+ * margin, and the first thing tried.
+ *
+ * Everything before it capped out around 0.6 megapixels however large a canvas
+ * was asked for, so a 1080-wide poster was always an upscale of something
+ * smaller — which is why backgrounds read as soft. MOSS renders the real
+ * 1024x1280 or 768x1344 and the only resize left is the last few per cent.
+ *
+ * It is a JOB api, not a request: POST returns an id, GET answers 202 until the
+ * image exists. Roughly 40 s of GPU, plus about 45 s more when the GPU is cold.
+ *
+ * Costs a few cents an image against a shared monthly cap, so it is OFF unless
+ * MOSS_URL and MOSS_API_KEY are both set — and when the cap is reached or the
+ * service is switched off, the chain simply falls through to the free
+ * providers below and the day's posts still get a picture.
+ */
+const moss = {
+  name: "moss",
+  available: () => Boolean(process.env.MOSS_URL && process.env.MOSS_API_KEY),
+  async run(prompt, aspect = "4:5") {
+    const base = process.env.MOSS_URL.replace(/\/$/, "");
+    const key = process.env.MOSS_API_KEY;
+    const headers = { authorization: `Bearer ${key}`, "content-type": "application/json" };
+    // Multiples of 16 (the model's requirement) and at or above the canvas in
+    // BOTH directions, so the fit afterwards is a scale and nothing more.
+    // 1024x1280 looks big enough and is not: 1024 < 1080, so it tripped the
+    // upscale rescue and put film grain over an already sharp picture.
+    const [width, height] = aspect === "9:16" ? [1088, 1936] : [1088, 1360];
+
+    const submit = await fetch(`${base}/jobs`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ prompt: withoutWriting(prompt), width, height, steps: 50 }),
+      signal: AbortSignal.timeout(60_000),
+    });
+    if (!submit.ok) throw new Error(`submit HTTP ${submit.status}: ${(await submit.text()).slice(0, 120)}`);
+    const { id } = await submit.json();
+
+    // Poll. A cold GPU plus a queue ahead of us is the slow case; past this it
+    // is better to fall through to a free provider than to hold up the plan.
+    const deadline = Date.now() + Number(process.env.MOSS_MAX_WAIT_MS ?? 6 * 60_000);
+    while (Date.now() < deadline) {
+      const res = await fetch(`${base}/jobs/${id}`, { headers, signal: AbortSignal.timeout(60_000) });
+      if (res.status === 200) return Buffer.from(await res.arrayBuffer());
+      if (res.status !== 202) throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`);
+      await new Promise((r) => setTimeout(r, 5_000));
+    }
+    throw new Error("still running after the wait window");
+  },
+};
+
+/**
+ * The writers already end every prompt with "no text, no people, no logos" and
+ * MOSS still lettered "Invoice" across a clipboard. It sits under a scrim with
+ * a headline over it, so stray lettering is a distraction rather than a
+ * disaster — but it is worth asking twice, and more plainly.
+ */
+function withoutWriting(prompt) {
+  return `${prompt} The image contains absolutely no writing, letters, numbers, labels, signage, watermarks or logos of any kind.`;
 }
 
 const geminiImage = {
@@ -113,28 +175,57 @@ const pollinations = {
 };
 
 /**
- * The generator returns roughly 686x858 whatever we ask for, and the browser
- * then stretches that across a 1080-wide canvas — which is what made posters
- * look soft. Upscaling here with lanczos plus a light unsharp pass is sharper
- * than letting the browser do it, and a touch of grain makes the remaining
- * softness read as film rather than as a low-resolution image.
+ * Fit the image to the canvas.
+ *
+ * The free generators return roughly 686x858 whatever is asked for, and the
+ * browser then stretches that across a 1080-wide canvas — which is what made
+ * posters look soft. For those, lanczos plus a light unsharp pass beats letting
+ * the browser do it, and a touch of grain makes the remaining softness read as
+ * film rather than as a low-resolution image.
+ *
+ * None of that applies to an image that was already big enough. Sharpening a
+ * sharp picture crunches its edges and the grain throws away real detail, so an
+ * image that arrives at or above the canvas is only ever scaled.
  */
 async function sharpen(file, aspect) {
   const [w, h] = aspect === "9:16" ? [1080, 1920] : [1080, 1350];
   const tmp = `${file}.up.png`;
   try {
+    const upscaled = await isSmallerThan(file, w, h);
+    const rescue = upscaled ? ",unsharp=5:5:0.7:5:5:0.0,noise=alls=6:allf=t+u" : "";
     await run("ffmpeg", [
       "-y", "-v", "error",
       "-i", file,
       "-vf",
       `scale=${w}:${h}:flags=lanczos+accurate_rnd:force_original_aspect_ratio=increase,` +
-        `crop=${w}:${h},unsharp=5:5:0.7:5:5:0.0,noise=alls=6:allf=t+u`,
+        `crop=${w}:${h}${rescue}`,
       tmp,
     ]);
     const { rename } = await import("node:fs/promises");
     await rename(tmp, file);
+    if (!upscaled) console.log("  source was already full size — scaled without the rescue pass");
   } catch (err) {
     // Not fatal — a soft background still beats no background.
     console.warn(`  could not sharpen: ${String(err.message).slice(0, 80)}`);
+  }
+}
+
+/** True when the source is smaller than the canvas in either direction. */
+async function isSmallerThan(file, w, h) {
+  try {
+    const { stdout } = await run("ffprobe", [
+      "-v", "error",
+      "-select_streams", "v:0",
+      "-show_entries", "stream=width,height",
+      "-of", "json",
+      file,
+    ]);
+    const s = JSON.parse(stdout).streams?.[0];
+    if (!s?.width) return true;
+    return s.width < w || s.height < h;
+  } catch {
+    // Unknown size: assume it needs the rescue, which is what every provider
+    // before MOSS did need.
+    return true;
   }
 }

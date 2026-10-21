@@ -44,6 +44,11 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # The good image model. When these are absent, or the shared cap is
+          # reached, background.js falls through to the free providers and the
+          # day still gets a picture.
+          MOSS_URL: ${{ secrets.MOSS_URL }}
+          MOSS_API_KEY: ${{ secrets.MOSS_API_KEY }}
           # --replace destroys planned work, so it has to be able to say what it
           # threw away and hand over any reel that was already filmed.
           PUBLIC_ASSET_BASE: ${{ vars.PUBLIC_ASSET_BASE }}

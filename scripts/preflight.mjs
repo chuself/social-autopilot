@@ -795,6 +795,32 @@ await check(
   { group: "creds", level: "warn" }
 );
 
+// The picture quality everything else is judged on. Falling back to the free
+// providers is survivable and nearly invisible in the logs, so the cap running
+// out would otherwise show up only as the backgrounds quietly going soft again.
+await check(
+  "moss image service",
+  async () => {
+    if (!process.env.MOSS_URL || !process.env.MOSS_API_KEY) {
+      return { warn: "not configured - backgrounds fall back to the free providers" };
+    }
+    const res = await fetch(`${process.env.MOSS_URL.replace(/\/$/, "")}/status`, {
+      headers: { authorization: `Bearer ${process.env.MOSS_API_KEY}` },
+      signal: AbortSignal.timeout(30_000),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const s = await res.json();
+    const spend = Number(s.estimated_spend_usd ?? 0);
+    const cap = Number(s.cap_usd ?? 0);
+    if (s.off) return { warn: "switched OFF - backgrounds fall back to the free providers" };
+    if (cap && spend / cap > 0.8) {
+      return { warn: `$${spend.toFixed(2)} of $${cap} used - close to the cap` };
+    }
+    return `$${spend.toFixed(2)} of $${cap} used this month`;
+  },
+  { group: "creds", level: "warn", net: true }
+);
+
 // Reading the sealed token proves METRICOOL_KEY still matches the ciphertext.
 // If a rotation half-committed, this is where it shows.
 await check(
