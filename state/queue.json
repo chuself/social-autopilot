@@ -1338,7 +1338,7 @@
       "builtAt": "2026-08-27T18:20:28.660Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-21T06:58:30.564Z",
+    "lastAttempt": "2026-10-21T07:04:02.783Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -1388,7 +1388,7 @@
       "builtAt": "2026-08-27T22:59:44.063Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-21T06:58:30.564Z",
+    "lastAttempt": "2026-10-21T07:04:02.783Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
@@ -2479,7 +2479,7 @@
       "builtAt": "2026-09-02T12:02:28.884Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-21T06:58:30.564Z",
+    "lastAttempt": "2026-10-21T07:04:02.783Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-10-21T06:58:30.491Z"
   },
@@ -8251,7 +8251,7 @@
       "builtAt": "2026-10-02T18:23:57.800Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-21T06:58:30.564Z",
+    "lastAttempt": "2026-10-21T07:04:02.783Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-10-21T06:58:30.491Z"
   },
@@ -11837,7 +11837,9 @@
       "hasVoice": true,
       "builtAt": "2026-10-21T07:03:44.731Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-21T07:04:02.783Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-10-21-16-feature-spotlight",
