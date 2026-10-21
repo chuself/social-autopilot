@@ -11465,5 +11465,156 @@
       "facebook:1049514968255534_122174662689351110",
       "instagram:18119304536318279"
     ]
+  },
+  {
+    "id": "operra-2026-10-22-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "Regional Insight",
+        "headline": "Mwanza is becoming a regional conference hub.",
+        "body": "EAC bodies and NGOs are shifting focus to the Lake Zone. This demands higher billing transparency."
+      },
+      {
+        "eyebrow": "Market Shift",
+        "headline": "Corporate guests now reject manual folios.",
+        "body": "Global organizations require instant digital accuracy. A single manual error can stall a group payment for months."
+      },
+      {
+        "eyebrow": "The Operra Edge",
+        "headline": "Professional conference reports, simplified for Mwanza.",
+        "body": "Operra generates audit-ready invoices instantly, even on low-bandwidth lakeside connections. Professionalism that secures repeat bookings."
+      }
+    ],
+    "caption": "Mwanza inazidi kukua kama kitovu cha mikutano ya kikanda (EAC) na miradi ya kimataifa. Wageni hawa wanakuja na mahitaji makubwa ya uwazi—hawataki ankara za mkono au makosa ya kimahesabu. Je, mfumo wako unakidhi viwango hivi? Operra inasaidia hoteli za Kanda ya Ziwa kutoa ripoti sahihi na ankara za kitaalamu papo hapo, hata kama intaneti inasumbua. Usiruhusu makosa ya bili yapoteze imani ya wateja wako wa kampuni.",
+    "hashtags": [
+      "MwanzaHotels",
+      "LakeVictoria",
+      "TanzaniaHospitality",
+      "OperraTech"
+    ],
+    "imagePrompt": "Place: A lakeside hotel terrace in Mwanza, with the iconic granite Bismarck Rock rising from the calm waters of Lake Victoria in the background. Moment: Late afternoon after a regional trade meeting; a long, polished mahogany conference table is mostly empty. Hero detail: A heavy glass water carafe with faint condensation beads, sitting next to a single inverted glass on a plain, untitled dark-navy textile runner, positioned right of centre. Story props: A traditional wooden fishing dhow with a weathered white hull visible on the lake, a coiled black microphone cable on the table edge, and a small reed-woven basket. People: A soft-focus hotel staff member in a light-coloured shirt is seen from behind in the distance, adjusting a window blind. Look: Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light/tone: muted palette of deep lake blues, granite greys, and warm wood, soft flat light. Treatment: gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph. Calm zone: The bottom left quadrant, showing the smooth, shaded floor of the terrace and the blur of the lake water, is visually quiet.",
+    "cta": "Anza na Operra",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "backgroundPath": "state/bg/operra-2026-10-22-08-industry-note.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-22T05:00:00.000Z",
+    "createdAt": "2026-10-21T21:34:24.423Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3274871601,
+    "slideFiles": [
+      "operra-2026-10-22-08-industry-note-1.png",
+      "operra-2026-10-22-08-industry-note-2.png",
+      "operra-2026-10-22-08-industry-note-3.png"
+    ],
+    "headline": "Mwanza is becoming a regional conference hub."
+  },
+  {
+    "id": "operra-2026-10-22-13-feature-spotlight",
+    "eyebrow": "Housekeeping",
+    "headline": "Usimamizi wa dobi kwa vikundi vya mlimani",
+    "body": "Panga mavazi ya porters na vifaa vya wageni kwa ufanisi. Operra inakupa taarifa sahihi ya vyumba ili dobi isichelewe na kila mgeni apate chake kwa wakati.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Msimu wa wageni kupanda mlima Kilimanjaro ukifika, usimamizi wa dobi unakuwa changamoto kubwa hapa Moshi. Magenge ya wageni yanarudi na mabegi yenye nguo chafu, na kila kitu kinatakiwa kiwe safi kwa safari ya kesho.\n\nOperra inarahisisha mchakato huu kwa kuunganisha data za vyumba na ripoti za housekeeping. Hakuna tena kuchanganya nguo za wageni au kuchelewa kupanga vyumba. Unapata muda zaidi wa kuhudumia wageni na kupunguza msongamano wa kazi kwa wafanyakazi wako.\n\nRahisisha utendaji wa hoteli yako leo.",
+    "hashtags": [
+      "#MoshiHotels",
+      "#KilimanjaroTourism",
+      "#HotelManagement",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "A rustic highland lodge veranda in Moshi, with large stone pillars and dark local hardwood floors. The setting is a cozy corner near a stone fireplace, with a view of coffee shrubs through an open doorway. In the foreground, a tall stack of plain, untitled charcoal-grey heavy canvas laundry sacks sits neatly beside a pile of worn leather trekking boots with thick, coiled laces. Small props include a single, plain wooden laundry basket, a set of three antique brass keys hanging on a simple metal hook, and a small ceramic mug with steam rising. In the soft-focus background, two staff members in plain uniforms are seen from behind, organizing equipment. Composition is an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light and tone feature a muted palette of slate grey, forest green, deep brown, and warm ochre, with soft, flat light. Treatment is a gouache and ink illustration with visible brush texture. The centre band of the frame is a plain, dark wooden wall, providing a calm zone.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-22-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-22T10:00:00.000Z",
+    "createdAt": "2026-10-21T21:34:44.493Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 749797429
+  },
+  {
+    "id": "operra-2026-10-22-16-pain-point",
+    "eyebrow": "Usimamizi wa Fedha",
+    "headline": "Bili za makampuni zinapotea Dar?",
+    "body": "Unapochelewa kufunga bili za wageni wa kibiashara, fedha hupotea. Operra inasaidia kufuatilia gharama zote za ziada kabla mgeni hajaondoka kwenye hoteli yako ya Dar es Salaam.",
+    "cta": "Tazama jinsi inavyofanya",
+    "caption": "Mgeni wa kibiashara anataka kuondoka haraka asubuhi, lakini bili yake haijakamilika. Hii ni kawaida kwenye hoteli nyingi jijini Dar es Salaam pale huduma za ziada zinapochelewa kuingizwa kwenye foliyo. 📉\n\nKusubiri mwisho wa mwezi ili kutafuta risiti zilizopotea kunapunguza faida yako. Operra inakuwezesha kuunganisha kila gharama moja kwa moja kwenye akaunti ya mgeni wakati huduma inapotolewa. Hakuna tena kupoteza muda kutafuta bili zilizosahaulika wakati wa malipo.",
+    "hashtags": [
+      "#DarEsSalaamHotels",
+      "#Operra",
+      "#HospitalityTanzania",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "A back office in a corporate hotel building overlooking the Kivukoni waterfront in Dar es Salaam, with large windows showing the hazy silhouette of harbour cranes and dhow sails against the bright Indian Ocean sky. On a heavy teak wooden desk sits a stack of plain, untitled cream-coloured cardstock sheets, held down by a smooth brass paperweight. Nearby, there is a half-empty glass of iced tea, a pair of dark metal reading glasses, and a ceramic cup with a faint coffee stain. In the soft-focus background, the silhouette of a staff member is seen working at a computer station. The composition is an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. The light and tone consist of a muted harmonious palette of four or five colours with soft, flat, humid light. The treatment is a gouache and ink illustration with visible brush texture. The centre band of the frame is kept visually quiet with a plain, light-washed wall to allow for overlay text.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-22-16-pain-point.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-22T13:00:00.000Z",
+    "createdAt": "2026-10-21T21:35:21.115Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3117077638
+  },
+  {
+    "id": "operra-2026-10-22-20-number-that-lands",
+    "eyebrow": "System Efficiency",
+    "headline": "Six departments running on one lean system",
+    "body": "Safari groups in Arusha demand precision. Operra integrates your front desk, POS, and reporting into one interface, ensuring no service detail is ever lost during high-season transitions.",
+    "cta": "See it work",
+    "caption": "Safari season in Arusha means back-to-back group arrivals and complex billing demands. When departments operate in silos, revenue leaks happen at every hand-off point. \n\nOperra connects six core departments into one lean system that thrives even on limited internet connectivity. By centralizing your data, you eliminate the manual errors that stall departures and frustrate tour operators. Keep your operations focused on the guest experience, not chasing missing receipts across different desks. Efficiency is the best way to scale your lodge's performance this season. 🏔️",
+    "hashtags": [
+      "#ArushaHoteliers",
+      "#SafariLodge",
+      "#HotelOperations",
+      "#TanzaniaTourism",
+      "#Operra"
+    ],
+    "imagePrompt": "A rustic timber lodge veranda on a coffee estate in Arusha, with Mount Meru visible in the distance under a pale sky. The scene is set during the quiet morning hours before group arrivals. The hero detail is a heavy, plain brass desk bell sitting on a weathered mahogany side table, slightly right of center. Story props include a pair of binoculars resting on a woven sisal mat, a ceramic cup with a faint steam wisp, and a small, empty slate-grey ceramic dish. Soft-focus figures of staff are moving in the background, seen only as silhouettes near a stone archway. Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light/tone: muted harmonious palette of ochre, slate grey, forest green, and cream, soft flat light. Treatment: gouache and ink illustration with visible brush texture. The left half of the frame consists of a plain, unadorned light beige stone wall, creating a calm zone for text.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-22-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-22T17:00:00.000Z",
+    "createdAt": "2026-10-21T21:35:52.637Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 247257759
   }
 ]
