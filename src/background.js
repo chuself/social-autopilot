@@ -6,6 +6,8 @@
  * branded gradient, so a post never dies because an image model was down.
  */
 import { writeFile, mkdir } from "node:fs/promises";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
@@ -205,15 +207,52 @@ export async function generateBackgrounds(jobs) {
  * a headline over it, so stray lettering is a distraction rather than a
  * disaster — but it is worth asking twice, and more plainly.
  */
+// Every town any brand writes about. Read once from brands/*/brand.json so a
+// franchise copy with other cities is covered without touching this file.
+const TOWNS = (() => {
+  try {
+    const dir = fileURLToPath(new URL("../brands/", import.meta.url));
+    return readdirSync(dir, { withFileTypes: true })
+      .filter((d) => d.isDirectory() && existsSync(path.join(dir, d.name, "brand.json")))
+      .flatMap((d) => JSON.parse(readFileSync(path.join(dir, d.name, "brand.json"), "utf8")).cities ?? [])
+      .map((c) => c.name)
+      .filter(Boolean)
+      .sort((a, b) => b.length - a.length);
+  } catch {
+    return [];
+  }
+})();
+
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/**
+ * Takes town names out of an image prompt. "A corporate hotel mezzanine in Dar es
+ * Salaam" came back with "HOTEL DAR ES SALAONI" lettered across the facade: a
+ * named place invites a sign. The landscape words (Kivukoni cranes, Mount Meru,
+ * granite boulders) already carry the place, so the name itself adds nothing.
+ */
+export function withoutTownNames(prompt) {
+  let t = String(prompt);
+  for (const town of TOWNS) {
+    const n = escapeRe(town).replace(/\s+/g, "\\s+");
+    t = t
+      .replace(new RegExp(`\\s*,?\\s+(?:in|of|at|near|around|across|outside|overlooking)\\s+(?:central\\s+|coastal\\s+)?${n}\\b(?!'s)`, "gi"), "")
+      .replace(new RegExp(`\\b${n}'s\\b`, "gi"), "the town's")
+      .replace(new RegExp(`\\b${n}\\b`, "gi"), "local");
+  }
+  return t.replace(/\s{2,}/g, " ").replace(/\s+([.,;])/g, "$1");
+}
+
 function withoutWriting(prompt) {
   // MOSS is unusually GOOD at text, which is the problem: name a ledger and it
-  // titles the spine ("DEPARTURE FOLURS"); show a device and it prints a model
-  // name on it. Fast mode has no negative pass, so the only lever is to make
-  // every object that would naturally carry words explicitly blank.
+  // titles the spine ("DEPARTURE FOLURS"). Fast mode has no negative pass, so
+  // "no writing, letters, signage..." is read as a list of things to draw: on
+  // one seed that sentence alone lettered "HOTEL" across the facade, and this
+  // wording, which names no kind of text at all, came back clean with or
+  // without place names in the prompt.
   return (
-    `${prompt} The image contains absolutely no writing, letters, numbers, labels, signage, ` +
-    `watermarks or logos of any kind. Every book cover and spine, ledger, folder, sign, ` +
-    `screen, keypad and device is plain, untitled and unmarked.`
+    `${withoutTownNames(prompt)} Every surface in the scene is bare and blank: ` +
+    `plain walls, plain glass, plain covers, unmarked objects.`
   );
 }
 
