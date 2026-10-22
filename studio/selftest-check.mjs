@@ -42,6 +42,11 @@ const shown = `${T.currency} ${T.rightTotal.toLocaleString("en-US")}`;
 const wrong = `${T.currency} ${(T.rightTotal + T.rightRate).toLocaleString("en-US")}`;
 await expect("wrong total on the folio", mutant("sum", { page: html.split(shown).join(wrong) }), video, "numbers");
 
+// 1b. an unfilled placeholder (golden reel 03 shipped "Imeingia chumba {room}")
+const okChip = /(<div class="chip ok" id="s\d-ok">[\s\S]*?<\/svg>)([^<]+)</.exec(html);
+if (!okChip) failed++, console.log("MISS  unfilled placeholder       (no success chip found to plant it in)");
+if (okChip) await expect("unfilled {room} placeholder", mutant("token", { page: html.replace(okChip[0], `${okChip[1]}Posted to room {room}<`) }), video, "numbers");
+
 // 2. a chip pushed into Instagram's button column
 await expect("chip off the safe area", mutant("layout", { page: html.replace('class="chip soft" id="s2-chip0" style="left:80px', 'class="chip soft" id="s2-chip0" style="left:700px') }), video, "layout");
 

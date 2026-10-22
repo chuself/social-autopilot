@@ -126,6 +126,7 @@ export const SCENES = {
    * and the arithmetic is on screen: nights × rate = total.
    */
   "folio-fix"(id, s, { t0, dur, T }) {
+    if (s.okChip) assertNoDigits(s.okChip, `${id} okChip`);
     const flip = (k, a, b) => `<span class="flip" id="${id}-${k}"><span class="fa">${esc(a)}</span><span class="fb">${esc(b)}</span></span>`;
     const card = `<div class="tilt"><div class="fcard" id="${id}-fol">
       <div class="fhead">FOLIO · ROOM ${esc(T["{room}"])}</div>
@@ -133,7 +134,7 @@ export const SCENES = {
       <div class="bline neg"><span>Charged / night</span>${flip("rate", T["{wrongRate}"], T["{rightRate}"])}</div>
       <div class="btot"><span>Due<span class="sum">${flip("sum", T["{wrongSum}"], T["{rightSum}"])}</span></span>${flip("tot", T["{wrongTotal}"], T["{rightTotal}"])}</div>
     </div>
-    <div class="chip ok" id="${id}-ok">${ico("check", { size: 30, stroke: 2.6 })}${esc(s.okChip ?? "Correct rate applied")}</div></div>
+    <div class="chip ok" id="${id}-ok">${ico("check", { size: 30, stroke: 2.6 })}${esc(fill(s.okChip ?? "Correct rate applied", T))}</div></div>
     ${chips(id, s.chips)}`;
     const f = (k, at, cue) => [
       { t: at, sel: `#${id}-${k} .fa`, to: { yPercent: -110 }, dur: 0.32, ease: "power2.inOut", cue },
@@ -208,13 +209,14 @@ export const SCENES = {
    * Every line is qty × price and the total is their sum, all from the ledger.
    */
   "pos-charge"(id, s, { t0, dur, T, ledger }) {
+    if (s.okChip) assertNoDigits(s.okChip, `${id} okChip`);
     const lines = orderLines(ledger);
     const ticket = `<div class="tilt"><div class="fcard pos" id="${id}-pos">
       <div class="fhead">POS · BAR &amp; RESTAURANT · ROOM ${esc(T["{room}"])}</div>
       ${lines.map((l, i) => `<div class="bline" id="${id}-l${i}"><span>${esc(l.label)}<i class="each">${esc(l.each)} each</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
       <div class="btot"><span>Total</span><span class="bval">${esc(T["{orderTotal}"])}</span></div>
     </div>
-    <div class="chip ok" id="${id}-ok">${ico("bed-double", { size: 30 })}${esc(s.okChip ?? `Posted to room ${T["{room}"]}`)}</div></div>
+    <div class="chip ok" id="${id}-ok">${ico("bed-double", { size: 30 })}${esc(fill(s.okChip ?? "Posted to room {room}", T))}</div></div>
     ${chips(id, s.chips)}`;
     return {
       html: shell(id, s, { fg: ticket, grade: "ops" }),
@@ -265,21 +267,33 @@ export const SCENES = {
 
 // ── transitions: outgoing accelerates out (.in), incoming decelerates in (.out),
 // overlapping so the cut lands at peak speed. Each carries the whoosh.
+
+/**
+ * Opacity hand-off: the incoming shot is fully there BEFORE the outgoing one
+ * leaves. When both faded at once, the frame between was mostly background, a
+ * visible dip the checker caught in golden reel 03.
+ */
+const handoff = (a, b, T) => [
+  { t: T - 0.12, sel: `#${b}`, from: { opacity: 0 }, to: { opacity: 1 }, dur: 0.12, ease: "none" },
+  { t: T, sel: `#${a}`, to: { opacity: 0 }, dur: 0.12, ease: "none" },
+];
 export const TRANSITIONS = {
   zoom: (a, b, T) => [
     { t: T - 0.5, sel: `#${a}`, to: { scale: 1.32, filter: "blur(16px) brightness(1)" }, dur: 0.5, ease: "power2.in" },
-    { t: T - 0.08, sel: `#${a}`, to: { opacity: 0 }, dur: 0.16, ease: "none" },
-    { t: T - 0.08, sel: `#${b}`, from: { opacity: 0, scale: 1.22, filter: "blur(16px) brightness(1)" }, to: { opacity: 1, scale: 1, filter: "blur(0px) brightness(1)" }, dur: 0.7, ease: "power2.out", cue: "whoosh", cueAt: T },
+    ...handoff(a, b, T),
+    { t: T - 0.12, sel: `#${b}`, from: { scale: 1.22, filter: "blur(16px) brightness(1)" }, to: { scale: 1, filter: "blur(0px) brightness(1)" }, dur: 0.74, ease: "power2.out", cue: "whoosh", cueAt: T },
   ],
   push: (a, b, T) => [
     { t: T - 0.5, sel: `#${a}`, to: { y: -560, filter: "blur(14px) brightness(1)" }, dur: 0.5, ease: "power3.in" },
-    { t: T - 0.08, sel: `#${a}`, to: { opacity: 0 }, dur: 0.16, ease: "none" },
-    { t: T - 0.08, sel: `#${b}`, from: { opacity: 0, y: 640, filter: "blur(14px) brightness(1)" }, to: { opacity: 1, y: 0, filter: "blur(0px) brightness(1)" }, dur: 0.7, ease: "power3.out", cue: "whoosh", cueAt: T },
+    ...handoff(a, b, T),
+    { t: T - 0.12, sel: `#${b}`, from: { y: 640, filter: "blur(14px) brightness(1)" }, to: { y: 0, filter: "blur(0px) brightness(1)" }, dur: 0.74, ease: "power3.out", cue: "whoosh", cueAt: T },
   ],
+  // The two shots meet edge to edge at the cut (-540 / +540): a gap between
+  // them showed the empty background as a dark flash in golden reel 03.
   whip: (a, b, T) => [
-    { t: T - 0.42, sel: `#${a}`, to: { x: -700, skewX: -6, filter: "blur(18px) brightness(1)" }, dur: 0.42, ease: "power3.in" },
-    { t: T - 0.06, sel: `#${a}`, to: { opacity: 0 }, dur: 0.12, ease: "none" },
-    { t: T - 0.06, sel: `#${b}`, from: { opacity: 0, x: 760, skewX: 6, filter: "blur(18px) brightness(1)" }, to: { opacity: 1, x: 0, skewX: 0, filter: "blur(0px) brightness(1)" }, dur: 0.62, ease: "power3.out", cue: "whoosh", cueAt: T },
+    { t: T - 0.42, sel: `#${a}`, to: { x: -540, skewX: -6, filter: "blur(18px) brightness(1)" }, dur: 0.42, ease: "power3.in" },
+    ...handoff(a, b, T),
+    { t: T - 0.12, sel: `#${b}`, from: { x: 540, skewX: 6, filter: "blur(18px) brightness(1)" }, to: { x: 0, skewX: 0, filter: "blur(0px) brightness(1)" }, dur: 0.66, ease: "power3.out", cue: "whoosh", cueAt: T },
   ],
   leak: (a, b, T) => [
     { t: T - 0.35, sel: "#leak-warm", from: { opacity: 0 }, to: { opacity: 0.38 }, dur: 0.35, ease: "power1.in" },

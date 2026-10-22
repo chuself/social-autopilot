@@ -118,6 +118,9 @@ async function checkPage(pageFile, meta, problems) {
 
       // numbers
       for (const { text } of found.texts) {
+        // an unfilled token has no digits, so the number rule alone missed
+        // "Imeingia chumba {room}" in golden reel 03
+        if (/\{[a-zA-Z]+\}/.test(text)) problems.push({ check: "numbers", scene: w.id, fix: "none", msg: `"${text}" shows an unfilled placeholder` });
         for (const d of digitsIn(text)) {
           if (!allowedDigits.has(d)) problems.push({ check: "numbers", scene: w.id, fix: "none", msg: `"${text}" shows ${d}, which the ledger did not compute` });
         }
