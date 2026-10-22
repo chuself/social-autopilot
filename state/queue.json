@@ -11552,7 +11552,7 @@
     ],
     "scheduledFor": "2026-10-22T10:00:00.000Z",
     "createdAt": "2026-10-21T21:34:44.493Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 749797429,
     "reel": {
@@ -11566,10 +11566,14 @@
       "narration": "Vikundi vya mlimani vikishuka, mzigo wa dobi unakuwa mkubwa. Ukiwa na Operra, kitengo cha housekeeping kinapata taarifa kamili za vyumba kwa Kiswahili, hata mtandao ukiwa hafifu. Hakuna nguo inayopotea wala kuchelewa, na wageni wako wanaondoka wakiwa na tabasamu.",
       "hasVoice": true,
       "builtAt": "2026-10-22T07:07:36.799Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-22T10:13:37.998Z",
+      "postIds": [
+        "instagram:17953409205279241",
+        "facebook:2315032655982286"
+      ]
     },
-    "lastAttempt": "2026-10-22T09:44:45.719Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-22T10:13:37.998Z"
   },
   {
     "id": "operra-2026-10-22-16-pain-point",
