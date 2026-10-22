@@ -11604,7 +11604,7 @@
     ],
     "scheduledFor": "2026-10-22T13:00:00.000Z",
     "createdAt": "2026-10-21T21:35:21.115Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 3117077638,
     "reel": {
@@ -11618,10 +11618,13 @@
       "narration": "Unapochelewa kufunga bili za wageni wa kibiashara hoteli kwako Dar es Salaam, fedha zote za ziada zinapotea. Mfumo wa Operra unakusaidia kufuatilia mapokezi, POS na ripoti hata mtandao ukiwa dhaifu, ili kulinda mapato ya hoteli yako kabla mgeni hajaondoka.",
       "hasVoice": true,
       "builtAt": "2026-10-22T10:11:44.258Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-22T13:06:03.965Z",
+      "postIds": [
+        "instagram:17889124572479611"
+      ]
     },
-    "lastAttempt": "2026-10-22T12:04:38.394Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-22T13:06:03.965Z"
   },
   {
     "id": "operra-2026-10-22-20-number-that-lands",
