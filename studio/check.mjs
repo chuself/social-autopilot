@@ -20,7 +20,8 @@
 import { chromium } from "playwright";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { VOCABULARY } from "./sfx.mjs";
@@ -195,7 +196,17 @@ async function checkImages(meta, problems) {
   const { describeImage } = await import("../src/llm.js");
   for (const [i, img] of (meta.imageFiles ?? []).entries()) {
     if (!img) continue;
-    const v = await describeImage(readFileSync(img), img.endsWith(".png") ? "image/png" : "image/jpeg", IMAGE_PROMPT);
+    // One verdict per drawn image, kept beside it: a retry inspects only the
+    // image it redrew, which matters on Gemini's free daily vision quota.
+    const bytes = readFileSync(img);
+    const key = createHash("sha1").update(bytes).digest("hex");
+    const cacheFile = `${img}.vision.json`;
+    const cached = existsSync(cacheFile) ? JSON.parse(readFileSync(cacheFile, "utf8")) : null;
+    let v = cached?.key === key ? cached.v : null;
+    if (!v) {
+      v = await describeImage(bytes, img.endsWith(".png") ? "image/png" : "image/jpeg", IMAGE_PROMPT);
+      if (v) writeFileSync(cacheFile, JSON.stringify({ key, v }));
+    }
     if (!v) {
       problems.push({ check: "images", scene: `s${i}`, fix: "none", warn: true, msg: "could not be inspected (vision unavailable)" });
       continue;

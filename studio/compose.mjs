@@ -110,6 +110,9 @@ export function compose(brief, voice, brand) {
     { t: endAt + 0.75, sel: "#sheen", from: { backgroundPosition: "-600px 0" }, to: { backgroundPosition: "600px 0" }, dur: 0.9, ease: "power2.inOut" },
     { t: endAt + 0.7, sel: "#cta", from: { opacity: 0, xPercent: -50, y: 40, scale: 0.9 }, to: { opacity: 1, xPercent: -50, y: 0, scale: 1 }, dur: 0.45, ease: "back.out(1.7)", cue: "tap" },
     { t: endAt + 0.9, sel: "#site", from: { opacity: 0, y: 12 }, to: { opacity: 1, y: 0 }, dur: 0.4, ease: "power2.out" },
+    // The card keeps breathing until the last frame: a still card reads as a stalled video.
+    { t: endAt + 0.95, sel: "#bigLogo", to: { scale: 1.045 }, dur: Math.max(1, duration - endAt - 0.95), ease: "sine.inOut" },
+    { t: endAt + 1.2, sel: "#end", to: { backgroundPosition: "0 -60px" }, dur: Math.max(1, duration - endAt - 1.2), ease: "none" },
     { t: 0, sel: "#bar", from: { scaleX: 0 }, to: { scaleX: 1 }, dur: duration, ease: "none" },
   );
 
@@ -204,7 +207,9 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:${P.bg};font-fam
 .grade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,15,19,.55) 0%,rgba(4,15,19,0) 22%,rgba(4,15,19,0) 46%,rgba(4,15,19,.82) 64%,rgba(4,15,19,.97) 82%)}
 .grade.ops{background:radial-gradient(70% 40% at 50% 38%,rgba(123,84,255,.30),rgba(4,15,19,0) 70%),linear-gradient(180deg,rgba(4,15,19,.80),rgba(4,15,19,.88) 50%,rgba(4,15,19,.97) 80%)}
 .fg{position:absolute;inset:0}
-#dust{position:absolute;inset:0;pointer-events:none}
+#dust{position:absolute;inset:0;pointer-events:none;z-index:5}
+#end{z-index:4}
+#chrome,#bar{z-index:6}
 #dust i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,226,178,.9),rgba(255,226,178,0) 70%)}
 #chrome{position:absolute;left:0;top:0;width:${W}px;height:200px}
 #lock{position:absolute;left:80px;top:96px;height:44px}
