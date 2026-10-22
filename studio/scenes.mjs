@@ -41,7 +41,7 @@ const push = (id, t, dur, amount = 1.1) => ({ t, sel: `cam:${id}`, from: { push:
 const chipIn = (sel, t, cue, i) => ({ t, sel, from: { opacity: 0, x: -80 }, to: { opacity: 1, x: 0 }, dur: 0.5, ease: "power3.out", cue, cueOpts: { i } });
 const popIn = (sel, t, cue) => ({ t, sel, from: { opacity: 0, scale: 0.7, y: 24 }, to: { opacity: 1, scale: 1, y: 0 }, dur: 0.5, ease: "back.out(2)", cue });
 
-function chips(id, list = [], top = 1470) {
+function chips(id, list = [], top = 1490) {
   return list
     .map((c, i) => {
       assertNoDigits(c, `${id} chip`);

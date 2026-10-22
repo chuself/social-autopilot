@@ -75,7 +75,10 @@ export function compose(brief, voice, brand) {
 
   const ids = brief.scenes.map((_, i) => `s${i}`);
   const built = brief.scenes.map((s, i) =>
-    SCENES[s.type](ids[i], s, { t0: starts[i], dur: ends[i] - starts[i], T, seed, ledger }),
+    // One chip under a screen: a second one fell into Instagram's caption zone
+    // (first live test, 2026-10-23). Sliced here, before the scene schedules
+    // entrances and sounds, so no cue can exist for a chip that is not drawn.
+    SCENES[s.type](ids[i], { ...s, ...(Array.isArray(s.chips) ? { chips: s.chips.slice(0, 1) } : {}) }, { t0: starts[i], dur: ends[i] - starts[i], T, seed, ledger }),
   );
 
   const steps = [];

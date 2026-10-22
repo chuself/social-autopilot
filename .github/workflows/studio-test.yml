@@ -1,0 +1,59 @@
+name: studio-test
+
+# Films a reel with the production code (src/cli-reel.js) against a COPY of the
+# queue and uploads the MP4 and its studio files as a run artifact. Commits
+# nothing, deploys nothing, posts nothing, and holds its own lock so it can
+# never block or race the real queue writers.
+on:
+  workflow_dispatch:
+    inputs:
+      post_id:
+        description: "Post id to film (must be in state/queue.json)"
+        required: true
+
+concurrency: studio-test
+
+jobs:
+  film:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: npx playwright install --with-deps chromium
+      - run: pip install edge-tts
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Film against a copy of the queue
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MOSS_URL: ${{ secrets.MOSS_URL }}
+          MOSS_API_KEY: ${{ secrets.MOSS_API_KEY }}
+          QUEUE_FILE: state/frames/test-queue.json
+          IGNORE_CADENCE: "1"
+        run: |
+          mkdir -p state/frames
+          cp state/queue.json state/frames/test-queue.json
+          start=$(date +%s)
+          node src/cli-reel.js "${{ inputs.post_id }}"
+          echo "filmed in $(( $(date +%s) - start ))s"
+          node -e "const q=require('./state/frames/test-queue.json');const p=q.find(x=>x.id==='${{ inputs.post_id }}');console.log(JSON.stringify(p.reel,null,1))"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: studio-test-${{ inputs.post_id }}
+          path: |
+            public/${{ inputs.post_id }}.mp4
+            state/frames/studio/${{ inputs.post_id }}/reel.json
+            state/frames/studio/${{ inputs.post_id }}/page.html
+            state/frames/test-queue.json
+            state/usage/
+          if-no-files-found: warn
+          retention-days: 7

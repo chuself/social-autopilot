@@ -40,7 +40,11 @@ export async function renderPage(pageFile, audioFile, outFile, { fps = 30, from 
     else args.push("-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo");
     args.push(
       "-map", "0:v", "-map", "1:a",
-      "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p", "-r", String(fps),
+      // Capped: constant camera motion and drifting dust made CRF 19 produce
+      // 11.5 MB for 24 s (the plain reels are about 1 MB), and every MP4 is
+      // committed to git. Instagram re-encodes anyway; 1.3 Mb/s keeps text crisp (checked).
+      "-c:v", "libx264", "-preset", "medium", "-crf", "23", "-maxrate", "1300k", "-bufsize", "2600k",
+      "-pix_fmt", "yuv420p", "-r", String(fps),
       "-c:a", "aac", "-b:a", "160k", "-ar", "44100",
       "-t", String(end - from), "-movflags", "+faststart", outFile,
     );

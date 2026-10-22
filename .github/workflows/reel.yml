@@ -38,11 +38,19 @@ jobs:
       - run: pip install edge-tts
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
+      # The studio (studio/) films the reel: MOSS draws the scenes, its checker
+      # inspects the result, and the plain renderer only runs if that fails.
       - name: Film it
         id: film
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MOSS_URL: ${{ secrets.MOSS_URL }}
+          MOSS_API_KEY: ${{ secrets.MOSS_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
+          HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
         run: node src/cli-reel.js "${{ inputs.post_id }}"
 
       # The MP4 must be publicly reachable before Instagram will fetch it.

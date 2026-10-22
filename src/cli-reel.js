@@ -14,7 +14,8 @@ import { speak } from "./audio.js";
 import { renderReel, probeVideo } from "./video.js";
 import { readQueue, writeQueue, hoursLate, MAX_LATE_HOURS } from "./queue.js";
 import { readConfig } from "./config.js";
-import { appendFileSync } from "node:fs";
+import { appendFileSync, existsSync } from "node:fs";
+import { notify } from "./notify.js";
 
 /** Tell the workflow whether there is anything downstream to do. */
 function setOutput(built) {
@@ -85,24 +86,73 @@ if (!post) {
 
 console.log(`Building a reel from: ${post.headline} [${post.language ?? "en"}]`);
 
-const script = await writeReelScript(post, post.brand ?? "operra");
-console.log(`  beats: ${script.beats.map((b) => `"${b}"`).join(" · ")}`);
-console.log(`  narration: ${script.narration}`);
-
-const audioFile = path.join(ROOT, "state", "audio", `${post.id}.mp3`);
-const audio = await speak(script.narration, post.language ?? "en", audioFile);
-
+const brandId = post.brand ?? "operra";
 const videoFile = path.join(ROOT, "public", `${post.id}.mp4`);
-await renderReel(
-  {
-    ...post,
-    beats: script.beats,
-    cta: post.cta ?? (post.language === "sw" ? "Tuongee" : "Talk to us"),
-  },
-  post.brand ?? "operra",
-  audio,
-  videoFile
-);
+
+// ── The studio is the reel engine (studio/). The plain renderer below runs
+// only if the studio could not deliver a reel that passes its checker: a
+// plain reel on time beats a missed slot, and the owner is told why.
+let studio = null;
+let brief = null;
+let fallbackWhy = null;
+if (cfg.studio !== false && process.env.STUDIO !== "0") {
+  try {
+    const { writeReelBrief } = await import("../studio/brief.mjs");
+    const { produceReel } = await import("../studio/make.mjs");
+    brief = await writeReelBrief(post, brandId);
+    console.log(`  studio brief: ${brief.scenes.map((s) => s.type).join(" > ")}`);
+    const r = await produceReel(brief, { out: videoFile, work: path.join(ROOT, "state", "frames", "studio", post.id), brandId });
+    for (const p of r.report?.problems ?? []) console.log(`  check ${p.warn ? "WARN" : "FAIL"} ${p.check} ${p.scene ?? ""} ${p.msg}`);
+    if (r.ok) {
+      studio = {
+        narration: brief.narration,
+        beats: brief.scenes.map((s) => s.line),
+        scenes: brief.scenes.map((s) => s.type),
+        attempts: (r.report.attempt ?? 0) + 1,
+        warnings: r.report.problems.filter((p) => p.warn).map((p) => `${p.check}: ${p.msg}`).slice(0, 5),
+        hasVoice: Boolean(r.meta?.voice),
+      };
+    } else {
+      fallbackWhy = `checker: ${r.report.problems.filter((p) => !p.warn).slice(0, 3).map((p) => `${p.check} ${p.msg}`).join("; ")}`;
+    }
+  } catch (e) {
+    fallbackWhy = String(e.message).slice(0, 300);
+  }
+  if (fallbackWhy) console.warn(`  studio could not deliver (${fallbackWhy}) — using the plain renderer`);
+}
+
+let script = null;
+let audio = null;
+if (!studio) {
+  // Reuse what the studio already paid for: its brief's words and its voice.
+  script = brief
+    ? { beats: brief.scenes.map((s) => s.line).slice(0, 4), narration: brief.narration }
+    : await writeReelScript(post, brandId);
+  console.log(`  beats: ${script.beats.map((b) => `"${b}"`).join(" · ")}`);
+  console.log(`  narration: ${script.narration}`);
+
+  const studioVoice = path.join(ROOT, "state", "frames", "studio", post.id, "voice.mp3");
+  const audioFile = path.join(ROOT, "state", "audio", `${post.id}.mp3`);
+  audio = brief && existsSync(studioVoice) ? studioVoice : await speak(script.narration, post.language ?? "en", audioFile);
+
+  await renderReel(
+    {
+      ...post,
+      beats: script.beats,
+      cta: post.cta ?? (post.language === "sw" ? "Tuongee" : "Talk to us"),
+    },
+    brandId,
+    audio,
+    videoFile
+  );
+  if (fallbackWhy) {
+    try {
+      await notify(`Reel for ${post.id} went out with the plain renderer, not the studio.\nWhy: ${fallbackWhy}`);
+    } catch {
+      // an alert that cannot be sent must not cost the reel
+    }
+  }
+}
 
 const probe = await probeVideo(videoFile);
 const v = (probe.streams ?? []).find((s) => s.width);
@@ -119,9 +169,12 @@ if (problems.length) throw new Error(`Reel rejected before upload: ${problems.jo
 
 post.reel = {
   file: `${post.id}.mp4`,
-  beats: script.beats,
-  narration: script.narration,
-  hasVoice: Boolean(audio),
+  beats: studio ? studio.beats : script.beats,
+  narration: studio ? studio.narration : script.narration,
+  hasVoice: studio ? studio.hasVoice : Boolean(audio),
+  engine: studio ? "studio" : "classic",
+  ...(studio ? { scenes: studio.scenes, attempts: studio.attempts, warnings: studio.warnings } : {}),
+  ...(fallbackWhy ? { fallback: fallbackWhy } : {}),
   builtAt: new Date().toISOString(),
   status: "ready",
 };
