@@ -11554,7 +11554,20 @@
     "createdAt": "2026-10-21T21:34:44.493Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 749797429
+    "bgSeed": 749797429,
+    "reel": {
+      "file": "operra-2026-10-22-13-feature-spotlight.mp4",
+      "beats": [
+        "Dobi inachelewa tena?",
+        "Panga nguo za wageni kirahisi.",
+        "Housekeeping inapata taarifa sahihi mtandaoni.",
+        "Kila mgeni anapata chake mapema."
+      ],
+      "narration": "Vikundi vya mlimani vikishuka, mzigo wa dobi unakuwa mkubwa. Ukiwa na Operra, kitengo cha housekeeping kinapata taarifa kamili za vyumba kwa Kiswahili, hata mtandao ukiwa hafifu. Hakuna nguo inayopotea wala kuchelewa, na wageni wako wanaondoka wakiwa na tabasamu.",
+      "hasVoice": true,
+      "builtAt": "2026-10-22T07:07:36.799Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-22-16-pain-point",
