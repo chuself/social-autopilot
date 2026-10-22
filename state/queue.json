@@ -11619,7 +11619,9 @@
       "hasVoice": true,
       "builtAt": "2026-10-22T10:11:44.258Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-22T10:45:12.786Z",
+    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
   },
   {
     "id": "operra-2026-10-22-20-number-that-lands",
