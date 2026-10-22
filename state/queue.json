@@ -11507,7 +11507,7 @@
     ],
     "scheduledFor": "2026-10-22T05:00:00.000Z",
     "createdAt": "2026-10-21T21:34:24.423Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 3274871601,
     "slideFiles": [
@@ -11515,7 +11515,13 @@
       "operra-2026-10-22-08-industry-note-2.png",
       "operra-2026-10-22-08-industry-note-3.png"
     ],
-    "headline": "Mwanza is becoming a regional conference hub."
+    "headline": "Mwanza is becoming a regional conference hub.",
+    "lastAttempt": "2026-10-22T05:27:19.415Z",
+    "postedAt": "2026-10-22T05:27:19.415Z",
+    "postIds": [
+      "facebook:1049514968255534_122174916297351110",
+      "instagram:18109530962237800"
+    ]
   },
   {
     "id": "operra-2026-10-22-13-feature-spotlight",
