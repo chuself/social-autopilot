@@ -65,7 +65,15 @@ stage_and_commit() {
 for attempt in 1 2 3 4 5; do
   stage_and_commit "$@"
   case $? in
-    1) echo "nothing to record"; exit 0 ;;
+    1)
+      # Nothing NEW to stage is not "nothing to record": after a clean rebase
+      # our commit is already sitting on top of theirs, unpushed. Exiting here
+      # dropped the 2026-10-22 21:00 plan — four posts written, rebased, and
+      # thrown away with the runner while the job reported success.
+      if [ "$(git rev-list --count "origin/$branch..HEAD" 2>/dev/null || echo 0)" = "0" ]; then
+        echo "nothing to record"; exit 0
+      fi
+      ;;
     2) echo "::error::commit failed"; exit 1 ;;
   esac
 

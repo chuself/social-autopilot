@@ -50,8 +50,9 @@ jobs:
       - name: Keep the picture and the queue
         if: always()
         run: |
+          shopt -s nullglob  # a run with no model calls has no usage file; the glob must vanish, not reach git add
           bash scripts/push-state.sh "chore: photo from Telegram [skip ci]" \
-            public state/queue.json state/photo-queue.json state/media state/actions.json state/bg
+            public state/queue.json state/photo-queue.json state/media state/actions.json state/bg state/usage/*/${{ github.run_id }}-*.jsonl
 
       # The rendered post has to be live on Pages before it can publish, exactly
       # like every other asset.

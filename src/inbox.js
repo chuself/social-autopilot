@@ -13,6 +13,7 @@ import { readQueue, writeQueue, whyWaiting } from "./queue.js";
 import { escapeHtml, clip, slotLine, todayEat } from "./format.js";
 import { readsAsUndo, readsAsTransient, undoableAction, markUndone, recordAction } from "./lastaction.js";
 import { completeJson } from "./llm.js";
+import { setUsageContext } from "./usage.js";
 import { updateConfig, readConfig, LIMITS } from "./config.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -863,6 +864,7 @@ async function classify(text) {
     .join("\n");
 
   try {
+    setUsageContext({ feature: "telegram-chat" });
     return await completeJson(
       `You are the assistant behind an automated social media account for Operra, a hotel
 management system in Tanzania. The owner sent you this on Telegram:

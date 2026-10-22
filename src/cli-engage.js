@@ -17,6 +17,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { graphGet, graphPost, graphBatch } from "./graph.js";
 import { completeJson } from "./llm.js";
+import { setUsageContext } from "./usage.js";
 import { notify, notifyOnce, clearAlert } from "./notify.js";
 import { ctaLink } from "./brain.js";
 import { isDryRun } from "./guards.js";
@@ -288,6 +289,7 @@ function shapeComments(platform, node) {
 async function triage(c) {
   if (!c.text.trim()) return { kind: "ignore" };
   try {
+    setUsageContext({ feature: "comment-triage", post: c.postId ?? null });
     return await completeJson(
       `You handle the public comments for Operra, a hotel management system in Tanzania.
 

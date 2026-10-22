@@ -8,3 +8,4 @@ state/frames/
 state/audio/
 .metricool.json
 .metricool-pending.json
+state/usage/*/local-*.jsonl

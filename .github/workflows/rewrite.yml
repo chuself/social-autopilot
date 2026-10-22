@@ -51,8 +51,9 @@ jobs:
       - name: Keep it
         if: always()
         run: |
+          shopt -s nullglob  # a run with no model calls has no usage file; the glob must vanish, not reach git add
           bash scripts/push-state.sh "chore: post rewritten [skip ci]" \
-            public state/queue.json state/bg state/actions.json state/pending-rewrite.json
+            public state/queue.json state/bg state/actions.json state/pending-rewrite.json state/usage/*/${{ github.run_id }}-*.jsonl
 
       # The new image must be live before the post can publish.
       - uses: actions/configure-pages@v5

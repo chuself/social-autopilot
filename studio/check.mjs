@@ -224,7 +224,7 @@ async function checkImages(meta, problems) {
     const cached = existsSync(cacheFile) ? JSON.parse(readFileSync(cacheFile, "utf8")) : null;
     let v = cached?.key === key ? cached.v : null;
     if (!v) {
-      v = await describeImage(bytes, img.endsWith(".png") ? "image/png" : "image/jpeg", IMAGE_PROMPT);
+      v = await describeImage(bytes, img.endsWith(".png") ? "image/png" : "image/jpeg", IMAGE_PROMPT, { feature: "studio-vision", post: meta.id });
       if (v) writeFileSync(cacheFile, JSON.stringify({ key, v }));
     }
     if (!v) {

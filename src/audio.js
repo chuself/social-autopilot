@@ -11,6 +11,7 @@ import { promisify } from "node:util";
 import { mkdir, writeFile, rm } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
+import { recordUsage } from "./usage.js";
 
 const run = promisify(execFile);
 
@@ -151,6 +152,7 @@ async function geminiSpeak(text, language, outFile) {
         }
       );
       const json = await res.json();
+      recordUsage({ provider: "gemini", model, feature: "tts", post: path.basename(outFile).replace(/\.[^.]+$/, ""), usage: json.usageMetadata, ok: res.ok, error: res.ok ? null : json.error?.message });
       const part = json.candidates?.[0]?.content?.parts?.find((p) => p.inlineData?.data);
       if (!part) throw new Error(json.error?.message ?? "no audio returned");
 

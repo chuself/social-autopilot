@@ -49,8 +49,9 @@ jobs:
       - name: Publish the file
         if: steps.film.outputs.built == 'true'
         run: |
+          shopt -s nullglob  # a run with no model calls has no usage file; the glob must vanish, not reach git add
           bash scripts/push-state.sh "chore: reel built [skip ci]" \
-            public/*.mp4 state/queue.json
+            public/*.mp4 state/queue.json state/usage/*/${{ github.run_id }}-*.jsonl
 
       - uses: actions/configure-pages@v5
         if: steps.film.outputs.built == 'true'
@@ -104,8 +105,9 @@ jobs:
       - name: Record it
         if: ${{ always() && steps.film.outputs.built == 'true' && inputs.dry_run != '1' }}
         run: |
+          shopt -s nullglob  # a run with no model calls has no usage file; the glob must vanish, not reach git add
           bash scripts/push-state.sh "chore: reel posted [skip ci]" \
-            state/queue.json state/history.json state/metricool.enc
+            state/queue.json state/history.json state/metricool.enc state/usage/*/${{ github.run_id }}-*.jsonl
 
       - name: Shout if the reel failed
         if: failure()

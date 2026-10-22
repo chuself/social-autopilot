@@ -24,6 +24,7 @@ import { notify, sendPhoto } from "./notify.js";
 import { registerAction } from "./actions.js";
 import { recordAction } from "./lastaction.js";
 import { completeJson } from "./llm.js";
+import { setUsageContext } from "./usage.js";
 import { escapeHtml, clip, shortWhen } from "./format.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -144,6 +145,7 @@ async function chooseSlot(row, media) {
     .join("\n");
 
   try {
+    setUsageContext({ feature: "photo-placement" });
     const pick = await completeJson(
       `An owner sent a photograph to their social media assistant.
 

@@ -7,6 +7,7 @@
  *   node src/cli-plan.js --days 3 --replace
  */
 import path from "node:path";
+import { setUsageContext } from "./usage.js";
 import { writePost, writeCarousel, nextPillar, findUnapprovedFigures, cityForIndex } from "./brain.js";
 import { generateBackgrounds } from "./background.js";
 import { renderPoster } from "./render.js";
@@ -185,6 +186,8 @@ for (let n = 0; n < timetable.length; n++) {
 
   if (onCampaign) console.log(`  slot ${n + 1} belongs to campaign "${campaign.name}"`);
 
+  // Meter: the writing call is charged to the post it produces.
+  setUsageContext({ post: `${brandId}-${when.toISOString().slice(0, 10)}-${String(hour).padStart(2, "0")}-${pillar}` });
   let post;
   try {
     post =

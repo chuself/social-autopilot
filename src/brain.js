@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { completeJson } from "./llm.js";
+import { setUsageContext } from "./usage.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -108,6 +109,7 @@ export async function writeReelScript(post, brandId = "operra") {
   const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
   const sw = post.language === "sw";
 
+  setUsageContext({ feature: "reel-script", post: post.id });
   const script = await completeJson(
     `Turn this into a short vertical video script for ${brand.name}, a hotel management
 system in Tanzania. The audience is hotel owners and managers.
@@ -163,6 +165,7 @@ export async function writeCarousel({ brandId = "operra", pillar, recent = [], l
       .map((x) => `- ${x}`)
       .join("\n") || "- (nothing yet)";
 
+  setUsageContext({ feature: "plan-carousel" });
   const post = await completeJson(
     `You write social carousels for ${brand.name} — ${brand.tagline} (${brand.site}).
 The audience is hotel owners and managers in Tanzania and East Africa.
@@ -411,6 +414,7 @@ Kiswahili and avoid direct word-for-word renderings of English marketing phrases
 Hashtags may stay in English where that is what people actually search.`
   : "Write in English."}`;
 
+  setUsageContext({ feature: `plan-${format}` });
   const post = await completeJson(prompt);
   return {
     ...post,

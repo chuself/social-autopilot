@@ -49,5 +49,6 @@ jobs:
       - name: Record what was answered
         if: ${{ always() && inputs.dry_run != '1' }}
         run: |
+          shopt -s nullglob  # a run with no model calls has no usage file; the glob must vanish, not reach git add
           bash scripts/push-state.sh "chore: comment replies and leads [skip ci]" \
-            state/replied.json state/our-comments.json state/leads.json state/alerts.json
+            state/replied.json state/our-comments.json state/leads.json state/alerts.json state/usage/*/${{ github.run_id }}-*.jsonl

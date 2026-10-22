@@ -4,7 +4,11 @@
  *
  * MOCK_LLM=1 returns a canned post so the whole pipeline can be exercised
  * before any API key exists.
+ *
+ * Every call is metered (src/usage.js): pass { feature, post } so the cost of
+ * a post and of its follow-ups can be added up from real token counts.
  */
+import { recordUsage } from "./usage.js";
 // Tried in order — free-tier models go "high demand" often enough that a single
 // model id is a real outage risk for an unattended poster.
 // Small, quick jobs go here first — same quota pool trick, far less contention.
@@ -34,15 +38,16 @@ const GROQ_MODELS = process.env.GROQ_MODEL
  *   work, and the lite tier is far less often overloaded, which is what made
  *   simple questions take 30-50 seconds to answer.
  */
-export async function completeJson(prompt, { schemaHint, fast = false } = {}) {
+export async function completeJson(prompt, { schemaHint, fast = false, feature, post } = {}) {
   if (process.env.MOCK_LLM === "1") return mockPost();
-  if (fast) return await gemini.run(prompt, schemaHint, FAST_MODELS).catch(() => groq.run(prompt));
+  const meta = { feature, post };
+  if (fast) return await gemini.run(prompt, schemaHint, FAST_MODELS, meta).catch(() => groq.run(prompt, undefined, undefined, meta));
 
   const errors = [];
   for (const provider of [gemini, groq]) {
     if (!provider.available()) continue;
     try {
-      return await provider.run(prompt, schemaHint);
+      return await provider.run(prompt, schemaHint, undefined, meta);
     } catch (err) {
       errors.push(`${provider.name}: ${err.message}`);
     }
@@ -64,7 +69,7 @@ export async function completeJson(prompt, { schemaHint, fast = false } = {}) {
  * Returns null instead of throwing — a photo we cannot describe is still a
  * photo the owner can place by hand.
  */
-export async function describeImage(bytes, mimeType, prompt) {
+export async function describeImage(bytes, mimeType, prompt, { feature = "photo-vision", post = null } = {}) {
   if (!process.env.GEMINI_API_KEY) return null;
   const data = Buffer.from(bytes).toString("base64");
 
@@ -87,6 +92,7 @@ export async function describeImage(bytes, mimeType, prompt) {
         }
       );
       const json = await res.json();
+      recordUsage({ provider: "gemini", model, feature, post, usage: json.usageMetadata, ok: res.ok, error: res.ok ? null : json.error?.message });
       if (!res.ok) throw new Error(json.error?.message ?? `HTTP ${res.status}`);
       const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
       if (!text) throw new Error("empty response");
@@ -101,13 +107,13 @@ export async function describeImage(bytes, mimeType, prompt) {
 const gemini = {
   name: "gemini",
   available: () => Boolean(process.env.GEMINI_API_KEY),
-  async run(prompt, _hint, models = GEMINI_MODELS) {
+  async run(prompt, _hint, models = GEMINI_MODELS, meta = {}) {
     let last;
     for (const model of models) {
       // Two goes per model: a transient network blip should not cost a day's post.
       for (let attempt = 1; attempt <= 2; attempt++) {
         try {
-          return await callGemini(model, prompt);
+          return await callGemini(model, prompt, meta);
         } catch (err) {
           last = err;
           const transient = /fetch failed|ECONN|ETIMEDOUT|socket|network|high demand|503|429/i.test(err.message);
@@ -121,7 +127,7 @@ const gemini = {
   },
 };
 
-async function callGemini(model, prompt) {
+async function callGemini(model, prompt, meta = {}) {
     const res = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
       {
@@ -137,6 +143,7 @@ async function callGemini(model, prompt) {
       }
     );
     const json = await res.json();
+    recordUsage({ provider: "gemini", model, ...meta, usage: json.usageMetadata, ok: res.ok, error: res.ok ? null : json.error?.message });
     if (!res.ok) throw new Error(json.error?.message ?? `HTTP ${res.status}`);
     const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
     if (!text) throw new Error("empty response");
@@ -146,11 +153,11 @@ async function callGemini(model, prompt) {
 const groq = {
   name: "groq",
   available: () => Boolean(process.env.GROQ_API_KEY),
-  async run(prompt) {
+  async run(prompt, _hint, _models, meta = {}) {
     let last;
     for (const model of GROQ_MODELS) {
       try {
-        return await callGroq(model, prompt);
+        return await callGroq(model, prompt, meta);
       } catch (err) {
         last = err;
         console.warn(`  groq/${model}: ${err.message.slice(0, 90)}`);
@@ -160,7 +167,7 @@ const groq = {
   },
 };
 
-async function callGroq(model, prompt) {
+async function callGroq(model, prompt, meta = {}) {
     const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -175,6 +182,7 @@ async function callGroq(model, prompt) {
       }),
     });
     const json = await res.json();
+    recordUsage({ provider: "groq", model, ...meta, usage: json.usage, ok: res.ok, error: res.ok ? null : json.error?.message });
     if (!res.ok) throw new Error(json.error?.message ?? `HTTP ${res.status}`);
     const text = json.choices?.[0]?.message?.content;
     if (!text) throw new Error("empty response");

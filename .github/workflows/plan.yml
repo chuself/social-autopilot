@@ -68,9 +68,10 @@ jobs:
       # are removed from the repo too instead of lingering as orphans on Pages.
       - name: Commit the queue
         run: |
+          shopt -s nullglob  # a run with no model calls has no usage file; the glob must vanish, not reach git add
           bash scripts/push-state.sh "chore: plan week [skip ci]" \
             public state/bg state/queue.json state/top-performers.json \
-            state/pillar-scores.json state/config.json state/actions.json
+            state/pillar-scores.json state/config.json state/actions.json state/usage/*/${{ github.run_id }}-*.jsonl
 
       # The posters must be publicly reachable before publish day, because
       # Instagram fetches the image URL server-side.
