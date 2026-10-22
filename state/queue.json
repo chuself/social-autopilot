@@ -11602,7 +11602,20 @@
     "createdAt": "2026-10-21T21:35:21.115Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3117077638
+    "bgSeed": 3117077638,
+    "reel": {
+      "file": "operra-2026-10-22-16-pain-point.mp4",
+      "beats": [
+        "Bili za makampuni zinapotea Dar?",
+        "Kagua mapokezi, POS na gharama zote.",
+        "Inafanya kazi mtandao ukiwa chini.",
+        "Kulinda kila shilingi ya hoteli yako."
+      ],
+      "narration": "Unapochelewa kufunga bili za wageni wa kibiashara hoteli kwako Dar es Salaam, fedha zote za ziada zinapotea. Mfumo wa Operra unakusaidia kufuatilia mapokezi, POS na ripoti hata mtandao ukiwa dhaifu, ili kulinda mapato ya hoteli yako kabla mgeni hajaondoka.",
+      "hasVoice": true,
+      "builtAt": "2026-10-22T10:11:44.258Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-22-20-number-that-lands",
