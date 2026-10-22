@@ -18,16 +18,17 @@ const SR = 44100;
 
 /** What each sound is FOR. Kept here so the mapping is reviewable in one place. */
 export const VOCABULARY = {
-  whoosh: "the triangle window cutting from one scene to the next",
-  draw:   "the triangle's arms drawing on",
-  node:   "a node (the round tip of an arm) arriving",
+  open:   "the first shot resolving out of blur at the very start",
+  whoosh: "a transition carrying one scene into the next",
+  draw:   "a line or stroke drawing on",
+  node:   "a small point or marker arriving",
   card:   "a card or screen sliding into place",
   stamp:  "a REJECTED / problem stamp landing (problem scenes only)",
   strike: "a wrong figure being struck through (problem scenes only)",
   flip:   "a figure changing to its corrected value",
   match:  "a success chip appearing: matched, approved, paid (solution scenes only)",
   pop:    "a small chip or tag appearing",
-  logo:   "the Operra mark assembling on the end card",
+  logo:   "the brand's own logo arriving on the end card",
   tap:    "the call-to-action button arriving",
 };
 
@@ -106,6 +107,13 @@ function sum(...parts) {
 // (a whoosh builds up to the cut; a thud starts on it).
 
 const SOUNDS = {
+  open: (seed) => {
+    const d = 1.8;
+    const air = filter(noise(d, seed), "lp", (p) => 300 + 2600 * p, 0.7);
+    env(air, 0.9, 0.35);
+    const low = env(tone(d, 55, 82, [1, 0.3]), 0.8, 0.4);
+    return { buf: sum([air, 0, 0.8], [low, 0, 0.5]), lead: 0, gain: 0.35, pan: [-0.2, 0.2] };
+  },
   whoosh: (seed) => {
     const d = 0.95;
     const n = filter(noise(d, seed), "bp", (p) => 260 * Math.pow(16, p), 1.1);

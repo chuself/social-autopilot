@@ -72,7 +72,7 @@ export async function stills(pageFile, outDir, times) {
     await mkdir(outDir, { recursive: true });
     for (const t of times) {
       await page.evaluate((x) => window.setFrame(x), t);
-      await page.screenshot({ path: path.join(outDir, `t${String(t).padStart(5, "0")}.png`) });
+      await page.screenshot({ path: path.join(outDir, `t${t.toFixed(2).padStart(6, "0")}.png`) });
     }
   } finally {
     await browser.close();
