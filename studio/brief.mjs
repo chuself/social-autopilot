@@ -52,7 +52,9 @@ place, ui-screen, checklist, payoff · place, problem-doc, folio-fix, checklist,
   "cinematic photograph". NEVER mention anything that carries writing: no paper, documents, invoices,
   receipts, books, folders, screens, laptops, phones, computers, signs, menus, labels, posters,
   bottles, cans, boxes, number plates, banners. Any bags, luggage, uniforms or vehicles are plain and
-  unbranded. The studio draws every document and screen itself.
+  unbranded. Never call a building a "hotel", "lodge" or "resort" when it is seen from outside: the
+  image model letters that name across the front. Describe its architecture, or show it from inside.
+  The studio draws every document and screen itself.
 - Claims about Operra only from the approved facts. Never invent figures, percentages or clients.
 - "narration": 30-45 words, natural spoken {LANG}, telling the same story as the scenes in order,
   naming Operra once. No figures.

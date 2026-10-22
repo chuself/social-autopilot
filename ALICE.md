@@ -121,7 +121,38 @@ to reuse them. Without that she drew a key on a reception desk six posts running
 while the copy ranged across wifi, billing and group arrivals — she was avoiding
 repeated *headlines* and had no idea what she had already photographed.
 
-### How a reel moves
+### How a reel is made (the studio, since 2026-10-23)
+
+Reels are filmed by the **studio** (`studio/`). Alice writes a *brief*: which
+scenes, in what order, the words, and one image prompt per scene. Everything
+else is fixed design that was tested once and approved: layout, motion, sound,
+numbers. The ten approved reels are the golden set (`studio/briefs/golden/`).
+
+- **Scenes:** `place` (the hook), `problem-doc` (a paper bill with the wrong room
+  rate struck through and a stamp), `folio-fix` (the Operra folio corrects it),
+  `pos-charge` (a bar or restaurant order posts to the room), `ui-screen` (front
+  desk or reports), `checklist` (facts ticking in), `payoff`, then the end card.
+  The logo is only ever `brands/operra/assets/logo-dark.png`; it is never redrawn.
+- **Numbers:** Alice may not type a digit. Every figure on screen comes from one
+  ledger per reel (`nights × rate = total`, order lines `qty × price`), shown
+  with its working. Swahili reels are in TSh, English in USD.
+- **Pictures:** MOSS draws every scene in one batch. Image prompts may not
+  mention anything that carries writing; the studio draws documents itself.
+- **Voice:** Alice's own TTS, untouched. Scene changes sit in its pauses.
+- **Sound:** synthesised, and only where something visibly happens.
+- **The checker** (`studio/check.mjs`) inspects every reel before it can be
+  posted: numbers, Instagram safe areas, contrast, flashes and freezes, voice
+  level, sound, and (Gemini vision) lettering, faces or distortion in images.
+  An image fault is redrawn, at most twice.
+- **Fallback:** if the studio cannot deliver a reel that passes, the plain
+  renderer below makes one from the same brief and voice, `post.reel.fallback`
+  records why, and the owner gets a Telegram alert. `post.reel.engine` says which
+  engine made each reel. `config.studio = false` switches the studio off.
+
+Test without touching anything live: the `studio-test` workflow films a post
+against a copy of the queue and uploads the MP4 as an artifact.
+
+### How the plain (fallback) reel moves
 
 Twelve hand-picked motion styles — `steady`, `snap`, `settle`, `sweep`,
 `counter`, `bloom`, `focus`, `headline`, `ticker`, `poster`, `drop`, `quiet` —
