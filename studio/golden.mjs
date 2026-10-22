@@ -41,7 +41,7 @@ for (const { brief } of briefs) {
 if (jobs.length) {
   console.log(`drawing ${jobs.length} image(s) in one MOSS batch`);
   const { generateBackgrounds } = await import("../src/background.js");
-  const done = await generateBackgrounds(jobs);
+  const done = await generateBackgrounds(jobs, { fallbackProviders: false });
   done.forEach((d, k) => d?.file && writeFileSync(jobs[k].sidecar, jobs[k].prompt));
 }
 

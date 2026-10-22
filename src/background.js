@@ -111,14 +111,27 @@ async function mossSubmit(prompt, aspect, seed) {
     : { prompt: withoutWriting(prompt), width, height, steps: 50, negative_prompt: NEGATIVE };
   if (Number.isInteger(seed)) job.seed = seed;
 
-  const res = await fetch(`${base}/jobs`, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(job),
-    signal: AbortSignal.timeout(60_000),
-  });
-  if (!res.ok) throw new Error(`submit HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`);
-  return (await res.json()).id;
+  // Three tries: from GitHub's runners one submit in four came back "fetch
+  // failed" (2026-10-23), and a lost submit used to mean a watermarked
+  // free-provider image straight away.
+  let last;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(`${base}/jobs`, {
+        method: "POST",
+        headers,
+        body: JSON.stringify(job),
+        signal: AbortSignal.timeout(60_000),
+      });
+      if (!res.ok) throw new Error(`submit HTTP ${res.status}: ${(await res.text()).slice(0, 120)}`);
+      return (await res.json()).id;
+    } catch (err) {
+      last = err;
+      if (/HTTP (4\d\d)/.test(err.message) && !/HTTP 429/.test(err.message)) break; // refused, not flaky
+      if (attempt < 3) await new Promise((r) => setTimeout(r, attempt * 4000));
+    }
+  }
+  throw last;
 }
 
 /** Wait for a queued image. Returns { png, seed, mode }. */
@@ -128,7 +141,16 @@ async function mossCollect(id) {
   // better to fall through to a free provider than to hold up the plan.
   const deadline = Date.now() + Number(process.env.MOSS_MAX_WAIT_MS ?? 8 * 60_000);
   while (Date.now() < deadline) {
-    const res = await fetch(`${base}/jobs/${id}`, { headers, signal: AbortSignal.timeout(60_000) });
+    // One slow or dropped poll is not a failed image: keep waiting until the
+    // real deadline. A single timed-out poll used to abandon a job the GPU
+    // was still drawing.
+    let res;
+    try {
+      res = await fetch(`${base}/jobs/${id}`, { headers, signal: AbortSignal.timeout(60_000) });
+    } catch {
+      await new Promise((r) => setTimeout(r, 4_000));
+      continue;
+    }
     if (res.status === 200) {
       return {
         png: Buffer.from(await res.arrayBuffer()),
@@ -158,21 +180,27 @@ async function mossCollect(id) {
  *   same order as `jobs`; an item MOSS could not draw falls back to the free
  *   providers one at a time, so a failure costs that item quality, not the run.
  */
-export async function generateBackgrounds(jobs) {
+export async function generateBackgrounds(jobs, { fallbackProviders = true } = {}) {
   if (process.env.SKIP_IMAGE === "1") return jobs.map(() => ({ file: null, provider: null, seed: null }));
 
   const results = jobs.map(() => null);
 
-  if (moss.available()) {
+  // Two MOSS rounds: whatever the first could not queue or collect is tried
+  // once more before anything worse is accepted.
+  for (let round = 1; round <= 2 && moss.available(); round++) {
+    const todo = jobs.map((_, i) => i).filter((i) => !results[i]);
+    if (!todo.length) break;
+    if (round === 2) console.log(`  retrying ${todo.length} background(s) on MOSS`);
     const ids = await Promise.all(
-      jobs.map((j) => mossSubmit(j.prompt, j.aspect ?? "4:5", j.seed).catch((err) => {
+      todo.map((i) => mossSubmit(jobs[i].prompt, jobs[i].aspect ?? "4:5", jobs[i].seed).catch((err) => {
         console.warn(`background via moss could not queue: ${err.message}`);
         return null;
       }))
     );
-    console.log(`queued ${ids.filter(Boolean).length}/${jobs.length} background(s) on MOSS in one burst`);
+    console.log(`queued ${ids.filter(Boolean).length}/${todo.length} background(s) on MOSS in one burst`);
     await Promise.all(
-      ids.map(async (id, i) => {
+      ids.map(async (id, k) => {
+        const i = todo[k];
         if (!id) return;
         try {
           const { png, seed, mode } = await mossCollect(id);
@@ -189,9 +217,16 @@ export async function generateBackgrounds(jobs) {
     );
   }
 
-  // Whatever MOSS did not deliver gets the old chain, minus MOSS.
+  // The studio passes fallbackProviders:false. The free providers now
+  // watermark (Pollinations printed "pollinations.ai" despite nologo=true),
+  // which the studio's checker rejects: better no image, and the plain reel,
+  // than three retries spent on a watermark.
   for (let i = 0; i < jobs.length; i++) {
     if (results[i]) continue;
+    if (!fallbackProviders) {
+      results[i] = { file: null, provider: null, seed: null };
+      continue;
+    }
     const file = await generateBackground(jobs[i].prompt, jobs[i].outFile, {
       aspect: jobs[i].aspect ?? "4:5",
       skipMoss: true,

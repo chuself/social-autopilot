@@ -46,7 +46,7 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
   });
   if (jobs.length) {
     const { generateBackgrounds } = await import("../src/background.js");
-    const done = await generateBackgrounds(jobs);
+    const done = await generateBackgrounds(jobs, { fallbackProviders: false });
     done.forEach((d, k) => {
       if (!d?.file) throw new Error(`scene ${jobs[k].i + 1}: no image could be made`);
       scenes[jobs[k].i].image = d.file;
