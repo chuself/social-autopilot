@@ -11665,5 +11665,155 @@
       "facebook:1049514968255534_122175105531351110",
       "instagram:18349882198266600"
     ]
+  },
+  {
+    "id": "operra-2026-10-23-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Zanzibar Resorts",
+        "headline": "Mtandao ukikata, folios za wageni zinasimama?",
+        "body": "Wageni wa wiki mbili wanadai bili zao mapokezi huku mtandao wa pwani ukisumbua."
+      },
+      {
+        "eyebrow": "Uzoefu Halisi",
+        "headline": "Mfumo unaofanya kazi hata mtandao ukiwa hafifu",
+        "body": "Mapokezi, migahawa na ripoti zinaendelea kufanya kazi hata kwenye intaneti yenye kasi ndogo."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Hesabu zote sahihi, mgeni anaondoka salama",
+        "body": "Kila muamala unaonekana wazi kwenye audit trail bila usumbufu wa kupoteza taarifa za fedha."
+      }
+    ],
+    "caption": "Kwenye resorts za Zanzibar, wageni wanaokaa muda mrefu wanahitaji usahihi wa bili zao bila visingizio vya mtandao. Operra imeundwa kufanya kazi vizuri hata kwenye miundombinu ya intaneti yenye changamoto, huku ikiunganisha mapokezi, huduma za vyumba, POS na ripoti kwenye mfumo mmoja thabiti. Kila muamala unathibitishwa na audit trail kamili ili kulinda mapato ya biashara yako bila hofu ya kupoteza rekodi.",
+    "hashtags": [
+      "#OperraTech",
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "A sprawling beach resort on the east coast of Zanzibar with high makuti-thatched open pavilions nestled among tall coconut palms along white coral sands. In the midday sun, turquoise shallows stretch out to the reef where a wooden dhow with a white lateen sail drifts in the distance. Right of centre, on an outdoor shaded coral-stone balustrade, rests a heavy brass desk bell beside a small plain, untitled dark-leather folio folder. In the soft-focus background, a staff member in a light linen uniform walks away along a sunlit stone path. 24mm lens, travel-editorial photography, crisp midday light with deep, clean shadows, bright and airy atmosphere. The lower-left half is open, soft-washed white limestone terrace floor and pale blue sky, completely clear and visually quiet.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "backgroundPath": "state/bg/operra-2026-10-23-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-23T05:00:00.000Z",
+    "createdAt": "2026-10-22T20:51:24.115Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1045979069,
+    "slideFiles": [
+      "operra-2026-10-23-08-client-proof-1.png",
+      "operra-2026-10-23-08-client-proof-2.png",
+      "operra-2026-10-23-08-client-proof-3.png"
+    ],
+    "headline": "Mtandao ukikata, folios za wageni zinasimama?"
+  },
+  {
+    "id": "operra-2026-10-23-13-swahili-tip",
+    "eyebrow": "Usimamizi wa Mikutano",
+    "headline": "Thibitisha idadi ya wajumbe kabla ya buffet Mwanza",
+    "body": "Hakiki idadi ya washiriki kila asubuhi kuzuia chakula kuzidi au mivutano ya bili na waandaaji wa mikutano.",
+    "cta": "Hifadhi dondoo",
+    "caption": "Mikutano ya kikazi Mwanza mara nyingi hubadilika idadi ya wajumbe siku hadi siku. Ukipika buffet bila kuthibitisha idadi ya asubuhi, unajiweka kwenye hatari ya kupoteza chakula au kugombana na mteja kwenye ankara. 📌\n\nWeka utaratibu wa mapokezi kusawazisha idadi ya walioingia na jikoni kabla ya saa tatu asubuhi. Operra inasaidia timu ndogo kusimamia mikutano bila mivutano.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HospitalityTanzania",
+      "#HotelManagement",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A lakeside hotel terrace in Mwanza built alongside massive granite rock formations on the shore of Lake Victoria. The clear morning sun lights up calm, saturated blue waters and a distant wooden fishing boat. Right of centre on a dark timber dining table sits a plain, untitled terracotta water carafe and a single plain glass tumbler. Nearby lie woven natural palm placemats, a stack of clean white ceramic cups, and a polished teak tray. In the soft-focus background, a hotel staff member seen from behind adjusts a rattan chair under a thatched parasol. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The middle horizontal band of the lake surface remains calm and visually uncluttered.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-23-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-23T10:00:00.000Z",
+    "createdAt": "2026-10-22T20:51:43.657Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2966089724
+  },
+  {
+    "id": "operra-2026-10-23-16-industry-note",
+    "eyebrow": "Operations",
+    "headline": "Manage the Moshi peak season surge",
+    "body": "High trekking volume requires seasonal staffing. Operra provides a clear audit trail for every transaction, ensuring accountability as your team scales for the climb season.",
+    "cta": "See it work",
+    "caption": "Peak season in Moshi brings a surge of trekking groups and temporary staff. When the lobby is full of gear and the schedule is tight, manual logs often fail. \n\nOperra tracks every transaction and room adjustment automatically. You get a clear record of who did what, even when your team doubles for the climb season. Protect your revenue while the mountain is busy.",
+    "hashtags": [
+      "Moshi",
+      "Kilimanjaro",
+      "HotelManagement",
+      "TanzaniaTourism"
+    ],
+    "imagePrompt": "Composition: wide establishing view of a rustic highland lodge in Moshi, with the snow-capped peak of Kilimanjaro rising above surrounding coffee farms. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. Moment: A busy morning departure where trekking groups are preparing to leave. Hero detail: A stack of plain, untitled heavy-duty canvas bags in a muted tan colour, arranged on a wooden luggage trolley, right of centre. Story props: A pair of hiking boots on the stone floor, a plain metal trekking pole leaning against a timber pillar, and a ceramic mug on a stone wall. People: Soft-focus figures of staff in the background, seen from behind. Calm zone: The central horizontal band showing the distant mountain is visually quiet.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-23-16-industry-note.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-23T13:00:00.000Z",
+    "createdAt": "2026-10-22T20:57:09.472Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1527802706
+  },
+  {
+    "id": "operra-2026-10-23-20-feature-spotlight",
+    "eyebrow": "Front Desk",
+    "headline": "Separate corporate bills from personal tabs automatically",
+    "body": "Route accommodation directly to company master accounts while keeping personal expenses separate. Checkouts in Dar es Salaam stay fast, and corporate invoices leave without disputes.",
+    "cta": "Book a demo",
+    "caption": "Corporate checkouts shouldn't stall over a disputed soda or laundry charge at 7am.\n\nWhen business guests check out in Dar es Salaam to catch morning flights, sorting personal expenses from agreed company rates holds up the front desk.\n\nOperra routes accommodation and meal packages directly to the corporate account while keeping personal extras on a separate tab. Your desk team closes departure folios in seconds, and your finance office sends clean, dispute-free company invoices at month-end.",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaam",
+      "#FrontDesk",
+      "#HospitalityTech"
+    ],
+    "imagePrompt": "A bright, sunlit corporate hotel foyer along the Kivukoni waterfront in Dar es Salaam, viewed through expansive floor-to-ceiling glass that reveals harbour cranes and distant dhows under a vibrant tropical sky. Right of centre, a plain, untitled brushed-brass desk bell sits beside a flat dark-leather tray on a polished grey granite counter. A slim black payment device with a dark blank screen rests nearby beside a plain glass water carafe. In soft focus in the background, a business guest in a tailored linen jacket walks toward the sunlit exit, seen from behind. The left half of the frame remains visually quiet, with polished stone floor and clean counter panels in crisp geometric shadow.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "series": null,
+    "backgroundPath": "state/bg/operra-2026-10-23-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-23T17:00:00.000Z",
+    "createdAt": "2026-10-22T21:02:08.607Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2870098832
   }
 ]
