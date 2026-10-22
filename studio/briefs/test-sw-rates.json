@@ -1,0 +1,16 @@
+{
+  "id": "operra-2026-10-20-13-pain-point",
+  "language": "sw",
+  "eyebrow": "Upangaji bei",
+  "cta": "Ona inavyofanya kazi",
+  "scenes": [
+    { "type": "place", "line": "Ankara inakataliwa tena msimu huu?", "bad": ["inakataliwa"], "tag": "ARUSHA · MSIMU WA SAFARI", "image": "studio/proto/media/s1-season.jpg", "focus": -150 },
+    { "type": "problem-doc", "line": "Bei ya wakala imekosewa mapokezi?", "bad": ["imekosewa"], "image": "studio/proto/media/s2-mistake.jpg", "focus": -260,
+      "doc": { "title": "ANKARA", "rows": [["Wakala", "{party}"], ["Usiku", "{nights}"], ["Bei kwa usiku", "{wrongRate}"], ["Jumla", "{wrongTotal}"]], "wrongRow": 2 },
+      "stamp": "IMEKATALIWA" },
+    { "type": "folio-fix", "line": "Operra inadhibiti viwango na mapokezi.", "image": "studio/proto/media/s3-desk.jpg",
+      "chips": ["Kiswahili na Kiingereza", "Inafanya kazi mtandao ukiwa mdogo"] },
+    { "type": "payoff", "line": "Malipo ya msimu yanaingia bila usumbufu.", "good": ["bila", "usumbufu"], "image": "studio/proto/media/s4-dusk.jpg", "focus": -120,
+      "chip": "Malipo yamepokelewa · {rightTotal}" }
+  ]
+}

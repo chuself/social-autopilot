@@ -1,0 +1,21 @@
+{
+  "id": "studio-test-en-groups",
+  "language": "en",
+  "eyebrow": "Front desk",
+  "cta": "See it work",
+  "narration": "Eight in the morning, and a corporate group is checking out. The bill shows the walk-in rate, not the group rate, and the queue keeps growing. With Operra, the contract rate lives in the booking, so the folio is right before the guest reaches the desk. Settled, and on time.",
+  "scenes": [
+    { "type": "place", "line": "Checkout rush at eight sharp?", "tag": "CORPORATE GROUPS",
+      "image": "A bright corporate hotel lobby in the early morning, tall glass windows looking out over a harbour with container cranes. Business travellers seen from behind wait with rolling suitcases beside a polished stone reception counter. Crisp morning light, cinematic photograph, shallow depth of field." },
+    { "type": "problem-doc", "line": "Walk-in rate on a group bill.", "bad": ["Walk-in"],
+      "image": "Close view of a hotel reception counter in the morning: a clipboard holding plain white sheets, a plain dark card machine, a brass bell, and a guest's hand resting impatiently on the polished wood. Tense mood, shallow depth of field, cinematic photograph.",
+      "doc": { "title": "INVOICE", "rows": [["Company", "{party}"], ["Nights", "{nights}"], ["Rate per night", "{wrongRate}"], ["Total", "{wrongTotal}"]], "wrongRow": 2 },
+      "stamp": "DISPUTED" },
+    { "type": "ui-screen", "screen": "frontdesk", "line": "Operra keeps every group rate.", "chips": ["Kiswahili and English", "Works on slow internet"],
+      "image": "A quiet hotel back office at dusk with a laptop on a wooden desk, a potted palm and warm lamp light, soft focus, cinematic photograph." },
+    { "type": "folio-fix", "line": "The bill matches the contract.", "good": ["matches"],
+      "image": "An empty, tidy hotel reception desk in late morning sun, fresh flowers in a vase, polished wood, calm and orderly, cinematic photograph." },
+    { "type": "payoff", "line": "Paid, and out the door on time.", "good": ["on", "time"], "chip": "Settled · {rightTotal}",
+      "image": "Business travellers seen from behind walking out through tall glass doors of a harbour-front hotel toward a waiting car in bright midday sun, relaxed, cinematic photograph." }
+  ]
+}
