@@ -1,0 +1,70 @@
+{
+  "id": "golden-09-sw-mwanza-walkin",
+  "language": "sw",
+  "cta": "Ona inavyofanya kazi",
+  "eyebrow": "Upangaji bei",
+  "narration": "Mgeni anafika Mwanza bila kuhifadhi chumba. Mapokezi wanaandika bei kwa mkono, na bei inakosewa. Mgeni analalamika wakati wa kuondoka. Kwa Operra, bei sahihi ya chumba iko kwenye mfumo, na bili inalingana tangu mwanzo.",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Bei ya chumba imekosewa tena?",
+      "bad": [
+        "imekosewa"
+      ],
+      "tag": "MWANZA · WAGENI WA PAPO HAPO",
+      "image": "A lakeside hotel entrance at noon with granite boulders and Lake Victoria behind, a walk-in guest seen from behind arriving with a backpack, bright light, cinematic photograph."
+    },
+    {
+      "type": "problem-doc",
+      "line": "Bei imeandikwa kwa mkono.",
+      "bad": [
+        "mkono"
+      ],
+      "stamp": "IMEKOSEWA",
+      "doc": {
+        "title": "ANKARA",
+        "rows": [
+          [
+            "Chumba",
+            "{room}"
+          ],
+          [
+            "Usiku",
+            "{nights}"
+          ],
+          [
+            "Bei ya chumba / usiku",
+            "{wrongRate}"
+          ],
+          [
+            "Jumla",
+            "{wrongTotal}"
+          ]
+        ],
+        "wrongRow": 2
+      },
+      "image": "A dark wooden reception counter close-up in warm afternoon light, a brass bell and a fountain pen beside a small potted plant, shallow depth of field, cinematic photograph."
+    },
+    {
+      "type": "folio-fix",
+      "line": "Operra inaweka bei sahihi.",
+      "good": [
+        "sahihi"
+      ],
+      "chips": [
+        "Kiswahili na Kiingereza"
+      ],
+      "image": "A calm lakeside hotel lobby with granite stone walls and wooden furniture, soft light, soft focus, cinematic photograph."
+    },
+    {
+      "type": "payoff",
+      "line": "Mgeni analipa bila malalamiko.",
+      "good": [
+        "bila",
+        "malalamiko"
+      ],
+      "chip": "Imelipwa · {rightTotal}",
+      "image": "A guest seen from behind on a hotel balcony at sunset looking over Lake Victoria and a granite rock island, relaxed, cinematic photograph."
+    }
+  ]
+}

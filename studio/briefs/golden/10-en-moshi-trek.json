@@ -1,0 +1,63 @@
+{
+  "id": "golden-10-en-moshi-trek",
+  "language": "en",
+  "cta": "See it work",
+  "eyebrow": "Front desk",
+  "narration": "Before dawn in Moshi, a trekking group is leaving for the mountain. The bill uses the wrong room rate, and there is no time to argue. With Operra, the right rate is on the folio from the day they booked, so checkout is quick and correct.",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Checkout before dawn?",
+      "tag": "MOSHI · TREKKING SEASON",
+      "image": "A highland lodge before dawn, the faint snow cap of Kilimanjaro above banana farms, trekkers seen from behind with headlamps and duffel bags gathering at the porch, cold blue light, cinematic photograph."
+    },
+    {
+      "type": "problem-doc",
+      "line": "The wrong room rate, no time to argue.",
+      "bad": [
+        "wrong"
+      ],
+      "stamp": "QUERIED",
+      "doc": {
+        "title": "INVOICE",
+        "rows": [
+          [
+            "Room",
+            "{room}"
+          ],
+          [
+            "Nights",
+            "{nights}"
+          ],
+          [
+            "Room rate / night",
+            "{wrongRate}"
+          ],
+          [
+            "Total",
+            "{wrongTotal}"
+          ]
+        ],
+        "wrongRow": 2
+      },
+      "image": "A lodge reception counter at dawn lit by a single warm lamp, a brass bell and a set of room keys on dark wood, shallow depth of field, cinematic photograph."
+    },
+    {
+      "type": "folio-fix",
+      "line": "The right rate, from the day they booked.",
+      "good": [
+        "right"
+      ],
+      "image": "A warm lodge lounge with a stone fireplace and wooden beams in the early morning, soft focus, cinematic photograph."
+    },
+    {
+      "type": "payoff",
+      "line": "Settled, and on the trail.",
+      "good": [
+        "trail"
+      ],
+      "chip": "Settled · {rightTotal}",
+      "image": "Trekkers seen from behind walking up a forest trail toward a snow-capped mountain at sunrise, mist and golden light, cinematic photograph."
+    }
+  ]
+}

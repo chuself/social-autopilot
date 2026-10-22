@@ -1,0 +1,43 @@
+{
+  "id": "golden-06-en-zanzibar-audit",
+  "language": "en",
+  "cta": "See it work",
+  "eyebrow": "Reports",
+  "narration": "You own a resort in Zanzibar, but this week you are away. Was a rate changed? Was a bill voided? With Operra, every folio change is logged, and the reports are on your phone. You see what happened, without calling anyone.",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Away from your resort this week?",
+      "tag": "ZANZIBAR · OWNER",
+      "image": "A narrow old-town street at golden hour with coral-stone walls and a carved brass-studded wooden door, a resort owner seen from behind walking with a travel bag. Warm light, cinematic photograph."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "reports",
+      "line": "Every folio change, logged.",
+      "chips": [
+        "Reports on your phone"
+      ],
+      "image": "A business traveller seen from behind at a hotel window at dusk, harbour lights below, holding a cup of coffee, soft focus, cinematic photograph."
+    },
+    {
+      "type": "checklist",
+      "line": "You see what happened.",
+      "items": [
+        "Rate changes",
+        "Voided bills",
+        "Daily revenue"
+      ],
+      "image": "A beach resort pool at dusk with lanterns and palm trees, calm and empty, cinematic photograph."
+    },
+    {
+      "type": "payoff",
+      "line": "No calls, no surprises.",
+      "good": [
+        "surprises"
+      ],
+      "chip": "Audit trail on",
+      "image": "A resort owner seen from behind on a balcony at sunset with a view over a turquoise lagoon and a dhow with a lateen sail, relaxed, cinematic photograph."
+    }
+  ]
+}

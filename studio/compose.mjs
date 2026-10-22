@@ -40,7 +40,7 @@ export function validateBrief(b) {
   // Anything that naturally carries writing makes MOSS write on it, and three
   // redraws of a desk of papers all came back with pseudo-text. Documents and
   // screens are drawn by the tool on top of the photo, so the photo needs none.
-  const WRITES = /\b(papers?|sheets?|documents?|invoices?|receipts?|books?|ledgers?|folders?|notebooks?|notepads?|screens?|laptops?|monitors?|computers?|phones?|tablets?|signs?|signage|menus?|newspapers?|labels?|posters?|whiteboards?|calendars?|clipboards?|card machines?|keyboards?|number plates?|licen[cs]e plates?|banners?)\b/i;
+  const WRITES = /\b(papers?|sheets?|documents?|invoices?|receipts?|books?|ledgers?|folders?|notebooks?|notepads?|screens?|laptops?|monitors?|computers?|phones?|tablets?|signs?|signage|menus?|newspapers?|labels?|posters?|whiteboards?|calendars?|clipboards?|card machines?|keyboards?|number plates?|licen[cs]e plates?|banners?|bottles?|cans?|packets?|boxes)\b/i;
   (b.scenes ?? []).forEach((s, i) => {
     const m = s.image && !/[\\/]/.test(s.image) && WRITES.exec(s.image);
     if (m) errs.push(`scene ${i + 1}: the image prompt mentions "${m[0]}", which MOSS will letter. Leave documents and screens to the scene; describe the place, light and objects without writing surfaces`);
@@ -250,6 +250,12 @@ ${UI_CSS}
 .btot .sum .flip span{left:0;right:auto}
 .flip span{position:absolute;right:0;top:0;white-space:nowrap}
 .flip .fb{color:${P.teal}}
+.pos .bline>span:first-child{display:flex;flex-direction:column}
+.pos .each{font-style:normal;font-size:19px;color:${P.muted};margin-top:4px}
+.ticks{position:absolute;left:80px;top:560px;display:flex;flex-direction:column;gap:22px}
+.tick{display:flex;align-items:center;gap:20px;font-size:40px;font-weight:600;color:${P.text};background:rgba(4,15,19,.72);
+      border:1.5px solid rgba(54,210,186,.45);border-radius:22px;padding:22px 34px 22px 24px;max-width:920px}
+.tk{width:56px;height:56px;border-radius:50%;background:rgba(54,210,186,.16);color:${P.teal};display:flex;align-items:center;justify-content:center;flex:none}
 .chip{position:absolute;display:flex;align-items:center;gap:12px;font-size:28px;font-weight:600;border-radius:100px;padding:16px 28px;white-space:nowrap}
 .chip.ok{color:${P.teal};background:rgba(4,15,19,.7);border:1.5px solid rgba(54,210,186,.55)}
 .chip.soft{color:${P.text};background:rgba(14,28,38,.92);border:1px solid rgba(255,255,255,.14)}

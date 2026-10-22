@@ -1,0 +1,44 @@
+{
+  "id": "golden-04-en-mwanza-conference",
+  "language": "en",
+  "cta": "See it work",
+  "eyebrow": "Front desk",
+  "narration": "A conference group arrives at a lakeside hotel in Mwanza, and every room has to be ready at once. With Operra, the front desk sees which rooms are clean, who has checked in, and who is still on the way. The whole group is in their rooms before the opening session.",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "The whole conference arrives at once.",
+      "tag": "MWANZA · CONFERENCE WEEK",
+      "image": "A lakeside conference hotel on Lake Victoria in the late afternoon, granite boulders rising from calm water, a coach parked at the entrance and delegates seen from behind walking in with rolling suitcases. Warm light, cinematic photograph."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "frontdesk",
+      "line": "Operra shows every room, live.",
+      "chips": [
+        "Housekeeping and front desk together"
+      ],
+      "image": "A calm hotel corridor with a housekeeping trolley stacked with folded white towels and fresh linen, soft afternoon light, cinematic photograph."
+    },
+    {
+      "type": "checklist",
+      "line": "Ready before the opening session.",
+      "items": [
+        "Rooms marked clean",
+        "Arrivals checked in",
+        "Kiswahili and English"
+      ],
+      "image": "A bright hotel room with a freshly made bed in white linen and a view of Lake Victoria through the window, afternoon light, cinematic photograph."
+    },
+    {
+      "type": "payoff",
+      "line": "Everyone in, on time.",
+      "good": [
+        "on",
+        "time"
+      ],
+      "chip": "Group checked in",
+      "image": "Delegates seen from behind walking into a bright conference hall with a lake view through tall windows, cheerful, cinematic photograph."
+    }
+  ]
+}

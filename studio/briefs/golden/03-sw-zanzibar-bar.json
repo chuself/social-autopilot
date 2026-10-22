@@ -1,0 +1,44 @@
+{
+  "id": "golden-03-sw-zanzibar-bar",
+  "language": "sw",
+  "cta": "Ona inavyofanya kazi",
+  "eyebrow": "Baa na mgahawa",
+  "narration": "Usiku Zanzibar, mgeni anaagiza chakula na vinywaji kwenye baa ya ufukweni. Asubuhi anaondoka, na bili ya baa haijafika mapokezi. Kwa Operra, kila oda ya baa na mgahawa inaingia moja kwa moja kwenye chumba cha mgeni. Hakuna bili inayosahaulika.",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Bili ya baa imesahaulika tena?",
+      "bad": [
+        "imesahaulika"
+      ],
+      "tag": "ZANZIBAR · BAA YA UFUKWENI",
+      "image": "A beach resort bar at night on a white-sand shore, a thatched makuti roof strung with warm lanterns, turquoise water glowing under the moon. A bartender seen from behind polishes glasses at a carved wooden counter. Warm, lively, cinematic photograph."
+    },
+    {
+      "type": "pos-charge",
+      "line": "Oda inaingia chumbani papo hapo.",
+      "okChip": "Imeingia chumba {room}",
+      "image": "A softly lit beach resort restaurant terrace at night, wooden tables with candles and plates of grilled fish, guests seen from behind, soft focus, cinematic photograph."
+    },
+    {
+      "type": "checklist",
+      "line": "Mapokezi wanaona kila kitu.",
+      "items": [
+        "Baa na mgahawa",
+        "Mapokezi",
+        "Ripoti kwa mmiliki"
+      ],
+      "image": "A bright resort reception in the morning with coral-stone walls and a carved brass-studded wooden door, a guest seen from behind with a suitcase, sunlight, cinematic photograph."
+    },
+    {
+      "type": "payoff",
+      "line": "Mgeni analipa kila kitu, bila mshangao.",
+      "good": [
+        "bila",
+        "mshangao"
+      ],
+      "chip": "{orderTotal} · chumba {room}",
+      "image": "A guest seen from behind walking along a white-sand beach at sunrise with a small suitcase toward a waiting wooden boat, turquoise water, calm, cinematic photograph."
+    }
+  ]
+}

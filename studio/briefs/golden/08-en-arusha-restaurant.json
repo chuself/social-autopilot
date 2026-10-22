@@ -1,0 +1,42 @@
+{
+  "id": "golden-08-en-arusha-restaurant",
+  "language": "en",
+  "cta": "See it work",
+  "eyebrow": "Restaurant",
+  "narration": "Dinner at a safari lodge in Arusha. Guests sign for drinks and meals, and at checkout half the slips are missing. With Operra, every order from the restaurant and bar posts straight to the room, so the bill is complete before the guest asks for it.",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Missing slips at checkout?",
+      "bad": [
+        "Missing"
+      ],
+      "tag": "ARUSHA · SAFARI LODGE",
+      "image": "A safari lodge dining terrace at dusk with Mount Meru on the horizon, lanterns on wooden tables, guests seen from behind sharing dinner, warm light, cinematic photograph."
+    },
+    {
+      "type": "pos-charge",
+      "line": "Every order goes to the room.",
+      "image": "A lodge bar at night with a carved wooden counter, warm pendant lights and rows of glasses, a bartender seen from behind, soft focus, cinematic photograph."
+    },
+    {
+      "type": "checklist",
+      "line": "Bar, restaurant and front desk, together.",
+      "items": [
+        "Bar and restaurant",
+        "Front desk",
+        "Room folio"
+      ],
+      "image": "A timber lodge reception with a woven rug and a vase of jacaranda blossom, morning light, soft focus, cinematic photograph."
+    },
+    {
+      "type": "payoff",
+      "line": "The bill is complete, every time.",
+      "good": [
+        "complete"
+      ],
+      "chip": "{orderTotal} · Room {room}",
+      "image": "Guests seen from behind loading an open safari vehicle at dawn in front of a timber lodge, jacaranda trees and Mount Meru in soft light, cinematic photograph."
+    }
+  ]
+}

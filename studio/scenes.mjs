@@ -14,9 +14,9 @@
  * from the reel's ledger (numbers.mjs) through a {token}.
  */
 import { ico, P, frontDesk, guestRow, reportsHub, reportRow } from "./lib/ui.mjs";
-import { fill, assertNoDigits, hash } from "./numbers.mjs";
+import { fill, assertNoDigits, hash, orderLines } from "./numbers.mjs";
 
-export const ROLE = { place: "hook", "problem-doc": "problem", "folio-fix": "solution", "ui-screen": "solution", payoff: "payoff" };
+export const ROLE = { place: "hook", "problem-doc": "problem", "folio-fix": "solution", "ui-screen": "solution", "pos-charge": "solution", checklist: "solution", payoff: "payoff" };
 export const WEIGHT = { hook: 1, problem: 1, solution: 1.4, payoff: 0.8 };
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
@@ -199,6 +199,54 @@ export const SCENES = {
         ...rowsSel.map((sel, i) => ({ t: t0 + 1.2 + i * 0.16, sel, from: { opacity: 0, x: 40 }, to: { opacity: 1, x: 0 }, dur: 0.45, ease: "power3.out" })),
         ...(s.chips ?? []).map((_, i) => chipIn(`#${id}-chip${i}`, t0 + dur * (0.42 + i * 0.14), "pop", i + 2)),
         { t: t0 + 1.4, sel: `#${id}-wrap`, to: { y: -12 }, dur: dur - 1.6, ease: "sine.inOut" },
+      ],
+    };
+  },
+
+  /**
+   * Solution: a bar or restaurant order on the Operra POS posts to the room.
+   * Every line is qty × price and the total is their sum, all from the ledger.
+   */
+  "pos-charge"(id, s, { t0, dur, T, ledger }) {
+    const lines = orderLines(ledger);
+    const ticket = `<div class="tilt"><div class="fcard pos" id="${id}-pos">
+      <div class="fhead">POS · BAR &amp; RESTAURANT · ROOM ${esc(T["{room}"])}</div>
+      ${lines.map((l, i) => `<div class="bline" id="${id}-l${i}"><span>${esc(l.label)}<i class="each">${esc(l.each)} each</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
+      <div class="btot"><span>Total</span><span class="bval">${esc(T["{orderTotal}"])}</span></div>
+    </div>
+    <div class="chip ok" id="${id}-ok">${ico("bed-double", { size: 30 })}${esc(s.okChip ?? `Posted to room ${T["{room}"]}`)}</div></div>
+    ${chips(id, s.chips)}`;
+    return {
+      html: shell(id, s, { fg: ticket, grade: "ops" }),
+      hide: [`#${id}-pos`, `#${id}-ok`, ...lines.map((_, i) => `#${id}-l${i}`), ...(s.chips ?? []).map((_, i) => `#${id}-chip${i}`)],
+      shows: lines.flatMap((l) => [l.label, l.each, l.value]),
+      steps: [
+        push(id, t0 - 0.15, dur + 0.3, 1.08),
+        words(id, t0 + 0.2),
+        { t: t0 + 0.45, sel: `#${id}-pos`, from: { opacity: 0, rotationX: 38, y: 180, filter: "blur(10px)" }, to: { opacity: 1, rotationX: 0, y: 0, filter: "blur(0px)" }, dur: 0.9, ease: "power3.out", cue: "card" },
+        ...lines.map((_, i) => ({ t: t0 + 1.0 + i * 0.28, sel: `#${id}-l${i}`, from: { opacity: 0, x: 40 }, to: { opacity: 1, x: 0 }, dur: 0.4, ease: "power3.out", cue: "flip" })),
+        popIn(`#${id}-ok`, t0 + Math.max(2.1, dur * 0.45), "match"),
+        ...(s.chips ?? []).map((_, i) => chipIn(`#${id}-chip${i}`, t0 + dur * (0.58 + i * 0.12), "pop", i + 2)),
+        { t: t0 + 1.4, sel: `#${id}-pos`, to: { y: -12 }, dur: dur - 1.6, ease: "sine.inOut" },
+      ],
+    };
+  },
+
+  /** Solution: three things Operra does, ticking in over the place. Text only from facts.md. */
+  checklist(id, s, { t0, dur }) {
+    const items = s.items ?? [];
+    if (items.length < 2 || items.length > 4) throw new Error(`${id}: checklist needs 2-4 items`);
+    items.forEach((x) => assertNoDigits(x, `${id} item`));
+    const list = `<div class="ticks">${items
+      .map((x, i) => `<div class="tick" id="${id}-t${i}"><span class="tk">${ico("check", { size: 34, stroke: 3 })}</span>${esc(x)}</div>`)
+      .join("")}</div>`;
+    return {
+      html: shell(id, s, { fg: list }),
+      hide: items.map((_, i) => `#${id}-t${i}`),
+      steps: [
+        push(id, t0 - 0.15, dur + 0.3, 1.1),
+        words(id, t0 + 0.2),
+        ...items.map((_, i) => ({ t: t0 + 0.6 + i * Math.min(0.7, (dur - 1.4) / items.length), sel: `#${id}-t${i}`, from: { opacity: 0, x: -60, scale: 0.96 }, to: { opacity: 1, x: 0, scale: 1 }, dur: 0.5, ease: "back.out(1.6)", cue: "pop", cueOpts: { i } })),
       ],
     };
   },

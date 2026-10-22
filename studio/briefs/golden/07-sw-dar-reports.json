@@ -1,0 +1,46 @@
+{
+  "id": "golden-07-sw-dar-reports",
+  "language": "sw",
+  "cta": "Ona inavyofanya kazi",
+  "eyebrow": "Ripoti",
+  "narration": "Mwisho wa mwezi, mmiliki anataka kujua: vyumba vimeingiza kiasi gani, na baa na mgahawa kiasi gani? Bila Operra, ni siku nzima ya kuhesabu. Kwa Operra, ripoti ziko tayari, kwa kila idara, kwenye simu yako.",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Mwisho wa mwezi, hesabu hazilingani?",
+      "bad": [
+        "hazilingani"
+      ],
+      "tag": "DAR ES SALAAM · MWISHO WA MWEZI",
+      "image": "A corporate hotel office at night overlooking a harbour with container cranes lit up, a manager seen from behind rubbing their neck at a dark wooden desk lit by one lamp, tired mood, cinematic photograph."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "reports",
+      "line": "Ripoti za kila idara, tayari.",
+      "chips": [
+        "Mapokezi, baa na mgahawa"
+      ],
+      "image": "A modern hotel lobby in the early morning with tall glass windows and harbour views, soft focus, cinematic photograph."
+    },
+    {
+      "type": "checklist",
+      "line": "Kila kitu kwenye simu yako.",
+      "items": [
+        "Mapato ya kila siku",
+        "Kila badiliko linaonekana",
+        "Kiswahili na Kiingereza"
+      ],
+      "image": "A hotel owner seen from behind walking along a waterfront promenade at sunrise with dhows offshore, calm, cinematic photograph."
+    },
+    {
+      "type": "payoff",
+      "line": "Mwezi unafungwa bila usiku mrefu.",
+      "good": [
+        "bila"
+      ],
+      "chip": "Ripoti iko tayari",
+      "image": "A hotel rooftop terrace at sunset over a harbour city, a manager seen from behind relaxing with a cup of tea, warm light, cinematic photograph."
+    }
+  ]
+}

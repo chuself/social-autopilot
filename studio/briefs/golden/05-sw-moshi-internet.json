@@ -1,0 +1,46 @@
+{
+  "id": "golden-05-sw-moshi-internet",
+  "language": "sw",
+  "cta": "Ona inavyofanya kazi",
+  "eyebrow": "Mapokezi",
+  "narration": "Mvua ikinyesha Moshi, mtandao unakatika. Mapokezi hayawezi kusubiri, wageni wanataka kuingia na kulipa. Operra inafanya kazi hata mtandao ukiwa mdogo, kwa Kiswahili na Kiingereza, ili kazi isisimame.",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Mtandao umekatika, wageni wanasubiri?",
+      "bad": [
+        "umekatika"
+      ],
+      "tag": "MOSHI · MSIMU WA MVUA",
+      "image": "A highland lodge in heavy rain at dusk, Kilimanjaro hidden in grey cloud above banana farms, rain running off a corrugated roof, a guest seen from behind under the porch with a duffel bag. Moody, cinematic photograph."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "frontdesk",
+      "line": "Operra inaendelea kufanya kazi.",
+      "chips": [
+        "Inafanya kazi mtandao ukiwa mdogo"
+      ],
+      "image": "A warm lodge reception with a glowing stone fireplace and wooden beams, rain on the windows, soft focus, cinematic photograph."
+    },
+    {
+      "type": "checklist",
+      "line": "Kazi haisimami.",
+      "items": [
+        "Wageni wanaingia",
+        "Bili zinaandaliwa",
+        "Kiswahili na Kiingereza"
+      ],
+      "image": "Trekkers seen from behind sitting by a stone fireplace in a highland lodge drinking tea while rain falls outside, cosy, cinematic photograph."
+    },
+    {
+      "type": "payoff",
+      "line": "Mvua inanyesha, kazi inaendelea.",
+      "good": [
+        "inaendelea"
+      ],
+      "chip": "Wageni wote wameingia",
+      "image": "Morning after rain at a highland lodge, the snow cap of Kilimanjaro clear above green banana farms, trekkers seen from behind setting off on a red-earth path, fresh light, cinematic photograph."
+    }
+  ]
+}

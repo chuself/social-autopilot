@@ -97,6 +97,17 @@ async function checkPage(pageFile, meta, problems) {
             if (m) out.sums.push({ n: +m[1], cur: m[2], rate: +m[3].replace(/,/g, ""), rest: txt.join(" | ") });
           }
         });
+        // POS ticket: every line is qty × each, and the total is their sum
+        scene.querySelectorAll(".pos").forEach((card) => {
+          if (!vis(card)) return;
+          const num = (t) => Number(String(t).replace(/[^\d]/g, ""));
+          const lines = [...card.querySelectorAll(".bline")].map((b) => {
+            const label = b.querySelector("span").firstChild.textContent;
+            return { label, qty: num(/^(\d+)\s*×/.exec(label)?.[1]), each: num(b.querySelector(".each")?.textContent), value: num(b.querySelector(".bval").textContent) };
+          });
+          const total = num(card.querySelector(".btot .bval")?.textContent);
+          out.posLines = { lines, total };
+        });
         const cap = scene.querySelector(".cap");
         if (cap && vis(cap)) {
           const colours = [...cap.querySelectorAll(".wi")].map((x) => getComputedStyle(x).color);
@@ -114,6 +125,12 @@ async function checkPage(pageFile, meta, problems) {
       for (const s of found.sums) {
         const total = (s.n * s.rate).toLocaleString("en-US");
         if (!s.rest.includes(`${s.cur} ${total}`)) problems.push({ check: "numbers", scene: w.id, fix: "none", msg: `${s.n} × ${s.cur} ${s.rate} should show ${s.cur} ${total} in the same card` });
+      }
+      if (found.posLines) {
+        const { lines, total } = found.posLines;
+        for (const l of lines) if (l.qty * l.each !== l.value) problems.push({ check: "numbers", scene: w.id, fix: "none", msg: `"${l.label}": ${l.qty} × ${l.each} is not ${l.value}` });
+        const sum = lines.reduce((a, l) => a + l.value, 0);
+        if (sum !== total) problems.push({ check: "numbers", scene: w.id, fix: "none", msg: `POS lines add to ${sum}, the ticket says ${total}` });
       }
       // layout
       for (const b of found.boxes) {

@@ -74,6 +74,18 @@ export function makeLedger(want = {}, seed = "operra", language = "en") {
     wrongTotal: nights * wrongRate,
   };
   L.difference = L.wrongTotal - L.rightTotal;
+
+  // A bar or restaurant order for the POS scene, drawn AFTER the rate figures
+  // so adding it changed no existing reel's numbers. Item names are product UI,
+  // so English; prices follow the reel's currency.
+  const pool = [...MENU];
+  L.order = Array.from({ length: 3 }, () => {
+    const [name, usd, tsh] = pool.splice(Math.floor(r() * pool.length), 1)[0];
+    const qty = 1 + Math.floor(r() * 3);
+    const price = currency === "TSh" ? tsh : usd;
+    return { name, qty, price, line: qty * price };
+  });
+  L.orderTotal = L.order.reduce((a, o) => a + o.line, 0);
   return reconcile(L);
 }
 
@@ -84,6 +96,10 @@ export function reconcile(L) {
     [L.wrongTotal, L.nights * L.wrongRate, "wrongTotal = nights × wrongRate"],
     [L.difference, L.wrongTotal - L.rightTotal, "difference = wrongTotal − rightTotal"],
   ];
+  if (L.order) {
+    for (const o of L.order) checks.push([o.line, o.qty * o.price, `${o.name}: line = qty × price`]);
+    checks.push([L.orderTotal, L.order.reduce((a, o) => a + o.qty * o.price, 0), "orderTotal = sum of lines"]);
+  }
   for (const [got, want, rule] of checks) if (got !== want) throw new Error(`ledger does not reconcile: ${rule} (${got} ≠ ${want})`);
   return L;
 }
@@ -102,8 +118,20 @@ export function tokens(L) {
     "{difference}": m(L.difference),
     "{rightSum}": `${L.nights} × ${m(L.rightRate)}`,
     "{wrongSum}": `${L.nights} × ${m(L.wrongRate)}`,
+    ...(L.order ? { "{orderTotal}": m(L.orderTotal) } : {}),
   };
 }
+
+/** Order lines as shown on the POS ticket: "2 × Coffee", "TSh 10,000". */
+export function orderLines(L) {
+  return L.order.map((o) => ({ label: `${o.qty} × ${o.name}`, each: money(o.price, L.currency), value: money(o.line, L.currency) }));
+}
+
+// [name, USD, TSh]. Generic dishes, no brands (a brand name is a label).
+const MENU = [
+  ["Grilled tilapia", 12, 25000], ["Chicken pilau", 9, 18000], ["Chips", 4, 7000], ["Fresh juice", 3, 6000],
+  ["Coffee", 2, 4000], ["Mixed grill", 15, 32000], ["Fruit platter", 6, 12000], ["Vegetable curry", 8, 16000],
+];
 
 /** Replace tokens; an unknown token is an error, not a blank. */
 export function fill(text, T) {
