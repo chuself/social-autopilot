@@ -116,13 +116,18 @@ async function reelNeeded(now) {
   }
 }
 
-/** Only plan after the evening slot, and only if tomorrow is still empty. */
+/**
+ * Only plan after the evening slot and before the morning one, and only if the
+ * day ahead is still empty. The window runs through the night so a plan that
+ * ran but was lost (2026-10-22: written, then dropped by push-state) is retried
+ * on the next six-hourly tick instead of costing the whole of the next day.
+ */
 async function planNeeded(now) {
   try {
     const { readQueue } = await import("./queue.js");
     const { readConfig } = await import("./config.js");
     const eatHour = new Date(now + 3 * 3600_000).getUTCHours();
-    if (eatHour < 21) return false;
+    if (eatHour < 21 && eatHour >= 6) return false;
 
     const cfg = await readConfig();
     const queue = await readQueue();
