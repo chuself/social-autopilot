@@ -60,6 +60,7 @@ export function makeLedger(want = {}, seed = "operra", language = "en") {
   const rightRate = want.rightRate ?? pick(r, prof.rates);
   const wrongRate = want.wrongRate ?? rightRate + pick(r, prof.over);
   const party = want.party ?? `AG-${String(10 + Math.floor(r() * 80)).padStart(2, "0")}`;
+  const room = want.room ?? 101 + Math.floor(r() * 3) * 100 + Math.floor(r() * 18);
 
   for (const [k, v] of Object.entries({ nights, rightRate, wrongRate })) {
     if (!Number.isInteger(v) || v <= 0) throw new Error(`ledger.${k} must be a positive whole number, got ${v}`);
@@ -68,7 +69,7 @@ export function makeLedger(want = {}, seed = "operra", language = "en") {
   if (wrongRate === rightRate) throw new Error("ledger: the wrong rate must differ from the right one");
 
   const L = {
-    currency, party, nights, rightRate, wrongRate,
+    currency, party, room, nights, rightRate, wrongRate,
     rightTotal: nights * rightRate,
     wrongTotal: nights * wrongRate,
   };
@@ -92,6 +93,7 @@ export function tokens(L) {
   const m = (n) => money(n, L.currency);
   return {
     "{party}": L.party,
+    "{room}": String(L.room),
     "{nights}": String(L.nights),
     "{rightRate}": m(L.rightRate),
     "{wrongRate}": m(L.wrongRate),

@@ -68,7 +68,7 @@ export const SCENES = {
       hide: s.tag ? [`#${id}-tag`] : [],
       steps: [
         push(id, t0, dur + 0.6, 1.12),
-        words(id, t0 + 0.5),
+        words(id, t0 + 0.2),
         drift(id, t0 + 0.6, dur - 0.4),
         ...(s.tag ? [chipIn(`#${id}-tag`, t0 + 1.5, "pop", 1)] : []),
       ],
@@ -87,6 +87,7 @@ export const SCENES = {
     for (const [label] of d.rows) assertNoDigits(label, `${id} doc label`);
     for (const [, value] of d.rows) assertNoDigits(value, `${id} doc value`);
     if (s.stamp) assertNoDigits(s.stamp, `${id} stamp`);
+    const number = d.number ?? `A-${1000 + (hash(seed + id) % 9000)}`;
     const rows = d.rows
       .map(([label, value], i) =>
         i === wrong
@@ -95,16 +96,17 @@ export const SCENES = {
       )
       .join("");
     const paper = `<div class="paper" id="${id}-doc">
-      <div class="phead"><span>${esc(d.title ?? "")}</span><span>№ ${esc(d.number ?? `A-${1000 + (hash(seed + id) % 9000)}`)}</span></div>${rows}
+      <div class="phead"><span>${esc(d.title ?? "")}</span><span>№ ${esc(number)}</span></div>${rows}
       ${s.stamp ? `<div class="stamp" id="${id}-stamp">${esc(s.stamp)}</div>` : ""}</div>`;
     const strikeAt = t0 + Math.max(1.6, dur * 0.35);
     const stampAt = t0 + Math.max(2.6, dur * 0.56);
     return {
       html: shell(id, s, { fg: paper }),
       hide: [`#${id}-doc`, ...(s.stamp ? [`#${id}-stamp`] : [])],
+      shows: [number],
       steps: [
         push(id, t0 - 0.2, dur + 0.4, 1.1),
-        words(id, t0 + 0.3),
+        words(id, t0 + 0.2),
         { t: t0 + 0.8, sel: `#${id}-doc`, from: { opacity: 0, x: 520, rotation: 14, filter: "blur(12px)" }, to: { opacity: 1, x: 0, rotation: -4, filter: "blur(0px)" }, dur: 0.75, ease: "power4.out", cue: "card" },
         { t: t0 + 1.55, sel: `#${id}-doc`, to: { rotation: -2, y: -10 }, dur: dur - 1.8, ease: "sine.inOut" },
         { t: strikeAt, sel: `draw:#${id}-strike`, dur: 0.35, ease: "power1.inOut", cue: "strike" },
@@ -126,12 +128,12 @@ export const SCENES = {
   "folio-fix"(id, s, { t0, dur, T }) {
     const flip = (k, a, b) => `<span class="flip" id="${id}-${k}"><span class="fa">${esc(a)}</span><span class="fb">${esc(b)}</span></span>`;
     const card = `<div class="tilt"><div class="fcard" id="${id}-fol">
-      <div class="fhead">FOLIO · ${esc(T["{party}"])} · ${esc(s.season ?? "HIGH SEASON")}</div>
-      <div class="bline"><span>Contract rate / night</span><span class="bval">${esc(T["{rightRate}"])}</span></div>
+      <div class="fhead">FOLIO · ROOM ${esc(T["{room}"])}</div>
+      <div class="bline"><span>Room rate / night</span><span class="bval">${esc(T["{rightRate}"])}</span></div>
       <div class="bline neg"><span>Charged / night</span>${flip("rate", T["{wrongRate}"], T["{rightRate}"])}</div>
       <div class="btot"><span>Due<span class="sum">${flip("sum", T["{wrongSum}"], T["{rightSum}"])}</span></span>${flip("tot", T["{wrongTotal}"], T["{rightTotal}"])}</div>
     </div>
-    <div class="chip ok" id="${id}-ok">${ico("check", { size: 30, stroke: 2.6 })}${esc(s.okChip ?? "Matched to contract")}</div></div>
+    <div class="chip ok" id="${id}-ok">${ico("check", { size: 30, stroke: 2.6 })}${esc(s.okChip ?? "Correct rate applied")}</div></div>
     ${chips(id, s.chips)}`;
     const f = (k, at, cue) => [
       { t: at, sel: `#${id}-${k} .fa`, to: { yPercent: -110 }, dur: 0.32, ease: "power2.inOut", cue },
@@ -143,7 +145,7 @@ export const SCENES = {
       init: [`#${id}-rate .fb`, `#${id}-sum .fb`, `#${id}-tot .fb`],
       steps: [
         push(id, t0 - 0.15, dur + 0.3, 1.08),
-        words(id, t0 + 0.35),
+        words(id, t0 + 0.2),
         { t: t0 + 0.45, sel: `#${id}-fol`, from: { opacity: 0, rotationX: 38, y: 180, filter: "blur(10px)" }, to: { opacity: 1, rotationX: 0, y: 0, filter: "blur(0px)" }, dur: 0.9, ease: "power3.out", cue: "card" },
         ...f("rate", t0 + dur * 0.22, "flip"),
         ...f("sum", t0 + dur * 0.27, null),
@@ -158,7 +160,7 @@ export const SCENES = {
   /** Solution: a live Operra screen (front desk or reports) tilting up out of depth. */
   "ui-screen"(id, s, { t0, dur, seed }) {
     const screen = s.screen ?? "frontdesk";
-    let el, rowsSel;
+    let el, rowsSel, shows = [];
     if (screen === "reports") {
       el = reportsHub(`${id}-scr`, [
         reportRow(`${id}-r0`, ico("trending-up", { size: 24 }), "Revenue", "Today, by outlet"),
@@ -183,14 +185,16 @@ export const SCENES = {
         rows: list.map(([i, n], k) => guestRow(`${id}-g${k}`, i, n, String(101 + k * 3 + ((r >>> (k * 5 + 3)) % 3)))).join(""),
       });
       rowsSel = list.map((_, k) => `#${id}-g${k}`);
+      shows = [`${Math.round((occupied / rooms) * 100)}%`, String(rooms - occupied), String(list.length), ...list.map((_, k) => `Room ${101 + k * 3 + ((r >>> (k * 5 + 3)) % 3)}`)];
     }
     const html = `<div class="tilt scr-${screen}"><div class="scrwrap" id="${id}-wrap">${el}</div></div>${chips(id, s.chips)}`;
     return {
       html: shell(id, s, { fg: html, grade: "ops" }),
+      shows,
       hide: [`#${id}-wrap`, ...rowsSel, ...(s.chips ?? []).map((_, i) => `#${id}-chip${i}`)],
       steps: [
         push(id, t0 - 0.15, dur + 0.3, 1.08),
-        words(id, t0 + 0.35),
+        words(id, t0 + 0.2),
         { t: t0 + 0.45, sel: `#${id}-wrap`, from: { opacity: 0, rotationX: 34, y: 200, filter: "blur(10px)" }, to: { opacity: 1, rotationX: 0, y: 0, filter: "blur(0px)" }, dur: 0.9, ease: "power3.out", cue: "card" },
         ...rowsSel.map((sel, i) => ({ t: t0 + 1.2 + i * 0.16, sel, from: { opacity: 0, x: 40 }, to: { opacity: 1, x: 0 }, dur: 0.45, ease: "power3.out" })),
         ...(s.chips ?? []).map((_, i) => chipIn(`#${id}-chip${i}`, t0 + dur * (0.42 + i * 0.14), "pop", i + 2)),
@@ -206,7 +210,7 @@ export const SCENES = {
     return {
       html: shell(id, s, { fg: chip }),
       hide: s.chip ? [`#${id}-ok`] : [],
-      steps: [push(id, t0, dur + 1, 1.1), words(id, t0 + 0.3), ...(s.chip ? [popIn(`#${id}-ok`, t0 + Math.min(1.3, dur * 0.4), "match")] : [])],
+      steps: [push(id, t0, dur + 1, 1.1), words(id, t0 + 0.2), ...(s.chip ? [popIn(`#${id}-ok`, t0 + Math.min(1.3, dur * 0.4), "match")] : [])],
     };
   },
 };

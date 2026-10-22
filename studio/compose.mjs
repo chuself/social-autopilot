@@ -37,6 +37,14 @@ export function validateBrief(b) {
     if (["place", "problem-doc", "payoff"].includes(s.type) && !s.image) errs.push(`scene ${i + 1}: ${s.type} needs an image`);
   });
   if (b.scenes?.[b.scenes.length - 1]?.type !== "payoff") errs.push("the last scene must be a payoff");
+  // Anything that naturally carries writing makes MOSS write on it, and three
+  // redraws of a desk of papers all came back with pseudo-text. Documents and
+  // screens are drawn by the tool on top of the photo, so the photo needs none.
+  const WRITES = /\b(papers?|sheets?|documents?|invoices?|receipts?|books?|ledgers?|folders?|notebooks?|notepads?|screens?|laptops?|monitors?|computers?|phones?|tablets?|signs?|signage|menus?|newspapers?|labels?|posters?|whiteboards?|calendars?|clipboards?|card machines?|keyboards?|number plates?|licen[cs]e plates?|banners?)\b/i;
+  (b.scenes ?? []).forEach((s, i) => {
+    const m = s.image && !/[\\/]/.test(s.image) && WRITES.exec(s.image);
+    if (m) errs.push(`scene ${i + 1}: the image prompt mentions "${m[0]}", which MOSS will letter. Leave documents and screens to the scene; describe the place, light and objects without writing surfaces`);
+  });
   for (const k of ["eyebrow", "cta"]) {
     try {
       assertNoDigits(b[k] ?? "", k);
@@ -61,7 +69,7 @@ export function compose(brief, voice, brand) {
   const roles = brief.scenes.map((s) => ROLE[s.type]);
   const cuts = planCuts(voice, brief.scenes.length, roles.map((r) => WEIGHT[r]));
   const endAt = +(voice.speechEnd - 0.45).toFixed(3); // the end card lands under the last words
-  const duration = Math.min(59, Math.ceil(voice.speechEnd + 2.6));
+  const duration = Math.min(59, Math.ceil(voice.speechEnd + 2.2));
   const starts = [0, ...cuts];
   const ends = [...cuts, endAt];
 
@@ -71,7 +79,9 @@ export function compose(brief, voice, brand) {
   );
 
   const steps = [];
-  const hide = [];
+  // The end card's pieces enter on their own steps; hidden until then, or the
+  // button shows before the logo (the lag the user saw).
+  const hide = ["#bigLogo", "#cta", "#site"];
   const init = [];
   built.forEach((b) => {
     steps.push(...b.steps);
@@ -92,13 +102,14 @@ export function compose(brief, voice, brand) {
   // End card: the final scene may exit; the brand's own logo arrives with a sheen.
   const last = ids.at(-1);
   steps.push(
-    { t: endAt, sel: `#${last}`, to: { scale: 1.12, filter: "blur(18px) brightness(1)", opacity: 0 }, dur: 0.75, ease: "power2.in" },
-    { t: endAt + 0.05, sel: "#lock,#eyebrow", to: { opacity: 0 }, dur: 0.4, ease: "none" },
-    { t: endAt + 0.35, sel: "#end", from: { opacity: 0 }, to: { opacity: 1 }, dur: 0.5, ease: "none" },
-    { t: endAt + 0.45, sel: "#bigLogo", from: { opacity: 0, scale: 1.12, filter: "blur(14px)" }, to: { opacity: 1, scale: 1, filter: "blur(0px)" }, dur: 1.0, ease: "power3.out", cue: "logo" },
-    { t: endAt + 1.05, sel: "#sheen", from: { backgroundPosition: "-600px 0" }, to: { backgroundPosition: "600px 0" }, dur: 1.1, ease: "power2.inOut" },
-    { t: endAt + 1.35, sel: "#cta", from: { opacity: 0, xPercent: -50, y: 40, scale: 0.9 }, to: { opacity: 1, xPercent: -50, y: 0, scale: 1 }, dur: 0.55, ease: "back.out(1.7)", cue: "tap" },
-    { t: endAt + 1.65, sel: "#site", from: { opacity: 0, y: 12 }, to: { opacity: 1, y: 0 }, dur: 0.5, ease: "none" },
+    // In order and quick: scene out, card in, logo, button, address — about a second.
+    { t: endAt, sel: `#${last}`, to: { scale: 1.1, filter: "blur(16px) brightness(1)", opacity: 0 }, dur: 0.5, ease: "power2.in" },
+    { t: endAt, sel: "#lock,#eyebrow", to: { opacity: 0 }, dur: 0.3, ease: "none" },
+    { t: endAt + 0.2, sel: "#end", from: { opacity: 0 }, to: { opacity: 1 }, dur: 0.35, ease: "none" },
+    { t: endAt + 0.3, sel: "#bigLogo", from: { opacity: 0, scale: 1.2, filter: "blur(10px)" }, to: { opacity: 1, scale: 1, filter: "blur(0px)" }, dur: 0.65, ease: "power4.out", cue: "logo" },
+    { t: endAt + 0.75, sel: "#sheen", from: { backgroundPosition: "-600px 0" }, to: { backgroundPosition: "600px 0" }, dur: 0.9, ease: "power2.inOut" },
+    { t: endAt + 0.7, sel: "#cta", from: { opacity: 0, xPercent: -50, y: 40, scale: 0.9 }, to: { opacity: 1, xPercent: -50, y: 0, scale: 1 }, dur: 0.45, ease: "back.out(1.7)", cue: "tap" },
+    { t: endAt + 0.9, sel: "#site", from: { opacity: 0, y: 12 }, to: { opacity: 1, y: 0 }, dur: 0.4, ease: "power2.out" },
     { t: 0, sel: "#bar", from: { scaleX: 0 }, to: { scaleX: 1 }, dur: duration, ease: "none" },
   );
 
@@ -134,7 +145,11 @@ window.setFrame=(t)=>{tl.seek(t,false);redraw(t);};
 window.setFrame(0);
 </script></body></html>`;
 
-  return { html, duration, cues, cuts, joins, ledger, steps };
+  // What the checker needs: where each scene settles, and every number the
+  // reel is allowed to show (the ledger's, plus figures a scene computed itself).
+  const windows = brief.scenes.map((s, i) => ({ id: ids[i], type: s.type, t0: starts[i], t1: ends[i] }));
+  const allowed = [...Object.values(T), ...built.flatMap((b) => b.shows ?? [])];
+  return { html, duration, cues, cuts, joins, ledger, steps, windows, endAt, allowed };
 }
 
 const escape = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
@@ -163,7 +178,7 @@ const target=(sel)=>sel.startsWith("cam:")?CAM[sel.slice(4)]:sel;
 for(const s of STEPS){
   if(s.kind==="words"){
     document.querySelectorAll(s.sel+" .wi").forEach((w,i)=>tl.fromTo(w,{y:70-i*6,opacity:0,filter:"blur(10px)"},
-      {y:0,opacity:1,filter:"blur(0px)",duration:.6,ease:"power3.out",immediateRender:false},s.t+i*.075));
+      {y:0,opacity:1,filter:"blur(0px)",duration:.5,ease:"power3.out",immediateRender:false},s.t+i*.055));
     continue;
   }
   if(s.sel.startsWith("draw:")){
@@ -198,7 +213,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:${P.bg};font-fam
 .place{position:absolute;left:80px;top:1086px;font-size:24px;font-weight:600;letter-spacing:.14em;
        background:rgba(4,15,19,.62);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:12px 24px;display:flex;align-items:center;gap:12px}
 .place i{width:12px;height:12px;border-radius:50%;background:${P.teal};box-shadow:0 0 12px ${P.teal}}
-.cap{position:absolute;left:80px;top:1190px;width:880px;font-weight:600;line-height:1.1;letter-spacing:-.025em}
+.cap{position:absolute;left:80px;top:1190px;width:840px;font-weight:600;line-height:1.1;letter-spacing:-.025em}
 .w{display:inline-block;vertical-align:top}
 .wi{display:inline-block}
 .wi.bad{color:#ff8a7a}

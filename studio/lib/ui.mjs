@@ -167,7 +167,7 @@ export const reportsHub = (id, rows, opts = {}) => phone(id, `
   <div class="rsearch">Search reports...</div>
   <div class="rchips"><span class="on">All</span><span>Finance</span><span>Front Office</span><span>HR</span></div>
   <div class="rrows">${rows}</div>
-  <div class="rexport" id="${id}-exp"><span>Export PDF</span><span>&lt; 5s</span></div>`, opts);
+  <div class="rexport" id="${id}-exp"><span>Export PDF</span><span>Ready</span></div>`, opts);
 
 /* ── pricing ─────────────────────────────────────────────────────────────── */
 

@@ -23,7 +23,7 @@ import { renderPage } from "./render.mjs";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SFX_BUS = 0.6; // effects bus, about -4.4 dB under unity
 
-export async function makeReel(brief, { out, voice = null, work = null, fps = 30, brandId = "operra", reuse = false, pageOnly = false } = {}) {
+export async function makeReel(brief, { out, voice = null, work = null, fps = 30, brandId = "operra", reuse = false, pageOnly = false, reseed = {} } = {}) {
   validateBrief(brief);
   const dir = work ?? path.join(ROOT, "state", "frames", "studio", brief.id ?? "reel");
   mkdirSync(dir, { recursive: true });
@@ -36,8 +36,12 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
     if (existsSync(path.resolve(s.image))) return { ...s, image: path.resolve(s.image) };
     const file = path.join(dir, `s${i}.png`);
     // --reuse: an image already made for this scene is kept (iterating on layout costs nothing)
-    if (reuse && existsSync(file)) return { ...s, image: file, imagePrompt: s.image };
-    jobs.push({ i, prompt: s.image, outFile: file, aspect: "9:16", seed: s.seed });
+    // --reuse keeps an image only if it was drawn from this exact prompt
+    const promptFile = `${file}.prompt.txt`;
+    const same = existsSync(promptFile) && readFileSync(promptFile, "utf8") === s.image;
+    if (reuse && same && existsSync(file) && reseed[i] === undefined) return { ...s, image: file, imagePrompt: s.image };
+    writeFileSync(promptFile, s.image);
+    jobs.push({ i, prompt: s.image, outFile: file, aspect: "9:16", seed: reseed[i] ?? s.seed });
     return { ...s, image: file, imagePrompt: s.image };
   });
   if (jobs.length) {
@@ -49,6 +53,7 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
       scenes[jobs[k].i].imageSeed = d.seed;
     });
   }
+  const imageFiles = scenes.map((s) => s.image ?? null);
   for (const s of scenes) if (s.image) s.image = `file:///${s.image.replace(/\\/g, "/")}`;
 
   // Voice: given, or Alice's own TTS from the narration.
@@ -66,7 +71,11 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
   writeFileSync(page, reel.html);
   for (const c of reel.cues) if (!VOCABULARY[c.type]) throw new Error(`cue ${c.type} has no meaning`);
 
-  if (pageOnly) return { id: brief.id, page, duration: reel.duration, cuts: reel.cuts, joins: reel.joins, ledger: reel.ledger, cues: reel.cues };
+  const meta = { id: brief.id, out, duration: reel.duration, cuts: reel.cuts, joins: reel.joins, ledger: reel.ledger, cues: reel.cues, voice: voiceFile,
+    windows: reel.windows, endAt: reel.endAt, allowed: reel.allowed, imageFiles,
+    images: scenes.map((s) => (s.imagePrompt ? { prompt: s.imagePrompt, seed: s.imageSeed } : null)) };
+  writeFileSync(path.join(dir, "reel.json"), JSON.stringify(meta, null, 1));
+  if (pageOnly) return { ...meta, page, dir };
   const sfx = await renderSfx(reel.cues, reel.duration, path.join(dir, "sfx.wav"));
   const mix = path.join(dir, "mix.m4a");
   // A mono voice is copied to both channels at unity: amix's own upmix would
@@ -76,17 +85,47 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
     "-map", "[a]", "-t", String(reel.duration), "-c:a", "aac", "-b:a", "192k", mix]);
 
   await renderPage(page, mix, out, { fps });
-  const meta = { id: brief.id, out, duration: reel.duration, cuts: reel.cuts, joins: reel.joins, ledger: reel.ledger, cues: reel.cues, voice: voiceFile,
-    images: scenes.map((s) => s.imagePrompt ? { prompt: s.imagePrompt, seed: s.imageSeed } : null) };
-  writeFileSync(path.join(dir, "reel.json"), JSON.stringify(meta, null, 1));
-  return meta;
+  return { ...meta, dir };
+}
+
+/**
+ * Make, check, and redraw what can be redrawn. At most two retries, and only
+ * for problems a new image can fix; anything deterministic (a sum, a layout)
+ * returns ok:false straight away so the caller can fall back to the plain reel.
+ */
+export async function produceReel(brief, opts = {}) {
+  const { checkReel } = await import("./check.mjs");
+  let reseed = {};
+  let last;
+  for (let attempt = 0; attempt <= 2; attempt++) {
+    const meta = await makeReel(brief, { ...opts, reuse: opts.reuse || attempt > 0, reseed });
+    last = await checkReel(meta.dir, meta.out);
+    last.attempt = attempt;
+    if (last.ok) return { ok: true, meta, report: last };
+    // Only a MOSS prompt can be redrawn; a supplied file with a fault is final.
+    const canRedraw = (p) => p.fix === "reimage" && p.scene && meta.images[Number(p.scene.slice(1))]?.prompt;
+    const hard = last.problems.filter((p) => !p.warn && !canRedraw(p));
+    const redraw = [...new Set(last.problems.filter(canRedraw).map((p) => Number(p.scene.slice(1))))];
+    if (hard.length || !redraw.length || attempt === 2) return { ok: false, meta, report: last };
+    reseed = {};
+    for (const i of redraw) reseed[i] = 7919 * (attempt + 1) + i * 104729 + ((meta.images[i]?.seed ?? 0) % 100000);
+    console.log(`  check: redrawing scene(s) ${redraw.map((i) => i + 1).join(", ")} (attempt ${attempt + 2})`);
+  }
+  return { ok: false, report: last };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(import.meta.filename)) {
   const argv = process.argv.slice(2);
   const flag = (k) => (argv.includes(k) ? argv[argv.indexOf(k) + 1] : null);
   const brief = JSON.parse(readFileSync(argv[0], "utf8"));
-  const meta = await makeReel(brief, { out: flag("--out") ?? "reel.mp4", voice: flag("--voice"), work: flag("--work"), reuse: argv.includes("--reuse"), pageOnly: argv.includes("--page-only") });
+  const opts = { out: flag("--out") ?? "reel.mp4", voice: flag("--voice"), work: flag("--work"), reuse: argv.includes("--reuse"), pageOnly: argv.includes("--page-only") };
+  if (argv.includes("--check")) {
+    const r = await produceReel(brief, opts);
+    for (const p of r.report.problems) console.log(`${p.warn ? "WARN" : "FAIL"}  ${p.check.padEnd(8)} ${p.scene ?? ""}  ${p.msg}`);
+    console.log(r.ok ? `PASS after ${r.report.attempt + 1} attempt(s): ${opts.out}` : "FAILED: fall back to the plain reel");
+    process.exit(r.ok ? 0 : 1);
+  }
+  const meta = await makeReel(brief, opts);
   console.log(`cuts ${meta.cuts.join(", ")} · joins ${meta.joins.join(", ")} · ${meta.cues.length} cues`);
   console.log(`ledger ${meta.ledger.nights} × ${meta.ledger.currency} ${meta.ledger.rightRate} = ${meta.ledger.rightTotal} (was ${meta.ledger.wrongTotal})`);
 }

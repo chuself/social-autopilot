@@ -4,13 +4,64 @@
   "eyebrow": "Upangaji bei",
   "cta": "Ona inavyofanya kazi",
   "scenes": [
-    { "type": "place", "line": "Ankara inakataliwa tena msimu huu?", "bad": ["inakataliwa"], "tag": "ARUSHA · MSIMU WA SAFARI", "image": "studio/proto/media/s1-season.jpg", "focus": -150 },
-    { "type": "problem-doc", "line": "Bei ya wakala imekosewa mapokezi?", "bad": ["imekosewa"], "image": "studio/proto/media/s2-mistake.jpg", "focus": -260,
-      "doc": { "title": "ANKARA", "rows": [["Wakala", "{party}"], ["Usiku", "{nights}"], ["Bei kwa usiku", "{wrongRate}"], ["Jumla", "{wrongTotal}"]], "wrongRow": 2 },
-      "stamp": "IMEKATALIWA" },
-    { "type": "folio-fix", "line": "Operra inadhibiti viwango na mapokezi.", "image": "studio/proto/media/s3-desk.jpg",
-      "chips": ["Kiswahili na Kiingereza", "Inafanya kazi mtandao ukiwa mdogo"] },
-    { "type": "payoff", "line": "Malipo ya msimu yanaingia bila usumbufu.", "good": ["bila", "usumbufu"], "image": "studio/proto/media/s4-dusk.jpg", "focus": -120,
-      "chip": "Malipo yamepokelewa · {rightTotal}" }
+    {
+      "type": "place",
+      "line": "Ankara inakataliwa tena msimu huu?",
+      "bad": [
+        "inakataliwa"
+      ],
+      "tag": "ARUSHA · MSIMU WA SAFARI",
+      "image": "A timber safari lodge veranda at golden hour with Mount Meru on the horizon beyond flowering jacaranda trees. Below the veranda, two open-roofed safari vehicles are parked side-on on red earth, dust glowing in the low sun. A guide in khaki, seen from behind, lifts a cool box into the nearest vehicle. Warm cinematic light, long shadows, shallow depth of field, 35mm photograph."
+    },
+    {
+      "type": "problem-doc",
+      "line": "Bei ya wakala imekosewa mapokezi?",
+      "bad": [
+        "imekosewa"
+      ],
+      "image": "A dark wooden back-office desk in a timber lodge late at night, lit by one brass desk lamp. A pair of reading glasses rests on the bare polished wood, a brass rubber stamp lies on its side, a fountain pen and a cold cup of tea sit nearby. Tense, tired mood, deep shadows, warm tungsten light, cinematic photograph.",
+      "doc": {
+        "title": "ANKARA",
+        "rows": [
+          [
+            "Chumba",
+            "{room}"
+          ],
+          [
+            "Usiku",
+            "{nights}"
+          ],
+          [
+            "Bei ya chumba / usiku",
+            "{wrongRate}"
+          ],
+          [
+            "Jumla",
+            "{wrongTotal}"
+          ]
+        ],
+        "wrongRow": 2
+      },
+      "stamp": "IMEKATALIWA"
+    },
+    {
+      "type": "folio-fix",
+      "line": "Operra inadhibiti viwango na mapokezi.",
+      "image": "A bright, calm hotel reception in a timber and volcanic-stone lodge in the morning. A receptionist seen from behind hands a brass room key across a polished wooden counter to a guest in travel clothes. Potted palms, woven baskets, soft daylight through tall windows, quiet and orderly, soft focus, cinematic photograph.",
+      "chips": [
+        "Kiswahili na Kiingereza",
+        "Inafanya kazi mtandao ukiwa mdogo"
+      ]
+    },
+    {
+      "type": "payoff",
+      "line": "Malipo ya msimu yanaingia bila usumbufu.",
+      "good": [
+        "bila",
+        "usumbufu"
+      ],
+      "image": "A lodge terrace at dusk with lanterns glowing along a stone wall. Three guests seen from behind raise sundowner glasses toward the silhouette of Mount Meru against a deep violet and blue sky fading to magenta at the horizon. Calm, celebratory, cinematic photograph.",
+      "chip": "Malipo yamepokelewa · {rightTotal}"
+    }
   ]
 }
