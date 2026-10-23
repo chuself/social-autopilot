@@ -1,5 +1,24 @@
 [
   {
+    "id": "operra-2026-10-16-08-number-that-lands",
+    "platform": "facebook",
+    "pillar": "number-that-lands",
+    "format": "carousel",
+    "language": "en",
+    "look": "flatlay",
+    "headline": "Trek turnarounds stall in translation",
+    "reach": 4,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 2,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
     "id": "operra-2026-10-19-08-number-that-lands",
     "platform": "facebook",
     "pillar": "number-that-lands",
@@ -38,6 +57,25 @@
     ]
   },
   {
+    "id": "operra-2026-10-22-20-number-that-lands",
+    "platform": "facebook",
+    "pillar": "number-that-lands",
+    "format": "poster",
+    "language": "en",
+    "look": "blueprint",
+    "headline": "Six departments running on one lean system",
+    "reach": 3,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 3,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
     "id": "operra-2026-09-28-08-number-that-lands",
     "platform": "facebook",
     "pillar": "number-that-lands",
@@ -45,44 +83,6 @@
     "language": "en",
     "look": "flatlay",
     "headline": "Foreign currency tabs create billing discrepancies",
-    "reach": 3,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 2,
-    "platforms": [
-      "facebook",
-      "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-10-09-20-pain-point",
-    "platform": "facebook",
-    "pillar": "pain-point",
-    "format": "poster",
-    "language": "sw",
-    "look": "nightfall",
-    "headline": "Double-booked during the Moshi peak season?",
-    "reach": 3,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 2,
-    "platforms": [
-      "facebook",
-      "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-10-15-20-pain-point",
-    "platform": "facebook",
-    "pillar": "pain-point",
-    "format": "poster",
-    "language": "sw",
-    "look": "flatlay",
-    "headline": "Vinywaji vya bar vinapotea bure Mwanza",
     "reach": 3,
     "likes": 2,
     "comments": 0,

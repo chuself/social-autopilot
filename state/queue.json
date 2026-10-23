@@ -11883,5 +11883,167 @@
       "facebook:1049514968255534_122175494871351110",
       "instagram:18115086692132212"
     ]
+  },
+  {
+    "id": "operra-2026-10-24-08-pain-point",
+    "slides": [
+      {
+        "eyebrow": "Agizo la utani",
+        "headline": "Whisky ya ghali kwenye chumba cha mgeni?",
+        "body": "Mgeni anapokea bili ya pombe ambayo hakuagiza wala kugusa."
+      },
+      {
+        "eyebrow": "Namba za Siri",
+        "headline": "Kila agizo linahitaji PIN ya chumba",
+        "body": "Wageni wengine hawawezi kuagiza chakula wala vinywaji kwa kutumia namba ya chumba cha mwingine."
+      },
+      {
+        "eyebrow": "Udhibiti kamili",
+        "headline": "Mapokezi wanathibitisha kabla ya jiko kupika",
+        "body": "Hakuna oda inayofika jikoni wala kwenye bili bila kupita mikononi mwa mapokezi kwanza."
+      },
+      {
+        "eyebrow": "Suluhisho",
+        "headline": "Weka himaya yako salama na Operra",
+        "body": "Agiza mfumo unaolinda mapato yako leo."
+      }
+    ],
+    "caption": "Agizo la utani la chupa ya whisky kwenye chumba cha mgeni mwingine linaondoa amani mapokezi. Mgeni anashtuka kuona bili ya kitu ambacho hakukuagiza. Ukiwa na Operra, kila agizo la QR chumbani linathibitishwa na PIN ya mgeni na kupitishwa na mapokezi kabla hakijaenda jikoni. Hakuna tena malalamiko ya bili za uongo.",
+    "hashtags": [
+      "HoteliTanzania",
+      "OperraTech",
+      "UsimamiziWaHoteli",
+      "ArushaHotels"
+    ],
+    "imagePrompt": "Composition: wide establishing view of a rustic timber lodge veranda on a coffee estate in Arusha, with Mount Meru visible under a clear sky. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. Left half of the frame from middle down to bottom is a plain, weathered wooden wall acting as a calm zone. Hero detail on the right of centre: a small, dark metallic stand holding a plain, untitled black acrylic block with a square engraved pattern. Story props: two heavy ceramic coffee mugs, a folded linen napkin, a small potted succulent in a terracotta pot, and a brass key ring resting on the wood table. People: soft-focus figures of staff walking past in the distant background, seen from behind.",
+    "cta": "Wasiliana nasi",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "feature": "digital-menu",
+    "angle": "a prank order of whisky against someone else's room",
+    "backgroundPath": "state/bg/operra-2026-10-24-08-pain-point.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-24T05:00:00.000Z",
+    "createdAt": "2026-10-23T18:10:17.221Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2034583174,
+    "slideFiles": [
+      "operra-2026-10-24-08-pain-point-1.png",
+      "operra-2026-10-24-08-pain-point-2.png",
+      "operra-2026-10-24-08-pain-point-3.png",
+      "operra-2026-10-24-08-pain-point-4.png"
+    ],
+    "headline": "Whisky ya ghali kwenye chumba cha mgeni?"
+  },
+  {
+    "id": "operra-2026-10-24-13-number-that-lands",
+    "eyebrow": "Finance & Reports",
+    "headline": "30 live reports from one unified ledger",
+    "body": "Access 7 categories of property data including RevPAR and ADR. Export branded PDFs instantly to monitor performance from any location.",
+    "cta": "See the reports",
+    "caption": "Managing a Zanzibar resort from a distance requires more than just a summary. You need to see revenue per room type and waiter leaderboards without waiting for manual exports.\n\nOperra generates 30+ live reports across 7 categories from a single ledger. Every report exports as a branded PDF in seconds. Monitor occupancy, ADR, and RevPAR accurately to detect revenue leaks before they impact your month-end. 📈",
+    "hashtags": [
+      "ZanzibarHospitality",
+      "HotelManagement",
+      "RevenueManagement"
+    ],
+    "imagePrompt": "Composition: wide establishing view of a rooftop terrace office in Stone Town, Zanzibar, with weathered coral-stone walls and a carved brass-studded door in the background. The Indian Ocean and the tops of dhow sails are visible in the distance. Moment: the quiet hour of a manager reviewing the day's performance from a high vantage point. Hero detail: a plain, untitled navy-blue leather portfolio lying closed on a dark wood table, right of center. Story props: a small brass compass, a glass of dark spiced tea on a silver coaster, and a single hibiscus flower. People: soft-focus hands of a manager visible at the edge of the frame. Look: 24mm lens, bright, sunlit, airy, saturated but natural sky with crisp midday light and strong shadow shapes, travel-editorial photography. Calm zone: the central horizon line is clear and uncluttered.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "reports",
+    "angle": "the owner abroad waiting for numbers by email",
+    "backgroundPath": "state/bg/operra-2026-10-24-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-24T10:00:00.000Z",
+    "createdAt": "2026-10-23T18:20:28.742Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 395465338
+  },
+  {
+    "id": "operra-2026-10-24-16-client-proof",
+    "eyebrow": "Usimamizi",
+    "headline": "Meneja mmoja, hoteli nyingi",
+    "body": "Hamisha viongozi kati ya matawi bila kuingiliana kwa siri za biashara. Kila tawi lina ripoti zake, mmiliki anaona picha kamili.",
+    "cta": "Onana nasi",
+    "caption": "Biashara inapopanuka Mwanza, kusimamia matawi mengi isiwe kero. Meneja akihama kituo cha kazi, Operra inahakikisha anaona tu data ya tawi jipya. Staff wa tawi moja hawawezi kuona folios za tawi lingine, huku kila hoteli ikihifadhi logo yake kwenye ankara za PDF. Muhimu zaidi, mteja wa kampuni anaweza kutumia credit limit moja kwenye hoteli zako zote. Ni rahisi, salama, na inaweka nidhamu ya fedha. 🏨",
+    "hashtags": [
+      "OperraTanzania",
+      "MwanzaHospitality",
+      "HotelManagement",
+      "TanzaniaHotels"
+    ],
+    "imagePrompt": "A lakeside hotel terrace in Mwanza, with massive granite boulders rising from the blue waters of Lake Victoria in the background. On a polished dark wood table right of centre, a stack of plain, untitled olive-green clothbound folders sits neatly. Next to the folders are a pair of black sunglasses and a small brass key. In the soft-focus background, a staff member in a white uniform is seen from behind, looking out over the water. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The center band of the frame is a quiet expanse of lake water and sky.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "multi-property",
+    "angle": "moving a manager between properties",
+    "backgroundPath": "state/bg/operra-2026-10-24-16-client-proof.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-24T13:00:00.000Z",
+    "createdAt": "2026-10-23T18:20:49.865Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3105577989
+  },
+  {
+    "id": "operra-2026-10-24-20-swahili-tip",
+    "eyebrow": "Usimamizi wa Mgahawa",
+    "headline": "Linda meza zako bora dhidi ya wateja wasiotokea",
+    "body": "Tumia mfumo wa uhifadhi unaohitaji uthibitisho wako. Usiache meza tupu wakati wa msimu wa wageni wengi Moshi.",
+    "cta": "Jaribu Operra sasa",
+    "caption": "Kibao cha 'Reserved' kwenye meza yenye view ya Kilimanjaro ni hasara kama mteja hajatokea. Moshi, msimu ukiwa juu, kila kiti kina thamani. Huwezi kuruhusu nafasi ibaki wazi wakati wageni wa 'walk-in' wanatafuta meza.\n\nBadala ya mfumo wa 'auto-booking', tumia link ya uhifadhi ya Operra. Mgeni anaomba nafasi kupitia WhatsApp au Instagram, na timu yako inathibitisha tu baada ya kuona ramani ya meza. Unabaki na udhibiti kamili wa mapato yako. 🏔️",
+    "hashtags": [
+      "#MoshiHospitality",
+      "#UsimamiziWaHoteli",
+      "#OperraPMS"
+    ],
+    "imagePrompt": "A highland lodge terrace in Moshi, with the massive snow-capped peak of Kilimanjaro dominating the clear blue sky. The building uses local timber and rugged stone architecture. In the foreground, a single dining table is perfectly set with a white cloth, heavy silverware, and a glass of water, but remains unoccupied. A small, plain, untitled dark wood block sits on the table, right of center. To the side, a basket of local fruit and a vintage-style lantern complete the scene. In the soft-focus background, a staff member in a professional uniform is seen from behind, walking away. Composition : wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone : bright, sunlit, airy, saturated but natural sky. Treatment : 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The lower left quadrant is a quiet area of sun-dappled stone floor and soft shadows.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "feature": "table-management",
+    "angle": "a no-show holds the best table all night",
+    "backgroundPath": "state/bg/operra-2026-10-24-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-24T17:00:00.000Z",
+    "createdAt": "2026-10-23T18:26:33.052Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2927075001
   }
 ]
