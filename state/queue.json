@@ -11707,7 +11707,7 @@
     ],
     "scheduledFor": "2026-10-23T05:00:00.000Z",
     "createdAt": "2026-10-22T20:51:24.115Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 1045979069,
     "slideFiles": [
@@ -11715,7 +11715,13 @@
       "operra-2026-10-23-08-client-proof-2.png",
       "operra-2026-10-23-08-client-proof-3.png"
     ],
-    "headline": "Mtandao ukikata, folios za wageni zinasimama?"
+    "headline": "Mtandao ukikata, folios za wageni zinasimama?",
+    "lastAttempt": "2026-10-23T05:40:00.181Z",
+    "postedAt": "2026-10-23T05:40:00.181Z",
+    "postIds": [
+      "facebook:1049514968255534_122175285993351110",
+      "instagram:18082664186383761"
+    ]
   },
   {
     "id": "operra-2026-10-23-13-swahili-tip",
