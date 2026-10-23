@@ -58,7 +58,8 @@ const SCENE = {
     return {
       bg: { lines: city.far.lines, washes: [[pal.sky, -80, 90, 1240, 640, 0.8], ...city.far.washes], actors: cloudActors(S) + birdActors(S) },
       mid: near.mid, fg: near.fg,
-      over: s.tag ? `<div class="place" id="${S}-tag"><i></i>${esc(s.tag)}</div>` : "",
+      // pinned to the frame, not the moving art, so the camera never carries it out of the safe area
+      fixed: s.tag ? `<div class="place" id="${S}-tag" style="top:1112px"><i></i>${esc(s.tag)}</div>` : "",
       js: `draw(S,a+.15,2.3);washes(S,a+.45,.28);words(S,a+.55);${s.tag ? `tl.fromTo("#"+S+"-tag",{opacity:0,x:-30},{opacity:1,x:0,duration:.5,immediateRender:false},cue(a+1.9,"pop",{i:1}));tl.to("#"+S+"-tag",{opacity:0,duration:.3},b-.6);` : ""}`,
       life: skyLife + near.life,
       hide: s.tag ? [`#${S}-tag`] : [],
@@ -170,7 +171,7 @@ const SCENE = {
         bg: { lines: [{ d: "M40 760 L1040 740 M40 800 L1040 780", w: 2.6 }, { d: "M120 740 C120 700 200 700 200 740 M300 736 C300 690 360 690 360 736 M780 726 a40 18 0 1 0 80 0 a40 18 0 1 0 -80 0", w: 1.8 }], washes: [[c.pal.warm, 40, 560, 1000, 300, 0.4]], actors: `<path class="actor" id="${S}-s0" d="" stroke-width="1.6"/><path class="actor" id="${S}-s1" d="" stroke-width="1.6"/>` },
         mid: { lines: [{ d: "M60 200 L1020 200", w: 3.2 }, { d: "M60 200 L60 170 M1020 200 L1020 170", w: 2.4 }], washes: [["wash-teal", 120, 220, 840, 420, 0.3]], actors: "" },
         fg: { lines: [], washes: [], actors: sparks(S, [[150, 640, 12], [960, 600, 14]]) },
-        over: tickets.map((t, i) => `<div class="kt" id="${S}-kt${i}" style="left:${90 + i * 310}px"><b>${esc(t.code)}</b>${t.items.map((x) => `<span>${esc(x)}</span>`).join("")}<i>${esc(t.age)}</i>${i === 2 ? `<em id="${S}-ready">READY</em>` : ""}</div>`).join(""),
+        over: tickets.map((t, i) => `<div class="kt" id="${S}-kt${i}" style="left:${140 + i * 270}px"><b>${esc(t.code)}</b>${t.items.map((x) => `<span>${esc(x)}</span>`).join("")}<i>${esc(t.age)}</i>${i === 2 ? `<em id="${S}-ready">READY</em>` : ""}</div>`).join(""),
         js: `draw(S,a+.15,1.0);washes(S,a+.25,.3);words(S,a+.25);
           ${tickets.map((_, i) => `tl.fromTo("#"+S+"-kt${i}",{opacity:0,y:-60,rotation:${i - 1}*6},{opacity:1,y:0,rotation:${(i - 1) * 2},duration:.55,ease:"back.out(1.5)",immediateRender:false},${i ? "" : "cue("}a+.8+${i}*.3${i ? "" : ',"card")'});`).join("")}
           tl.fromTo("#"+S+"-ready",{opacity:0,scale:2},{opacity:.95,scale:1,duration:.17,ease:"power4.in",immediateRender:false},cue(a+Math.min(Math.max(1.9,(b-a)*.6),b-a-.7),"stamp")-.17);`,
@@ -203,12 +204,12 @@ const SCENE = {
       const base = 100 * (1 + (h % 3)) + 1, states = ["Occupied", "Dirty", "Clean", "Occupied"];
       const doors = [0, 1, 2, 3].map((i) => ({ no: String(base + i), st: states[(i + (h >>> 5)) % 4] }));
       const flip = doors.findIndex((d) => d.st === "Dirty");
-      const xs = [70, 320, 570, 820];
+      const xs = [150, 360, 570, 780];
       return {
         bg: { lines: [{ d: "M0 260 L1080 240 M0 880 L1080 860", w: 2.4 }], washes: [[c.pal.sky, -60, 100, 1200, 400, 0.4]], actors: "" },
-        mid: { lines: [{ d: xs.map((x) => `M${x} 300 h190 v560 h-190 Z M${x + 150} 600 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0`).join(" "), w: 2.8 }], washes: [[c.pal.warm, 40, 280, 1000, 600, 0.35]], actors: `<circle class="ring" id="${S}-r0" cx="${xs[flip] + 95}" cy="420" r="40"/>` },
+        mid: { lines: [{ d: xs.map((x) => `M${x} 300 h160 v560 h-160 Z M${x + 128} 600 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0`).join(" "), w: 2.8 }], washes: [[c.pal.warm, 40, 280, 1000, 600, 0.35]], actors: `<circle class="ring" id="${S}-r0" cx="${xs[flip] + 80}" cy="420" r="40"/>` },
         fg: { lines: [], washes: [], actors: `<g id="${S}-cart"><path d="M0 0 h150 v90 h-150 Z M10 90 a14 14 0 1 0 28 0 M112 90 a14 14 0 1 0 28 0 M20 0 v-40 h110 v40" stroke-width="2.4"/></g>` + sparks(S, [[160, 200, 12], [930, 220, 14]]) },
-        over: doors.map((d, i) => `<div class="door" id="${S}-d${i}" style="left:${xs[i] + 20}px">${esc(d.no)}${i === flip ? `<span class="flip"><span class="fa">Dirty</span><span class="fb">Clean</span></span>` : `<span>${d.st}</span>`}</div>`).join(""),
+        over: doors.map((d, i) => `<div class="door" id="${S}-d${i}" style="left:${xs[i] + 5}px">${esc(d.no)}${i === flip ? `<span class="flip"><span class="fa">Dirty</span><span class="fb">Clean</span></span>` : `<span>${d.st}</span>`}</div>`).join(""),
         js: `draw(S,a+.15,1.0);washes(S,a+.25,.3);words(S,a+.25);
           tl.fromTo("#"+S+" .door",{opacity:0,y:20},{opacity:1,y:0,duration:.4,stagger:.15,ease:"power3.out",immediateRender:false},cue(a+.8,"card"));
           gsap.set("#"+S+"-d${flip} .fb",{yPercent:110});
@@ -328,7 +329,7 @@ const SCENE = {
         washes: dusk ? [["wash-lilac", 120, 730, 140, 150, 0.7], ["wash-lilac", 840, 720, 140, 150, 0.7]] : [],
         actors: dusk ? `<path class="actor flame" id="${S}-f0" d="M180 846 C170 826 176 806 180 792 C184 806 190 826 180 846 Z" stroke-width="1.6"/><path class="actor flame" id="${S}-f1" d="M900 836 C890 816 896 796 900 782 C904 796 910 816 900 836 Z" stroke-width="1.6"/>` +
           Array.from({ length: 8 }, (_, i) => `<circle class="fly" id="${S}-ff${i}" cx="0" cy="0" r="4"/>`).join("") : "" },
-      over: s.chip ? `<div class="chip" id="${S}-chip" style="top:900px">${esc(c.fill(s.chip))}</div>` : "",
+      fixed: s.chip ? `<div class="chip" id="${S}-chip" style="top:1080px">${esc(c.fill(s.chip))}</div>` : "",
       js: `const CLINK=a+Math.min(1.2,(b-a)*.4);
         draw(S,a+.1,1.2);washes(S,a+.2,.2);words(S,a+.25);
         ${v === "toast" ? `cue(CLINK,"clink");` : ""}
@@ -368,7 +369,7 @@ function caption(S, s) {
  * @param urls   { tex, gsap, logo, fonts(weight) } as file:// URLs
  */
 export function composeInk(brief, voice, brand, urls) {
-  const seed = brief.id ?? "reel";
+  const seed = brief.seed ?? brief.id ?? "reel";
   const ledger = makeLedger(brief.ledger ?? {}, seed, brief.language);
   const T = tokens(ledger);
   const fill = (s) => String(s).replace(/\{[a-zA-Z]+\}/g, (k) => { if (!(k in T)) throw new Error(`unknown number token ${k}`); return T[k]; });
@@ -390,10 +391,10 @@ export function composeInk(brief, voice, brand, urls) {
   // a camera move per scene: direction and strength vary with the post
   const pans = ids.map((S, i) => {
     const h = hash(seed + S + "pan");
-    return { x: ((h % 2) ? 1 : -1) * (54 + (h >>> 3) % 50), y: -(18 + (h >>> 9) % 26), s: 0.07 + ((h >>> 13) % 4) / 100 };
+    return { x: ((h % 2) ? 1 : -1) * (44 + (h >>> 3) % 36), y: -(18 + (h >>> 9) % 26), s: 0.07 + ((h >>> 13) % 4) / 100 };
   });
 
-  const scenesHtml = built.map((b, i) => `<div class="scene" id="${ids[i]}"${i ? "" : ' style="opacity:1"'}><div class="art" id="${ids[i]}-art">${layerHtml(ids[i], "bg", b.bg)}${layerHtml(ids[i], "mid", b.mid, b.over)}${layerHtml(ids[i], "fg", b.fg)}</div>${caption(ids[i], brief.scenes[i])}</div>`).join("\n");
+  const scenesHtml = built.map((b, i) => `<div class="scene" id="${ids[i]}"${i ? "" : ' style="opacity:1"'}><div class="art" id="${ids[i]}-art">${layerHtml(ids[i], "bg", b.bg)}${layerHtml(ids[i], "mid", b.mid, b.over)}${layerHtml(ids[i], "fg", b.fg)}</div>${b.fixed ?? ""}${caption(ids[i], brief.scenes[i])}</div>`).join("\n");
   const hide = built.flatMap((b) => b.hide ?? []);
   const allowed = [...Object.values(T), ...built.flatMap((b) => b.shows ?? [])];
   const windows = brief.scenes.map((s, i) => ({ id: ids[i], type: s.type, t0: starts[i], t1: ends[i] }));
@@ -488,7 +489,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .grow{display:flex;justify-content:space-between;font-size:22px;padding:13px 14px;border-bottom:1.5px solid rgba(30,35,80,.2);border-radius:8px}
 .note{position:absolute;left:350px;top:310px;width:480px}
 .nitem{font-size:32px;font-weight:600;height:130px;display:flex;align-items:center;border-bottom:1.5px dashed rgba(30,35,80,.25)}
-.kt{position:absolute;top:210px;width:280px;padding:22px 22px 18px;background:rgba(255,253,248,.92);border:2.4px solid ${INK};border-radius:4px;transform-origin:50% 0;font-size:21px;display:flex;flex-direction:column;gap:8px}
+.kt{position:absolute;top:210px;width:250px;padding:22px 22px 18px;background:rgba(255,253,248,.92);border:2.4px solid ${INK};border-radius:4px;transform-origin:50% 0;font-size:21px;display:flex;flex-direction:column;gap:8px}
 .kt b{font-size:28px}
 .kt i{font-style:normal;color:${INK_SOFT};font-size:19px;margin-top:6px}
 .kt em{position:absolute;right:14px;bottom:12px;font-style:normal;font-weight:700;font-size:26px;letter-spacing:.08em;color:${TEAL_INK};border:4px double ${TEAL_INK};border-radius:8px;padding:2px 10px;transform:rotate(-10deg);mix-blend-mode:multiply}
@@ -573,7 +574,7 @@ function life(t){
     const cx=p.x*u+Math.sin(t*.5+a)*12,cy=p.y*u+Math.sin(t*.37+a)*8;
     css(S+"-art","scale("+(1+p.s*u).toFixed(4)+")");
     css(S+"-bg","translate("+(cx*.35).toFixed(1)+"px,"+(cy*.35).toFixed(1)+"px)");
-    css(S+"-mid","translate("+(cx*.8).toFixed(1)+"px,"+(cy*.8).toFixed(1)+"px)");
+    css(S+"-mid","translate("+(cx*.6).toFixed(1)+"px,"+(cy*.6).toFixed(1)+"px)");
     css(S+"-fg","translate("+(cx*1.35).toFixed(1)+"px,"+(cy*1.35).toFixed(1)+"px)");
     css(S+"-cap","translateY("+(-16*u).toFixed(1)+"px)");});
   g("turb").setAttribute("seed",String(1+Math.floor(t*8)%7));

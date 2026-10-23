@@ -1,0 +1,46 @@
+{
+  "id": "ink-screens-sw",
+  "style": "ink",
+  "city": "Zanzibar",
+  "language": "sw",
+  "cta": "Ona inavyofanya kazi",
+  "eyebrow": "Jikoni",
+  "narration": "x",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Oda zinapotea kati ya baa na jiko?",
+      "bad": [
+        "zinapotea"
+      ],
+      "tag": "ZANZIBAR · MGAHAWA"
+    },
+    {
+      "type": "ui-screen",
+      "screen": "kitchen",
+      "line": "Jiko linaona kila oda papo hapo."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "menu",
+      "line": "Mgeni anaagiza kwa QR chumbani."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "housekeeping",
+      "line": "Chumba kikiwa safi, mapokezi wanajua."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "events",
+      "line": "Kila tukio, kila malipo, sehemu moja."
+    },
+    {
+      "type": "payoff",
+      "line": "Kila oda inafika mezani na kwenye bili.",
+      "good": [
+        "bili"
+      ]
+    }
+  ]
+}

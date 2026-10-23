@@ -144,10 +144,20 @@ export async function produceReel(brief, opts = {}) {
   let reseed = {};
   let last;
   for (let attempt = 0; attempt <= 2; attempt++) {
+    // Ink has no images to redraw, but its camera moves, scene variants and
+    // palette all follow the seed: a second draw is a genuinely different reel.
+    if (brief.style === "ink" && attempt > 0) {
+      console.log(`  check: redrawing the ink reel with a new seed (attempt ${attempt + 1})`);
+      brief = { ...brief, seed: `${brief.id}#${attempt + 1}` };
+    }
     const meta = await makeReel(brief, { ...opts, reuse: opts.reuse || attempt > 0, reseed });
     last = await checkReel(meta.dir, meta.out);
     last.attempt = attempt;
     if (last.ok) return { ok: true, meta, report: last };
+    if (brief.style === "ink") {
+      if (attempt === 0) continue;
+      return { ok: false, meta, report: last };
+    }
     // Only a MOSS prompt can be redrawn; a supplied file with a fault is final.
     const canRedraw = (p) => p.fix === "reimage" && p.scene && meta.images[Number(p.scene.slice(1))]?.prompt;
     const hard = last.problems.filter((p) => !p.warn && !canRedraw(p));
