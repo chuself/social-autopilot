@@ -32,6 +32,7 @@ export const VOCABULARY = {
   tap:    "the call-to-action button arriving",
   sketch: "ink lines drawing themselves on paper (the ink & wash style)",
   bloom:  "a watercolour veil spreading across a cut (the ink & wash style)",
+  clink:  "two glasses visibly touching in a toast",
 };
 
 // ── primitives ────────────────────────────────────────────────────────────
@@ -121,6 +122,11 @@ const SOUNDS = {
       n[i] *= pressure * Math.sin((Math.PI * i) / n.length) ** 0.6;
     }
     return { buf: n, lead: 0, gain: 0.09, pan: [-0.25, 0.25] };
+  },
+  // Two glasses touching: bright, inharmonic partials that ring briefly.
+  clink: () => {
+    const ring = (f, d) => env(tone(0.9, f, f * 0.998, [1, 0, 0.3]), 0.001, d);
+    return { buf: sum([ring(2637, 0.22), 0, 0.7], [ring(3951, 0.15), 0.004, 0.5], [ring(5274, 0.09), 0.008, 0.25]), lead: 0, gain: 0.16, pan: [0.1] };
   },
   // Pigment blooming into wet paper: a soft low swell that peaks on the cut.
   bloom: (seed) => {
