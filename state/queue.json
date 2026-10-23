@@ -11754,7 +11754,29 @@
     "createdAt": "2026-10-22T20:51:43.657Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2966089724
+    "bgSeed": 2966089724,
+    "reel": {
+      "file": "operra-2026-10-23-13-swahili-tip.mp4",
+      "beats": [
+        "Wajumbe wa mkutano wamethibitishwa asubuhi hii?",
+        "Ratibu idadi ya wageni mapema bila mivutano",
+        "Mfumo rahisi wa kuunganisha mapokezi na jikoni",
+        "Okoa chakula na uimarishe uhusiano na wateja"
+      ],
+      "narration": "Mikutano ya Mwanza hubadilika idadi ya wajumbe kila siku. Ukipika buffet bila kuthibitisha mapema, unahatarisha chakula na kupoteza fedha. Operra inasaidia mapokezi kusawazisha idadi ya wageni na jikoni asubuhi, kuzuia mivutano ya ankara na kulinda faida yako.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-23T07:05:54.449Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-23-16-industry-note",
