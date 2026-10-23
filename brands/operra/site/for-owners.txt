@@ -1,0 +1,217 @@
+https://operra.tech/for-owners
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+For hotel & restaurant owners
+Every quiet pain bleeding your property — and exactly how we fix it.
+
+Twelve recurring leaks every Tanzanian hotel owner knows by heart. For each one, the Operra module that closes it — built right here, for here.
+
+Schedule free demo
+Talk on WhatsApp
+45-min walkthrough on your property
+No credit card
+Swahili & English
+REVENUE LEAKAGE · THE PAIN
+You can't see where the money is leaking — voids, deletes, cash gaps, ghost rooms.
+
+Front desk voids a bill at 2am. POS deletes a tab. A maid 'forgets' to flag a checkout. By morning the cash drawer matches paper — but the books don't.
+
+Average TZ property loses 3–8% of monthly revenue here.
+
+THE OPERRA FIX
+Revenue Leakage Dashboard
+
+Every void, every deleted bill, every cash gap surfaced in one place — filterable by user, outlet and shift.
+
+See how it works
+Demo this on my property
+TAX COMPLIANCE · THE PAIN
+TRA wants 18% VAT calculated post-discount, with QR receipts. Your POS doesn't do that.
+
+Discounts applied pre-VAT inflate net sales. Foreign POS systems apply VAT pre-discount. Auditors notice.
+
+Spot audits, fines, or worse — back-VAT assessments on years of revenue.
+
+THE OPERRA FIX
+TRA-style VAT receipts
+
+18% VAT applied post-discount, sequential invoice numbers, QR receipts on every transaction, audit-ready exports.
+
+See how it works
+Demo this on my property
+OPERATIONS · THE PAIN
+Internet drops and the entire hotel grinds to a halt. Check-ins on paper, charges on memory.
+
+Most cloud-only PMSs need a stable connection. Tanzania's fibre and 4G are not stable.
+
+Lost charges. Angry guests. Manual reconciliation the next day.
+
+THE OPERRA FIX
+30-day offline operation
+
+Front desk, POS, kitchen and folios keep running for up to 30 continuous days without internet. Syncs back automatically.
+
+See how it works
+Demo this on my property
+BOOKINGS · THE PAIN
+Same room booked twice. Walk-in given an occupied room. Receptionist apologises and you absorb the cost.
+
+Spreadsheets and standalone calendars don't lock inventory. Receptionists working on different shifts double-book.
+
+One overbooking can cost a free upgrade, a guest's trust, and a Google review.
+
+THE OPERRA FIX
+Reservations with integrity alerts
+
+Hard inventory locks, conflict detection on every booking attempt, channel sync that respects holds.
+
+See how it works
+Demo this on my property
+FINANCE · THE PAIN
+Restaurant charges don't make it to the room folio. Guest checks out before settling the bar tab.
+
+Standalone POS systems don't talk to the PMS. Waiters write 'charge to room' on paper that gets lost.
+
+Lost F&B revenue every single night.
+
+THE OPERRA FIX
+Restaurant POS posting to folio
+
+Every outlet posts directly to the guest folio with waiter attribution, dispute resolution and pre-checkout review.
+
+See how it works
+Demo this on my property
+GUEST EXPERIENCE · THE PAIN
+Returning guests treated as strangers. No notes, no preferences, no VIP flag.
+
+Profile data lives in receptionists' heads. When they leave, the relationships leave with them.
+
+Loyal guests feel anonymous. They don't return a third time.
+
+THE OPERRA FIX
+Guest CRM
+
+Stay history, preferences, allergies, VIP flags, lifetime value and repeat detection — visible to every receptionist.
+
+See how it works
+Demo this on my property
+HOUSEKEEPING · THE PAIN
+Maids miss rooms. Inspections don't happen. Amenities walk out the door.
+
+Paper assignment sheets get lost. WhatsApp groups are chaos. No audit trail when something goes wrong.
+
+Bad reviews about cleanliness. Missing towels and toiletries every week.
+
+THE OPERRA FIX
+Housekeeping workflows
+
+Auto-assigned rooms by maid productivity, inspection checklists, anti-theft amenity audits, per-maid reports.
+
+See how it works
+Demo this on my property
+EVENTS & SALES · THE PAIN
+Wedding bookings on WhatsApp. Corporate AR in a notebook. Deposits forgotten until they bounce.
+
+Event sales is the highest-margin revenue you have, and it's run on the most casual tools.
+
+Lost deposits. Forgotten BEOs. Companies who owe you for 90+ days.
+
+THE OPERRA FIX
+Events & Credit Accounts
+
+Quote → BEO → deposit → invoice → settle, with aging reports on every corporate account.
+
+See how it works
+Demo this on my property
+MOBILE MONEY · THE PAIN
+M-Pesa and Airtel Money payments don't reconcile cleanly to folios.
+
+Tanzanian guests pay by mobile money. Foreign PMSs don't natively support it.
+
+Receptionists key in wrong amounts. Refunds get tangled. Reconciliation takes hours.
+
+THE OPERRA FIX
+M-Pesa & Airtel Money settlement
+
+Native mobile money payment posting with transaction-ID matching and same-day reconciliation.
+
+See how it works
+Demo this on my property
+TRUST & AUDIT · THE PAIN
+You can't prove who did what. When something goes missing, everybody blames everybody.
+
+Without tamper-evident logs, the receptionist can delete the void after the fact. You'll never know.
+
+Theft. Fraud. Disputes that can't be settled. Insurance claims that fail.
+
+THE OPERRA FIX
+Audit Center
+
+Tamper-evident logs of every action, every actor, every time. Branded PDF exports for auditors and insurance.
+
+See how it works
+Demo this on my property
+NIGHT AUDIT · THE PAIN
+The night auditor calls in sick and the day's books don't close. Charges roll into tomorrow.
+
+Night audit is a 90-minute manual process most properties dread.
+
+Reports are wrong. Day-over-day comparisons are meaningless. Closing the month is painful.
+
+THE OPERRA FIX
+Automated Night Audit
+
+Transaction-safe, idempotent nightly automation. Runs without staff intervention. Reversible if needed.
+
+See how it works
+Demo this on my property
+MULTI-PROPERTY · THE PAIN
+You own three properties and can't see consolidated revenue, occupancy or staff cost.
+
+Most PMSs are single-property. You get three logins and three different spreadsheets.
+
+Each property runs its own way. You can't compare, can't benchmark, can't hold managers accountable.
+
+THE OPERRA FIX
+Multi-Property hierarchy
+
+Owner → Business Unit → Employee structure with consolidated reports across every property you own.
+
+See how it works
+Demo this on my property
+Add up your leaks. Then let us close them.
+
+We'll come to your property, walk through your operation, and show you exactly where Operra plugs the holes.
+
+Schedule a free walkthrough
+Talk to sales
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

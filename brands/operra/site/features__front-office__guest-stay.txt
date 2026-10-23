@@ -1,0 +1,506 @@
+https://operra.tech/features/front-office/guest-stay
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Front Office
+Guest Stay
+Front Office · Operra HMS
+Guest Stay 
+
+Every in-house guest in one place.
+
+Charge a minibar, post a spa fee, transfer a room, extend a night, settle the folio and check out — all on the same page. The folio stays sequential. The night audit stays clean.
+
+Book a tailored demo
+Chat on WhatsApp
+Live · 11 in-house · 2 departing today
+managix.operra.tech/guest-stay
+CAESAR'S
+Front Desk
+Reservations
+Guest Stay
+Finance & Folios
+
+Caesar's Palace Hotel
+
+New Reservation
+Check In
+Guest Stay
+Manage Folios
+Guest Stay Management
+
+Manage all in-house guests and their stay operations
+
+IN-HOUSE
+
+0
+
+DEPARTING TODAY
+
+0
+
+OVERDUE
+
+0
+
+OUTSTANDING
+
+0 TSh
+
+Search by guest, room, or booking…
+BOOKING
+GUEST
+ROOM
+DATES
+CHECKOUT
+PIN
+BALANCE
+B2609
+First Last
+101 · Standard
+Apr 14 → Apr 15
+Overdue
+6390
+TSh 200,000
+B2608
+Elvis Presley
+408 · Nobu Boutique
+Apr 14 → Apr 16
+Overdue
+2556
+TSh 560,000
+B2621
+Aogo Tz
+123 · Premium
+Apr 26 → Apr 27
+Departing
+8021
+TSh 383,000
+
+LIVE KPI STRIP
+
+IN-HOUSE
+
+11
+
+DEPARTING
+
+2
+
+OVERDUE
+
+11
+
+OUTSTANDING
+
+4.6M
+
+OUTSTANDING AT A GLANCE
+
+The four KPIs you actually run a shift on — in-house, departing, overdue and outstanding TZS — counted live as money moves through the property. 
+
+TRY
+Outstanding at a glance
+Manage Folios drawer
+Overdue check-out
+Menu PIN & QR receipt
+
+LIVE BOARD
+
+The whole house, on one screen.
+
+Hover a row to drop the folio summary into the side panel. Switch the filter to re-flow only the rows you care about — the KPI strip recounts in place.
+
+IN-HOUSE
+
+0
+
+DEPARTING TODAY
+
+0
+
+OVERDUE
+
+0
+
+OUTSTANDING TZS
+
+0
+
+All
+In-House
+Departing
+Overdue
+BOOKING
+GUEST
+ROOM
+DATES
+STATUS
+BALANCE
+B2609
+First Last—
+101
+Standard
+Apr 14 → Apr 15
+overdue
+TZS 200,000
+B2608
+Elvis Presley+255 782 284 345
+408
+Nobu Boutique
+Apr 14 → Apr 16
+overdue
+TZS 560,000
+B2612
+Keith Flannigan+255 782 284 345
+301
+Luxury Suites
+Apr 18 → Apr 19
+overdue
+TZS 351,000
+B2621
+Aogo Tz—
+123
+Premium
+Apr 26 → Apr 27
+departing
+TZS 383,000
+B2620
+Hans Kreager+123456789123
+103
+Standard
+Apr 26 → Apr 27
+departing
+TZS 200,000
+B2619
+Hussein Hassan+123456789123
+124
+Premium
+Apr 25 → Apr 27
+in
+TZS 450,000
+B2628
+Keith Flannigan+255 782 284 345
+122
+Premium
+Apr 27 → Apr 28
+in
+TZS 67,000
+B2626
+Kasim Kasim+255785123456
+106
+Standard
+Apr 27 → Apr 29
+in
+TZS 429,000
+
+FOLIO SUMMARY
+
+First Last
+
+Room 101 · Standard · B2609
+
+DATES
+
+Apr 14 → Apr 15
+
+MENU PIN
+
+6390
+
+BALANCE
+
+TZS 200,000
+
+Folio
+Charge
+Move
+QR
+
+POST A CHARGE
+
+From minibar to folio in three taps.
+
+Anything chargeable — room service, spa, laundry, late check-out — posts to the right folio, with VAT applied post-discount and an audit stamp on every line.
+
+STEP 1
+
+Pick the guest
+
+Search by name, room or booking. The folio panel opens with the live balance and the last three charges already visible.
+
+STEP 2
+
+Add the charge
+
+Choose a category, type the amount. Tanzania VAT applied post-discount, currency conversion previewed in TZS and USD.
+
+STEP 3
+
+Posted to folio
+
+The line lands on the folio, the KPI strip recounts, and the audit log stamps it with your initials and the time.
+
+Hans Kreager
+Hans Kreager
+Room 103
+Hans Kreager
+Room 117
+
+MANAGE FOLIOS
+
+One drawer. Every in-house folio.
+
+Open the drawer, scroll the in-house list, hit Folio for the line items or Charge to post — without leaving the table you came from.
+
+Manage Folios — In-House Guests
+
+First Last
+
+Room 101 · B2609
+
+Balance: TZS 200,000
+
+Folio
+Charge
+
+Elvis Presley
+
+Room 408 · B2608
+
+Balance: TZS 560,000
+
+Folio
+Charge
+
+Keith Flannigan
+
+Room 301 · B2612
+
+Balance: TZS 351,000
+
+Folio
+Charge
+
+Aogo Tz
+
+Room 123 · B2621
+
+Balance: TZS 383,000
+
+Folio
+Charge
+
+Hans Kreager
+
+Room 103 · B2620
+
+Balance: TZS 200,000
+
+Folio
+Charge
+
+Hussein Hassan
+
+Room 124 · B2619
+
+Balance: TZS 450,000
+
+Folio
+Charge
+
+FOLIO · B2609
+
+First Last
+
+Room 101
+
+Room 101 · 1 Night
+TZS 200,000
+Restaurant · Dinner
+TZS 45,000
+Spa · Massage
+TZS 80,000
+Balance due
+TZS 200,000
+
+SETTLE & CHECK OUT
+
+Overdue, settled, gone — in one lane.
+
+When a guest passes their planned departure, the system picks it up, the front desk settles, the room flips to dirty, housekeeping is notified — every step audit-stamped.
+
+Overdue detected
+T+0
+
+Past the planned departure with a non-zero balance. The row turns red on every workstation in the property.
+
+Settle balance
+T+30S
+
+Cash, card, mobile money or AR. Multiple tenders allowed. Receipt rendered with the property's branding.
+
+Issue QR receipt
+T+45S
+
+Tanzania-style QR receipt generated and emailed. The folio is closed and sequenced — no skipped numbers, ever.
+
+Room flipped to dirty
+T+60S
+
+Housekeeping board updates instantly with the next-arrival ETA so the room is prioritised correctly.
+
+Audit stamped
+T+1M
+
+Every action — settle, receipt, status change — recorded with the actor and time. Night audit closes without manual reconciliation.
+
+COMPLIANCE BUILT-IN
+
+Folios, taxes and access — handled the Tanzanian way.
+
+Sequential folios. VAT applied post-discount. Per-property RLS on every guest record. The audit trail your accountant asks for, generated by default.
+
+Sequential folios
+RLS by property
+VAT post-discount
+Tamper-evident audit
+0%
+
+FASTER CHECKOUT
+
+0
+
+IN-HOUSE AT A GLANCE
+
+0s
+
+SECONDS TO SETTLE
+
+0
+
+MISSED CHARGES
+
+“If your front desk has to leave the guest list to post a minibar charge, you don't have a stay system — you have three windows and a spreadsheet.”
+TZS 4.6M outstanding tracked live
+
+Every in-house balance rolls up to a single number on the KPI strip — no spreadsheet rebuild at end-of-shift.
+
+M-Pesa & Tigo Pesa settle inline
+
+Mobile-money payments post directly to the folio with the transaction reference attached for reconciliation.
+
+TRA-style QR receipts
+
+Receipts carry the QR code your guests and your auditor expect — verifiable on-paper or in-app.
+
+Offline-safe check-out
+
+If the internet drops mid-shift, check-outs queue locally and sync with conflict-safe sequencing the moment connection returns.
+
+COMPARED TO LEDGER + POS
+
+One folio vs. five reconciliations.
+CAPABILITY
+SPREADSHEET + SEPARATE POS
+OPERRA GUEST STAY
+See in-house guests
+Print the rooming list
+Live KPI + filter chips
+Post a minibar charge
+Note paper, retype at midnight
+Three taps, audit-stamped
+Transfer between rooms
+Re-create folio, lose history
+One click, history preserved
+Catch overdue
+Whoever notices first
+Auto-flagged on every screen
+Settle in mobile money
+Reference scribbled on receipt
+Reference on the folio line
+Issue receipt
+Email PDF, hope it arrives
+TRA-style QR + email + audit
+Night audit
+Two hours of reconciling
+Closes itself · transaction-safe
+
+QUESTIONS, ANSWERED
+
+What every front-desk lead asks first.
+Can two staff edit the same folio at once?
+What happens if the internet drops mid check-out?
+Does the KPI strip include departed guests for the day?
+Can I split a folio between guest and corporate?
+Is there a mobile version?
+
+BUILT FOR
+
+Owner
+
+Outstanding balance is a number you trust at 9pm — not one you rebuild at midnight.
+
+Front-desk lead
+
+Charge, transfer, settle and check out from one screen — no app-switching during a queue.
+
+Night auditor
+
+Every line is sequenced and audit-stamped. The shift closes itself while you make tea.
+
+RELATED
+
+All
+
+Front Desk
+
+Live KPIs and the next action, on one screen.
+
+Reservations
+
+Every booking captured, attributed, conflict-checked.
+
+Guest CRM
+
+Every guest, remembered.
+
+See Guest Stay on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

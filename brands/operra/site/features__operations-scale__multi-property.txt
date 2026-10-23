@@ -1,0 +1,157 @@
+https://operra.tech/features/operations-scale/multi-property
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Operations & Scale
+One owner. Many properties. One source of truth.
+Operations & Scale
+One owner. Many properties. One source of truth.
+
+Run a group like a group — not like five disconnected hotels.
+
+Operra's hierarchy goes Owner → Business Unit → Property → Outlet → Employee. Each layer has the right view, the right permissions and the right audit trail. The owner sees consolidated revenue across the group; the front-desk agent only sees their own property.
+
+Built for the hotel groups that outgrew their spreadsheets — and the single hotels that plan to.
+
+See it in your property
+Chat on WhatsApp
+
+THE STORY
+
+From three Excel files to one dashboard.
+
+A family group runs three lodges in northern Tanzania. Each one had its own PMS, its own accountant, its own reporting cycle. The owner waited until the 10th of the month to get a picture of how the group had performed.
+
+Operra was rolled out across all three. Same role definitions. Same audit standards. Same PDF branding. Each property continues to operate independently — including offline — but the owner now opens one dashboard and sees occupancy, ADR, RevPAR and AR for the group, by property, by segment.
+
+The accountant closes the month in 2 days instead of 9.
+
+WHAT IT GIVES YOU
+
+Built for how operators actually work.
+True hierarchy
+
+Owner, Business Unit, Property, Outlet, Employee — each with their own dashboard, permissions and reports.
+
+Consolidated reporting
+
+Group-level KPIs that roll up from real transactions — not exported spreadsheets stitched together at month-end.
+
+Per-property isolation
+
+Each property has its own folios, stock, staff and offline state. One property's outage doesn't touch any other.
+
+Cross-property staff
+
+Move a manager between properties without recreating their user. Roles travel; access is scoped per assignment.
+
+Shared corporate AR
+
+A corporate client can book across multiple properties. One credit limit, one statement, properly attributed per stay.
+
+Per-property branding
+
+Each property keeps its own logo, colours and PDF templates while the back office reports as one group.
+
+BY THE NUMBERS
+
+Built to scale with you.
+0+
+
+PROPERTIES SUPPORTED
+
+0 days
+
+MONTH-END CLOSE TIME
+
+0.0%
+
+PER-PROPERTY UPTIME
+
+0 days
+
+ONBOARDING PER PROPERTY
+
+SECURITY ACROSS THE GROUP
+
+Row-level isolation, not policy theatre.
+
+Property data is isolated at the database layer via row-level security policies tied to a separate user_roles table. A staff member at Property A literally cannot read Property B's folios — even through the API. Audit logs span the group, scoped to the owner.
+
+COMPARED TO THE ALTERNATIVE
+
+What changes when you switch.
+CAPABILITY
+ONE PMS PER PROPERTY
+OPERRA
+Single sign-on across properties
+Not supported
+Built-in
+Consolidated group dashboard
+Excel rollups
+Live, drillable
+Per-property data isolation
+Risky shared DB
+RLS-enforced
+Role definitions reused across properties
+Not supported
+Built-in
+Per-property branding on PDFs
+Manual edits
+Built-in
+Cross-property corporate AR
+Not supported
+Built-in
+Independent offline operation
+Not supported
+Per property
+Auditor view across the group
+Site-by-site
+One screen
+
+THE HARD QUESTIONS
+
+What operators ask before they switch.
+Can each property keep its own pricing, currency and tax rules?
+What if I add a fourth property next year?
+Can a manager see two properties but not the third?
+Does consolidated reporting wait for nightly sync?
+What happens if one property loses connectivity?
+
+“Each property stays its own hotel. The group finally feels like one company.”
+
+Ready to run your group like a group?
+
+Book a walkthrough — we'll model your hierarchy live and show you what the owner dashboard looks like.
+
+Get Started
+See Inventory & Procurement
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

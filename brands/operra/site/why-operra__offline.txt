@@ -1,0 +1,191 @@
+https://operra.tech/why-operra/offline
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Why Operra
+Offline-First
+Cross-cutting pillar
+The internet is optional. The front desk is not.
+
+Operra is engineered to keep working when the connection doesn't. Every check-in, charge, transfer and folio operation continues — for up to 30 continuous days — and quietly reconciles the moment connectivity returns.
+
+No competitor in this market can claim this.
+
+See it in your property
+Chat on WhatsApp
+
+THE STORY
+
+When the power dropped at 11:42 PM, check-in didn't.
+
+A 22-room boutique on the coast loses fibre for the third time this week. The generator hums, the lights stay on, but the international PMS the previous owner installed shows a single spinning circle. Guests are queuing. The receptionist starts writing on a paper folio.
+
+On the other side of town, a 60-room property running Operra is having the same outage. The reception screen shows a calm
+Offlinepill. The receptionist checks in three guests, charges a room-service order, swaps a room, and moves on. Nothing about the workflow has changed.
+
+When the fibre comes back at 03:17 AM, every action quietly reconciles. The night audit closes the books on time. Nobody writes on paper. Nobody loses revenue. Nobody calls IT.
+
+WHAT IT GIVES YOU
+
+Continuity, not heroics.
+Zero check-in delays
+
+The front desk never blocks on a network call. Every action runs against a local truth.
+
+Reconciles on its own
+
+When the connection returns, every queued action syncs in the right order — no staff intervention.
+
+Tamper-resistant by design
+
+Hardware-clock verification stops anyone from gaming the system while disconnected.
+
+30-day standalone window
+
+Operate continuously through extended outages — and still close your books at month-end.
+
+Per-property resilience
+
+Each property's offline state is independent. One outage at one site doesn't affect any other.
+
+Honest status, always
+
+Staff always know whether they're online. The pill in the corner doesn't lie. No silent failures.
+
+BY THE NUMBERS
+
+Built for the network you actually have.
+0 days
+
+STANDALONE WINDOW
+
+0%
+
+CHECK-IN AVAILABILITY
+
+0
+
+LOST TRANSACTIONS
+
+0.0s
+
+SYNC ON RECONNECT
+
+TRY THE OUTAGE
+
+A live demo of resilience.
+
+This is the actual reception screen logic — try it. Cut the connection and watch new actions queue. Reconnect and watch them reconcile.
+
+TRY IT
+
+Pull the plug. Watch the desk keep working.
+
+Toggle the connection below. Every action staff take continues — and silently reconciles the moment you reconnect.
+
+Cut the connection
+Reconnect
+
+STATUS
+
+Online
+
+QUEUED
+
+0
+
+LOST
+
+0
+
+Reception · Operra HMS
+
+Online · synced
+
+Check-in · Room 304 · A. Mwakitwange
+
+Synced to cloud
+
+Charge · Room 211 · Spa
+
+Synced to cloud
+
+TSh 45,000
+
+COMPARED TO CLOUD-ONLY PMS
+
+What happens when the fibre goes down?
+CAPABILITY
+CLOUD-ONLY PMS
+OPERRA
+Check-in continues
+Not supported
+Built-in
+Charges & folio updates
+Not supported
+Built-in
+Standalone duration
+Minutes (cache only)
+Up to 30 days
+Reconciles on reconnect
+Manual re-entry
+Automatic, in order
+Tamper protection while offline
+Not supported
+Hardware-clock checks
+Per-property isolation
+Not supported
+Built-in
+Honest connection status
+Silent failures
+Online / offline pill
+Night audit during outage
+Not supported
+Runs locally
+
+THE HARD QUESTIONS
+
+What owners ask before they trust offline.
+Where is my data while we're offline?
+What if two staff members edit the same folio offline?
+Can someone tamper with the clock while offline to backdate transactions?
+What about payments — can mobile money work offline?
+How do you prove the 30-day window in practice?
+
+“Power outage. Fibre cut. Mobile-data congestion. Operra doesn't care. Your guests still check in.”
+
+Stop letting the network run your hotel.
+
+Book a demo and we'll show you a real outage scenario, end to end.
+
+Get Started
+See more pillars
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

@@ -1,0 +1,514 @@
+https://operra.tech/features/front-office/front-desk
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Front Office
+Front Desk
+Front Office · Operra HMS
+Front Desk
+
+The heartbeat of your hotel.
+
+From a single screen your reception team sees today's arrivals, departures, in-house guests, room status, outstanding balances and revenue collected — updated live as money moves and rooms turn over. No more switching tabs. No more 'let me check the book.'
+
+Book a tailored demo
+Chat on WhatsApp
+Live preview of the Operra Front Desk dashboard on desktop and mobile.
+managix.operra.tech/front-desk
+Online · Synced 2s ago
+New Reservation
+Check In
+Guest Stay
+J
+Caesar's Palace Hotel Front Desk
+
+Good morning, Julius — Sunday, May 3, 2026
+
+OCCUPANCY RATE
+
+0%
+
+Hourly recalc
+
+AVAILABLE ROOMS
+
+0
+
+Ready to book
+
+CHECK-INS TODAY
+
+0
+
+guests arriving
+
+📋 Today's Operations
+9 departing
+Check-Ins Today
+Check-Outs Today
+
+Showing check-outs today
+
+FL
+First Last
+OVERDUE
+Room 101 · Standard
+B2601
+KP
+Khoi Pin Ang
+Room 207 · Luxury Suite
+B2604
+KF
+Keith Flannigan
+Room 301 · Luxury Suite
+B2612
+HH
+Hussein Hassan
+Room 124 · Premium
+B2619
+HK
+Hans Kreager
+VIP
+Room 103 · Standard
+B2620
+AT
+Aogo Tz
+Room 123 · Premium
+B2621
+KK
+Karim Karim
+Room 142 · Standard
+B2622
+9:41
+100%
+CAESAR'S
+J
+
+Good morning · May 3, 2026
+
+Online
+
+🏠 Occupancy
+
+14%
+
+🛏 Available
+
+53
+
+→ In
+
+0
+
+← Out
+
+11
+
+📈 Today's Revenue
+
+TSh 0
+
+Urgent
+
+18
+
+⚠ UP NEXT · OVERDUE
+
+First Last
+
+Room 101 · should have checked out
+
+Check-Out →
+Check-ins Today
+0
+Departures Today
+11
+👤 Walk-In
+← Check-Out
+Front Desk
+Bookings
+Rooms
+Finance
+Audit
+Live · 1.4s avg response
+
+ANATOMY
+
+Every tile is a one-tap drill-down.
+
+Hover any KPI on the dashboard and it expands into the underlying list — folios, arrivals, departures, ready rooms. No menu diving, no second tabs.
+
+managix.operra.tech/front-desk
+Caesar's Palace · Front Desk
+New Reservation
+Check In
+Guest Stay
+
+OCCUPANCY RATE
+
+14%
+
+Recently calculated
+
+AVAILABLE ROOMS
+
+53
+
+Recently calculated
+
+CHECK-INS TODAY
+
+0
+
+Recently calculated
+
+Today's Operations
+9 departing
+F
+First Last · 101
+K
+Khoi Pin Ang · 204
+H
+Hussein Hassan · 309
+H
+Hans Kreager · 412
+
+Click or hover any region — every part of the real dashboard is interactive.
+
+Occupancy Rate
+
+14%
+
++5% vs last week
+
+Live ratio of occupied to sellable rooms — recalculates the moment a check-in is confirmed or a room is blocked.
+
+Occupancy Rate
+Available Rooms
+Check-ins Today
+Live KPIs at a glance
+Connection-status pill
+Run a shift from a tablet
+
+A DAY AT THE DESK
+
+Built around the receptionist's actual hour.
+
+From the morning hand-over to the night audit, every routine is a single, calm click.
+
+managix.operra.tech/front-desk · 07:00
+Step 1 of 6 · 07:00
+Shift hand-over
+
+Shift hand-over
+
+Outgoing manager hands a ready dashboard: revenue, balances, arrivals — no spreadsheet, no WhatsApp recap.
+
+Live action
+07:00
+
+FOLIO
+
+#A1029
+
+ROOM
+
+211
+
+GUEST
+
+K. Flannigan
+
+TRY A QUICK ACTION
+
+Walk-In
+Reservations
+Guest Stay
+Checkout
+
+TIMELINE
+
+07:00
+Shift hand-over
+11:30
+Walk-in check-in
+14:15
+Mid-stay charge
+18:40
+Settle & check out
+22:00
+Housekeeping reset
+03:00
+Night audit
+07:00
+11:30
+14:15
+18:40
+22:00
+03:00
+
+ON EVERY DEVICE
+
+A real shift fits in your hand.
+
+The same dashboard, redrawn for tablet and phone — sticky footers, safe-area padding and one-thumb workflows. Light or dark, your team's choice.
+
+9:41
+100%
+CAESAR'S
+J
+
+Good morning · May 3, 2026
+
+Online
+
+🏠 Occupancy
+
+14%
+
+🛏 Available
+
+53
+
+→ In
+
+0
+
+← Out
+
+11
+
+📈 Today's Revenue
+
+TSh 0
+
+Urgent
+
+18
+
+⚠ UP NEXT · OVERDUE
+
+First Last
+
+Room 101 · should have checked out
+
+Check-Out →
+Check-ins Today
+0
+Departures Today
+11
+👤 Walk-In
+← Check-Out
+Front Desk
+Bookings
+Rooms
+Finance
+Audit
+
+Live occupancy — recalculated every minute
+
+DARK MODE
+
+9:41
+100%
+CAESAR'S
+J
+
+Good morning · May 3, 2026
+
+Online
+
+🏠 Occupancy
+
+14%
+
+🛏 Available
+
+53
+
+→ In
+
+0
+
+← Out
+
+11
+
+📈 Today's Revenue
+
+TSh 0
+
+Urgent
+
+18
+
+⚠ UP NEXT · OVERDUE
+
+First Last
+
+Room 101 · should have checked out
+
+Check-Out →
+Check-ins Today
+0
+Departures Today
+11
+👤 Walk-In
+← Check-Out
+Front Desk
+Bookings
+Rooms
+Finance
+Audit
+
+Live occupancy — recalculated every minute
+
+LIGHT MODE
+
+0 min
+
+HAND-OVER TIME
+
+0%
+
+GHOST ROOM RECOVERY
+
+0.0s
+
+AVG. RESPONSE
+
+0
+
+TABS TO CHECK STATUS
+
+“If your reception manager can't tell you the live outstanding balance in 2 seconds, you don't have a PMS — you have a logbook.”
+TSh-native pricing
+
+All folios, reports and receipts in shillings; USD inversion only where the guest needs it.
+
+18% VAT, post-discount
+
+TRA-style receipt format, branded QR, sequential numbering — auditor-ready out of the box.
+
+Mobile-money-aware folios
+
+M-Pesa and Tigo Pesa references attach to the folio line — reconciliation in seconds, not hours.
+
+Offline-first reception
+
+Power cuts and ISP drops never freeze the desk — the shift keeps moving and syncs the moment you're back online.
+
+COMPARED TO THE WAY MOST PROPERTIES RUN TODAY
+
+Logbook vs. live truth.
+CAPABILITY
+LOGBOOK / SPREADSHEET
+OPERRA FRONT DESK
+Live revenue today
+End-of-day spreadsheet
+Built-in
+Outstanding balances
+Manual roll-up
+2-second view
+Arrivals & ETAs
+Printed sheet
+Built-in
+Walk-in check-in
+5–10 minutes
+Under 90 seconds
+Works on tablet
+—
+Built-in
+Mobile-money reconciliation
+Phone screenshots
+Attached to folio line
+Connection-aware
+—
+Online / offline pill
+Audit trail
+—
+Tamper-evident, per actor
+Night audit
+Manual, error-prone
+Automated, transaction-safe
+
+QUESTIONS, ANSWERED
+
+The things every owner asks first.
+Will my reception team need long training?
+Does it work on the tablets we already own?
+What happens if the internet drops mid-check-in?
+Can I see who did what on the dashboard?
+How do mobile-money payments reconcile?
+Can I roll up Front Desk KPIs across multiple properties?
+Can I customise the KPI tiles?
+
+BUILT FOR
+
+Owner
+
+Live revenue and outstanding balances on your phone — without phoning the manager.
+
+Front-desk manager
+
+Hand over a clean shift in two minutes. See exactly which folio, room or alert needs you.
+
+Receptionist
+
+Check guests in, charge, settle and close — in the same screen, with no training day lost.
+
+RELATED
+
+All
+
+Reservations
+
+Every booking captured, attributed, conflict-checked.
+
+Guest Stay
+
+Every in-house guest in one place.
+
+Guest CRM
+
+Every guest, remembered.
+
+See Front Desk on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

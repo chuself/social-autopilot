@@ -93,6 +93,22 @@ it, `cli-metrics.js` scores each pillar by real engagement: a pillar that
 consistently flops **and** was used recently gets skipped once. It is thinned,
 never dropped.
 
+The pillar says *how* to talk. **What about** is chosen in code (`src/topics.js`,
+since 2026-10-23): one **feature** from `brands/operra/features.json` (twenty,
+one per feature page on operra.tech, page text kept in `brands/operra/site/`)
+and one **story angle** inside it. The feature least recently covered wins,
+never one used in the last six posts or from the same module as the last two;
+restaurant, QR ordering, tables, events and reservations are weighted up, and
+offline working down to about one post in forty. The writer gets only that
+feature's site facts, plus a "never claim" list (OTA sync, spa and WhatsApp
+messaging are roadmap). A post that still mentions internet or bandwidth when
+its feature is not offline is rewritten once. Why: when the writer chose its own
+subject from a three-line facts file, 115 of the first 251 posts mentioned the
+network and "6 departments on low bandwidth" became the number post.
+
+Every post records `feature` and `angle`; posts from before carry neither, and
+the picker infers their feature from their words.
+
 ### Which language
 
 Fixed per pillar, so the feed leans Kiswahili 4-in-6 — the audience is Tanzanian
@@ -131,7 +147,16 @@ numbers. The ten approved reels are the golden set (`studio/briefs/golden/`).
 - **Scenes:** `place` (the hook), `problem-doc` (a paper bill with the wrong room
   rate struck through and a stamp), `folio-fix` (the Operra folio corrects it),
   `pos-charge` (a bar or restaurant order posts to the room), `ui-screen` (front
-  desk or reports), `checklist` (facts ticking in), `payoff`, then the end card.
+  desk, reports, kitchen display, in-room QR menu, housekeeping board or events
+  day), `checklist` (facts ticking in), `payoff`, then the end card. The brief
+  writer is told which scenes show the post's feature best and which shapes the
+  last four reels used.
+- **Two styles:** photo (MOSS pictures under product screens) and **ink & wash**
+  (`studio/ink/`: hand-drawn line art and watercolour, drawn in code, no MOSS;
+  five cities, varied people, three variants per scene, time-of-day palettes,
+  a moving camera, nothing still). `config.inkShare` (0 to 1, default 0) sets the
+  share of reels in ink; the choice is fixed per post id. Try it on the golden
+  set: `node studio/ink/try.mjs 03 06 --stills`.
   The logo is only ever `brands/operra/assets/logo-dark.png`; it is never redrawn.
 - **Numbers:** Alice may not type a digit. Every figure on screen comes from one
   ledger per reel (`nights × rate = total`, order lines `qty × price`), shown

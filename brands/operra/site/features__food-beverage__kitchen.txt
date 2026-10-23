@@ -1,0 +1,153 @@
+https://operra.tech/features/food-beverage/kitchen
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Food & Beverage
+Kitchen Display
+Food & Beverage · Operra HMS
+Kitchen Display
+
+Every ticket, in front of the chef.
+
+The kitchen sees what the POS sent — no chits, no shouting, no walking. Tickets age, urgency grows, plates leave on time. Stations get only what they need, and the chef sees the whole pass.
+
+Book a tailored demo
+Chat on WhatsApp
+KITCHEN DISPLAY
+Main Restaurant · Hot Station
+Live
+T-12
+Fired
+Tilapia ×1
+Chips ×1
+02:14
+Ready
+Room 412
+Plating
+Club Sandwich
+Latte
+04:48
+Ready
+Bar 03
+Delay
+Tusker ×2
+Gin & Tonic
+06:21
+Ready
+T-04
+New
+Beef Skewers ×3
+01:02
+Ready
+
+OUTCOMES
+
+Numbers your owner will notice.
+−0%%
+
+TICKET-TO-PASS
+
+0
+
+MIS-ROUTED ITEMS
+
+0
+
+STATIONS ONLINE
+
+0.0 min
+
+AVG. AGE IN QUEUE
+
+TICKET LIFECYCLE
+
+From fired to served — without a runner shouting.
+Fired from POS
+00:00
+
+Order lands on the right station with modifiers, allergens and course pacing.
+
+In progress
+01:30
+
+Chef taps in-progress; ticket turns amber as it ages past target.
+
+Plating
+04:10
+
+Marked ready; the pass and the runner see it; bar items can sync to mains.
+
+Bumped to service
+04:40
+
+Cleared from the board; POS updates the table state automatically.
+
+Stock reconciled
+END OF DAY
+
+Recipe deduction trims inventory; low-stock items surface for the next purchase order.
+
+FAQ
+
+What chefs ask first.
+Can different stations show different tickets?
+What happens if the screen disconnects?
+Does it deduct from stock automatically?
+
+“Kitchens that switched to Operra report calmer service and fewer re-fires — because the chef sees the right ticket, at the right time, on the right screen.”
+
+RELATED
+
+More of Food & Beverage.
+View category
+Restaurant & Bar POS
+
+Settle to cash, card, mobile money, or the room.
+
+Learn more
+Digital Guest Menu
+
+A QR menu in every room.
+
+Learn more
+Table Management
+
+Sit, open tabs, split, turn.
+
+Learn more
+See Kitchen Display on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

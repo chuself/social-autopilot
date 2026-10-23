@@ -1,0 +1,627 @@
+https://operra.tech/features/food-beverage/restaurant-pos
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Food & Beverage
+Restaurant & Bar POS
+Food & Beverage · Operra HMS
+Restaurant & Bar POS
+
+Settle to cash, card, mobile money, or the room.
+
+One POS for every outlet — restaurant, bar, in-room dining, takeaway, delivery and events. Rush Mode collapses the floor to two taps. Waiter attribution, split bills, course pacing and post-discount 18% VAT are built in. Every charge knows exactly which folio to land on.
+
+Book a tailored demo
+Chat on WhatsApp
+managix.operra.tech/restaurant
+
+MODE
+
+Waiter
+Kitchen
+Bar
+Manager
+Dashboard
+POS
+Tables
+Reservations
+Active Orders
+Kitchen Queue
+Bar Queue
+Menu
+Inventory
+Reports
+Settings
+MANAGER MODE
+Shift · Open · 23h 47m
+Cash · TSh 85,000
+Orders · 2
+Open Tables · 7
+Kitchen Delays · 3
+Online
+15:31
+Restaurant
+
+Hotel-integrated outlet
+
+REVENUE
+
+TSh 149,000
+
++18% vs avg
+
+ROOM-SERVICE
+
+100%
+
+1 order
+
+WALK-IN
+
+1
+
+dine-in / takeaway
+
+AVG TICKET
+
+TSh 47,000
+
+5 covers
+
+TIPS
+
+TSh 30,000
+
+shared 4 waiters
+
+Unpaid Bills
+TSh 3,612,000 · 10
+026050027
+Dine In
+Tb9ac
+⏱ 59m
+TSh 13,000
+Settle
+026050030
+Dine In
+Event: AOGO Wedding
+⏱ 30m
+TSh 1,680,000
+Settle
+026050032
+Dine In
+Event: sam test event
+⏱ 29m
+TSh 100,000
+Settle
+026050035
+Dine In
+Event: SOMALI
+⏱ 29m
+TSh 750,000
+Settle
+In-House Guests
+1
+RM 218
+E.P.
+Post →
+
+🔒 Privacy mode — names hidden; only room + initials shown.
+
+Live — cycles through dashboard, POS, menu, orders
+
+OUTCOMES
+
+Numbers your owner will notice.
+0
+
+TAPS TO SEATED
+
+−0%%
+
+AVG TICKET TIME
+
+0%
+
+POST-TO-ROOM ACCURACY
+
+0s
+
+SETTLE IN
+
+ANATOMY OF A SHIFT
+
+Five tiles. The whole outlet.
+
+Hover any tile to learn the rule behind the number. Tap on touch.
+
+REVENUE TODAY
+TSh 0k
+
+Hover for the rule
+
+Live revenue, not yesterday's PDF
+
+Every settled order, room post, and event folio drops into the same ledger the second it closes.
+
+ROOM-SERVICE
+0%
+
+Hover for the rule
+
+Charge straight to the room
+
+In-house guests are picked from the live folio. No paper chits, no double-entry, no mis-posted suites.
+
+WALK-IN
+0
+
+Hover for the rule
+
+Cash, card, mobile money
+
+Walk-ins settle in one tap with sequential receipts and 18% VAT applied post-discount.
+
+AVG TICKET
+TSh 0k
+
+Hover for the rule
+
+Course pacing & smart cart
+
+Add modifiers, send by course, split by item or share, transfer between tables — without losing the waiter.
+
+TIPS POOL
+TSh 0k
+
+Hover for the rule
+
+Waiter attribution, every shift
+
+Tips, covers and revenue tracked per waiter. Leaderboard at shift close, reconciled in night audit.
+
+RUSH MODE
+
+Two taps to seated. Three to settled.
+
+When the dining room fills up, every extra tap costs you covers. Rush Mode collapses the workflow to its smallest possible shape.
+
+00:00
+
+Pick the order type
+
+00:04
+
+Pick the outlet
+
+00:08
+
+Pick the table
+
+00:22
+
+Build the cart, send to kitchen
+
+ON CLOSE
+
+Settle — or post to the room
+
+00:00
+
+Pick the order type
+
+One screen, six paths. Dine-in opens a tab, room service routes to a folio, takeaway settles fast — the workflow follows.
+
+Dine-In
+
+Room Service
+
+Takeaway
+
+Bar Tab
+
+00:04
+
+Pick the outlet
+
+Main Bar, Main Restaurant, Wet Bar — Rush Mode keeps it to three tap-targets. No menu trees, no dropdowns.
+
+Main Bar
+
+Bar
+
+Main Restaurant
+
+Restaurant
+
+Wet Bar
+
+Takeaway
+
+00:08
+
+Pick the table
+
+Free tables surface first. Occupied tables show open total + age so the host stand can settle or add in one tap.
+
+B2
+Free
+
+👥 4
+
+F2T1
+Free
+
+👥 4
+
+T2
+Free
+
+👥 4
+
+TV3
+Free
+
+👥 8
+
+T1
+Open
+
+👥 4 · 99h
+
+TSh 18,000
+
+TTz78
+Open
+
+👥 12 · —
+
+V1
+Open
+
+👥 6 · 50h
+
+TSh 14,000
+
+00:22
+
+Build the cart, send to kitchen
+
+Categories, dish tiles, smart cart. Hold, modify, split or merge. Course pacing means starters don't fire with mains.
+
+Cart · TV2
+TSh 108,000
+Beef Steak · Herb Butter
+18,000
+Fried Chicken ×2
+50,000
+Rice Beans Meat
+10,000
+Send to Kitchen
+
+ON CLOSE
+
+Settle — or post to the room
+
+Cash, card, mobile money, room folio, event ledger. 18% VAT applied post-discount. Branded VAT receipt, every time.
+
+Cash
+Card
+Mobile money
+Room folio
+Event ledger
++ 18% VAT post-discount
+
+DARK OR DAY — YOUR TEAM'S CHOICE
+
+The same POS, two skins.
+
+Manager mode in the back office, waiter mode at the host stand — both themed by the operator, both built on the same semantic tokens.
+
+managix.operra.tech/restaurant
+
+MODE
+
+Waiter
+Kitchen
+Bar
+Manager
+Dashboard
+POS
+Tables
+Reservations
+Active Orders
+Kitchen Queue
+Bar Queue
+Menu
+Inventory
+Reports
+Settings
+MANAGER MODE
+Shift · Open · 23h 47m
+Cash · TSh 85,000
+Orders · 2
+Open Tables · 7
+Kitchen Delays · 3
+Online
+15:31
+What kind of order?
+✦
+
+Dine-In
+
+Seat in-house guest · charge to folio
+
+Room Service
+
+Charge to a guest folio
+
+Takeaway
+
+In-house guest · post to folio
+
+Reserve Table
+
+Book a table for an in-house guest
+
+Event
+
+Events module disabled
+
+Bar Tab
+
+Open guest tab · settle at checkout
+
+✨ Choose first — workflow adapts
+
+DARK MODE · POS ORDER PICKER
+
+managix.operra.tech/restaurant
+
+MODE
+
+Waiter
+Kitchen
+Bar
+Manager
+Dashboard
+POS
+Tables
+Reservations
+Active Orders
+Kitchen Queue
+Bar Queue
+Menu
+Inventory
+Reports
+Settings
+MANAGER MODE
+Shift · Open · 23h 47m
+Cash · TSh 85,000
+Orders · 2
+Open Tables · 7
+Kitchen Delays · 3
+Online
+15:31
+Restaurant
+
+Hotel-integrated outlet
+
+REVENUE
+
+TSh 149,000
+
++18% vs avg
+
+ROOM-SERVICE
+
+100%
+
+1 order
+
+WALK-IN
+
+1
+
+dine-in / takeaway
+
+AVG TICKET
+
+TSh 47,000
+
+5 covers
+
+TIPS
+
+TSh 30,000
+
+shared 4 waiters
+
+Unpaid Bills
+TSh 3,612,000 · 10
+026050027
+Dine In
+Tb9ac
+⏱ 59m
+TSh 13,000
+Settle
+026050030
+Dine In
+Event: AOGO Wedding
+⏱ 30m
+TSh 1,680,000
+Settle
+026050032
+Dine In
+Event: sam test event
+⏱ 29m
+TSh 100,000
+Settle
+026050035
+Dine In
+Event: SOMALI
+⏱ 29m
+TSh 750,000
+Settle
+In-House Guests
+1
+RM 218
+E.P.
+Post →
+
+🔒 Privacy mode — names hidden; only room + initials shown.
+
+DAY MODE · MANAGER DASHBOARD
+
+RESERVATIONS
+
+Book the table, suggest the right one.
+
+A reservation flow that knows your party size, your duration and your floor — and proposes the table that fits.
+
+Pick a saved customer or create a new one in the same dialog.
+Outlet + party size + duration drive a live "suggested tables" strip.
+Special requests sit next to the booking — never lost in a separate note.
+Public reservation link shares your live availability without exposing the floor.
+New Reservation
+
+EXISTING CUSTOMER (OPTIONAL)
+
+Pick from saved customers…
+
+GUEST NAME *
+
+Alphonce
+
+PHONE
+
++255 712 345 678
+
+EMAIL
+
+alphonce@gmail.com
+
+PARTY SIZE
+
+5
+
+DURATION (MIN)
+
+90
+
+START TIME
+
+05/24/2026 04:38 PM
+
+OUTLET
+
+Main Restaurant
+
+TABLE (OPTIONAL)
+
+TV2 · 6 seats
+
+Suggested for 5 guests
+
+TTV3 · 8
+TV2 · 6
+Cancel
+Book reservation
+
+COMPARE
+
+Why operators move off generic restaurant POS.
+CAPABILITY
+STANDALONE POS
+OPERRA RESTAURANT POS
+Posts directly to the guest folio
+Not supported
+Built-in
+Knows the active stay & rate plan
+Treated as walk-in
+Built-in
+Events have their own ledger
+Billed as cash sales
+Built-in
+Rush Mode — two taps to seated
+Not supported
+Built-in
+Multi-outlet active-orders view
+One terminal per outlet
+Built-in
+VAT applied post-discount, TRA-ready
+Spreadsheet at month-end
+Built-in
+Waiter attribution on every line
+Per-terminal only
+Built-in
+
+FAQ
+
+What operators ask first.
+How fast can a host actually seat a guest in Rush Mode?
+Can a waiter split a single check across cash and a room?
+Does it work without internet?
+Can outlets run on different terminals at the same time?
+What happens if a kitchen ticket is overdue?
+
+“Operators see 20–30% less ticket-to-table time and zero mis-posted folios — because the POS always knows which folio it's writing to.”
+
+RELATED
+
+More of Food & Beverage.
+View category
+Kitchen Display
+
+Every ticket, in front of the chef.
+
+Learn more
+Digital Guest Menu
+
+A QR menu in every room.
+
+Learn more
+Table Management
+
+Sit, open tabs, split, turn.
+
+Learn more
+See Restaurant & Bar POS on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

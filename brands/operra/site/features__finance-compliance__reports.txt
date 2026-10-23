@@ -1,0 +1,295 @@
+https://operra.tech/features/finance-compliance/reports
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Finance & Compliance
+Every report your auditor will ever ask for.
+Reports Hub
+Every report your auditor will ever ask for.
+
+One place. 30+ reports. PDF or on-screen, branded as yours.
+
+Reports Hub is the answer to every owner question that used to start with “can someone pull me a report?”. Occupancy, revenue, ghost rooms, waiter leaderboards, voids, drift, ADR, RevPAR, expenditure, staff payments — all live, all branded with your logo, all exportable in one tap.
+
+If a TRA officer, an owner or a bank ever asks for it — it’s already in here.
+
+See it in your property
+Chat on WhatsApp
+
+THE STORY
+
+Built for the moments owners actually care about.
+
+End-of-day, end-of-month, end-of-quarter, surprise audit, board meeting, refinancing — the same four questions get asked every time: how much did we earn, how much did we collect, where is the gap, and who did what. Reports Hub answers all four in under 30 seconds.
+
+Every number is computed live from the same ledger the front desk, restaurant and events team are posting into right now — no nightly batch, no “as of yesterday”, no exports stitched together in Excel.
+
+And because Intelligence Hub sits on top, you also get cross-module revenue mix, peak-day spikes, revenue reconciliation drift and leakage signals — the things spreadsheets can never show you in time to act.
+
+WHAT IT GIVES YOU
+
+Built for how operators actually work.
+Intelligence Hub (live)
+
+Cross-module revenue mix, peak-day spikes, drift % and leakage signals — refreshed every 60 seconds.
+
+Occupancy & Forecast
+
+Daily occupancy, ADR, RevPAR, 30-day forecast and revenue per room type.
+
+Revenue & ADR
+
+Revenue & expenses, revenue by source (direct vs credit) and payment method breakdown.
+
+Front Office
+
+Arrivals, departures, in-house guest list, no-shows and cancellations — print-ready every morning.
+
+Finance
+
+Expenditures by category, staff payment reconciliation and ghost-room revenue leak detection.
+
+Guest Insights
+
+Nationality mix, top-spending guests and repeat-guest loyalty list — straight from the CRM.
+
+HR & Staff
+
+Roster, shift log, productivity per staff, housekeeper inspections and waiter leaderboard.
+
+Audit & Compliance
+
+Operations activity log, financial events and deleted-record trail — tamper-evident, TRA-ready.
+
+PDF or on-screen
+
+Every report exports as a branded PDF in under 5 seconds — your logo, your colours, your TRA details.
+
+BY THE NUMBERS
+
+What you stop paying for.
+0+
+
+REPORTS OUT OF THE BOX
+
+0s
+
+PDF EXPORT TIME
+
+0s
+
+REFRESH INTERVAL
+
+0
+
+SPREADSHEETS TO RECONCILE
+
+BUILT FOR EVERY SCREEN
+
+The same Reports Hub — on the laptop, the tablet at the front desk, the phone in your pocket.
+operra.tech/reports
+Caesar's Palace
+Front Desk
+Reservations
+Guest Stay
+Room Ops
+Housekeeping
+Restaurant
+Events
+Credit Accounts
+Finance
+Reports
+Audit Center
+REPORTS
+Reports Hub
+Browse, search and open every report for your property.
+30 of 30 available
+Custom Report Builder
+Pick any dataset, date range and filters — branded PDF or CSV in seconds.
+Build Report
+Intelligence — this unit
+Live
+Today
+Week
+Month
+3M
+Range
+TOTAL GROSS
+TSh 63,895,500
+Lodging
+89%
+TSh 56.85M
+Restaurant
+0%
+TSh 0
+Events
+11%
+TSh 7.04M
+OWNER VIEW
+All units · Live
+Cross-module revenue
+Total gross · last 22 days
+TSh 70,284,000
+Lodging
+81%
+TSh 56.85M
+Restaurant
+8%
+TSh 5.42M
+Events
+11%
+TSh 8.00M
+Revenue reconciliation
+Drift · 58.6%
+Bucket	Earned	Collected	Drift
+Hotel	TSh 871k	TSh 400k	+466k
+Restaurant	TSh 53.5k	TSh 53.5k	-5k
+Events	TSh 1.4M	TSh 500k	+900k
+Total	TSh 2.32M	TSh 953k	+1.36M
+REPORTS
+Reports Hub
+Search reports…
+All
+Finance
+Front Office
+HR
+Daily Occupancy
+Per-day ADR, RevPAR
+Revenue & Expenses
+Net for selected period
+In-House Guest List
+Live · 24 guests
+Staff Payment
+Reconciled, per cashier
+Ghost Room Report
+0 leaks today
+Export PDF
+< 5s
+
+WHAT SHIPS IN THE BOX
+
+30+ reports across 7 categories.
+Intelligence Hub
+3
+Cross-module revenue mix
+Revenue trend & peak day
+Drift & leakage signals
+Occupancy & Forecast
+3
+Daily Occupancy
+Occupancy Forecast (30 days)
+Occupancy by Room Type
+Revenue & ADR
+3
+Revenue & Expenses
+Revenue by Source
+Payment Method Breakdown
+Front Office
+4
+Arrivals
+Departures
+In-House Guest List
+No-Shows & Cancellations
+Finance
+3
+Expenditures by Category
+Staff Payment Report
+Ghost Room Report
+Guest Insights
+3
+Guest Nationality Mix
+Top Spending Guests
+Repeat Guest List
+HR & Staff
+6
+Staff Roster
+Shift Log
+Staff Productivity
+Housekeeping Productivity
+Waiter Leaderboard
+Restaurant Waiters
+Audit & Compliance
+3
+Operations Activity Log
+Financial Events
+Deleted Records
+Custom Builder
+3
+Pick any dataset & range
+Filter by unit, staff, source
+Branded PDF or CSV in seconds
+
+Need something custom? The Custom Report Builder handles the rest.
+
+COMPARED TO THE ALTERNATIVE
+
+What changes when you switch.
+CAPABILITY
+LEGACY PMS / EXCEL
+OPERRA
+Ready-made reports
+5–8, mostly occupancy
+30+ across 7 categories
+Revenue across F&B + rooms + events
+Manual VLOOKUPs
+One cross-module view, live
+Ghost-room / revenue leakage
+Not supported
+Detected and flagged automatically
+Custom report builder
+Developer ticket
+Pick dataset + range, get PDF
+Branded PDF export
+Screenshot into Word
+One tap, your logo, < 5s
+Refresh
+Overnight batch
+Every 60 seconds
+
+THE HARD QUESTIONS
+
+What operators ask before they switch.
+Can I add my own report?
+Are the numbers really live?
+Do the PDFs carry our branding?
+Can owners see this from outside the property?
+Is the Audit & Compliance trail TRA-friendly?
+What about multi-property owners?
+
+“Before Operra, our monthly report took 3 days and 2 arguments. Now it takes 30 seconds and one PDF.”
+
+See Reports Hub on your property.
+
+We’ll load your last 30 days into a demo and walk every report with you, live.
+
+Get Started
+Back to Finance & Compliance
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

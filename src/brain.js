@@ -3,6 +3,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { completeJson } from "./llm.js";
 import { setUsageContext } from "./usage.js";
+import { factsFor, topicBlock, topicOf } from "./topics.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -106,7 +107,8 @@ export function ctaLink(brand, postId) {
 export async function writeReelScript(post, brandId = "operra") {
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
-  const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
+  const topic = topicOf(post, brandId);
+  const facts = factsFor(await readFile(path.join(brandDir, "facts.md"), "utf8"), topic) + topicBlock(topic, brandId);
   const sw = post.language === "sw";
 
   setUsageContext({ feature: "reel-script", post: post.id });
@@ -148,13 +150,13 @@ Rules:
  * worse than a tight three. The first slide has to earn the swipe, the middle
  * ones carry one idea each, and the last asks for something.
  */
-export async function writeCarousel({ brandId = "operra", pillar, recent = [], language, note, city = null }) {
+export async function writeCarousel({ brandId = "operra", pillar, recent = [], language, note, city = null, topic = null }) {
   language ??= PILLAR_LANGUAGE[pillar] ?? "en";
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
   const look = lookForDate(brand);
   const pillars = await readFile(path.join(brandDir, "pillars.md"), "utf8");
-  const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
+  const facts = factsFor(await readFile(path.join(brandDir, "facts.md"), "utf8"), topic);
 
   const recentLines =
     recent.slice(0, 40).map((r) => `- ${r.headline}`).join("\n") || "- (nothing yet)";
@@ -175,7 +177,7 @@ ${pillars}
 ## Approved facts
 You may ONLY state figures or claims that appear here verbatim.
 ${facts}
-
+${topicBlock(topic, brandId)}
 ## Already posted — do not repeat these angles
 ${recentLines}
 
@@ -185,14 +187,14 @@ ${subjectLines}
 Do not reuse any subject above. Do NOT default to keys, keycards, a reception
 desk or a front counter unless this post is specifically about checking in —
 that is the rut this account falls into. The subject must come from what THIS
-post is actually about: weak wifi shows a router or cabling; a billing mix-up
+post is actually about: a restaurant order shows a plated dish or a set table; a billing mix-up
 shows a printed folio or a calculator; group arrivals show luggage tags or a
 coach; long stays show laundry or a kettle; corporate guests show a lanyard or
 a meeting room; seasons show a wall calendar or weather.
 
 ## Your task
 Write ONE carousel for the pillar: **${pillar}**.
-${city ? `Speak to hoteliers in ${city.name} — ${city.note}.` : ""}
+${city ? (topic ? `Set it in ${city.name}; the city is only the setting, the subject above decides the story.` : `Speak to hoteliers in ${city.name} — ${city.note}.`) : ""}
 ${note ? `Direction for this run: ${note}` : ""}
 
 Decide how many slides it needs: **3, 4 or 5**. Choose the smallest number that
@@ -220,7 +222,7 @@ ${sceneBrief(look, city, "carousel")}
   );
 
   const slides = (post.slides ?? []).slice(0, 5);
-  return { ...post, slides, pillar, language, brand: brandId, look: look?.name ?? null, city: city?.name ?? null };
+  return { ...post, slides, pillar, language, brand: brandId, look: look?.name ?? null, city: city?.name ?? null, feature: topic?.feature.id ?? null, angle: topic?.angle ?? null };
 }
 
 /**
@@ -305,13 +307,13 @@ export function cityForIndex(brand, i) {
   return cities[Math.abs(i) % cities.length];
 }
 
-export async function writePost({ brandId = "operra", pillar, recent = [], language, note, city = null, series = null, format = "poster" }) {
+export async function writePost({ brandId = "operra", pillar, recent = [], language, note, city = null, series = null, format = "poster", topic = null }) {
   language ??= PILLAR_LANGUAGE[pillar] ?? "en";
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8"));
   const look = lookForDate(brand);
   const pillars = await readFile(path.join(brandDir, "pillars.md"), "utf8");
-  const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
+  const facts = factsFor(await readFile(path.join(brandDir, "facts.md"), "utf8"), topic);
 
   // What has actually worked here beats any style rule we could write.
   const topPath = path.join(ROOT, "state", "top-performers.json");
@@ -366,7 +368,7 @@ You may ONLY state figures, statistics or client claims that appear here verbati
 If you want a number that is not listed, write the post with no number at all.
 
 ${facts}
-
+${topicBlock(topic, brandId)}
 ## Already posted — do not repeat these angles
 ${recentLines}
 
@@ -376,7 +378,7 @@ ${subjectLines}
 Do not reuse any subject above. Do NOT default to keys, keycards, a reception
 desk or a front counter unless this post is specifically about checking in —
 that is the rut this account falls into. The subject must come from what THIS
-post is actually about: weak wifi shows a router or cabling; a billing mix-up
+post is actually about: a restaurant order shows a plated dish or a set table; a billing mix-up
 shows a printed folio or a calculator; group arrivals show luggage tags or a
 coach; long stays show laundry or a kettle; corporate guests show a lanyard or
 a meeting room; seasons show a wall calendar or weather.
@@ -384,8 +386,8 @@ a meeting room; seasons show a wall calendar or weather.
 ## Your task
 Write ONE post for the pillar: **${pillar}**.
 ${city ? `
-Speak to hoteliers in **${city.name}** specifically — ${city.note}. Name the place
-naturally once; do not force it into every line.
+Speak to hoteliers in **${city.name}**${topic ? "" : ` specifically — ${city.note}`}. Name the place
+naturally once; do not force it into every line.${topic ? " The city is only the setting: the subject above decides the story, not the city." : ""}
 ` : ""}${series ? `
 This is part ${series.part} of ${series.total} in a series called "${series.title}".
 Open by signalling which part it is, and end by pointing at the next one.
@@ -424,6 +426,8 @@ Hashtags may stay in English where that is what people actually search.`
     look: look?.name ?? null,
     city: city?.name ?? null,
     series: series ?? null,
+    feature: topic?.feature.id ?? null,
+    angle: topic?.angle ?? null,
   };
 }
 
@@ -470,7 +474,9 @@ export function subjectOf(imagePrompt) {
 export async function findUnapprovedFigures(post, brandId = "operra") {
   const factsPath = path.join(ROOT, "brands", brandId, "facts.md");
   const facts = existsSync(factsPath) ? await readFile(factsPath, "utf8") : "";
-  const approved = new Set(facts.match(/\d[\d.,]*/g) ?? []);
+  // A post written about a feature may also use that feature's site figures.
+  const claims = (topicOf(post, brandId)?.feature.claims ?? []).join(" ");
+  const approved = new Set(`${facts} ${claims}`.match(/\d[\d.,]*/g) ?? []);
 
   const text = [post.headline, post.body, post.caption].filter(Boolean).join(" ");
   const found = text.match(/\d[\d.,]*\s*%?/g) ?? [];
@@ -481,7 +487,9 @@ export async function findUnapprovedFigures(post, brandId = "operra") {
     // These are the reasons the guard exists — an invented price, percentage or
     // statistic. Never exempt them, whatever surrounds them: in "20% off for 3
     // days" the 20% is still a claim and the 3 is not.
-    const isPercent = f.includes("%");
+    // The one exception: a percentage written as such in the approved facts
+    // (Tanzania's 18% VAT), which is the law, not a claim.
+    const isPercent = f.includes("%") && !`${facts} ${claims}`.includes(`${bare}%`);
     const money = new RegExp(`(TZS|TSH|KSH|USD|\\$|shilingi|elfu|milioni)\\s*${escapeRe(bare)}|${escapeRe(bare)}\\s*(TZS|TSH|KSH|USD|/=|shilingi|elfu|milioni)`, "i");
     if (isPercent || money.test(text)) return true;
 

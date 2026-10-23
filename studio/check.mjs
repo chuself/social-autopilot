@@ -198,10 +198,15 @@ async function checkSound(videoFile, meta, problems) {
     if (!VOCABULARY[c.type]) problems.push({ check: "sound", fix: "none", msg: `cue "${c.type}" has no meaning` });
     if (c.t < 0 || c.t > meta.duration) problems.push({ check: "sound", fix: "none", msg: `cue ${c.type} at ${c.t}s is outside the reel` });
   }
-  const whooshes = meta.cues.filter((c) => c.type === "whoosh").map((c) => c.t);
-  for (const cut of meta.cuts) if (!whooshes.some((t) => Math.abs(t - cut) < 0.06)) problems.push({ check: "sound", fix: "none", msg: `the cut at ${cut}s has no whoosh` });
-  for (const t of whooshes) if (!meta.cuts.some((cut) => Math.abs(t - cut) < 0.06)) problems.push({ check: "sound", fix: "none", msg: `a whoosh at ${t}s with no cut` });
-  const loud = meta.cues.filter((c) => ["stamp", "whoosh", "logo"].includes(c.type));
+  // A transition sounds as a whoosh (photo style) or a watercolour bloom (ink
+  // style), and only where a scene actually changes: the cuts, plus the ink
+  // style's last veil into the end card.
+  const TRANSITION = ["whoosh", "bloom"];
+  const changes = [...meta.cuts, ...(meta.endVeil ? [meta.endAt] : [])];
+  const whooshes = meta.cues.filter((c) => TRANSITION.includes(c.type)).map((c) => c.t);
+  for (const cut of meta.cuts) if (!whooshes.some((t) => Math.abs(t - cut) < 0.06)) problems.push({ check: "sound", fix: "none", msg: `the cut at ${cut}s has no transition sound` });
+  for (const t of whooshes) if (!changes.some((cut) => Math.abs(t - cut) < 0.06)) problems.push({ check: "sound", fix: "none", msg: `a transition sound at ${t}s with no cut` });
+  const loud = meta.cues.filter((c) => ["stamp", "whoosh", "bloom", "logo"].includes(c.type));
   for (let i = 1; i < loud.length; i++) if (loud[i].t - loud[i - 1].t < 0.3) problems.push({ check: "sound", fix: "none", msg: `${loud[i - 1].type} and ${loud[i].type} pile up at ${loud[i].t}s` });
 }
 

@@ -1,0 +1,566 @@
+https://operra.tech/features/rooms-housekeeping/housekeeping
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Rooms & Housekeeping
+Housekeeping
+Rooms & Housekeeping · Operra HMS
+Housekeeping
+
+The shift that runs itself.
+
+Status, freshen-up, maids and inspections — one board, audit-stamped, anti-theft from day one. The internet is optional. The shift is not.
+
+Book a tailored demo
+Chat on WhatsApp
+Live · 64 rooms · 0 missed inspections
+managix.operra.tech/housekeeping
+CAESAR'S
+Front Desk
+Reservations
+Guest Stay
+Room Operations
+Housekeeping
+Finance & Folios
+
+Caesar's Palace Hotel
+
+New Reservation
+Check In
+Guest Stay
+Manage Folios
+Housekeeping
+
+Room status and cleaning management
+
+Status
+Routine
+Maids
+History
+
+0
+
+Dirty
+
+0
+
+Occ
+
+0
+
+Clean
+
+0
+
+Maint
+
+101
+F1
+102
+F1
+103
+F1
+104
+F1
+105
+F1
+106
+F1
+107
+F1
+108
+F1
+109
+F1
+110
+F1
+111
+F1
+112
+F1
+113
+F1
+114
+F1
+115
+F1
+116
+F1
+
+BY-ROOM STATUS, AUDIT-STAMPED
+
+Each tile is the truth — clean, dirty, occupied, maintenance, out — every flip is logged with the actor and the time.
+
+AT A GLANCE
+
+Five colours. The whole housekeeping floor.
+
+Dirty, occupied, clean, maintenance and out of service — counted live across every floor and reflected in the maid board and inspection ledger.
+
+0
+
+DIRTY
+
+0
+
+OCCUPIED
+
+0
+
+CLEAN
+
+0
+
+MAINTENANCE
+
+0
+
+OUT OF SERVICE
+
+ROOM STATUS
+
+The whole property, by colour, by room.
+
+Hover any tile to drop the room into the side panel — last cleaned, current guest, next arrival and one-tap actions to mark clean or send to maintenance.
+
+0
+
+DIRTY
+
+0
+
+OCC
+
+0
+
+CLEAN
+
+0
+
+MAINT
+
+All
+Dirty
+Occupied
+Clean
+Maintenance
+Out
+101
+F1
+102
+F1
+103
+F1
+104
+F1
+105
+F1
+106
+F1
+107
+F1
+108
+F1
+109
+F1
+110
+F1
+111
+F1
+112
+F1
+113
+F1
+114
+F1
+115
+F1
+116
+F1
+117
+F1
+118
+F1
+119
+F1
+120
+F1
+121
+F1
+122
+F1
+123
+F1
+124
+F1
+201
+F2
+202
+F2
+203
+F2
+204
+F2
+205
+F2
+206
+F2
+207
+F2
+208
+F2
+ROOM
+Occupied
+
+101
+
+Floor F1
+
+LAST CLEANED
+
+Today 09:42
+
+MAID
+
+Aisha M.
+
+NEXT ARRIVAL
+
+Tomorrow · 14:00
+
+Mark Clean
+Maintenance
+
+ROUTINE FRESHEN-UP
+
+The mid-stay refresh, never missed.
+
+Every occupied room gets a daily freshen-up card. Knock-first chips respect DND, and the progress counter ticks up as your team works the floor.
+
+Routine Freshen-Up
+
+No status change
+
+0/64 done today
+
+101
+
+Knock
+Freshen
+
+103
+
+Knock
+Freshen
+
+104
+
+Freshen
+
+105
+
+Freshen
+
+106
+
+Knock
+Freshen
+
+107
+
+Freshen
+
+108
+
+Freshen
+
+110
+
+Freshen
+
+111
+
+Freshen
+
+112
+
+Freshen
+
+113
+
+Freshen
+
+114
+
+Freshen
+
+116
+
+Freshen
+
+117
+
+Knock
+Freshen
+
+118
+
+Freshen
+
+119
+
+Freshen
+
+120
+
+Freshen
+
+121
+
+Freshen
+
+122
+
+Freshen
+
+123
+
+Freshen
+
+MAID ASSIGNMENT
+
+Auto-assigned, never "whoever's free".
+
+Rooms move from Unassigned to Inspected by themselves — matched to maids by floor, capacity and certification. Watch the board breathe.
+
+0
+
+ROOMS TODAY
+
+0
+
+AVG TURN (MIN)
+
+0
+
+MAIDS ON SHIFT
+
+UNASSIGNED
+
+2 cards
+
+104
+AM
+108
+NP
+
+ASSIGNED
+
+2 cards
+
+110
+JK
+112
+RT
+
+IN PROGRESS
+
+2 cards
+
+117
+AM
+118
+NP
+
+INSPECTED
+
+2 cards
+
+121
+JK
+122
+RT
+
+INSPECTION HISTORY
+
+Every inspection, every item, every actor.
+
+Filter by date, room or anomalies only. Expand any row to see the per-item amenity audit — used or missing items raise a Flagged badge that stays in the audit pack.
+
+0
+
+INSPECTIONS
+
+0
+
+ANOMALIES
+
+Last 7 days
+Anomalies Only
+Room 101
+Floor F1
+Routine
+by Juious
+Flagged
+Apr 27, 2026 19:35
+Water Bottles
+USED
+Soap / Shampoo
+OK
+Towels
+OK
+Toilet Paper
+OK
+Slippers
+OK
+Minibar Items
+OK
+Room 103
+Floor F1
+Routine
+by Juious
+Apr 27, 2026 19:35
+Room 101
+Floor F1
+Routine
+by Juious
+Apr 27, 2026 19:35
+
+COMPLIANCE BUILT-IN
+
+Audit-stamped, role-gated, anti-theft.
+
+Status flips, maid moves, inspection items and bulk actions are role-gated and audit-traced — and they keep working when the internet doesn't.
+
+Audit-stamped status
+Anti-theft amenity audit
+Knock-first DND respect
+Offline-safe inspections
+0%
+
+ROOMS ACCOUNTED FOR
+
+0%
+
+FASTER ROOM TURNS
+
+0
+
+MISSED INSPECTIONS
+
+0★
+
+ANTI-THEFT AUDIT
+
+“Lost amenities aren't "shrinkage" — they're an unmeasured ledger. Measure it, and shrinkage becomes a number you can fix.”
+Tablet & phone first
+
+Built for the supervisor's tablet at the station and the maid's phone in the corridor — not a desktop reporting tool.
+
+Anti-theft from day one
+
+Per-item amenity ledger is the default — water bottles, slippers, minibar — every used item logged.
+
+Knock-first protocol
+
+Respects guest DND by default. Missed knocks queue a supervisor follow-up instead of forcing entry.
+
+Offline-safe sign-off
+
+Sign-off and inspection results queue locally and re-sequence cleanly when the connection returns.
+
+COMPARED TO PAPER CHECKLISTS
+
+One live board vs. a stack of clipboards.
+CAPABILITY
+PAPER CHECKLISTS
+OPERRA HOUSEKEEPING
+Daily room status
+Whiteboard at the station
+Live grid by floor
+Maid assignment
+"Whoever's free"
+Auto by floor + capacity
+Amenity tracking
+Lost in the corridor
+Per-item anti-theft ledger
+Inspections
+End of day on a clipboard
+Continuous, expandable rows
+DND / privacy
+Knock and hope
+Knock-first chips + follow-up
+Audit pack
+Re-typed at month-end
+PDF in one click
+
+QUESTIONS, ANSWERED
+
+What every supervisor asks first.
+How does Knock-first DND work?
+What's logged in the anti-theft ledger?
+Can maids work offline?
+How are maids matched to rooms?
+Do I get productivity reports per maid?
+
+BUILT FOR
+
+Owner
+
+100% of rooms accounted for and an anti-theft amenity ledger that turns shrinkage into a number you can fix.
+
+Supervisor
+
+Auto-assigned maids, audit-stamped status, and an inspection ledger that prints clean for the auditor.
+
+Front-desk lead
+
+Live status that reflects the floor — no more calling housekeeping to ask if 412 is ready.
+
+RELATED
+
+All
+
+Room Operations
+
+Floor map. Live. By room.
+
+See Housekeeping on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

@@ -13,7 +13,7 @@
  * paper documents are in the reel's language. Every number on screen comes
  * from the reel's ledger (numbers.mjs) through a {token}.
  */
-import { ico, P, frontDesk, guestRow, reportsHub, reportRow } from "./lib/ui.mjs";
+import { ico, P, frontDesk, guestRow, reportsHub, reportRow, kitchenBoard, guestMenu, housekeepingBoard, eventsDay } from "./lib/ui.mjs";
 import { fill, assertNoDigits, hash, orderLines } from "./numbers.mjs";
 
 export const ROLE = { place: "hook", "problem-doc": "problem", "folio-fix": "solution", "ui-screen": "solution", "pos-charge": "solution", checklist: "solution", payoff: "payoff" };
@@ -159,10 +159,51 @@ export const SCENES = {
   },
 
   /** Solution: a live Operra screen (front desk or reports) tilting up out of depth. */
-  "ui-screen"(id, s, { t0, dur, seed }) {
+  "ui-screen"(id, s, { t0, dur, seed, T, ledger }) {
     const screen = s.screen ?? "frontdesk";
-    let el, rowsSel, shows = [];
-    if (screen === "reports") {
+    let el, rowsSel, shows = [], extra = [], init = [], hideMore = [];
+    const r = hash(seed + id);
+    if (screen === "kitchen") {
+      // Tickets are drawn from the same menu the POS uses; ages climb in order.
+      const codes = ["T-04", "T-12", `Room ${101 + (r % 9)}`, "Bar 03", "T-07"];
+      const dishes = orderLines(ledger).map((l) => l.label);
+      const states = ["fired", "plating", "new", "delay"];
+      const tickets = [0, 1, 2, 3].map((i) => ({ code: codes[(i + (r >>> 3)) % codes.length], state: states[i], items: [dishes[i % dishes.length], ...(i % 2 ? [] : [dishes[(i + 1) % dishes.length]])], age: `0${1 + i * 2}:${String(10 + ((r >>> (i * 4)) % 49)).padStart(2, "0")}` }));
+      el = kitchenBoard(`${id}-scr`, tickets);
+      rowsSel = tickets.map((_, i) => `#${id}-scr-t${i}`);
+      shows = tickets.flatMap((t) => [t.code, t.age, ...t.items]);
+    } else if (screen === "menu") {
+      const lines = orderLines(ledger);
+      el = guestMenu(`${id}-scr`, { room: T["{room}"], lines, total: T["{orderTotal}"] });
+      rowsSel = [...lines.map((_, i) => `#${id}-scr-l${i}`), `#${id}-scr-send`];
+      shows = lines.flatMap((l) => [l.label, l.each, l.value]);
+      hideMore = [`#${id}-scr-appr`];
+      extra = [{ t: t0 + Math.min(Math.max(1.9, dur * 0.62), dur - 0.75), sel: `#${id}-scr-appr`, from: { opacity: 0, scale: 0.9 }, to: { opacity: 1, scale: 1 }, dur: 0.45, ease: "back.out(2)", cue: "match" }];
+    } else if (screen === "housekeeping") {
+      const pool = ["occupied", "clean", "dirty", "occupied", "clean", "maintenance", "occupied", "clean", "dirty", "occupied", "clean", "out"];
+      const base = 100 * (1 + (r % 3)) + 1;
+      const rooms = Array.from({ length: 12 }, (_, i) => ({ no: String(base + i), state: pool[(i + (r >>> 5)) % pool.length] }));
+      const flip = rooms.findIndex((x) => x.state === "dirty");
+      rooms[flip].state = "dirty";
+      el = housekeepingBoard(`${id}-scr`, rooms, flip);
+      rowsSel = rooms.map((_, i) => `#${id}-scr-r${i}`);
+      shows = rooms.map((x) => x.no);
+      const at = t0 + Math.min(Math.max(1.9, dur * 0.62), dur - 0.75);
+      init = [`#${id}-scr-r${flip} .fb`];
+      extra = [
+        { t: at, sel: `#${id}-scr-r${flip} .fa`, to: { yPercent: -110 }, dur: 0.32, ease: "power2.inOut", cue: "flip" },
+        { t: at, sel: `#${id}-scr-r${flip} .fb`, to: { yPercent: 0 }, dur: 0.32, ease: "power2.inOut" },
+        { t: at, sel: `#${id}-scr-r${flip}`, to: { backgroundColor: "rgba(54,210,186,.16)", borderColor: "rgba(54,210,186,.6)" }, dur: 0.4, ease: "none" },
+      ];
+    } else if (screen === "events") {
+      const kinds = [["Board meeting", "Conference Room", 20], ["Wedding reception", "Garden Hall", 180], ["Training workshop", "Lake Room", 40], ["Product launch", "Terrace", 60], ["Graduation lunch", "Main Hall", 120]];
+      const pick = [0, 1, 2].map((i) => kinds[(i + (r >>> 2)) % kinds.length]);
+      const times = ["09:00 – 11:00", "12:30 – 15:00", "18:00 – 23:00"];
+      const events = pick.map(([name, venue, pax], i) => ({ time: times[i], name, venue, pax, chip: i === 1 ? "Deposit cleared" : i === 2 ? "Menu confirmed" : null }));
+      el = eventsDay(`${id}-scr`, events);
+      rowsSel = events.map((_, i) => `#${id}-scr-e${i}`);
+      shows = events.flatMap((e) => [e.time, `${e.pax} pax`]);
+    } else if (screen === "reports") {
       el = reportsHub(`${id}-scr`, [
         reportRow(`${id}-r0`, ico("trending-up", { size: 24 }), "Revenue", "Today, by outlet"),
         reportRow(`${id}-r1`, ico("bed-double", { size: 24 }), "Occupancy", "Rooms, live"),
@@ -172,7 +213,6 @@ export const SCENES = {
       rowsSel = [0, 1, 2, 3].map((i) => `#${id}-r${i}`);
     } else {
       // Occupancy, free rooms and arrivals are computed from one room count, so they agree.
-      const r = hash(seed + id);
       const rooms = [14, 16, 18, 20, 24][r % 5];
       const occupied = Math.round(rooms * (0.62 + ((r >>> 4) % 25) / 100));
       const names = [["A", "Amina K."], ["J", "Joseph M."], ["N", "Neema S."], ["D", "David O."], ["R", "Rehema J."], ["P", "Peter L."]];
@@ -192,12 +232,14 @@ export const SCENES = {
     return {
       html: shell(id, s, { fg: html, grade: "ops" }),
       shows,
-      hide: [`#${id}-wrap`, ...rowsSel, ...(s.chips ?? []).map((_, i) => `#${id}-chip${i}`)],
+      hide: [`#${id}-wrap`, ...rowsSel, ...hideMore, ...(s.chips ?? []).map((_, i) => `#${id}-chip${i}`)],
+      init,
       steps: [
         push(id, t0 - 0.15, dur + 0.3, 1.08),
         words(id, t0 + 0.2),
         { t: t0 + 0.45, sel: `#${id}-wrap`, from: { opacity: 0, rotationX: 34, y: 200, filter: "blur(10px)" }, to: { opacity: 1, rotationX: 0, y: 0, filter: "blur(0px)" }, dur: 0.9, ease: "power3.out", cue: "card" },
-        ...rowsSel.map((sel, i) => ({ t: t0 + 1.2 + i * 0.16, sel, from: { opacity: 0, x: 40 }, to: { opacity: 1, x: 0 }, dur: 0.45, ease: "power3.out" })),
+        ...rowsSel.map((sel, i) => ({ t: t0 + 1.2 + i * Math.min(0.16, 0.6 / rowsSel.length), sel, from: { opacity: 0, x: 40 }, to: { opacity: 1, x: 0 }, dur: 0.45, ease: "power3.out" })),
+        ...extra,
         ...(s.chips ?? []).map((_, i) => chipIn(`#${id}-chip${i}`, t0 + dur * (0.42 + i * 0.14), "pop", i + 2)),
         { t: t0 + 1.4, sel: `#${id}-wrap`, to: { y: -12 }, dur: dur - 1.6, ease: "sine.inOut" },
       ],

@@ -1,0 +1,264 @@
+https://operra.tech/features/events-sales/credit-accounts
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Events & Sales
+Credit Accounts
+managix.operra.tech/credit-accounts
+CAESAR'S
+Front Desk
+Reservations
+Guest Stay
+Room Operations
+Housekeeping
+Restaurant
+Events
+Credit Accounts
+Finance & Folios
+Reports
+Audit Center
+Settings
+
+Credit Accounts
+
+New Account
+Accounts
+Quotations
+Invoices
+Aging
+Search accounts…
+ACCOUNT
+TYPE
+LIMIT
+BALANCE
+STATUS
+
+Arts network Co LTD
+
+CA0002 · Ally
+
+30 Days
+TZS 5,000,000
+TZS 450,000
+Active
+
+Agency Co Ltd
+
+CA0001 · Persona Example
+
+34 Days
+TZS 1,000,000
+TZS 1,800,000
+Over
+2 active accounts · TSh 2.25M outstanding
+
+CREDIT LIMIT
+
+Per-company ceiling — block over-limit charges before they post.
+
+Events & Sales · Operra HMS
+Credit Accounts
+
+Companies that owe you, organised.
+
+Companies that owe you, organised. Credit limits, USD-invertible invoicing, aged receivables and statement-ready PDFs — every TSh tracked from charge to settlement.
+
+0
+
+ACTIVE
+
+0
+
+LIMIT (M TZS)
+
+0.00
+
+OUTSTANDING (M)
+
+0
+
+UTIL %
+
+Book a tailored demo
+Chat on WhatsApp
+TRY
+Credit limit
+Live balance
+One ledger · four lenses
+Onboard in 30s
+hover the mock
+
+ONE LEDGER · FOUR LENSES
+
+Accounts, quotations, invoices and aging — same data, four views.
+
+Tab through the same dataset. Every change in one view propagates everywhere.
+
+Accounts
+Quotations
+Invoices
+Aging
+Search accounts…
+ACCOUNT
+TYPE
+LIMIT
+BALANCE
+STATUS
+
+Arts network Co LTD
+
+CA0002 · Ally · +123456789
+
+30 Days
+TZS 5,000,000
+TZS 450,000
+Active
+View
+
+Agency Co Ltd
+
+CA0001 · Persona Example · +255 782 284 345
+
+34 Days
+TZS 1,000,000
+TZS 1,800,000
+Over limit
+View
+
+Serengeti Tours
+
+CA0003 · Neema · +255711000000
+
+45 Days
+TZS 8,000,000
+TZS 2,100,000
+Active
+View
+0
+
+DAYS TO SETTLE
+
+0%
+
+AGED VISIBILITY
+
+0s
+
+STATEMENT GEN
+
+0
+
+BAD-DEBT WRITE-OFFS
+
+“Every charge to a corporate folio updates the limit, the balance and the audit trail — instantly.”
+Per-company limits
+
+Block over-limit charges before they post; finance approves overrides.
+
+USD invertible
+
+TZS native, USD inversion at the locked rate for international clients.
+
+Aged receivables
+
+0–30, 31–60, 61–90, 90+ buckets — always one click away.
+
+Statement-ready
+
+Branded monthly statements emitted on a schedule, ready for WhatsApp or print.
+
+OPERRA VS THE OLD WAY
+
+Stop chasing Excel rows.
+CAPABILITY
+LEGACY / PAPER
+OPERRA
+Per-company credit limit
+Not supported
+Built-in
+USD invoicing
+Manual conversion
+One toggle
+Aged receivables
+Pivot table on demand
+Live, always
+Statement PDF
+Word doc, hand-edited
+One-click branded
+Audit trail
+Nonexistent
+Tamper-evident
+Folio link
+Manual
+Live, per charge
+
+FAQ
+
+Common questions about credit accounts.
+Can I block charges that would exceed the limit?
+How does USD invoicing work?
+Can statements be sent on a schedule?
+How are partial payments handled?
+Who can record payments?
+
+BUILT FOR
+
+Accounts Receivable Lead
+
+Aged receivables on one screen — chase what matters first.
+
+Sales Manager
+
+Convert quotations to invoices without leaving the page.
+
+Finance Lead
+
+Per-company limits, USD invoicing, audit trail — all in one ledger.
+
+RELATED
+
+All
+
+Events & Banqueting
+
+Every venue, every menu, every payment.
+
+See Credit Accounts on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+See Credit Accounts on your property
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

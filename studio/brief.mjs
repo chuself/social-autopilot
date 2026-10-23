@@ -10,12 +10,29 @@
  * errors; after that the caller falls back.
  */
 import { readFile } from "node:fs/promises";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import { completeJson } from "../src/llm.js";
 import { setUsageContext } from "../src/usage.js";
 import { compose } from "./compose.mjs";
+import { factsFor, topicBlock, topicOf } from "../src/topics.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
+
+/** Scene shapes of the last few studio reels, so the next one can differ. */
+function recentShapes(post) {
+  try {
+    const q = JSON.parse(readFileSync(path.join(ROOT, "state", "queue.json"), "utf8"));
+    return q
+      .filter((p) => p.id !== post.id && p.reel?.scenes && p.scheduledFor < (post.scheduledFor ?? "9"))
+      .sort((a, b) => (a.scheduledFor < b.scheduledFor ? 1 : -1))
+      .slice(0, 4)
+      .map((p) => p.reel.scenes.join(" > "))
+      .join(" | ");
+  } catch {
+    return "";
+  }
+}
 
 const SPEC = `## Scene library (pick 4, or 5 at most; first is "place", last is "payoff")
 - "place": the hook. Fields: line (a question or tension, 3-7 words), tag (UPPERCASE "CITY · CONTEXT",
@@ -30,16 +47,21 @@ const SPEC = `## Scene library (pick 4, or 5 at most; first is "place", last is 
   "problem-doc". Fields: line, good, chips (0-1 short fact), image.
 - "pos-charge": a bar or restaurant order on the Operra POS posts straight to the guest's room. For
   bar, restaurant, room-service or unpaid-tab stories. Fields: line, chips (0-1), image.
-- "ui-screen": a live Operra screen. "screen": "frontdesk" (rooms, arrivals, check-in, housekeeping,
-  slow internet) or "reports" (owner away, revenue, month-end, audit trail). Fields: line, screen,
-  chips (0-1), image.
+- "ui-screen": a live Operra screen. "screen" is one of: "frontdesk" (arrivals, occupancy, check-in,
+  bookings, returning guests), "reports" (owner away, revenue, month-end, audit trail, night audit),
+  "kitchen" (orders on the kitchen display, tickets ageing), "menu" (a guest orders from the room QR
+  menu, the front desk approves, it bills to the room), "housekeeping" (room board, a room turns clean),
+  "events" (the day's events: venue, time, guests, deposit). Fields: line, screen, chips (0-1), image.
+  Two ui-screens with different screens may follow each other.
 - "checklist": 2-4 short items (2-5 words each) of things Operra does, ONLY from the approved facts.
   Fields: line, items, image.
 - "payoff": the good outcome. Fields: line, good, chip (a short success label; it may contain
   {rightTotal} only after problem-doc/folio-fix, or {orderTotal} only after pos-charge), image.
 
 Good shapes: place, problem-doc, folio-fix, payoff · place, pos-charge, checklist, payoff ·
-place, ui-screen, checklist, payoff · place, problem-doc, folio-fix, checklist, payoff.
+place, ui-screen, checklist, payoff · place, problem-doc, folio-fix, checklist, payoff ·
+place, ui-screen (menu), ui-screen (kitchen), payoff · place, ui-screen, pos-charge, payoff.
+Use the shape that fits the subject; the recent reels list shows which shapes were just used.
 
 ## Hard rules (the studio rejects a brief that breaks any)
 - NO DIGITS ANYWHERE you write: not in lines, tags, chips, items, stamp, eyebrow, cta or labels.
@@ -105,7 +127,8 @@ export function briefErrors(brief, brand) {
 export async function writeReelBrief(post, brandId = "operra") {
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = { ...JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8")), id: brandId };
-  const facts = await readFile(path.join(brandDir, "facts.md"), "utf8");
+  const topic = topicOf(post, brandId);
+  const facts = factsFor(await readFile(path.join(brandDir, "facts.md"), "utf8"), topic);
   const language = post.language === "sw" ? "sw" : "en";
   const city = (brand.cities ?? []).find((c) => c.name === post.city) ?? null;
   const cta = language === "sw" ? "Ona inavyofanya kazi" : "See it work";
@@ -123,7 +146,9 @@ Caption: ${(post.caption ?? "").slice(0, 400)}
 
 ## The only facts you may state about Operra
 ${facts}
-
+${topicBlock(topic, brandId)}${topic?.feature.reel?.scenes ? `Scenes that show this feature best: ${topic.feature.reel.scenes.join(", ")} (type:screen).
+` : ""}${recentShapes(post) ? `Scene shapes used by the last reels (pick a different one if the subject allows): ${recentShapes(post)}
+` : ""}
 ${spec}
 
 Return ONLY JSON: {"narration": "...", "eyebrow": "...", "cta": "${cta}", "scenes": [ ... ]}`;

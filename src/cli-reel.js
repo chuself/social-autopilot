@@ -9,6 +9,7 @@
  * posters, the file must be live on a public URL before Instagram can fetch it.
  */
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { writeReelScript } from "./brain.js";
 import { speak } from "./audio.js";
 import { renderReel, probeVideo } from "./video.js";
@@ -101,14 +102,21 @@ if (cfg.studio !== false && process.env.STUDIO !== "0") {
     const { writeReelBrief } = await import("../studio/brief.mjs");
     const { produceReel } = await import("../studio/make.mjs");
     brief = await writeReelBrief(post, brandId);
-    console.log(`  studio brief: ${brief.scenes.map((s) => s.type).join(" > ")}`);
+    // A share of reels in the hand-drawn ink & wash style (config "inkShare",
+    // 0 to 1; off until the owner approves the look). Fixed per post id, so a
+    // re-run of the same reel keeps its style.
+    const inkShare = Number(cfg.inkShare ?? 0);
+    if (inkShare > 0 && (parseInt(createHash("md5").update(post.id).digest("hex").slice(0, 8), 16) % 1000) / 1000 < inkShare) {
+      brief = { ...brief, style: "ink", city: post.city ?? undefined };
+    }
+    console.log(`  studio brief${brief.style === "ink" ? " (ink)" : ""}: ${brief.scenes.map((s) => s.type).join(" > ")}`);
     const r = await produceReel(brief, { out: videoFile, work: path.join(ROOT, "state", "frames", "studio", post.id), brandId });
     for (const p of r.report?.problems ?? []) console.log(`  check ${p.warn ? "WARN" : "FAIL"} ${p.check} ${p.scene ?? ""} ${p.msg}`);
     if (r.ok) {
       studio = {
         narration: brief.narration,
         beats: brief.scenes.map((s) => s.line),
-        scenes: brief.scenes.map((s) => s.type),
+        scenes: brief.scenes.map((s) => (s.screen ? `${s.type}:${s.screen}` : s.type)),
         attempts: (r.report.attempt ?? 0) + 1,
         warnings: r.report.problems.filter((p) => p.warn).map((p) => `${p.check}: ${p.msg}`).slice(0, 5),
         hasVoice: Boolean(r.meta?.voice),
@@ -182,7 +190,7 @@ post.reel = {
   beats: studio ? studio.beats : script.beats,
   narration: studio ? studio.narration : script.narration,
   hasVoice: studio ? studio.hasVoice : Boolean(audio),
-  engine: studio ? "studio" : "classic",
+  engine: studio ? (brief?.style === "ink" ? "studio-ink" : "studio") : "classic",
   ...(studio ? { scenes: studio.scenes, attempts: studio.attempts, warnings: studio.warnings } : {}),
   ...(fallbackWhy ? { fallback: fallbackWhy } : {}),
   builtAt: new Date().toISOString(),

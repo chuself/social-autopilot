@@ -185,6 +185,60 @@ export const priceCard = (id, { rooms, saveLine, termLine, features, overlay = '
 export const feature = (id, text) =>
   `<div class="pfeature" id="${id}"><span class="ptick">${ico('check', { size: 24, stroke: 2.6 })}</span>${text}</div>`;
 
+/* ── kitchen display ─────────────────────────────────────────────────────── */
+
+// tickets: [{ code, state: "new"|"fired"|"plating"|"delay", items: [..], age }]
+export const kitchenBoard = (id, tickets) => browser(id, 'managix.operra.tech/kitchen', `
+  <div class="wrow"><div class="wtitle"><i class="live"></i>Kitchen Display &middot; Hot Station</div>
+    <span class="wchip">${ico('chef-hat', { size: 22 })}Live</span></div>
+  <div class="kgrid">${tickets.map((t, i) => `
+    <div class="kt k-${t.state}" id="${id}-t${i}">
+      <div class="kth"><b>${t.code}</b><span class="kst">${t.state}</span></div>
+      ${t.items.map((x) => `<div class="kti">${x}</div>`).join('')}
+      <div class="ktf">${ico('timer', { size: 20 })}<span>${t.age}</span><span class="kready">Ready</span></div>
+    </div>`).join('')}</div>`, { width: 920 });
+
+/* ── in-room QR menu, on the guest's phone ───────────────────────────────── */
+
+// lines: orderLines(ledger) — "2 × Coffee", each, value — so the checker can add them up
+export const guestMenu = (id, { room, lines, total }) => phone(id, `
+  <div class="rlabel">MENU &middot; ROOM ${room}</div>
+  <div class="rtitle">Main Restaurant</div>
+  <div class="mqr">${ico('qr-code', { size: 22 })}Scanned in room &middot; stay PIN confirmed</div>
+  <div class="pos mcart">
+    ${lines.map((l, i) => `<div class="bline" id="${id}-l${i}"><span>${l.label}<i class="each">${l.each} each</i></span><span class="bval">${l.value}</span></div>`).join('')}
+    <div class="btot"><span>Total</span><span class="bval">${total}</span></div>
+  </div>
+  <div class="msend" id="${id}-send">Send to kitchen &middot; bill to room</div>
+  <div class="mappr" id="${id}-appr">${ico('check', { size: 22, stroke: 2.6 })}Approved at front desk</div>`, { width: 520 });
+
+/* ── housekeeping board ──────────────────────────────────────────────────── */
+
+const HK = { clean: 'Clean', dirty: 'Dirty', occupied: 'Occupied', maintenance: 'Maintenance', out: 'Out' };
+
+// rooms: [{ no, state }]; the room at index `flip` turns from dirty to clean on screen
+export const housekeepingBoard = (id, rooms, flip) => browser(id, 'managix.operra.tech/housekeeping', `
+  <div class="wrow"><div class="wtitle"><i class="live"></i>Housekeeping &middot; Floor board</div>
+    <span class="wchip">${ico('spray-can', { size: 22 })}Live</span></div>
+  <div class="hklegend">${Object.entries(HK).map(([k, v]) => `<span><i class="hk-${k}"></i>${v}</span>`).join('')}</div>
+  <div class="hkgrid">${rooms.map((r, i) => `
+    <div class="hkt hk-${r.state}" id="${id}-r${i}"><b>${r.no}</b>${i === flip
+      ? `<span class="hkflip"><span class="fa">Dirty</span><span class="fb">Clean</span></span>`
+      : `<span>${HK[r.state]}</span>`}</div>`).join('')}</div>`, { width: 920 });
+
+/* ── events calendar ─────────────────────────────────────────────────────── */
+
+// events: [{ time, name, pax, venue, chip }]
+export const eventsDay = (id, events) => browser(id, 'managix.operra.tech/events', `
+  <div class="wrow"><div class="wtitle"><i class="live"></i>Events &middot; Today</div>
+    <span class="wchip">${ico('calendar-check', { size: 22 })}Day view</span></div>
+  ${events.map((e, i) => `
+    <div class="evrow" id="${id}-e${i}">
+      <span class="evtime">${e.time}</span>
+      <span class="evtext"><b>${e.name}</b><i>${e.venue} &middot; ${e.pax} pax</i></span>
+      ${e.chip ? `<span class="evchip">${e.chip}</span>` : ''}
+    </div>`).join('')}`, { width: 920 });
+
 /* ── shared stylesheet ───────────────────────────────────────────────────── */
 
 export const UI_CSS = `
@@ -331,4 +385,55 @@ export const UI_CSS = `
   .pfeat{margin-top:20px}
   .pfeature{display:flex;gap:14px;font-size:23px;color:${P.text};padding:9px 0;line-height:1.35}
   .ptick{color:${P.primary};display:flex;padding-top:2px}
+
+  .kgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .kt{background:${P.elev};border:1.5px solid ${P.hair};border-radius:16px;padding:18px 20px;
+      border-top:6px solid ${P.teal}}
+  .kt.k-new{border-top-color:${P.glow}}
+  .kt.k-plating{border-top-color:${P.teal}}
+  .kt.k-delay{border-top-color:#f8a43a}
+  .kth{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .kth b{font-size:28px;color:${P.text}}
+  .kst{font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:${P.muted};
+       border:1px solid ${P.hair};border-radius:100px;padding:5px 12px}
+  .k-delay .kst{color:#f8a43a;border-color:rgba(248,164,58,.5)}
+  .kti{font-size:23px;color:${P.text};padding:5px 0}
+  .ktf{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:20px;color:${P.muted}}
+  .kready{margin-left:auto;color:${P.teal};border:1.5px solid rgba(54,210,186,.45);
+          border-radius:100px;padding:5px 14px;font-size:17px}
+
+  .mqr{display:flex;align-items:center;gap:10px;font-size:17px;color:${P.teal};margin-bottom:14px}
+  .mcart{background:${P.elev};border:1px solid ${P.hair};border-radius:16px;padding:6px 18px 16px}
+  .mcart .bline{font-size:22px}
+  .mcart .btot{font-size:26px}
+  .msend{margin-top:16px;text-align:center;font-size:20px;font-weight:600;color:${P.bg};
+         background:linear-gradient(90deg,${P.primary},${P.glow});border-radius:14px;padding:16px}
+  .mappr{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:12px;
+         font-size:20px;color:${P.teal};border:1.5px solid rgba(54,210,186,.45);border-radius:14px;padding:13px}
+
+  .hklegend{display:flex;gap:18px;flex-wrap:wrap;font-size:18px;color:${P.muted};margin-bottom:18px}
+  .hklegend span{display:flex;align-items:center;gap:8px}
+  .hklegend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+  .hkgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .hkt{border-radius:14px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:4px;
+       background:${P.elev};border:1.5px solid ${P.hair};font-size:17px;color:${P.muted}}
+  .hkt b{font-size:30px;color:${P.text}}
+  .hklegend .hk-clean{background:rgba(54,210,186,.9)} .hkt.hk-clean{background:rgba(54,210,186,.12);border-color:rgba(54,210,186,.5)}
+  .hklegend .hk-dirty{background:rgba(248,164,58,.9)} .hkt.hk-dirty{background:rgba(248,164,58,.1);border-color:rgba(248,164,58,.45)}
+  .hklegend .hk-occupied{background:${P.primary}} .hkt.hk-occupied{background:rgba(164,120,255,.12);border-color:rgba(164,120,255,.45)}
+  .hklegend .hk-maintenance{background:#7d8a97} .hklegend .hk-out{background:${P.neg}}
+  .hkt.hk-maintenance{border-color:rgba(125,138,151,.6)} .hkt.hk-out{border-color:rgba(249,65,68,.5);opacity:.7}
+  .hkflip{position:relative;display:block;height:1.3em;overflow:hidden}
+  .hkflip span{position:absolute;left:0;top:0}
+  .hkflip .fa{color:#f8a43a}
+  .hkflip .fb{color:${P.teal};font-weight:600}
+
+  .evrow{display:flex;align-items:center;gap:20px;background:${P.elev};border:1px solid ${P.hair};
+         border-left:6px solid ${P.primary};border-radius:14px;padding:18px 20px;margin-bottom:14px}
+  .evtime{font-size:22px;color:${P.glow};width:190px;flex:none}
+  .evtext{flex:1;display:flex;flex-direction:column}
+  .evtext b{font-size:26px;color:${P.text};font-weight:600}
+  .evtext i{font-style:normal;font-size:19px;color:${P.muted};margin-top:4px}
+  .evchip{font-size:18px;color:${P.teal};border:1.5px solid rgba(54,210,186,.45);border-radius:100px;
+          padding:7px 14px;white-space:nowrap}
 `;

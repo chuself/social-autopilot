@@ -1,0 +1,454 @@
+https://operra.tech/features/front-office/guest-crm
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Front Office
+Guest CRM
+Front Office · Operra HMS
+Guest CRM 
+
+Every guest, remembered.
+
+Profiles that survive the shift change. Stay history with the charges, the room and the balance attached. VIP and corporate flags raised automatically — so the second visit feels like the second visit.
+
+Book a tailored demo
+Chat on WhatsApp
+Live · 8 guests on file
+managix.operra.tech/guests
+CAESAR'S
+Front Desk
+Reservations
+Guest Stay
+Housekeeping
+Guests
+Restaurant
+Finance & Folios
+Reports
+Audit Center
+
+Caesar's Palace Hotel
+
+Check In
+Guest Stay
+Manage Folios
+Guest Management
+
+Manage hotel guest information and profiles
+
+New Guest
+Search by name, guest code, email, or phone…
+CODE
+NAME
+CONTACT
+NAT.
+STATUS
+ACT
+G2608
+Rama Said
+Rama@gmail.com
+Tanzania
+VIP
+View
+G2607
+Aogo Tz
+—
+—
+Regular
+View
+G2606
+First Last
+—
+—
+Regular
+View
+G2605
+Elvis Presley
+LisaMariePresley01@yah…
+American
+VIP
+View
+G2604
+Hans Kreager
+KreagerHans@yahoo.com
+Germany
+VIP
+View
+G2603
+Keith Flannigan
+flannigankeith@gmail.com
+—
+Regular
+View
+9:41
+100%
+
+Rama Said
+
+VIP
+Profile
+Stay History
+
+BASIC
+
+Code · G2608
+
+CONTACT
+
+Rama@gmail.com
+
++123456789
+
+ID
+
+National Id
+NIDA6545646
+Hans
+Hans Kreager
+G2604
+VIP
+Hannah Berg
+G2611
+Regular
+
+FUZZY SEARCH
+
+Find any guest by name, code, email or phone — across every property you operate. 
+
+TRY
+Fuzzy search
+VIP auto-flag
+Open the profile
+Create a guest
+Stay history
+0
+
+PROFILE LAB
+
+One profile, every stay attached.
+
+Click a guest to load their full record — KPIs, identification, address, and a full audit-traced stay history. Hover any stay for the line-item charge breakdown.
+
+ALL GUESTS
+
+Rama Said
+
+G2608 · Tanzania
+
+VIP
+
+Hans Kreager
+
+G2604 · Germany
+
+VIP
+
+Elvis Presley
+
+G2605 · American
+
+VIP
+
+Keith Flannigan
+
+G2603 · Ireland
+
+Regular
+Rama Said
+VIP
+Profile
+Stay History
+
+TOTAL STAYS
+
+0
+
+TOTAL SPENT
+
+TZS 0
+
+BALANCE
+
+TZS 0
+
+B2630
+confirmed
+
+Apr 28 → Apr 29, 2026
+
+Room 310
+
+Luxury Suites
+
+Total
+TZS 300,000
+Paid
+TZS 0
+Balance
+TZS 300,000
+B2631
+checked_out
+
+Apr 27 → Apr 29, 2026
+
+Room 102
+
+Standard
+
+Total
+TZS 415,000
+Paid
+TZS 415,000
+Balance
+TZS 0
+B2629
+checked_out
+
+Apr 27 → Apr 28, 2026
+
+Room 506
+
+Villa
+
+Total
+TZS 450,000
+Paid
+TZS 450,000
+Balance
+TZS 0
+
+REPEAT DETECTION
+
+The second visit feels like the second visit.
+
+Operra watches stay count, lifetime spend and corporate affiliation — and quietly raises the right flag the moment a guest qualifies. No spreadsheet to maintain, no manual tagging.
+
+0
+
+3RD VISIT · AUTO-FLAGGED VIP
+
+The badge appears across every screen the moment the rule fires — no shift handover, no spreadsheet to maintain.
+
+Repeat detection
+
+Auto-flag on stay #2
+
+Lifetime value
+
+Rolls up across folios
+
+VIP rule
+
+3+ stays · or manager pin
+
+Corporate accounts
+
+Linked to AR
+
+GUEST SEGMENTS
+
+From walk-in to VIP — the system tracks the journey.
+
+Four segments, one progression. Hover a column to see the rule and the treatment your team should give.
+
+STAGE 1
+
+Walk-in
+
+RULE
+
+Stay #1 · No prior record
+
+TREATMENT
+
+Standard rate · Capture ID at check-in · Profile created automatically.
+
+STAGE 2
+
+Repeat
+
+RULE
+
+Stay #2 · Within 18 months
+
+TREATMENT
+
+Welcome-back greeting · Preferred room type remembered · Folio shows last stay summary.
+
+STAGE 3
+
+VIP
+
+RULE
+
+Stay #3 · Or lifetime spend pin
+
+TREATMENT
+
+VIP badge across the app · Manager-greeting flag · Soft-block preferred room on arrival day.
+
+STAGE 4
+
+Corporate
+
+RULE
+
+Linked to AR account
+
+TREATMENT
+
+Folio settles to AR by default · Negotiated rate auto-applied · Consolidated monthly statement.
+
+Walk-in
+Repeat
+VIP
+Corporate
+
+PRIVACY & ACCESS
+
+Guest data, treated as guest data.
+
+Encrypted at rest, scoped per-property by row-level security, and every read of a profile is logged against the staff member who opened it.
+
+Encrypted at rest
+Row-level security
+Audit log on every read
+Right-to-erasure ready
+0
+
+GUEST PROFILES ON FILE
+
+0s
+
+AVERAGE LOOKUP
+
+0%
+
+REPEAT DETECTION
+
+0%
+
+RE-KEYING ELIMINATED
+
+“If your front desk has to ask a returning guest for their phone number, you don't have a CRM — you have a guest book.”
+NIDA & passport on the same form
+
+Capture either ID type without switching screens — the validation knows the difference.
+
+Tour-operator AR
+
+Tag a guest to an operator and their stays settle to AR with one clean monthly statement.
+
+M-Pesa receipts attached
+
+Mobile-money references attach to the guest's stay, not just the folio — searchable months later.
+
+Offline-safe profiles
+
+Look up a returning guest with no internet — the local mirror has the last known profile.
+
+COMPARED TO A GUEST BOOK ON THE FRONT DESK
+
+Paper memory vs. real CRM.
+CAPABILITY
+GUEST BOOK / SPREADSHEET
+OPERRA GUEST CRM
+Find a returning guest
+Flip pages by date
+Two-keystroke fuzzy search
+Stay history
+Re-key from receipts
+Auto-attached, audit-traced
+Lifetime spend
+—
+Live per-guest total
+VIP detection
+Manager memory
+Auto-flag on rule + manual pin
+Charge from history
+—
+Post a no-show fee in one click
+Privacy & access
+Whoever holds the book
+RLS + per-read audit log
+Mobile lookup
+—
+Profile in your hand
+
+QUESTIONS, ANSWERED
+
+What every GM asks first.
+How is a guest flagged VIP?
+Can I see who opened a guest profile?
+What happens to data if a guest asks to be erased?
+Can I tag a guest to a corporate account?
+Does the mobile app show the same profile?
+
+BUILT FOR
+
+Owner
+
+See your top guests by lifetime spend — and which of them haven't returned in six months.
+
+GM
+
+Personal greeting on every VIP arrival, without a spreadsheet to maintain.
+
+Receptionist
+
+Recognise the returning guest before they finish saying hello.
+
+RELATED
+
+All
+
+Front Desk
+
+Live KPIs and the next action, on one screen.
+
+Reservations
+
+Every booking captured, attributed, conflict-checked.
+
+Guest Stay
+
+Every in-house guest in one place.
+
+See Guest CRM on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

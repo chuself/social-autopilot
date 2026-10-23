@@ -1,0 +1,597 @@
+https://operra.tech/features/food-beverage/table-management
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Food & Beverage
+Table Management
+Food & Beverage · Operra HMS
+Table Management
+
+Sit, open tabs, split, turn.
+
+A live floor for every outlet — zones, tables, waiters and state. Seat in two taps, open a tab, transfer or split, settle to cash or the room. Rush Mode collapses the chrome so a full house never breaks the flow. A public reservation link feeds the same floor — no double booking, no leaked availability.
+
+Book a tailored demo
+Chat on WhatsApp
+managix.operra.tech/restaurant/tables
+
+MODE
+
+Waiter
+Kitchen
+Bar
+Manager
+Dashboard
+POS
+Tables
+Reservations
+Active Orders
+Live Stations
+Kitchen Queue
+Bar Queue
+Menu
+Inventory
+Reports
+Settings
+MANAGER MODE
+Shift · Open · 24h 22m
+Cash · TSh 85,000
+Orders · 2
+Open Tables · 7
+Kitchen Delays · 8
+Online
+16:08
+MANAGER MODE
+Shift Open
+Cash · 85,000
+Orders · 3
+Open Tables · 4
+Kitchen Delays · 0
+Rush
+Manage
+Full floor controls.
+Main Dining
+Terrace
+VIP Room
+Lounge
+Floor 1 · 3
+Floor 2 · 7
+Main Bar
+Edit
+Add Table
+Waiter
+Tap a name →
+A
+Aogo
+MA
+Maneno
+Lounge
+3
+B1
+8 Guests
+Free
+👤 Omary
+Reserved · Omary @ 17:07
+B2
+4 Guests
+Seated
+Tap to seat
+B3
+1 Guests
+100h 2m
+??
+TSh 2.0k
+🍴 ×1 Beer
+✓ Food Ready
+RESERVATION TIMELINE
+1
+Open Reservations →
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+Live — Manage · Rush · Public booking
+
+OUTCOMES
+
+Numbers your owner will notice.
+0
+
+TAPS TO SEATED
+
+−0%%
+
+AVG. TURN TIME
+
+0
+
+MIS-SEATED COVERS
+
+0
+
+TABLES ON MAP
+
+ANATOMY OF THE FLOOR
+
+Five states. The whole service.
+
+Hover any state to see the rule behind it. Tap on touch.
+
+FREE
+
+Hover to see the rule
+
+Free tables surface first
+
+In Rush Mode, the floor sorts by availability — your host stand never hunts for an open table.
+
+SEATED
+
+Hover to see the rule
+
+Seated with the right waiter
+
+Auto-assigns to the waiter who seated the party. Attribution carries to tips, covers and leaderboard.
+
+ORDERED
+
+Hover to see the rule
+
+Tab open, items live
+
+Order total and age stay on the tile. One tap moves the tab to another table — kitchen and folio follow.
+
+BILLING
+
+Hover to see the rule
+
+Settle to cash, card, or the room
+
+Split by guest, item or share. Combine payment methods on the same close. 18% VAT post-discount, every time.
+
+RESERVED
+
+Hover to see the rule
+
+Held for the booking window
+
+The map flags reserved tables before they're seated. One tap releases a no-show and frees the slot.
+
+managix.operra.tech/restaurant/tables
+
+MODE
+
+Waiter
+Kitchen
+Bar
+Manager
+Dashboard
+POS
+Tables
+Reservations
+Active Orders
+Live Stations
+Kitchen Queue
+Bar Queue
+Menu
+Inventory
+Reports
+Settings
+MANAGER MODE
+Shift · Open · 24h 22m
+Cash · TSh 85,000
+Orders · 2
+Open Tables · 7
+Kitchen Delays · 8
+Online
+16:08
+Rush
+Manage
+Guided 3-step flow for fast seating.
+RUSH
+OUTLET
+Main Bar
+TABLE
+Table B1
+ACTION
+—
+Table B1 · what now?
+
+Main Bar · capacity 8
+
+Open POS
+
+Walk-in · start menu
+
+Seat reservation
+
+Pick from today's bookings
+
+Hold table
+
+Mark reserved · no order yet
+
+‹ Choose another table
+✨ Two taps from "guest arrives" to "order open"
+
+RUSH MODE
+
+The two-tap path to seated.
+
+When the dining room fills up, every extra tap costs you covers. Rush Mode collapses the workflow to a single visible breadcrumb — Outlet › Table › Action — with three giant action cards.
+
+Open POS — walk-in, jumps straight to the menu with the table attached.
+Seat reservation — picks from today's bookings, party size pre-filled.
+Hold table — mark reserved with no order yet, no awkward fake tab.
+Median 4.2 seconds from "guest arrives" to "table open."
+
+TWO MODES, ONE FLOOR
+
+Manage when it's calm. Rush when it isn't.
+Manage mode
+CALM
+
+Plan zones, edit layouts, assign waiters, reorder tables, set reservations — full floor controls visible, KPIs across the top.
+
+Rush mode
+FULL HOUSE
+
+Chrome collapses, hit-targets grow. Outlet › Table › Action — two taps to seat, two to settle.
+
+Move a tab
+MID-SERVICE
+
+A couple wants the patio? Transfer the tab — order history, waiter and folio all follow.
+
+Split & settle
+ON CLOSE
+
+Per-guest or per-item splits; cash, card, mobile money or the room — combinations welcome.
+
+Hold the table
+RESERVATIONS
+
+Reserved tables surface on the map at the right time, so the host never double-seats.
+
+DARK OR DAY — YOUR TEAM'S CHOICE
+
+Same floor, two skins.
+
+Operators choose the theme — Operra ships both, themed by the same semantic tokens.
+
+managix.operra.tech/restaurant/tables
+
+MODE
+
+Waiter
+Kitchen
+Bar
+Manager
+Dashboard
+POS
+Tables
+Reservations
+Active Orders
+Live Stations
+Kitchen Queue
+Bar Queue
+Menu
+Inventory
+Reports
+Settings
+MANAGER MODE
+Shift · Open · 24h 22m
+Cash · TSh 85,000
+Orders · 2
+Open Tables · 7
+Kitchen Delays · 8
+Online
+16:08
+MANAGER MODE
+Shift Open
+Cash · 85,000
+Orders · 3
+Open Tables · 4
+Kitchen Delays · 0
+Rush
+Manage
+Full floor controls.
+Main Dining
+Terrace
+VIP Room
+Lounge
+Floor 1 · 3
+Floor 2 · 7
+Main Bar
+Edit
+Add Table
+Waiter
+Tap a name →
+A
+Aogo
+MA
+Maneno
+Lounge
+3
+B1
+8 Guests
+Free
+👤 Omary
+Reserved · Omary @ 17:07
+B2
+4 Guests
+Seated
+Tap to seat
+B3
+1 Guests
+100h 2m
+??
+TSh 2.0k
+🍴 ×1 Beer
+✓ Food Ready
+RESERVATION TIMELINE
+1
+Open Reservations →
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+
+DARK MODE · MANAGE FLOOR
+
+managix.operra.tech/restaurant/tables
+
+MODE
+
+Waiter
+Kitchen
+Bar
+Manager
+Dashboard
+POS
+Tables
+Reservations
+Active Orders
+Live Stations
+Kitchen Queue
+Bar Queue
+Menu
+Inventory
+Reports
+Settings
+MANAGER MODE
+Shift · Open · 24h 22m
+Cash · TSh 85,000
+Orders · 2
+Open Tables · 7
+Kitchen Delays · 8
+Online
+16:08
+MANAGER MODE
+Shift Open
+Cash · 85,000
+Orders · 3
+Open Tables · 4
+Kitchen Delays · 0
+Rush
+Manage
+Full floor controls.
+Main Dining
+Terrace
+VIP Room
+Lounge
+Floor 1 · 3
+Floor 2 · 7
+Main Bar
+Edit
+Add Table
+Waiter
+Tap a name →
+A
+Aogo
+MA
+Maneno
+Lounge
+3
+B1
+8 Guests
+Free
+👤 Omary
+Reserved · Omary @ 17:07
+B2
+4 Guests
+Seated
+Tap to seat
+B3
+1 Guests
+100h 2m
+??
+TSh 2.0k
+🍴 ×1 Beer
+✓ Food Ready
+RESERVATION TIMELINE
+1
+Open Reservations →
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+
+DAY MODE · MANAGE FLOOR
+
+PUBLIC RESERVATIONS
+
+A booking link that doesn't leak your floor.
+
+Share one link from Instagram, WhatsApp or your website. Guests pick party size, outlet and time. The reservation lands on your floor map — you confirm or decline from the same screen the host uses.
+
+Branded with your restaurant name — no Operra branding on the public form.
+Guests never see your live table availability or floor layout.
+Special requests (allergies, occasions) sit next to the booking, not in a separate note.
+Requests are confirmable — you control the floor; guests never auto-book.
+managix.operra.tech/restaurant/tables
+
+Book a table at Caesar's Palace Restaurant & Grill
+
+Full name *
+
+Phone
+
+Email
+
+Party size *
+
+2
+
+Outlet *
+
+Choose…
+
+When *
+
+05/24/2026 06:00 PM
+
+Special requests
+
+Allergies, occasion, etc.
+Request reservation
+
+Your booking is a request. The restaurant will contact you to confirm.
+
+COMPARE
+
+Why operators move off paper diagrams and standalone booking sites.
+CAPABILITY
+PAPER PLAN + 3RD-PARTY BOOKING
+OPERRA TABLE MANAGEMENT
+Live floor map across every outlet
+Not supported
+Built-in
+Rush Mode — two taps to seated
+Not supported
+Built-in
+Reservations land on the same floor
+Separate inbox
+Built-in
+Transfer a tab between tables
+Re-key the order
+Built-in
+Split by guest, item or share
+Calculator at the table
+Built-in
+Waiter auto-attributed on seat
+Manual tally
+Built-in
+Public booking link, your branding
+OpenTable branding
+Built-in
+Holds without a fake tab
+Open a $0 order
+Built-in
+
+FAQ
+
+Common floor questions.
+How many outlets, zones and tables can I run?
+Can a reservation block a table?
+How does the public booking link work?
+What about waiter tips?
+Does Rush Mode work on a small tablet?
+What if the same table is on a reservation and a walk-in?
+
+“When the host stand stops being the bottleneck, the floor turns faster, the kitchen breathes, and the owner notices the cover count.”
+
+RELATED
+
+More of Food & Beverage.
+View category
+Restaurant & Bar POS
+
+Settle to cash, card, mobile money, or the room.
+
+Learn more
+Kitchen Display
+
+Every ticket, in front of the chef.
+
+Learn more
+Digital Guest Menu
+
+A QR menu in every room.
+
+Learn more
+See Table Management on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

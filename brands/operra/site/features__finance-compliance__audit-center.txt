@@ -1,0 +1,301 @@
+https://operra.tech/features/finance-compliance/audit-center
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Finance & Compliance
+Audit Center
+managix.operra.tech/audit-center
+CAESAR'S
+Front Desk
+Reservations
+Guest Stay
+Room Operations
+Housekeeping
+Restaurant
+Events
+Credit Accounts
+Finance & Folios
+Reports
+Audit Center
+Settings
+
+Audit Center
+
+Comprehensive system logs, user activity tracking, and automation history
+
+Operations
+Financial
+Rooms
+Staff
+Restaurant
+Automation
+
+Financial Events Log
+
+Payments, charges, credit ledger transactions, and invoices
+
+Search financial events…
+Today
+Week
+Month
+PDF
+TIME
+EVENT
+USER
+TYPE
+Apr 29, 11:14
+room posted: Folio charge — TZS 200,000
+Juious
+folio_charges
+Apr 27, 20:31
+restaurant posted: Folio charge — TZS 50,000
+Juious
+folio_charges
+Apr 27, 19:31
+Payment received via cash — TZS 200,000
+Juious
+payments
+Apr 26, 18:24
+room posted: Folio charge — TZS 250,000
+Juious
+folio_charges
+Apr 25, 21:29
+room posted: Folio charge — TZS 450,000
+Juious
+folio_charges
+Audit · 1,240 events today · 0 anomalies
+
+SIX LENSES, ONE LEDGER
+
+Operations, Financial, Rooms, Staff, Restaurant, Automation — every action, every actor.
+
+Finance & Compliance · Operra HMS
+Audit Center
+
+Tamper-evident logs.
+
+Every action, every actor, every time — across six lenses, one ledger.
+
+0
+
+EVENTS / DAY
+
+0
+
+ACTORS
+
+0
+
+LENSES
+
+0
+
+RETENTION (MO)
+
+Book a tailored demo
+Chat on WhatsApp
+TRY
+Six lenses, one ledger
+Tamper-evident rows
+Typed events
+Branded PDF in 1 click
+
+SIX LENSES · ONE LEDGER
+
+Every action, every actor, every time.
+
+Search, filter and export. Each row is timestamped, signed and linked to the actor who made it.
+
+AUDIT CENTER
+
+Comprehensive system logs, user activity tracking, and automation history
+
+Operations
+Financial
+Rooms
+Staff
+Restaurant
+Automation
+
+Operations Log
+
+Check-ins, check-outs, room transfers, and stay extensions
+
+Today
+Week
+Month
+All
+Export PDF
+TIME
+EVENT
+USER
+TYPE
+Apr 29, 11:14
+Status changed to "checked_out" — Room 102 — Rama Said
+Juious
+update
+Apr 29, 11:14
+UPDATE on rooms
+Juious
+update
+Apr 27, 20:41
+UPDATE on rooms
+Juious
+update
+Apr 27, 20:40
+New booking created — Rama Said (B-OFF-MOHHGCG9)
+Juious
+insert
+Apr 27, 20:40
+Status changed to "checked_out" — Room 303 — Hussein Hassan
+Juious
+update
+Apr 27, 19:46
+Status changed to "checked_out" — Room 506 — Rama Said
+Juious
+update
+Apr 27, 19:44
+Status changed to "checked_in" — Room 506 — Rama Said
+Juious
+update
+Apr 27, 19:44
+New booking created (B2629)
+Juious
+insert
+0
+
+LENSES
+
+0
+
+RETENTION (MONTHS)
+
+0%
+
+TAMPER-EVIDENT
+
+0
+
+EXPORT TO PDF (S)
+
+“The auditor asked for the trail. We exported it in four seconds — branded, signed, gap-free.”
+Per-actor signatures
+
+Every row is bound to a user, role and session — no anonymous edits.
+
+Hash-chained
+
+Each entry hashes the previous. Silent edits become visible immediately.
+
+Branded export
+
+Your logo on every audit PDF — for owners, TRA or counsel.
+
+Date-ranged
+
+Today, week, month or custom — pinpoint without scrolling.
+
+OPERRA VS THE OLD WAY
+
+Stop hoping nothing was deleted.
+CAPABILITY
+LEGACY / PAPER
+OPERRA
+Audit trail
+Often nonexistent
+Tamper-evident, per actor
+Coverage
+Finance only (if at all)
+Ops, finance, rooms, staff, F&B, automation
+Tampering
+Possible, hard to detect
+Hash-chained — visible immediately
+Search
+Ctrl+F a printed log
+Live search + filters by lens, type, actor
+Export
+Screenshots into Word
+Branded PDF, date-ranged, in seconds
+Retention
+Until someone deletes it
+7 years, immutable
+
+FAQ
+
+Common questions about the Audit Center.
+What does tamper-evident actually mean?
+How long are logs retained?
+Can a user delete their own actions?
+How do I find a specific event?
+Does it slow the system down?
+Can I share an audit PDF with my auditor?
+
+BUILT FOR
+
+Owner
+
+Sleep at night — every action is signed and traceable.
+
+Finance Lead
+
+Hand the auditor a PDF, not a server query.
+
+GM
+
+Settle disputes with timestamps, not memory.
+
+RELATED
+
+All
+
+Finance & Folios
+
+Unified ledger, one source of truth.
+
+Reports Hub
+
+Every report your auditor will ask for.
+
+Night Audit
+
+The shift that runs itself.
+
+See Audit Center on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+See the Audit Center on your property
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

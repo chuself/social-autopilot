@@ -1,0 +1,513 @@
+https://operra.tech/features/food-beverage/digital-menu
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Food & Beverage
+Digital Guest Menu
+Food & Beverage · Operra HMS
+Digital Guest Menu
+
+A QR menu in every room.
+
+Print one QR sticker per room — or send the link over WhatsApp at check-in. Guests scan, confirm with a stay PIN, and order from a beautifully branded menu. Every order lands at the front desk for approval before routing to the kitchen and posting to the folio. The link is permanent; the codes behind it rotate.
+
+Book a tailored demo
+Chat on WhatsApp
+managix.operra.tech/menu/q/main-restaurant
+MENU · ROOM 218
+Main Restaurant
+Search dishes, drinks…
+All
+Meal · 19
+Drinks · 2
+Starter · 3
+Main · 1
+Deserts · 2
+
+Meal 19 items
+
+Avocado Salmon Salad
+
+TSh 10,000
+
+10 min
+Add
+
+Beef Steak With Herb Butter
+
+TSh 18,000
+
+10 min
+1
+
+Chickpea Salad
+
+TSh 10,000
+
+10 min
+1
+
+Crispy Fish & Chips
+
+TSh 20,000
+
+10 min
+Add
+
+Crispy Spicy Chicken
+
+TSh 15,000
+
+10 min
+Add
+
+Delicious Fried Salmon
+
+TSh 15,000
+
+10 min
+Add
+Your order
+
+Beef Steak With Herb Butter
+
+TSh 18,000 each
+
+1
+TSh 18,000
+
+Chickpea Salad
+
+TSh 10,000 each
+
+1
+TSh 10,000
+
+Order notes (optional)
+
+Allergies, delivery instructions…
+Total
+TSh 28,000
+Send to kitchen — bill to room
+
+Charges added to your room folio. Settled at check-out.
+
+Guest menu
+Front-desk approval
+Confirmed
+Live — guest menu → front desk → confirmed
+
+OUTCOMES
+
+Numbers your owner will notice.
+0%
+
+ROOM-SERVICE UPLIFT
+
+0%%
+
+CALLS TO RECEPTION
+
+<0ss
+
+TIME TO ORDER
+
+0s
+
+FD APPROVAL TIME
+
+ANATOMY OF A GUEST ORDER
+
+Five rules. Zero awkward moments.
+
+Hover any tile to see the safeguard behind the number. Tap on touch.
+
+ROOM QR
+Permanent
+
+Hover for the rule
+
+Print one sticker. Forever.
+
+Each room gets a permanent URL. Behind the scenes, tokens rotate — the printed sticker never changes, never breaks.
+
+STAY PIN
+Per stay
+
+Hover for the rule
+
+Outsiders can't order against you
+
+Guests confirm the room with a short stay-bound order code. No PIN, no folio post — even if the QR leaks online.
+
+FD APPROVAL
+Every order
+
+Hover for the rule
+
+Nothing reaches the kitchen unseen
+
+Each order lands in a calm approval queue. Front desk approves with one tap, or rejects with a reason the guest sees.
+
+TO FOLIO
+Auto-post
+
+Hover for the rule
+
+18% VAT post-discount, posted live
+
+Approved orders write straight to the room folio with VAT applied after discounts — TRA-ready, settled at check-out.
+
+NO RECEPTION?
+Graceful
+
+Hover for the rule
+
+Never an awkward dead-end
+
+When no approver is online, the menu surfaces a polite "call reception" notice instead of silently failing. Guests are never left waiting.
+
+FROM SCAN TO SERVED
+
+Six honest steps. Every charge accounted for.
+
+The guest never touches a phone receiver. The kitchen never reads a chit. The front desk never loses control.
+
+00:00
+
+Guest scans the room QR
+
+00:18
+
+Confirms the room with a stay PIN
+
+00:40
+
+Builds the cart, hits send
+
+00:48
+
+Lands at the front desk
+
+00:55
+
+Approved → kitchen / bar
+
+ON CHECKOUT
+
+Posts to the room folio
+
+00:00
+
+Guest scans the room QR
+
+A permanent sticker on the bedside table opens the dark-mode menu instantly. No app, no download. The link works forever.
+
+managix.operra.tech/menu/q/main-restaurant
+
+Permanent · room-bound · token-rotated behind the scenes
+
+00:18
+
+Confirms the room with a stay PIN
+
+A short code tied to the active stay. Outsiders who find the QR online still can't post a charge against your folios.
+
+ENTER YOUR STAY CODE
+
+7
+2
+4
+1
+
+Issued at check-in. Expires when you check out.
+
+00:40
+
+Builds the cart, hits send
+
+Image-first dishes, category chips, search, allergy notes per line. The cart shows total + VAT and routes to the right outlet.
+
+Your order · Room 218
+TSh 28,000
+Beef Steak · Herb Butter
+18,000
+Chickpea Salad
+10,000
+Send to kitchen — bill to room
+
+00:48
+
+Lands at the front desk
+
+Order arrives in a calm approval queue with item images, modifiers, room ID and the exact total that will hit the folio.
+
+Order R00018 · Room 218
+PENDING
+
+2 lines · 42s ago · post to folio TSh 28,000
+
+Reject
+Approve & send
+
+00:55
+
+Approved → kitchen / bar
+
+One tap fires it to the right KDS screen. Reject with a reason and the guest sees it instantly — no awkward silence.
+
+KITCHEN · KDS
+
+Beef Steak · Herb Butter
+
+Course 1 · fire in 02:00
+
+COLD PASS
+
+Chickpea Salad
+
+Hold for course 1
+
+ON CHECKOUT
+
+Posts to the room folio
+
+Items appear on the guest folio with 18% VAT applied post-discount. One sequential, branded receipt at check-out.
+
+FOLIO · ROOM 218 · AKIDA
+
+Main Restaurant — R00018
+TSh 28,000
+VAT 18% (post-discount)
+TSh 4,271
+Open balance
+TSh 28,000
+
+DARK OR DAY
+
+Looks premium at midnight. Crisp at noon.
+
+The guest menu inherits the property's theme. Dark by default for evening room service; light mode ready for poolside and breakfast.
+
+managix.operra.tech/menu/q/main-restaurant
+MENU · ROOM 218
+Main Restaurant
+Search dishes, drinks…
+All
+Meal · 19
+Drinks · 2
+Starter · 3
+Main · 1
+Deserts · 2
+
+Meal 19 items
+
+Avocado Salmon Salad
+
+TSh 10,000
+
+10 min
+Add
+
+Beef Steak With Herb Butter
+
+TSh 18,000
+
+10 min
+1
+
+Chickpea Salad
+
+TSh 10,000
+
+10 min
+1
+
+Crispy Fish & Chips
+
+TSh 20,000
+
+10 min
+Add
+
+Crispy Spicy Chicken
+
+TSh 15,000
+
+10 min
+Add
+
+Delicious Fried Salmon
+
+TSh 15,000
+
+10 min
+Add
+Your order
+
+Beef Steak With Herb Butter
+
+TSh 18,000 each
+
+1
+TSh 18,000
+
+Chickpea Salad
+
+TSh 10,000 each
+
+1
+TSh 10,000
+
+Order notes (optional)
+
+Allergies, delivery instructions…
+Total
+TSh 28,000
+Send to kitchen — bill to room
+
+Charges added to your room folio. Settled at check-out.
+
+Guest menu
+Front-desk approval
+Confirmed
+
+DARK MODE · IN-ROOM DINING
+
+managix.operra.tech/menu/q/main-restaurant
+
+Order sent — pending front desk approval. Charges go to your room.
+
+Table reserved — confirmation R00017. Show it at the host stand.
+
+Reserve a table
+Reserve a table
+
+Book a table at Main Restaurant for Room 218. The host will be ready for you.
+
+Party size
+
+👥 4
+
+When
+
+05/24/2026 05:30 PM
+
+Special requests (optional)
+
+No Allergies
+Cancel
+Reserve
+Guest menu
+Front-desk approval
+Confirmed
+
+LIGHT MODE · CONFIRMATION & RESERVE
+
+COMPARED TO PHONES & PAPER MENUS
+
+The new room service is silent and visual.
+CAPABILITY
+PHONE + PRINTED MENU
+OPERRA GUEST QR MENU
+Time to order
+3–5 min with hold music
+Under 60 seconds
+Calls to reception
+Every order
+Near zero
+Lost or wrong chits
+Common
+Eliminated
+Image-rich menu
+Not supported
+Built-in
+Multi-currency display
+Not supported
+TZS / USD
+Front-desk approval queue
+None
+Built-in
+Stay-bound PIN protection
+Not supported
+Built-in
+Posts to room folio automatically
+Not supported
+Built-in
+Reserve a table from the same screen
+Not supported
+Built-in
+VAT applied post-discount, TRA-ready
+Spreadsheet at month-end
+Built-in
+
+FAQ
+
+What every F&B manager asks first.
+What stops a guest from ordering 12 bottles of whisky as a prank?
+What happens if no one is at the front desk to approve?
+Can guests reserve a table from the same QR?
+What if the QR sticker is damaged or replaced?
+How do guests pay?
+Does it work in multiple languages?
+
+“Guests order more when ordering is silent and visual. Operators see a 20–40% room-service revenue lift in the first month.”
+
+RELATED
+
+More of Food & Beverage.
+View category
+Restaurant & Bar POS
+
+Settle to cash, card, mobile money, or the room.
+
+Learn more
+Kitchen Display
+
+Every ticket, in front of the chef.
+
+Learn more
+Table Management
+
+Sit, open tabs, split, turn.
+
+Learn more
+See Digital Guest Menu on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

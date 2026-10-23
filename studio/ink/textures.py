@@ -67,4 +67,6 @@ wash("wash-dusk", (176, 110, 214), w=1100, h=800, seed_shift=7, edge=0.35, sprea
 wash("wash-rose", (226, 150, 196), w=800, h=600, seed_shift=8, edge=0.4)
 # the cut: one big violet bloom that grows past the frame
 wash("veil", (128, 98, 226), w=1400, h=1400, seed_shift=9, edge=0.5, spread=0.47)
+wash("veil-teal", (70, 176, 160), w=1400, h=1400, seed_shift=10, edge=0.5, spread=0.47)
+wash("veil-blue", (88, 132, 220), w=1400, h=1400, seed_shift=11, edge=0.5, spread=0.47)
 print("ok", sorted(p.name for p in OUT.iterdir()))

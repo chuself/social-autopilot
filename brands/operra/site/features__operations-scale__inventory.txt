@@ -1,0 +1,157 @@
+https://operra.tech/features/operations-scale/inventory
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Operations & Scale
+Stock that's always reconciled.
+Operations & Scale
+Stock that's always reconciled.
+
+From a bottle on the bar to a 40-line PO — one ledger.
+
+Operra tracks every product across every outlet, deducts it from recipes when items are sold, and reconciles against purchase orders, transfers and physical counts. The number on the screen matches the number in the storeroom.
+
+No more 'where did the bottle go?' meetings on Monday morning.
+
+See it in your property
+Chat on WhatsApp
+
+THE STORY
+
+The bar that stopped losing 14% a month.
+
+A 60-cover beach restaurant ran on Excel. The bar manager counted stock on Sunday nights and the variance — between what the POS sold and what the shelves showed — was 11–18% every week. Nobody knew if it was theft, breakage, free pours, or just bad counting.
+
+Operra was switched on with recipes mapped to every cocktail and dish. The POS now deducts ingredients as orders are sent to the kitchen. Purchase orders, supplier deliveries and inter-outlet transfers all post to the same ledger.
+
+By the end of month one, the unexplained variance was 1.2%. By month three it was under 0.4% and the bar manager had a real conversation about pour control instead of a guess.
+
+WHAT IT GIVES YOU
+
+Built for how operators actually work.
+Recipe-based deduction
+
+Sell a mojito, lose 50ml of rum, 30ml of lime, 2 sprigs of mint — automatically, the instant the ticket fires.
+
+Purchase orders & suppliers
+
+Issue POs, capture deliveries against them, track partial receipts and supplier price history per SKU.
+
+Inter-outlet transfers
+
+Move stock between bar, kitchen, minibar and storeroom with a two-sided audit trail. Nothing disappears in transit.
+
+Counts & variance reports
+
+Mobile-friendly stock takes with blind counts, variance flags and a one-click adjustment workflow.
+
+Low-stock alerts
+
+Per-SKU reorder points trigger alerts to the procurement manager — before the chef walks in needing tomatoes.
+
+Barcode-ready
+
+Scan in receipts, scan during counts. Bulk-import your product catalogue from a spreadsheet in one go.
+
+BY THE NUMBERS
+
+What operators see in the first 90 days.
+0%
+
+AVG. VARIANCE REDUCTION
+
+0
+
+RECIPES MAPPED PER OUTLET
+
+0.0h
+
+PO CYCLE TIME
+
+0%↓
+
+STOCKOUTS VS PRIOR MONTH
+
+PROCUREMENT, END TO END
+
+From requisition to receipt — one thread.
+
+Outlet raises a requisition. Procurement approves and converts to a PO. Supplier delivers — partial or full — and you receive against the PO line by line. Discrepancies are flagged. Invoices match. Nothing slips through.
+
+COMPARED TO THE ALTERNATIVE
+
+What changes when you switch.
+CAPABILITY
+EXCEL / LEGACY STOCK BOOK
+OPERRA
+Recipe-based deduction
+Not supported
+Built-in, per outlet
+POS posts to stock in real time
+Not supported
+Built-in
+Purchase orders & receiving
+Email + paper
+First-class workflow
+Inter-outlet transfers
+Manual ledger
+Two-sided, audited
+Blind stock counts on mobile
+Not supported
+Built-in
+Low-stock alerts per SKU
+Not supported
+Built-in
+Supplier price history
+Lost in inboxes
+Per SKU, per supplier
+Bulk catalogue import
+Not supported
+CSV wizard
+
+THE HARD QUESTIONS
+
+What operators ask before they switch.
+Do recipes have to be perfect on day one?
+What about non-recipe items — minibar, cigarettes, retail?
+Can suppliers see the PO?
+How do you handle yields and waste?
+Does this work offline?
+
+“If the POS knows you sold it, the storeroom knows you used it. That's the whole idea.”
+
+Stop losing money you can't explain.
+
+Book a demo and we'll map your three biggest variance items — live, on a call.
+
+Get Started
+See Multi-Property
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

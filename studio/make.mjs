@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { compose, validateBrief } from "./compose.mjs";
 import { pauses } from "./timing.mjs";
 import { renderSfx, VOCABULARY } from "./sfx.mjs";
@@ -28,6 +29,7 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
   const dir = work ?? path.join(ROOT, "state", "frames", "studio", brief.id ?? "reel");
   mkdirSync(dir, { recursive: true });
   const brand = { ...JSON.parse(readFileSync(path.join(ROOT, "brands", brandId, "brand.json"), "utf8")), id: brandId };
+  if (brief.style === "ink") return makeInk(brief, brand, dir, { out, voice, fps, reuse, pageOnly });
 
   // Images: existing files are used as they are; prompts go to MOSS together.
   const jobs = [];
@@ -57,13 +59,7 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
   for (const s of scenes) if (s.image) s.image = `file:///${s.image.replace(/\\/g, "/")}`;
 
   // Voice: given, or Alice's own TTS from the narration.
-  let voiceFile = voice ?? (reuse && existsSync(path.join(dir, "voice.mp3")) ? path.join(dir, "voice.mp3") : null);
-  if (!voiceFile) {
-    if (!brief.narration) throw new Error("no --voice and no narration in the brief");
-    const { speak } = await import("../src/audio.js");
-    voiceFile = await speak(brief.narration, brief.language, path.join(dir, "voice.mp3"));
-    if (!voiceFile) throw new Error("voiceover failed");
-  }
+  const voiceFile = await voiceFor(brief, dir, voice, reuse);
   const v = await pauses(voiceFile);
 
   const reel = compose({ ...brief, scenes }, v, brand);
@@ -76,15 +72,65 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
     images: scenes.map((s) => (s.imagePrompt ? { prompt: s.imagePrompt, seed: s.imageSeed } : null)) };
   writeFileSync(path.join(dir, "reel.json"), JSON.stringify(meta, null, 1));
   if (pageOnly) return { ...meta, page, dir };
-  const sfx = await renderSfx(reel.cues, reel.duration, path.join(dir, "sfx.wav"));
+  await finish(page, voiceFile, reel.cues, reel.duration, dir, out, fps);
+  return { ...meta, dir };
+}
+
+async function voiceFor(brief, dir, voice, reuse) {
+  let voiceFile = voice ?? (reuse && existsSync(path.join(dir, "voice.mp3")) ? path.join(dir, "voice.mp3") : null);
+  if (!voiceFile) {
+    if (!brief.narration) throw new Error("no --voice and no narration in the brief");
+    const { speak } = await import("../src/audio.js");
+    voiceFile = await speak(brief.narration, brief.language, path.join(dir, "voice.mp3"));
+    if (!voiceFile) throw new Error("voiceover failed");
+  }
+  return voiceFile;
+}
+
+async function finish(page, voiceFile, cues, duration, dir, out, fps) {
+  const sfx = await renderSfx(cues, duration, path.join(dir, "sfx.wav"));
   const mix = path.join(dir, "mix.m4a");
   // A mono voice is copied to both channels at unity: amix's own upmix would
   // quietly lower it by 3 dB, and the voice is the one thing not to touch.
   execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", voiceFile, "-i", sfx,
     "-filter_complex", `[0:a]aresample=44100,pan=stereo|c0=c0|c1=c0,apad[v];[1:a]volume=${SFX_BUS}[s];[v][s]amix=inputs=2:normalize=0:duration=longest[a]`,
-    "-map", "[a]", "-t", String(reel.duration), "-c:a", "aac", "-b:a", "192k", mix]);
-
+    "-map", "[a]", "-t", String(duration), "-c:a", "aac", "-b:a", "192k", mix]);
   await renderPage(page, mix, out, { fps });
+}
+
+// Ink & wash: drawn in code, so no MOSS. The page writes its own cue list as
+// its timeline is built; it is read back from the page before the sound is made.
+async function makeInk(brief, brand, dir, { out, voice, fps, reuse, pageOnly }) {
+  const { composeInk } = await import("./ink/engine.mjs");
+  const { chromium } = await import("playwright");
+  const url = (p) => pathToFileURL(path.resolve(ROOT, p)).href;
+  const voiceFile = await voiceFor(brief, dir, voice, reuse);
+  const v = await pauses(voiceFile);
+  const reel = composeInk(brief, v, brand, {
+    tex: url("studio/ink/tex"), gsap: url("studio/assets/gsap.min.js"),
+    logo: url(path.join("brands", brand.id, brand.logoLight ?? "assets/logo-light.png")),
+    fonts: (wt) => url(`brands/${brand.id}/assets/fonts/inter-latin-${wt}-normal.woff2`),
+  });
+  const page = path.join(dir, "page.html");
+  writeFileSync(page, reel.html);
+  const b = await chromium.launch();
+  let cues;
+  try {
+    const p = await b.newPage();
+    const errors = [];
+    p.on("pageerror", (e) => errors.push(e.message));
+    await p.goto(pathToFileURL(page).href);
+    cues = await p.evaluate(() => window.REEL_CUES);
+    if (errors.length || !cues) throw new Error(`ink page failed: ${errors.join("; ") || "no cues"}`);
+  } finally {
+    await b.close();
+  }
+  for (const c of cues) if (!VOCABULARY[c.type]) throw new Error(`cue ${c.type} has no meaning`);
+  const meta = { id: brief.id, out, style: "ink", look: reel.look, duration: reel.duration, cuts: reel.cuts, joins: reel.joins, ledger: reel.ledger, cues, voice: voiceFile,
+    windows: reel.windows, endAt: reel.endAt, endVeil: true, allowed: reel.allowed, imageFiles: brief.scenes.map(() => null), images: brief.scenes.map(() => null) };
+  writeFileSync(path.join(dir, "reel.json"), JSON.stringify(meta, null, 1));
+  if (pageOnly) return { ...meta, page, dir };
+  await finish(page, voiceFile, cues, reel.duration, dir, out, fps);
   return { ...meta, dir };
 }
 

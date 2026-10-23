@@ -1,0 +1,675 @@
+https://operra.tech/features/front-office/reservations
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Front Office
+Reservations
+managix.operra.tech/reservations
+CAESAR'S
+Front Desk
+Reservations
+Guest Stay
+Room Operations
+Housekeeping
+Restaurant
+Finance & Folios
+Reports
+Audit Center
+
+Caesar's Palace Hotel
+
+New Reservation
+Search by guest, phone, email, booking #, room…
+Reservations
+
+Visual room availability & booking management
+
+TOTAL
+
+0
+
+RESERVED
+
+0
+
+IN HOUSE
+
+0
+
+OVERDUE
+
+0
+
+Room Layout
+May 3 → May 4
+Avail
+Reserved
+Overdue
+Maint
+101
+
+Standard
+
+102
+
+Standard
+
+219
+
+Premium
+
+220
+
+Premium
+
+221
+
+Premium
+
+222
+
+Premium
+
+223
+
+Premium
+
+224
+
+Premium
+
+109
+
+Standard
+
+110
+
+Standard
+
+111
+
+Standard
+
+112
+
+Standard
+
+113
+
+Standard
+
+114
+
+Standard
+
+115
+
+Standard
+
+116
+
+Standard
+
+117
+
+Standard
+
+118
+
+Standard
+
+Live · 31 reservations on the board
+
+SEARCH ANY BOOKING
+
+Fuzzy search across guest, phone, room and code.
+
+Front Office · Operra HMS
+Reservations
+
+Every booking, captured and accountable.
+
+A live room grid, status-aware filters, and group bookings handled in one screen. Quotes convert to reservations in a click — with the audit trail attached. No double-bookings, no 'I thought you confirmed it.'
+
+0
+
+ROOMS
+
+0
+
+RESERVED
+
+0
+
+IN-HOUSE
+
+0
+
+OVERDUE
+
+Book a tailored demo
+Chat on WhatsApp
+TRY
+Search any booking
+Reserved tonight
+Quote → Reservation
+Tap a room
+Group bookings
+
+SEARCH LAB
+
+Find any booking in two keystrokes.
+
+Status pills, fuzzy search across guest, phone, room and booking code, and a Cards/Table swap that respects how your shift actually works.
+
+managix.operra.tech/reservations/search
+Search by guest name, phone, email, booking #, room…
+All (31)
+Pending (5)
+Confirmed (2)
+In House (11)
+Out (13)
+Cancelled (0)
+More Filters
+Found 5 reservations
+Check-in
+Cards
+Table
+B2627
+Pending
+
+Hussein Hassan
+
+Room 306 · 1n · Apr 29 → Apr 30
+
+300,000
+Due 300,000
+Check In
+B2630
+Confirmed
+
+Rama Said
+
+Room 310 · 1n · Apr 28 → Apr 29
+
+300,000
+Due 300,000
+B2631
+Out
+
+Rama Said
+
+Room 102 · 2n · Apr 27 → Apr 29
+
+415,000
+Paid
+B2628
+In House
+
+Keith Flannigan
+
+Room 122 · 1n · Apr 27 → Apr 28
+
+267,000
+Due 67,000
+
+Tap any card — the panel explains exactly what happens next.
+
+Pending
+B2627
+
+Hussein Hassan
+
+Room 306 · 1n · Apr 29 → Apr 30
+
+AMOUNT
+
+300,000
+
+PAID
+
+0
+
+DUE
+
+300,000
+
+Pending — guest confirmed by phone, deposit not yet posted. Click-to-check-in is gated until the folio shows a positive payment or a manager override.
+
+B2627 · Hussein
+B2630 · Rama
+B2631 · Rama
+B2628 · Keith
+B2623 · Walk-in
+
+ON EVERY DEVICE
+
+Take a booking from the lobby couch.
+
+The same room grid, redrawn for tablet and phone — sticky footers, safe-area padding and one-thumb workflows. Light or dark, your team's choice.
+
+9:41
+100%
+CAESAR'S
+6d left
+J
+
+Reservations
+
+🛏 Total
+
+31
+
+📅 Reserved
+
+7
+
+👥 In House
+
+11
+
+⚠ Overdue
+
+7
+
+Select Dates
+May 3
+›
+May 4
+1N
+2N
+3N
+7N
+Room Layout
+1
+2
+3
+4
+5
+
+101
+
+Standard
+
+102
+
+Standard
+
+219
+
+Premium
+
+220
+
+Premium
+
+221
+
+Premium
+
+222
+
+Premium
+
+223
+
+Premium
+
+224
+
+Premium
+
+109
+
+Standard
+
+110
+
+Standard
+
+111
+
+Standard
+
+112
+
+Standard
+
+113
+
+Standard
+
+114
+
+Standard
+
+115
+
+Standard
+
+116
+
+Standard
+
+Front Desk
+Bookings
+Rooms
+Finance
+Audit
+
+31 rooms across 5 floors — single source of truth
+
+DARK MODE
+
+9:41
+100%
+CAESAR'S
+6d left
+J
+
+Reservations
+
+🛏 Total
+
+31
+
+📅 Reserved
+
+7
+
+👥 In House
+
+11
+
+⚠ Overdue
+
+7
+
+Select Dates
+May 3
+›
+May 4
+1N
+2N
+3N
+7N
+Room Layout
+1
+2
+3
+4
+5
+
+101
+
+Standard
+
+102
+
+Standard
+
+219
+
+Premium
+
+220
+
+Premium
+
+221
+
+Premium
+
+222
+
+Premium
+
+223
+
+Premium
+
+224
+
+Premium
+
+109
+
+Standard
+
+110
+
+Standard
+
+111
+
+Standard
+
+112
+
+Standard
+
+113
+
+Standard
+
+114
+
+Standard
+
+115
+
+Standard
+
+116
+
+Standard
+
+Front Desk
+Bookings
+Rooms
+Finance
+Audit
+
+31 rooms across 5 floors — single source of truth
+
+LIGHT MODE
+
+BOOKING FLOW
+
+From a phone call to a paid stay — in six clean steps.
+
+Each step is one screen, with the next action obvious. Status pills, balance math and audit trail are always live.
+
+managix.operra.tech/front-desk · Quote
+Step 1 of 6 · Quote
+Send a quote
+
+Send a quote
+
+Build a quotation with line-item rates, discounts and a branded PDF — sent on WhatsApp or email in under a minute.
+
+Live action
+Quote
+
+FOLIO
+
+#A1029
+
+ROOM
+
+211
+
+GUEST
+
+K. Flannigan
+
+TRY A QUICK ACTION
+
+New Reservation
+Group Booking
+Convert Quote
+Search Bookings
+
+TIMELINE
+
+Quote
+Send a quote
+Convert
+Convert to reservation
+Group
+Group booking
+Check-in
+Check the guest in
+In-house
+Charge mid-stay
+Check-out
+Settle & close
+Quote
+Convert
+Group
+Check-in
+In-house
+Check-out
+0
+
+RESERVATIONS ON THE BOARD
+
+0
+
+DOUBLE-BOOKINGS
+
+0s
+
+WALK-IN TO ROOM
+
+0
+
+GROUP ROOMS IN ONE SCREEN
+
+“If two of your receptionists can take a booking at the same time and not see each other, it isn't a system — it's a race condition.”
+Quote in TSh, USD on tap
+
+Quotations and confirmations render in shillings by default, with a one-tap USD inversion for international guests.
+
+Tour-operator AR
+
+Confirm against a corporate or operator account — the folio settles to AR, not cash, with a clean audit trail.
+
+M-Pesa & Tigo deposits
+
+Mobile-money references attach to the reservation at time of deposit — reconciliation in seconds, not hours.
+
+Offline-safe bookings
+
+Take a reservation without internet — it writes to the local mirror and reconciles the moment you're back online.
+
+COMPARED TO THE WAY MOST PROPERTIES TAKE BOOKINGS TODAY
+
+Spreadsheet vs. live grid.
+CAPABILITY
+SPREADSHEET / PHONE LOG
+OPERRA RESERVATIONS
+Double-booking risk
+Human memory
+Hard conflict block
+Group bookings
+Separate sheet
+One parent folio
+Quote → Reservation
+Re-keyed by hand
+One click, audit-traced
+Status visibility
+Coloured cells
+Live pills + filters
+Search by guest, phone or room
+Ctrl-F on a sheet
+Instant, scoped, fuzzy
+Mobile reception
+—
+Full grid in your hand
+Audit trail
+—
+Per-actor, tamper-evident
+Offline
+—
+Reservations keep flowing
+
+QUESTIONS, ANSWERED
+
+What every reservations manager asks first.
+Can two receptionists book the same room at the same time?
+How do group bookings work?
+Can I take a deposit on a quotation?
+Can I take a booking offline?
+Can I see who confirmed a reservation?
+Do you support OTA channels?
+
+BUILT FOR
+
+Owner
+
+See pickup and pace on your phone — without phoning the front office.
+
+Reservations manager
+
+Group bookings, quotes and conflicts — handled in one screen, accountable to a name.
+
+Receptionist
+
+Find any booking in two keystrokes. Convert, check in or settle without leaving the page.
+
+RELATED
+
+All
+
+Front Desk
+
+Live KPIs and the next action, on one screen.
+
+Guest Stay
+
+Every in-house guest in one place.
+
+Guest CRM
+
+Every guest, remembered.
+
+See Reservations on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

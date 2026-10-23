@@ -9,6 +9,7 @@
 import path from "node:path";
 import { setUsageContext } from "./usage.js";
 import { writePost, writeCarousel, nextPillar, findUnapprovedFigures, cityForIndex } from "./brain.js";
+import { pickTopic, offTopicNetwork } from "./topics.js";
 import { generateBackgrounds } from "./background.js";
 import { renderPoster } from "./render.js";
 import { readQueue, writeQueue, recentPosts } from "./queue.js";
@@ -187,13 +188,27 @@ for (let n = 0; n < timetable.length; n++) {
   if (onCampaign) console.log(`  slot ${n + 1} belongs to campaign "${campaign.name}"`);
 
   // Meter: the writing call is charged to the post it produces.
-  setUsageContext({ post: `${brandId}-${when.toISOString().slice(0, 10)}-${String(hour).padStart(2, "0")}-${pillar}` });
+  const slotId = `${brandId}-${when.toISOString().slice(0, 10)}-${String(hour).padStart(2, "0")}-${pillar}`;
+  setUsageContext({ post: slotId });
+  // The subject is chosen here, not by the writer: one feature and one story
+  // angle, rotated across every feature page on the site. A campaign keeps
+  // its own subject.
+  const topic = onCampaign ? null : pickTopic(recent, { brandId, pillar, seed: slotId });
+  if (topic) console.log(`  slot ${n + 1}: ${pillar} · ${topic.feature.id} · ${topic.angle}`);
+  const write = (extra) => {
+    const slot = { brandId, pillar, recent, note: [slotNote, extra].filter(Boolean).join("\n"), city, topic, language: onCampaign ? campaign.language ?? undefined : undefined };
+    return format === "carousel" ? writeCarousel(slot) : writePost({ ...slot, format });
+  };
   let post;
   try {
-    post =
-      format === "carousel"
-        ? await writeCarousel({ brandId, pillar, recent, note: slotNote, city, language: onCampaign ? campaign.language ?? undefined : undefined })
-        : await writePost({ brandId, pillar, recent, note: slotNote, city, format, language: onCampaign ? campaign.language ?? undefined : undefined });
+    post = await write();
+    // The rut this replaced: connectivity in posts that are not about it.
+    if (offTopicNetwork(post, topic)) {
+      console.warn(`  slot ${n + 1}: wrote about connectivity on a ${topic.feature.id} post — rewriting once`);
+      const again = await write("Your first draft talked about internet or connectivity. This post is not about that: remove it completely and stay on the subject.");
+      if (!offTopicNetwork(again, topic)) post = again;
+      else console.warn(`  slot ${n + 1}: still mentions connectivity after the rewrite`);
+    }
   } catch (err) {
     console.error(`slot ${n + 1} (${pillar}): brain failed — ${err.message}`);
     continue;

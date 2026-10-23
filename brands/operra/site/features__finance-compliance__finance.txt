@@ -1,0 +1,305 @@
+https://operra.tech/features/finance-compliance/finance
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Finance & Compliance
+Finance & Folios
+managix.operra.tech/finance
+CAESAR'S
+Front Desk
+Reservations
+Guest Stay
+Room Operations
+Housekeeping
+Restaurant
+Events
+Credit Accounts
+Finance & Folios
+Reports
+Audit Center
+Settings
+
+Finance & Operations
+
+P&L, folios, audits, credit accounts, and accountability reports
+
+P&L
+Folios
+Credit
+Night Audit
+Reports
+Audit Log
+Ghost
+
+Profit & Loss Statement
+
+Apr 01, 2026 – Apr 30, 2026
+
+Period
+Export PDF
+REVENUE
+
+TZS 17,974,500
+
+EXPENSES
+
+TZS 405,000
+
+NET PROFIT
+
+TZS 17,569,500
+
+MARGIN
+
+TZS 97.7%
+
+Revenue Statement
+TZS 17,974,500
+Room Revenue
+97.6%
+TZS 17,550,000
+Restaurant
+1.3%
+TZS 239,500
+Spa & Wellness
+0.8%
+TZS 150,000
+Laundry
+0.1%
+TZS 20,000
+P&L · April 2026 · TSh 17.97M revenue
+
+LIVE REVENUE
+
+Every folio settle, POS post and event payment rolls into the P&L instantly.
+
+Finance & Compliance · Operra HMS
+Finance & Folios
+
+Unified ledger, one source of truth.
+
+One ledger for the whole property. Sequential folios, multi-currency posting, idempotent charges and post-discount 18% VAT — every TSh tracked from charge to settlement.
+
+8.54
+
+REVENUE (M)
+
+8.34
+
+NET PROFIT (M)
+
+46.4
+
+MARGIN %
+
+11
+
+FOLIOS
+
+Book a tailored demo
+Chat on WhatsApp
+TRY
+Live revenue
+Net profit at a glance
+One ledger · seven lenses
+Export PDF in 1 click
+
+ONE LEDGER · FOUR LENSES
+
+P&L, folios, credit and the night audit — one source of truth.
+
+Every charge posts once. Every view stays live. Switch tabs without losing context.
+
+P&L
+Folios
+Credit
+Night Audit
+
+REVENUE
+
+TZS0
+
+EXPENSES
+
+TZS0
+
+NET PROFIT
+
+TZS0
+
+MARGIN
+
+0.0%
+
+Revenue Statement
+TZS 17,974,500
+Room Revenue
+97.6%
+TZS 17,550,000
+Restaurant
+1.3%
+TZS 239,500
+Spa & Wellness
+0.8%
+TZS 150,000
+Laundry
+0.1%
+TZS 20,000
+Parking
+0.1%
+TZS 15,000
+Total Revenue
+TZS 17,974,500
+Operating Expenses
+TZS 405,000
+Insurance
+49.4%
+TZS 200,000
+Maintenance
+37.0%
+TZS 150,000
+Utilities
+8.6%
+TZS 35,000
+Supplies
+4.9%
+TZS 20,000
+Total Expenses
+TZS 405,000
+0%
+
+BOOKS CLOSED
+
+0%
+
+VAT COMPLIANCE
+
+0s
+
+PDF EXPORT
+
+0
+
+POSTING DRIFT
+
+“Every cashier, every folio, every event balance — settled to one ledger, audit-trailed line by line.”
+Sequential folios
+
+FL-numbered, gap-free. Auditors love it.
+
+Idempotent posting
+
+Re-tries are safe. Charges post once or never — no doubles.
+
+Post-discount VAT
+
+18% applied after discount, on every line, TRA-compliant.
+
+Branded export
+
+Your logo on every P&L, folio and statement PDF.
+
+OPERRA VS THE OLD WAY
+
+Stop reconciling spreadsheets at midnight.
+CAPABILITY
+LEGACY / PAPER
+OPERRA
+Live P&L
+Excel pivot, end-of-month
+Live, every posting
+Folio numbering
+Manual, gap-prone
+Sequential, gap-free
+VAT calculation
+Manual per-invoice
+Post-discount, automatic
+Multi-currency
+Manual conversion
+TZS native, USD invertible
+Audit trail
+Nonexistent
+Tamper-evident, per actor
+Night audit
+2 hours of staff time
+Transaction-safe automation
+
+FAQ
+
+Common questions about Finance & Folios.
+How are folios numbered?
+How does post-discount VAT work?
+Can I post in USD?
+What does idempotent posting mean for me?
+Is the night audit really hands-off?
+Can I export branded PDFs?
+
+BUILT FOR
+
+Finance Lead
+
+Live P&L and audit-ready folios — close the day with confidence.
+
+Front Desk
+
+Charge, settle, transfer — without leaving the guest stay.
+
+Owner
+
+See revenue, profit and margin live — from anywhere.
+
+RELATED
+
+All
+
+Reports Hub
+
+Every report your auditor will ask for.
+
+Audit Center
+
+Tamper-evident logs.
+
+Night Audit
+
+The shift that runs itself.
+
+See Finance & Folios on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+See Finance & Folios on your property
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational

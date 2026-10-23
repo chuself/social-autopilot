@@ -1,0 +1,448 @@
+https://operra.tech/features/rooms-housekeeping/room-operations
+
+Features
+Why Operra
+Pricing
+EN
+SW
+Sign in
+Get Started
+Features
+Rooms & Housekeeping
+Room Operations
+Rooms & Housekeeping · Operra HMS
+Room Operations
+
+Floor map. Live. By room.
+
+Every tower, every room, every status — on one screen. Filter by status or floor, transfer guests, block rooms and push to housekeeping without leaving the page.
+
+Book a tailored demo
+Chat on WhatsApp
+Live · 5 towers · 24 rooms shown
+managix.operra.tech/room-operations
+CAESAR'S
+Front Desk
+Reservations
+Guest Stay
+Room Operations
+Housekeeping
+Finance & Folios
+
+Caesar's Palace Hotel
+
+New Reservation
+Check In
+Guest Stay
+Manage Folios
+Room Operations
+
+Manage room types, rooms, and housekeeping in one place
+
+Rooms
+Room Types
+
+Rooms
+
+Manage your hotel rooms
+
+Quick Actions
+Add Room
+Search by room number…
+All Statuses
+All Floors
+Julius Tower
+Augustus Tower
+Octavius Tower
+Nobu Hotel
+Palace Tower
+
+Julius Tower
+
+30 of 24 spaces used · -6 available
+
+6 × 4 grid
+
+101
+102
+219
+220
+221
+222
+223
+224
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+Available
+Occupied
+Cleaning
+Maintenance
+
+LIVE BY-ROOM STATUS
+
+Each tile is the truth: occupied, cleaning, maintenance or out of service — updated the moment a folio posts or a maid signs off.
+
+AT A GLANCE
+
+Five colours. The whole property.
+
+The legend is the language. Available, occupied, cleaning, maintenance and out of service — counted live across every tower.
+
+0
+
+AVAILABLE
+
+0
+
+OCCUPIED
+
+0
+
+CLEANING
+
+0
+
+MAINTENANCE
+
+0
+
+OUT OF SERVICE
+
+FLOOR MAP
+
+Pick a tower. Pick a room. Act.
+
+Tap any tile to drop the room into the side panel — guest, type, last cleaned, next arrival and a one-click transfer. Filter the grid by status to focus the shift.
+
+Julius Tower
+Augustus Tower
+Octavius Tower
+Nobu Hotel
+Palace Tower
+All
+Available
+Occupied
+Cleaning
+Maintenance
+Out of Service
+
+Julius Tower
+
+24 rooms
+
+101
+102
+219
+220
+221
+222
+223
+224
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+ROOM
+Occupied
+
+101
+
+Standard
+
+GUEST
+
+First Last
+
+LAST CLEANED
+
+Yesterday 09:42
+
+NEXT ARRIVAL
+
+—
+
+Transfer
+Push to HK
+
+ROOM TYPES
+
+Categories, pricing and amenities — your way.
+
+Standard, Premium, Villa, Boutique, Suite — with TZS pricing per night, max guests and the amenity list that prints on the rate card.
+
+Premium
+
+Active
+
+0 TZS
+
+PER NIGHT
+
+3 max
+
+AMENITIES
+
+WiFi
+Air Conditioning
+TV
+Balcony
+Mini Bar
+Safe
+City View
+Bathtub
++5
+
+Created 09/04/2026
+
+Villa
+
+Active
+
+0 TZS
+
+PER NIGHT
+
+4 max
+
+AMENITIES
+
+WiFi
+Air Conditioning
+TV
+Balcony
+Safe
+Mini Bar
+City View
+Bathtub
++9
+
+Created 09/04/2026
+
+Nobu Hotel (Boutique)
+
+Active
+
+0 TZS
+
+PER NIGHT
+
+3 max
+
+AMENITIES
+
+WiFi
+Air Conditioning
+TV
+Mini Bar
+Safe
+Balcony
+Bathtub
+Work Desk
++6
+
+Created 09/04/2026
+
+Luxury Suites
+
+Active
+
+0 TZS
+
+PER NIGHT
+
+4 max
+
+AMENITIES
+
+WiFi
+Air Conditioning
+TV
+Balcony
+Mini Bar
+Safe
+Sea View
+Bathtub
++5
+
+Created 09/04/2026
+
+Standard
+
+Active
+
+0 TZS
+
+PER NIGHT
+
+2 max
+
+AMENITIES
+
+WiFi
+Air Conditioning
+TV
+Mini Bar
+Safe
+Work Desk
+Shower
+
+Created 09/04/2026
+
+COMPLIANCE BUILT-IN
+
+Per-property RLS, audit-stamped status changes.
+
+Room moves, status flips and bulk actions are all role-gated and audit-traced — and they keep working when the internet doesn't.
+
+RLS by property
+Audit-stamped status
+Role-gated bulk actions
+Offline-safe room moves
+0%
+
+ROOMS ACCOUNTED FOR
+
+0%
+
+FASTER ROOM TURNS
+
+0
+
+TOWERS, ONE MAP
+
+0
+
+MISSED INSPECTIONS
+
+“If you can't see every room from one screen, you can't run a property — you're running five spreadsheets and a prayer.”
+Multi-tower native
+
+Julius, Augustus, Octavius, Nobu, Palace — switch towers without losing your filters or your selection.
+
+TZS rate cards
+
+Every room type carries TZS pricing per night and max guests, ready for the channel manager and the printed rate card.
+
+Tablet-friendly grid
+
+The map redraws cleanly on a tablet at the front desk and a phone in the supervisor's pocket.
+
+Offline-safe status changes
+
+Maids tap clean on the floor — the queue holds the change and reconciles when the network returns.
+
+COMPARED TO WHITEBOARDS & SPREADSHEETS
+
+One live map vs. five separate boards.
+CAPABILITY
+WHITEBOARD + SPREADSHEET
+OPERRA ROOM OPERATIONS
+See every room at once
+Walk the floor with a clipboard
+Live grid by tower
+Filter by status
+Re-sort the spreadsheet
+Chip filter in one tap
+Transfer a guest
+Re-write the folio by hand
+One click, history kept
+Block a row of rooms
+Sticky note on the desk
+Bulk block with audit log
+Push to housekeeping
+Radio call & paper list
+Auto-pushed with priorities
+Multi-tower view
+Swap binders
+Tower chips, one screen
+
+QUESTIONS, ANSWERED
+
+What every supervisor asks first.
+Can I add a new tower or wing?
+What happens to status changes if the internet drops?
+Does blocking a room stop new bookings on it?
+Can I see room history per stay?
+Is the map usable on a phone?
+
+BUILT FOR
+
+Owner
+
+100% of rooms accounted for, every shift — without asking the front-desk lead for a screenshot.
+
+Front-desk lead
+
+Filter the map, transfer a guest and block a room without leaving the page or losing context.
+
+Supervisor
+
+Bulk actions, audit-stamped — approve transfers and blocks from a tablet on the floor.
+
+RELATED
+
+All
+
+Housekeeping
+
+Daily boards and inspection workflows.
+
+See Room Operations on your property.
+
+We'll tailor the demo to your exact workflow. Onsite or online.
+
+Get Started
+Chat on WhatsApp
+See it on your property
+Book a tailored demo
+WhatsApp
+TAMPER-EVIDENT AUDIT
+30-DAY OFFLINE OPERATION
+TSH-NATIVE · 18% VAT COMPLIANT
+1.4S AVG RESPONSE
+BUILT FOR AFRICAN HOSPITALITY
+
+The all-in-one management system for modern hospitality. Calm, complete, continuous.
+
+PRODUCT
+
+Features
+Why Operra
+Pricing
+
+COMPANY
+
+For Owners
+Contact
+WhatsApp
+Privacy
+
+© 2026 Operra. All rights reserved.
+
+All systems operational
