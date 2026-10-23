@@ -6,6 +6,7 @@
  * file server-side, exactly like the posters.
  */
 import path from "node:path";
+import { upstreamHistory } from "./upstream.js";
 import {
   readQueue, writeQueue, dueReels, hoursLate, noteSkip, clearSkip, MAX_LATE_HOURS,
 } from "./queue.js";
@@ -136,8 +137,11 @@ const caption = [post.caption, ctaLink(brand, post.id), (post.hashtags ?? []).jo
 const priorHistory = existsSync(path.join(ROOT, "state", "history.json"))
   ? JSON.parse(await readFile(path.join(ROOT, "state", "history.json"), "utf8"))
   : [];
+// ...and GitHub's history as it is NOW: this job's own copy can be older than
+// a post another job made a minute ago (src/upstream.js).
+const liveHistory = dryRun ? [] : await upstreamHistory();
 const alreadyPosted = (platform) =>
-  priorHistory.some((h) => h.id === post.id && h.platform === platform && h.postId !== "dry-run");
+  [...priorHistory, ...liveHistory].some((h) => h.id === post.id && h.platform === platform && h.postId !== "dry-run");
 
 const results = [];
 for (const [name, fn] of [
@@ -156,6 +160,17 @@ for (const [name, fn] of [
     // One platform failing must never stop the other.
     console.error(`  FAILED ${name}: ${err.message}`);
   }
+}
+
+// Every platform already had it: another job posted this reel. Close the slot
+// and stop, so nothing (TikTok included) goes out a second time.
+if (!dryRun && !results.length && ["instagram", "facebook"].every((p) => alreadyPosted(p))) {
+  console.log("  already posted by another run — marking it posted, nothing sent");
+  post.reel.status = "posted";
+  if (post.format === "reel") post.status = "posted";
+  clearSkip(post);
+  await writeQueue(queue);
+  process.exit(0);
 }
 
 if (!dryRun && !results.length) {

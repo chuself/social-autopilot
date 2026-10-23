@@ -55,7 +55,9 @@ export async function uploadMedia(file, key, contentType) {
     if (!String(res.headers.get("content-type")).startsWith(contentType)) throw new Error(`served as ${res.headers.get("content-type")}`);
     return url;
   } catch (err) {
-    console.warn(`  media store: could not upload ${key} (${String(err.message).slice(0, 120)}); keeping the Pages copy`);
+    // stderr carries AWS's actual reason; err.message alone was cut to the command line.
+    const why = String(err.stderr || err.message).trim().split("\n").filter(Boolean).slice(-2).join(" | ").slice(0, 300);
+    console.warn(`  media store: could not upload ${key} (${why}); keeping the Pages copy`);
     return null;
   }
 }

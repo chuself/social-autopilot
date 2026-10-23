@@ -109,6 +109,24 @@ for attempt in 1 2 3 4 5; do
     fi
   done
 
+  # history.json is the posting receipt and only ever grows, so it is MERGED,
+  # never overwritten: on 2026-10-23 putting our copy back erased the record of
+  # a post another job had just made, and the reel went out again.
+  if [ -f "$snap/state/history.json" ] && git cat-file -e "origin/$branch:state/history.json" 2>/dev/null; then
+    git show "origin/$branch:state/history.json" > "$snap/theirs-history.json" 2>/dev/null &&
+    node -e '
+      const fs = require("fs");
+      const read = (f) => { try { const x = JSON.parse(fs.readFileSync(f, "utf8")); return Array.isArray(x) ? x : []; } catch { return []; } };
+      const seen = new Set(), out = [];
+      for (const r of [...read(process.argv[2]), ...read(process.argv[1])]) {
+        const k = [r.id, r.platform, r.postId].join("|");
+        if (!seen.has(k)) { seen.add(k); out.push(r); }
+      }
+      out.sort((a, b) => String(a.postedAt ?? "").localeCompare(String(b.postedAt ?? "")));
+      fs.writeFileSync("state/history.json", JSON.stringify(out.slice(-200), null, 2));
+    ' "$snap/state/history.json" "$snap/theirs-history.json" && echo "  history.json merged with origin's"
+  fi
+
   sleep $((attempt * 3))
 done
 

@@ -9,6 +9,7 @@
  * Instagram fetches the image URL server-side, so publishing first always fails.
  */
 import { readFile, writeFile } from "node:fs/promises";
+import { upstreamHistory } from "./upstream.js";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { publisherFor } from "./publish/index.js";
@@ -95,8 +96,11 @@ if (!posts.length) {
  * hourly run then sees the slot as still pending and posts it a second time.
  * History is the receipt; check it before trusting the queue's status.
  */
+// Plus GitHub's history as it is now, not just this job's starting copy: a run
+// queued behind another works from an older checkout (src/upstream.js).
+const liveHistory = dryRun ? [] : await upstreamHistory();
 const alreadyPosted = (postId, platform) =>
-  history.some((h) => h.id === postId && h.platform === platform && h.postId !== "dry-run");
+  [...history, ...liveHistory].some((h) => h.id === postId && h.platform === platform && h.postId !== "dry-run");
 
 /**
  * An asset that is committed but not being served needs a Pages deploy, not a

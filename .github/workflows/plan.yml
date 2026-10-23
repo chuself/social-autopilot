@@ -27,7 +27,10 @@ jobs:
     environment:
       name: github-pages
     steps:
+      # Latest main, not the commit this run was triggered on: a run queued behind the
+      # autopilot-state lock otherwise works from a stale queue and reposts (2026-10-23).
       - uses: actions/checkout@v4
+        with: { ref: main }
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm }
       - run: npm ci --omit=dev || npm install --omit=dev
