@@ -11811,7 +11811,29 @@
     "createdAt": "2026-10-22T20:57:09.472Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1527802706
+    "bgSeed": 1527802706,
+    "reel": {
+      "file": "operra-2026-10-23-16-industry-note.mp4",
+      "beats": [
+        "Moshi peak season brings heavy trekking surges.",
+        "Track every staff action with audit trails.",
+        "Built specifically for Tanzanian property management.",
+        "Protect revenue while the mountain stays busy."
+      ],
+      "narration": "When peak trekking season hits Moshi, temporary staff join your team to handle the crowd. Operra keeps every transaction clear with automated audit trails and works reliably on low bandwidth. Protect your revenue effortlessly while the mountain is busy.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-23T10:05:58.323Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-23-20-feature-spotlight",
