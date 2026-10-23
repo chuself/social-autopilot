@@ -240,14 +240,14 @@ const SCENE = {
       return {
         bg: { lines: [], washes: [["wash-violet-b", 640, 20, 420, 420, 0.5], [c.pal.glow, 20, 600, 420, 400, 0.5]], actors: "" },
         mid: { lines: [{ d: phoneD, w: 3.2 }, { d: "M500 102 L580 102", w: 1.6 }], washes: [["wash-blue", 220, 120, 640, 780, 0.45]],
-          actors: `<path id="${S}-spark" class="spk" d="M350 330 C390 310 410 322 450 300 C490 276 510 296 550 268 C590 244 620 262 660 236 C700 216 716 222 736 206" stroke-width="3"/>` +
-            [0, 1, 2, 3, 4].map((i) => `<rect class="bar" id="${S}-bar${i}" x="${352 + i * 80}" y="470" width="46" height="0"/>`).join("") },
+          actors: `<path id="${S}-spark" class="spk" d="M350 300 C390 284 410 294 450 276 C490 258 510 272 550 252 C590 236 620 248 660 232 C700 220 716 222 736 214" stroke-width="3"/>` +
+            [0, 1, 2, 3, 4].map((i) => `<rect class="bar" id="${S}-bar${i}" x="${352 + i * 80}" y="440" width="46" height="0"/>`).join("") },
         fg: { lines: [], washes: [], actors: sparks(S, [[220, 260, 14], [880, 520, 16]]) },
-        over: `<div class="rep" id="${S}-rep"><div class="fhead">REPORTS</div><div class="rtitle">Reports Hub</div>
+        over: `<div class="rep" id="${S}-rep"><div class="fhead">REPORTS</div><div class="rtitle">Reports Hub</div><div class="rgap"></div>
           ${["Revenue · today, by outlet", "Occupancy · rooms, live", "Folio audit · every change", "Guests · arrivals"].map((r, i) => `<div class="rrow" id="${S}-rr${i}">${esc(r)}</div>`).join("")}</div>`,
         js: `draw(S,a+.15,.9);washes(S,a+.25,.3);words(S,a+.25);
           drawPath("#"+S+"-spark",a+.9,1.1,"draw");
-          ${[0, 1, 2, 3, 4].map((i) => `tl.to("#"+S+"-bar${i}",{attr:{height:${[40, 62, 50, 80, 100][i]},y:${470 - [40, 62, 50, 80, 100][i]}},duration:.6,ease:"power3.out"},a+1.3+${i}*.12);`).join("")}
+          ${[0, 1, 2, 3, 4].map((i) => `tl.to("#"+S+"-bar${i}",{attr:{height:${[40, 62, 50, 80, 100][i]},y:${440 - [40, 62, 50, 80, 100][i]}},duration:.6,ease:"power3.out"},a+1.3+${i}*.12);`).join("")}
           tl.fromTo("#"+S+"-rep .rrow",{opacity:0,x:24},{opacity:1,x:0,duration:.4,stagger:.18,ease:"power3.out",immediateRender:false},cue(a+1.9,"card"));`,
         life: sparkLife(2) + `css(S+"-mid",g(S+"-mid").style.transform+" translateY("+(14*Math.sin(t*1.3)).toFixed(1)+"px) rotate("+(1.1*Math.sin(t*.8)).toFixed(2)+"deg)");`,
         hide: [`#${S}-rep .rrow`],
@@ -476,11 +476,11 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .each{font-style:normal;font-size:17px;color:${INK_SOFT};margin-top:4px}
 .btot{display:flex;justify-content:space-between;font-size:28px;font-weight:700;padding-top:16px}
 .btot .bval{color:${TEAL_INK}}
-.rep{position:absolute;left:330px;top:150px;width:420px}
+.rep{position:absolute;left:330px;top:112px;width:420px}
 .rtitle{font-size:30px;font-weight:700;margin-bottom:14px}
 .rrow{font-size:20px;padding:14px 16px;margin-bottom:10px;border:1.8px solid ${INK};border-radius:12px;background:rgba(255,253,248,.7)}
 .rep{padding-top:0}
-.rep .rrow:first-of-type{margin-top:250px}
+.rep .rgap{height:280px}
 .desk{position:absolute;left:190px;top:200px;width:700px}
 .kpis{display:flex;gap:14px;margin-bottom:16px}
 .kpi{flex:1;border:2px solid ${INK};border-radius:12px;padding:14px 16px;background:rgba(255,253,248,.75)}
