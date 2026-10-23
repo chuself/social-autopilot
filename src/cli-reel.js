@@ -14,7 +14,8 @@ import { speak } from "./audio.js";
 import { renderReel, probeVideo } from "./video.js";
 import { readQueue, writeQueue, hoursLate, MAX_LATE_HOURS } from "./queue.js";
 import { readConfig } from "./config.js";
-import { appendFileSync, existsSync } from "node:fs";
+import { appendFileSync, existsSync, unlinkSync } from "node:fs";
+import { uploadMedia } from "./media-store.js";
 import { notify } from "./notify.js";
 
 /** Tell the workflow whether there is anything downstream to do. */
@@ -167,8 +168,17 @@ if (Number(probe.format?.duration) > 90) problems.push("longer than 90s");
 if (Number(probe.format?.size) > 300e6) problems.push("larger than 300MB");
 if (problems.length) throw new Error(`Reel rejected before upload: ${problems.join(", ")}`);
 
+// The MP4 goes to the media bucket, not into git. If that fails the file stays
+// in public/ and ships through Pages exactly as before.
+const url = await uploadMedia(videoFile, `reels/${post.id}.mp4`, "video/mp4");
+if (url) {
+  unlinkSync(videoFile);
+  console.log(`  stored outside git: ${url}`);
+}
+
 post.reel = {
   file: `${post.id}.mp4`,
+  ...(url ? { url } : {}),
   beats: studio ? studio.beats : script.beats,
   narration: studio ? studio.narration : script.narration,
   hasVoice: studio ? studio.hasVoice : Boolean(audio),

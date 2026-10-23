@@ -57,10 +57,10 @@ if (args.includes("--replace")) {
   const base = (process.env.PUBLIC_ASSET_BASE ?? "").replace(/\/$/, "");
   const builtReels = dropped.filter((p) => p.reel?.file && p.reel.status !== "posted");
   for (const p of builtReels) {
-    if (!base) break;
+    if (!base && !p.reel.url) continue;
     try {
       await sendVideo(
-        `${base}/${p.reel.file}`,
+        p.reel.url ?? `${base}/${p.reel.file}`,
         `🎬 <b>Made but never posted</b>\nThe routine changed before this one went out, so it is being dropped from the schedule. Here it is to post by hand if you want it.\n\n${p.headline ?? p.id}`
       );
     } catch (err) {

@@ -51,6 +51,12 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           HUB_TG_BASE: ${{ secrets.HUB_TG_BASE }}
           HUB_BOT_TOKEN: ${{ secrets.HUB_BOT_TOKEN }}
+          # The finished MP4 goes to the media bucket (src/media-store.js), not
+          # into git. Empty MEDIA_BUCKET = off: the reel ships through Pages.
+          MEDIA_BUCKET: ${{ vars.ALICE_MEDIA_BUCKET }}
+          MEDIA_REGION: eu-west-1
+          ALICE_MEDIA_KEY_ID: ${{ secrets.ALICE_MEDIA_KEY_ID }}
+          ALICE_MEDIA_SECRET: ${{ secrets.ALICE_MEDIA_SECRET }}
         run: node src/cli-reel.js "${{ inputs.post_id }}"
 
       # The MP4 must be publicly reachable before Instagram will fetch it.
@@ -76,8 +82,8 @@ jobs:
           # The one THIS run just built — newest builtAt. `.pop()` took the last
           # ready reel in file order, which with two reels waiting meant
           # confirming one file was live and then uploading a different one.
-          FILE=$(node -e "const q=require('./state/queue.json');const r=q.filter(x=>x.reel&&x.reel.status==='ready');if(!r.length){console.error('no reel marked ready');process.exit(1)}r.sort((a,b)=>new Date(b.reel.builtAt)-new Date(a.reel.builtAt));console.log(r[0].reel.file)")
-          URL="${{ vars.PUBLIC_ASSET_BASE }}/$FILE"
+          # Reels in the media bucket carry their own URL; older ones are on Pages.
+          URL=$(node -e "const q=require('./state/queue.json');const r=q.filter(x=>x.reel&&x.reel.status==='ready');if(!r.length){console.error('no reel marked ready');process.exit(1)}r.sort((a,b)=>new Date(b.reel.builtAt)-new Date(a.reel.builtAt));console.log(r[0].reel.url||('${{ vars.PUBLIC_ASSET_BASE }}/'+r[0].reel.file))")
           for i in $(seq 1 30); do
             CODE=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
             echo "attempt $i: $CODE  $URL"

@@ -68,7 +68,8 @@ if (!post) {
 
 console.log(`Slot ${eatOf(post.scheduledFor)} EAT selected out of ${ready.length} filmed reel(s).`);
 
-const videoUrl = `${base}/${post.reel.file}`;
+// Reels live in the media bucket now (src/media-store.js); older ones on Pages.
+const videoUrl = post.reel.url ?? `${base}/${post.reel.file}`;
 console.log(`Publishing reel: ${post.headline}`);
 console.log(`  ${videoUrl}`);
 
