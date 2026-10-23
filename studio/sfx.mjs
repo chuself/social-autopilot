@@ -30,6 +30,8 @@ export const VOCABULARY = {
   pop:    "a small chip or tag appearing",
   logo:   "the brand's own logo arriving on the end card",
   tap:    "the call-to-action button arriving",
+  sketch: "ink lines drawing themselves on paper (the ink & wash style)",
+  bloom:  "a watercolour veil spreading across a cut (the ink & wash style)",
 };
 
 // ── primitives ────────────────────────────────────────────────────────────
@@ -107,6 +109,27 @@ function sum(...parts) {
 // (a whoosh builds up to the cut; a thud starts on it).
 
 const SOUNDS = {
+  // A nib on paper: band-limited scratch whose pressure wanders, for as long as
+  // the lines are drawing. Quiet: it is texture under the voice, not an event.
+  sketch: (seed, o) => {
+    const d = o.dur ?? 1.4;
+    const n = filter(noise(d, seed), "bp", (p) => 1800 + 900 * Math.sin(p * 9), 1.2);
+    const r = lcg(seed + 7);
+    let pressure = 0.5;
+    for (let i = 0; i < n.length; i++) {
+      if (i % 400 === 0) pressure = 0.25 + 0.75 * Math.abs(r());
+      n[i] *= pressure * Math.sin((Math.PI * i) / n.length) ** 0.6;
+    }
+    return { buf: n, lead: 0, gain: 0.09, pan: [-0.25, 0.25] };
+  },
+  // Pigment blooming into wet paper: a soft low swell that peaks on the cut.
+  bloom: (seed) => {
+    const d = 1.1;
+    const air = filter(noise(d, seed), "lp", (p) => 220 + 1400 * Math.sin(Math.PI * p), 0.7);
+    for (let i = 0; i < air.length; i++) air[i] *= Math.sin((Math.PI * i) / air.length) ** 2;
+    const body = env(tone(d, 70, 96, [1, 0.25]), 0.45, 0.3);
+    return { buf: sum([air, 0, 0.9], [body, 0, 0.35]), lead: 0.5, gain: 0.42, pan: [-0.2, 0.2] };
+  },
   open: (seed) => {
     const d = 1.8;
     const air = filter(noise(d, seed), "lp", (p) => 300 + 2600 * p, 0.7);
