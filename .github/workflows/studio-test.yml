@@ -10,6 +10,12 @@ on:
       post_id:
         description: "Post id to film (must be in state/queue.json)"
         required: true
+      style:
+        description: "Reel style: as planned, photo or ink"
+        required: false
+        default: ""
+        type: choice
+        options: ["", "photo", "ink"]
 
 concurrency: studio-test
 
@@ -37,6 +43,7 @@ jobs:
           MOSS_API_KEY: ${{ secrets.MOSS_API_KEY }}
           QUEUE_FILE: state/frames/test-queue.json
           IGNORE_CADENCE: "1"
+          REEL_STYLE: ${{ inputs.style }}
         run: |
           mkdir -p state/frames
           cp state/queue.json state/frames/test-queue.json

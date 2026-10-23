@@ -12010,7 +12010,8 @@
     "createdAt": "2026-10-23T18:20:49.865Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3105577989
+    "bgSeed": 3105577989,
+    "style": "ink"
   },
   {
     "id": "operra-2026-10-24-20-swahili-tip",

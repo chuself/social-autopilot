@@ -128,7 +128,7 @@ for (let offset = 0; timetable.length === 0 && offset <= 1; offset++) {
       const when = new Date(start);
       when.setDate(when.getDate() + day + offset);
       when.setUTCHours(slot.hour - EAT_OFFSET, 0, 0, 0);
-      if (when > new Date()) timetable.push({ when, hour: slot.hour, format: slot.format });
+      if (when > new Date()) timetable.push({ when, hour: slot.hour, format: slot.format, style: slot.style });
     }
   }
 }
@@ -150,7 +150,7 @@ timetable.length = 0;
 timetable.push(...wanted);
 
 for (let n = 0; n < timetable.length; n++) {
-  const { when, hour, format } = timetable[n];
+  const { when, hour, format, style } = timetable[n];
   // Newest first — nextPillar() and the dedupe list both read position 0 as "last post".
   const recent = [...planned].reverse().concat(await recentPosts());
   const pillar = nextPillar(recent, pillarScores);
@@ -229,6 +229,8 @@ for (let n = 0; n < timetable.length; n++) {
     ...post,
     backgroundPath: null, // drawn below, with the rest of the plan, in one burst
     format,
+    // ink & wash reel (studio/ink/) when the slot says so; photo otherwise
+    ...(format === "reel" && style === "ink" ? { style: "ink" } : {}),
     platforms: ["facebook", "instagram"],
     scheduledFor: scheduledFor.toISOString(),
     createdAt: new Date().toISOString(),

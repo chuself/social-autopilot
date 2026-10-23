@@ -101,14 +101,14 @@ if (cfg.studio !== false && process.env.STUDIO !== "0") {
   try {
     const { writeReelBrief } = await import("../studio/brief.mjs");
     const { produceReel } = await import("../studio/make.mjs");
-    brief = await writeReelBrief(post, brandId);
-    // A share of reels in the hand-drawn ink & wash style (config "inkShare",
-    // 0 to 1; off until the owner approves the look). Fixed per post id, so a
-    // re-run of the same reel keeps its style.
+    // Ink & wash (hand-drawn, studio/ink/) when the slot planned it (post.style,
+    // from config.slots), or for a share of other reels (config.inkShare, 0 to 1,
+    // fixed per post id). REEL_STYLE forces one for a test run.
     const inkShare = Number(cfg.inkShare ?? 0);
-    if (inkShare > 0 && (parseInt(createHash("md5").update(post.id).digest("hex").slice(0, 8), 16) % 1000) / 1000 < inkShare) {
-      brief = { ...brief, style: "ink", city: post.city ?? undefined };
-    }
+    const style = process.env.REEL_STYLE
+      || post.style
+      || (inkShare > 0 && (parseInt(createHash("md5").update(post.id).digest("hex").slice(0, 8), 16) % 1000) / 1000 < inkShare ? "ink" : "photo");
+    brief = await writeReelBrief(post, brandId, { style });
     console.log(`  studio brief${brief.style === "ink" ? " (ink)" : ""}: ${brief.scenes.map((s) => s.type).join(" > ")}`);
     const r = await produceReel(brief, { out: videoFile, work: path.join(ROOT, "state", "frames", "studio", post.id), brandId });
     for (const p of r.report?.problems ?? []) console.log(`  check ${p.warn ? "WARN" : "FAIL"} ${p.check} ${p.scene ?? ""} ${p.msg}`);

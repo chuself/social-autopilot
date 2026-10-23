@@ -180,6 +180,28 @@ await check(
   { group: "config" }
 );
 
+// An ink slot is only safe if the ink engine can draw a reel here: its textures
+// are in the repo and a known-good brief composes. Dry, no render.
+await check(
+  "ink engine composes",
+  async () => {
+    const { readConfig } = await import("../src/config.js");
+    const cfg = await readConfig();
+    const inkSlots = cfg.slots.filter((s) => s.style === "ink").map((s) => `${s.hour}:00`);
+    const { readFileSync, existsSync } = await import("node:fs");
+    for (const t of ["paper", "veil", "veil-teal", "veil-blue", "wash-lilac"]) {
+      if (!existsSync(path.join(ROOT, "studio", "ink", "tex", `${t}.webp`))) throw new Error(`studio/ink/tex/${t}.webp is missing`);
+    }
+    const { briefErrors } = await import("../studio/brief.mjs");
+    const g = JSON.parse(readFileSync(path.join(ROOT, "studio", "briefs", "golden", "03-sw-zanzibar-bar.json"), "utf8"));
+    const brand = { ...JSON.parse(readFileSync(path.join(ROOT, "brands", "operra", "brand.json"), "utf8")), id: "operra" };
+    const errs = briefErrors({ ...g, style: "ink", city: "Zanzibar", scenes: g.scenes.map(({ image, ...s }) => s) }, brand);
+    if (errs.length) throw new Error(errs.slice(0, 2).join("; "));
+    return inkSlots.length ? `ink reels at ${inkSlots.join(", ")}` : "no ink slots (engine ready)";
+  },
+  { group: "config" }
+);
+
 await check(
   "daily cap is a number",
   async () => {

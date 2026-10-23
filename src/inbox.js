@@ -828,7 +828,7 @@ export async function statusText() {
 
 export function describeRoutine(cfg) {
   if (Array.isArray(cfg.slots) && cfg.slots.length) {
-    return cfg.slots.map((s) => `${s.hour}:00 ${s.format}`).join(" · ");
+    return cfg.slots.map((s) => `${s.hour}:00 ${s.format}${s.style === "ink" ? " (ink)" : ""}`).join(" · ");
   }
   return `${cfg.postsPerDay}/day at ${(cfg.postHours ?? []).map((h) => `${h}:00`).join(", ")} · ${cfg.reelsPerWeek} reels/week`;
 }
@@ -880,7 +880,7 @@ Looks preview: ${existsSync(PREVIEW_LOOKS) ? "one is being rendered right now" :
 Classify the message and reply. Return ONLY JSON:
 {
   "kind": "setting" | "campaign" | "instruction" | "preview" | "question" | "chat",
-  "settings": { "slots": [ { "hour": number, "format": "poster" | "reel" } ], "tiktokPerDay": number },
+  "settings": { "slots": [ { "hour": number, "format": "poster" | "reel" | "carousel", "style": "ink" (reels only, optional) } ], "tiktokPerDay": number },
   "campaign": {
     "name": "short name",
     "brief": "what to say about it, one or two sentences",
@@ -910,6 +910,9 @@ It is read on a phone, usually one-handed, usually while busy.
   Example: "3 posters and 1 reel a day at 8, 13, 16 and 20" becomes
   [{"hour":8,"format":"poster"},{"hour":13,"format":"poster"},
    {"hour":16,"format":"reel"},{"hour":20,"format":"poster"}].
+  A reel is either a photo reel (the default) or an "ink" reel: hand-drawn line art with
+  watercolour ("wireframe", "drawn", "watercolour", "mchoro" all mean ink). Keep every
+  existing slot's format and style unless the owner asks to change that slot.
   Hours are 24h local, between ${LIMITS.minHour} and ${LIMITS.maxHour}.
   At most ${LIMITS.maxSlotsPerDay ?? 6} slots per day. If they name fewer hours than
   posts, spread the extras sensibly. Reply confirming the new day.

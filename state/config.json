@@ -10,7 +10,8 @@
     },
     {
       "hour": 16,
-      "format": "reel"
+      "format": "reel",
+      "style": "ink"
     },
     {
       "hour": 20,

@@ -14,7 +14,8 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { completeJson } from "../src/llm.js";
 import { setUsageContext } from "../src/usage.js";
-import { compose } from "./compose.mjs";
+import { compose, validateBrief } from "./compose.mjs";
+import { composeInk } from "./ink/engine.mjs";
 import { factsFor, topicBlock, topicOf } from "../src/topics.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -108,11 +109,21 @@ export function normalizeBrief(raw) {
   return { ...raw, scenes };
 }
 
+const INK_RULE = `- This reel is DRAWN, not photographed: hand-drawn line art with watercolour washes, set in the
+  post's city. Do NOT write any "image" field; the studio draws every place, person, paper and screen.
+  Lines should suit drawings: places, people seen from behind, a bill, a ticket, a screen.
+`;
+
 /** A fake voice good enough to compose against: catches scene-level errors without TTS. */
 const DRY_VOICE = { duration: 23, speechStart: 0.3, speechEnd: 21.5, pauses: [] };
 
 export function briefErrors(brief, brand) {
   try {
+    if (brief.style === "ink") {
+      validateBrief(brief);
+      composeInk(brief, DRY_VOICE, brand, { tex: "", gsap: "", logo: "", fonts: () => "" });
+      return [];
+    }
     compose(brief, DRY_VOICE, brand);
     return [];
   } catch (e) {
@@ -124,7 +135,8 @@ export function briefErrors(brief, brand) {
  * @returns {Promise<object>} a brief that composes cleanly
  * @throws when no valid brief could be written (the caller falls back)
  */
-export async function writeReelBrief(post, brandId = "operra") {
+export async function writeReelBrief(post, brandId = "operra", { style = post.style ?? "photo" } = {}) {
+  const ink = style === "ink";
   const brandDir = path.join(ROOT, "brands", brandId);
   const brand = { ...JSON.parse(await readFile(path.join(brandDir, "brand.json"), "utf8")), id: brandId };
   const topic = topicOf(post, brandId);
@@ -132,7 +144,9 @@ export async function writeReelBrief(post, brandId = "operra") {
   const language = post.language === "sw" ? "sw" : "en";
   const city = (brand.cities ?? []).find((c) => c.name === post.city) ?? null;
   const cta = language === "sw" ? "Ona inavyofanya kazi" : "See it work";
-  const spec = SPEC.replace("{LANG}", language === "sw" ? "Tanzanian Kiswahili" : "English").replace("{CTA}", cta);
+  // Ink reels are drawn by the studio in code, so there are no image prompts to
+  // write and none of the rules that keep MOSS from lettering a photo.
+  const spec = (ink ? SPEC.replace(/- Each "image" is ONE[\s\S]*?The studio draws every document and screen itself\.\n/, INK_RULE).replace(/,\s*image(?=[.,])/g, "") : SPEC).replace("{LANG}", language === "sw" ? "Tanzanian Kiswahili" : "English").replace("{CTA}", cta);
 
   const base = `You are planning a 20-25 second vertical video ad for ${brand.name}, hotel management software
 in Tanzania, for hotel owners and managers. It retells this planned post as moving scenes.
@@ -166,7 +180,8 @@ Return ONLY JSON: {"narration": "...", "eyebrow": "...", "cta": "${cta}", "scene
       errors = [`model call failed: ${e.message}`];
       continue;
     }
-    const brief = normalizeBrief({ ...raw, id: post.id, language, cta: raw.cta || cta });
+    const brief = normalizeBrief({ ...raw, id: post.id, language, cta: raw.cta || cta, ...(ink ? { style: "ink", city: post.city ?? undefined } : {}) });
+    if (ink) for (const sc of brief.scenes) delete sc.image;
     errors = briefErrors(brief, brand);
     if (!errors.length) return brief;
     console.warn(`  brief attempt ${attempt} rejected: ${errors.slice(0, 3).join(" | ")}`);

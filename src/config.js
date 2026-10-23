@@ -97,7 +97,9 @@ export async function updateConfig(patch) {
         rejected.push(`duplicate hour ${hour}`);
         continue;
       }
-      cleaned.push({ hour, format });
+      // A reel slot may be drawn in ink & wash instead of photo (studio/ink/).
+      const ink = format === "reel" && String(s?.style ?? "").toLowerCase() === "ink";
+      cleaned.push({ hour, format, ...(ink ? { style: "ink" } : {}) });
     }
 
     if (cleaned.length > LIMITS.maxSlotsPerDay) {
@@ -145,7 +147,7 @@ export async function updateConfig(patch) {
 }
 
 export function describe(slots) {
-  return slots.map((s) => `${s.hour}:00 ${s.format}`).join(", ");
+  return slots.map((s) => `${s.hour}:00 ${s.format}${s.style === "ink" ? " (ink)" : ""}`).join(", ");
 }
 
 /**
