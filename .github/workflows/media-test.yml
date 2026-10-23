@@ -1,0 +1,29 @@
+name: media-test
+
+# Uploads one small file through src/media-store.js with the production
+# secrets and prints the result. Commits nothing, posts nothing.
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Which aws
+        run: which aws && aws --version
+      - name: Upload a test file
+        env:
+          MEDIA_BUCKET: ${{ vars.ALICE_MEDIA_BUCKET }}
+          MEDIA_REGION: eu-west-1
+          ALICE_MEDIA_KEY_ID: ${{ secrets.ALICE_MEDIA_KEY_ID }}
+          ALICE_MEDIA_SECRET: ${{ secrets.ALICE_MEDIA_SECRET }}
+        run: |
+          echo "bucket set: ${MEDIA_BUCKET:+yes}  key id length: ${#ALICE_MEDIA_KEY_ID}  secret length: ${#ALICE_MEDIA_SECRET}"
+          f=$(ls public/*.png | head -1)
+          node -e "import('./src/media-store.js').then(async m=>{const u=await m.uploadMedia(process.argv[1],'test/media-test.png','image/png');console.log('url:',u);process.exit(u?0:1)})" "$f"
