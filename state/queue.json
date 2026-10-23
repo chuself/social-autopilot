@@ -11815,7 +11815,29 @@
     "createdAt": "2026-10-22T20:57:09.472Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1527802706
+    "bgSeed": 1527802706,
+    "reel": {
+      "file": "operra-2026-10-23-16-industry-note.mp4",
+      "beats": [
+        "Peak climb season brings full lobbies.",
+        "Every staff action remains fully accounted for.",
+        "Complete control across your entire property.",
+        "Protect your mountain season revenue effortlessly."
+      ],
+      "narration": "When climbing season fills your Moshi lodge and seasonal staff join your team, keeping track of every transaction is essential. Operra provides a clear audit trail and property management tools, protecting your revenue while the mountain is busy.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-23T12:31:50.931Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-23-20-feature-spotlight",
