@@ -632,7 +632,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .kt b{font-size:30px}
 .kt u{text-decoration:none;font-size:16px;font-weight:700;color:${TEAL_INK};border-top:1.5px dashed rgba(19,132,118,.5);padding-top:6px}
 .kt i{font-style:normal;color:${INK_SOFT};font-size:19px;margin-top:6px}
-.kt em{position:absolute;right:10px;top:12px;font-style:normal;font-weight:700;font-size:26px;letter-spacing:.08em;color:${TEAL_INK};border:4px double ${TEAL_INK};border-radius:8px;padding:2px 10px;transform:rotate(-10deg);mix-blend-mode:multiply}
+.kt em{position:relative;align-self:flex-end;margin-top:6px;font-style:normal;font-weight:700;font-size:26px;letter-spacing:.08em;color:${TEAL_INK};border:4px double ${TEAL_INK};border-radius:8px;padding:2px 10px;transform:rotate(-10deg);mix-blend-mode:multiply}
 .bk .frow b{font-size:30px;color:#5B3FD6}
 .bklink{display:inline-block;font-size:17px;font-weight:700;color:${TEAL_INK};border:2px solid ${TEAL_INK};border-radius:100px;padding:5px 12px;margin-bottom:14px}
 .bkq .frow{font-size:20px;padding:10px 0}
