@@ -11932,7 +11932,7 @@
     ],
     "scheduledFor": "2026-10-24T05:00:00.000Z",
     "createdAt": "2026-10-23T18:10:17.221Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 2034583174,
     "slideFiles": [
@@ -11941,7 +11941,13 @@
       "operra-2026-10-24-08-pain-point-3.png",
       "operra-2026-10-24-08-pain-point-4.png"
     ],
-    "headline": "Whisky ya ghali kwenye chumba cha mgeni?"
+    "headline": "Whisky ya ghali kwenye chumba cha mgeni?",
+    "lastAttempt": "2026-10-24T05:21:05.154Z",
+    "postedAt": "2026-10-24T05:21:05.155Z",
+    "postIds": [
+      "facebook:1049514968255534_122175725421351110",
+      "instagram:18168913291465069"
+    ]
   },
   {
     "id": "operra-2026-10-24-13-number-that-lands",
