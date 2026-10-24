@@ -39,7 +39,7 @@ const SW = {
   "Board meeting": "Kikao cha bodi", "Wedding reception": "Sherehe ya harusi", "Training workshop": "Warsha ya mafunzo", "Product launch": "Uzinduzi",
   "Graduation lunch": "Chakula cha mahafali", Seated: "Wapo", Free: "Wazi", Reserved: "Imehifadhiwa", "No-show": "Hajafika", "No-show released": "Haikuja · imeachiwa",
   "Grilled tilapia": "Sato wa kuchoma", "Chicken pilau": "Pilau ya kuku", Chips: "Chipsi", "Fresh juice": "Juisi", Coffee: "Kahawa",
-  "Mixed grill": "Nyama choma", "Fruit platter": "Matunda", "Vegetable curry": "Mchuzi wa mboga", "Approved at front desk": "Mapokezi wameidhinisha", "Revenue today": "Mapato ya leo", "KITCHEN · LIVE": "JIKONI · SASA", "HOUSEKEEPING · LIVE": "USAFI · SASA", "EVENTS · TODAY": "MATUKIO · LEO", "FLOOR · TONIGHT": "MEZA · USIKU HUU", "The restaurant's booking link": "Kiungo cha uhifadhi", "Today's requests": "Maombi ya leo", "Your hotel, live": "Hoteli yako, sasa hivi", "Book a table": "Hifadhi meza", "Party": "Watu",
+  "Mixed grill": "Nyama choma", "Fruit platter": "Matunda", "Vegetable curry": "Mchuzi wa mboga", "Approved at front desk": "Imeidhinishwa na mapokezi", "Sent · awaiting front desk": "Imetumwa · inasubiri mapokezi", "Revenue today": "Mapato ya leo", "KITCHEN · LIVE": "JIKONI · SASA", "HOUSEKEEPING · LIVE": "USAFI · SASA", "EVENTS · TODAY": "MATUKIO · LEO", "FLOOR · TONIGHT": "MEZA · USIKU HUU", "The restaurant's booking link": "Kiungo cha uhifadhi", "Today's requests": "Maombi ya leo", "Your hotel, live": "Hoteli yako, sasa hivi", "Book a table": "Hifadhi meza", "Party": "Watu",
   "Time": "Saa", "Request a table": "Omba meza", "Confirmed": "Imethibitishwa", "Today": "Leo",
 };
 const tr = (c, en) => (c.lang === "sw" && SW[en]) || en;
@@ -160,7 +160,7 @@ function screenContent(S, s, c, h, wide) {
       html: `<div class="fhead ci">${tr(c, "MENU · ROOM")} ${esc(c.T["{room}"])}</div><div class="pin ci">${tr(c, "Stay PIN")} <span class="dots">${[0, 1, 2, 3].map((k) => `<i id="${S}-d${k}"></i>`).join("")}</span></div><div class="cols"><div>
         ${lines.map((l) => `<div class="bline ci"><span>${esc(l.label)}<i class="each">${esc(l.each)} ${tr(c, "each")}</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
         <div class="btot ci"><span>${tr(c, "Total")}</span><span class="bval">${esc(c.T["{orderTotal}"])}</span></div></div>
-        <div>${stamp(S, tr(c, "Approved · bill to room"))}</div></div>`,
+        <div>${stamp(S, tr(c, "Sent · awaiting front desk"))}</div></div>`,
       pin: true, stamp: true, shows: lines.flatMap((l) => [l.label, l.each, l.value]),
     };
   }
@@ -409,13 +409,13 @@ const SCENE = {
     }
     if (s.screen === "tables") {
       // the restaurant floor from above: six tables, one reserved; the no-show is released
-      const tbl = [["T1", 250, 320, "Seated"], ["T2", 540, 320, "Free"], ["T3", 830, 320, "Seated"], ["T4", 250, 630, "Free"], ["T5", 540, 630, "Reserved"], ["T6", 830, 630, "Seated"]];
+      const tbl = [["T1", 280, 320, "Seated"], ["T2", 540, 320, "Free"], ["T3", 800, 320, "Seated"], ["T4", 280, 630, "Free"], ["T5", 540, 630, "Reserved"], ["T6", 800, 630, "Seated"]];
       const flip = 4;
       const ring = (x, y, r) => `M${x - r} ${y} a${r} ${r} 0 1 0 ${2 * r} 0 a${r} ${r} 0 1 0 ${-2 * r} 0`;
       const chairs = (x, y) => [[0, -104], [0, 104], [-104, 0], [104, 0]].map(([dx, dy]) => ring(x + dx, y + dy, 18)).join(" ");
       const tint = { Seated: "wash-violet-b", Reserved: c.pal.warm, Free: "wash-teal" };
       return {
-        bg: { lines: [{ d: "M80 190 L1000 180 L1010 790 L70 800 Z", w: 2.6 }, { d: "M70 480 L130 480 M950 470 L1010 470", w: 2 }], washes: [[c.pal.sky, 40, 150, 1000, 680, 0.35]], actors: "" },
+        bg: { lines: [{ d: "M120 190 L960 182 L968 790 L112 798 Z", w: 2.6 }, { d: "M112 480 L160 480 M920 470 L968 470", w: 2 }], washes: [[c.pal.sky, 40, 150, 1000, 680, 0.35]], actors: "" },
         mid: { lines: [{ d: tbl.map(([, x, y]) => ring(x, y, 74)).join(" "), w: 3.2 }, { d: tbl.map(([, x, y]) => chairs(x, y)).join(" "), w: 2 }],
           washes: tbl.map(([, x, y, st], i) => [i === flip ? "wash-teal" : tint[st], x - 105, y - 105, 210, 210, i === flip ? 0.9 : 0.45]),
           actors: `<circle class="ring" id="${S}-r0" cx="${tbl[flip][1]}" cy="${tbl[flip][2]}" r="60"/>` },
