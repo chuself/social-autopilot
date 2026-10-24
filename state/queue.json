@@ -12115,5 +12115,170 @@
       "facebook:1049514968255534_122175917811351110",
       "instagram:17927304417430590"
     ]
+  },
+  {
+    "id": "operra-2026-10-25-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "Regional Trend",
+        "headline": "Cash mismatches at midnight cost morning speed",
+        "body": "Unreconciled POS receipts and open drawers stall daily revenue tracking across East African corporate hotels."
+      },
+      {
+        "eyebrow": "Night Audit",
+        "headline": "Half-closed days distort performance metrics",
+        "body": "When drawer totals don't match guest folios, morning managers waste hours manually hunting missing figures."
+      },
+      {
+        "eyebrow": "Operra Solution",
+        "headline": "Six automated steps close every ledger cleanly",
+        "body": "Unsettled folios and drawer mismatches flag automatically. All steps succeed or none do—no partial closures."
+      },
+      {
+        "eyebrow": "Sunrise Visibility",
+        "headline": "Complete operational metrics in your inbox",
+        "body": "Occupancy, ADR, RevPAR, and source mix are calculated and emailed before your morning team arrives."
+      }
+    ],
+    "caption": "Discrepancies between point-of-sale receipts and front desk cash drawers remain a major operational bottleneck for corporate hotels in Dar es Salaam. When night audits are handled manually or partially closed, managers lose visibility on actual daily RevPAR and ADR. Operra runs a structured six-step night audit that automatically flags drawer mismatches, posts room rates, and emails key metrics at sunrise. Ensure every ledger balances before the morning shift begins.",
+    "hashtags": [
+      "#HospitalityManagement",
+      "#EastAfricaHotels",
+      "#HotelOperations",
+      "#DarEsSalaam"
+    ],
+    "imagePrompt": "A quiet management office inside a high-rise corporate hotel along the Kivukoni waterfront in Dar es Salaam, with large windows overlooking harbour cranes and the calm Indian Ocean under early dawn light. On the right of a polished teak desk sits a plain, untitled dark metal cash drawer insert alongside an unprinted brass desk lamp. Story props include a plain ceramic coffee mug, a small grey calculator, and a tidy stack of plain, untitled cream-coloured paper strips. In the background, a soft-focus hotel manager seen from behind looks out toward the port light. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The left half of the frame remains visually quiet with a plain wall and soft ambient shadow.",
+    "cta": "See Operra Live",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "feature": "night-audit",
+    "angle": "a day closed with a drawer that does not match",
+    "backgroundPath": "state/bg/operra-2026-10-25-08-industry-note.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-25T05:00:00.000Z",
+    "createdAt": "2026-10-24T18:03:13.541Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2596142118,
+    "slideFiles": [
+      "operra-2026-10-25-08-industry-note-1.png",
+      "operra-2026-10-25-08-industry-note-2.png",
+      "operra-2026-10-25-08-industry-note-3.png",
+      "operra-2026-10-25-08-industry-note-4.png"
+    ],
+    "headline": "Cash mismatches at midnight cost morning speed"
+  },
+  {
+    "id": "operra-2026-10-25-13-feature-spotlight",
+    "eyebrow": "Stock & Purchasing",
+    "headline": "Stop chasing Sunday night bar variances",
+    "body": "Selling a cocktail deducts its exact recipe ingredients the moment the ticket fires. Track stock seamlessly across storerooms and bars with automated ledger updates.",
+    "cta": "See it work",
+    "caption": "Sunday night stock counts shouldn't turn into a mystery in Arusha. When cocktail sales don't match remaining bottle levels, beverage margins slip away unnoticed.\n\nOperra deducts recipe ingredients the moment a cocktail ticket fires. Transfers between your storeroom and bar maintain a clear two-sided trail, while blind stock counts highlight variances immediately.\n\nKeep your beverage inventory tight and your records clear.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HotelManagement",
+      "#InventoryControl",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A sunlit open-air restaurant deck of a safari lodge in Arusha, framed by acacia trees with Mount Meru visible on the horizon. The setting reflects quiet afternoon preparation at the outdoor lounge before dinner service. Right of centre, a plain, untitled dark teak tray holds clean cocktail glasses on a stone counter. Nearby story props include closed glass tonic bottles, fresh limes in a ceramic bowl, a polished cocktail shaker, and warm timber decking. In the soft-focus background, a bartender seen from behind prepares the bar. Composition : wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone : bright, sunlit, airy, saturated but natural sky. Treatment : 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The central frame keeps a calm zone of smooth decking and soft foliage.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "series": null,
+    "feature": "inventory",
+    "angle": "the bar count on Sunday night that never matches sales",
+    "backgroundPath": "state/bg/operra-2026-10-25-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-25T10:00:00.000Z",
+    "createdAt": "2026-10-24T18:03:37.679Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 812301364
+  },
+  {
+    "id": "operra-2026-10-25-16-pain-point",
+    "eyebrow": "Front Desk",
+    "headline": "Asking a returning guest for their details again?",
+    "body": "When a loyal guest arrives in Zanzibar, re-asking for their phone number or passport creates unnecessary friction. One profile should keep their history.",
+    "cta": "See Operra Live",
+    "caption": "Asking a loyal guest for their phone number or passport details for the third time hurts the experience. When high-value guests return to your Zanzibar resort, front desk teams should recognise them instantly.\n\nOperra maintains one profile per guest across every visit. VIP and corporate flags appear automatically when a guest qualifies, while NIDA and passport details are captured on the same form. Keep complete stay histories attached without starting from scratch.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#HospitalityTech",
+      "#EastAfricaTourism"
+    ],
+    "imagePrompt": "A historic boutique hotel courtyard in Stone Town, Zanzibar, featuring carved brass-studded doors and whitewashed coral arches. Guest luggage rests quietly in the shaded entryway during afternoon arrivals. Right of centre, a plain untitled dark-leather travel duffel and a plain leather holder sit on a polished teak bench. Nearby stands a brass luggage cart beside potted bougainvillea and textured limestone paving. In the far background, a staff member in a white linen shirt walks through an archway, seen from behind in soft focus. Composition : wide establishing view of the property in its setting, the landscape giving a strong sense of place Light/tone : bright, sunlit, airy, saturated but natural sky Treatment : 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The central wall band remains plain and uncluttered.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "guest-crm",
+    "angle": "asking a returning guest for their phone number again",
+    "backgroundPath": "state/bg/operra-2026-10-25-16-pain-point.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-25T13:00:00.000Z",
+    "createdAt": "2026-10-24T18:03:55.879Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 318246580
+  },
+  {
+    "id": "operra-2026-10-25-20-number-that-lands",
+    "eyebrow": "Finance",
+    "headline": "18% VAT calculated after the discount, on every line",
+    "body": "Taxing pre-discount room rates creates audit red flags. Operra applies 18% VAT after discounts across every folio, posting straight to a single gapless ledger.",
+    "cta": "Book a demo",
+    "caption": "An auditor reviewing corporate folios in Mwanza will notice immediately if VAT was applied before a discount. Over a busy conference season, those calculation errors trigger painful reconciliation delays.\n\nOperra applies 18% VAT after discounts on every line item, with sequential folio numbers that leave no gaps. Every room charge, POS entry, and event payment rolls directly into your ledger and P&L instantly.",
+    "hashtags": [
+      "#HotelFinance",
+      "#MwanzaHotels",
+      "#HotelManagement",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "A glass-fronted executive office inside a lakeside hotel in Mwanza, overlooking Lake Victoria where granite boulders rise from the shoreline. On a wide polished desk right of centre sits a sleek metallic calculator next to a silver pen and a plain, untitled navy-blue folder. A ceramic coffee mug rests on a coaster. Through the window, a soft-focus staff member stands with their back to the camera looking toward distant fishing boats. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The lower left area forms a visually quiet calm zone of smooth shadowed timber.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "finance",
+    "angle": "discounts applied before VAT, and the auditor notices",
+    "backgroundPath": "state/bg/operra-2026-10-25-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-25T17:00:00.000Z",
+    "createdAt": "2026-10-24T18:04:07.235Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3153393693
   }
 ]
