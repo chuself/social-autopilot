@@ -246,7 +246,7 @@ export const floorPlan = (id, tables, flip) => browser(id, 'managix.operra.tech/
   <div class="flgrid">${tables.map((t, i) => `
     <div class="flt fl-${t.state}" id="${id}-t${i}"><span class="fltop"><b>${t.name}</b></span>
       <i>${t.seats} seats</i>${i === flip
-        ? `<span class="hkflip"><span class="fa">Reserved</span><span class="fb">Free</span></span>`
+        ? `<span class="hkflip"><span class="fa">No-show</span><span class="fb">Free</span></span>`
         : `<span class="flst">${t.state[0].toUpperCase() + t.state.slice(1)}</span>`}</div>`).join('')}</div>`, { width: 920 });
 
 /* ── events calendar ─────────────────────────────────────────────────────── */

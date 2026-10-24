@@ -37,7 +37,7 @@ const SW = {
   "Guests · arrivals": "Wageni · wanaowasili", "FRONT DESK · LIVE": "MAPOKEZI · SASA", OCCUPANCY: "VILIVYOJAA", "ROOMS FREE": "VYUMBA WAZI", "CHECK-INS": "WANAOINGIA",
   Room: "Chumba", READY: "TAYARI", Occupied: "Kuna mgeni", Dirty: "Chafu", Clean: "Safi", pax: "wageni", "Deposit cleared": "Amana imelipwa",
   "Board meeting": "Kikao cha bodi", "Wedding reception": "Sherehe ya harusi", "Training workshop": "Warsha ya mafunzo", "Product launch": "Uzinduzi",
-  "Graduation lunch": "Chakula cha mahafali", Seated: "Wapo", Free: "Wazi", Reserved: "Imehifadhiwa", "No-show released": "Haikuja · imeachiwa",
+  "Graduation lunch": "Chakula cha mahafali", Seated: "Wapo", Free: "Wazi", Reserved: "Imehifadhiwa", "No-show": "Hajafika", "No-show released": "Haikuja · imeachiwa",
   "Grilled tilapia": "Sato wa kuchoma", "Chicken pilau": "Pilau ya kuku", Chips: "Chipsi", "Fresh juice": "Juisi", Coffee: "Kahawa",
   "Mixed grill": "Nyama choma", "Fruit platter": "Matunda", "Vegetable curry": "Mchuzi wa mboga", "Approved at front desk": "Mapokezi wameidhinisha", "Revenue today": "Mapato ya leo", "The restaurant's booking link": "Kiungo cha uhifadhi", "Today's requests": "Maombi ya leo", "Book a table": "Hifadhi meza", "Party": "Watu",
   "Time": "Saa", "Request a table": "Omba meza", "Confirmed": "Imethibitishwa", "Today": "Leo",
@@ -307,7 +307,7 @@ const SCENE = {
           washes: tbl.map(([, x, y, st], i) => [i === flip ? "wash-teal" : tint[st], x - 105, y - 105, 210, 210, i === flip ? 0.9 : 0.45]),
           actors: `<circle class="ring" id="${S}-r0" cx="${tbl[flip][1]}" cy="${tbl[flip][2]}" r="60"/>` },
         fg: { lines: [], washes: [], actors: sparks(S, [[140, 250, 12], [960, 830, 14]]) },
-        over: tbl.map(([n, x, y, st], i) => `<div class="tb" id="${S}-t${i}" style="left:${x - 80}px;top:${y - 26}px"><b>${n}</b>${i === flip ? `<span class="flip"><span class="fa">${tr(c, "Reserved")}</span><span class="fb">${tr(c, "Free")}</span></span>` : `<span>${tr(c, st)}</span>`}</div>`).join(""),
+        over: tbl.map(([n, x, y, st], i) => `<div class="tb" id="${S}-t${i}" style="left:${x - 80}px;top:${y - 26}px"><b>${n}</b>${i === flip ? `<span class="flip"><span class="fa">${tr(c, "No-show")}</span><span class="fb">${tr(c, "Free")}</span></span>` : `<span>${tr(c, st)}</span>`}</div>`).join(""),
         js: `draw(S,a+.15,1.0);washes(S,a+.25,.1);words(S,a+.25);
           tl.fromTo("#"+S+" .tb",{opacity:0,scale:.7},{opacity:1,scale:1,duration:.4,stagger:.1,ease:"back.out(1.8)",immediateRender:false},cue(a+.8,"card"));
           gsap.set("#"+S+"-t${flip} .fb",{yPercent:110});

@@ -65,6 +65,17 @@ place, ui-screen, checklist, payoff · place, problem-doc, folio-fix, checklist,
 place, ui-screen (menu), ui-screen (kitchen), payoff · place, ui-screen, pos-charge, payoff.
 Use the shape that fits the subject; the recent reels list shows which shapes were just used.
 
+## What each screen actually shows (a line may only claim what its screen shows)
+frontdesk: occupancy %, rooms free, today's check-ins, arriving guests and their rooms ·
+reports: today's revenue, a revenue trend, the report list (revenue, occupancy, audit, guests) ·
+kitchen: order tickets by room and table, how long each has waited, a ready stamp, the front desk's
+approval · menu: the stay PIN, the guest's order and total, the front desk's approval stamp ·
+housekeeping: rooms by status, one turning from dirty to clean · events: today's events with time,
+venue and guests, a deposit cleared · tables: tables seated or free, a no-show released ·
+booking: a guest's table request and the restaurant's confirmation · pos-charge: an order posted
+to a room · folio-fix: a wrong room rate corrected. Nothing else is on screen: no ADR, RevPAR,
+charts beyond the trend, or figures you name yourself.
+
 ## Hard rules (the studio rejects a brief that breaks any)
 - NO DIGITS ANYWHERE you write: not in lines, tags, chips, items, stamp, eyebrow, cta or labels.
   Numbers appear only through these tokens, which the studio computes so every sum is right:
