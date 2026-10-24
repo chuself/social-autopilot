@@ -67,6 +67,12 @@ wash("wash-dusk", (176, 110, 214), w=1100, h=800, seed_shift=7, edge=0.35, sprea
 wash("wash-rose", (226, 150, 196), w=800, h=600, seed_shift=8, edge=0.4)
 # whisky and candlelight only, never a scene background
 wash("wash-amber", (232, 172, 86), w=600, h=400, seed_shift=12, edge=0.45)
+# city accents, laid under the brand washes so each place has its own warmth:
+# Moshi's coffee and banana green, Zanzibar's sand, Mwanza's granite, Dar's roofs
+wash("wash-green", (128, 176, 112), w=900, h=700, seed_shift=13, edge=0.4)
+wash("wash-sand", (228, 198, 146), w=900, h=600, seed_shift=14, edge=0.35)
+wash("wash-ochre", (212, 158, 92), w=800, h=700, seed_shift=15, edge=0.45)
+wash("wash-terracotta", (204, 122, 92), w=800, h=700, seed_shift=16, edge=0.45)
 # the cut: one big violet bloom that grows past the frame
 wash("veil", (128, 98, 226), w=1400, h=1400, seed_shift=9, edge=0.5, spread=0.47)
 wash("veil-teal", (70, 176, 160), w=1400, h=1400, seed_shift=10, edge=0.5, spread=0.47)

@@ -18,7 +18,7 @@
 import { makeLedger, tokens, orderLines, hash, money } from "../numbers.mjs";
 import { ROLE, WEIGHT } from "../scenes.mjs";
 import { planCuts } from "../timing.mjs";
-import { figure, glass, CITIES, cityKey, PROPS } from "./art.mjs";
+import { figure, glass, CITIES, cityKey, PROPS, CITY_ACCENT } from "./art.mjs";
 
 const W = 1080, H = 1920;
 const INK = "#1E2350", INK_SOFT = "#5A5F86", RED = "#B8325A", TEAL_INK = "#138476";
@@ -39,7 +39,7 @@ const SW = {
   "Board meeting": "Kikao cha bodi", "Wedding reception": "Sherehe ya harusi", "Training workshop": "Warsha ya mafunzo", "Product launch": "Uzinduzi",
   "Graduation lunch": "Chakula cha mahafali", Seated: "Wapo", Free: "Wazi", Reserved: "Imehifadhiwa", "No-show": "Hajafika", "No-show released": "Haikuja · imeachiwa",
   "Grilled tilapia": "Sato wa kuchoma", "Chicken pilau": "Pilau ya kuku", Chips: "Chipsi", "Fresh juice": "Juisi", Coffee: "Kahawa",
-  "Mixed grill": "Nyama choma", "Fruit platter": "Matunda", "Vegetable curry": "Mchuzi wa mboga", "Approved at front desk": "Mapokezi wameidhinisha", "Revenue today": "Mapato ya leo", "The restaurant's booking link": "Kiungo cha uhifadhi", "Today's requests": "Maombi ya leo", "Book a table": "Hifadhi meza", "Party": "Watu",
+  "Mixed grill": "Nyama choma", "Fruit platter": "Matunda", "Vegetable curry": "Mchuzi wa mboga", "Approved at front desk": "Mapokezi wameidhinisha", "Revenue today": "Mapato ya leo", "KITCHEN · LIVE": "JIKONI · SASA", "HOUSEKEEPING · LIVE": "USAFI · SASA", "EVENTS · TODAY": "MATUKIO · LEO", "FLOOR · TONIGHT": "MEZA · USIKU HUU", "The restaurant's booking link": "Kiungo cha uhifadhi", "Today's requests": "Maombi ya leo", "Your hotel, live": "Hoteli yako, sasa hivi", "Book a table": "Hifadhi meza", "Party": "Watu",
   "Time": "Saa", "Request a table": "Omba meza", "Confirmed": "Imethibitishwa", "Today": "Leo",
 };
 const tr = (c, en) => (c.lang === "sw" && SW[en]) || en;
@@ -75,6 +75,7 @@ const phoneD = "M330 70 h420 a46 46 0 0 1 46 46 v800 a46 46 0 0 1 -46 46 h-420 a
 const tabletD = "M150 160 h780 a30 30 0 0 1 30 30 v600 a30 30 0 0 1 -30 30 h-780 a30 30 0 0 1 -30 -30 v-600 a30 30 0 0 1 30 -30 Z";
 
 /** Payoff moments a brief may ask for. */
+export { VARIANTS };
 export const MOMENTS = ["toast", "farewell", "sunrise", "desk", "dinner", "owner"];
 
 /**
@@ -89,6 +90,161 @@ function propSvg(S, name, cx, cy, scale, key = "p") {
     <path class="pfill" d="${p.fill}"/>
     <image class="pwash" href="TEX/${wn}.webp" x="${wx}" y="${wy}" width="${ww}" height="${wh}" preserveAspectRatio="none"/>
     <path class="pl" d="${p.d}" stroke-width="${(3.4 / scale).toFixed(2)}"/><path class="pl" d="${p.fine}" stroke-width="${(1.8 / scale).toFixed(2)}"/></g></g>`;
+}
+
+// ── devices: the frame a product screen is drawn in ─────────────────────────
+// A screen can appear on several devices, and a reel never repeats one, so two
+// reels about the same feature (or two screens in one reel) do not share a
+// layout. Coordinates are the art box (1080 x 1000). The outline is an ink
+// line drawn on with the scene; the content is HTML laid out for the device.
+
+const rrect = (w, h, r) => `M${r} 0 H${w - r} A${r} ${r} 0 0 1 ${w} ${r} V${h - r} A${r} ${r} 0 0 1 ${w - r} ${h} H${r} A${r} ${r} 0 0 1 0 ${h - r} V${r} A${r} ${r} 0 0 1 ${r} 0 Z`;
+const DEVICES = {
+  phone: { x: 320, y: 110, w: 440, h: 800, rot: 0, pad: "64px 30px 36px", wide: false, outline: (w, h) => `${rrect(w, h, 48)} M${w / 2 - 40} 28 h80`, family: "phone" },
+  phoneTilt: { x: 290, y: 120, w: 430, h: 780, rot: -5, pad: "62px 28px 34px", wide: false, outline: (w, h) => `${rrect(w, h, 46)} M${w / 2 - 40} 28 h80`, family: "phone",
+    dress: { lines: [{ d: "M720 980 C716 900 726 860 750 820 L790 750 C800 734 820 740 816 758 L800 820", w: 2.6 }], washes: [] } },
+  tablet: { x: 150, y: 200, w: 780, h: 580, rot: 1.5, pad: "40px 46px", wide: true, outline: (w, h) => `${rrect(w, h, 32)} M${w / 2 - 8} 20 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0`, family: "tablet",
+    dress: { lines: [{ d: "M40 860 L1040 850 M40 900 L1040 890", w: 2.4 }], washes: [] } },
+  laptop: { x: 160, y: 160, w: 760, h: 530, rot: 0, pad: "34px 40px", wide: true, outline: (w, h) => rrect(w, h, 18), family: "laptop",
+    dress: { lines: [{ d: "M60 720 L1020 720 L1060 790 L20 790 Z M460 755 h160", w: 2.6 }, { d: "M960 640 L960 700 C960 716 1010 716 1010 700 L1010 640 Z M1010 652 C1030 652 1030 682 1010 682", w: 2.2 }], washes: [] } },
+  board: { x: 150, y: 170, w: 780, h: 660, rot: -1.5, pad: "60px 52px 40px", wide: true, outline: (w, h) => `M4 6 L${w - 6} 0 L${w} ${h - 4} L0 ${h} Z M${w * 0.25 - 10} 18 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0 M${w * 0.75 - 10} 14 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0`, family: "board",
+    dress: { lines: [{ d: "M0 120 L1080 110 M0 900 L1080 890", w: 2 }], washes: [] } },
+  kds: { x: 150, y: 180, w: 780, h: 550, rot: 0, pad: "34px 36px", wide: true, outline: (w, h) => `${rrect(w, h, 14)} M${w / 2 - 50} ${h} V${h + 50} M${w / 2 + 50} ${h} V${h + 50} M${w / 2 - 140} ${h + 50} H${w / 2 + 140}`, family: "kds",
+    dress: { lines: [{ d: "M40 860 L1040 840 M40 900 L1040 880", w: 2.4 }, { d: "M150 840 C150 800 230 800 230 840 M820 836 a40 16 0 1 0 80 0 a40 16 0 1 0 -80 0", w: 1.8 }], washes: [] } },
+};
+
+// Which devices each screen may use. Legacy full-scene drawings (the pass rail,
+// the corridor, the wall calendar, the floor plan) are variants too.
+const VARIANTS = {
+  frontdesk: ["laptop", "tablet", "phone"],
+  reports: ["phone", "tablet", "laptop"],
+  menu: ["phone", "phoneTilt", "tablet"],
+  booking: ["phoneTilt", "laptop", "phone"],
+  kitchen: ["rail", "kds", "board"],
+  housekeeping: ["corridor", "board", "phone"],
+  events: ["wall", "laptop", "phoneTilt"],
+  tables: ["floor", "tablet"],
+};
+const familyOf = (v) => DEVICES[v]?.family ?? v;
+function chooseVariant(screen, c, h, forced) {
+  const list = VARIANTS[screen] ?? VARIANTS.frontdesk;
+  if (list.includes(forced)) { c.used.push(familyOf(forced)); return forced; }
+  for (let k = 0; k < list.length; k++) {
+    const v = list[(h + k) % list.length];
+    if (!c.used.includes(familyOf(v))) { c.used.push(familyOf(v)); return v; }
+  }
+  return list[h % list.length];
+}
+
+const chart = (S, w = 380) => `<svg class="csv ci" viewBox="0 0 ${w} 150" width="100%" preserveAspectRatio="none">
+  <path id="${S}-spark" class="spk" d="M10 70 C${w * 0.12} 58 ${w * 0.18} 66 ${w * 0.28} 52 C${w * 0.38} 38 ${w * 0.44} 50 ${w * 0.55} 34 C${w * 0.66} 20 ${w * 0.74} 30 ${w * 0.84} 18 C${w * 0.9} 12 ${w * 0.95} 14 ${w - 10} 8"/>
+  ${[0, 1, 2, 3, 4].map((i) => `<rect class="bar" id="${S}-bar${i}" x="${20 + i * (w - 40) / 5}" y="146" width="${(w - 40) / 5 - 18}" height="0"/>`).join("")}</svg>`;
+const stamp = (S, text) => `<div class="stamp2" id="${S}-ok">${text}</div>`;
+const flipSpan = (S, a, b) => `<span class="flip" id="${S}-fl"><span class="fa">${a}</span><span class="fb">${b}</span></span>`;
+
+/** The content of a product screen, laid out for a narrow or a wide device. */
+function screenContent(S, s, c, h, wide) {
+  const sc = s.screen ?? "frontdesk";
+  if (sc === "reports") {
+    const rows = ["Revenue · today, by outlet", "Occupancy · rooms, live", "Folio audit · every change", "Guests · arrivals"];
+    return {
+      html: `<div class="fhead ci">${tr(c, "REPORTS")}</div><div class="cols"><div><div class="rtitle ci">${tr(c, "Reports Hub")}</div>
+        <div class="rbig ci"><i>${tr(c, "Revenue today")}</i><b>${esc(c.revenue)}</b></div>${chart(S, wide ? 420 : 380)}</div>
+        <div>${rows.slice(0, wide ? 4 : 3).map((r) => `<div class="rrow ci">${esc(tr(c, r))}</div>`).join("")}</div></div>`,
+      chart: true, shows: [c.revenue],
+    };
+  }
+  if (sc === "menu") {
+    const lines = localLines(c);
+    return {
+      html: `<div class="fhead ci">${tr(c, "MENU · ROOM")} ${esc(c.T["{room}"])}</div><div class="pin ci">${tr(c, "Stay PIN")} <span class="dots">${[0, 1, 2, 3].map((k) => `<i id="${S}-d${k}"></i>`).join("")}</span></div><div class="cols"><div>
+        ${lines.map((l) => `<div class="bline ci"><span>${esc(l.label)}<i class="each">${esc(l.each)} ${tr(c, "each")}</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
+        <div class="btot ci"><span>${tr(c, "Total")}</span><span class="bval">${esc(c.T["{orderTotal}"])}</span></div></div>
+        <div>${stamp(S, tr(c, "Approved · bill to room"))}</div></div>`,
+      pin: true, stamp: true, shows: lines.flatMap((l) => [l.label, l.each, l.value]),
+    };
+  }
+  if (sc === "booking") {
+    const party = 2 + (h % 5), time = ["19:00", "19:30", "20:00", "20:30"][(h >>> 4) % 4];
+    return {
+      html: `<div class="bklink ci">🔗 ${tr(c, "The restaurant's booking link")}</div><div class="cols"><div>
+        <div class="fhead ci">${tr(c, "Book a table")}</div>
+        <div class="frow ci"><span>${tr(c, "Party")}</span><b>${party}</b></div>
+        <div class="frow ci"><span>${tr(c, "Today")} · ${tr(c, "Time")}</span><b>${time}</b></div>
+        <div class="bkbtn ci" id="${S}-btn">${tr(c, "Request a table")}</div>${stamp(S, tr(c, "Confirmed"))}</div>
+        <div><div class="fhead ci">${tr(c, "Today's requests")}</div>${[["18:30", 2], ["20:00", 6]].map(([tm, n]) => `<div class="frow ci"><span>${tm}</span><span>${n} ${tr(c, "pax")}</span></div>`).join("")}</div></div>`,
+      stamp: true, tap: true, shows: [String(party), time, "18:30", "2", "20:00", "6"],
+    };
+  }
+  if (sc === "kitchen") {
+    const dishes = localLines(c).map((l) => l.label);
+    const codes = [`${tr(c, "Room")} ${c.T["{room}"]}`, "T-12", "Bar 03", "T-04"];
+    const n = wide ? 3 : 2;
+    const tickets = codes.slice(0, n).map((code, i) => ({ code, items: [dishes[i % dishes.length], dishes[(i + 1) % dishes.length]], age: `0${2 + i * 2}:${String(10 + ((h >>> (i * 4)) % 49)).padStart(2, "0")}` }));
+    return {
+      html: `<div class="fhead ci">${tr(c, "KITCHEN · LIVE")}</div><div class="tks">${tickets.map((t, i) => `<div class="ktk ci"><b>${esc(t.code)}</b>${t.items.map((x) => `<span>${esc(x)}</span>`).join("")}<i>${t.age}</i>${i === 0 ? `<u>✓ ${tr(c, "Approved at front desk")}</u>` : ""}${i === n - 1 ? stamp(S, tr(c, "READY")) : ""}</div>`).join("")}</div>`,
+      stamp: true, shows: tickets.flatMap((t) => [t.code, t.age, ...t.items]),
+    };
+  }
+  if (sc === "housekeeping") {
+    const base = 100 * (1 + (h % 3)) + 1, states = ["Occupied", "Dirty", "Clean", "Occupied", "Clean", "Dirty", "Occupied", "Clean"];
+    const rooms = Array.from({ length: wide ? 8 : 6 }, (_, i) => ({ no: String(base + i), st: states[(i + (h >>> 5)) % states.length] }));
+    const flip = rooms.findIndex((r) => r.st === "Dirty");
+    return {
+      html: `<div class="fhead ci">${tr(c, "HOUSEKEEPING · LIVE")}</div><div class="hks">${rooms.map((r, i) => `<div class="hk ci hk-${i === flip ? "dirty" : r.st.toLowerCase()}"><b>${r.no}</b>${i === flip ? flipSpan(S, tr(c, "Dirty"), tr(c, "Clean")) : `<span>${tr(c, r.st)}</span>`}</div>`).join("")}</div>`,
+      flip: true, shows: rooms.map((r) => r.no),
+    };
+  }
+  if (sc === "events") {
+    const kinds = [["Board meeting", 20], ["Wedding reception", 180], ["Training workshop", 40], ["Product launch", 60], ["Graduation lunch", 120]];
+    const evs = ["09:00", "12:30", "18:00"].map((time, i) => ({ time, name: kinds[(i + (h >>> 2)) % kinds.length][0], pax: kinds[(i + (h >>> 2)) % kinds.length][1], chip: i === 1 ? "Deposit cleared" : "" }));
+    return {
+      html: `<div class="fhead ci">${tr(c, "EVENTS · TODAY")}</div>${evs.map((e) => `<div class="ev ci"><b>${e.time}</b><span>${esc(tr(c, e.name))}<i>${e.pax} ${tr(c, "pax")}</i></span>${e.chip ? `<em>${tr(c, e.chip)}</em>` : ""}</div>`).join("")}`,
+      shows: evs.flatMap((e) => [e.time, `${e.pax} pax`]),
+    };
+  }
+  if (sc === "tables") {
+    const tbl = [["T1", "Seated"], ["T2", "Free"], ["T3", "Seated"], ["T4", "Free"], ["T5", "No-show"], ["T6", "Seated"]];
+    return {
+      html: `<div class="fhead ci">${tr(c, "FLOOR · TONIGHT")}</div><div class="tbs">${tbl.map(([n, st]) => `<div class="htb ci htb-${st === "No-show" ? "ns" : st.toLowerCase()}"><b>${n}</b>${st === "No-show" ? flipSpan(S, tr(c, "No-show"), tr(c, "Free")) : `<span>${tr(c, st)}</span>`}</div>`).join("")}</div>`,
+      flip: true, shows: tbl.map(([n]) => n),
+    };
+  }
+  // front desk: every figure computed from one room count
+  const rooms = [14, 16, 18, 20, 24][h % 5], occ = Math.round(rooms * (0.62 + ((h >>> 4) % 25) / 100));
+  const guests = [["Amina K.", 101], ["Joseph M.", 104], ["Neema S.", 107], ["David O.", 110], ["Rehema J.", 112]].slice((h >>> 8) % 3, ((h >>> 8) % 3) + 3);
+  const kpis = [["OCCUPANCY", `${Math.round((occ / rooms) * 100)}%`], ["ROOMS FREE", String(rooms - occ)], ["CHECK-INS", String(guests.length)]];
+  return {
+    html: `<div class="fhead ci">${tr(c, "FRONT DESK · LIVE")}</div><div class="kpis">${kpis.map(([k, v]) => `<div class="kpi ci"><i>${tr(c, k)}</i><b>${v}</b></div>`).join("")}</div>
+      ${guests.map(([n, rm]) => `<div class="grow ci"><span>${esc(n)}</span><span>${tr(c, "Room")} ${rm}</span></div>`).join("")}`,
+    shows: [...kpis.map((k) => k[1]), ...guests.map((g2) => `Room ${g2[1]}`)],
+  };
+}
+
+/** A product screen on a device: outline, content, entrances, the one thing that happens, and life. */
+function deviceScreen(S, s, c, h, variant) {
+  const d = DEVICES[variant];
+  const k = screenContent(S, s, c, h, d.wide);
+  const at = `a+Math.min(Math.max(1.9,(b-a)*.62),b-a-.7)`;
+  return {
+    bg: { lines: d.dress?.lines ?? [], washes: [[c.pal.sky, -60, 60, 1200, 520, 0.4], [c.pal.warm, 40, 600, 1000, 360, 0.5]], actors: "" },
+    mid: { lines: [], washes: [[c.pal.glow, d.x + 40, d.y + 40, d.w - 80, d.h - 80, 0.45], ["wash-violet-b", d.x + d.w - 200, d.y - 60, 300, 300, 0.4]], actors: "" },
+    fg: { lines: [], washes: [], actors: sparks(S, [[d.x - 40, d.y + 60, 13], [d.x + d.w + 30, d.y + d.h - 80, 15]]) },
+    over: `<div class="dev${d.wide ? " wide" : ""} dv-${variant}" id="${S}-dev" style="left:${d.x}px;top:${d.y}px;width:${d.w}px;height:${d.h}px;transform:rotate(${d.rot}deg)">
+      <svg class="dsv" viewBox="0 0 ${d.w} ${d.h}" width="${d.w}" height="${d.h}"><path class="ln" d="${d.outline(d.w, d.h)}" stroke-width="3.2"/></svg>
+      <div class="dct" style="padding:${d.pad}">${k.html}</div></div>`,
+    js: `draw(S,a+.1,.8);washes(S,a+.2,.25);words(S,a+.25);
+      {const items=$$("#"+S+"-dev .ci");tl.fromTo(items,{opacity:0,y:16},{opacity:1,y:0,duration:.4,stagger:Math.min(.14,1.1/Math.max(1,items.length)),ease:"power3.out",immediateRender:false},cue(a+.7,"card"));}
+      ${k.chart ? `drawPath("#"+S+"-spark",a+1.0,1.0,"draw");${[0, 1, 2, 3, 4].map((i) => `tl.to("#"+S+"-bar${i}",{attr:{height:${[46, 70, 58, 92, 118][i]},y:${146 - [46, 70, 58, 92, 118][i]}},duration:.6,ease:"power3.out"},a+1.2+${i}*.1);`).join("")}` : ""}
+      ${k.pin ? `[0,1,2,3].forEach((q)=>tl.to("#"+S+"-d"+q,{backgroundColor:"${TEAL_INK}",scale:1.15,duration:.12,ease:"none"},q?a+1.3+q*.12:cue(a+1.3,"tap")));` : ""}
+      ${k.tap ? `tl.to("#"+S+"-btn",{scale:.94,duration:.08,yoyo:true,repeat:1,ease:"none"},cue(a+Math.min(1.8,(b-a)*.45),"tap"));` : ""}
+      ${k.stamp ? `tl.fromTo("#"+S+"-ok",{opacity:0,scale:1.8,rotation:-8},{opacity:1,scale:1,rotation:-4,duration:.2,ease:"power4.in",immediateRender:false},cue(${at},"stamp")-.2);` : ""}
+      ${k.flip ? `gsap.set("#"+S+"-fl .fb",{yPercent:110});{const at=${at};tl.to("#"+S+"-fl .fa",{yPercent:-110,duration:.32,ease:"power2.inOut"},cue(at,"flip"));tl.to("#"+S+"-fl .fb",{yPercent:0,duration:.32,ease:"power2.inOut"},at);}` : ""}`,
+    life: sparkLife(2) + `css(S+"-dev","rotate("+(${d.rot}+.7*Math.sin(t*.8)).toFixed(2)+"deg) translateY("+(8*Math.sin(t*1.2)).toFixed(1)+"px)");`,
+    hide: [`#${S}-dev .ci`, ...(k.stamp ? [`#${S}-ok`] : [])],
+    shows: k.shows,
+    variant,
+  };
 }
 
 // ── scene templates ─────────────────────────────────────────────────────────
@@ -209,6 +365,8 @@ const SCENE = {
 
   "ui-screen"(S, s, c) {
     const h = hash(c.seed + S);
+    const variant = chooseVariant(s.screen ?? "frontdesk", c, h, s.device);
+    if (DEVICES[variant]) return deviceScreen(S, s, c, h, variant);
     if (s.screen === "kitchen") {
       // paper tickets on the pass rail, the last one stamped ready
       const dishes = localLines(c).map((l) => l.label);
@@ -226,25 +384,6 @@ const SCENE = {
           for(const k of [0,1]){const e=g(S+"-s"+k);if(!e)continue;let d="";const x0=160+k*640;for(let j=0;j<=12;j++){const y=700-j*7,x=x0+8*Math.sin(j*.55-t*3.2+k*2);d+=(j?" L":"M")+x.toFixed(1)+" "+y.toFixed(1);}e.setAttribute("d",d);e.style.opacity=(clamp((t-a-1)*1.2)*(.5+.25*Math.sin(t*2+k))).toFixed(3);}`,
         hide: [...tickets.map((_, i) => `#${S}-kt${i}`), `#${S}-ready`],
         shows: tickets.flatMap((t) => [t.code, t.age, ...t.items]),
-      };
-    }
-    if (s.screen === "menu") {
-      const lines = localLines(c);
-      return {
-        bg: { lines: [], washes: [["wash-violet-b", 640, 20, 420, 420, 0.5], [c.pal.glow, 20, 600, 420, 400, 0.5]], actors: "" },
-        mid: { lines: [{ d: phoneD, w: 3.2 }, { d: "M500 102 L580 102 M370 150 h70 v70 h-70 Z M384 164 h18 v18 h-18 Z M410 190 h18 v18 h-18 Z M384 196 h10 M418 164 h10 v10", w: 1.8 }], washes: [["wash-blue", 220, 120, 640, 780, 0.4]], actors: "" },
-        fg: { lines: [], washes: [], actors: sparks(S, [[220, 260, 14], [880, 520, 16]]) },
-        over: `<div class="fol fcard pos" id="${S}-menu" style="left:330px;top:250px;width:420px"><div class="fhead">${tr(c, "MENU · ROOM")} ${esc(c.T["{room}"])}</div><div class="pin" id="${S}-pin">${tr(c, "Stay PIN")} <span class="dots">${[0, 1, 2, 3].map((k) => `<i id="${S}-d${k}"></i>`).join("")}</span></div>
-          ${lines.map((l, i) => `<div class="bline" id="${S}-l${i}" style="font-size:21px"><span>${esc(l.label)}<i class="each">${esc(l.each)} ${tr(c, "each")}</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
-          <div class="btot" style="font-size:24px"><span>${tr(c, "Total")}</span><span class="bval">${esc(c.T["{orderTotal}"])}</span></div>
-          <div class="ok" id="${S}-ok" style="position:relative;top:auto;margin:20px auto 0;width:fit-content;font-size:20px;font-weight:700;letter-spacing:.04em;border:4px double ${TEAL_INK};border-radius:8px;padding:5px 14px;mix-blend-mode:multiply">${tr(c, "Approved · bill to room")}</div></div>`,
-        js: `draw(S,a+.15,.9);washes(S,a+.25,.3);words(S,a+.25);
-          [0,1,2,3].forEach((k)=>tl.to("#"+S+"-d"+k,{backgroundColor:"${TEAL_INK}",scale:1.15,duration:.12,ease:"none"},k?a+.75+k*.12:cue(a+.75,"tap")));
-          ${lines.map((_, i) => `tl.fromTo("#"+S+"-l${i}",{opacity:0,x:24},{opacity:1,x:0,duration:.4,ease:"power3.out",immediateRender:false},a+1.35+${i}*.22);`).join("")}
-          tl.fromTo("#"+S+"-ok",{opacity:0,scale:1.8,rotation:-8},{opacity:1,scale:1,rotation:-4,duration:.2,ease:"power4.in",immediateRender:false},cue(a+Math.min(Math.max(2.1,(b-a)*.62),b-a-.7),"stamp")-.2);`,
-        life: sparkLife(2) + `css(S+"-mid",g(S+"-mid").style.transform+" translateY("+(12*Math.sin(t*1.3)).toFixed(1)+"px) rotate("+(1*Math.sin(t*.8)).toFixed(2)+"deg)");`,
-        hide: [...lines.map((_, i) => `#${S}-l${i}`), `#${S}-ok`],
-        shows: lines.flatMap((l) => [l.label, l.each, l.value]),
       };
     }
     if (s.screen === "housekeeping") {
@@ -266,32 +405,6 @@ const SCENE = {
           {const e=g(S+"-r0");if(e){const s2=t-T_[S].at;if(s2<0)e.style.opacity=0;else{const f=(s2/1.4)%1;e.setAttribute("r",(40+80*f).toFixed(1));e.style.opacity=(.6*(1-f)).toFixed(3);}}}`,
         hide: [`#${S} .door`],
         shows: doors.map((d) => d.no),
-      };
-    }
-    if (s.screen === "booking") {
-      // the restaurant's public booking link on a guest's phone; the restaurant confirms
-      const party = 2 + (h % 5), time = ["19:00", "19:30", "20:00", "20:30"][(h >>> 4) % 4];
-      return {
-        bg: { lines: [], washes: [["wash-violet-b", 640, 20, 420, 420, 0.5], [c.pal.glow, 20, 600, 420, 400, 0.5]], actors: "" },
-        mid: { lines: [{ d: phoneD, w: 3.2 }, { d: "M500 102 L580 102", w: 1.6 }], washes: [[c.pal.warm, 220, 120, 640, 780, 0.4]],
-          actors: "" },
-        fg: { lines: [], washes: [], actors: sparks(S, [[210, 280, 14], [890, 520, 16]]) },
-        over: `<div class="fol fcard bk" id="${S}-bk" style="left:330px;top:170px;width:420px">
-          <div class="bklink">🔗 ${tr(c, "The restaurant's booking link")}</div><div class="fhead">${tr(c, "Book a table")}</div>
-          <div class="frow" id="${S}-f0"><span>${tr(c, "Party")}</span><b>${party}</b></div>
-          <div class="frow" id="${S}-f1"><span>${tr(c, "Today")} · ${tr(c, "Time")}</span><b>${time}</b></div>
-          <div class="bkbtn" id="${S}-btn">${tr(c, "Request a table")}</div>
-          <div class="ok" id="${S}-ok" style="position:relative;top:auto;margin:22px auto 0;width:fit-content;font-size:22px;font-weight:700;border:4px double ${TEAL_INK};border-radius:8px;padding:5px 14px;mix-blend-mode:multiply">${tr(c, "Confirmed")}</div>
-          <div class="bkq" id="${S}-q"><div class="fhead" style="margin:26px 0 8px">${tr(c, "Today's requests")}</div>${[["18:30", 2], ["20:00", 6]].map(([tm, n]) => `<div class="frow"><span>${tm}</span><span>${n} ${tr(c, "pax")}</span></div>`).join("")}</div></div>`,
-        js: `draw(S,a+.15,.9);washes(S,a+.25,.3);words(S,a+.25);
-          tl.fromTo("#"+S+"-bk .fhead, #"+S+"-f0, #"+S+"-f1",{opacity:0,y:16},{opacity:1,y:0,duration:.4,stagger:.2,ease:"power3.out",immediateRender:false},cue(a+.8,"card"));
-          tl.fromTo("#"+S+"-q",{opacity:0,y:16},{opacity:1,y:0,duration:.45,ease:"power3.out",immediateRender:false},a+Math.min(Math.max(2.6,(b-a)*.75),b-a-.4));
-          tl.fromTo("#"+S+"-btn",{opacity:0,scale:.9},{opacity:1,scale:1,duration:.35,ease:"back.out(2)",immediateRender:false},a+1.5);
-          tl.to("#"+S+"-btn",{scale:.94,duration:.08,yoyo:true,repeat:1,ease:"none"},cue(a+Math.min(1.9,(b-a)*.45),"tap"));
-          tl.fromTo("#"+S+"-ok",{opacity:0,scale:1.8,rotation:-8},{opacity:1,scale:1,rotation:-4,duration:.2,ease:"power4.in",immediateRender:false},cue(a+Math.min(Math.max(2.3,(b-a)*.65),b-a-.6),"stamp")-.2);`,
-        life: sparkLife(2) + `css(S+"-mid",g(S+"-mid").style.transform+" translateY("+(10*Math.sin(t*1.3)).toFixed(1)+"px) rotate("+(1*Math.sin(t*.8)).toFixed(2)+"deg)");`,
-        hide: [`#${S}-bk .fhead`, `#${S}-f0`, `#${S}-f1`, `#${S}-btn`, `#${S}-ok`, `#${S}-q`],
-        shows: [String(party), time, "18:30", "2", "20:00", "6"],
       };
     }
     if (s.screen === "tables") {
@@ -334,44 +447,7 @@ const SCENE = {
         shows: evs.flatMap((e) => [e.time, `${e.pax} pax`]),
       };
     }
-    if (s.screen === "reports") {
-      return {
-        bg: { lines: [], washes: [["wash-violet-b", 640, 20, 420, 420, 0.5], [c.pal.glow, 20, 600, 420, 400, 0.5]], actors: "" },
-        mid: { lines: [{ d: phoneD, w: 3.2 }, { d: "M500 102 L580 102", w: 1.6 }], washes: [["wash-blue", 220, 120, 640, 780, 0.45]],
-          actors: `<path id="${S}-spark" class="spk" d="M350 350 C390 336 410 344 450 328 C490 312 510 324 550 306 C590 292 620 302 660 288 C700 278 716 280 736 272" stroke-width="3"/>` +
-            [0, 1, 2, 3, 4].map((i) => `<rect class="bar" id="${S}-bar${i}" x="${352 + i * 80}" y="460" width="46" height="0"/>`).join("") },
-        fg: { lines: [], washes: [], actors: sparks(S, [[220, 260, 14], [880, 520, 16]]) },
-        over: `<div class="rep" id="${S}-rep"><div class="fhead">${tr(c, "REPORTS")}</div><div class="rtitle">${tr(c, "Reports Hub")}</div><div class="rbig" id="${S}-big"><i>${tr(c, "Revenue today")}</i><b>${esc(c.revenue)}</b></div><div class="rgap"></div>
-          ${["Revenue · today, by outlet", "Occupancy · rooms, live", "Folio audit · every change", "Guests · arrivals"].map((r, i) => `<div class="rrow" id="${S}-rr${i}">${esc(tr(c, r))}</div>`).join("")}</div>`,
-        js: `draw(S,a+.15,.9);washes(S,a+.25,.3);words(S,a+.25);
-          drawPath("#"+S+"-spark",a+.9,1.1,"draw");
-          ${[0, 1, 2, 3, 4].map((i) => `tl.to("#"+S+"-bar${i}",{attr:{height:${[30, 46, 38, 60, 76][i]},y:${460 - [30, 46, 38, 60, 76][i]}},duration:.6,ease:"power3.out"},a+1.3+${i}*.12);`).join("")}
-          tl.fromTo("#"+S+"-big",{opacity:0,y:14},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},cue(a+.8,"pop",{i:0}));
-          tl.fromTo("#"+S+"-rep .rrow",{opacity:0,x:24},{opacity:1,x:0,duration:.4,stagger:.18,ease:"power3.out",immediateRender:false},cue(a+1.9,"card"));`,
-        life: sparkLife(2) + `css(S+"-mid",g(S+"-mid").style.transform+" translateY("+(14*Math.sin(t*1.3)).toFixed(1)+"px) rotate("+(1.1*Math.sin(t*.8)).toFixed(2)+"deg)");`,
-        hide: [`#${S}-rep .rrow`, `#${S}-big`],
-        shows: [c.revenue],
-      };
-    }
-    // front desk on a laptop: every figure computed from one room count
-    const r = hash(c.seed + S), rooms = [14, 16, 18, 20, 24][r % 5], occ = Math.round(rooms * (0.62 + ((r >>> 4) % 25) / 100));
-    const guests = [["Amina K.", 101], ["Joseph M.", 104], ["Neema S.", 107], ["David O.", 110], ["Rehema J.", 112]].slice((r >>> 8) % 3, ((r >>> 8) % 3) + 3);
-    const kpis = [["OCCUPANCY", `${Math.round((occ / rooms) * 100)}%`], ["ROOMS FREE", String(rooms - occ)], ["CHECK-INS", String(guests.length)]];
-    return {
-      bg: { lines: [{ d: "M0 900 L1080 880", w: 2.6 }], washes: [["wash-blue", 60, 120, 960, 700, 0.4]], actors: "" },
-      mid: { lines: [{ d: "M150 160 h780 a20 20 0 0 1 20 20 v520 h-820 v-520 a20 20 0 0 1 20 -20 Z", w: 3 }, { d: "M60 760 L1020 760 L1060 820 L20 820 Z M460 790 h160", w: 2.4 }],
-        washes: [[c.pal.glow, 140, 150, 800, 560, 0.45]], actors: "" },
-      fg: { lines: [], washes: [], actors: sparks(S, [[110, 840, 14], [990, 870, 16], [1010, 140, 12]]) },
-      over: `<div class="desk" id="${S}-desk"><div class="fhead">${tr(c, "FRONT DESK · LIVE")}</div><div class="kpis">${kpis.map(([k, v2], i) => `<div class="kpi" id="${S}-kp${i}"><i>${tr(c, k)}</i><b>${v2}</b></div>`).join("")}</div>
-        ${guests.map(([n, rm], i) => `<div class="grow" id="${S}-g${i}"><span>${esc(n)}</span><span>${tr(c, "Room")} ${rm}</span></div>`).join("")}</div>`,
-      js: `draw(S,a+.15,1.0);washes(S,a+.25,.3);words(S,a+.25);
-        tl.fromTo("#"+S+"-desk .kpi",{opacity:0,y:20},{opacity:1,y:0,duration:.45,stagger:.15,ease:"back.out(1.6)",immediateRender:false},cue(a+.9,"card"));
-        tl.fromTo("#"+S+"-desk .grow",{opacity:0,x:30},{opacity:1,x:0,duration:.4,stagger:.2,ease:"power3.out",immediateRender:false},a+1.5);`,
-      life: sparkLife(3) + `css(S+"-mid",g(S+"-mid").style.transform+" translateY("+(8*Math.sin(t*1.1)).toFixed(1)+"px)");
-        {const e=g(S+"-g0");if(e)e.style.background="rgba(54,210,186,"+(.06+.08*Math.abs(Math.sin(t*2))).toFixed(3)+")";}`,
-      hide: [`#${S}-desk .kpi`, `#${S}-desk .grow`],
-      shows: [...kpis.map((k) => k[1]), ...guests.map((gst) => `Room ${gst[1]}`)],
-    };
+    return deviceScreen(S, s, c, h, "laptop");
   },
 
   checklist(S, s, c) {
@@ -398,6 +474,7 @@ const SCENE = {
     const city = CITIES[c.city];
     const dusk = !["sunrise", "desk", "owner"].includes(v);
     const sky = dusk ? [["wash-dusk", -40, 30, 1160, 620, 0.8], ["wash-rose", 0, 400, 1080, 280, 0.6]] : [["wash-sky", -40, 30, 1160, 620, 0.7], ["wash-lilac", 0, 420, 1080, 260, 0.5]];
+    let ownCard = "";
     let midLines = [{ d: "M0 700 L1080 680 M0 742 L1080 722", w: 2.6 }], midActors = "", washesMid = [["wash-violet", 0, 640, 1080, 420, 0.4]], extraLife = "";
     if (v === "toast") {
       const a = person(c.seed + "p0", { x: 380, y: 720, s: 1, pose: "toast", dir: 1 }), b = person(c.seed + "p1", { x: 700, y: 700, s: 1, pose: "toast", dir: -1 });
@@ -433,15 +510,20 @@ const SCENE = {
       extraLife = `for(const k of [0,1]){const e=g(S+"-c"+k);if(e)e.style.transform="scaleY("+(.85+.3*Math.abs(Math.sin(t*12+k)*Math.sin(t*7.1+k))).toFixed(3)+")";}
         css(S+"-fig0","rotate("+(1.5*Math.sin(t*1.1)).toFixed(2)+"deg)");css(S+"-fig1","rotate("+(-2*Math.sin(t*1.3+1)).toFixed(2)+"deg)");`;
     } else if (v === "owner") {
-      // the owner away, at a window, a plane crossing: the hotel runs without them
-      const a = person(c.seed + "p0", { x: 400, y: 780, s: 1.05, pose: "rest" });
-      midLines = [{ d: "M180 200 L900 200 L900 720 L180 720 Z M540 200 L540 720 M180 460 L900 460", w: 3 }, { d: "M150 740 L930 740 M170 720 L170 740 M910 720 L910 740", w: 2.2 }];
-      midActors = `<g id="${S}-fig0"><path d="${a.d}" stroke-width="2.6"/><path d="${a.fine}" stroke-width="1.4"/></g>` +
-        `<g id="${S}-plane"><path d="M0 0 L60 -6 L80 -22 L90 -20 L80 -4 L110 -2 L118 -12 L124 -10 L120 2 L124 14 L118 16 L110 6 L80 8 L90 24 L80 26 L60 10 L0 6 Z" stroke-width="2"/></g>` +
-        `<path id="${S}-ph" d="M560 770 h70 v120 h-70 Z M580 780 h30" stroke-width="2.2"/><path class="actor" id="${S}-buzz" d="M650 790 l18 -10 M652 830 l22 0 M650 870 l18 10" stroke-width="2"/>`;
-      washesMid = [a.wash, ["wash-sky", 190, 210, 700, 500, 0.45], ["wash-violet", 120, 700, 840, 200, 0.35]];
-      extraLife = `setT(S+"-plane","translate("+(140+((t-a)*70)%760).toFixed(1)+" "+(330-(t-a)*8).toFixed(1)+")");
-        {const e=g(S+"-buzz");if(e){const k=((t-a)*1.4)%1;e.style.opacity=(t-a<1?0:k<.5?1-k*2:0).toFixed(3);}}css(S+"-fig0","translateY("+(2*Math.sin(t*1.2)).toFixed(1)+"px)");`;
+      // the owner away on a terrace, phone raised: today's numbers arrive while the
+      // hotel itself sits across the water, running without them
+      const a = person(c.seed + "p0", { x: 330, y: 760, s: 1.05, pose: "toast", dir: 1 });
+      const [px, py] = a.hand;
+      const huts = [700, 790, 880].map((x, i) => `M${x - 40} 560 L${x} ${528 - i * 4} L${x + 40} 560 Z M${x - 30} 560 V588 H${x + 30} V560`).join(" ");
+      midLines = [{ d: "M0 820 L1080 806 M0 862 L1080 848", w: 2.6 }, { d: Array.from({ length: 14 }, (_, i) => `M${40 + i * 76} ${818 - i * 1} V${858 - i * 1}`).join(" "), w: 1.4 }, { d: `${huts} M640 592 C720 600 860 600 940 592`, w: 1.8 }];
+      midActors = `<g id="${S}-fig0"><path d="${a.d}" stroke-width="2.6"/><path d="${a.fine}" stroke-width="1.4"/>` +
+        `<path d="M${px - 34} ${py - 64} h68 a10 10 0 0 1 10 10 v108 a10 10 0 0 1 -10 10 h-68 a10 10 0 0 1 -10 -10 v-108 a10 10 0 0 1 10 -10 Z" stroke-width="2.6"/>` +
+        `<path d="M${px - 22} ${py + 30} v-14 M${px - 6} ${py + 30} v-26 M${px + 10} ${py + 30} v-20 M${px + 26} ${py + 30} v-38 M${px - 24} ${py - 30} L${px - 4} ${py - 40} L${px + 12} ${py - 34} L${px + 30} ${py - 50}" stroke-width="2"/></g>` +
+        `<path class="actor" id="${S}-buzz" d="M${px + 52} ${py - 40} l18 -10 M${px + 54} ${py} l22 0 M${px + 52} ${py + 40} l18 10" stroke-width="2"/>`;
+      washesMid = [a.wash, ["wash-teal", -60, 590, 1200, 220, 0.45], [c.pal.warm, 620, 500, 340, 120, 0.6]];
+      extraLife = `{const e=g(S+"-buzz");if(e){const k=((t-a)*1.4)%1;e.style.opacity=(t-a<1?0:k<.5?1-k*2:0).toFixed(3);}}css(S+"-fig0","translateY("+(2*Math.sin(t*1.2)).toFixed(1)+"px)");
+        css(S+"-own","translateY("+(6*Math.sin(t*1.5)).toFixed(1)+"px)");`;
+      ownCard = `<div class="own" id="${S}-own" style="left:${px + 90}px;top:${py - 150}px"><i>${tr(c, "Revenue today")}</i><b>${esc(c.revenue)} <span>▲</span></b><u>${tr(c, "Your hotel, live")}</u></div>`;
     } else {
       const a = person(c.seed + "p0", { x: 470, y: 700, s: 1.05, pose: "rest" });
       midLines = [{ d: "M0 840 L1080 826 M0 872 L1080 858", w: 2.6 }];
@@ -455,6 +537,7 @@ const SCENE = {
         washes: [...sky, [dusk ? "wash-magenta" : "wash-sky", dusk ? 740 : 100, dusk ? 150 : 200, 220, 220, 0.8]],
         actors: dusk ? [[150, 110], [300, 70], [470, 120], [640, 60], [960, 150], [1010, 80]].map(([x, y], i) => `<path class="actor spark" id="${S}-st${i}" d="M${x - 7} ${y} L${x + 7} ${y} M${x} ${y - 7} L${x} ${y + 7}" stroke-width="1.6"/>`).join("") : birdActors(S) },
       mid: { lines: midLines, washes: washesMid, actors: midActors },
+      over: ownCard,
       fg: { lines: dusk ? [{ d: "M150 770 h60 v90 h-60 Z M160 770 C160 745 200 745 200 770 M870 760 h60 v90 h-60 Z M880 760 C880 735 920 735 920 760", w: 2.2 }] : [],
         washes: dusk ? [["wash-lilac", 120, 730, 140, 150, 0.7], ["wash-lilac", 840, 720, 140, 150, 0.7]] : [],
         actors: dusk ? `<path class="actor flame" id="${S}-f0" d="M180 846 C170 826 176 806 180 792 C184 806 190 826 180 846 Z" stroke-width="1.6"/><path class="actor flame" id="${S}-f1" d="M900 836 C890 816 896 796 900 782 C904 796 910 816 900 836 Z" stroke-width="1.6"/>` +
@@ -463,6 +546,7 @@ const SCENE = {
       js: `const CLINK=a+Math.min(1.2,(b-a)*.4);
         draw(S,a+.1,1.2);washes(S,a+.2,.2);words(S,a+.25);
         ${v === "toast" || v === "dinner" ? `cue(CLINK,"clink");` : v === "desk" ? `cue(CLINK,"tap");` : ""}
+        ${ownCard ? `tl.fromTo("#"+S+"-own",{opacity:0,scale:.85,y:20},{opacity:1,scale:1,y:0,duration:.5,ease:"back.out(1.8)",immediateRender:false},cue(a+.9,"pop",{i:0}));` : ""}
         ${["desk", "dinner"].includes(v) ? `drawProp(S,a+.2,.8);tl.fromTo("#"+S+" .pfill",{opacity:0},{opacity:.95,duration:.4,immediateRender:false},a+.15);tl.fromTo("#"+S+" .pwash",{opacity:0},{opacity:.5,duration:.8,immediateRender:false},a+.7);` : ""}
         ${s.chip ? `tl.fromTo("#"+S+"-chip",{opacity:0,scale:.8},{opacity:1,scale:1,duration:.45,ease:"back.out(2)",immediateRender:false},cue(CLINK+.6,"match"));` : ""}
         T_[S]={clink:CLINK};`,
@@ -470,7 +554,8 @@ const SCENE = {
         for(let i=0;i<6;i++){const e=g(S+"-st"+i);if(!e)continue;const on=clamp((t-a-.6-i*.35)*2);e.style.opacity=(on*(.5+.5*Math.abs(Math.sin(t*3+i)))).toFixed(3);e.style.transform="scale("+(.7+.4*Math.abs(Math.sin(t*2.4+i))).toFixed(3)+")";}
         for(const k of [0,1]){const e=g(S+"-f"+k);if(e)e.style.transform="scaleY("+(.85+.3*Math.abs(Math.sin(t*13+k)*Math.sin(t*7.3+k*2))).toFixed(3)+") scaleX("+(1+.08*Math.sin(t*9+k)).toFixed(3)+")";}
         for(let i=0;i<8;i++){const e=g(S+"-ff"+i);if(!e)continue;const fx=120+(i*137)%840,fy=560+(i*71)%260;e.setAttribute("cx",(fx+30*Math.sin(t*.7+i*1.3)).toFixed(1));e.setAttribute("cy",(fy+18*Math.sin(t*1.1+i*2.6)).toFixed(1));e.style.opacity=(clamp((t-a-.8)*1.5)*(.35+.65*Math.abs(Math.sin(t*2.6+i*1.3)))).toFixed(3);}` : skyLife),
-      hide: s.chip ? [`#${S}-chip`] : [],
+      hide: [...(s.chip ? [`#${S}-chip`] : []), ...(ownCard ? [`#${S}-own`] : [])],
+      shows: ownCard ? [c.revenue] : [],
     };
   },
 };
@@ -516,10 +601,13 @@ export function composeInk(brief, voice, brand, urls) {
   const veils = ["veil", "veil-teal", "veil-blue"].sort((a, b) => (hash(seed + a) % 97) - (hash(seed + b) % 97));
 
   const ids = brief.scenes.map((_, i) => `s${i}`);
+  // the city lends its warm accent to every scene; devices are not repeated within a reel
+  const pal = { ...PALETTES[tod], warm: CITY_ACCENT[city] ?? PALETTES[tod].warm };
+  const used = [];
   const built = brief.scenes.map((s, i) => {
     const fn = SCENE[s.type];
     if (!fn) throw new Error(`ink has no scene "${s.type}"`);
-    return fn(ids[i], s, { seed: seed + i, city, tod, pal: PALETTES[tod], T, fill, ledger, lang: brief.language, revenue: money(ledger.rightTotal + ledger.orderTotal, ledger.currency) });
+    return fn(ids[i], s, { seed: seed + i, city, tod, pal, used, T, fill, ledger, lang: brief.language, revenue: money(ledger.rightTotal + ledger.orderTotal, ledger.currency) });
   });
   // a camera move per scene: direction and strength vary with the post
   const pans = ids.map((S, i) => {
@@ -633,6 +721,63 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .kt u{text-decoration:none;font-size:16px;font-weight:700;color:${TEAL_INK};border-top:1.5px dashed rgba(19,132,118,.5);padding-top:6px}
 .kt i{font-style:normal;color:${INK_SOFT};font-size:19px;margin-top:6px}
 .kt em{position:relative;align-self:flex-end;margin-top:6px;font-style:normal;font-weight:700;font-size:26px;letter-spacing:.08em;color:${TEAL_INK};border:4px double ${TEAL_INK};border-radius:8px;padding:2px 10px;transform:rotate(-10deg);mix-blend-mode:multiply}
+.dev{position:absolute;transform-origin:50% 50%}
+.dsv{position:absolute;left:0;top:0;overflow:visible;filter:url(#boil)}
+.dsv path{fill:rgba(251,248,241,.55);stroke:${INK};stroke-linecap:round;stroke-linejoin:round}
+.dct{position:absolute;inset:0;display:flex;flex-direction:column;gap:10px;color:${INK};font-size:21px;overflow:hidden}
+.cols{display:flex;flex-direction:column;gap:12px}
+.cols>div{display:flex;flex-direction:column;gap:8px}
+.dev.wide .cols{flex-direction:row;gap:34px}
+.dev.wide .cols>div{flex:1}
+.dct .fhead{margin-bottom:4px}
+.dct .rtitle{font-size:30px;font-weight:700}
+.dct .rrow{margin:0}
+.dct .kpis{gap:12px}
+.dev:not(.wide) .kpi{padding:10px 12px}
+.dev:not(.wide) .kpi b{font-size:32px}
+.dev:not(.wide) .kpi i{font-size:12px}
+.dct .grow{font-size:21px}
+.csv{display:block;height:130px;overflow:visible}
+.csv .spk{fill:none;stroke:${TEAL_INK};stroke-width:3;stroke-linecap:round}
+.csv .bar{fill:rgba(123,84,255,.25);stroke:${INK};stroke-width:2}
+.stamp2{align-self:center;margin-top:14px;width:fit-content;font-size:22px;font-weight:700;letter-spacing:.04em;color:${TEAL_INK};border:4px double ${TEAL_INK};border-radius:8px;padding:5px 14px;mix-blend-mode:multiply}
+.tks{display:flex;gap:16px;align-items:flex-start}
+.ktk{flex:1;display:flex;flex-direction:column;gap:6px;padding:16px 16px 14px;border:2.4px solid ${INK};border-radius:4px;background:rgba(255,253,248,.92);font-size:20px}
+.ktk b{font-size:26px}
+.ktk i{font-style:normal;font-size:16px;color:${INK_SOFT}}
+.ktk u{text-decoration:none;font-size:15px;font-weight:700;color:${TEAL_INK}}
+.ktk .stamp2{align-self:flex-end;font-size:18px;margin-top:4px}
+.dv-board .ktk:nth-child(2){transform:rotate(2deg)}
+.dv-board .ktk:nth-child(1){transform:rotate(-2deg)}
+.hks{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.dev.wide .hks{grid-template-columns:repeat(4,1fr)}
+.hk{border:2.4px solid ${INK};border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;background:rgba(255,253,248,.85)}
+.hk b{font-size:30px}
+.hk span{font-size:17px;font-weight:600;color:${INK_SOFT}}
+.hk-clean{background:rgba(64,186,168,.18)}
+.hk-dirty{background:rgba(232,172,86,.22)}
+.hk .flip{min-width:5.2em;height:1.4em;text-align:left}
+.hk .flip span{left:0;right:auto}
+.hk .flip .fa{color:#C07A1E}
+.tbs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;justify-items:center}
+.htb{width:136px;height:136px;border:3px solid ${INK};border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;background:rgba(255,253,248,.85)}
+.htb b{font-size:30px}
+.htb span{font-size:16px;font-weight:600;color:${INK_SOFT}}
+.htb-seated{background:rgba(150,118,236,.18)}
+.htb-free{background:rgba(64,186,168,.15)}
+.htb-ns{background:rgba(64,186,168,.32);border-width:4px}
+.htb .flip{min-width:5.6em;height:1.4em;text-align:center}
+.htb .flip span{left:0;right:0}
+.htb .flip .fa{color:#C07A1E}
+.dct .ev{padding:16px 4px}
+.dev:not(.wide) .ev{flex-wrap:wrap;gap:4px 14px}
+.dev:not(.wide) .ev em{margin-left:104px}
+.dct .frow b{font-size:30px;color:#5B3FD6}
+.own{position:absolute;padding:16px 20px;border:2.6px solid ${INK};border-radius:14px;background:rgba(251,248,241,.95);display:flex;flex-direction:column;gap:2px}
+.own i{font-style:normal;font-size:16px;letter-spacing:.08em;color:${INK_SOFT}}
+.own b{font-size:40px;color:#5B3FD6}
+.own b span{color:${TEAL_INK};font-size:26px}
+.own u{text-decoration:none;font-size:16px;font-weight:700;color:${TEAL_INK}}
 .bk .frow b{font-size:30px;color:#5B3FD6}
 .bklink{display:inline-block;font-size:17px;font-weight:700;color:${TEAL_INK};border:2px solid ${TEAL_INK};border-radius:100px;padding:5px 12px;margin-bottom:14px}
 .bkq .frow{font-size:20px;padding:10px 0}

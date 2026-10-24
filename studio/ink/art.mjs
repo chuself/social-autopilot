@@ -194,9 +194,9 @@ export const CITIES = {
       const f1 = figure({ x: 470, y: 820, s: 0.9, hair: "short", wear: "plain", pose: "bag" }), f2 = figure({ x: 640, y: 800, s: 0.82, hair: "braids", wear: "collar", pose: "bag" });
       return {
         mid: { lines: [{ d: "M0 760 C240 740 480 770 720 748 C880 734 980 746 1080 740", w: 1.6 }, { d: "M0 800 C200 786 420 804 640 790 M0 840 C220 826 460 844 700 830", w: 1.2 }],
-          washes: [["wash-teal", -100, 620, 1280, 420, 0.5]], actors: "" },
+          washes: [["wash-green", -100, 620, 1280, 420, 0.6]], actors: "" },
         fg: { lines: [{ d: banana(140, 640), w: 2.4 }, { d: banana(960, 610), w: 2.4 }],
-          washes: [["wash-teal", 20, 520, 280, 300, 0.55], ["wash-teal", 840, 490, 280, 300, 0.55], f1.wash, f2.wash],
+          washes: [["wash-green", 20, 520, 280, 300, 0.7], ["wash-green", 840, 490, 280, 300, 0.7], f1.wash, f2.wash],
           actors: `<g id="${S}-w0"><path d="${f1.d}" stroke-width="2.6"/><path d="${f1.fine}" stroke-width="1.4"/></g><g id="${S}-w1"><path d="${f2.d}" stroke-width="2.6"/><path d="${f2.fine}" stroke-width="1.4"/></g>` },
         life: `for(const k of [0,1]){const w=g(S+"-w"+k);if(w)w.style.transform="translate("+(-(t-a)*(8+k*4)).toFixed(1)+"px,"+(-Math.abs(Math.sin((t+k*.4)*5))*7).toFixed(1)+"px)";}`,
       };
@@ -208,7 +208,7 @@ export const CITIES = {
       const frond = (x, y, a, l) => { const dx = Math.cos(a) * l, dy = Math.sin(a) * l; return `M${x} ${y} q${(dx * 0.55).toFixed(0)} ${(dy * 0.2 - 40).toFixed(0)} ${dx.toFixed(0)} ${dy.toFixed(0)}` + Array.from({ length: 6 }, (_, i) => { const u = (i + 1) / 7; return ` M${(x + dx * u).toFixed(0)} ${(y + dy * u - 30 * Math.sin(Math.PI * u)).toFixed(0)} l${(-12 + Math.sign(dx) * 4).toFixed(0)} 22`; }).join(""); };
       return {
         mid: { lines: [{ d: waves(640, 5, 10).join(" "), w: 1.4 }, { d: "M0 860 C260 820 560 840 820 812 C920 800 1000 806 1080 800", w: 2 }],
-          washes: [["wash-teal", -120, 560, 1320, 300, 0.6], ["wash-rose", 0, 800, 1080, 260, 0.45]],
+          washes: [["wash-teal", -120, 560, 1320, 300, 0.6], ["wash-sand", -60, 780, 1200, 300, 0.75]],
           actors: `<g id="${S}-dhow"><path d="M520 548 L640 548 L620 566 L540 566 Z M580 548 L580 450 M580 452 L652 540 L560 540 Z" stroke-width="2.2"/></g>` },
         fg: { lines: [{ d: "M880 1000 C870 900 880 760 920 640", w: 3.4 }, { d: [-2.9, -2.4, -1.6, -0.9, -0.3].map((a) => frond(920, 640, a, 170)).join(" "), w: 2 }],
           washes: [["wash-teal", 760, 520, 320, 260, 0.5]], actors: "" },
@@ -224,10 +224,10 @@ export const CITIES = {
       const rock = (x, y, w, h) => `M${x} ${y} C${x - 6} ${y - h * 0.7} ${x + w * 0.2} ${y - h} ${x + w * 0.5} ${y - h} C${x + w * 0.85} ${y - h} ${x + w + 6} ${y - h * 0.6} ${x + w} ${y} Z`;
       return {
         mid: { lines: [{ d: [rock(640, 600, 150, 140), rock(700, 470, 90, 90), rock(560, 600, 90, 70)].join(" "), w: 2.6 }, { d: waves(640, 4, 8).join(" "), w: 1.3 }],
-          washes: [["wash-blue", -80, 580, 1240, 360, 0.55], ["wash-lilac", 540, 380, 320, 260, 0.5]],
+          washes: [["wash-blue", -80, 580, 1240, 360, 0.55], ["wash-ochre", 540, 380, 320, 260, 0.7]],
           actors: `<g id="${S}-boat"><path d="M180 640 C220 662 320 662 360 640 Z M270 640 L270 586" stroke-width="2.2"/></g>` },
         fg: { lines: [{ d: [rock(-20, 1000, 300, 260), rock(820, 1000, 280, 210)].join(" "), w: 3 }, { d: "M300 1000 l10 -40 M330 1000 l-6 -50 M360 1000 l8 -36 M760 1000 l-8 -44 M790 1000 l6 -36", w: 1.6 }],
-          washes: [["wash-violet-b", -60, 760, 420, 300, 0.45], ["wash-violet-b", 800, 800, 360, 260, 0.45]], actors: "" },
+          washes: [["wash-ochre", -60, 760, 420, 300, 0.65], ["wash-ochre", 800, 800, 360, 260, 0.65]], actors: "" },
         life: `setT(S+"-boat","translate("+((t-a)*16).toFixed(1)+" "+(Math.sin(t*1.5)*4).toFixed(1)+") rotate("+(Math.sin(t*1.5)*2).toFixed(2)+")");`,
       };
     },
@@ -236,7 +236,7 @@ export const CITIES = {
     far: { lines: [
       { d: "M0 600 L60 600 L60 470 L130 470 L130 600 L170 600 L170 410 L240 410 L240 600 L300 600 L300 520 L370 520 L370 600 L760 600 L760 450 L830 450 L830 600 L880 600 L880 380 L960 380 L960 600 L1080 600", w: 2 },
       { d: "M80 500 h30 M80 530 h30 M190 440 h30 M190 470 h30 M190 500 h30 M900 410 h40 M900 440 h40 M900 470 h40", w: 1.2 }],
-      washes: [["wash-sky", -60, 240, 1200, 380, 0.6]] },
+      washes: [["wash-sky", -60, 240, 1200, 380, 0.6], ["wash-terracotta", 40, 400, 360, 220, 0.55], ["wash-terracotta", 740, 380, 300, 240, 0.5]] },
     near: (S) => {
       const crane = (x) => `M${x} 600 L${x + 30} 400 L${x + 60} 600 M${x + 30} 400 L${x + 30} 360 L${x + 200} 360 M${x + 30} 360 L${x - 60} 360 M${x + 5} 520 L${x + 52} 520 M${x + 15} 460 L${x + 43} 460 M${x + 150} 360 L${x + 150} 420`;
       return {
@@ -250,6 +250,9 @@ export const CITIES = {
     },
   },
 };
+
+/** The warm accent each city lends its whole reel, under the brand washes. */
+export const CITY_ACCENT = { arusha: "wash-lilac", moshi: "wash-green", zanzibar: "wash-sand", mwanza: "wash-ochre", dar: "wash-terracotta" };
 
 /** Normalise a city name or tag to a key in CITIES. */
 export function cityKey(name = "") {

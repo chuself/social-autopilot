@@ -7,7 +7,7 @@
  *
  *   node studio/ink/sweep.mjs
  */
-import { composeInk, MOMENTS } from "./engine.mjs";
+import { composeInk, MOMENTS, VARIANTS } from "./engine.mjs";
 import { PROP_NAMES } from "./art.mjs";
 import { chromium } from "playwright";
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
@@ -21,6 +21,7 @@ const SAFE = { left: 40, right: 1040, top: 60, bottom: 1640, lowerRight: 950, lo
 const voice = { duration: 23, speechStart: 0.3, speechEnd: 21.5, pauses: [] };
 const briefs = readdirSync(`${ROOT}/studio/briefs/golden`).map((f) => JSON.parse(readFileSync(`${ROOT}/studio/briefs/golden/${f}`, "utf8")));
 briefs.push(...readdirSync(path.join(import.meta.dirname, "briefs")).map((f) => JSON.parse(readFileSync(path.join(import.meta.dirname, "briefs", f), "utf8"))));
+for (const [screen, list] of Object.entries(VARIANTS)) for (const device of list) briefs.push({ id: `dev-${screen}-${device}`, language: "sw", cta: "Ona", city: "Moshi", narration: "x", scenes: [{ type: "place", line: "Mwanzo wa hadithi hii", prop: "bell" }, { type: "ui-screen", screen, device, line: "Skrini ya mfumo inaonyesha hili" }, { type: "payoff", line: "Mwisho mzuri wa hadithi", moment: MOMENTS[(screen.length + device.length) % MOMENTS.length], chip: "Sawa" }] });
 const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
 let bad = 0, n = 0;
 for (const g of briefs) for (const k of [0, 1, 2, 3]) {
@@ -33,7 +34,7 @@ for (const g of briefs) for (const k of [0, 1, 2, 3]) {
     const out = await p.evaluate(({ id, t, SAFE }) => {
       window.setFrame(t);
       const res = [];
-      document.querySelectorAll(`#${id} .chip, #${id} .place, #${id} .fcard, #${id} .kt, #${id} .door, #${id} .ev, #${id} .tb, #${id} .rep, #${id} .desk, #${id} .note, #${id} .invw`).forEach((el) => {
+      document.querySelectorAll(`#${id} .chip, #${id} .place, #${id} .fcard, #${id} .kt, #${id} .door, #${id} .ev, #${id} .tb, #${id} .dev, #${id} .own, #${id} .rep, #${id} .desk, #${id} .note, #${id} .invw`).forEach((el) => {
         let op = 1; for (let e = el; e && e !== document.body; e = e.parentElement) op *= +getComputedStyle(e).opacity;
         if (op < 0.5) return;
         const q = el.getBoundingClientRect();
