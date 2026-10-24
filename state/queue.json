@@ -11981,7 +11981,30 @@
     "createdAt": "2026-10-23T18:20:28.742Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 395465338
+    "bgSeed": 395465338,
+    "reel": {
+      "file": "operra-2026-10-24-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-24-13-number-that-lands.mp4",
+      "beats": [
+        "Managing your resort from far away?",
+        "Track live revenue across every department",
+        "Monitor daily occupancy and guest arrivals instantly",
+        "Stop revenue leaks before month end"
+      ],
+      "narration": "Managing a Zanzibar resort while away requires real visibility. Instead of waiting for manual reports, Operra links every department to a single ledger. Track live revenue, monitor occupancy instantly, and protect your property from revenue leaks from anywhere.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "ui-screen:frontdesk",
+        "payoff"
+      ],
+      "attempts": 2,
+      "warnings": [],
+      "builtAt": "2026-10-24T07:07:46.911Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-24-16-client-proof",
