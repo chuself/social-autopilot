@@ -103,7 +103,7 @@ const DEVICES = {
   phone: { x: 320, y: 110, w: 440, h: 800, rot: 0, pad: "64px 30px 36px", wide: false, outline: (w, h) => `${rrect(w, h, 48)} M${w / 2 - 40} 28 h80`, family: "phone" },
   phoneTilt: { x: 290, y: 120, w: 430, h: 780, rot: -5, pad: "62px 28px 34px", wide: false, outline: (w, h) => `${rrect(w, h, 46)} M${w / 2 - 40} 28 h80`, family: "phone",
     dress: { lines: [{ d: "M720 980 C716 900 726 860 750 820 L790 750 C800 734 820 740 816 758 L800 820", w: 2.6 }], washes: [] } },
-  tablet: { x: 150, y: 200, w: 780, h: 580, rot: 1.5, pad: "40px 46px", wide: true, outline: (w, h) => `${rrect(w, h, 32)} M${w / 2 - 8} 20 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0`, family: "tablet",
+  tablet: { x: 150, y: 200, w: 780, h: 580, rot: 1.5, pad: "32px 46px 26px", wide: true, outline: (w, h) => `${rrect(w, h, 32)} M${w / 2 - 8} 20 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0`, family: "tablet",
     dress: { lines: [{ d: "M40 860 L1040 850 M40 900 L1040 890", w: 2.4 }], washes: [] } },
   laptop: { x: 160, y: 160, w: 760, h: 530, rot: 0, pad: "34px 40px", wide: true, outline: (w, h) => rrect(w, h, 18), family: "laptop",
     dress: { lines: [{ d: "M60 720 L1020 720 L1060 790 L20 790 Z M460 755 h160", w: 2.6 }, { d: "M960 640 L960 700 C960 716 1010 716 1010 700 L1010 640 Z M1010 652 C1030 652 1030 682 1010 682", w: 2.2 }], washes: [] } },
@@ -179,7 +179,7 @@ function screenContent(S, s, c, h, wide) {
   if (sc === "kitchen") {
     const dishes = localLines(c).map((l) => l.label);
     const codes = [`${tr(c, "Room")} ${c.T["{room}"]}`, "T-12", "Bar 03", "T-04"];
-    const n = wide ? 3 : 2;
+    const n = 2;
     const tickets = codes.slice(0, n).map((code, i) => ({ code, items: [dishes[i % dishes.length], dishes[(i + 1) % dishes.length]], age: `0${2 + i * 2}:${String(10 + ((h >>> (i * 4)) % 49)).padStart(2, "0")}` }));
     return {
       html: `<div class="fhead ci">${tr(c, "KITCHEN · LIVE")}</div><div class="tks">${tickets.map((t, i) => `<div class="ktk ci"><b>${esc(t.code)}</b>${t.items.map((x) => `<span>${esc(x)}</span>`).join("")}<i>${t.age}</i>${i === 0 ? `<u>✓ ${tr(c, "Approved at front desk")}</u>` : ""}${i === n - 1 ? stamp(S, tr(c, "READY")) : ""}</div>`).join("")}</div>`,
@@ -492,8 +492,8 @@ const SCENE = {
       extraLife = `css(S+"-fig0","translateX("+(-(t-a)*10).toFixed(1)+"px) rotate("+(3*Math.sin(t*4)).toFixed(2)+"deg)");css(S+"-fig1","translate("+((t-a)*14).toFixed(1)+"px,"+(-Math.abs(Math.sin(t*5))*6).toFixed(1)+"px)");`;
     } else if (v === "desk") {
       // a calm front desk: counter, bell, key rack; a guest leaves happy
-      const a = person(c.seed + "p0", { x: 700, y: 760, s: 0.95, pose: "bag", dir: 1 });
-      midLines = [{ d: "M120 700 L960 690 L960 900 M120 700 L120 900 M100 700 L980 688", w: 2.8 }, { d: "M200 340 h300 v120 h-300 Z " + [0, 1, 2, 3, 4].map((i) => `M${236 + i * 56} 360 v24 m-8 0 a8 8 0 1 0 16 0`).join(" "), w: 1.8 }];
+      const a = person(c.seed + "p0", { x: 700, y: 770, s: 1, pose: "wave", dir: 1 });
+      midLines = [{ d: "M120 700 L960 690 L960 900 M120 700 L120 900 M100 700 L980 688", w: 2.8 }, { d: "M200 330 h300 v150 h-300 Z " + [0, 1, 2, 3, 4].map((i) => `M${236 + i * 56} 352 a5 5 0 1 0 0.1 0 M${236 + i * 56} 357 v10 a7 7 0 1 1 -7 7 M${229 + i * 56} 392 h14 v34 h-14 Z`).join(" "), w: 1.8 }];
       midActors = propSvg(S, "bell", 330, 640, 0.42, "b") + `<g id="${S}-fig0"><path d="${a.d}" stroke-width="2.6"/><path d="${a.fine}" stroke-width="1.4"/></g>` +
         `<path class="actor" id="${S}-ding" d="M262 560 l-22 -22 M330 540 l0 -34 M398 560 l22 -22" stroke-width="2.2"/>`;
       washesMid = [a.wash, ["wash-teal", 100, 640, 900, 300, 0.4], ["wash-lilac", 180, 320, 340, 160, 0.4]];
@@ -512,18 +512,18 @@ const SCENE = {
     } else if (v === "owner") {
       // the owner away on a terrace, phone raised: today's numbers arrive while the
       // hotel itself sits across the water, running without them
-      const a = person(c.seed + "p0", { x: 330, y: 760, s: 1.05, pose: "toast", dir: 1 });
+      const a = person(c.seed + "p0", { x: 300, y: 780, s: 1.3, pose: "toast", dir: 1 });
       const [px, py] = a.hand;
-      const huts = [700, 790, 880].map((x, i) => `M${x - 40} 560 L${x} ${528 - i * 4} L${x + 40} 560 Z M${x - 30} 560 V588 H${x + 30} V560`).join(" ");
-      midLines = [{ d: "M0 820 L1080 806 M0 862 L1080 848", w: 2.6 }, { d: Array.from({ length: 14 }, (_, i) => `M${40 + i * 76} ${818 - i * 1} V${858 - i * 1}`).join(" "), w: 1.4 }, { d: `${huts} M640 592 C720 600 860 600 940 592`, w: 1.8 }];
+      const huts = [820, 880, 940].map((x, i) => `M${x - 24} 600 L${x} ${582 - i * 3} L${x + 24} 600 Z M${x - 18} 600 V616 H${x + 18} V600`).join(" ");
+      midLines = [{ d: "M0 820 L1080 806 M0 862 L1080 848", w: 2.6 }, { d: Array.from({ length: 14 }, (_, i) => `M${40 + i * 76} ${818 - i * 1} V${858 - i * 1}`).join(" "), w: 1.4 }, { d: `${huts} M780 620 C840 626 920 626 980 620`, w: 1.8 }];
       midActors = `<g id="${S}-fig0"><path d="${a.d}" stroke-width="2.6"/><path d="${a.fine}" stroke-width="1.4"/>` +
         `<path d="M${px - 34} ${py - 64} h68 a10 10 0 0 1 10 10 v108 a10 10 0 0 1 -10 10 h-68 a10 10 0 0 1 -10 -10 v-108 a10 10 0 0 1 10 -10 Z" stroke-width="2.6"/>` +
         `<path d="M${px - 22} ${py + 30} v-14 M${px - 6} ${py + 30} v-26 M${px + 10} ${py + 30} v-20 M${px + 26} ${py + 30} v-38 M${px - 24} ${py - 30} L${px - 4} ${py - 40} L${px + 12} ${py - 34} L${px + 30} ${py - 50}" stroke-width="2"/></g>` +
         `<path class="actor" id="${S}-buzz" d="M${px + 52} ${py - 40} l18 -10 M${px + 54} ${py} l22 0 M${px + 52} ${py + 40} l18 10" stroke-width="2"/>`;
-      washesMid = [a.wash, ["wash-teal", -60, 590, 1200, 220, 0.45], [c.pal.warm, 620, 500, 340, 120, 0.6]];
+      washesMid = [a.wash, ["wash-teal", -60, 590, 1200, 220, 0.45], [c.pal.warm, 780, 560, 240, 90, 0.6]];
       extraLife = `{const e=g(S+"-buzz");if(e){const k=((t-a)*1.4)%1;e.style.opacity=(t-a<1?0:k<.5?1-k*2:0).toFixed(3);}}css(S+"-fig0","translateY("+(2*Math.sin(t*1.2)).toFixed(1)+"px)");
         css(S+"-own","translateY("+(6*Math.sin(t*1.5)).toFixed(1)+"px)");`;
-      ownCard = `<div class="own" id="${S}-own" style="left:${px + 90}px;top:${py - 150}px"><i>${tr(c, "Revenue today")}</i><b>${esc(c.revenue)} <span>▲</span></b><u>${tr(c, "Your hotel, live")}</u></div>`;
+      ownCard = `<div class="own" id="${S}-own" style="left:${Math.min(px + 110, 560)}px;top:180px"><i>${tr(c, "Revenue today")}</i><b>${esc(c.revenue)} <span>▲</span></b><u>${tr(c, "Your hotel, live")}</u></div>`;
     } else {
       const a = person(c.seed + "p0", { x: 470, y: 700, s: 1.05, pose: "rest" });
       midLines = [{ d: "M0 840 L1080 826 M0 872 L1080 858", w: 2.6 }];
@@ -725,12 +725,18 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .dsv{position:absolute;left:0;top:0;overflow:visible;filter:url(#boil)}
 .dsv path{fill:rgba(251,248,241,.55);stroke:${INK};stroke-linecap:round;stroke-linejoin:round}
 .dct{position:absolute;inset:0;display:flex;flex-direction:column;gap:10px;color:${INK};font-size:21px;overflow:hidden}
+.dct>*{zoom:1.12}
+.dev.wide .dct>*{zoom:1.2}
 .cols{display:flex;flex-direction:column;gap:12px}
 .cols>div{display:flex;flex-direction:column;gap:8px}
 .dev.wide .cols{flex-direction:row;gap:34px}
 .dev.wide .cols>div{flex:1}
+.dev.wide .cols>div:first-child{flex:1.8}
+.dev.wide .bline{padding:7px 0;font-size:21px}
+.dev.wide .btot{padding-top:10px}
 .dct .fhead{margin-bottom:4px}
 .dct .rtitle{font-size:30px;font-weight:700}
+.dct .rbig b{white-space:nowrap}
 .dct .rrow{margin:0}
 .dct .kpis{gap:12px}
 .dev:not(.wide) .kpi{padding:10px 12px}

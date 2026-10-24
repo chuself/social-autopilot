@@ -40,6 +40,8 @@ for (const g of briefs) for (const k of [0, 1, 2, 3]) {
         const q = el.getBoundingClientRect();
         if (q.left < SAFE.left || q.right > SAFE.right || q.top < SAFE.top || q.bottom > SAFE.bottom || (q.bottom > SAFE.lowerFrom && q.right > SAFE.lowerRight)) res.push(`${el.className || el.id} ${Math.round(q.left)},${Math.round(q.top)}→${Math.round(q.right)},${Math.round(q.bottom)}`);
       });
+      // nothing inside a device may be cut off by its frame
+      document.querySelectorAll(`#${id} .dct`).forEach((el) => { if (el.scrollHeight > el.clientHeight + 2 || el.scrollWidth > el.clientWidth + 2) res.push(`device content clipped ${el.scrollHeight}>${el.clientHeight}`); });
       return res;
     }, { id: w.id, t, SAFE });
     if (out.length) { bad++; console.log(g.id, k, w.type, t.toFixed(1), out.join(" | ")); }
