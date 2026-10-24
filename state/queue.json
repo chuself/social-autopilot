@@ -12004,7 +12004,9 @@
       "warnings": [],
       "builtAt": "2026-10-24T07:07:46.911Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-24T07:08:35.010Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-10-24-16-client-proof",
