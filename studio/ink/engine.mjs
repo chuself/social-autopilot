@@ -15,10 +15,10 @@
  * has depth layers under a moving camera and a cast moved every frame by
  * life(t), and the ink "boils" like hand-drawn animation.
  */
-import { makeLedger, tokens, orderLines, hash } from "../numbers.mjs";
+import { makeLedger, tokens, orderLines, hash, money } from "../numbers.mjs";
 import { ROLE, WEIGHT } from "../scenes.mjs";
 import { planCuts } from "../timing.mjs";
-import { figure, glass, CITIES, cityKey } from "./art.mjs";
+import { figure, glass, CITIES, cityKey, PROPS } from "./art.mjs";
 
 const W = 1080, H = 1920;
 const INK = "#1E2350", INK_SOFT = "#5A5F86", RED = "#B8325A", TEAL_INK = "#138476";
@@ -26,11 +26,36 @@ const INK = "#1E2350", INK_SOFT = "#5A5F86", RED = "#B8325A", TEAL_INK = "#13847
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const pick = (seed, list) => list[hash(seed) % list.length];
 
+// Drawn cards speak the reel's language. (The photo studio rebuilds the real
+// app screens, which ship in English; a drawing is not a screenshot.)
+const SW = {
+  "POS · BAR & RESTAURANT · ROOM": "POS · BAA NA MGAHAWA · CHUMBA", each: "kila moja", Total: "Jumla",
+  "Posted to room {room}": "Imeingia chumba {room}", "MENU · ROOM": "MENYU · CHUMBA", "Stay PIN": "PIN ya mgeni",
+  "Approved · bill to room": "Imeidhinishwa · bili ya chumba", "FOLIO · ROOM": "BILI · CHUMBA", "Room rate / night": "Bei ya chumba / usiku",
+  "Charged / night": "Imetozwa / usiku", Due: "Kulipa", "Correct rate applied": "Bei sahihi imewekwa", REPORTS: "RIPOTI", "Reports Hub": "Ripoti",
+  "Revenue · today, by outlet": "Mapato · leo, kwa idara", "Occupancy · rooms, live": "Vyumba · hali ya sasa", "Folio audit · every change": "Ukaguzi · kila badiliko",
+  "Guests · arrivals": "Wageni · wanaowasili", "FRONT DESK · LIVE": "MAPOKEZI · SASA", OCCUPANCY: "VILIVYOJAA", "ROOMS FREE": "VYUMBA WAZI", "CHECK-INS": "WANAOINGIA",
+  Room: "Chumba", READY: "TAYARI", Occupied: "Kuna mgeni", Dirty: "Chafu", Clean: "Safi", pax: "wageni", "Deposit cleared": "Amana imelipwa",
+  "Board meeting": "Kikao cha bodi", "Wedding reception": "Sherehe ya harusi", "Training workshop": "Warsha ya mafunzo", "Product launch": "Uzinduzi",
+  "Graduation lunch": "Chakula cha mahafali", Seated: "Wapo", Free: "Wazi", Reserved: "Imehifadhiwa", "No-show released": "Haikuja · imeachiwa",
+  "Grilled tilapia": "Sato wa kuchoma", "Chicken pilau": "Pilau ya kuku", Chips: "Chipsi", "Fresh juice": "Juisi", Coffee: "Kahawa",
+  "Mixed grill": "Nyama choma", "Fruit platter": "Matunda", "Vegetable curry": "Mchuzi wa mboga", "Approved at front desk": "Mapokezi wameidhinisha", "Revenue today": "Mapato ya leo", "Book a table": "Hifadhi meza", "Party": "Watu",
+  "Time": "Saa", "Request a table": "Omba meza", "Confirmed": "Imethibitishwa", "Today": "Leo",
+};
+const tr = (c, en) => (c.lang === "sw" && SW[en]) || en;
+// order lines with the dish names in the reel's language
+const localLines = (c) => orderLines(c.ledger).map((l) => {
+  const name = l.label.replace(/^\d+\s*×\s*/, "");
+  return { ...l, label: l.label.replace(name, tr(c, name)) };
+});
+
 // Time of day sets the sky and the warmth of the washes.
 const PALETTES = {
   morning: { sky: "wash-sky", warm: "wash-lilac", glow: "wash-teal" },
   golden: { sky: "wash-rose", warm: "wash-magenta", glow: "wash-lilac" },
   blue: { sky: "wash-blue", warm: "wash-violet", glow: "wash-sky" },
+  lilac: { sky: "wash-lilac", warm: "wash-rose", glow: "wash-sky" },
+  dusk: { sky: "wash-dusk", warm: "wash-blue", glow: "wash-teal" },
 };
 const HAIR = ["short", "afro", "braids", "wrap"];
 const WEAR = ["kitenge", "collar", "plain"];
@@ -49,19 +74,41 @@ const sparkLife = (n) => `for(let i=0;i<${n};i++){const e=g(S+"-k"+i);if(e){e.st
 const phoneD = "M330 70 h420 a46 46 0 0 1 46 46 v800 a46 46 0 0 1 -46 46 h-420 a46 46 0 0 1 -46 -46 v-800 a46 46 0 0 1 46 -46 Z";
 const tabletD = "M150 160 h780 a30 30 0 0 1 30 30 v600 a30 30 0 0 1 -30 30 h-780 a30 30 0 0 1 -30 -30 v-600 a30 30 0 0 1 30 -30 Z";
 
+/** Payoff moments a brief may ask for. */
+export const MOMENTS = ["toast", "farewell", "sunrise", "desk", "dinner", "owner"];
+
+/**
+ * A prop from art.mjs as SVG: a paper-coloured fill so the scenery behind does
+ * not show through, its watercolour, then the ink lines (class "ln", so they
+ * are drawn on with the rest of the scene). Faded in by the scene's timeline.
+ */
+function propSvg(S, name, cx, cy, scale, key = "p") {
+  const p = PROPS[name](cx, cy);
+  const [wn, wx, wy, ww, wh] = p.wash;
+  return `<g id="${S}-${key}g"><g transform="translate(${cx} ${cy}) scale(${scale}) translate(${-cx} ${-cy})">
+    <path class="pfill" d="${p.fill}"/>
+    <image class="pwash" href="TEX/${wn}.webp" x="${wx}" y="${wy}" width="${ww}" height="${wh}" preserveAspectRatio="none"/>
+    <path class="pl" d="${p.d}" stroke-width="${(3.4 / scale).toFixed(2)}"/><path class="pl" d="${p.fine}" stroke-width="${(1.8 / scale).toFixed(2)}"/></g></g>`;
+}
+
 // ── scene templates ─────────────────────────────────────────────────────────
 // Each returns { bg, mid, fg (layers: lines, washes, actors), over (HTML in
 // the mid layer), js (timeline), life (per-frame), shows (computed numbers) }.
 const SCENE = {
   place(S, s, c) {
     const city = CITIES[c.city], near = city.near(S), pal = PALETTES[c.tod];
+    // The hook object, large and in front: the city sets the scene, the prop tells the story.
+    const prop = PROPS[s.prop] ? s.prop : null;
+    // the city's own people step aside so the prop reads alone (an "empty table" must look empty)
+    const fg = prop ? { ...near.fg, actors: propSvg(S, prop, 540, 690, prop === "table" ? 1.05 : 1.45) } : near.fg;
     return {
       bg: { lines: city.far.lines, washes: [[pal.sky, -80, 90, 1240, 640, 0.8], ...city.far.washes], actors: cloudActors(S) + birdActors(S) },
-      mid: near.mid, fg: near.fg,
+      mid: near.mid, fg,
       // pinned to the frame, not the moving art, so the camera never carries it out of the safe area
-      fixed: s.tag ? `<div class="place" id="${S}-tag" style="top:1112px"><i></i>${esc(s.tag)}</div>` : "",
-      js: `draw(S,a+.15,2.3);washes(S,a+.45,.28);words(S,a+.55);${s.tag ? `tl.fromTo("#"+S+"-tag",{opacity:0,x:-30},{opacity:1,x:0,duration:.5,immediateRender:false},cue(a+1.9,"pop",{i:1}));tl.to("#"+S+"-tag",{opacity:0,duration:.3},b-.6);` : ""}`,
-      life: skyLife + near.life,
+      fixed: s.tag ? `<div class="place" id="${S}-tag" style="top:1180px"><i></i>${esc(s.tag)}</div>` : "",
+      js: `draw(S,a+.15,2.3);washes(S,a+.45,.28);words(S,a+.55);${s.tag ? `tl.fromTo("#"+S+"-tag",{opacity:0,x:-30},{opacity:1,x:0,duration:.5,immediateRender:false},cue(a+.7,"pop",{i:1}));tl.to("#"+S+"-tag",{opacity:0,duration:.3},b-.6);` : ""}
+        ${prop ? `drawProp(S,a+.2,.9);tl.fromTo("#"+S+" .pfill",{opacity:0},{opacity:.95,duration:.4,immediateRender:false},a+.15);tl.fromTo("#"+S+" .pwash",{opacity:0},{opacity:.55,duration:.9,immediateRender:false},a+.7);` : ""}`,
+      life: skyLife + near.life + (prop ? `setT(S+"-pg","translate(0 "+(7*Math.sin(t*1.3)).toFixed(1)+") rotate("+(1.4*Math.sin(t*.8)).toFixed(2)+" 540 690)");` : ""),
       hide: s.tag ? [`#${S}-tag`] : [],
     };
   },
@@ -113,12 +160,12 @@ const SCENE = {
       mid: { lines: [{ d: v === "phone" ? phoneD : tabletD, w: 3.2 }, { d: v === "phone" ? "M500 102 L580 102 M312 140 L768 140 M312 880 L768 880" : "M520 186 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0", w: 1.6 }],
         washes: [["wash-teal", 200, 110, 680, 800, 0.5]], actors: "" },
       fg: { lines: [], washes: [], actors: sparks(S, [[216, 250, 16], [876, 430, 16], [892, 760, 12], [180, 700, 10]]) + `<circle class="ring" id="${S}-r0" cx="540" cy="${v === "phone" ? 660 : 640}" r="40"/><circle class="ring" id="${S}-r1" cx="540" cy="${v === "phone" ? 660 : 640}" r="40"/>` },
-      over: `<div class="fol fcard" id="${S}-fol" style="${box}"><div class="fhead">FOLIO · ROOM ${esc(T["{room}"])}</div>
-        <div class="frow"><span>Room rate / night</span><span>${esc(T["{rightRate}"])}</span></div>
-        <div class="frow"><span>Charged / night</span>${flip(S + "-f1", T["{wrongRate}"], T["{rightRate}"])}</div>
-        <div class="frow tot"><span>Due<i>${flip(S + "-f2", T["{wrongSum}"], T["{rightSum}"])}</i></span>${flip(S + "-f3", T["{wrongTotal}"], T["{rightTotal}"])}</div>
+      over: `<div class="fol fcard" id="${S}-fol" style="${box}"><div class="fhead">${tr(c, "FOLIO · ROOM")} ${esc(T["{room}"])}</div>
+        <div class="frow"><span>${tr(c, "Room rate / night")}</span><span>${esc(T["{rightRate}"])}</span></div>
+        <div class="frow"><span>${tr(c, "Charged / night")}</span>${flip(S + "-f1", T["{wrongRate}"], T["{rightRate}"])}</div>
+        <div class="frow tot"><span>${tr(c, "Due")}<i>${flip(S + "-f2", T["{wrongSum}"], T["{rightSum}"])}</i></span>${flip(S + "-f3", T["{wrongTotal}"], T["{rightTotal}"])}</div>
         <svg class="tick" viewBox="0 0 120 120" style="left:calc(50% - 60px)"><path id="${S}-tick" d="M60 60 m-40 0 a40 40 0 1 0 80 0 a40 40 0 1 0 -80 0 M40 62 L55 77 L82 46"/></svg>
-        <div class="ok" id="${S}-ok">${esc(c.fill(s.okChip ?? "Correct rate applied"))}</div></div>`,
+        <div class="ok" id="${S}-ok">${esc(c.fill(s.okChip ?? tr(c, "Correct rate applied")))}</div></div>`,
       js: `const TICK=a+Math.max(2.6,(b-a)*.42);
         draw(S,a+.15,1.0);washes(S,a+.25,.35);words(S,a+.25);
         tl.fromTo("#"+S+"-fol .fhead, #"+S+"-fol .frow",{opacity:0,y:16},{opacity:1,y:0,duration:.45,stagger:.15,ease:"power3.out",immediateRender:false},cue(a+.9,"card"));
@@ -134,10 +181,10 @@ const SCENE = {
 
   "pos-charge"(S, s, c) {
     const v = pick(c.seed + "pos", ["bar", "table"]);
-    const lines = orderLines(c.ledger);
+    const lines = localLines(c);
     const bg = v === "bar"
       ? { lines: [{ d: "M40 210 L1040 210 M40 330 L1040 330", w: 2.2 }, { d: [100, 190, 280, 760, 850, 940].map((x) => `M${x} 205 C${x - 14} 160 ${x + 14} 160 ${x} 205 M${x} 160 L${x} 140`).join(" ") + " " + [130, 230, 800, 900].map((x) => `M${x} 325 C${x - 12} 290 ${x + 12} 290 ${x} 325`).join(" "), w: 1.6 }],
-        washes: [["wash-lilac", 40, 120, 1000, 260, 0.5]], actors: `<g id="${S}-lamp0"><path d="M300 0 L300 70 M260 70 L340 70 L320 110 L280 110 Z" stroke-width="2"/></g><g id="${S}-lamp1"><path d="M780 0 L780 70 M740 70 L820 70 L800 110 L760 110 Z" stroke-width="2"/></g>` }
+        washes: [["wash-lilac", 40, 120, 1000, 260, 0.5]], actors: `<g id="${S}-lamp0"><path d="M300 70 L300 120 M260 120 L340 120 L320 160 L280 160 Z" stroke-width="2"/></g><g id="${S}-lamp1"><path d="M780 70 L780 120 M740 120 L820 120 L800 160 L760 160 Z" stroke-width="2"/></g>` }
       : { lines: [{ d: "M80 700 C300 660 780 660 1000 700", w: 2.4 }, { d: "M200 640 a60 22 0 1 0 120 0 a60 22 0 1 0 -120 0 M760 640 a60 22 0 1 0 120 0 a60 22 0 1 0 -120 0 M560 380 C560 340 600 340 600 380 L600 470 L560 470 Z", w: 1.8 }],
         washes: [["wash-rose", 100, 560, 880, 260, 0.45]], actors: "" };
     return {
@@ -145,16 +192,16 @@ const SCENE = {
       mid: { lines: v === "bar" ? [{ d: "M0 820 L1080 790 M0 860 L1080 830", w: 3 }, { d: "M160 860 L160 1000 M120 1000 L200 1000 M520 850 L520 1000 M480 1000 L560 1000 M880 840 L880 1000 M840 1000 L920 1000", w: 2 }] : [{ d: "M60 760 L1020 740", w: 3 }],
         washes: [[c.pal.warm, 160, 300, 760, 560, 0.4]], actors: "" },
       fg: { lines: [], washes: [], actors: sparks(S, [[200, 420, 12], [880, 470, 14]]) },
-      over: `<div class="fol fcard pos" id="${S}-pos" style="left:250px;top:330px;width:580px"><div class="fhead">POS · BAR &amp; RESTAURANT · ROOM ${esc(c.T["{room}"])}</div>
-        ${lines.map((l, i) => `<div class="bline" id="${S}-l${i}"><span>${esc(l.label)}<i class="each">${esc(l.each)} each</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
-        <div class="btot"><span>Total</span><span class="bval">${esc(c.T["{orderTotal}"])}</span></div>
-        <div class="ok" id="${S}-ok" style="position:relative;top:auto;margin-top:22px">${esc(c.fill(s.okChip ?? "Posted to room {room}"))}</div></div>`,
+      over: `<div class="fol fcard pos" id="${S}-pos" style="left:250px;top:330px;width:580px"><div class="fhead">${esc(tr(c, "POS · BAR & RESTAURANT · ROOM"))} ${esc(c.T["{room}"])}</div>
+        ${lines.map((l, i) => `<div class="bline" id="${S}-l${i}"><span>${esc(l.label)}<i class="each">${esc(l.each)} ${tr(c, "each")}</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
+        <div class="btot"><span>${tr(c, "Total")}</span><span class="bval">${esc(c.T["{orderTotal}"])}</span></div>
+        <div class="ok" id="${S}-ok" style="position:relative;top:auto;margin-top:22px">${esc(c.fill(s.okChip ?? tr(c, "Posted to room {room}")))}</div></div>`,
       js: `draw(S,a+.15,1.2);washes(S,a+.25,.3);words(S,a+.25);
         tl.fromTo("#"+S+"-pos",{opacity:0,y:40,rotation:3},{opacity:1,y:0,rotation:-1.5,duration:.7,ease:"power3.out",immediateRender:false},cue(a+.6,"card"));
         ${lines.map((_, i) => `tl.fromTo("#"+S+"-l${i}",{opacity:0,x:30},{opacity:1,x:0,duration:.4,ease:"power3.out",immediateRender:false},cue(a+1.1+${i}*.3,"flip"));`).join("")}
         tl.fromTo("#"+S+"-ok",{opacity:0,scale:.8},{opacity:1,scale:1,duration:.45,ease:"back.out(2)",immediateRender:false},cue(a+Math.max(2.4,(b-a)*.5),"match"));`,
       life: sparkLife(2) + `css(S+"-pos","rotate("+(-1.5+.8*Math.sin(t*1.1)).toFixed(2)+"deg) translateY("+(5*Math.sin(t*.9)).toFixed(1)+"px)");
-        for(const k of [0,1]){setT(S+"-lamp"+k,"rotate("+(4*Math.sin(t*1.3+k*1.7)).toFixed(2)+" "+(k?780:300)+" 0)");}`,
+        for(const k of [0,1]){setT(S+"-lamp"+k,"rotate("+(4*Math.sin(t*1.3+k*1.7)).toFixed(2)+" "+(k?780:300)+" 70)");}`,
       hide: [`#${S}-pos`, `#${S}-ok`, ...lines.map((_, i) => `#${S}-l${i}`)],
       shows: lines.flatMap((l) => [l.label, l.each, l.value]),
     };
@@ -164,14 +211,14 @@ const SCENE = {
     const h = hash(c.seed + S);
     if (s.screen === "kitchen") {
       // paper tickets on the pass rail, the last one stamped ready
-      const dishes = orderLines(c.ledger).map((l) => l.label);
-      const codes = ["T-04", "T-12", `Room ${101 + (h % 9)}`, "Bar 03"];
+      const dishes = localLines(c).map((l) => l.label);
+      const codes = ["T-04", "T-12", `${tr(c, "Room")} ${101 + (h % 9)}`, "Bar 03"];
       const tickets = [0, 1, 2].map((i) => ({ code: codes[(i + (h >>> 3)) % codes.length], items: [dishes[i % dishes.length], dishes[(i + 1) % dishes.length]], age: `0${2 + i * 2}:${String(10 + ((h >>> (i * 4)) % 49)).padStart(2, "0")}` }));
       return {
         bg: { lines: [{ d: "M40 760 L1040 740 M40 800 L1040 780", w: 2.6 }, { d: "M120 740 C120 700 200 700 200 740 M300 736 C300 690 360 690 360 736 M780 726 a40 18 0 1 0 80 0 a40 18 0 1 0 -80 0", w: 1.8 }], washes: [[c.pal.warm, 40, 560, 1000, 300, 0.4]], actors: `<path class="actor" id="${S}-s0" d="" stroke-width="1.6"/><path class="actor" id="${S}-s1" d="" stroke-width="1.6"/>` },
         mid: { lines: [{ d: "M60 200 L1020 200", w: 3.2 }, { d: "M60 200 L60 170 M1020 200 L1020 170", w: 2.4 }], washes: [["wash-teal", 120, 220, 840, 420, 0.3]], actors: "" },
         fg: { lines: [], washes: [], actors: sparks(S, [[150, 640, 12], [960, 600, 14]]) },
-        over: tickets.map((t, i) => `<div class="kt" id="${S}-kt${i}" style="left:${140 + i * 270}px"><b>${esc(t.code)}</b>${t.items.map((x) => `<span>${esc(x)}</span>`).join("")}<i>${esc(t.age)}</i>${i === 2 ? `<em id="${S}-ready">READY</em>` : ""}</div>`).join(""),
+        over: tickets.map((t, i) => `<div class="kt" id="${S}-kt${i}" style="left:${140 + i * 270}px"><b>${esc(t.code)}</b>${t.items.map((x) => `<span>${esc(x)}</span>`).join("")}<i>${esc(t.age)}</i>${i === 2 ? `<em id="${S}-ready">${tr(c, "READY")}</em>` : ""}</div>`).join(""),
         js: `draw(S,a+.15,1.0);washes(S,a+.25,.3);words(S,a+.25);
           ${tickets.map((_, i) => `tl.fromTo("#"+S+"-kt${i}",{opacity:0,y:-60,rotation:${i - 1}*6},{opacity:1,y:0,rotation:${(i - 1) * 2},duration:.55,ease:"back.out(1.5)",immediateRender:false},${i ? "" : "cue("}a+.8+${i}*.3${i ? "" : ',"card")'});`).join("")}
           tl.fromTo("#"+S+"-ready",{opacity:0,scale:2},{opacity:.95,scale:1,duration:.17,ease:"power4.in",immediateRender:false},cue(a+Math.min(Math.max(1.9,(b-a)*.6),b-a-.7),"stamp")-.17);`,
@@ -182,18 +229,19 @@ const SCENE = {
       };
     }
     if (s.screen === "menu") {
-      const lines = orderLines(c.ledger);
+      const lines = localLines(c);
       return {
         bg: { lines: [], washes: [["wash-violet-b", 640, 20, 420, 420, 0.5], [c.pal.glow, 20, 600, 420, 400, 0.5]], actors: "" },
         mid: { lines: [{ d: phoneD, w: 3.2 }, { d: "M500 102 L580 102 M370 150 h70 v70 h-70 Z M384 164 h18 v18 h-18 Z M410 190 h18 v18 h-18 Z M384 196 h10 M418 164 h10 v10", w: 1.8 }], washes: [["wash-blue", 220, 120, 640, 780, 0.4]], actors: "" },
         fg: { lines: [], washes: [], actors: sparks(S, [[220, 260, 14], [880, 520, 16]]) },
-        over: `<div class="fol fcard pos" id="${S}-menu" style="left:346px;top:250px;width:388px"><div class="fhead">MENU · ROOM ${esc(c.T["{room}"])}</div>
-          ${lines.map((l, i) => `<div class="bline" id="${S}-l${i}" style="font-size:21px"><span>${esc(l.label)}<i class="each">${esc(l.each)} each</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
-          <div class="btot" style="font-size:24px"><span>Total</span><span class="bval">${esc(c.T["{orderTotal}"])}</span></div>
-          <div class="ok" id="${S}-ok" style="position:relative;top:auto;margin-top:18px;font-size:20px">Approved · bill to room</div></div>`,
+        over: `<div class="fol fcard pos" id="${S}-menu" style="left:330px;top:250px;width:420px"><div class="fhead">${tr(c, "MENU · ROOM")} ${esc(c.T["{room}"])}</div><div class="pin" id="${S}-pin">${tr(c, "Stay PIN")} <span class="dots">${[0, 1, 2, 3].map((k) => `<i id="${S}-d${k}"></i>`).join("")}</span></div>
+          ${lines.map((l, i) => `<div class="bline" id="${S}-l${i}" style="font-size:21px"><span>${esc(l.label)}<i class="each">${esc(l.each)} ${tr(c, "each")}</i></span><span class="bval">${esc(l.value)}</span></div>`).join("")}
+          <div class="btot" style="font-size:24px"><span>${tr(c, "Total")}</span><span class="bval">${esc(c.T["{orderTotal}"])}</span></div>
+          <div class="ok" id="${S}-ok" style="position:relative;top:auto;margin:20px auto 0;width:fit-content;font-size:20px;font-weight:700;letter-spacing:.04em;border:4px double ${TEAL_INK};border-radius:8px;padding:5px 14px;mix-blend-mode:multiply">${tr(c, "Approved · bill to room")}</div></div>`,
         js: `draw(S,a+.15,.9);washes(S,a+.25,.3);words(S,a+.25);
-          ${lines.map((_, i) => `tl.fromTo("#"+S+"-l${i}",{opacity:0,x:24},{opacity:1,x:0,duration:.4,ease:"power3.out",immediateRender:false},${i ? `a+1.0+${i}*.25` : `cue(a+1.0,"tap")`});`).join("")}
-          tl.fromTo("#"+S+"-ok",{opacity:0,scale:.8},{opacity:1,scale:1,duration:.45,ease:"back.out(2)",immediateRender:false},cue(a+Math.min(Math.max(1.9,(b-a)*.6),b-a-.7),"match"));`,
+          [0,1,2,3].forEach((k)=>tl.to("#"+S+"-d"+k,{backgroundColor:"${TEAL_INK}",scale:1.15,duration:.12,ease:"none"},k?a+.75+k*.12:cue(a+.75,"tap")));
+          ${lines.map((_, i) => `tl.fromTo("#"+S+"-l${i}",{opacity:0,x:24},{opacity:1,x:0,duration:.4,ease:"power3.out",immediateRender:false},a+1.35+${i}*.22);`).join("")}
+          tl.fromTo("#"+S+"-ok",{opacity:0,scale:1.8,rotation:-8},{opacity:1,scale:1,rotation:-4,duration:.2,ease:"power4.in",immediateRender:false},cue(a+Math.min(Math.max(2.1,(b-a)*.62),b-a-.7),"stamp")-.2);`,
         life: sparkLife(2) + `css(S+"-mid",g(S+"-mid").style.transform+" translateY("+(12*Math.sin(t*1.3)).toFixed(1)+"px) rotate("+(1*Math.sin(t*.8)).toFixed(2)+"deg)");`,
         hide: [...lines.map((_, i) => `#${S}-l${i}`), `#${S}-ok`],
         shows: lines.flatMap((l) => [l.label, l.each, l.value]),
@@ -209,7 +257,7 @@ const SCENE = {
         bg: { lines: [{ d: "M0 260 L1080 240 M0 880 L1080 860", w: 2.4 }], washes: [[c.pal.sky, -60, 100, 1200, 400, 0.4]], actors: "" },
         mid: { lines: [{ d: xs.map((x) => `M${x} 300 h160 v560 h-160 Z M${x + 128} 600 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0`).join(" "), w: 2.8 }], washes: [[c.pal.warm, 40, 280, 1000, 600, 0.35]], actors: `<circle class="ring" id="${S}-r0" cx="${xs[flip] + 80}" cy="420" r="40"/>` },
         fg: { lines: [], washes: [], actors: `<g id="${S}-cart"><path d="M0 0 h150 v90 h-150 Z M10 90 a14 14 0 1 0 28 0 M112 90 a14 14 0 1 0 28 0 M20 0 v-40 h110 v40" stroke-width="2.4"/></g>` + sparks(S, [[160, 200, 12], [930, 220, 14]]) },
-        over: doors.map((d, i) => `<div class="door" id="${S}-d${i}" style="left:${xs[i] + 5}px">${esc(d.no)}${i === flip ? `<span class="flip"><span class="fa">Dirty</span><span class="fb">Clean</span></span>` : `<span>${d.st}</span>`}</div>`).join(""),
+        over: doors.map((d, i) => `<div class="door" id="${S}-d${i}" style="left:${xs[i] + 5}px">${esc(d.no)}${i === flip ? `<span class="flip"><span class="fa">${tr(c, "Dirty")}</span><span class="fb">${tr(c, "Clean")}</span></span>` : `<span>${tr(c, d.st)}</span>`}</div>`).join(""),
         js: `draw(S,a+.15,1.0);washes(S,a+.25,.3);words(S,a+.25);
           tl.fromTo("#"+S+" .door",{opacity:0,y:20},{opacity:1,y:0,duration:.4,stagger:.15,ease:"power3.out",immediateRender:false},cue(a+.8,"card"));
           gsap.set("#"+S+"-d${flip} .fb",{yPercent:110});
@@ -220,6 +268,54 @@ const SCENE = {
         shows: doors.map((d) => d.no),
       };
     }
+    if (s.screen === "booking") {
+      // the restaurant's public booking link on a guest's phone; the restaurant confirms
+      const party = 2 + (h % 5), time = ["19:00", "19:30", "20:00", "20:30"][(h >>> 4) % 4];
+      return {
+        bg: { lines: [], washes: [["wash-violet-b", 640, 20, 420, 420, 0.5], [c.pal.glow, 20, 600, 420, 400, 0.5]], actors: "" },
+        mid: { lines: [{ d: phoneD, w: 3.2 }, { d: "M500 102 L580 102", w: 1.6 }], washes: [[c.pal.warm, 220, 120, 640, 780, 0.4]],
+          actors: `<path id="${S}-hand" d="M700 980 C690 900 700 860 720 830 L760 760 C770 744 790 748 786 766 L770 830 L850 800 C870 796 880 816 862 830 L800 880" stroke-width="2.6"/>` },
+        fg: { lines: [], washes: [], actors: sparks(S, [[210, 280, 14], [890, 520, 16]]) },
+        over: `<div class="fol fcard bk" id="${S}-bk" style="left:330px;top:170px;width:420px">
+          <div class="fhead">${tr(c, "Book a table")}</div>
+          <div class="frow" id="${S}-f0"><span>${tr(c, "Party")}</span><b>${party}</b></div>
+          <div class="frow" id="${S}-f1"><span>${tr(c, "Today")} · ${tr(c, "Time")}</span><b>${time}</b></div>
+          <div class="bkbtn" id="${S}-btn">${tr(c, "Request a table")}</div>
+          <div class="ok" id="${S}-ok" style="position:relative;top:auto;margin:22px auto 0;width:fit-content;font-size:22px;font-weight:700;border:4px double ${TEAL_INK};border-radius:8px;padding:5px 14px;mix-blend-mode:multiply">${tr(c, "Confirmed")}</div></div>`,
+        js: `draw(S,a+.15,.9);washes(S,a+.25,.3);words(S,a+.25);
+          tl.fromTo("#"+S+"-bk .fhead, #"+S+"-f0, #"+S+"-f1",{opacity:0,y:16},{opacity:1,y:0,duration:.4,stagger:.2,ease:"power3.out",immediateRender:false},cue(a+.8,"card"));
+          tl.fromTo("#"+S+"-btn",{opacity:0,scale:.9},{opacity:1,scale:1,duration:.35,ease:"back.out(2)",immediateRender:false},a+1.5);
+          tl.to("#"+S+"-btn",{scale:.94,duration:.08,yoyo:true,repeat:1,ease:"none"},cue(a+Math.min(1.9,(b-a)*.45),"tap"));
+          tl.fromTo("#"+S+"-ok",{opacity:0,scale:1.8,rotation:-8},{opacity:1,scale:1,rotation:-4,duration:.2,ease:"power4.in",immediateRender:false},cue(a+Math.min(Math.max(2.3,(b-a)*.65),b-a-.6),"stamp")-.2);`,
+        life: sparkLife(2) + `css(S+"-mid",g(S+"-mid").style.transform+" translateY("+(10*Math.sin(t*1.3)).toFixed(1)+"px) rotate("+(1*Math.sin(t*.8)).toFixed(2)+"deg)");`,
+        hide: [`#${S}-bk .fhead`, `#${S}-f0`, `#${S}-f1`, `#${S}-btn`, `#${S}-ok`],
+        shows: [String(party), time],
+      };
+    }
+    if (s.screen === "tables") {
+      // the restaurant floor from above: six tables, one reserved; the no-show is released
+      const tbl = [["T1", 260, 330, "Seated"], ["T2", 540, 330, "Free"], ["T3", 820, 330, "Seated"], ["T4", 260, 610, "Free"], ["T5", 540, 610, "Reserved"], ["T6", 820, 610, "Seated"]];
+      const flip = 4;
+      const ring = (x, y, r) => `M${x - r} ${y} a${r} ${r} 0 1 0 ${2 * r} 0 a${r} ${r} 0 1 0 ${-2 * r} 0`;
+      const chairs = (x, y) => [[0, -86], [0, 86], [-86, 0], [86, 0]].map(([dx, dy]) => ring(x + dx, y + dy, 16)).join(" ");
+      const tint = { Seated: "wash-violet-b", Reserved: c.pal.warm, Free: "wash-teal" };
+      return {
+        bg: { lines: [{ d: "M80 190 L1000 180 L1010 790 L70 800 Z", w: 2.6 }, { d: "M70 480 L130 480 M950 470 L1010 470", w: 2 }], washes: [[c.pal.sky, 40, 150, 1000, 680, 0.35]], actors: "" },
+        mid: { lines: [{ d: tbl.map(([, x, y]) => ring(x, y, 58)).join(" "), w: 3 }, { d: tbl.map(([, x, y]) => chairs(x, y)).join(" "), w: 1.8 }],
+          washes: tbl.map(([, x, y, st]) => [tint[st], x - 90, y - 90, 180, 180, 0.5]),
+          actors: `<circle class="ring" id="${S}-r0" cx="${tbl[flip][1]}" cy="${tbl[flip][2]}" r="60"/>` },
+        fg: { lines: [], washes: [], actors: sparks(S, [[140, 250, 12], [960, 830, 14]]) },
+        over: tbl.map(([n, x, y, st], i) => `<div class="tb" id="${S}-t${i}" style="left:${x - 80}px;top:${y - 26}px"><b>${n}</b>${i === flip ? `<span class="flip"><span class="fa">${tr(c, "Reserved")}</span><span class="fb">${tr(c, "Free")}</span></span>` : `<span>${tr(c, st)}</span>`}</div>`).join(""),
+        js: `draw(S,a+.15,1.0);washes(S,a+.25,.1);words(S,a+.25);
+          tl.fromTo("#"+S+" .tb",{opacity:0,scale:.7},{opacity:1,scale:1,duration:.4,stagger:.1,ease:"back.out(1.8)",immediateRender:false},cue(a+.8,"card"));
+          gsap.set("#"+S+"-t${flip} .fb",{yPercent:110});
+          {const at=a+Math.min(Math.max(1.9,(b-a)*.6),b-a-.7);tl.to("#"+S+"-t${flip} .fa",{yPercent:-110,duration:.32,ease:"power2.inOut"},cue(at,"flip"));tl.to("#"+S+"-t${flip} .fb",{yPercent:0,duration:.32,ease:"power2.inOut"},at);T_[S]={at};}`,
+        life: sparkLife(2) + `{const e=g(S+"-r0");if(e){const s2=t-T_[S].at;if(s2<0)e.style.opacity=0;else{const f=(s2/1.4)%1;e.setAttribute("r",(60+70*f).toFixed(1));e.style.opacity=(.6*(1-f)).toFixed(3);}}}
+          css(S+"-mid",g(S+"-mid").style.transform+" rotate("+(.6*Math.sin(t*.7)).toFixed(2)+"deg)");`,
+        hide: [`#${S} .tb`],
+        shows: tbl.map(([n]) => n),
+      };
+    }
     if (s.screen === "events") {
       const kinds = [["Board meeting", 20], ["Wedding reception", 180], ["Training workshop", 40], ["Product launch", 60], ["Graduation lunch", 120]];
       const times = ["09:00", "12:30", "18:00"];
@@ -228,7 +324,7 @@ const SCENE = {
         bg: { lines: [], washes: [[c.pal.sky, -60, 60, 1200, 520, 0.45]], actors: cloudActors(S) },
         mid: { lines: [{ d: "M160 180 L920 170 L930 860 L170 870 Z M160 260 L920 250", w: 3 }, { d: "M300 150 v60 M780 140 v60", w: 3 }], washes: [[c.pal.warm, 160, 180, 760, 690, 0.3]], actors: "" },
         fg: { lines: [], washes: [], actors: sparks(S, [[120, 320, 12], [980, 700, 14]]) + `<g id="${S}-bal"><path d="M0 0 C-30 0 -36 -50 0 -64 C36 -50 30 0 0 0 Z M0 0 C6 30 -6 60 4 110" stroke-width="2"/></g>` },
-        over: `<div class="evs" id="${S}-evs">${evs.map((e, i) => `<div class="ev" id="${S}-e${i}"><b>${e.time}</b><span>${esc(e.name)}<i>${e.pax} pax</i></span>${e.chip ? `<em>${e.chip}</em>` : ""}</div>`).join("")}</div>`,
+        over: `<div class="evs" id="${S}-evs">${evs.map((e, i) => `<div class="ev" id="${S}-e${i}"><b>${e.time}</b><span>${esc(tr(c, e.name))}<i>${e.pax} ${tr(c, "pax")}</i></span>${e.chip ? `<em>${tr(c, e.chip)}</em>` : ""}</div>`).join("")}</div>`,
         js: `draw(S,a+.15,.9);washes(S,a+.25,.3);words(S,a+.25);
           tl.fromTo("#"+S+" .ev",{opacity:0,x:-30},{opacity:1,x:0,duration:.45,stagger:.25,ease:"power3.out",immediateRender:false},cue(a+.9,"card"));`,
         life: sparkLife(2) + `setT(S+"-bal","translate("+(980+14*Math.sin(t*.9)).toFixed(1)+" "+(500-(t-a)*14+8*Math.sin(t*1.3)).toFixed(1)+") rotate("+(6*Math.sin(t*1.1)).toFixed(2)+")");`,
@@ -243,14 +339,16 @@ const SCENE = {
           actors: `<path id="${S}-spark" class="spk" d="M350 300 C390 284 410 294 450 276 C490 258 510 272 550 252 C590 236 620 248 660 232 C700 220 716 222 736 214" stroke-width="3"/>` +
             [0, 1, 2, 3, 4].map((i) => `<rect class="bar" id="${S}-bar${i}" x="${352 + i * 80}" y="440" width="46" height="0"/>`).join("") },
         fg: { lines: [], washes: [], actors: sparks(S, [[220, 260, 14], [880, 520, 16]]) },
-        over: `<div class="rep" id="${S}-rep"><div class="fhead">REPORTS</div><div class="rtitle">Reports Hub</div><div class="rgap"></div>
-          ${["Revenue · today, by outlet", "Occupancy · rooms, live", "Folio audit · every change", "Guests · arrivals"].map((r, i) => `<div class="rrow" id="${S}-rr${i}">${esc(r)}</div>`).join("")}</div>`,
+        over: `<div class="rep" id="${S}-rep"><div class="fhead">${tr(c, "REPORTS")}</div><div class="rtitle">${tr(c, "Reports Hub")}</div><div class="rbig" id="${S}-big"><i>${tr(c, "Revenue today")}</i><b>${esc(c.revenue)}</b></div><div class="rgap"></div>
+          ${["Revenue · today, by outlet", "Occupancy · rooms, live", "Folio audit · every change", "Guests · arrivals"].map((r, i) => `<div class="rrow" id="${S}-rr${i}">${esc(tr(c, r))}</div>`).join("")}</div>`,
         js: `draw(S,a+.15,.9);washes(S,a+.25,.3);words(S,a+.25);
           drawPath("#"+S+"-spark",a+.9,1.1,"draw");
           ${[0, 1, 2, 3, 4].map((i) => `tl.to("#"+S+"-bar${i}",{attr:{height:${[40, 62, 50, 80, 100][i]},y:${440 - [40, 62, 50, 80, 100][i]}},duration:.6,ease:"power3.out"},a+1.3+${i}*.12);`).join("")}
+          tl.fromTo("#"+S+"-big",{opacity:0,y:14},{opacity:1,y:0,duration:.5,ease:"power3.out",immediateRender:false},cue(a+.8,"pop",{i:0}));
           tl.fromTo("#"+S+"-rep .rrow",{opacity:0,x:24},{opacity:1,x:0,duration:.4,stagger:.18,ease:"power3.out",immediateRender:false},cue(a+1.9,"card"));`,
         life: sparkLife(2) + `css(S+"-mid",g(S+"-mid").style.transform+" translateY("+(14*Math.sin(t*1.3)).toFixed(1)+"px) rotate("+(1.1*Math.sin(t*.8)).toFixed(2)+"deg)");`,
-        hide: [`#${S}-rep .rrow`],
+        hide: [`#${S}-rep .rrow`, `#${S}-big`],
+        shows: [c.revenue],
       };
     }
     // front desk on a laptop: every figure computed from one room count
@@ -262,8 +360,8 @@ const SCENE = {
       mid: { lines: [{ d: "M150 160 h780 a20 20 0 0 1 20 20 v520 h-820 v-520 a20 20 0 0 1 20 -20 Z", w: 3 }, { d: "M60 760 L1020 760 L1060 820 L20 820 Z M460 790 h160", w: 2.4 }],
         washes: [[c.pal.glow, 140, 150, 800, 560, 0.45]], actors: "" },
       fg: { lines: [], washes: [], actors: sparks(S, [[120, 300, 14], [980, 260, 16], [1000, 640, 12]]) },
-      over: `<div class="desk" id="${S}-desk"><div class="fhead">FRONT DESK · LIVE</div><div class="kpis">${kpis.map(([k, v2], i) => `<div class="kpi" id="${S}-k${i}"><i>${k}</i><b>${v2}</b></div>`).join("")}</div>
-        ${guests.map(([n, rm], i) => `<div class="grow" id="${S}-g${i}"><span>${esc(n)}</span><span>Room ${rm}</span></div>`).join("")}</div>`,
+      over: `<div class="desk" id="${S}-desk"><div class="fhead">${tr(c, "FRONT DESK · LIVE")}</div><div class="kpis">${kpis.map(([k, v2], i) => `<div class="kpi" id="${S}-k${i}"><i>${tr(c, k)}</i><b>${v2}</b></div>`).join("")}</div>
+        ${guests.map(([n, rm], i) => `<div class="grow" id="${S}-g${i}"><span>${esc(n)}</span><span>${tr(c, "Room")} ${rm}</span></div>`).join("")}</div>`,
       js: `draw(S,a+.15,1.0);washes(S,a+.25,.3);words(S,a+.25);
         tl.fromTo("#"+S+"-desk .kpi",{opacity:0,y:20},{opacity:1,y:0,duration:.45,stagger:.15,ease:"back.out(1.6)",immediateRender:false},cue(a+.9,"card"));
         tl.fromTo("#"+S+"-desk .grow",{opacity:0,x:30},{opacity:1,x:0,duration:.4,stagger:.2,ease:"power3.out",immediateRender:false},a+1.5);`,
@@ -293,9 +391,10 @@ const SCENE = {
   },
 
   payoff(S, s, c) {
-    const v = pick(c.seed + "pay", ["toast", "farewell", "sunrise"]);
+    // The brief may name the moment that fits its story; otherwise one is drawn.
+    const v = MOMENTS.includes(s.moment) ? s.moment : pick(c.seed + "pay", ["toast", "farewell", "sunrise", "desk", "dinner", "owner"]);
     const city = CITIES[c.city];
-    const dusk = v !== "sunrise";
+    const dusk = !["sunrise", "desk", "owner"].includes(v);
     const sky = dusk ? [["wash-dusk", -40, 30, 1160, 620, 0.8], ["wash-rose", 0, 400, 1080, 280, 0.6]] : [["wash-sky", -40, 30, 1160, 620, 0.7], ["wash-lilac", 0, 420, 1080, 260, 0.5]];
     let midLines = [{ d: "M0 700 L1080 680 M0 742 L1080 722", w: 2.6 }], midActors = "", washesMid = [["wash-violet", 0, 640, 1080, 420, 0.4]], extraLife = "";
     if (v === "toast") {
@@ -312,6 +411,35 @@ const SCENE = {
       midActors = `<g id="${S}-fig0"><path d="${a.d}" stroke-width="2.6"/><path d="${a.fine}" stroke-width="1.4"/></g><g id="${S}-fig1"><path d="${b.d}" stroke-width="2.6"/><path d="${b.fine}" stroke-width="1.4"/></g>`;
       washesMid = [a.wash, b.wash, ["wash-teal", -60, 820, 1200, 260, 0.45]];
       extraLife = `css(S+"-fig0","translateX("+(-(t-a)*10).toFixed(1)+"px) rotate("+(3*Math.sin(t*4)).toFixed(2)+"deg)");css(S+"-fig1","translate("+((t-a)*14).toFixed(1)+"px,"+(-Math.abs(Math.sin(t*5))*6).toFixed(1)+"px)");`;
+    } else if (v === "desk") {
+      // a calm front desk: counter, bell, key rack; a guest leaves happy
+      const a = person(c.seed + "p0", { x: 700, y: 760, s: 0.95, pose: "bag", dir: 1 });
+      midLines = [{ d: "M120 700 L960 690 L960 900 M120 700 L120 900 M100 700 L980 688", w: 2.8 }, { d: "M200 340 h300 v120 h-300 Z " + [0, 1, 2, 3, 4].map((i) => `M${236 + i * 56} 360 v24 m-8 0 a8 8 0 1 0 16 0`).join(" "), w: 1.8 }];
+      midActors = propSvg(S, "bell", 330, 640, 0.42, "b") + `<g id="${S}-fig0"><path d="${a.d}" stroke-width="2.6"/><path d="${a.fine}" stroke-width="1.4"/></g>` +
+        `<path class="actor" id="${S}-ding" d="M262 560 l-22 -22 M330 540 l0 -34 M398 560 l22 -22" stroke-width="2.2"/>`;
+      washesMid = [a.wash, ["wash-teal", 100, 640, 900, 300, 0.4], ["wash-lilac", 180, 320, 340, 160, 0.4]];
+      extraLife = `css(S+"-fig0","translate("+((t-a)*12).toFixed(1)+"px,"+(-Math.abs(Math.sin(t*5))*5).toFixed(1)+"px)");
+        {const e=g(S+"-ding");if(e){const k=((t-T_[S].clink)%1.6+1.6)%1.6;e.style.opacity=(t<T_[S].clink?0:clamp(1-k/.6)).toFixed(3);e.style.transform="scale("+(.8+.5*clamp(k/.6)).toFixed(3)+")";}}`;
+    } else if (v === "dinner") {
+      // a set table with candles, two diners seen from behind
+      const a = person(c.seed + "p0", { x: 360, y: 820, s: 1, pose: "rest" }), b = person(c.seed + "p1", { x: 720, y: 820, s: 1, pose: "toast", dir: -1 });
+      midLines = [];
+      midActors = propSvg(S, "table", 540, 640, 0.78, "t") +
+        `<path class="actor flame" id="${S}-c0" d="M470 560 C462 544 466 528 470 516 C474 528 478 544 470 560 Z" stroke-width="1.6"/><path class="actor flame" id="${S}-c1" d="M610 560 C602 544 606 528 610 516 C614 528 618 544 610 560 Z" stroke-width="1.6"/>` +
+        `<g id="${S}-fig0"><path d="${a.d}" stroke-width="2.6"/><path d="${a.fine}" stroke-width="1.4"/></g><g id="${S}-fig1"><path d="${b.d}" stroke-width="2.6"/><path d="${b.fine}" stroke-width="1.4"/><path d="${glass(b.hand[0], b.hand[1] - 10)}" stroke-width="2.2"/></g>`;
+      washesMid = [a.wash, b.wash, ["wash-rose", 120, 540, 840, 200, 0.4]];
+      extraLife = `for(const k of [0,1]){const e=g(S+"-c"+k);if(e)e.style.transform="scaleY("+(.85+.3*Math.abs(Math.sin(t*12+k)*Math.sin(t*7.1+k))).toFixed(3)+")";}
+        css(S+"-fig0","rotate("+(1.5*Math.sin(t*1.1)).toFixed(2)+"deg)");css(S+"-fig1","rotate("+(-2*Math.sin(t*1.3+1)).toFixed(2)+"deg)");`;
+    } else if (v === "owner") {
+      // the owner away, at a window, a plane crossing: the hotel runs without them
+      const a = person(c.seed + "p0", { x: 400, y: 780, s: 1.05, pose: "rest" });
+      midLines = [{ d: "M180 200 L900 200 L900 720 L180 720 Z M540 200 L540 720 M180 460 L900 460", w: 3 }, { d: "M150 740 L930 740 M170 720 L170 740 M910 720 L910 740", w: 2.2 }];
+      midActors = `<g id="${S}-fig0"><path d="${a.d}" stroke-width="2.6"/><path d="${a.fine}" stroke-width="1.4"/></g>` +
+        `<g id="${S}-plane"><path d="M0 0 L60 -6 L80 -22 L90 -20 L80 -4 L110 -2 L118 -12 L124 -10 L120 2 L124 14 L118 16 L110 6 L80 8 L90 24 L80 26 L60 10 L0 6 Z" stroke-width="2"/></g>` +
+        `<path id="${S}-ph" d="M560 770 h70 v120 h-70 Z M580 780 h30" stroke-width="2.2"/><path class="actor" id="${S}-buzz" d="M650 790 l18 -10 M652 830 l22 0 M650 870 l18 10" stroke-width="2"/>`;
+      washesMid = [a.wash, ["wash-sky", 190, 210, 700, 500, 0.45], ["wash-violet", 120, 700, 840, 200, 0.35]];
+      extraLife = `setT(S+"-plane","translate("+(140+((t-a)*70)%760).toFixed(1)+" "+(330-(t-a)*8).toFixed(1)+")");
+        {const e=g(S+"-buzz");if(e){const k=((t-a)*1.4)%1;e.style.opacity=(t-a<1?0:k<.5?1-k*2:0).toFixed(3);}}css(S+"-fig0","translateY("+(2*Math.sin(t*1.2)).toFixed(1)+"px)");`;
     } else {
       const a = person(c.seed + "p0", { x: 470, y: 700, s: 1.05, pose: "rest" });
       midLines = [{ d: "M0 840 L1080 826 M0 872 L1080 858", w: 2.6 }];
@@ -329,10 +457,11 @@ const SCENE = {
         washes: dusk ? [["wash-lilac", 120, 730, 140, 150, 0.7], ["wash-lilac", 840, 720, 140, 150, 0.7]] : [],
         actors: dusk ? `<path class="actor flame" id="${S}-f0" d="M180 846 C170 826 176 806 180 792 C184 806 190 826 180 846 Z" stroke-width="1.6"/><path class="actor flame" id="${S}-f1" d="M900 836 C890 816 896 796 900 782 C904 796 910 816 900 836 Z" stroke-width="1.6"/>` +
           Array.from({ length: 8 }, (_, i) => `<circle class="fly" id="${S}-ff${i}" cx="0" cy="0" r="4"/>`).join("") : "" },
-      fixed: s.chip ? `<div class="chip" id="${S}-chip" style="top:1080px">${esc(c.fill(s.chip))}</div>` : "",
+      fixed: s.chip ? `<div class="chip" id="${S}-chip" style="top:1168px">${esc(c.fill(s.chip))}</div>` : "",
       js: `const CLINK=a+Math.min(1.2,(b-a)*.4);
         draw(S,a+.1,1.2);washes(S,a+.2,.2);words(S,a+.25);
-        ${v === "toast" ? `cue(CLINK,"clink");` : ""}
+        ${v === "toast" || v === "dinner" ? `cue(CLINK,"clink");` : v === "desk" ? `cue(CLINK,"tap");` : ""}
+        ${["desk", "dinner"].includes(v) ? `drawProp(S,a+.2,.8);tl.fromTo("#"+S+" .pfill",{opacity:0},{opacity:.95,duration:.4,immediateRender:false},a+.15);tl.fromTo("#"+S+" .pwash",{opacity:0},{opacity:.5,duration:.8,immediateRender:false},a+.7);` : ""}
         ${s.chip ? `tl.fromTo("#"+S+"-chip",{opacity:0,scale:.8},{opacity:1,scale:1,duration:.45,ease:"back.out(2)",immediateRender:false},cue(CLINK+.6,"match"));` : ""}
         T_[S]={clink:CLINK};`,
       life: extraLife + (dusk ? `{const u=clamp((t-a)/(b-a+1));setT(S+"-bg","");}
@@ -379,19 +508,21 @@ export function composeInk(brief, voice, brand, urls) {
   const duration = Math.min(59, Math.ceil(voice.speechEnd + 2.2));
   const starts = [0, ...cuts], ends = [...cuts, endAt];
   const city = cityKey(brief.city ?? brief.scenes.find((s) => s.tag)?.tag ?? "");
-  const tod = pick(seed + "tod", Object.keys(PALETTES));
+  const when = /(\d{4})-(\d{2})-(\d{2})-(\d{2})/.exec(String(brief.id ?? ""));
+  const tods = Object.keys(PALETTES);
+  const tod = when ? tods[(Math.floor(Date.UTC(+when[1], +when[2] - 1, +when[3]) / 864e5) + +when[4]) % tods.length] : pick(seed + "tod", tods);
   const veils = ["veil", "veil-teal", "veil-blue"].sort((a, b) => (hash(seed + a) % 97) - (hash(seed + b) % 97));
 
   const ids = brief.scenes.map((_, i) => `s${i}`);
   const built = brief.scenes.map((s, i) => {
     const fn = SCENE[s.type];
     if (!fn) throw new Error(`ink has no scene "${s.type}"`);
-    return fn(ids[i], s, { seed: seed + i, city, tod, pal: PALETTES[tod], T, fill, ledger });
+    return fn(ids[i], s, { seed: seed + i, city, tod, pal: PALETTES[tod], T, fill, ledger, lang: brief.language, revenue: money(ledger.rightTotal + ledger.orderTotal, ledger.currency) });
   });
   // a camera move per scene: direction and strength vary with the post
   const pans = ids.map((S, i) => {
     const h = hash(seed + S + "pan");
-    return { x: ((h % 2) ? 1 : -1) * (44 + (h >>> 3) % 36), y: -(18 + (h >>> 9) % 26), s: 0.07 + ((h >>> 13) % 4) / 100 };
+    return { x: ((h % 2) ? 1 : -1) * (44 + (h >>> 3) % 36), y: -(18 + (h >>> 9) % 26), s: 0.04 + ((h >>> 13) % 4) / 100 };
   });
 
   const scenesHtml = built.map((b, i) => `<div class="scene" id="${ids[i]}"${i ? "" : ' style="opacity:1"'}><div class="art" id="${ids[i]}-art">${layerHtml(ids[i], "bg", b.bg)}${layerHtml(ids[i], "mid", b.mid, b.over)}${layerHtml(ids[i], "fg", b.fg)}</div>${b.fixed ?? ""}${caption(ids[i], brief.scenes[i])}</div>`).join("\n");
@@ -414,13 +545,15 @@ ${[400, 500, 600, 700].map((w) => `@font-face{font-family:Inter;font-weight:${w}
 html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-family:Inter,sans-serif;color:${INK}}
 #paper{position:absolute;inset:0;width:${W}px;height:${H}px}
 .scene{position:absolute;inset:0;opacity:0}
-.art{position:absolute;left:0;top:170px;width:1080px;height:1000px;transform-origin:540px 520px}
+.art{position:absolute;left:0;top:160px;width:1080px;height:1000px;transform-origin:540px 0}
 .ly{position:absolute;inset:0}
 .wb{position:absolute}
 .wash{position:absolute;inset:0;width:100%;height:100%;opacity:0;mix-blend-mode:multiply}
 .ink{position:absolute;left:0;top:0;width:1080px;height:1000px;overflow:visible;filter:url(#boil)}
 .ink path,.ink circle,.ink ellipse,.ink rect{fill:none;stroke:${INK};stroke-linecap:round;stroke-linejoin:round}
 .ink .petal{fill:#B596F0;stroke:none;opacity:0}
+.ink .pfill{fill:#FBF8F1;stroke:none;opacity:0}
+.ink .pwash{opacity:0;mix-blend-mode:multiply}
 .ink .ring{stroke:${TEAL_INK};stroke-width:2.4;opacity:0}
 .ink .fly{fill:#F2CF7A;stroke:none;opacity:0}
 .ink .flame{fill:rgba(242,190,110,.55)}
@@ -429,7 +562,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .ink .bar{fill:rgba(123,84,255,.25);stroke:${INK};stroke-width:2}
 .ink .spark,.ink .actor,.ink g{transform-box:fill-box;transform-origin:center}
 .ink .flame{transform-origin:center bottom}
-.cap{position:absolute;left:80px;top:1215px;width:840px;font-weight:600;line-height:1.14;letter-spacing:-.02em;color:${INK}}
+.cap{position:absolute;left:80px;top:1275px;width:840px;font-weight:600;line-height:1.14;letter-spacing:-.02em;color:${INK}}
 .w{display:inline-block;vertical-align:top}
 .wi{display:inline-block;position:relative}
 .wi.bad{color:${RED}}
@@ -437,10 +570,10 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .ul{position:absolute;left:-2px;right:-2px;bottom:-6px;height:14px;clip-path:inset(0 100% 0 0)}
 .ul svg{display:block;width:100%;height:100%;overflow:visible}
 .ul path{fill:none;stroke:currentColor;stroke-width:4;stroke-linecap:round;vector-effect:non-scaling-stroke}
-.rule{position:absolute;left:80px;top:1180px;width:120px;height:5px;border-radius:5px;background:linear-gradient(90deg,#B23BFF,#3E86FF,#36D2BA);transform-origin:0 50%}
+.rule{position:absolute;left:80px;top:1242px;width:120px;height:5px;border-radius:5px;background:linear-gradient(90deg,#B23BFF,#3E86FF,#36D2BA);transform-origin:0 50%}
 #lock{position:absolute;left:80px;top:96px;height:44px}
 .pill{position:absolute;right:80px;top:92px;font-size:23px;font-weight:600;letter-spacing:.12em;color:${INK};border:2px solid ${INK};border-radius:100px;padding:11px 24px}
-.place{position:absolute;left:80px;top:950px;font-size:22px;font-weight:600;letter-spacing:.14em;color:${INK_SOFT};background:rgba(249,245,238,.8);border-radius:100px;padding:8px 14px;display:flex;gap:10px;align-items:center}
+.place{position:absolute;left:80px;top:950px;font-size:22px;font-weight:700;letter-spacing:.14em;color:${INK};background:rgba(251,248,241,.97);border:1.5px solid rgba(30,35,80,.35);border-radius:100px;padding:8px 14px;display:flex;gap:10px;align-items:center}
 .place i{width:10px;height:10px;border-radius:50%;background:${TEAL_INK}}
 .invw{position:absolute;left:260px;top:260px;width:540px;height:560px;transform-origin:50% 60%}
 .inv{position:absolute;inset:0;padding:40px 44px;transform:rotate(-3deg);font-size:27px;color:${INK}}
@@ -476,11 +609,15 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .each{font-style:normal;font-size:17px;color:${INK_SOFT};margin-top:4px}
 .btot{display:flex;justify-content:space-between;font-size:28px;font-weight:700;padding-top:16px}
 .btot .bval{color:${TEAL_INK}}
+.bval{white-space:nowrap;margin-left:12px}
 .rep{position:absolute;left:330px;top:112px;width:420px}
 .rtitle{font-size:30px;font-weight:700;margin-bottom:14px}
 .rrow{font-size:20px;padding:14px 16px;margin-bottom:10px;border:1.8px solid ${INK};border-radius:12px;background:rgba(255,253,248,.7)}
 .rep{padding-top:0}
-.rep .rgap{height:280px}
+.rep .rgap{height:190px}
+.rbig{margin:6px 0 0}
+.rbig i{display:block;font-style:normal;font-size:17px;letter-spacing:.08em;color:${INK_SOFT}}
+.rbig b{display:block;font-size:46px;color:#5B3FD6;line-height:1.1}
 .desk{position:absolute;left:190px;top:200px;width:700px}
 .kpis{display:flex;gap:14px;margin-bottom:16px}
 .kpi{flex:1;border:2px solid ${INK};border-radius:12px;padding:14px 16px;background:rgba(255,253,248,.75)}
@@ -492,7 +629,17 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .kt{position:absolute;top:210px;width:250px;padding:22px 22px 18px;background:rgba(255,253,248,.92);border:2.4px solid ${INK};border-radius:4px;transform-origin:50% 0;font-size:21px;display:flex;flex-direction:column;gap:8px}
 .kt b{font-size:28px}
 .kt i{font-style:normal;color:${INK_SOFT};font-size:19px;margin-top:6px}
-.kt em{position:absolute;right:14px;bottom:12px;font-style:normal;font-weight:700;font-size:26px;letter-spacing:.08em;color:${TEAL_INK};border:4px double ${TEAL_INK};border-radius:8px;padding:2px 10px;transform:rotate(-10deg);mix-blend-mode:multiply}
+.kt em{position:absolute;right:10px;top:12px;font-style:normal;font-weight:700;font-size:26px;letter-spacing:.08em;color:${TEAL_INK};border:4px double ${TEAL_INK};border-radius:8px;padding:2px 10px;transform:rotate(-10deg);mix-blend-mode:multiply}
+.bk .frow b{font-size:30px;color:#5B3FD6}
+.bkbtn{margin-top:22px;text-align:center;font-size:22px;font-weight:700;color:#FBF8F1;background:${INK};border-radius:14px;padding:16px}
+.pin{font-size:19px;font-weight:600;color:${INK};margin:-8px 0 10px;display:flex;align-items:center;gap:12px}
+.pin .dots{display:flex;gap:8px}
+.pin .dots i{width:16px;height:16px;border-radius:50%;border:2px solid ${INK};display:block}
+.tb{position:absolute;width:160px;text-align:center;font-size:30px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:4px}
+.tb>span{font-size:17px;font-weight:600;color:${INK_SOFT};border:2px solid ${INK};border-radius:100px;padding:3px 10px;background:rgba(255,253,248,.92)}
+.tb .flip{min-width:6.4em;height:1.6em;text-align:center}
+.tb .flip span{left:0;right:0;top:3px}
+.tb .flip .fa{color:#C07A1E}
 .door{position:absolute;top:330px;width:150px;font-size:34px;font-weight:700;text-align:center;display:flex;flex-direction:column;gap:6px;align-items:center}
 .door>span{font-size:19px;font-weight:600;color:${INK_SOFT};border:2px solid ${INK};border-radius:100px;padding:4px 12px;background:rgba(255,253,248,.85)}
 .door .flip{min-width:4.6em;height:1.6em;text-align:center}
@@ -504,7 +651,7 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .ev span{flex:1;display:flex;flex-direction:column;font-weight:600}
 .ev i{font-style:normal;font-weight:500;font-size:18px;color:${INK_SOFT};margin-top:4px}
 .ev em{font-style:normal;font-size:17px;color:${TEAL_INK};border:2px solid ${TEAL_INK};border-radius:100px;padding:5px 12px}
-.chip{position:absolute;left:80px;font-size:26px;font-weight:600;color:${TEAL_INK};border:2px solid ${TEAL_INK};border-radius:100px;padding:12px 26px;background:rgba(249,245,238,.9)}
+.chip{position:absolute;left:80px;font-size:26px;font-weight:700;color:${TEAL_INK};border:2.5px solid ${TEAL_INK};border-radius:100px;padding:12px 26px;background:rgba(251,248,241,.97)}
 .veil{position:absolute;left:-160px;top:260px;width:1400px;height:1400px;opacity:0;transform-origin:700px 700px;mix-blend-mode:multiply}
 #end{position:absolute;inset:0;opacity:0}
 #endwash{position:absolute;left:190px;top:520px;width:700px;height:560px;opacity:.55;mix-blend-mode:multiply}
@@ -528,7 +675,7 @@ ${scenesHtml.replaceAll("TEX/", urls.tex + "/")}
 <script src="${urls.gsap}"></script>
 <script>
 const IDS=${JSON.stringify(ids)}, STARTS=${JSON.stringify(starts)}, ENDS=${JSON.stringify(ends)}, PAN=${JSON.stringify(pans)}, END=${endAt}, DUR=${duration};
-const WASH=.62, CUES=[], T_={};
+const WASH=.78, CUES=[], T_={};
 const cue=(t,type,o={})=>{CUES.push({t:+t.toFixed(3),type,...o});return t;};
 const tl=gsap.timeline({paused:true});
 const $=(s)=>document.querySelector(s), $$=(s)=>document.querySelectorAll(s);
@@ -537,6 +684,7 @@ const ease=(u)=>.5-.5*Math.cos(Math.PI*clamp(u));
 function draw(S,t0,span){const ps=[...$$("#"+S+" .ln")];if(!ps.length)return;const step=span/ps.length;
   ps.forEach((p,i)=>{const L=Math.ceil(p.getTotalLength())+4;gsap.set(p,{strokeDasharray:L,strokeDashoffset:L});tl.to(p,{strokeDashoffset:0,duration:Math.max(.5,step*1.8),ease:"power1.inOut"},t0+i*step);});
   cue(t0,"sketch",{dur:span+.6});}
+function drawProp(S,t0,span){[...$$("#"+S+" .pl")].forEach((p,i)=>{const L=Math.ceil(p.getTotalLength())+4;gsap.set(p,{strokeDasharray:L,strokeDashoffset:L});tl.to(p,{strokeDashoffset:0,duration:span,ease:"power1.inOut"},t0+i*.15);});}
 function drawPath(sel,t,dur,c,o){const p=$(sel);if(!p)return;const L=Math.ceil(p.getTotalLength())+4;gsap.set(p,{strokeDasharray:L,strokeDashoffset:L});tl.to(p,{strokeDashoffset:0,duration:dur,ease:"power1.inOut"},c?cue(t,c,o||{}):t);}
 function washes(S,t0,gap){[...$$("#"+S+" .wash")].forEach((w,i)=>tl.fromTo(w,{opacity:0,scale:.8},{opacity:+w.dataset.o*WASH,scale:1,duration:1.4,ease:"power2.out",immediateRender:false},t0+i*gap));}
 function words(S,t){const ws=[...$$("#"+S+"-cap .wi")];
@@ -572,7 +720,7 @@ const WB=[...$$(".wb")];
 function life(t){
   IDS.forEach((S,i)=>{const a=STARTS[i],b=ENDS[i],p=PAN[i],u=ease((t-a)/(b-a+.9));
     const cx=p.x*u+Math.sin(t*.5+a)*12,cy=p.y*u+Math.sin(t*.37+a)*8;
-    css(S+"-art","scale("+(1+p.s*u).toFixed(4)+")");
+    css(S+"-art","scale("+(1.04*(1+p.s*u)).toFixed(4)+")");
     css(S+"-bg","translate("+(cx*.35).toFixed(1)+"px,"+(cy*.35).toFixed(1)+"px)");
     css(S+"-mid","translate("+(cx*.6).toFixed(1)+"px,"+(cy*.6).toFixed(1)+"px)");
     css(S+"-fg","translate("+(cx*1.35).toFixed(1)+"px,"+(cy*1.35).toFixed(1)+"px)");

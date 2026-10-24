@@ -70,6 +70,73 @@ export function figure({ x, y, s = 1, hair = "short", wear = "plain", pose = "re
 export const glass = (x, y, s = 1) =>
   `M${x - 26 * s} ${y - 40 * s} C${x - 26 * s} ${y + 10 * s} ${x + 26 * s} ${y + 10 * s} ${x + 26 * s} ${y - 40 * s} Z M${x} ${y + 4 * s} L${x} ${y + 50 * s} M${x - 20 * s} ${y + 54 * s} L${x + 20 * s} ${y + 54 * s}`;
 
+// ── props: the hook object, drawn large in the opening scene ───────────────
+// Each is centred on (cx, cy) in the art box (1080 x 1000) and returns
+// { d: bold outline, fine: detail lines, fill: closed silhouette painted paper
+// colour so scenery behind does not show through, wash: [name, x, y, w, h, o] }.
+// The brief picks one that makes the hook literal: a story about a prank
+// whisky order opens on a whisky glass, a no-show on an empty reserved table.
+
+const R = (x, y, w, h) => `M${x} ${y} h${w} v${h} h${-w} Z`;
+export const PROPS = {
+  whisky: (cx, cy) => {
+    const g = cx - 60, b = cx + 110; // tumbler centre, bottle centre
+    const tumbler = `M${g - 85} ${cy - 40} L${g + 85} ${cy - 40} L${g + 70} ${cy + 120} C${g + 68} ${cy + 132} ${g - 68} ${cy + 132} ${g - 70} ${cy + 120} Z`;
+    const bottle = `M${b - 45} ${cy + 125} L${b - 45} ${cy - 60} C${b - 45} ${cy - 100} ${b - 18} ${cy - 110} ${b - 16} ${cy - 140} L${b - 16} ${cy - 200} L${b + 16} ${cy - 200} L${b + 16} ${cy - 140} C${b + 18} ${cy - 110} ${b + 45} ${cy - 100} ${b + 45} ${cy - 60} L${b + 45} ${cy + 125} Z`;
+    const cube = (x, y, a) => { const c = Math.cos(a) * 24, s = Math.sin(a) * 24; return `M${(x - c + s).toFixed(0)} ${(y - s - c).toFixed(0)} L${(x + c + s).toFixed(0)} ${(y + s - c).toFixed(0)} L${(x + c - s).toFixed(0)} ${(y + s + c).toFixed(0)} L${(x - c - s).toFixed(0)} ${(y - s + c).toFixed(0)} Z`; };
+    return {
+      fill: `${tumbler} ${bottle}`,
+      d: `${tumbler} ${bottle} M${g - 80} ${cy + 10} C${g - 30} ${cy + 24} ${g + 30} ${cy - 2} ${g + 80} ${cy + 12}`,
+      fine: `${cube(g - 30, cy - 18, 0.35)} ${cube(g + 26, cy - 8, -0.3)} M${b - 45} ${cy - 20} L${b + 45} ${cy - 20} M${b - 45} ${cy + 70} L${b + 45} ${cy + 70} M${b - 16} ${cy - 170} l-40 60 l-28 -10 l28 -46 Z M${b - 72} ${cy - 128} a6 6 0 1 0 0.1 0`,
+      wash: ["wash-amber", g - 90, cy - 10, 330, 150, 0.8],
+    };
+  },
+  table: (cx, cy) => ({
+    fill: `M${cx - 210} ${cy - 30} C${cx - 210} ${cy - 80} ${cx + 210} ${cy - 80} ${cx + 210} ${cy - 30} C${cx + 210} ${cy + 20} ${cx - 210} ${cy + 20} ${cx - 210} ${cy - 30} Z`,
+    d: `M${cx - 210} ${cy - 30} C${cx - 210} ${cy - 80} ${cx + 210} ${cy - 80} ${cx + 210} ${cy - 30} C${cx + 210} ${cy + 20} ${cx - 210} ${cy + 20} ${cx - 210} ${cy - 30} Z M${cx - 150} ${cy + 6} L${cx - 160} ${cy + 170} M${cx + 150} ${cy + 6} L${cx + 160} ${cy + 170} M${cx} ${cy + 14} L${cx} ${cy + 170}`
+      + ` M${cx - 330} ${cy + 170} L${cx - 320} ${cy - 60} L${cx - 250} ${cy - 60} L${cx - 250} ${cy + 40} M${cx - 330} ${cy + 40} L${cx - 250} ${cy + 40} M${cx + 330} ${cy + 170} L${cx + 320} ${cy - 60} L${cx + 250} ${cy - 60} L${cx + 250} ${cy + 40} M${cx + 330} ${cy + 40} L${cx + 250} ${cy + 40}`,
+    fine: `M${cx - 40} ${cy - 40} L${cx - 30} ${cy - 110} L${cx + 50} ${cy - 110} L${cx + 40} ${cy - 40} Z M${cx - 120} ${cy - 40} a30 10 0 1 0 60 0 a30 10 0 1 0 -60 0 M${cx + 70} ${cy - 40} a30 10 0 1 0 60 0 a30 10 0 1 0 -60 0 M${cx + 170} ${cy - 50} l0 -40 m-6 0 h12`,
+    wash: ["wash-rose", cx - 230, cy - 90, 460, 160, 0.5],
+  }),
+  envelope: (cx, cy) => ({
+    fill: R(cx - 170, cy - 110, 340, 220),
+    d: `${R(cx - 170, cy - 110, 340, 220)} M${cx - 170} ${cy - 110} L${cx} ${cy + 20} L${cx + 170} ${cy - 110}`,
+    fine: `M${cx - 300} ${cy - 40} h80 M${cx - 330} ${cy} h100 M${cx - 290} ${cy + 40} h70 M${cx + 120} ${cy + 50} a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0`,
+    wash: ["wash-blue", cx - 180, cy - 120, 360, 240, 0.4],
+  }),
+  suitcase: (cx, cy) => ({
+    fill: R(cx - 120, cy - 120, 240, 280),
+    d: `${R(cx - 120, cy - 120, 240, 280)} M${cx - 50} ${cy - 120} L${cx - 50} ${cy - 170} L${cx + 50} ${cy - 170} L${cx + 50} ${cy - 120} M${cx - 90} ${cy + 160} a14 14 0 1 0 28 0 M${cx + 62} ${cy + 160} a14 14 0 1 0 28 0`,
+    fine: `M${cx - 60} ${cy - 120} L${cx - 60} ${cy + 160} M${cx + 60} ${cy - 120} L${cx + 60} ${cy + 160} M${cx + 120} ${cy - 60} l40 30 l-12 40 l-36 -16 Z`,
+    wash: ["wash-violet-b", cx - 130, cy - 120, 260, 290, 0.45],
+  }),
+  bell: (cx, cy) => ({
+    fill: `M${cx - 130} ${cy + 60} C${cx - 130} ${cy - 90} ${cx + 130} ${cy - 90} ${cx + 130} ${cy + 60} Z`,
+    d: `M${cx - 130} ${cy + 60} C${cx - 130} ${cy - 90} ${cx + 130} ${cy - 90} ${cx + 130} ${cy + 60} Z M${cx - 170} ${cy + 60} L${cx + 170} ${cy + 60} L${cx + 160} ${cy + 90} L${cx - 160} ${cy + 90} Z M${cx} ${cy - 56} L${cx} ${cy - 90} M${cx - 18} ${cy - 96} a18 10 0 1 0 36 0 a18 10 0 1 0 -36 0`,
+    fine: `M${cx - 60} ${cy - 20} C${cx - 40} ${cy - 50} ${cx - 10} ${cy - 56} ${cx + 10} ${cy - 56} M${cx - 200} ${cy - 80} l-30 -30 M${cx + 200} ${cy - 80} l30 -30 M${cx} ${cy - 150} l0 -40`,
+    wash: ["wash-lilac", cx - 150, cy - 70, 300, 170, 0.55],
+  }),
+  cloche: (cx, cy) => ({
+    fill: `M${cx - 170} ${cy + 40} C${cx - 170} ${cy - 130} ${cx + 170} ${cy - 130} ${cx + 170} ${cy + 40} Z`,
+    d: `M${cx - 170} ${cy + 40} C${cx - 170} ${cy - 130} ${cx + 170} ${cy - 130} ${cx + 170} ${cy + 40} Z M${cx - 220} ${cy + 40} L${cx + 220} ${cy + 40} C${cx + 200} ${cy + 80} ${cx - 200} ${cy + 80} ${cx - 220} ${cy + 40} M${cx - 16} ${cy - 92} a16 12 0 1 0 32 0 a16 12 0 1 0 -32 0`,
+    fine: `M${cx - 100} ${cy - 40} C${cx - 80} ${cy - 80} ${cx - 40} ${cy - 96} ${cx} ${cy - 98} M${cx + 260} ${cy + 40} l60 -120 M${cx + 290} ${cy + 40} l50 -110`,
+    wash: ["wash-rose", cx - 190, cy - 100, 380, 170, 0.45],
+  }),
+  calendar: (cx, cy) => ({
+    fill: R(cx - 160, cy - 140, 320, 300),
+    d: `${R(cx - 160, cy - 140, 320, 300)} M${cx - 160} ${cy - 80} L${cx + 160} ${cy - 80} M${cx - 90} ${cy - 160} v40 M${cx + 90} ${cy - 160} v40`,
+    fine: Array.from({ length: 12 }, (_, i) => R(cx - 140 + (i % 4) * 72, cy - 60 + Math.floor(i / 4) * 66, 52, 46)).join(" ") + ` M${cx + 76} ${cy + 74} l40 40 M${cx + 116} ${cy + 74} l-40 40`,
+    wash: ["wash-violet-b", cx - 170, cy - 150, 340, 120, 0.45],
+  }),
+  keys: (cx, cy) => ({
+    fill: `M${cx - 160} ${cy} a70 70 0 1 0 140 0 a70 70 0 1 0 -140 0`,
+    d: `M${cx - 160} ${cy} a70 70 0 1 0 140 0 a70 70 0 1 0 -140 0 M${cx - 20} ${cy} L${cx + 200} ${cy} M${cx + 160} ${cy} v40 M${cx + 120} ${cy} v30 M${cx - 110} ${cy} a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0`,
+    fine: `${R(cx - 140, cy + 70, 100, 140)} M${cx - 90} ${cy + 70} L${cx - 90} ${cy + 40}`,
+    wash: ["wash-teal", cx - 180, cy - 80, 220, 300, 0.45],
+  }),
+};
+export const PROP_NAMES = Object.keys(PROPS);
+
 // ── scenery helpers ─────────────────────────────────────────────────────────
 
 const cloud = (x, y, s) => `M${x} ${y} c${20 * s} ${-18 * s} ${50 * s} ${-18 * s} ${62 * s} ${-4 * s} c${14 * s} ${-16 * s} ${48 * s} ${-12 * s} ${54 * s} ${6 * s} c${16 * s} ${-2 * s} ${24 * s} ${10 * s} ${16 * s} ${18 * s} l${-132 * s} 0 c${-12 * s} ${-6 * s} ${-10 * s} ${-18 * s} 0 ${-20 * s}`;
@@ -87,11 +154,14 @@ const waves = (y0, n, amp) => Array.from({ length: n }, (_, i) => {
 // plus a near view for the opening.
 export const CITIES = {
   arusha: {
+    // the clock tower in town, low roofs either side, Meru small and far
     far: { lines: [
-      { d: "M40 600 C190 520 290 440 370 360 C420 312 465 252 515 205 C535 188 558 184 578 198 C640 246 702 318 790 398 C880 478 965 528 1050 570", w: 3.4 },
-      { d: "M515 205 C505 232 528 246 512 270 M556 190 C566 220 550 238 570 258 M600 222 C596 246 612 256 604 280", w: 1.8 },
-      { d: "M0 690 C150 650 280 672 420 640 C560 610 700 650 840 625 C930 610 1010 630 1080 618", w: 1.8 }],
-      washes: [["wash-blue", 330, 220, 520, 500, 0.5]] },
+      { d: "M500 640 L500 330 L580 330 L580 640 M492 330 L540 280 L588 330 M540 280 L540 250", w: 3.2 },
+      { d: "M512 380 a28 28 0 1 0 56 0 a28 28 0 1 0 -56 0 M540 380 L540 362 M540 380 L554 388 M500 470 h80 M500 560 h80", w: 1.8 },
+      { d: "M60 640 L60 560 L180 560 L180 640 M200 640 L200 590 L330 590 L330 640 M350 640 L350 540 L470 540 L470 640 M610 640 L610 570 L730 570 L730 640 M750 640 L750 600 L900 600 L900 640 M920 640 L920 555 L1030 555 L1030 640", w: 2.2 },
+      { d: "M90 585 h30 M240 610 h40 M380 565 h30 M640 595 h40 M950 580 h40 M0 640 L1080 640", w: 1.4 },
+      { d: "M700 470 C780 430 830 380 880 352 C900 342 916 342 932 352 C980 382 1030 420 1080 448", w: 1.8 }],
+      washes: [["wash-blue", 680, 300, 420, 240, 0.45], ["wash-lilac", 420, 230, 240, 440, 0.45]] },
     near: (S) => {
       const blossoms = Array.from({ length: 24 }, (_, i) => {
         const a = (i * 2.399) % 6.283, d = 30 + ((i * 37) % 120);

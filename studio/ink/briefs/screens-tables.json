@@ -1,0 +1,41 @@
+{
+  "id": "ink-screens-tables",
+  "style": "ink",
+  "city": "Zanzibar",
+  "language": "sw",
+  "cta": "Ona inavyofanya kazi",
+  "eyebrow": "Jikoni",
+  "narration": "x",
+  "scenes": [
+    {
+      "type": "place",
+      "line": "Oda zinapotea kati ya baa na jiko?",
+      "bad": [
+        "zinapotea"
+      ],
+      "tag": "ZANZIBAR · MGAHAWA"
+    },
+    {
+      "type": "ui-screen",
+      "screen": "booking",
+      "line": "Mgeni anaomba meza kwa link."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "tables",
+      "line": "Meza ya wasiokuja inaachiwa kwa wengine."
+    },
+    {
+      "type": "ui-screen",
+      "screen": "menu",
+      "line": "PIN ya mgeni kwanza, kisha oda."
+    },
+    {
+      "type": "payoff",
+      "line": "Kila oda inafika mezani na kwenye bili.",
+      "good": [
+        "bili"
+      ]
+    }
+  ]
+}

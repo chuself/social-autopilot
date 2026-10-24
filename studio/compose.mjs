@@ -34,7 +34,7 @@ export function validateBrief(b) {
   (b.scenes ?? []).forEach((s, i) => {
     if (!SCENES[s.type]) errs.push(`scene ${i + 1}: unknown type "${s.type}" (have ${Object.keys(SCENES).join(", ")})`);
     if (!s.line || s.line.split(/\s+/).length > 9) errs.push(`scene ${i + 1}: line must be 1-9 words`);
-    const SCREENS = ["frontdesk", "reports", "kitchen", "menu", "housekeeping", "events"];
+    const SCREENS = ["frontdesk", "reports", "kitchen", "menu", "housekeeping", "events", "tables", "booking"];
     if (s.type === "ui-screen" && s.screen && !SCREENS.includes(s.screen)) errs.push(`scene ${i + 1}: screen must be one of ${SCREENS.join(", ")}`);
     if (b.style !== "ink" && ["place", "problem-doc", "payoff"].includes(s.type) && !s.image) errs.push(`scene ${i + 1}: ${s.type} needs an image`);
   });
@@ -245,7 +245,7 @@ ${UI_CSS}
 .scrwrap .win,.scrwrap .phone{position:relative;margin:0 auto}
 .scr-frontdesk .win{width:920px !important}
 .scr-reports{top:300px}
-.scr-menu{top:250px}
+.scr-menu,.scr-booking{top:250px}
 .bline .bval{white-space:nowrap}
 .bline.neg .flip .fa{color:${P.neg}}
 .btot>span:first-child{display:flex;flex-direction:column}

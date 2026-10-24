@@ -24,7 +24,7 @@ export async function renderPage(pageFile, audioFile, outFile, { fps = 30, from 
     const page = await browser.newPage({ viewport: SIZE, deviceScaleFactor: 1 });
     const errors = [];
     page.on("pageerror", (e) => errors.push(e.message));
-    await page.goto(pathToFileURL(path.resolve(pageFile)).href, { waitUntil: "load" });
+    await page.goto(pathToFileURL(path.resolve(pageFile)).href, { waitUntil: "load", timeout: 120000 });
     await page.evaluate(() => document.fonts.ready);
     await page.evaluate(() =>
       Promise.all([...document.images].map((i) => (i.complete ? i.decode?.().catch(() => {}) : new Promise((r) => (i.onload = i.onerror = r)))))
@@ -71,7 +71,7 @@ export async function stills(pageFile, outDir, times) {
   const browser = await chromium.launch();
   try {
     const page = await browser.newPage({ viewport: SIZE, deviceScaleFactor: 1 });
-    await page.goto(pathToFileURL(path.resolve(pageFile)).href, { waitUntil: "load" });
+    await page.goto(pathToFileURL(path.resolve(pageFile)).href, { waitUntil: "load", timeout: 120000 });
     await page.evaluate(() => document.fonts.ready);
     await mkdir(outDir, { recursive: true });
     for (const t of times) {

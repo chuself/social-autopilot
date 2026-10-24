@@ -65,6 +65,8 @@ wash("wash-teal", (64, 186, 168), seed_shift=5)
 wash("wash-magenta", (212, 96, 222), w=700, h=700, seed_shift=6, edge=0.45)
 wash("wash-dusk", (176, 110, 214), w=1100, h=800, seed_shift=7, edge=0.35, spread=0.5)
 wash("wash-rose", (226, 150, 196), w=800, h=600, seed_shift=8, edge=0.4)
+# whisky and candlelight only, never a scene background
+wash("wash-amber", (232, 172, 86), w=600, h=400, seed_shift=12, edge=0.45)
 # the cut: one big violet bloom that grows past the frame
 wash("veil", (128, 98, 226), w=1400, h=1400, seed_shift=9, edge=0.5, spread=0.47)
 wash("veil-teal", (70, 176, 160), w=1400, h=1400, seed_shift=10, edge=0.5, spread=0.47)

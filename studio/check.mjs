@@ -56,7 +56,7 @@ async function checkPage(pageFile, meta, problems) {
   const browser = await chromium.launch();
   try {
     const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
-    await page.goto(pathToFileURL(pageFile).href, { waitUntil: "load" });
+    await page.goto(pathToFileURL(pageFile).href, { waitUntil: "load", timeout: 120000 });
     await page.evaluate(() => document.fonts.ready);
     const allowedDigits = new Set(meta.allowed.flatMap(digitsIn));
 

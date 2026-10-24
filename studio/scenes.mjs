@@ -13,7 +13,7 @@
  * paper documents are in the reel's language. Every number on screen comes
  * from the reel's ledger (numbers.mjs) through a {token}.
  */
-import { ico, P, frontDesk, guestRow, reportsHub, reportRow, kitchenBoard, guestMenu, housekeepingBoard, eventsDay } from "./lib/ui.mjs";
+import { ico, P, frontDesk, guestRow, reportsHub, reportRow, kitchenBoard, guestMenu, housekeepingBoard, eventsDay, floorPlan, bookingPhone } from "./lib/ui.mjs";
 import { fill, assertNoDigits, hash, orderLines } from "./numbers.mjs";
 
 export const ROLE = { place: "hook", "problem-doc": "problem", "folio-fix": "solution", "ui-screen": "solution", "pos-charge": "solution", checklist: "solution", payoff: "payoff" };
@@ -194,6 +194,27 @@ export const SCENES = {
         { t: at, sel: `#${id}-scr-r${flip} .fa`, to: { yPercent: -110 }, dur: 0.32, ease: "power2.inOut", cue: "flip" },
         { t: at, sel: `#${id}-scr-r${flip} .fb`, to: { yPercent: 0 }, dur: 0.32, ease: "power2.inOut" },
         { t: at, sel: `#${id}-scr-r${flip}`, to: { backgroundColor: "rgba(54,210,186,.16)", borderColor: "rgba(54,210,186,.6)" }, dur: 0.4, ease: "none" },
+      ];
+    } else if (screen === "booking") {
+      const party = 2 + (r % 5), time = ["19:00", "19:30", "20:00", "20:30"][(r >>> 4) % 4];
+      el = bookingPhone(`${id}-scr`, { party, time });
+      rowsSel = [`#${id}-scr-f0`, `#${id}-scr-f1`, `#${id}-scr-send`];
+      shows = [String(party), time];
+      hideMore = [`#${id}-scr-appr`];
+      extra = [{ t: t0 + Math.min(Math.max(1.9, dur * 0.62), dur - 0.75), sel: `#${id}-scr-appr`, from: { opacity: 0, scale: 0.9 }, to: { opacity: 1, scale: 1 }, dur: 0.45, ease: "back.out(2)", cue: "match" }];
+    } else if (screen === "tables") {
+      const states = ["seated", "free", "seated", "free", "reserved", "seated"];
+      const tables = states.map((st, i) => ({ name: `T${i + 1}`, seats: [4, 2, 6, 4, 4, 8][(i + r) % 6], state: st }));
+      const flip = 4;
+      el = floorPlan(`${id}-scr`, tables, flip);
+      rowsSel = tables.map((_, i) => `#${id}-scr-t${i}`);
+      shows = tables.flatMap((t) => [t.name, `${t.seats} seats`]);
+      const at = t0 + Math.min(Math.max(1.9, dur * 0.62), dur - 0.75);
+      init = [`#${id}-scr-t${flip} .fb`];
+      extra = [
+        { t: at, sel: `#${id}-scr-t${flip} .fa`, to: { yPercent: -110 }, dur: 0.32, ease: "power2.inOut", cue: "flip" },
+        { t: at, sel: `#${id}-scr-t${flip} .fb`, to: { yPercent: 0 }, dur: 0.32, ease: "power2.inOut" },
+        { t: at, sel: `#${id}-scr-t${flip}`, to: { backgroundColor: "rgba(54,210,186,.16)", borderColor: "rgba(54,210,186,.6)" }, dur: 0.4, ease: "none" },
       ];
     } else if (screen === "events") {
       const kinds = [["Board meeting", "Conference Room", 20], ["Wedding reception", "Garden Hall", 180], ["Training workshop", "Lake Room", 40], ["Product launch", "Terrace", 60], ["Graduation lunch", "Main Hall", 120]];

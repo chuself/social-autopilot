@@ -7,7 +7,8 @@
  *
  *   node studio/ink/sweep.mjs
  */
-import { composeInk } from "./engine.mjs";
+import { composeInk, MOMENTS } from "./engine.mjs";
+import { PROP_NAMES } from "./art.mjs";
 import { chromium } from "playwright";
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
@@ -23,7 +24,7 @@ briefs.push(...readdirSync(path.join(import.meta.dirname, "briefs")).map((f) => 
 const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
 let bad = 0, n = 0;
 for (const g of briefs) for (const k of [0, 1, 2, 3]) {
-  const brief = { ...g, style: "ink", seed: `${g.id}#s${k}`, scenes: g.scenes.map(({ image, ...s }) => s) };
+  const brief = { ...g, style: "ink", seed: `${g.id}#s${k}`, scenes: g.scenes.map(({ image, ...s }, j) => (s.type === "place" ? { ...s, prop: PROP_NAMES[(k + j + g.id.length) % PROP_NAMES.length] } : s.type === "payoff" ? { ...s, moment: MOMENTS[(k + g.id.length) % MOMENTS.length] } : s)) };
   const r = composeInk(brief, voice, brand, urls);
   const file = path.join(ROOT, "state", "frames", "ink-sweep.html"); writeFileSync(file, r.html);
   await p.goto(pathToFileURL(file).href); await p.evaluate(() => document.fonts.ready);
@@ -32,7 +33,7 @@ for (const g of briefs) for (const k of [0, 1, 2, 3]) {
     const out = await p.evaluate(({ id, t, SAFE }) => {
       window.setFrame(t);
       const res = [];
-      document.querySelectorAll(`#${id} .chip, #${id} .place, #${id} .fcard, #${id} .kt, #${id} .door, #${id} .ev, #${id} .rep, #${id} .desk, #${id} .note, #${id} .invw`).forEach((el) => {
+      document.querySelectorAll(`#${id} .chip, #${id} .place, #${id} .fcard, #${id} .kt, #${id} .door, #${id} .ev, #${id} .tb, #${id} .rep, #${id} .desk, #${id} .note, #${id} .invw`).forEach((el) => {
         let op = 1; for (let e = el; e && e !== document.body; e = e.parentElement) op *= +getComputedStyle(e).opacity;
         if (op < 0.5) return;
         const q = el.getBoundingClientRect();

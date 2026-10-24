@@ -226,6 +226,29 @@ export const housekeepingBoard = (id, rooms, flip) => browser(id, 'managix.operr
       ? `<span class="hkflip"><span class="fa">Dirty</span><span class="fb">Clean</span></span>`
       : `<span>${HK[r.state]}</span>`}</div>`).join('')}</div>`, { width: 920 });
 
+/* ── public table booking, on the guest's phone ──────────────────────────── */
+
+export const bookingPhone = (id, { party, time }) => phone(id, `
+  <div class="rlabel">BOOK A TABLE</div>
+  <div class="rtitle">Main Restaurant</div>
+  <div class="fld" id="${id}-f0" style="margin-bottom:12px"><span class="fldl">PARTY SIZE</span><span class="fldv">${party}</span></div>
+  <div class="fld" id="${id}-f1" style="margin-bottom:16px"><span class="fldl">TODAY</span><span class="fldv">${time}</span></div>
+  <div class="msend" id="${id}-send">Request reservation</div>
+  <div class="mappr" id="${id}-appr">${ico('check', { size: 22, stroke: 2.6 })}Confirmed by the restaurant</div>`, { width: 470 });
+
+/* ── restaurant floor ────────────────────────────────────────────────────── */
+
+// tables: [{ name, seats, state: "seated"|"free"|"reserved" }]; the one at `flip` is a
+// reservation that turns free on screen (a no-show released)
+export const floorPlan = (id, tables, flip) => browser(id, 'managix.operra.tech/tables', `
+  <div class="wrow"><div class="wtitle"><i class="live"></i>Main Restaurant &middot; Floor</div>
+    <span class="wchip">${ico('utensils', { size: 22 })}Live</span></div>
+  <div class="flgrid">${tables.map((t, i) => `
+    <div class="flt fl-${t.state}" id="${id}-t${i}"><span class="fltop"><b>${t.name}</b></span>
+      <i>${t.seats} seats</i>${i === flip
+        ? `<span class="hkflip"><span class="fa">Reserved</span><span class="fb">Free</span></span>`
+        : `<span class="flst">${t.state[0].toUpperCase() + t.state.slice(1)}</span>`}</div>`).join('')}</div>`, { width: 920 });
+
 /* ── events calendar ─────────────────────────────────────────────────────── */
 
 // events: [{ time, name, pax, venue, chip }]
@@ -428,6 +451,16 @@ export const UI_CSS = `
   .hkflip .fa{color:#f8a43a}
   .hkflip .fb{color:${P.teal};font-weight:600}
 
+  .flgrid{display:grid;grid-template-columns:repeat(3,210px);justify-content:space-around;row-gap:18px}
+  .flt{border-radius:50%;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+       background:${P.elev};border:2px solid ${P.hair};font-size:18px;color:${P.muted}}
+  .flt b{font-size:32px;color:${P.text}}
+  .flt i{font-style:normal;font-size:16px;color:${P.light}}
+  .flt.fl-seated{background:rgba(164,120,255,.14);border-color:rgba(164,120,255,.5)}
+  .flt.fl-free{background:rgba(54,210,186,.1);border-color:rgba(54,210,186,.5)}
+  .flt.fl-reserved{background:rgba(248,164,58,.1);border-color:rgba(248,164,58,.5)}
+  .flt .hkflip{width:6em;text-align:center}
+  .flt .hkflip span{left:0;right:0}
   .evrow{display:flex;align-items:center;gap:20px;background:${P.elev};border:1px solid ${P.hair};
          border-left:6px solid ${P.primary};border-radius:14px;padding:18px 20px;margin-bottom:14px}
   .evtime{font-size:22px;color:${P.glow};width:190px;flex:none}

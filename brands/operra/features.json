@@ -9,164 +9,525 @@
   ],
   "features": [
     {
-      "id": "front-desk", "module": "front-office", "en": "Front desk dashboard", "sw": "Dashibodi ya mapokezi",
+      "id": "front-desk",
+      "module": "front-office",
+      "en": "Front desk dashboard",
+      "sw": "Dashibodi ya mapokezi",
       "page": "/features/front-office/front-desk",
       "what": "One screen with today's arrivals, departures, in-house guests, room status, outstanding balances and revenue collected, updated live.",
-      "claims": ["Live occupancy recalculated the moment a check-in is confirmed or a room is blocked", "Shift hand-over is a ready dashboard: revenue, balances, arrivals, no WhatsApp recap", "Mobile-money references attach to the folio line", "Receipts carry a QR code and sequential numbering"],
-      "angles": ["the morning shift hand-over that starts with a WhatsApp recap", "the owner asks 'how much is outstanding right now?' and nobody knows", "a guest who should have checked out yesterday is still in room", "the receptionist flipping between a book, a calculator and a phone"],
-      "reel": { "scenes": ["ui-screen:frontdesk", "checklist"] }
+      "claims": [
+        "Live occupancy recalculated the moment a check-in is confirmed or a room is blocked",
+        "Shift hand-over is a ready dashboard: revenue, balances, arrivals, no WhatsApp recap",
+        "Mobile-money references attach to the folio line",
+        "Receipts carry a QR code and sequential numbering"
+      ],
+      "angles": [
+        "the morning shift hand-over that starts with a WhatsApp recap",
+        "the owner asks 'how much is outstanding right now?' and nobody knows",
+        "a guest who should have checked out yesterday is still in room",
+        "the receptionist flipping between a book, a calculator and a phone"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:frontdesk",
+          "checklist"
+        ]
+      }
     },
     {
-      "id": "reservations", "module": "front-office", "en": "Reservations and group bookings", "sw": "Uhifadhi wa vyumba na makundi",
+      "id": "reservations",
+      "module": "front-office",
+      "en": "Reservations and group bookings",
+      "sw": "Uhifadhi wa vyumba na makundi",
       "page": "/features/front-office/reservations",
       "what": "A live room grid with a hard block on double-booking, group rooms in one screen, quotes that convert to reservations in one click, deposits by mobile money.",
-      "claims": ["Two receptionists cannot book the same room at the same time: hard conflict block", "A quotation with line-item rates goes out as a branded PDF on WhatsApp or email", "Quote converts to a reservation in one click, with the audit trail attached", "Search any booking by guest, phone, room or booking code", "Quotes in TSh, with USD on tap for international guests"],
-      "angles": ["two receptionists sell the same room to two guests", "the quote that sat in a WhatsApp chat and never became a booking", "a group of rooms held on a paper list", "the deposit paid by M-Pesa that nobody matched to the booking", "'I thought you confirmed it'"],
-      "reel": { "scenes": ["ui-screen:frontdesk", "checklist"] }
+      "claims": [
+        "Two receptionists cannot book the same room at the same time: hard conflict block",
+        "A quotation with line-item rates goes out as a branded PDF on WhatsApp or email",
+        "Quote converts to a reservation in one click, with the audit trail attached",
+        "Search any booking by guest, phone, room or booking code",
+        "Quotes in TSh, with USD on tap for international guests"
+      ],
+      "angles": [
+        "two receptionists sell the same room to two guests",
+        "the quote that sat in a WhatsApp chat and never became a booking",
+        "a group of rooms held on a paper list",
+        "the deposit paid by M-Pesa that nobody matched to the booking",
+        "'I thought you confirmed it'"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:frontdesk",
+          "ui-screen:tables"
+        ]
+      }
     },
     {
-      "id": "guest-stay", "module": "front-office", "en": "In-stay folios and charges", "sw": "Bili za mgeni akiwa hotelini",
+      "id": "guest-stay",
+      "module": "front-office",
+      "en": "In-stay folios and charges",
+      "sw": "Bili za mgeni akiwa hotelini",
       "page": "/features/front-office/guest-stay",
       "what": "Minibar, room service, laundry, late check-out, room moves and extensions post to the right folio from one page, with VAT and an audit stamp on every line.",
-      "claims": ["Any charge posts to the guest's folio in three taps", "18% VAT applied after the discount, on every line", "Several tenders on one bill: cash, card, mobile money or company account", "A guest past departure with a balance turns red on every workstation"],
-      "angles": ["the laundry or minibar charge that never reached the bill", "a guest extends by two nights and the bill is rebuilt by hand", "checkout morning: the folio does not match what the guest remembers", "one bill paid half by card, half by M-Pesa"],
-      "reel": { "scenes": ["problem-doc", "folio-fix", "pos-charge"] }
+      "claims": [
+        "Any charge posts to the guest's folio in three taps",
+        "18% VAT applied after the discount, on every line",
+        "Several tenders on one bill: cash, card, mobile money or company account",
+        "A guest past departure with a balance turns red on every workstation"
+      ],
+      "angles": [
+        "the laundry or minibar charge that never reached the bill",
+        "a guest extends by two nights and the bill is rebuilt by hand",
+        "checkout morning: the folio does not match what the guest remembers",
+        "one bill paid half by card, half by M-Pesa"
+      ],
+      "reel": {
+        "scenes": [
+          "problem-doc",
+          "folio-fix",
+          "pos-charge"
+        ]
+      }
     },
     {
-      "id": "guest-crm", "module": "front-office", "en": "Guest profiles and returning guests", "sw": "Kumbukumbu za wageni wanaorudi",
+      "id": "guest-crm",
+      "module": "front-office",
+      "en": "Guest profiles and returning guests",
+      "sw": "Kumbukumbu za wageni wanaorudi",
       "page": "/features/front-office/guest-crm",
       "what": "One profile per guest with every stay, charge and room attached; VIP and corporate flags raised automatically; NIDA and passport on the same form.",
-      "claims": ["Stay history follows the guest across every visit", "VIP and corporate flags appear automatically when a guest qualifies", "NIDA and passport captured on the same form", "Every read of a profile is logged against the staff member who opened it"],
-      "angles": ["the loyal guest treated like a stranger on the third visit", "the receptionist who left took the guest relationships with her", "asking a returning guest for their phone number again", "the corporate guest whose company rate was forgotten"],
-      "reel": { "scenes": ["ui-screen:frontdesk", "checklist"] }
+      "claims": [
+        "Stay history follows the guest across every visit",
+        "VIP and corporate flags appear automatically when a guest qualifies",
+        "NIDA and passport captured on the same form",
+        "Every read of a profile is logged against the staff member who opened it"
+      ],
+      "angles": [
+        "the loyal guest treated like a stranger on the third visit",
+        "the receptionist who left took the guest relationships with her",
+        "asking a returning guest for their phone number again",
+        "the corporate guest whose company rate was forgotten"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:frontdesk",
+          "checklist"
+        ]
+      }
     },
     {
-      "id": "room-operations", "module": "rooms", "en": "Live room map", "sw": "Ramani ya vyumba moja kwa moja",
+      "id": "room-operations",
+      "module": "rooms",
+      "en": "Live room map",
+      "sw": "Ramani ya vyumba moja kwa moja",
       "page": "/features/rooms-housekeeping/room-operations",
       "what": "Every room in every building on one screen: available, occupied, cleaning, maintenance or out of service, with transfers and blocks from the same page.",
-      "claims": ["Five room states counted live: available, occupied, cleaning, maintenance, out of service", "Room moves and blocks are role-gated and audit-traced", "Room types carry TSh pricing per night and maximum guests"],
-      "angles": ["a guest is given a room that is still under repair", "the whiteboard behind reception that is always one hour old", "moving a guest to another room without losing the bill"],
-      "reel": { "scenes": ["ui-screen:frontdesk", "checklist"] }
+      "claims": [
+        "Five room states counted live: available, occupied, cleaning, maintenance, out of service",
+        "Room moves and blocks are role-gated and audit-traced",
+        "Room types carry TSh pricing per night and maximum guests"
+      ],
+      "angles": [
+        "a guest is given a room that is still under repair",
+        "the whiteboard behind reception that is always one hour old",
+        "moving a guest to another room without losing the bill"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:frontdesk",
+          "checklist"
+        ]
+      }
     },
     {
-      "id": "housekeeping", "module": "rooms", "en": "Housekeeping board", "sw": "Usafi wa vyumba",
+      "id": "housekeeping",
+      "module": "rooms",
+      "en": "Housekeeping board",
+      "sw": "Usafi wa vyumba",
       "page": "/features/rooms-housekeeping/housekeeping",
       "what": "Rooms auto-assigned to housekeepers by floor and capacity, inspections with a per-item amenity check, and the board updates the front desk the moment a room is clean.",
-      "claims": ["Rooms are assigned to housekeepers automatically by floor and capacity", "Per-item amenity check: water, slippers, minibar, every used item logged", "Do-not-disturb respected: missed knocks go to a supervisor follow-up", "Every status change is logged with who did it and when"],
-      "angles": ["the guest waits in the lobby while the room is already clean", "towels and slippers that quietly walk out every week", "a room missed in the daily refresh and a bad review", "paper assignment sheets and a noisy WhatsApp group"],
-      "reel": { "scenes": ["checklist", "ui-screen:frontdesk"] }
+      "claims": [
+        "Rooms are assigned to housekeepers automatically by floor and capacity",
+        "Per-item amenity check: water, slippers, minibar, every used item logged",
+        "Do-not-disturb respected: missed knocks go to a supervisor follow-up",
+        "Every status change is logged with who did it and when"
+      ],
+      "angles": [
+        "the guest waits in the lobby while the room is already clean",
+        "towels and slippers that quietly walk out every week",
+        "a room missed in the daily refresh and a bad review",
+        "paper assignment sheets and a noisy WhatsApp group"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:housekeeping",
+          "checklist"
+        ]
+      }
     },
     {
-      "id": "restaurant-pos", "module": "food-beverage", "en": "Restaurant and bar POS", "sw": "POS ya mgahawa na baa",
+      "id": "restaurant-pos",
+      "module": "food-beverage",
+      "en": "Restaurant and bar POS",
+      "sw": "POS ya mgahawa na baa",
       "page": "/features/food-beverage/restaurant-pos",
       "what": "One POS for restaurant, bar, in-room dining, takeaway and events; settles to cash, card, mobile money or straight to the guest's room, with waiter attribution and split bills.",
-      "claims": ["Settle to cash, card, mobile money, the room folio or the event ledger", "Rush Mode: two taps to seated, three to settled", "Every order line is attributed to a waiter; tips and covers tracked per waiter", "Split a bill by item or by share, transfer between tables", "18% VAT applied after the discount, on every receipt"],
-      "angles": ["the bar tab that never reached the room bill", "a full dining room and a POS that needs ten taps", "nobody knows which waiter served table four", "the walk-in who pays half by card and half by M-Pesa", "a restaurant that runs separately from the hotel's books"],
-      "reel": { "scenes": ["pos-charge", "checklist"] }
+      "claims": [
+        "Settle to cash, card, mobile money, the room folio or the event ledger",
+        "Rush Mode: two taps to seated, three to settled",
+        "Every order line is attributed to a waiter; tips and covers tracked per waiter",
+        "Split a bill by item or by share, transfer between tables",
+        "18% VAT applied after the discount, on every receipt"
+      ],
+      "angles": [
+        "the bar tab that never reached the room bill",
+        "a full dining room and a POS that needs ten taps",
+        "nobody knows which waiter served table four",
+        "the walk-in who pays half by card and half by M-Pesa",
+        "a restaurant that runs separately from the hotel's books"
+      ],
+      "reel": {
+        "scenes": [
+          "pos-charge",
+          "checklist"
+        ]
+      }
     },
     {
-      "id": "kitchen-display", "module": "food-beverage", "en": "Kitchen display", "sw": "Skrini ya jikoni",
+      "id": "kitchen-display",
+      "module": "food-beverage",
+      "en": "Kitchen display",
+      "sw": "Skrini ya jikoni",
       "page": "/features/food-beverage/kitchen",
       "what": "Orders from the POS land on the right kitchen station with modifiers, allergens and course pacing; tickets age and turn amber; sold dishes deduct stock.",
-      "claims": ["Tickets go to the right station with modifiers and allergens", "Tickets change colour as they age past target", "Starters do not fire with mains: course pacing", "Recipe deduction trims stock when a dish is sold"],
-      "angles": ["the paper chit that fell behind the grill", "a waiter shouting orders through the hatch", "the starter and the main arriving together", "the allergy note that never reached the chef"],
-      "reel": { "scenes": ["pos-charge", "checklist"] }
+      "claims": [
+        "Tickets go to the right station with modifiers and allergens",
+        "Tickets change colour as they age past target",
+        "Starters do not fire with mains: course pacing",
+        "Recipe deduction trims stock when a dish is sold"
+      ],
+      "angles": [
+        "the paper chit that fell behind the grill",
+        "a waiter shouting orders through the hatch",
+        "the starter and the main arriving together",
+        "the allergy note that never reached the chef"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:kitchen",
+          "pos-charge"
+        ]
+      }
     },
     {
-      "id": "digital-menu", "module": "food-beverage", "en": "In-room QR menu and online ordering", "sw": "Kuagiza chakula kwa QR chumbani",
+      "id": "digital-menu",
+      "module": "food-beverage",
+      "en": "In-room QR menu and online ordering",
+      "sw": "Kuagiza chakula kwa QR chumbani",
       "page": "/features/food-beverage/digital-menu",
       "what": "A permanent QR sticker in each room opens the menu; the guest confirms with a stay PIN, orders, the front desk approves, the kitchen gets it and the bill goes to the room.",
-      "claims": ["One permanent QR sticker per room, or the link sent on WhatsApp at check-in", "Guests confirm with a stay PIN, so outsiders cannot order against a room", "Every order is approved at the front desk before it reaches the kitchen", "Approved orders post to the room folio automatically", "Guests can reserve a restaurant table from the same screen", "Menu prices shown in TZS or USD"],
-      "angles": ["a guest calls reception three times to order dinner", "the room-service chit that was never charged", "a guest who would order more if it were easy", "a prank order of whisky against someone else's room"],
-      "reel": { "scenes": ["pos-charge", "checklist"] }
+      "claims": [
+        "One permanent QR sticker per room, or the link sent on WhatsApp at check-in",
+        "Guests confirm with a stay PIN, so outsiders cannot order against a room",
+        "Every order is approved at the front desk before it reaches the kitchen",
+        "Approved orders post to the room folio automatically",
+        "Guests can reserve a restaurant table from the same screen",
+        "Menu prices shown in TZS or USD"
+      ],
+      "angles": [
+        "a guest calls reception three times to order dinner",
+        "the room-service chit that was never charged",
+        "a guest who would order more if it were easy",
+        "a prank order of whisky against someone else's room"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:menu",
+          "ui-screen:kitchen"
+        ]
+      }
     },
     {
-      "id": "table-management", "module": "food-beverage", "en": "Tables and restaurant reservations", "sw": "Meza na uhifadhi wa mgahawa",
+      "id": "table-management",
+      "module": "food-beverage",
+      "en": "Tables and restaurant reservations",
+      "sw": "Meza na uhifadhi wa mgahawa",
       "page": "/features/food-beverage/table-management",
       "what": "A live floor plan for every outlet, two-tap seating, tab transfers and splits, and a public booking link guests can use from Instagram, WhatsApp or the website.",
-      "claims": ["One public reservation link to share on Instagram, WhatsApp or the website", "Guests never see the live floor or table availability", "Every request is confirmed by the restaurant: guests never auto-book", "Move a tab to another table: order, waiter and bill follow", "Reserved tables show on the floor map so the host never double-seats"],
-      "angles": ["Saturday bookings scattered across DMs and phone calls", "two parties seated at the same reserved table", "a couple asks to move to the terrace mid-meal", "a no-show holds the best table all night"],
-      "reel": { "scenes": ["pos-charge", "checklist"] }
+      "claims": [
+        "One public reservation link to share on Instagram, WhatsApp or the website",
+        "Guests never see the live floor or table availability",
+        "Every request is confirmed by the restaurant: guests never auto-book",
+        "Move a tab to another table: order, waiter and bill follow",
+        "Reserved tables show on the floor map so the host never double-seats"
+      ],
+      "angles": [
+        "Saturday bookings scattered across DMs and phone calls",
+        "two parties seated at the same reserved table",
+        "a couple asks to move to the terrace mid-meal",
+        "a no-show holds the best table all night"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:booking",
+          "ui-screen:tables"
+        ]
+      }
     },
     {
-      "id": "events", "module": "events-sales", "en": "Events and banqueting", "sw": "Matukio na mikutano",
+      "id": "events",
+      "module": "events-sales",
+      "en": "Events and banqueting",
+      "sw": "Matukio na mikutano",
       "page": "/features/events-sales/events",
       "what": "Venue calendar, menu, deposits, payments and audit trail in one event record, from the first WhatsApp enquiry to the final receipt, with a branded event dossier.",
-      "claims": ["Venue calendar by day, month or list", "The event menu is built from the hotel's own F&B menus and the folio updates live", "One branded dossier the client signs and the auditor accepts", "Deposits and balances settled by M-Pesa, Tigo Pesa, Airtel Money or card", "Event payments restricted by role"],
-      "angles": ["the wedding quote retyped from WhatsApp into Word", "two events booked into the same hall", "the deposit nobody can find on event day", "extra drinks at the conference that never reached the invoice"],
-      "reel": { "scenes": ["problem-doc", "folio-fix", "checklist"] }
+      "claims": [
+        "Venue calendar by day, month or list",
+        "The event menu is built from the hotel's own F&B menus and the folio updates live",
+        "One branded dossier the client signs and the auditor accepts",
+        "Deposits and balances settled by M-Pesa, Tigo Pesa, Airtel Money or card",
+        "Event payments restricted by role"
+      ],
+      "angles": [
+        "the wedding quote retyped from WhatsApp into Word",
+        "two events booked into the same hall",
+        "the deposit nobody can find on event day",
+        "extra drinks at the conference that never reached the invoice"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:events",
+          "problem-doc",
+          "folio-fix"
+        ]
+      }
     },
     {
-      "id": "credit-accounts", "module": "events-sales", "en": "Company accounts and credit", "sw": "Akaunti za makampuni na madeni",
+      "id": "credit-accounts",
+      "module": "events-sales",
+      "en": "Company accounts and credit",
+      "sw": "Akaunti za makampuni na madeni",
       "page": "/features/events-sales/credit-accounts",
       "what": "Credit limits per company, invoices, aged receivables and monthly statements, with over-limit charges blocked until finance approves.",
-      "claims": ["Per-company credit limits; over-limit charges blocked until finance approves", "Ageing buckets: 0-30, 31-60, 61-90 and 90+ days", "Branded monthly statements, ready for WhatsApp or print"],
-      "angles": ["the company that owes for three months and nobody chased", "a corporate guest charges past the company's limit", "month-end statements built from Excel rows"],
-      "reel": { "scenes": ["problem-doc", "folio-fix", "ui-screen:reports"] }
+      "claims": [
+        "Per-company credit limits; over-limit charges blocked until finance approves",
+        "Ageing buckets: 0-30, 31-60, 61-90 and 90+ days",
+        "Branded monthly statements, ready for WhatsApp or print"
+      ],
+      "angles": [
+        "the company that owes for three months and nobody chased",
+        "a corporate guest charges past the company's limit",
+        "month-end statements built from Excel rows"
+      ],
+      "reel": {
+        "scenes": [
+          "problem-doc",
+          "folio-fix",
+          "ui-screen:reports"
+        ]
+      }
     },
     {
-      "id": "finance", "module": "finance", "en": "One ledger, VAT done right", "sw": "Leja moja na VAT sahihi",
+      "id": "finance",
+      "module": "finance",
+      "en": "One ledger, VAT done right",
+      "sw": "Leja moja na VAT sahihi",
       "page": "/features/finance-compliance/finance",
       "what": "Every folio, POS post and event payment rolls into one ledger and the P&L instantly; folios are numbered without gaps; VAT is applied after discounts.",
-      "claims": ["18% VAT applied after the discount, on every line", "Folio numbers are sequential with no gaps", "A charge posts once or not at all: no doubles", "Every folio, POS post and event payment rolls into the P&L instantly"],
-      "angles": ["discounts applied before VAT, and the auditor notices", "a payment posted twice after a retry", "the midnight spreadsheet that reconciles three systems"],
-      "reel": { "scenes": ["problem-doc", "folio-fix", "ui-screen:reports"] }
+      "claims": [
+        "18% VAT applied after the discount, on every line",
+        "Folio numbers are sequential with no gaps",
+        "A charge posts once or not at all: no doubles",
+        "Every folio, POS post and event payment rolls into the P&L instantly"
+      ],
+      "angles": [
+        "discounts applied before VAT, and the auditor notices",
+        "a payment posted twice after a retry",
+        "the midnight spreadsheet that reconciles three systems"
+      ],
+      "reel": {
+        "scenes": [
+          "problem-doc",
+          "folio-fix",
+          "ui-screen:reports"
+        ]
+      }
     },
     {
-      "id": "reports", "module": "finance", "en": "Reports Hub", "sw": "Ripoti za mmiliki",
+      "id": "reports",
+      "module": "finance",
+      "en": "Reports Hub",
+      "sw": "Ripoti za mmiliki",
       "page": "/features/finance-compliance/reports",
       "what": "30+ live reports across 7 categories from the same ledger the desk and restaurant post into, each a branded PDF in seconds.",
-      "claims": ["30+ reports across 7 categories", "Every report exports as a branded PDF", "Occupancy, ADR, RevPAR and revenue per room type", "Waiter leaderboard, voids and ghost-room revenue leak detection"],
-      "angles": ["'can someone pull me a report?' every Monday", "the owner abroad waiting for numbers by email", "the bank asks for occupancy history before a loan"],
-      "reel": { "scenes": ["ui-screen:reports", "checklist"] }
+      "claims": [
+        "30+ reports across 7 categories",
+        "Every report exports as a branded PDF",
+        "Occupancy, ADR, RevPAR and revenue per room type",
+        "Waiter leaderboard, voids and ghost-room revenue leak detection"
+      ],
+      "angles": [
+        "'can someone pull me a report?' every Monday",
+        "the owner abroad waiting for numbers by email",
+        "the bank asks for occupancy history before a loan"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:reports",
+          "ui-screen:frontdesk"
+        ]
+      }
     },
     {
-      "id": "audit-center", "module": "finance", "en": "Audit trail", "sw": "Kumbukumbu ya kila badiliko",
+      "id": "audit-center",
+      "module": "finance",
+      "en": "Audit trail",
+      "sw": "Kumbukumbu ya kila badiliko",
       "page": "/features/finance-compliance/audit-center",
       "what": "Every action by every user is recorded, linked to the person and time, and chained so a silent edit shows immediately.",
-      "claims": ["Every action is bound to a user, role and time: no anonymous edits", "Entries are hash-chained, so a silent edit becomes visible", "Six views: operations, financial, rooms, staff, restaurant, automation"],
-      "angles": ["a bill voided at 2am and nobody knows who", "a room rate lowered for a friend", "the cash drawer matches paper but the books do not"],
-      "reel": { "scenes": ["problem-doc", "folio-fix", "ui-screen:reports"] }
+      "claims": [
+        "Every action is bound to a user, role and time: no anonymous edits",
+        "Entries are hash-chained, so a silent edit becomes visible",
+        "Six views: operations, financial, rooms, staff, restaurant, automation"
+      ],
+      "angles": [
+        "a bill voided at 2am and nobody knows who",
+        "a room rate lowered for a friend",
+        "the cash drawer matches paper but the books do not"
+      ],
+      "reel": {
+        "scenes": [
+          "problem-doc",
+          "folio-fix",
+          "ui-screen:reports"
+        ]
+      }
     },
     {
-      "id": "night-audit", "module": "finance", "en": "Night audit", "sw": "Ukaguzi wa usiku",
+      "id": "night-audit",
+      "module": "finance",
+      "en": "Night audit",
+      "sw": "Ukaguzi wa usiku",
       "page": "/features/finance-compliance/night-audit",
       "what": "A six-step night audit that posts room rates, rolls folios forward, matches drawers to POS receipts and emails the summary; all steps succeed or none do.",
-      "claims": ["A six-step night audit that runs itself", "All steps succeed or none do: no half-closed days", "Unsettled folios, drawer mismatches and over-limit accounts flagged automatically", "Occupancy, ADR, RevPAR and source mix emailed at sunrise"],
-      "angles": ["the night auditor kept awake only to print reports", "a day closed with a drawer that does not match", "the owner wakes up to no numbers"],
-      "reel": { "scenes": ["checklist", "ui-screen:reports"] }
+      "claims": [
+        "A six-step night audit that runs itself",
+        "All steps succeed or none do: no half-closed days",
+        "Unsettled folios, drawer mismatches and over-limit accounts flagged automatically",
+        "Occupancy, ADR, RevPAR and source mix emailed at sunrise"
+      ],
+      "angles": [
+        "the night auditor kept awake only to print reports",
+        "a day closed with a drawer that does not match",
+        "the owner wakes up to no numbers"
+      ],
+      "reel": {
+        "scenes": [
+          "checklist",
+          "ui-screen:reports"
+        ]
+      }
     },
     {
-      "id": "inventory", "module": "operations", "en": "Stock and purchasing", "sw": "Stoo na manunuzi",
+      "id": "inventory",
+      "module": "operations",
+      "en": "Stock and purchasing",
+      "sw": "Stoo na manunuzi",
       "page": "/features/operations-scale/inventory",
       "what": "Every product tracked across bar, kitchen, minibar and storeroom; sales deduct recipes; purchase orders, deliveries and counts post to one ledger.",
-      "claims": ["Selling a cocktail deducts its ingredients the moment the ticket fires", "Transfers between bar, kitchen, minibar and storeroom keep a two-sided trail", "Blind stock counts with variance flags", "Reorder points alert purchasing before items run out"],
-      "angles": ["'where did the bottle go?' on Monday morning", "the bar count on Sunday night that never matches sales", "the chef runs out of tomatoes mid-service", "stock moved from the store to the bar and lost on the way"],
-      "reel": { "scenes": ["checklist", "ui-screen:reports"] }
+      "claims": [
+        "Selling a cocktail deducts its ingredients the moment the ticket fires",
+        "Transfers between bar, kitchen, minibar and storeroom keep a two-sided trail",
+        "Blind stock counts with variance flags",
+        "Reorder points alert purchasing before items run out"
+      ],
+      "angles": [
+        "'where did the bottle go?' on Monday morning",
+        "the bar count on Sunday night that never matches sales",
+        "the chef runs out of tomatoes mid-service",
+        "stock moved from the store to the bar and lost on the way"
+      ],
+      "reel": {
+        "scenes": [
+          "checklist",
+          "ui-screen:reports"
+        ]
+      }
     },
     {
-      "id": "multi-property", "module": "operations", "en": "Several properties, one owner view", "sw": "Hoteli kadhaa, mmiliki mmoja",
+      "id": "multi-property",
+      "module": "operations",
+      "en": "Several properties, one owner view",
+      "sw": "Hoteli kadhaa, mmiliki mmoja",
       "page": "/features/operations-scale/multi-property",
       "what": "Owner, business unit, property, outlet and employee, each with the right view; group reports roll up live while each property keeps its own branding and runs on its own.",
-      "claims": ["Owner → Business Unit → Property → Outlet → Employee", "Staff at one property cannot see another property's folios", "One company credit limit across all properties", "Each property keeps its own logo and PDF templates"],
-      "angles": ["three lodges, three systems, three spreadsheets", "the owner waits until the tenth to see last month", "moving a manager between properties"],
-      "reel": { "scenes": ["ui-screen:reports", "checklist"] }
+      "claims": [
+        "Owner → Business Unit → Property → Outlet → Employee",
+        "Staff at one property cannot see another property's folios",
+        "One company credit limit across all properties",
+        "Each property keeps its own logo and PDF templates"
+      ],
+      "angles": [
+        "three lodges, three systems, three spreadsheets",
+        "the owner waits until the tenth to see last month",
+        "moving a manager between properties"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:reports",
+          "checklist"
+        ]
+      }
     },
     {
-      "id": "mobile-money", "module": "finance", "en": "Mobile money that reconciles", "sw": "Malipo ya simu yanayolingana",
+      "id": "mobile-money",
+      "module": "finance",
+      "en": "Mobile money that reconciles",
+      "sw": "Malipo ya simu yanayolingana",
       "page": "/features/front-office/front-desk",
       "what": "M-Pesa, Tigo Pesa and Airtel Money payments post to the folio with the transaction reference attached, for same-day reconciliation.",
-      "claims": ["M-Pesa, Tigo Pesa and Airtel Money posted to the folio with the transaction reference", "Reconciliation in seconds, not hours", "Mobile-money references stay searchable on the guest's stay"],
-      "angles": ["a screenshot of an M-Pesa message as proof of payment", "end of day: twenty mobile payments and no names", "a deposit paid by phone that nobody can match"],
-      "reel": { "scenes": ["problem-doc", "folio-fix", "checklist"] }
+      "claims": [
+        "M-Pesa, Tigo Pesa and Airtel Money posted to the folio with the transaction reference",
+        "Reconciliation in seconds, not hours",
+        "Mobile-money references stay searchable on the guest's stay"
+      ],
+      "angles": [
+        "a screenshot of an M-Pesa message as proof of payment",
+        "end of day: twenty mobile payments and no names",
+        "a deposit paid by phone that nobody can match"
+      ],
+      "reel": {
+        "scenes": [
+          "problem-doc",
+          "folio-fix",
+          "checklist"
+        ]
+      }
     },
     {
-      "id": "offline", "module": "platform", "en": "Works through outages", "sw": "Inafanya kazi mtandao ukikatika", "offline": true,
+      "id": "offline",
+      "module": "platform",
+      "en": "Works through outages",
+      "sw": "Inafanya kazi mtandao ukikatika",
+      "offline": true,
       "page": "/why-operra/offline",
       "what": "Front desk, POS, kitchen and folios keep working without internet for up to 30 continuous days and reconcile automatically when the connection returns.",
-      "claims": ["Up to 30 continuous days of operation without internet", "Queued actions sync in the right order when the connection returns", "Staff always see whether they are online", "One property's outage does not affect any other"],
-      "angles": ["the fibre cut at 11pm with guests queuing", "a paper folio written during a power cut"],
-      "reel": { "scenes": ["ui-screen:frontdesk", "checklist"] }
+      "claims": [
+        "Up to 30 continuous days of operation without internet",
+        "Queued actions sync in the right order when the connection returns",
+        "Staff always see whether they are online",
+        "One property's outage does not affect any other"
+      ],
+      "angles": [
+        "the fibre cut at 11pm with guests queuing",
+        "a paper folio written during a power cut"
+      ],
+      "reel": {
+        "scenes": [
+          "ui-screen:frontdesk",
+          "checklist"
+        ]
+      }
     }
   ]
 }

@@ -119,7 +119,7 @@ async function makeInk(brief, brand, dir, { out, voice, fps, reuse, pageOnly }) 
     const p = await b.newPage();
     const errors = [];
     p.on("pageerror", (e) => errors.push(e.message));
-    await p.goto(pathToFileURL(page).href);
+    await p.goto(pathToFileURL(page).href, { timeout: 120000 });
     cues = await p.evaluate(() => window.REEL_CUES);
     if (errors.length || !cues) throw new Error(`ink page failed: ${errors.join("; ") || "no cues"}`);
   } finally {

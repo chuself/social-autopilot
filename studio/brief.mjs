@@ -52,7 +52,8 @@ const SPEC = `## Scene library (pick 4, or 5 at most; first is "place", last is 
   bookings, returning guests), "reports" (owner away, revenue, month-end, audit trail, night audit),
   "kitchen" (orders on the kitchen display, tickets ageing), "menu" (a guest orders from the room QR
   menu, the front desk approves, it bills to the room), "housekeeping" (room board, a room turns clean),
-  "events" (the day's events: venue, time, guests, deposit). Fields: line, screen, chips (0-1), image.
+  "events" (the day's events: venue, time, guests, deposit), "tables" (the restaurant floor: tables,
+  a reservation, a no-show released), "booking" (a guest books a table on the restaurant's public link). Fields: line, screen, chips (0-1), image.
   Two ui-screens with different screens may follow each other.
 - "checklist": 2-4 short items (2-5 words each) of things Operra does, ONLY from the approved facts.
   Fields: line, items, image.
@@ -111,7 +112,20 @@ export function normalizeBrief(raw) {
 
 const INK_RULE = `- This reel is DRAWN, not photographed: hand-drawn line art with watercolour washes, set in the
   post's city. Do NOT write any "image" field; the studio draws every place, person, paper and screen.
-  Lines should suit drawings: places, people seen from behind, a bill, a ticket, a screen.
+- Every scene must SHOW its line; a viewer with the sound off must see the story. Choose the screen
+  that depicts the claim: "tables" for table bookings and no-shows, "menu" for in-room QR orders and
+  the stay PIN, "kitchen" for orders reaching the chef, "events" for venue bookings, "housekeeping"
+  for room status, "reports" for an owner's numbers, "frontdesk" for arrivals and occupancy,
+  "booking" for the public table-booking link. A "checklist" is words, not a picture: use it at most
+  once, and only when no screen can show the point.
+- On the "place" scene add "prop": the ONE object that makes the hook literal, drawn large in front
+  of the city. One of: "whisky" (a drink order, a bar tab), "table" (a restaurant table: bookings,
+  no-shows), "envelope" (emailed reports, statements, an owner away), "suitcase" (arrivals,
+  check-out, groups), "bell" (the front desk, service), "cloche" (room service, food orders),
+  "calendar" (dates, seasons, events), "keys" (rooms, housekeeping).
+- On the "payoff" scene add "moment", the story's happy ending: "desk" (a calm front desk, a guest
+  leaving happy), "dinner" (diners at a set table), "owner" (the owner away while the hotel runs),
+  "toast" (two people celebrating), "farewell" (guests waving goodbye), "sunrise" (a calm morning).
 `;
 
 /** A fake voice good enough to compose against: catches scene-level errors without TTS. */
