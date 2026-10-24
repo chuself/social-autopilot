@@ -12042,7 +12042,30 @@
     "status": "pending",
     "bgProvider": "moss-fast",
     "bgSeed": 3105577989,
-    "style": "ink"
+    "style": "ink",
+    "reel": {
+      "file": "operra-2026-10-24-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-24-16-client-proof.mp4",
+      "beats": [
+        "Meneja akihama tawi siri za biashara ziko salama?",
+        "Mmiliki anaona picha kamili ya matawi yote",
+        "Operra inalinda data na ankara za kila tawi",
+        "Usimamizi wa matawi mengi bila kero wala hofu"
+      ],
+      "narration": "Biashara inapopanuka Mwanza, meneja akihamia tawi jipya hapaswi kuona siri za tawi lingine. Operra inakupa picha kamili ya matawi yote huku kila hoteli ikitenga data, ikihifadhi logo yake, na kutumia limit moja ya credit. Inaleta nidhamu na usalama.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-24T10:03:44.044Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-24-20-swahili-tip",
