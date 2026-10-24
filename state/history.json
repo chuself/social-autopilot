@@ -1,27 +1,6 @@
 [
   {
     "platform": "facebook",
-    "postId": "1090216357391861",
-    "id": "operra-2026-09-27-13-industry-note",
-    "format": "reel",
-    "postedAt": "2026-09-27T10:06:13.285Z"
-  },
-  {
-    "platform": "instagram",
-    "postId": "18133936951643553",
-    "id": "operra-2026-09-27-16-feature-spotlight",
-    "format": "reel",
-    "postedAt": "2026-09-27T13:42:22.646Z"
-  },
-  {
-    "platform": "facebook",
-    "postId": "940070302048597",
-    "id": "operra-2026-09-27-16-feature-spotlight",
-    "format": "reel",
-    "postedAt": "2026-09-27T13:42:48.948Z"
-  },
-  {
-    "platform": "facebook",
     "postId": "1049514968255534_122163907371351110",
     "url": "https://facebook.com/1049514968255534_122163907371351110",
     "id": "operra-2026-09-27-20-pain-point",
@@ -1398,5 +1377,27 @@
     "id": "operra-2026-10-24-13-number-that-lands",
     "format": "reel",
     "postedAt": "2026-10-24T10:04:38.131Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18100254647420908",
+    "id": "operra-2026-10-24-16-client-proof",
+    "format": "reel",
+    "postedAt": "2026-10-24T13:13:38.965Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "2325523568005287",
+    "id": "operra-2026-10-24-16-client-proof",
+    "format": "reel",
+    "postedAt": "2026-10-24T13:14:13.341Z"
+  },
+  {
+    "platform": "tiktok",
+    "postId": "https://app.metricool.com/planner/calendar?blogId=6307384&openWithPostUuid=1777794929641145758",
+    "scheduledFor": "2026-10-24T16:20:14+03:00",
+    "id": "operra-2026-10-24-16-client-proof",
+    "format": "reel",
+    "postedAt": "2026-10-24T13:14:16.630Z"
   }
 ]

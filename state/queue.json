@@ -12042,7 +12042,7 @@
     ],
     "scheduledFor": "2026-10-24T13:00:00.000Z",
     "createdAt": "2026-10-23T18:20:49.865Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 3105577989,
     "style": "ink",
@@ -12067,10 +12067,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-10-24T10:03:44.044Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-24T13:14:13.341Z",
+      "postIds": [
+        "instagram:18100254647420908",
+        "facebook:2325523568005287"
+      ]
     },
-    "lastAttempt": "2026-10-24T12:12:00.787Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-24T13:14:13.341Z"
   },
   {
     "id": "operra-2026-10-24-20-swahili-tip",
