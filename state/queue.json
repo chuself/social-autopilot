@@ -12164,7 +12164,7 @@
     ],
     "scheduledFor": "2026-10-25T05:00:00.000Z",
     "createdAt": "2026-10-24T18:03:13.541Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 2596142118,
     "slideFiles": [
@@ -12173,7 +12173,13 @@
       "operra-2026-10-25-08-industry-note-3.png",
       "operra-2026-10-25-08-industry-note-4.png"
     ],
-    "headline": "Cash mismatches at midnight cost morning speed"
+    "headline": "Cash mismatches at midnight cost morning speed",
+    "lastAttempt": "2026-10-25T05:37:59.712Z",
+    "postedAt": "2026-10-25T05:37:59.712Z",
+    "postIds": [
+      "facebook:1049514968255534_122176188105351110",
+      "instagram:18344446558256091"
+    ]
   },
   {
     "id": "operra-2026-10-25-13-feature-spotlight",
