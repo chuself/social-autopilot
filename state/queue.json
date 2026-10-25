@@ -12237,7 +12237,9 @@
       "warnings": [],
       "builtAt": "2026-10-25T07:10:14.163Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-25T07:10:37.629Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-10-25-16-pain-point",
