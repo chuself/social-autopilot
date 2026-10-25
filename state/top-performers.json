@@ -56,6 +56,26 @@
     ]
   },
   {
+    "id": "operra-2026-10-24-16-client-proof",
+    "platform": "instagram",
+    "pillar": "client-proof",
+    "format": "reel",
+    "language": "sw",
+    "look": "daylight",
+    "headline": "Meneja mmoja, hoteli nyingi",
+    "reach": 4,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 3,
+    "platforms": [
+      "instagram",
+      "facebook",
+      "tiktok"
+    ]
+  },
+  {
     "id": "operra-2026-10-16-08-number-that-lands",
     "platform": "facebook",
     "pillar": "number-that-lands",
@@ -63,25 +83,6 @@
     "language": "en",
     "look": "flatlay",
     "headline": "Trek turnarounds stall in translation",
-    "reach": 4,
-    "likes": 2,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 2,
-    "platforms": [
-      "facebook",
-      "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-10-19-08-number-that-lands",
-    "platform": "facebook",
-    "pillar": "number-that-lands",
-    "format": "carousel",
-    "language": "en",
-    "look": "macro",
-    "headline": "Safari group invoices cannot stall at departure",
     "reach": 4,
     "likes": 2,
     "comments": 0,

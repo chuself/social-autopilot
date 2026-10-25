@@ -12350,5 +12350,163 @@
       "facebook:1049514968255534_122176424127351110",
       "instagram:18107043776217427"
     ]
+  },
+  {
+    "id": "operra-2026-10-26-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Ubao wa Mapokezi",
+        "headline": "Ubao wa kuta unadanganya mapokezi Moshi?",
+        "body": "Hali ya vyumba kwenye ubao inachelewa kwa saa nzima. Wageni wanasubiri vyumba vilivyosafishwa tayari."
+      },
+      {
+        "eyebrow": "Ushuhuda Halisi",
+        "headline": "Lodge ya Moshi ilivyobadili mfumo",
+        "body": "Waliondoa ubao wa zamani wa mkono na kuanza kutumia ramani ya vyumba ya Operra."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Hali tano za vyumba zinaonekana moja kwa moja",
+        "body": "Wanaona vyumba vilivyo wazi, vinavyosafishwa na vya matengenezo bila kuchanganya. Hamisha na kuzuia vyumba kwa usalama."
+      }
+    ],
+    "caption": "Katika lodge za Moshi, ubao wa kuta wa mapokezi mara nyingi unachelewa kutoa taarifa sahihi. Lodge moja ya Moshi ilibadilisha ubao huo na ramani ya vyumba ya Operra. Sasa wanaona hali zote tano za vyumba—vilivyo wazi, vilivyokaliwa, vinavyosafishwa, vya matengenezo, na visivyofanya kazi—kwenye skrini moja. Hamisho za vyumba na kuzuia vyumba vinafanyika kwa usalama na kumbukumbu kamili. Rahisisha mapokezi yako leo.",
+    "hashtags": [
+      "#Operra",
+      "#MoshiHotels",
+      "#UsimamiziWaHoteli",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "A highland lodge terrace in Moshi surrounded by coffee trees, with the faint silhouette of Mount Kilimanjaro under a dusk sky. On the right side of the frame, a plain, untitled dark timber reception desk holds a sleek tablet standing upright, glowing softly with an unreadable screen. Next to it sit brass keys attached to plain wooden fobs. Near a stone pillar, heavy canvas trekking duffels and mud-dusted hiking boots rest neatly on timber floorboards. A hotel staff member in soft focus stands behind the counter viewed from behind. Composition: exterior terrace at dusk, lit windows and warm lanterns framing the building against the sky. Light and tone: deep blue hour, cool sky contrasting warm practical lighting, quiet atmosphere. Treatment: 35mm lens, long-exposure feel, calm cinematic mood. Calm zone: left half of the frame from middle to bottom is kept uncluttered with dark shadows and soft blurred foliage.",
+    "cta": "Onyeshwa Operra",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "feature": "room-operations",
+    "angle": "the whiteboard behind reception that is always one hour old",
+    "backgroundPath": "state/bg/operra-2026-10-26-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-26T05:00:00.000Z",
+    "createdAt": "2026-10-25T18:16:05.267Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 71340157,
+    "slideFiles": [
+      "operra-2026-10-26-08-client-proof-1.png",
+      "operra-2026-10-26-08-client-proof-2.png",
+      "operra-2026-10-26-08-client-proof-3.png"
+    ],
+    "headline": "Ubao wa kuta unadanganya mapokezi Moshi?"
+  },
+  {
+    "id": "operra-2026-10-26-13-swahili-tip",
+    "eyebrow": "Group Bookings",
+    "headline": "Stop holding group room blocks on paper lists",
+    "body": "Paper tracking causes double-bookings when multiple receptionists handle group arrivals simultaneously.",
+    "cta": "See it work",
+    "caption": "Holding group allocations on paper lists in Dar es Salaam usually leads to double-booked rooms during rush hours. When two receptionists work off separate sheets, the same room gets promised twice.\n\nSwitch to a live room grid with a hard conflict block. Send itemised quotes as branded PDFs that convert to reservations in one click, keeping a complete audit trail for every room held. 📋",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#FrontOffice",
+      "#HospitalityTech"
+    ],
+    "imagePrompt": "Exterior view of a high-rise corporate hotel along the Kivukoni waterfront in Dar es Salaam at dusk, with harbour waters reflecting the sky. Deep blue hour light fills the sky, contrasting against warm practical light glowing through floor-to-ceiling lobby windows. Right of centre on a dark teak outdoor side table rests a plain, untitled brass counter bell with a soft metallic shine. Next to it lie a heavy brass key tag and a pair of reading glasses on a plain dark wooden tray. Soft-focus figures of staff in dark uniforms move quietly in the background interior. Shot on a 35mm lens with a calm long-exposure feel and glowing interiors. The central frame remains quiet with dark architectural glass reflections.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "reservations",
+    "angle": "a group of rooms held on a paper list",
+    "backgroundPath": "state/bg/operra-2026-10-26-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-26T10:00:00.000Z",
+    "createdAt": "2026-10-25T18:16:19.925Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1869251180
+  },
+  {
+    "id": "operra-2026-10-26-16-industry-note",
+    "eyebrow": "Kitchen Operations",
+    "headline": "Shouting through the kitchen hatch creates food errors",
+    "body": "Streamline order pacing, station routing, and live stock updates straight from the POS directly to the line for smoother service.",
+    "cta": "See it work",
+    "caption": "Peak dinner service in Arusha safari lodges often breaks down at the kitchen hatch. Waiters shouting modifications lead to missed dietary tags and cold mains arriving with starters.\n\nModern kitchen displays route tickets to the right station with clear modifier and allergen notes. Course pacing keeps starters ahead of mains, while tickets change colour as they age. Every sold dish trims stock automatically.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HospitalityManagement",
+      "#KitchenOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "A safari lodge dining terrace on the leafy outskirts of Arusha, with acacia trees framed against a dark twilight horizon. Evening food service is under way as warm interior lights spill through glass doors onto wooden decking. Right of centre, a clean stainless steel kitchen pass holds two plated meals beneath warm overhead lamps. Nearby rest a plain wooden service tray, two glass water bottles, stainless steel tongs, and a neat stack of plain, untitled cream paper slips. Soft-focus waitstaff in dark uniforms are seen from behind moving towards open-air tables. Composition: exterior or terrace at dusk, lit windows and lanterns, the building framed against the sky. Light/tone: deep blue hour, cool sky against warm practical light, quiet. Treatment: 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood. The central band features dark, quiet tree silhouettes and sky to provide a clean visual space.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "series": null,
+    "feature": "kitchen-display",
+    "angle": "a waiter shouting orders through the hatch",
+    "backgroundPath": "state/bg/operra-2026-10-26-16-industry-note.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-26T13:00:00.000Z",
+    "createdAt": "2026-10-25T18:16:36.467Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3587678254
+  },
+  {
+    "id": "operra-2026-10-26-20-feature-spotlight",
+    "eyebrow": "Mapokezi",
+    "headline": "Linganisha malipo ya simu kwa sekunde chache",
+    "body": "Miamala ya M-Pesa, Tigo Pesa na Airtel Money inaingia moja kwa moja kwenye folio ya mgeni ikiwa na namba ya kumbukumbu.",
+    "cta": "Jaribu Operra",
+    "caption": "\"Nani katuma hii pesa?\" Ni swali linalopoteza muda mwingi Zanzibar wakati wa kulinganisha miamala ya simu na wageni. Operra inarahisisha kazi kwa kuunganisha malipo ya M-Pesa, Tigo Pesa, na Airtel Money moja kwa moja na folio ya mgeni. Namba ya muamala inabaki kwenye rekodi ya mgeni, hivyo kulinganisha hesabu kunachukua sekunde chache tu badala ya saa nzima. Kila senti inapata mmiliki wake bila kukisia. 💸",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "OperraTech"
+    ],
+    "imagePrompt": "A traditional boutique hotel in Zanzibar with coral-stone walls and intricate carved wooden shutters. The scene is an exterior view of a terrace at dusk, the building framed against a deep blue hour sky with glowing lanterns hanging from the eaves. Through a large open window, a warm interior office is visible. On the right side of a dark wood desk sits a stack of plain, untitled ivory-colored paper sheets in a simple wooden tray. Next to the tray is a handheld calculator and a small, unbranded mobile phone. The left half of the frame is a calm, out-of-focus stone wall in soft shadow. In the background, a person is visible only as a soft-focus silhouette from the back, working quietly. Composition: exterior or terrace at dusk, lit windows and lanterns, the building framed against the sky. Light/tone: deep blue hour, cool sky against warm practical light, quiet. Treatment: 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "mobile-money",
+    "angle": "a deposit paid by phone that nobody can match",
+    "backgroundPath": "state/bg/operra-2026-10-26-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-26T17:00:00.000Z",
+    "createdAt": "2026-10-25T18:18:01.936Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3745103475
   }
 ]
