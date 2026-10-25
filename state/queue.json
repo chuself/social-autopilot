@@ -12341,8 +12341,14 @@
     ],
     "scheduledFor": "2026-10-25T17:00:00.000Z",
     "createdAt": "2026-10-24T18:04:07.235Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
-    "bgSeed": 3153393693
+    "bgSeed": 3153393693,
+    "lastAttempt": "2026-10-25T18:00:22.633Z",
+    "postedAt": "2026-10-25T18:00:22.633Z",
+    "postIds": [
+      "facebook:1049514968255534_122176424127351110",
+      "instagram:18107043776217427"
+    ]
   }
 ]
