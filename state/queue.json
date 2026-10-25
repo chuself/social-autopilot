@@ -12214,7 +12214,30 @@
     "createdAt": "2026-10-24T18:03:37.679Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 812301364
+    "bgSeed": 812301364,
+    "reel": {
+      "file": "operra-2026-10-25-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-25-13-feature-spotlight.mp4",
+      "beats": [
+        "Hesabu ya baa Jumapili hailingani?",
+        "Ripoti za ukaguzi zinaonyesha mienendo yote",
+        "Operra inalinda stoo na mapato yako",
+        "Hesabu ya vinywaji inafungwa bila kupoteza"
+      ],
+      "narration": "Hesabu ya vinywaji ya Jumapili inakuumiza kichwa? Operra inakata vipimo vya vinywaji mara tu unapoagiza, na kufuatilia uhamisho wote wa stoo kwa uwazi. Hakuna tena upungufu unaopotea gizani, unaweka faida yako salama kabisa kila siku.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-25T07:10:14.163Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-25-16-pain-point",
