@@ -12275,7 +12275,30 @@
     "createdAt": "2026-10-24T18:03:55.879Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 318246580
+    "bgSeed": 318246580,
+    "reel": {
+      "file": "operra-2026-10-25-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-25-16-pain-point.mp4",
+      "beats": [
+        "Mgeni anarudi, unaomba namba tena?",
+        "Operra inatambua historia ya mgeni mara moja",
+        "Kila taarifa ipo tayari mapokezi",
+        "Mapokezi ya heshima bila kuuliza maswali tena"
+      ],
+      "narration": "Kumuuliza mgeni wa heshima namba ya simu kila anaporudi kunaharibu uzoefu wake. Ukiwa na Operra, kumbukumbu ya mgeni inabaki moja tu. Taarifa za pasipoti, NIDA, na hadhi ya VIP hujitokeza papo hapo mapokezi yanapomkaribisha bila kuuliza maswali tena.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-25T10:07:15.686Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-25-20-number-that-lands",
