@@ -12671,7 +12671,33 @@
     "createdAt": "2026-10-26T18:05:26.235Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 703476853
+    "bgSeed": 703476853,
+    "reel": {
+      "file": "operra-2026-10-27-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-27-13-number-that-lands.mp4",
+      "beats": [
+        "When the Moshi dining room fills up fast",
+        "Rush Mode settles orders straight to room folios",
+        "Fast ordering and clear waiter attribution",
+        "Keep dining service moving without bar bottlenecks"
+      ],
+      "narration": "When your dining room fills up at sunset, slow point of sale systems create bottlenecks. Operra lets waiters open and settle guest orders in seconds. Post drinks to room folios or split bills easily, keeping service moving smooth.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "pos-charge",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [
+        "images: could not be inspected (vision unavailable)",
+        "images: could not be inspected (vision unavailable)"
+      ],
+      "builtAt": "2026-10-26T19:33:28.855Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-27-16-client-proof",
