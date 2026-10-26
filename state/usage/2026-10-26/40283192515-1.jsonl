@@ -1,0 +1,6 @@
+{"t":"2026-10-26T07:02:17.837Z","provider":"gemini","model":"gemini-3.5-flash","feature":"reel-brief","post":"operra-2026-10-26-13-swahili-tip","in":2275,"out":653,"think":3250,"outAudio":0,"inImage":0,"ok":true,"wf":"reel"}
+{"t":"2026-10-26T07:03:53.109Z","provider":"gemini","model":"gemini-2.5-flash-preview-tts","feature":"tts","post":"voice","in":79,"out":431,"think":0,"outAudio":431,"inImage":0,"ok":true,"wf":"reel"}
+{"t":"2026-10-26T07:05:23.836Z","provider":"gemini","model":"gemini-3.1-flash-lite","feature":"studio-vision","post":"operra-2026-10-26-13-swahili-tip","in":1231,"out":59,"think":0,"outAudio":0,"inImage":1100,"ok":true,"wf":"reel"}
+{"t":"2026-10-26T07:05:27.519Z","provider":"gemini","model":"gemini-3.1-flash-lite","feature":"studio-vision","post":"operra-2026-10-26-13-swahili-tip","in":1231,"out":57,"think":0,"outAudio":0,"inImage":1100,"ok":true,"wf":"reel"}
+{"t":"2026-10-26T07:05:30.017Z","provider":"gemini","model":"gemini-3.1-flash-lite","feature":"studio-vision","post":"operra-2026-10-26-13-swahili-tip","in":1231,"out":57,"think":0,"outAudio":0,"inImage":1100,"ok":true,"wf":"reel"}
+{"t":"2026-10-26T07:05:35.533Z","provider":"gemini","model":"gemini-3.1-flash-lite","feature":"studio-vision","post":"operra-2026-10-26-13-swahili-tip","in":1231,"out":58,"think":0,"outAudio":0,"inImage":1100,"ok":true,"wf":"reel"}

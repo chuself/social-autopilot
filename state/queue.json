@@ -12443,7 +12443,30 @@
     "createdAt": "2026-10-25T18:16:19.925Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1869251180
+    "bgSeed": 1869251180,
+    "reel": {
+      "file": "operra-2026-10-26-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-26-13-swahili-tip.mp4",
+      "beats": [
+        "Uhifadhi wa makundi unaleta migongano ya vyumba",
+        "Operra inazuia kuweka chumba kimoja mara mbili",
+        "Usimamizi mwepesi wa vyumba vya makundi yote",
+        "Amani ya akili kwenye uhifadhi wa vyumba"
+      ],
+      "narration": "Kushika vyumba vya makundi kwa mikono kunaleta migongano ya uhifadhi. Mfumo wa Operra unazuia kuweka chumba kimoja mara mbili. Inatuma nukuu rasmi za bei na kubadili kuwa hifadhi mara moja bila makosa.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-26T07:05:40.447Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-26-16-industry-note",
