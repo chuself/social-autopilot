@@ -12531,7 +12531,9 @@
       "warnings": [],
       "builtAt": "2026-10-26T10:03:58.866Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-26T10:06:26.713Z",
+    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
   },
   {
     "id": "operra-2026-10-26-20-feature-spotlight",
