@@ -1,27 +1,6 @@
 [
   {
     "platform": "facebook",
-    "postId": "1621951136135962",
-    "id": "operra-2026-09-29-13-pain-point",
-    "format": "reel",
-    "postedAt": "2026-09-29T10:02:42.407Z"
-  },
-  {
-    "platform": "instagram",
-    "postId": "18107774066240269",
-    "id": "operra-2026-09-29-16-number-that-lands",
-    "format": "reel",
-    "postedAt": "2026-09-29T13:31:46.673Z"
-  },
-  {
-    "platform": "facebook",
-    "postId": "1415470300541872",
-    "id": "operra-2026-09-29-16-number-that-lands",
-    "format": "reel",
-    "postedAt": "2026-09-29T13:32:33.389Z"
-  },
-  {
-    "platform": "facebook",
     "postId": "1049514968255534_122164990365351110",
     "url": "https://facebook.com/1049514968255534_122164990365351110",
     "id": "operra-2026-09-29-20-client-proof",
@@ -1400,5 +1379,27 @@
     "slides": 3,
     "id": "operra-2026-10-26-08-client-proof",
     "postedAt": "2026-10-26T06:00:25.376Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18092468930205940",
+    "id": "operra-2026-10-26-13-swahili-tip",
+    "format": "reel",
+    "postedAt": "2026-10-26T10:05:23.458Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1649441676834439",
+    "id": "operra-2026-10-26-13-swahili-tip",
+    "format": "reel",
+    "postedAt": "2026-10-26T10:06:01.943Z"
+  },
+  {
+    "platform": "tiktok",
+    "postId": "https://app.metricool.com/planner/calendar?blogId=6307384&openWithPostUuid=-2234521556943679673",
+    "scheduledFor": "2026-10-26T13:12:02+03:00",
+    "id": "operra-2026-10-26-13-swahili-tip",
+    "format": "reel",
+    "postedAt": "2026-10-26T10:06:04.117Z"
   }
 ]
