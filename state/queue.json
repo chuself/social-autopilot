@@ -12504,7 +12504,30 @@
     "createdAt": "2026-10-25T18:16:36.467Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3587678254
+    "bgSeed": 3587678254,
+    "reel": {
+      "file": "operra-2026-10-26-16-industry-note.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-26-16-industry-note.mp4",
+      "beats": [
+        "Shouting through the hatch causes kitchen confusion",
+        "Orders post directly from POS to kitchen",
+        "Tickets route to stations with modifier notes",
+        "Deliver hot mains and delighted dinner guests"
+      ],
+      "narration": "Peak dinner service in Arusha lodges breaks down when waiters shout orders through the hatch. Missed modifiers mean wrong meals. With Operra, tickets route straight from POS to the kitchen display with modifiers, course pacing, and live stock updates.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "pos-charge",
+        "ui-screen:kitchen",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-26T10:03:58.866Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-26-20-feature-spotlight",
