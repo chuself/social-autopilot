@@ -12506,7 +12506,7 @@
     ],
     "scheduledFor": "2026-10-26T13:00:00.000Z",
     "createdAt": "2026-10-25T18:16:36.467Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 3587678254,
     "reel": {
@@ -12530,10 +12530,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-10-26T10:03:58.866Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-26T13:05:17.558Z",
+      "postIds": [
+        "instagram:17917726845263586",
+        "facebook:1738782613878653"
+      ]
     },
-    "lastAttempt": "2026-10-26T12:03:27.776Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-26T13:05:17.558Z"
   },
   {
     "id": "operra-2026-10-26-20-feature-spotlight",
