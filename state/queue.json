@@ -12578,5 +12578,170 @@
       "facebook:1049514968255534_122176958007351110",
       "instagram:17932572795162749"
     ]
+  },
+  {
+    "id": "operra-2026-10-27-08-pain-point",
+    "slides": [
+      {
+        "eyebrow": "Zamu ya asubuhi",
+        "headline": "Unaanza siku kwa kusoma WhatsApp?",
+        "body": "Mabadiliko ya zamu mapokezi hayatakiwi kutegemea jumbe za sauti au orodha ndefu kwenye makundi ya WhatsApp."
+      },
+      {
+        "eyebrow": "Taarifa zilizotawanyika",
+        "headline": "Nani kashalipa? Nani anaondoka leo?",
+        "body": "Kupoteza muda kukagua namba za malipo ya simu na vyumba vilivyo wazi kunachelewisha wageni wanaofika."
+      },
+      {
+        "eyebrow": "Dashibodi Moja",
+        "headline": "Operra inaleta picha kamili papo hapo",
+        "body": "Dashibodi ya mapokezi inaonyesha waliopo, wanaoingia, salio lililobaki na mapato yaliyokusanywa bila kuuliza mtu."
+      },
+      {
+        "eyebrow": "Usimamizi Rahisi",
+        "headline": "Badili jinsi mapokezi yanavyofanya kazi",
+        "body": "Pata takwimu halisi za hoteli yako Mwanza bila kusubiri ripoti za kutumwa kwa mikono."
+      }
+    ],
+    "caption": "Zamu ya asubuhi mapokezi haipaswi kuanza kwa kusoma jumbe ndefu za WhatsApp au kutafuta nani hajalipia chumba. Operra inakupa dashibodi moja ya mapokezi inayojisasisha papo hapo. Unaona wageni wanaoingia, wanaondoka, vyumba vilivyo tayari na mapato yote yaliyokusanywa kwa muhtasari mmoja safi. Hakuna tena kukisia au kupoteza muda kwenye hand-over.",
+    "hashtags": [
+      "#UsimamiziWaHoteli",
+      "#MwanzaHotels",
+      "#OperraTech",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "A lakeside hotel terrace along the shores of Lake Victoria in Mwanza, framed by iconic dark granite boulders and quiet waters. The calm transition between night and dawn shows warm indoor ambient light spilling from an administrative office onto the stone patio deck. To the right of a dark polished timber table sits a plain untitled brass tray alongside a warm desk lamp. Story props include a ceramic coffee mug emitting light steam, an unprinted dark leather notebook, and a small desk clock. A soft-focus hotel manager seen from behind stands near glass doors looking out over the water. Composition : exterior or terrace at dusk, lit windows and lanterns, the building framed against the sky. Light/tone : deep blue hour, cool sky against warm practical light, quiet. Treatment : 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood. The left half of the frame remains visually quiet with soft shadows and deep blue sky.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "feature": "front-desk",
+    "angle": "the morning shift hand-over that starts with a WhatsApp recap",
+    "backgroundPath": "state/bg/operra-2026-10-27-08-pain-point.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-27T05:00:00.000Z",
+    "createdAt": "2026-10-26T18:04:28.177Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 183272067,
+    "slideFiles": [
+      "operra-2026-10-27-08-pain-point-1.png",
+      "operra-2026-10-27-08-pain-point-2.png",
+      "operra-2026-10-27-08-pain-point-3.png",
+      "operra-2026-10-27-08-pain-point-4.png"
+    ],
+    "headline": "Unaanza siku kwa kusoma WhatsApp?"
+  },
+  {
+    "id": "operra-2026-10-27-13-number-that-lands",
+    "eyebrow": "Restaurant POS",
+    "headline": "Two taps to seated, three to settled",
+    "body": "When your dining room fills up, speed matters. Rush Mode lets waiters open and settle guest orders in seconds, keeping service moving during peak hours.",
+    "cta": "See Rush Mode",
+    "caption": "When a dining room in Moshi fills up at sunset, a slow point of sale creates instant bottlenecks at the bar. Operra cuts order entry down to two taps to seated and three to settled. Whether guests post drinks to their room folio, split the check by item, or pay via mobile money, orders clear fast without waiter delays.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MoshiHotels",
+      "#HospitalityTech",
+      "#HotelPOS"
+    ],
+    "imagePrompt": "A stone-and-timber dining terrace at a highland lodge in Moshi, set against a deep evening backdrop. Warm glowing lanterns hang from dark wooden beams as dinner service winds down. Right of centre on a dark polished service counter sits a slim, plain matte-black tablet resting horizontally, its screen glowing with soft unreadable shapes. Nearby props include a glass carafe, folded cream napkins, and a brass candle holder. Soft-focus waiters in dark aprons move in the background, seen from behind. Composition: terrace at dusk, lit windows and lanterns, the building framed against the sky. Light/tone: deep blue hour, cool sky against warm practical light, quiet. Treatment: 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood. Calm zone: deep blue evening sky across the centre upper frame.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "series": null,
+    "feature": "restaurant-pos",
+    "angle": "a full dining room and a POS that needs ten taps",
+    "backgroundPath": "state/bg/operra-2026-10-27-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-27T10:00:00.000Z",
+    "createdAt": "2026-10-26T18:05:26.235Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 703476853
+  },
+  {
+    "id": "operra-2026-10-27-16-client-proof",
+    "eyebrow": "Usafi wa Vyumba",
+    "headline": "Mgeni hasubiri lobini chumba kikiwa tayari Dar",
+    "body": "Vyumba vinasafishwa na kusasishwa mapokezi mara moja. Hakuna kupigiana simu wala kukisia hali ya vyumba ghorofani.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mgeni wa biashara anawasili Dar es Salaam, lakini anasubiri lobini kwa sababu mapokezi hawana taarifa kama chumba kiko tayari.\n\nHali hii inaisha. Housekeeper akishakagua chumba na kukamilisha orodha ya maji na taulo, ubao wa mapokezi unabadilika hapo hapo. Hakuna kupiga simu au kutuma mtu ghorofani.\n\nKila mabadiliko ya hali ya chumba yanalogwa na aliyefanya. Check-in inakuwa ya haraka na mgeni anaingia chumbani bila kuchelewa.",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#HospitalityTanzania",
+      "#Operra"
+    ],
+    "imagePrompt": "An exterior terrace view of a corporate hotel along the Kivukoni waterfront in Dar es Salaam at dusk, framed against the twilight sky. Dhows drift on the ocean under humid evening light. Right of centre on a teak counter rests a plain, untitled dark wood tray with neatly folded white cotton towels and sealed glass bottles. A small brass lamp and a plain key ring lie beside it. Warm interior lights glow behind glass doors where a soft-focus staff member walks away. Composition is exterior terrace at dusk, lit windows framing the sky. Light is deep blue hour, cool sky against warm light. Treatment is 35mm lens, long-exposure feel, calm cinematic mood. Visual centre band stays clear.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "housekeeping",
+    "angle": "the guest waits in the lobby while the room is already clean",
+    "backgroundPath": "state/bg/operra-2026-10-27-16-client-proof.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-27T13:00:00.000Z",
+    "createdAt": "2026-10-26T18:06:19.308Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2560283166
+  },
+  {
+    "id": "operra-2026-10-27-20-swahili-tip",
+    "eyebrow": "Matukio",
+    "headline": "Advance ya tukio haipaswi kupotea siku ya kazi",
+    "body": "Weka malipo ya awali ya ukumbi, chakula na vinywaji kwenye mfumo mmoja unaoonyesha salio halisi kabla ya wageni kuwasili Arusha.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Siku ya mkutano au sherehe, simu inapigwa mapokezi kuulizia kama advance ililipwa M-Pesa au benki. Mteja anadai alituma pesa wiki mbili zilizopita, lakini kwenye daftari haionekani.\n\nWeka risiti, menyu na malipo yote ya awali kwenye kumbukumbu moja ya tukio. Pesa ikiingia kupitia simu au kadi, salio linajisasisha papo hapo ili kila idara ijue kinachodaiwa Arusha.",
+    "hashtags": [
+      "#HotelManagement",
+      "#ArushaHotels",
+      "#HospitalityTZ",
+      "#Operra"
+    ],
+    "imagePrompt": "A quiet timber and brick event garden terrace set against the distant silhouette of Mount Meru in Arusha under a deep blue twilight sky. An outdoor banquet space is prepared after sunset with warm glowing lanterns framing the building. On an oak service table right of centre, a stack of plain, untitled charcoal-grey leatherbound folders sits beside a polished brass lantern. In the background, long linen-covered dining tables are set with sparkling glassware and white porcelain, lit by soft strings of festoon lights. A manager in soft focus is seen from behind near a lit doorway. Composition: exterior or terrace at dusk, lit windows and lanterns, the building framed against the sky. Light/tone: deep blue hour, cool sky against warm practical light, quiet. Treatment: 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood. Keep the left half of the frame, from the middle down to the bottom, visually quiet with dark timber, soft lawn shadows, and smooth background blur.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "series": null,
+    "feature": "events",
+    "angle": "the deposit nobody can find on event day",
+    "backgroundPath": "state/bg/operra-2026-10-27-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-27T17:00:00.000Z",
+    "createdAt": "2026-10-26T18:06:34.858Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3082375989
   }
 ]
