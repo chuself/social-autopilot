@@ -1,19 +1,5 @@
 [
   {
-    "platform": "instagram",
-    "postId": "18127882858845947",
-    "slides": 3,
-    "id": "operra-2026-09-29-08-feature-spotlight",
-    "postedAt": "2026-09-29T05:59:09.575Z"
-  },
-  {
-    "platform": "instagram",
-    "postId": "18138322708544248",
-    "id": "operra-2026-09-29-13-pain-point",
-    "format": "reel",
-    "postedAt": "2026-09-29T10:02:15.539Z"
-  },
-  {
     "platform": "facebook",
     "postId": "1621951136135962",
     "id": "operra-2026-09-29-13-pain-point",
@@ -1400,5 +1386,19 @@
     "url": null,
     "id": "operra-2026-10-25-20-number-that-lands",
     "postedAt": "2026-10-25T18:00:08.843Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1049514968255534_122176747671351110",
+    "slides": 3,
+    "id": "operra-2026-10-26-08-client-proof",
+    "postedAt": "2026-10-26T05:59:58.717Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18128793184831796",
+    "slides": 3,
+    "id": "operra-2026-10-26-08-client-proof",
+    "postedAt": "2026-10-26T06:00:25.376Z"
   }
 ]

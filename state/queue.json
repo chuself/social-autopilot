@@ -12394,7 +12394,7 @@
     ],
     "scheduledFor": "2026-10-26T05:00:00.000Z",
     "createdAt": "2026-10-25T18:16:05.267Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 71340157,
     "slideFiles": [
@@ -12402,7 +12402,13 @@
       "operra-2026-10-26-08-client-proof-2.png",
       "operra-2026-10-26-08-client-proof-3.png"
     ],
-    "headline": "Ubao wa kuta unadanganya mapokezi Moshi?"
+    "headline": "Ubao wa kuta unadanganya mapokezi Moshi?",
+    "lastAttempt": "2026-10-26T06:00:28.988Z",
+    "postedAt": "2026-10-26T06:00:28.988Z",
+    "postIds": [
+      "facebook:1049514968255534_122176747671351110",
+      "instagram:18128793184831796"
+    ]
   },
   {
     "id": "operra-2026-10-26-13-swahili-tip",
