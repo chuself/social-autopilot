@@ -12675,7 +12675,7 @@
     ],
     "scheduledFor": "2026-10-27T10:00:00.000Z",
     "createdAt": "2026-10-26T18:05:26.235Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 703476853,
     "reel": {
@@ -12702,10 +12702,14 @@
         "images: could not be inspected (vision unavailable)"
       ],
       "builtAt": "2026-10-26T19:33:28.855Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-27T10:07:20.367Z",
+      "postIds": [
+        "instagram:17951667720054521",
+        "facebook:4647159918845963"
+      ]
     },
-    "lastAttempt": "2026-10-27T09:58:27.627Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-10-27T10:07:20.367Z"
   },
   {
     "id": "operra-2026-10-27-16-client-proof",
