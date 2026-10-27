@@ -12627,7 +12627,7 @@
     ],
     "scheduledFor": "2026-10-27T05:00:00.000Z",
     "createdAt": "2026-10-26T18:04:28.177Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 183272067,
     "slideFiles": [
@@ -12636,7 +12636,13 @@
       "operra-2026-10-27-08-pain-point-3.png",
       "operra-2026-10-27-08-pain-point-4.png"
     ],
-    "headline": "Unaanza siku kwa kusoma WhatsApp?"
+    "headline": "Unaanza siku kwa kusoma WhatsApp?",
+    "lastAttempt": "2026-10-27T05:15:58.272Z",
+    "postedAt": "2026-10-27T05:15:58.272Z",
+    "postIds": [
+      "facebook:1049514968255534_122177184141351110",
+      "instagram:17873138418637112"
+    ]
   },
   {
     "id": "operra-2026-10-27-13-number-that-lands",
@@ -12698,7 +12704,7 @@
       "builtAt": "2026-10-26T19:33:28.855Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-27T04:14:50.411Z",
+    "lastAttempt": "2026-10-27T05:15:58.348Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
