@@ -12909,7 +12909,32 @@
     "createdAt": "2026-10-27T18:19:54.816Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2894642043
+    "bgSeed": 2894642043,
+    "reel": {
+      "file": "operra-2026-10-28-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-28-13-feature-spotlight.mp4",
+      "beats": [
+        "Mgeni anapiga simu mara tatu kuagiza?",
+        "Mgeni anascan na kuthibitisha kwa PIN",
+        "Mapokezi yanapitisha oda kwenda jikoni",
+        "Oda inafika bila kuchelewa au kukosekana"
+      ],
+      "narration": "Mgeni wako hapati shida kupiga simu mara kwa mara kuagiza chakula cha usiku. Operra inaleta mfumo wa QR chumbani. Mgeni anascan, anaagiza kwa PIN yake, mapokezi yanathibitisha na oda inaenda jikoni huku gharama ikiingia kwenye bili.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:menu",
+        "ui-screen:kitchen",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [
+        "images: could not be inspected (vision unavailable)"
+      ],
+      "builtAt": "2026-10-27T18:42:49.063Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-28-16-pain-point",
