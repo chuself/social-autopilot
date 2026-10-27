@@ -12816,5 +12816,170 @@
       "facebook:1049514968255534_122177387397351110",
       "instagram:18128986033846655"
     ]
+  },
+  {
+    "id": "operra-2026-10-28-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "Zanzibar Trend",
+        "headline": "Extended leisure stays strain checkout efficiency",
+        "body": "Resort guests frequently extend stays on short notice, complicating manual billing across departments."
+      },
+      {
+        "eyebrow": "Manual Risk",
+        "headline": "Rebuilding bills by hand creates errors",
+        "body": "Re-entering room extensions, late check-outs, and laundry chits manually risks missing end-of-stay charges."
+      },
+      {
+        "eyebrow": "Real-Time Folios",
+        "headline": "Post every charge in three taps",
+        "body": "Add stay extensions and extras instantly, applying 18% VAT automatically after discount on every line."
+      },
+      {
+        "eyebrow": "Front Desk Control",
+        "headline": "Seamless billing for extended stays",
+        "body": "Overdue balances turn red across workstations, ensuring smooth checkouts across cash, card, and mobile money."
+      }
+    ],
+    "caption": "Leisure travellers across Zanzibar are increasingly extending their stays on short notice. When a guest adds two extra nights, rebuilding their bill by hand from separate restaurant tabs, laundry vouchers, and room extensions creates departure delays and uncollected charges. Standardising in-stay folio management allows reception to post charges in three taps, applying 18% VAT correctly across cash, card, and mobile money. Simplify your front desk operations.",
+    "hashtags": [
+      "#ZanzibarHospitality",
+      "#EastAfricaHotels",
+      "#HotelOperations",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Open-air beachfront resort reception pavilion in Zanzibar, featuring coral-stone pillars, high makuti-thatched roofing, and views of turquoise ocean waters. Late afternoon dusk scene at the front office during a relaxed checkout moment. Right of centre, a polished brass desk bell sits beside a plain, untitled cream linen guest folder resting on a dark teak counter. Nearby rest a brass key hook panel, a woven palm tray with rolled linen towels, and a glass carafe of spiced water. In the soft-focus background, a hotel staff member in white linen stands facing away toward illuminated garden palms. Composition: exterior terrace at dusk, lit lanterns framing the thatched roof against the sky. Light/tone: deep blue hour, cool sky against warm practical light, quiet. Treatment: 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood. Keep the left half of the frame, from the middle down to the bottom, visually quiet with smooth shadowed coral stone and plain teak wood desk surfaces.",
+    "cta": "Simplify your folios",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "feature": "guest-stay",
+    "angle": "a guest extends by two nights and the bill is rebuilt by hand",
+    "backgroundPath": "state/bg/operra-2026-10-28-08-industry-note.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-28T05:00:00.000Z",
+    "createdAt": "2026-10-27T18:19:38.196Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1670193057,
+    "slideFiles": [
+      "operra-2026-10-28-08-industry-note-1.png",
+      "operra-2026-10-28-08-industry-note-2.png",
+      "operra-2026-10-28-08-industry-note-3.png",
+      "operra-2026-10-28-08-industry-note-4.png"
+    ],
+    "headline": "Extended leisure stays strain checkout efficiency"
+  },
+  {
+    "id": "operra-2026-10-28-13-feature-spotlight",
+    "eyebrow": "Huduma za Chumbani",
+    "headline": "Kuagiza chakula chumbani bila kupiga simu",
+    "body": "Mgeni anascan QR code chumbani, anachagua chakula, na kudhibitisha kwa PIN. Mapokezi yanathibitisha kabla ya oda kwenda jikoni na kuingia kwenye bili.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mgeni anapiga simu mapokezi mara tatu kuomba menu na kuagiza chakula cha usiku. Simu ikiwa busy au mhudumu akiwa na kazi, oda inachelewa au kukosekana.\n\nOperra inaleta QR code ya kudumu kila chumba. Mgeni anascan, anaagiza kwa PIN yake ya ukaazi, na mapokezi yanapitisha oda kwenda jikoni. Gharama inaingia moja kwa moja kwenye bili ya chumba.\n\nKurahisisha huduma za chakula kwenye hoteli yako Mwanza.",
+    "hashtags": [
+      "#HospitalityTanzania",
+      "#MwanzaHotels",
+      "#HotelManagement",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A lakeside hotel dining terrace in Mwanza overlooking Lake Victoria at dusk, framed by dark granite boulders against the twilight sky. Lit brass lanterns and warm indoor lighting glow through floor-to-ceiling glass doors behind the outdoor dining area. Right of centre, on a polished teak side table, sits a plain, untitled small square acrylic display card next to a covered silver cloche on a woven placemat. Softly blurred dining tables with set glassware and folded white linen napkins line the background terrace. A waiter in a dark vest is visible in soft focus near the kitchen pass. Style: exterior terrace at dusk, lit windows and lanterns, deep blue hour, cool sky against warm practical light, 35mm lens, long-exposure feel, calm cinematic mood. Visual calm zone across the lower centre.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "digital-menu",
+    "angle": "a guest calls reception three times to order dinner",
+    "backgroundPath": "state/bg/operra-2026-10-28-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-28T10:00:00.000Z",
+    "createdAt": "2026-10-27T18:19:54.816Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2894642043
+  },
+  {
+    "id": "operra-2026-10-28-16-pain-point",
+    "eyebrow": "Akaunti za Kampuni",
+    "headline": "Mgeni wa kampuni amepitiliza kikomo cha mkopo?",
+    "body": "Operra inazuia gharama za ziada mara moja hadi kitengo cha fedha kithibitishe. Hakuna tena ankara zilizokataliwa mwisho wa mwezi.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Mgeni wa kampuni anaagiza chakula na vinywaji hotelini Moshi, lakini akaunti yao tayari imevuka kikomo cha mkopo. Ukishindwa kuzuia hili mapema, ankara nzima inakataliwa na idara ya fedha ya mteja.\n\nOperra inazuia gharama mpya mara moja pale kikomo kinapofikiwa. Mfumo unahitaji idhini ya kitengo chako cha fedha kabla ya kuongeza huduma nyingine. Hakuna fujo wala hasara mwisho wa mwezi.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#MoshiHotels",
+      "#OperraTech"
+    ],
+    "imagePrompt": "Covered wooden verandah of a mountain lodge in Moshi with volcanic stone pillars and broad foliage framed against the twilight sky. Warm interior light spills onto the stone floor during blue hour after corporate meetings wrap up. On a dark timber side table right of centre lies a plain, untitled dark-teal clothbound folder next to a silver desk calculator and two espresso cups, entirely blank and unlabelled. A small brass lantern provides a warm amber glow nearby. In the soft-focus background, a staff member walks away, seen strictly from behind. The scene uses 35mm lens rendering with cool dusk skies, warm practical lights, and a calm cinematic mood. The center band remains visually quiet against shadow.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "series": null,
+    "feature": "credit-accounts",
+    "angle": "a corporate guest charges past the company's limit",
+    "backgroundPath": "state/bg/operra-2026-10-28-16-pain-point.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-28T13:00:00.000Z",
+    "createdAt": "2026-10-27T18:20:28.062Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3207728995
+  },
+  {
+    "id": "operra-2026-10-28-20-number-that-lands",
+    "eyebrow": "Reports Hub",
+    "headline": "30+ live reports across 7 key hotel categories",
+    "body": "Every Monday request answered instantly. Pull occupancy, RevPAR, waiter leaderboards, and void audits from one ledger in branded PDFs.",
+    "cta": "Explore Operra",
+    "caption": "Monday mornings in Dar es Salaam shouldn't start with chasing managers for weekly figures. When numbers live in separate systems, pulling basic reports takes hours and leaves room for errors.\n\nOperra turns front desk, restaurant, and folio entries into 30+ live reports across 7 categories. Export clear, branded PDFs on occupancy, RevPAR, waiter leaderboards, and void audits instantly from one central ledger. Keep your property performance sharp without waiting.",
+    "hashtags": [
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#HotelReporting",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "An exterior terrace view of a high-rise corporate hotel along the Kivukoni waterfront in Dar es Salaam at dusk, framed against the harbour skyline. Warm practical light spills from floor-to-ceiling executive lounge windows. Right of centre, on a dark teak outdoor table, sits a plain, untitled dark blue leather binder beside a small glowing brass lantern, a plain ceramic mug, and an empty water glass. In the background, a manager stands facing away toward the calm ocean waters. Composition features lit windows framed against a deep blue hour sky with a cool twilight tone contrasting warm interior glow. Shot on 35mm lens with long-exposure depth and a calm cinematic mood. The lower left frame remains visually quiet with soft twilight shadows.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "reports",
+    "angle": "'can someone pull me a report?' every Monday",
+    "backgroundPath": "state/bg/operra-2026-10-28-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-28T17:00:00.000Z",
+    "createdAt": "2026-10-27T18:20:38.380Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3107960765
   }
 ]
