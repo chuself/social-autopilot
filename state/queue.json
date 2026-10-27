@@ -12741,7 +12741,30 @@
     "createdAt": "2026-10-26T18:06:19.308Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2560283166
+    "bgSeed": 2560283166,
+    "reel": {
+      "file": "operra-2026-10-27-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-27-16-client-proof.mp4",
+      "beats": [
+        "Mgeni anasubiri lobini chumba kikiwa tayari",
+        "Ubao wa mapokezi unabadilika mara moja",
+        "Mfumo wa usafi na ukaguzi wa vyumba",
+        "Mgeni anaingia chumbani bila kusubiri lobini"
+      ],
+      "narration": "Mgeni wako wa biashara anawasili Dar es Salaam lakini anasubiri lobini bila sababu. Chumba kimeshasafishwa lakini mapokezi hawana taarifa. Operra inabadilisha mfumo huu. Usafi ukikamilika, ubao wa mapokezi unabadilika mara moja. Check-in inakuwa ya haraka na mgeni anafurahi.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:housekeeping",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-27T10:05:57.716Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-27-20-swahili-tip",
