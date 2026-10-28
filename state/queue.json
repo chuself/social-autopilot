@@ -13055,5 +13055,167 @@
       "facebook:1049514968255534_122178065739351110",
       "instagram:18080108495406588"
     ]
+  },
+  {
+    "id": "operra-2026-10-29-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Jumamosi jioni",
+        "headline": "Uhifadhi umesambaa kwenye DM na simu?",
+        "body": "Mteja anapiga simu, mwingine anatuma WhatsApp, mhudumu anasahau kuandika kwenye daftari la meza."
+      },
+      {
+        "eyebrow": "Kiungo kimoja",
+        "headline": "Kusanya maombi yote sehemu moja",
+        "body": "Weka kiungo cha uhifadhi mtandaoni. Mgeni haoni meza zilizopo, na mgahawa unathibitisha kila ombi."
+      },
+      {
+        "eyebrow": "Ramani wazi",
+        "headline": "Hakuna meza inayopewa wageni wawili",
+        "body": "Meza zilizohifadhiwa zinaonekana kwenye ramani ya mgahawa. Mhudumu anajua nafasi iliyobaki mara moja."
+      }
+    ],
+    "caption": "Jumamosi jioni mgahawani Arusha haipaswi kuanza na msuguano wa meza. Mteja anapoweka nafasi kupitia DM ya Instagram, mwingine akapiga simu, na mwingine akatuma meseji ya WhatsApp, taarifa zikibaki kwenye simu ya mhudumu meza moja huishia kuahidiwa mara mbili. Ukiwa na Operra, unashiriki kiungo kimoja cha uhifadhi. Wageni hawaoni meza zilizo wazi, na kila ombi linathibitishwa na timu yako kabla halijapangwa. Meza iliyohifadhiwa inaonekana moja kwa moja kwenye ramani ya sakafu, na mhudumu hapotezi nafasi wala mteja.",
+    "hashtags": [
+      "#OperraTech",
+      "#HoteliTanzania",
+      "#MgahawaArusha",
+      "#UsimamiziWaHoteli"
+    ],
+    "imagePrompt": "The spacious indoor dining room of a garden safari lodge in Arusha, framed by exposed timber ceiling beams and dark volcanic stone pillars, with jacaranda greenery visible through garden-facing glass doors. During late afternoon pre-service prep, staff prepare for evening service. Right of centre, a polished mninga timber dining table is set with clear water tumblers, neatly folded slate-grey cloth napkins, and a plain, untitled brass reservation stand. Woven rush chairs and warm brass wall sconces complete the setting. In the distant background, two servers in dark aprons are seen from behind near the kitchen pass. Documentary editorial photography, 28mm lens, mixing warm interior lamp glow with natural window daylight. The left half remains a clean, uncluttered expanse of softly shadowed plaster wall.",
+    "cta": "Panga mgahawa wako",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Arusha",
+    "feature": "table-management",
+    "angle": "Saturday bookings scattered across DMs and phone calls",
+    "backgroundPath": "state/bg/operra-2026-10-29-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-29T05:00:00.000Z",
+    "createdAt": "2026-10-28T18:08:58.119Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2570449551,
+    "slideFiles": [
+      "operra-2026-10-29-08-client-proof-1.png",
+      "operra-2026-10-29-08-client-proof-2.png",
+      "operra-2026-10-29-08-client-proof-3.png"
+    ],
+    "headline": "Uhifadhi umesambaa kwenye DM na simu?"
+  },
+  {
+    "id": "operra-2026-10-29-13-swahili-tip",
+    "eyebrow": "Hoteli Nyingi",
+    "headline": "Acha kutumia Excel tatu kusimamia hoteli zako",
+    "body": "Unapoendesha hoteli kadhaa Zanzibar, kumpa kila mfanyakazi uwezo wa kuona eneo lake pekee kunalinda taarifa na kuzuia makosa ya bili.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Kusimamia hoteli au zahanati za chakula tofauti kwa kutumia spredshiti mbalimbali kunaleta vurugu kwenye ripoti za mwisho wa mwezi.\n\nTenganisha uwezo wa wafanyakazi ili kila eneo lifanye kazi peke yake, huku ukiweka kikomo kimoja cha mkopo wa kampuni kwenye hoteli zote. Hii inaruhusu kila property kubaki na logo yake na stakabadhi zake bila kuchanganya hesabu kuu.",
+    "hashtags": [
+      "#ZanzibarHospitality",
+      "#HotelManagement",
+      "#Operra",
+      "#TanzaniaHotels"
+    ],
+    "imagePrompt": "A quiet back-office corner in a Stone Town hotel in Zanzibar, featuring exposed coral-stone walls and high wooden ceilings with an arched window showing distant lateen dhows. Late afternoon sunlight pours in, blending with warm desk lamp illumination. To the right of centre sits a polished mahogany desk holding three plain, untitled dark-leather notebooks neatly stacked beside an antique brass lamp. A potted palm in a clay pot, a wooden pen tray, and a plain ceramic tea cup rest nearby. In the soft-focus background, a hotel manager stands near the archway looking towards the sunny courtyard. The centre band remains visually clean against a plain plastered wall, captured in documentary editorial photography using a 28mm lens with realistic grain and deep contrast.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "multi-property",
+    "angle": "three lodges, three systems, three spreadsheets",
+    "backgroundPath": "state/bg/operra-2026-10-29-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-29T10:00:00.000Z",
+    "createdAt": "2026-10-28T18:09:14.215Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1581279418
+  },
+  {
+    "id": "operra-2026-10-29-16-industry-note",
+    "eyebrow": "Audit Trail",
+    "headline": "Trace every midnight voided bill instantly",
+    "body": "When a late-night bar order gets voided without explanation, untracked edits drain hotel revenue. User-linked logs make every action fully visible across shifts.",
+    "cta": "See audit logs",
+    "caption": "A high-end spirit order gets voided at 2am in Mwanza, but the shift report shows no record of who authorized it. Silent bill adjustments and untracked cancellations quietly erode food and beverage margins.\n\nOperra binds every single action to a verified user, role, and timestamp. With hash-chained logs across operations and finance views, quiet edits are visible immediately. Keep complete staff accountability on every shift.",
+    "hashtags": [
+      "#HotelManagement",
+      "#HospitalityTech",
+      "#MwanzaHotels",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "A quiet night-shift manager's office inside a lakeside hotel in Mwanza, with dark windows revealing subtle reflections of Lake Victoria and granite boulder silhouettes outside. On the right side of a dark mahogany desk sits a plain, untitled brass lamp beside an unbranded dark tablet resting flat, and a plain burgundy leather clipboard. Story props include a simple ceramic coffee mug, a small calculator, and a key ring resting on polished wood. In the soft-focus background, a duty manager in a dark vest stands near a doorway seen from behind. Composition: a lived-in interior at working pace — lobby, back office, housekeeping store or kitchen pass — people only as soft-focus figures. Light/tone: warm practical lamps mixed with window daylight. Treatment: documentary editorial photography, 28mm lens, natural imperfections, honest textures. The centre band remains visually quiet against a plain shadowed wall, with screens turned away and zero visible text.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "audit-center",
+    "angle": "a bill voided at 2am and nobody knows who",
+    "backgroundPath": "state/bg/operra-2026-10-29-16-industry-note.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-29T13:00:00.000Z",
+    "createdAt": "2026-10-28T18:09:30.446Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2622277845
+  },
+  {
+    "id": "operra-2026-10-29-20-feature-spotlight",
+    "eyebrow": "Front Desk",
+    "headline": "Stop assigning rooms that are under repair",
+    "body": "Operra shows five live room states on one screen, keeping front desk and maintenance in total sync.",
+    "cta": "See live map",
+    "caption": "A guest walks up to Room 204 in Moshi after check-in, only to find a painter inside with a ladder. Front desk thought it was ready; maintenance was still working.\n\nOperra eliminates the mix-up with a live room map. Every room displays one of five live statuses: available, occupied, cleaning, maintenance, or out of service. Room moves and blocks are role-gated and audit-traced, so your team sells what is genuinely ready. 🏨",
+    "hashtags": [
+      "#MoshiHotels",
+      "#HotelManagement",
+      "#FrontDesk",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "A quiet highland lodge corridor in Moshi, framed by stone walls and dark timber doorframes, with cool daylight filtering through a high window. A guest room door stands slightly propped open during mid-morning maintenance work. Right of centre, a plain, untitled wooden step stool sits beside a folded canvas tool kit resting on polished terrazzo flooring. Nearby story props include an unlit brass wall sconce, a folded grey cotton wiping cloth, and a plain brass door keyplate. In soft focus inside the open doorway, a staff member's back is turned while adjusting a light fixture. Composition: a lived-in interior at working pace, warm practical lamps mixed with window daylight, documentary editorial photography, 28mm lens, natural textures. The left half of the frame remains visually quiet with a plain stone wall and soft floor shadows.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Moshi",
+    "series": null,
+    "feature": "room-operations",
+    "angle": "a guest is given a room that is still under repair",
+    "backgroundPath": "state/bg/operra-2026-10-29-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-29T17:00:00.000Z",
+    "createdAt": "2026-10-28T18:10:40.043Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "204"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 4284856791
   }
 ]
