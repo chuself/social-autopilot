@@ -1,27 +1,6 @@
 [
   {
     "platform": "facebook",
-    "postId": "1613189297125544",
-    "id": "operra-2026-10-01-16-swahili-tip",
-    "format": "reel",
-    "postedAt": "2026-10-01T13:18:01.468Z"
-  },
-  {
-    "platform": "facebook",
-    "postId": "1049514968255534_122166038427351110",
-    "url": "https://facebook.com/1049514968255534_122166038427351110",
-    "id": "operra-2026-10-01-20-industry-note",
-    "postedAt": "2026-10-01T17:19:33.770Z"
-  },
-  {
-    "platform": "instagram",
-    "postId": "17999498313001308",
-    "url": null,
-    "id": "operra-2026-10-01-20-industry-note",
-    "postedAt": "2026-10-01T17:19:48.204Z"
-  },
-  {
-    "platform": "facebook",
     "postId": "1049514968255534_122166272637351110",
     "slides": 3,
     "id": "operra-2026-10-02-08-feature-spotlight",
@@ -1402,5 +1381,27 @@
     "slides": 4,
     "id": "operra-2026-10-28-08-industry-note",
     "postedAt": "2026-10-28T06:00:00.005Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18101807411409195",
+    "id": "operra-2026-10-28-13-feature-spotlight",
+    "format": "reel",
+    "postedAt": "2026-10-28T10:06:55.054Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "2394494441288989",
+    "id": "operra-2026-10-28-13-feature-spotlight",
+    "format": "reel",
+    "postedAt": "2026-10-28T10:07:20.561Z"
+  },
+  {
+    "platform": "tiktok",
+    "postId": "https://app.metricool.com/planner/calendar?blogId=6307384&openWithPostUuid=6475329756757575157",
+    "scheduledFor": "2026-10-28T13:13:21+03:00",
+    "id": "operra-2026-10-28-13-feature-spotlight",
+    "format": "reel",
+    "postedAt": "2026-10-28T10:07:23.776Z"
   }
 ]
