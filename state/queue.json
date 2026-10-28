@@ -12978,7 +12978,32 @@
     "createdAt": "2026-10-27T18:20:28.062Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3207728995
+    "bgSeed": 3207728995,
+    "reel": {
+      "file": "operra-2026-10-28-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-28-16-pain-point.mp4",
+      "beats": [
+        "Mgeni wa kampuni amezidisha kikomo?",
+        "Ankara imekataliwa kwa kuzidisha kikomo",
+        "Operra inazuia gharama zisizoidhinishwa mara moja",
+        "Udhibiti thabiti wa akaunti za makampuni",
+        "Hakuna tena fujo wala hasara hotelini"
+      ],
+      "narration": "Je, mgeni wa kampuni ameagiza huduma zilizovuka kikomo cha mkopo huko Moshi? Ankara inapokataliwa mwisho wa mwezi, hoteli inapata hasara. Mfumo wa Operra unazuia gharama mpya mara moja mpaka idara ya fedha idhinishe. Epuka fujo na uwe na usimamizi thabiti wa fedha.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "problem-doc",
+        "folio-fix",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-28T10:06:00.714Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-28-20-number-that-lands",
