@@ -12980,7 +12980,7 @@
     ],
     "scheduledFor": "2026-10-28T13:00:00.000Z",
     "createdAt": "2026-10-27T18:20:28.062Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 3207728995,
     "reel": {
@@ -13006,10 +13006,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-10-28T10:06:00.714Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-28T13:05:06.640Z",
+      "postIds": [
+        "instagram:18116992181010571",
+        "facebook:1104050508905660"
+      ]
     },
-    "lastAttempt": "2026-10-28T12:03:16.821Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-28T13:05:06.640Z"
   },
   {
     "id": "operra-2026-10-28-20-number-that-lands",
