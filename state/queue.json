@@ -13142,7 +13142,30 @@
     "createdAt": "2026-10-28T18:09:14.215Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1581279418
+    "bgSeed": 1581279418,
+    "reel": {
+      "file": "operra-2026-10-29-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-29-13-swahili-tip.mp4",
+      "beats": [
+        "Unahangaika na Excel nyingi Zanzibar?",
+        "Pata ripoti za hoteli zote pamoja.",
+        "Tenganisha uwezo wa kila mfanyakazi.",
+        "Hesabu safi kwa kila property."
+      ],
+      "narration": "Kusimamia hoteli nyingi Zanzibar kwa kutumia Excel mbalimbali kunaleta vurugu. Operra inakuwezesha kuona ripoti za kila sehemu kwa pamoja huku wafanyakazi wakiona maeneo yao pekee. Linda taarifa zako na uwe na hesabu safi kwa kila property bila kuchanganya rekodi.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-28T18:55:00.321Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-29-16-industry-note",
