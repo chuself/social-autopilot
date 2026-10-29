@@ -13368,7 +13368,32 @@
     "createdAt": "2026-10-29T18:04:52.876Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1590508101
+    "bgSeed": 1590508101,
+    "reel": {
+      "file": "operra-2026-10-30-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-30-13-number-that-lands.mp4",
+      "beats": [
+        "Payment retries cause duplicate guest folio charges",
+        "Duplicate lines frustrate departing safari guests",
+        "Operra guarantees single posting without doubles",
+        "Complete accuracy across every guest folio",
+        "Smooth checkout for every departing traveler"
+      ],
+      "narration": "When checkout payments fail during morning rush in Arusha, retrying can accidentally duplicate folio charges. Operra guarantees single posting with accurate post-discount math and gapless folios, rolling every charge seamlessly into your primary general ledger.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "problem-doc",
+        "folio-fix",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-29T18:59:02.744Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-30-16-client-proof",
