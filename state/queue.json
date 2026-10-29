@@ -13209,7 +13209,30 @@
     "createdAt": "2026-10-28T18:09:30.446Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2622277845
+    "bgSeed": 2622277845,
+    "reel": {
+      "file": "operra-2026-10-29-16-industry-note.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-29-16-industry-note.mp4",
+      "beats": [
+        "Who cancelled that late night bar bill?",
+        "Every voided order connects to a user",
+        "Audit logs reveal exact staff actions immediately",
+        "Keep your food and beverage revenue secure"
+      ],
+      "narration": "A late night bar order gets voided, but no staff member claims it. Silent edits quietly drain your beverage margins. Operra links every single action to a verified user, role, and timestamp, keeping your revenue fully protected.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "pos-charge",
+        "ui-screen:reports",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-29T10:05:46.088Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-29-20-feature-spotlight",
