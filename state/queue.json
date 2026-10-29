@@ -13281,5 +13281,164 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791
+  },
+  {
+    "id": "operra-2026-10-30-08-pain-point",
+    "slides": [
+      {
+        "eyebrow": "JIKONI DAR",
+        "headline": "Nyanya zimeisha katikati ya huduma?",
+        "body": "Saa mbili usiku wageni wanasubiri chakula, lakini mpishi anagundua kiungo muhimu hakipo stoo."
+      },
+      {
+        "eyebrow": "HASARA",
+        "headline": "Wateja wanasubiri, mpishi anakimbia sokoni",
+        "body": "Chakula kinachelewa meza ya mgeni. Tafrani ya dharura jikoni inaharibu sifa ya mkahawa wako."
+      },
+      {
+        "eyebrow": "SULUHISHO",
+        "headline": "Operra inakupa tahadhari mapema mno",
+        "body": "Mfumo unakujulisha bidhaa ikipungua kabla haijatokea dharura wakati wa chakula cha jioni."
+      }
+    ],
+    "caption": "Chakula kinapochelewa kumpikia mgeni kwa sababu ya kiungo kukosa jikoni, sifa ya mkahawa wako inapata pigo. Saa za kazi hazipaswi kutumika kukimbizana na manunuzi ya dharura sokoni. Operra inakupa usimamizi kamili wa stoo na manunuzi. Mfumo unakutumia tahadhari pindi bidhaa zinapofikia kiwango cha kuagiza tena, ili ununue kabla stoo haijakauka. Hakikisha jikoni kwako kunakwenda bila kikwazo kila siku.",
+    "hashtags": [
+      "#UsimamiziWaHoteli",
+      "#DarEsSalaamHotels",
+      "#TanzaniaHospitality",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A busy hotel kitchen pass inside a corporate hotel in Dar es Salaam, looking out towards an indoor dining space with warm twilight coastal air through high side windows. On the right side of a long stainless steel plating counter sits a large, plain unbranded copper bowl filled with fresh red tomatoes beside a clean, untitled brass order rail. Story props include stacked plain white porcelain service plates, small ceramic seasoning dishes, and hanging polished stainless pans. In the background, a chef in a crisp white jacket works in soft blur with back turned to camera. Composition is a lived-in interior at working pace; visual treatment is documentary editorial photography with a 28mm lens and natural lighting. The left lower half of the frame remains visually quiet with a dark shadowed tile wall and smooth stainless steel counter blur.",
+    "cta": "Simamia stoo sasa",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Dar es Salaam",
+    "feature": "inventory",
+    "angle": "the chef runs out of tomatoes mid-service",
+    "backgroundPath": "state/bg/operra-2026-10-30-08-pain-point.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-30T05:00:00.000Z",
+    "createdAt": "2026-10-29T18:04:39.985Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 360136116,
+    "slideFiles": [
+      "operra-2026-10-30-08-pain-point-1.png",
+      "operra-2026-10-30-08-pain-point-2.png",
+      "operra-2026-10-30-08-pain-point-3.png"
+    ],
+    "headline": "Nyanya zimeisha katikati ya huduma?"
+  },
+  {
+    "id": "operra-2026-10-30-13-number-that-lands",
+    "eyebrow": "Finance & Billing",
+    "headline": "A charge posts once or not at all",
+    "body": "Payment retries shouldn't cause duplicate lines on guest folios. Operra guarantees single posting, gapless folio numbering, and correct 18% VAT math.",
+    "cta": "See finance tools",
+    "caption": "When a payment gets retried during a busy safari checkout in Arusha, duplicate charges can easily slip onto guest folios. That leads to uncomfortable disputes right as guests leave for their flights.\n\nOperra prevents double posts entirely. A charge posts once or not at all, rolling into one unified ledger instantly. 18% VAT is applied accurately after discounts on every line item, keeping your accounts clean.",
+    "hashtags": [
+      "#HotelFinance",
+      "#ArushaHotels",
+      "#HotelManagement",
+      "#HospitalityTech"
+    ],
+    "imagePrompt": "A sunlit finance back-office inside a safari coffee estate lodge in Arusha, framed by glass doors looking out over lush coffee plants. An end-of-day billing review is underway. Right of centre, a sleek metal calculator rests beside a neat stack of plain, untitled cream paper documents on a dark timber desk. A brass lamp casts warm ambient light across a ceramic mug and reading glasses. In the soft-focus background, a staff member is seen from behind at a workstation. Composition: a lived-in interior at working pace, with people as soft-focus figures. Light/tone: warm practical lamps mixed with window daylight. Treatment: documentary editorial photography, 28mm lens, natural imperfections, honest textures. The centre area remains visually quiet.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Arusha",
+    "series": null,
+    "feature": "finance",
+    "angle": "a payment posted twice after a retry",
+    "backgroundPath": "state/bg/operra-2026-10-30-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-30T10:00:00.000Z",
+    "createdAt": "2026-10-29T18:04:52.876Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1590508101
+  },
+  {
+    "id": "operra-2026-10-30-16-client-proof",
+    "eyebrow": "Kumbukumbu za Wageni",
+    "headline": "Bei ya kampuni inatokea yenyewe mgeni anaporudi Zanzibar",
+    "body": "Profile moja inahifadhi historia yote ya ukaaji. Kampuni na VIP flags zinatokea zenyewe bila kuomba tena maelezo au kutafuta mkataba wa zamani.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mgeni wa kampuni anafika mapokezi Zanzibar, lakini mhudumu anamzoza kwa bei ya kawaida kwa sababu mkataba haukuonekana.\n\nAibu hiyo inaisha. Operra inaunganisha kila ukaaji, malipo, na chumba kwenye profile moja ya mgeni. Mgeni akistahili, VIP na corporate flags zinatokea zenyewe kwenye skrini. NIDA na pasipoti zote zinahifadhiwa kwenye fomu moja, na kila mara profile inapofunguliwa, mfumo unarekodi mfanyakazi aliyeifungua. Hakuna bei iliyosahaulika tena.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#Operra",
+      "#HospitalityTZ"
+    ],
+    "imagePrompt": "A quiet manager's desk inside a boutique resort in Stone Town, Zanzibar, featuring thick coral-stone walls and a carved wooden door opening toward coastal daylight. Right of centre rests a plain, untitled dark wood tray holding two brass keychains. Nearby sits a warm brass table lamp, a small stoneware coffee cup, a folded white napkin, and a hand-woven reed basket. In the background, a hotel manager seen from behind in soft focus wears a white linen shirt at a side table. The composition captures a lived-in working interior, lit by practical lamps and window daylight. Editorial documentary photography with a 28mm lens and honest textures. The central band stays visually quiet against a blurred coral-plaster wall.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "guest-crm",
+    "angle": "the corporate guest whose company rate was forgotten",
+    "backgroundPath": "state/bg/operra-2026-10-30-16-client-proof.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-30T13:00:00.000Z",
+    "createdAt": "2026-10-29T18:11:16.985Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 768857629
+  },
+  {
+    "id": "operra-2026-10-30-20-swahili-tip",
+    "eyebrow": "POS ya Baa",
+    "headline": "Zuia bili za baa kupotea kabla ya check-out",
+    "body": "Ukiunganisha oda za vinywaji moja kwa moja na chumba cha mgeni, hupotezi mapato siku anayoondoka hotelini.",
+    "cta": "Ona mfumo unavyofanya",
+    "caption": "Oda ya vinywaji vya jioni Mwanza inaweza kusahaulika hadi mgeni anaondoka asubuhi na mapema? 🍹\n\nMgeni anapoagiza vinywaji baa, unganisha oda hiyo moja kwa moja na akaunti ya chumba chake kabla ya kuhudumia. Mfumo wa POS inapounganishwa na mapokezi, kila oda inatumwa kwenye room folio papo hapo.\n\nHii inazuia migogoro ya bili wakati wa check-out na kulinda mapato ya baa yako.",
+    "hashtags": [
+      "#HotelierTanzania",
+      "#MwanzaHotels",
+      "#HospitalityTZ",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A warm lakeside hotel lounge bar in Mwanza, with dark polished timber counters and glass sliding doors revealing the silhouettes of giant granite boulders against Lake Victoria at dusk. Late evening bar service setting where beverage charges need quick clearance. Right of centre, a plain, untitled brass bill tray rests beside two heavy glass tumblers on a dark mahogany counter. Nearby lie a folded white linen napkin, a small stainless steel bottle opener, and a wooden coaster. In the soft-focus background, a bartender in a dark apron works with his back turned to the camera. Warm pendant lamps cast soft amber glow across timber textures. 28mm editorial lens. Calm zone on the left with dark wooden wall panels and gentle ambient shadow.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "restaurant-pos",
+    "angle": "the bar tab that never reached the room bill",
+    "backgroundPath": "state/bg/operra-2026-10-30-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-30T17:00:00.000Z",
+    "createdAt": "2026-10-29T18:11:31.939Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3014182637
   }
 ]
