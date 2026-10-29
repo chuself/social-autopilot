@@ -13099,7 +13099,7 @@
     ],
     "scheduledFor": "2026-10-29T05:00:00.000Z",
     "createdAt": "2026-10-28T18:08:58.119Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 2570449551,
     "slideFiles": [
@@ -13107,7 +13107,13 @@
       "operra-2026-10-29-08-client-proof-2.png",
       "operra-2026-10-29-08-client-proof-3.png"
     ],
-    "headline": "Uhifadhi umesambaa kwenye DM na simu?"
+    "headline": "Uhifadhi umesambaa kwenye DM na simu?",
+    "lastAttempt": "2026-10-29T05:09:20.527Z",
+    "postedAt": "2026-10-29T05:09:20.527Z",
+    "postIds": [
+      "facebook:1049514968255534_122178434925351110",
+      "instagram:18125868722474314"
+    ]
   },
   {
     "id": "operra-2026-10-29-13-swahili-tip",
@@ -13166,7 +13172,7 @@
       "builtAt": "2026-10-28T18:55:00.321Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-29T04:08:18.153Z",
+    "lastAttempt": "2026-10-29T05:09:20.604Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
