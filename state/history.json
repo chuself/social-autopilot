@@ -1,27 +1,6 @@
 [
   {
     "platform": "instagram",
-    "postId": "18076266248439525",
-    "slides": 3,
-    "id": "operra-2026-10-03-08-swahili-tip",
-    "postedAt": "2026-10-03T05:01:34.628Z"
-  },
-  {
-    "platform": "instagram",
-    "postId": "17928434046421276",
-    "id": "operra-2026-10-03-13-industry-note",
-    "format": "reel",
-    "postedAt": "2026-10-03T10:03:11.128Z"
-  },
-  {
-    "platform": "facebook",
-    "postId": "2426686584734889",
-    "id": "operra-2026-10-03-13-industry-note",
-    "format": "reel",
-    "postedAt": "2026-10-03T10:03:44.204Z"
-  },
-  {
-    "platform": "instagram",
     "postId": "18083822378696016",
     "id": "operra-2026-10-03-16-feature-spotlight",
     "format": "reel",
@@ -1403,5 +1382,27 @@
     "slides": 3,
     "id": "operra-2026-10-29-08-client-proof",
     "postedAt": "2026-10-29T05:09:17.153Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "17918179254264098",
+    "id": "operra-2026-10-29-13-swahili-tip",
+    "format": "reel",
+    "postedAt": "2026-10-29T10:06:45.727Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1415314934048609",
+    "id": "operra-2026-10-29-13-swahili-tip",
+    "format": "reel",
+    "postedAt": "2026-10-29T10:07:13.796Z"
+  },
+  {
+    "platform": "tiktok",
+    "postId": "https://app.metricool.com/planner/calendar?blogId=6307384&openWithPostUuid=-7247103914481529700",
+    "scheduledFor": "2026-10-29T13:13:15+03:00",
+    "id": "operra-2026-10-29-13-swahili-tip",
+    "format": "reel",
+    "postedAt": "2026-10-29T10:07:17.385Z"
   }
 ]
