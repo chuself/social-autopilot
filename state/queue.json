@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-10-30T12:33:21.299Z"
+    "missedAt": "2026-10-30T13:34:06.973Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13440,7 +13440,7 @@
     ],
     "scheduledFor": "2026-10-30T13:00:00.000Z",
     "createdAt": "2026-10-29T18:11:16.985Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 768857629,
     "reel": {
@@ -13464,10 +13464,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-10-30T10:07:24.532Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-30T13:35:25.822Z",
+      "postIds": [
+        "instagram:17941393503384770",
+        "facebook:1993889771283296"
+      ]
     },
-    "lastAttempt": "2026-10-30T12:33:21.362Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-30T13:35:25.822Z"
   },
   {
     "id": "operra-2026-10-30-20-swahili-tip",
