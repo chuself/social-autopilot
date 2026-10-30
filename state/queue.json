@@ -13616,7 +13616,9 @@
       "fallback": "scene 1: no image could be made",
       "builtAt": "2026-10-30T18:37:10.266Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-30T18:37:36.920Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-10-31-16-pain-point",
