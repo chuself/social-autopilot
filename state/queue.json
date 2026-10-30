@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-10-30T16:35:39.194Z"
+    "missedAt": "2026-10-30T17:36:24.641Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13504,8 +13504,14 @@
     ],
     "scheduledFor": "2026-10-30T17:00:00.000Z",
     "createdAt": "2026-10-29T18:11:31.939Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
-    "bgSeed": 3014182637
+    "bgSeed": 3014182637,
+    "lastAttempt": "2026-10-30T17:36:43.135Z",
+    "postedAt": "2026-10-30T17:36:43.135Z",
+    "postIds": [
+      "facebook:1049514968255534_122179155471351110",
+      "instagram:17997156903030333"
+    ]
   }
 ]
