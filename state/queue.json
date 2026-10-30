@@ -13275,12 +13275,13 @@
     ],
     "scheduledFor": "2026-10-29T17:00:00.000Z",
     "createdAt": "2026-10-28T18:10:40.043Z",
-    "status": "needs-review",
+    "status": "missed",
     "heldFigures": [
       "204"
     ],
     "bgProvider": "moss-fast",
-    "bgSeed": 4284856791
+    "bgSeed": 4284856791,
+    "missedAt": "2026-10-30T07:37:17.943Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13400,7 +13401,7 @@
       "builtAt": "2026-10-29T18:59:02.744Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-30T06:36:35.046Z",
+    "lastAttempt": "2026-10-30T07:37:18.017Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
