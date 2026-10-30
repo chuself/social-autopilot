@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-10-30T09:32:14.819Z"
+    "missedAt": "2026-10-30T10:32:18.595Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13465,7 +13465,9 @@
       "warnings": [],
       "builtAt": "2026-10-30T10:07:24.532Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-30T10:32:18.672Z",
+    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
   },
   {
     "id": "operra-2026-10-30-20-swahili-tip",
