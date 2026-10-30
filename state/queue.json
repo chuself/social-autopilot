@@ -13438,7 +13438,30 @@
     "createdAt": "2026-10-29T18:11:16.985Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 768857629
+    "bgSeed": 768857629,
+    "reel": {
+      "file": "operra-2026-10-30-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-30-16-client-proof.mp4",
+      "beats": [
+        "Bei ya kampuni imesahaulika tena mapokezi?",
+        "Ankara inatoza mgeni bei ya kawaida kimakosa",
+        "Operra inatambua mkataba wa kampuni mara moja",
+        "Historia na bei sahihi zinatokea zenyewe bila aibu"
+      ],
+      "narration": "Mgeni wa kampuni anapofika mapokezi Zanzibar, huna haja ya kutafuta mikataba ya zamani wala kumtoza bei isiyo sahihi. Operra inatunza historia yote ya ukaaji na kuweka bei ya kampuni yenyewe, mgeni anapoingia tu.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "problem-doc",
+        "folio-fix",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-30T10:07:24.532Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-30-20-swahili-tip",
