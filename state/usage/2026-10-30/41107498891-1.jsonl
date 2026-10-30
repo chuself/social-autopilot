@@ -1,0 +1,2 @@
+{"t":"2026-10-30T18:32:56.432Z","provider":"gemini","model":"gemini-3.5-flash","feature":"reel-brief","post":"operra-2026-10-31-13-feature-spotlight","in":2368,"out":687,"think":2704,"outAudio":0,"inImage":0,"ok":true,"wf":"reel"}
+{"t":"2026-10-30T18:33:39.477Z","provider":"gemini","model":"gemini-2.5-flash-preview-tts","feature":"tts","post":"operra-2026-10-31-13-feature-spotlight","in":100,"out":506,"think":0,"outAudio":506,"inImage":0,"ok":true,"wf":"reel"}

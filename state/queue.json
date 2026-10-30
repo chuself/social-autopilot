@@ -13600,7 +13600,23 @@
     "createdAt": "2026-10-30T18:11:29.033Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1769894681
+    "bgSeed": 1769894681,
+    "reel": {
+      "file": "operra-2026-10-31-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-31-13-feature-spotlight.mp4",
+      "beats": [
+        "Wafanyakazi wawili wanaweza kuuza chumba kimoja",
+        "Operra inazuia uhifadhi wa mara mbili",
+        "Dhibiti uhifadhi wako bila makosa",
+        "Uhifadhi wa vyumba sasa ni mwepesi"
+      ],
+      "narration": "Wafanyakazi wawili wanaweza kuuza chumba kimoja kwa wakati mmoja kwa makosa. Operra inaweka kizuizi cha moja kwa moja kinachozuia uhifadhi wa mara mbili. Pia unaweza kubadilisha nukuu kuwa uhifadhi na kutafuta mgeni kwa sekunde chache. Fanya uhifadhi wako uwe wa uhakika.",
+      "hasVoice": true,
+      "engine": "classic",
+      "fallback": "scene 1: no image could be made",
+      "builtAt": "2026-10-30T18:37:10.266Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-31-16-pain-point",
