@@ -13325,7 +13325,7 @@
     ],
     "scheduledFor": "2026-10-30T05:00:00.000Z",
     "createdAt": "2026-10-29T18:04:39.985Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 360136116,
     "slideFiles": [
@@ -13333,7 +13333,13 @@
       "operra-2026-10-30-08-pain-point-2.png",
       "operra-2026-10-30-08-pain-point-3.png"
     ],
-    "headline": "Nyanya zimeisha katikati ya huduma?"
+    "headline": "Nyanya zimeisha katikati ya huduma?",
+    "lastAttempt": "2026-10-30T05:36:46.755Z",
+    "postedAt": "2026-10-30T05:36:46.755Z",
+    "postIds": [
+      "facebook:1049514968255534_122178960807351110",
+      "instagram:18115246583168240"
+    ]
   },
   {
     "id": "operra-2026-10-30-13-number-that-lands",
@@ -13394,7 +13400,7 @@
       "builtAt": "2026-10-29T18:59:02.744Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-30T04:35:19.681Z",
+    "lastAttempt": "2026-10-30T05:36:46.843Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
