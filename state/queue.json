@@ -13513,5 +13513,166 @@
       "facebook:1049514968255534_122179155471351110",
       "instagram:17997156903030333"
     ]
+  },
+  {
+    "id": "operra-2026-10-31-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "Morning Audit",
+        "headline": "Waking up to missing daily metrics",
+        "body": "Hotel leaders often spend early mornings chasing manual night reports across disconnected property departments."
+      },
+      {
+        "eyebrow": "System Integrity",
+        "headline": "Half-closed days distort financial clarity",
+        "body": "Drawer mismatches and open folios stall reporting. Unverified transactions prevent clean daily closes across shifts."
+      },
+      {
+        "eyebrow": "Automated Closure",
+        "headline": "Complete financial summaries sent by sunrise",
+        "body": "Operra executes a six-step night audit, emailing verified occupancy, ADR, and RevPAR before breakfast."
+      }
+    ],
+    "caption": "Operating a hotel in Moshi demands tight financial discipline, especially during peak trekking seasons. Manual night audits often lead to half-closed days, delayed totals, and untracked drawer mismatches. Operra runs an automated six-step night audit that flags over-limit accounts and unsettled folios instantly. All steps succeed or none do, delivering complete occupancy, ADR, and RevPAR metrics straight to your inbox at sunrise.",
+    "hashtags": [
+      "#HotelManagement",
+      "#HospitalityTech",
+      "#MoshiHotels",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "A quiet highland lodge manager's office in Moshi featuring exposed stone walls, dark timber beams, and an early morning view of Mount Kilimanjaro framed through a tall window. Early morning atmosphere before peak checkouts begin. Positioned right of centre, a sleek plain untitled dark-grey closed laptop rests beside a plain polished brass desk lamp casting a soft warm glow. Story props include a ceramic mug of hot coffee on a plain dark-green coaster and a clean linen towel. In the deep background, a hotel staff member walks past the hallway softly blurred. Documentary editorial photography, 28mm lens, warm practical lamp light blending with gentle morning daylight. Left half of the frame remains visually quiet with a plain shaded wooden wall.",
+    "cta": "Simplify Night Audit",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Moshi",
+    "feature": "night-audit",
+    "angle": "the owner wakes up to no numbers",
+    "backgroundPath": "state/bg/operra-2026-10-31-08-industry-note.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-31T05:00:00.000Z",
+    "createdAt": "2026-10-30T18:11:10.959Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 4104283673,
+    "slideFiles": [
+      "operra-2026-10-31-08-industry-note-1.png",
+      "operra-2026-10-31-08-industry-note-2.png",
+      "operra-2026-10-31-08-industry-note-3.png"
+    ],
+    "headline": "Waking up to missing daily metrics"
+  },
+  {
+    "id": "operra-2026-10-31-13-feature-spotlight",
+    "eyebrow": "Uhifadhi wa Vyumba",
+    "headline": "Wafanyakazi wawili hawawezi kuuza chumba kimoja",
+    "body": "Mfumo unazuia chumba kimoja kuhifadhiwa mara mbili kwa wakati mmoja. Badilisha nukuu kuwa uhifadhi kwa mbofyo mmoja na kuambatisha kumbukumbu zote.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wafanyakazi wawili wakipokea simu kwa wakati mmoja Dar es Salaam, chumba kimoja kinaweza kuuzwa mara mbili kwa makosa.\n\nOperra inaweka kizuizi cha moja kwa moja (hard conflict block) kinachozuia chumba kimoja kuhifadhiwa mara mbili. Pia unaweza kutafuta booking yoyote kwa jina la mgeni, namba ya simu, au kodi ya uhifadhi kwa sekunde chache.\n\nFanya uhifadhi wa vyumba uwe wa uhakika na mwepesi.",
+    "hashtags": [
+      "#Operra",
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "A bright hotel reception counter in Dar es Salaam with floor-to-ceiling glass windows showing the Kivukoni waterfront and harbour light outside. In the foreground to the right of centre, a plain unbranded brass call bell sits on a dark polished timber desk alongside a small brass key rack. A plain untitled cream ledger rests closed nearby. In the background, two hotel receptionists stand in soft focus working behind the counter, dressed in crisp uniforms. Warm indoor desk lamps mix with the natural tropical daylight streaming through the windows. Composition features a quiet visual calm zone in the centre wall area, captured with documentary editorial photography using a 28mm lens.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "reservations",
+    "angle": "two receptionists sell the same room to two guests",
+    "backgroundPath": "state/bg/operra-2026-10-31-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-31T10:00:00.000Z",
+    "createdAt": "2026-10-30T18:11:29.033Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1769894681
+  },
+  {
+    "id": "operra-2026-10-31-16-pain-point",
+    "eyebrow": "Kitchen & Dining",
+    "headline": "Lost paper chits stall the dinner rush",
+    "body": "Tickets fall behind the grill or get ruined by steam. Operra sends orders directly to kitchen screens with automated timers.",
+    "cta": "See it work",
+    "caption": "A safari group returns to your Arusha lodge after a long day, hungry and ready for dinner. But their order chit has fallen behind the grill. The kitchen doesn't know they are waiting.\n\nPaper tickets are a liability. Operra’s kitchen display ensures every order lands on the right station. Tickets change colour as they age, so no table is forgotten. Modifiers and allergens are clear, and stock levels trim automatically. 🍳",
+    "hashtags": [
+      "#ArushaLodges",
+      "#HotelOperations",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "A professional kitchen pass inside a safari lodge on the outskirts of Arusha, featuring local timber beams and high ceilings. The scene is set during the evening rush. To the right of centre, a plain, untitled matte-black digital screen is mounted on a brushed steel rail above the pass. In the foreground, a stack of plain white stoneware bowls and a clean linen cloth sit on the stainless steel counter. In the background, chefs in white jackets are seen as soft-focus figures moving between stations. Warm overhead heat lamps mix with the cool blue light of dusk from high windows. Documentary editorial photography, 28mm lens, natural imperfections, honest kitchen textures. The centre band of the frame remains visually quiet with a plain tiled wall.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Arusha",
+    "series": null,
+    "feature": "kitchen-display",
+    "angle": "the paper chit that fell behind the grill",
+    "backgroundPath": "state/bg/operra-2026-10-31-16-pain-point.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-31T13:00:00.000Z",
+    "createdAt": "2026-10-30T18:12:52.111Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 692244182
+  },
+  {
+    "id": "operra-2026-10-31-20-number-that-lands",
+    "eyebrow": "Front desk",
+    "headline": "30 continuous days of operation without internet",
+    "body": "When a fibre cut strikes at midnight, check-ins, bar tabs, and folios keep moving. Queued actions sync automatically when your connection returns.",
+    "cta": "See it work",
+    "caption": "A severed fibre line at 11pm shouldn’t freeze your front desk while arrivals from a delayed flight queue in the lobby.\n\nOperra keeps running for up to 30 continuous days without internet. Front desk check-ins, bar tabs, and kitchen orders post without pause. Staff always see whether they are online, and every queued action syncs in the right order once the link returns to your Zanzibar property.\n\nNo stalled queues. No lost charges.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelOperations",
+      "#HospitalityTech",
+      "#FrontDesk"
+    ],
+    "imagePrompt": "An open-air arrival pavilion inside a makuti-thatched coastal resort in Zanzibar late at night. The hotel is handling late arrivals under high exposed timber roof beams and rough whitewashed coral-stone pillars. Right of centre, a heavy wheeled brass luggage cart holds two plain dark canvas duffels and an unbranded leather satchel with blank card tags. Beside the cart, a rustic coconut-wood bench holds a switched-off brass lantern, next to a rolled natural coir mat and an unlabelled brass room key fob lying on a side table. In the deep background, the soft-focus silhouette of a night receptionist stands behind a plain wooden counter, seen entirely from behind. Documentary editorial photography, 28mm lens, honest textures, illuminated by warm practical wall sconces against deep night shadows. The left half of the frame from the middle down is visually quiet with plain poured limestone flooring and soft, empty shadows.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "interior",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "offline",
+    "angle": "the fibre cut at 11pm with guests queuing",
+    "backgroundPath": "state/bg/operra-2026-10-31-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-10-31T17:00:00.000Z",
+    "createdAt": "2026-10-30T18:16:26.460Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "11"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 1947312787
   }
 ]
