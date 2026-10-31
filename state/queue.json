@@ -13731,5 +13731,163 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787
+  },
+  {
+    "id": "operra-2026-11-01-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Changamoto ya Jioni",
+        "headline": "Miamala ishirini ya simu bila majina?",
+        "body": "Mwisho wa siku, kufuatilia nani kalipia chumba au chakula kunachukua saa nyingi za kazi."
+      },
+      {
+        "eyebrow": "Uzoefu Halisi",
+        "headline": "Kila muamala unaingia na namba yake",
+        "body": "Malipo ya M-Pesa, Tigo Pesa na Airtel Money yanaingia moja kwa moja kwenye folio ya mgeni."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Kusawazisha hesabu kwa sekunde chache",
+        "body": "Namba za miamala zinabaki kwenye mfumo na zinatafutika muda wowote. Hakuna malipo yanayopotea tena."
+      }
+    ],
+    "caption": "Mwisho wa siku, kuangalia meseji 20 za simu na kujaribu kubaini nani kalipa nini kunapoteza muda wa hoteli. Kwenye Operra, malipo ya M-Pesa, Tigo Pesa na Airtel Money yanaingia moja kwa moja kwenye folio ya mgeni ikiwa na namba ya muamala. Kusawazisha hesabu kunachukua sekunde chache, si saa nzima. Kumbukumbu zote zinabaki salama na zinatafutika kwa urahisi.",
+    "hashtags": [
+      "#Operra",
+      "#HoteliTanzania",
+      "#MwanzaHotels",
+      "#UsimamiziWaHoteli"
+    ],
+    "imagePrompt": "High aerial drone view looking down at an angle onto a lakeside conference hotel in Mwanza, positioned along the rugged shores of Lake Victoria. Massive weathered granite kopjes and boulders rise dramatically from the deep blue water around the property. The modern terracotta-roofed resort complex appears compact against the vast expanse of lake and shoreline under clear late-morning light. Right of centre, an open-air stone terrace extends toward the water, set with neat dark-timber dining tables and umbrellas. The entire left half and lower quadrant remain visually calm and uncluttered, filled with the deep, smooth expanse of open lake water.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Mwanza",
+    "feature": "mobile-money",
+    "angle": "end of day: twenty mobile payments and no names",
+    "backgroundPath": "state/bg/operra-2026-11-01-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-01T05:00:00.000Z",
+    "createdAt": "2026-10-31T18:05:59.844Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "20"
+    ],
+    "bgProvider": "fallback",
+    "slideFiles": [
+      "operra-2026-11-01-08-client-proof-1.png",
+      "operra-2026-11-01-08-client-proof-2.png",
+      "operra-2026-11-01-08-client-proof-3.png"
+    ],
+    "headline": "Miamala ishirini ya simu bila majina?"
+  },
+  {
+    "id": "operra-2026-11-01-13-swahili-tip",
+    "eyebrow": "Matukio",
+    "headline": "Zuia matukio mawili kugombea ukumbi mmoja Moshi",
+    "body": "Weka nafasi zote kwenye kalenda ya ukumbi kwa siku au mwezi. Kila malipo ya awali na mabadiliko ya tarehe yanaonekana mara moja kwenye mfumo mmoja.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Harusi ya jioni na semina ya mchana zikipangwa ukumbi mmoja bila utaratibu, mzozo unaanzia mapokezi.\n\nHoteli nyingi za Moshi hupoteza wateja pale daftari linaposahau tukio lililolipwa amana wiki iliyopita.\n\nWeka ratiba zote kwenye kalenda ya ukumbi ya siku au mwezi. Rekodi amana ya kwanza kupitia M-Pesa au Airtel Money, na toa dossier moja rasmi anayosaini mteja. Hakuna anayepokea tukio la pili kwenye saa zilezile.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#MoshiHotels",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A high aerial drone view looking down at an angle onto a highland estate in Moshi, with Mount Kilimanjaro's snow cap visible above coffee terraces and banana groves. Among the trees, an event pavilion with volcanic stone pillars and a dark copper roof sits beside manicured lawns. Right of centre, wide stone steps lead into open banquet hall doors framed by heavy timber beams and dark green potted shrubs. In the far background, two staff members in dark uniforms are seen from behind setting round terrace tables. Clear late-morning light captures rich landscape colours and sharp terrain detail. The quiet expanse of manicured lawn across the centre creates a calm, uncluttered band.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Moshi",
+    "series": null,
+    "feature": "events",
+    "angle": "two events booked into the same hall",
+    "backgroundPath": null,
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-01T10:00:00.000Z",
+    "createdAt": "2026-10-31T18:09:19.799Z",
+    "status": "pending",
+    "bgProvider": null
+  },
+  {
+    "id": "operra-2026-11-01-16-industry-note",
+    "eyebrow": "Front Desk",
+    "headline": "Modern front desks rely on live dashboards, not logbooks",
+    "body": "Flipping between a physical guest ledger, a calculator, and phone calls delays check-ins. Live front desk dashboards give staff instant visibility on room status and revenue.",
+    "cta": "See it work",
+    "caption": "Front desk staff in busy Dar es Salaam hotels often spend the first 30 minutes of a shift piecing together physical logbooks, calculators, and message threads.\n\nManual shift handovers slow down check-ins and leave room statuses uncertain. A single front desk dashboard updates live occupancy the moment a check-in is confirmed or a room is blocked. Shift hand-over becomes a ready dashboard displaying revenue, balances, and arrivals—eliminating manual recaps entirely.",
+    "hashtags": [
+      "#EastAfricaHospitality",
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#FrontDeskOps"
+    ],
+    "imagePrompt": "High aerial drone view looking down at an angle onto a modern hotel property along the Kivukoni waterfront in Dar es Salaam, the glass tower building appearing compact against the expansive blue harbour and distant cargo cranes. Clear late-morning sun fills the scene with rich landscape colour and sharp geographical detail. On a sunlit upper terrace outdoor work desk positioned right of centre, a plain, untitled navy blue binder lies flat next to a clear glass carafe and a small brass tray holding two metal key rings. A soft-focus figure in a dark suit stands near the glass railing in the background. The centre architectural band of stone tiles remains visually quiet and uncluttered. Drone photography, sharp landscape detail, strong sense of geography.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "front-desk",
+    "angle": "the receptionist flipping between a book, a calculator and a phone",
+    "backgroundPath": null,
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-01T13:00:00.000Z",
+    "createdAt": "2026-10-31T18:09:31.076Z",
+    "status": "pending",
+    "bgProvider": null
+  },
+  {
+    "id": "operra-2026-11-01-20-feature-spotlight",
+    "eyebrow": "Chakula Chumbani",
+    "headline": "Mgeni anaagiza chakula chumbani kwa QR code",
+    "body": "Mgeni anachanganua QR chumbani, anaweka PIN yake ya ukaazi, na oda inaenda mapokezi kabla ya jikoni. Bili inaingia kwenye folio ya chumba kiatomati.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mgeni akirudi kutoka safari ndefu Arusha, mara nyingi anataka chakula chumbani bila kupiga simu mapokezi.\n\nUkiwa na Operra, kila chumba kinakuwa na stika ya QR. Mgeni anachanganua menu na kuthibitisha kwa PIN yake ya ukaazi. Mapokezi wanapitisha oda kabla haijafika jikoni, na bili inaingia kwenye akaunti ya chumba bila makosa.",
+    "hashtags": [
+      "#HoteliTanzania",
+      "#ArushaHotels",
+      "#OperraPMS",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "High aerial drone view looking down at an angle onto a coffee estate lodge in Arusha, tucked into lush green hills with Mount Meru visible in the background. The small timber cottages are linked by stone pathways. Right of centre, on a cottage veranda table, a plain untitled ceramic plate with a neat printed square graphic rests next to a plated dish, a glass of fresh juice, and a folded napkin. A soft-focus staff member walks along a distant garden path. Clear late-morning light highlights rich green landscapes and stone detail. The lower left area remains in clean, uninterrupted cast shadow across a stone patio, providing a visually calm zone.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Arusha",
+    "series": null,
+    "feature": "digital-menu",
+    "angle": "a guest who would order more if it were easy",
+    "backgroundPath": null,
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-01T17:00:00.000Z",
+    "createdAt": "2026-10-31T18:09:48.551Z",
+    "status": "pending",
+    "bgProvider": null
   }
 ]
