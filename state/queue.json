@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-10-31T04:42:36.993Z"
+    "missedAt": "2026-10-31T05:43:09.579Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13557,7 +13557,7 @@
     ],
     "scheduledFor": "2026-10-31T05:00:00.000Z",
     "createdAt": "2026-10-30T18:11:10.959Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 4104283673,
     "slideFiles": [
@@ -13565,7 +13565,13 @@
       "operra-2026-10-31-08-industry-note-2.png",
       "operra-2026-10-31-08-industry-note-3.png"
     ],
-    "headline": "Waking up to missing daily metrics"
+    "headline": "Waking up to missing daily metrics",
+    "lastAttempt": "2026-10-31T05:43:57.879Z",
+    "postedAt": "2026-10-31T05:43:57.879Z",
+    "postIds": [
+      "facebook:1049514968255534_122179389405351110",
+      "instagram:18132458020761494"
+    ]
   },
   {
     "id": "operra-2026-10-31-13-feature-spotlight",
@@ -13617,7 +13623,7 @@
       "builtAt": "2026-10-30T18:37:10.266Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-31T04:42:37.066Z",
+    "lastAttempt": "2026-10-31T05:43:57.953Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
