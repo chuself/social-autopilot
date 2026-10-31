@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-10-31T12:59:22.247Z"
+    "missedAt": "2026-10-31T13:59:24.905Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13661,7 +13661,7 @@
     ],
     "scheduledFor": "2026-10-31T13:00:00.000Z",
     "createdAt": "2026-10-30T18:12:52.111Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 692244182,
     "reel": {
@@ -13685,10 +13685,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-10-31T10:04:28.326Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-10-31T14:00:38.402Z",
+      "postIds": [
+        "instagram:18106619824999250",
+        "facebook:1131087326548256"
+      ]
     },
-    "lastAttempt": "2026-10-31T12:59:22.325Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-10-31T14:00:38.402Z"
   },
   {
     "id": "operra-2026-10-31-20-number-that-lands",
