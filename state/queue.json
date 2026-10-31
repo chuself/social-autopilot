@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-10-31T03:42:00.591Z"
+    "missedAt": "2026-10-31T04:42:36.993Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13617,7 +13617,7 @@
       "builtAt": "2026-10-30T18:37:10.266Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-10-31T03:42:00.667Z",
+    "lastAttempt": "2026-10-31T04:42:37.066Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
