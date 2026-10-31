@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-10-31T09:57:20.705Z"
+    "missedAt": "2026-10-31T10:58:02.437Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13686,7 +13686,9 @@
       "warnings": [],
       "builtAt": "2026-10-31T10:04:28.326Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-10-31T10:58:02.508Z",
+    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
   },
   {
     "id": "operra-2026-10-31-20-number-that-lands",
