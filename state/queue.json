@@ -13659,7 +13659,30 @@
     "createdAt": "2026-10-30T18:12:52.111Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 692244182
+    "bgSeed": 692244182,
+    "reel": {
+      "file": "operra-2026-10-31-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-10-31-16-pain-point.mp4",
+      "beats": [
+        "Karatasi ya agizo ikianguka, chakula kinachelewa sana.",
+        "Agizo la meza linatumwa bila kutumia karatasi.",
+        "Oderi zinafika jikoni na kubadilisha rangi zikichelewa.",
+        "Wageni wako wanapata chakula kwa wakati unaostahili."
+      ],
+      "narration": "Safari group ikirudi lodge Arusha, wageni wana njaa. Lakini karatasi ya agizo ikipotea jikoni, chakula kinachelewa. Mfumo wa Operra unapeleka oderi moja kwa moja kwenye skrini ya jikoni. Tiketi zinabadilisha rangi zikichelewa ili meza isisahaulike kabisa.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "pos-charge",
+        "ui-screen:kitchen",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-10-31T10:04:28.326Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-10-31-20-number-that-lands",
