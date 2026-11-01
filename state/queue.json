@@ -13819,7 +13819,32 @@
     "scheduledFor": "2026-11-01T10:00:00.000Z",
     "createdAt": "2026-10-31T18:09:19.799Z",
     "status": "pending",
-    "bgProvider": null
+    "bgProvider": null,
+    "reel": {
+      "file": "operra-2026-11-01-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-01-13-swahili-tip.mp4",
+      "beats": [
+        "Harusi na semina zikigombea ukumbi mmoja mapokezi",
+        "Panga nafasi zote kwenye kalenda ya mfumo",
+        "Operra inaunganisha amana na ratiba za matukio",
+        "Sherehe na mikutano zinaendeshwa bila mzozo wowote"
+      ],
+      "narration": "Harusi ya jioni na semina ya mchana zikipangwa ukumbi mmoja, mzozo unaanzia mapokezi. Mfumo wa Operra unaweka ratiba zote kwenye kalenda moja ya ukumbi, unarekodi amana za M-Pesa na Airtel Money, na kutoa dossier rasmi. Kila tukio linakwenda kwa amani.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:events",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [
+        "images: could not be inspected (vision unavailable)"
+      ],
+      "builtAt": "2026-11-01T07:06:18.887Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-01-16-industry-note",
