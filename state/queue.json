@@ -13955,5 +13955,173 @@
       "facebook:1049514968255534_122180255337351110",
       "instagram:18119678995955935"
     ]
+  },
+  {
+    "id": "operra-2026-11-02-08-pain-point",
+    "slides": [
+      {
+        "eyebrow": "Sifa Hatarini",
+        "headline": "Mgeni kuta chumba hajasafishwa jioni?",
+        "body": "Mgeni anarudi jioni na kukuta taulo chafu. Mfadhaiko huo unageuka kuwa maoni mabaya mtandaoni."
+      },
+      {
+        "eyebrow": "Mawasiliano Bovu",
+        "headline": "Mapokezi hajui chumba gani kimesafishwa",
+        "body": "Ubao wa ukutani unadanganya. Muhudumu aliruka chumba, na hakuna aliyetambua kabla mgeni hajafungua mlango."
+      },
+      {
+        "eyebrow": "Ubao wa Operra",
+        "headline": "Usafi wa vyumba unajieleza wenyewe",
+        "body": "Vyumba vinagawanywa kiotomatiki. Kila maji na slippers vinahakikiwa, na mapokezi yanaona mabadiliko papo hapo."
+      },
+      {
+        "eyebrow": "Amani ya Akili",
+        "headline": "Zuia maoni mabaya kabla hayajatokea",
+        "body": "Kila mabadiliko yanarekodiwa na nani ameyafanya. Chumba kiko tayari kabla ya mgeni kufungua mlango."
+      }
+    ],
+    "caption": "Mgeni anaporudi jioni na kukuta chumba chake hakijafanyiwa usafi, kosa hilo dogo linaweza kuharibu sifa ya hoteli yako mtandaoni. Tatizo haliko kwa wafanyakazi; liko kwenye ukosefu wa mfumo wa kufuatilia usafi. Operra inagawanya vyumba kwa wahudumu kiotomatiki kulingana na ghorofa na uwezo. Kila ukaguzi wa maji, slippers na minibar unarekodiwa, na ubao unasasisha mapokezi mara moja chumba kinapokuwa safi. Linda sifa ya hoteli yako Zanzibar.",
+    "hashtags": [
+      "#HoteliZanzibar",
+      "#UsimamiziWaHoteli",
+      "#EastAfricaHospitality",
+      "#OperraTech"
+    ],
+    "imagePrompt": "High aerial drone view looking down at an angle onto an exclusive coastal resort nestled on the white-sand shores of Zanzibar, the thatched makuti buildings small in a big place. Clear late-morning light illuminates rich landscape colours, from emerald palm gardens to vivid turquoise lagoon waters. Right of centre, a plain, untitled dark-wood luggage rack sits on a sunlit coral-stone veranda outside a villa. Story props include outdoor stone walkways, woven rattan lounge chairs by private plunge pools, and a distant dhow on the water. Housekeeping staff are soft-focus figures seen from behind far below on garden paths. Drone photography with sharp landscape detail and strong geographical presence. The left half of the frame stays quiet over open shallow water.",
+    "cta": "Tazama Operra",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Zanzibar",
+    "feature": "housekeeping",
+    "angle": "a room missed in the daily refresh and a bad review",
+    "backgroundPath": "state/bg/operra-2026-11-02-08-pain-point.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-02T05:00:00.000Z",
+    "createdAt": "2026-11-01T18:02:50.771Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2691827569,
+    "slideFiles": [
+      "operra-2026-11-02-08-pain-point-1.png",
+      "operra-2026-11-02-08-pain-point-2.png",
+      "operra-2026-11-02-08-pain-point-3.png",
+      "operra-2026-11-02-08-pain-point-4.png"
+    ],
+    "headline": "Mgeni kuta chumba hajasafishwa jioni?"
+  },
+  {
+    "id": "operra-2026-11-02-13-number-that-lands",
+    "eyebrow": "Guest Billing",
+    "headline": "Split payments on a single folio without math errors",
+    "body": "Post any charge in three taps. Settle one bill with card and M-Pesa easily, keeping VAT accurate on every line.",
+    "cta": "See it work",
+    "caption": "A guest checking out in Mwanza wants to pay half their bill by card and the rest with M-Pesa.\n\nSplitting tenders manually often creates ledger mismatches at the front desk. Operra handles several tenders on one bill—cash, card, mobile money, or company accounts. Any charge posts to the guest folio in three taps, with 18% VAT applied after discounts.\n\nKeep every guest folio accurate.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "A lakeside resort set along the granite shores of Lake Victoria in Mwanza, with massive rounded rock formations rising out of dark blue water. High aerial drone view looking down at an angle onto the property and its surroundings, the building small in a big place. On a wide open-air timber deck right of centre, a plain untitled dark tray holds two small blank payment terminals and a ceramic cup. Surrounding tables are laid with folded linen napkins, clear water carafes, and woven placemats. Staff move in soft focus in the background, seen from behind. Clear late-morning light, rich landscape colour. Drone photography, sharp landscape detail, strong sense of geography. The center of the deck remains an uncluttered stone surface.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "guest-stay",
+    "angle": "one bill paid half by card, half by M-Pesa",
+    "backgroundPath": "state/bg/operra-2026-11-02-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-02T10:00:00.000Z",
+    "createdAt": "2026-11-01T18:03:04.245Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2371352623
+  },
+  {
+    "id": "operra-2026-11-02-16-client-proof",
+    "eyebrow": "Mgahawa na Meza",
+    "headline": "Mgeni akihamia terasi, bili na oda zinamfuata",
+    "body": "Uhamisho wa meza ndani ya Operra unahamisha oda, muhudumu na bili yote kwa gusa mbili tu. Hakuna oda inayopotea.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wateja wawili wameketi mgahawani Moshi, kisha wanaomba kuhamia meza ya terasi kuangalia machweo.\n\nKatika mfumo wa zamani, hii ni hatari ya kupoteza oda au kuchanganya bili ya meza mbili.\n\nUkiwa na Operra, unahamisha tab kwenda meza mpya kwa gusa mbili. Oda zote, muhudumu, na bili nzima vinahamia meza ya terasi mara moja. Hakuna kuandika upya chiti au kupoteza kumbukumbu za vinywaji. 🍷",
+    "hashtags": [
+      "#HoteliTanzania",
+      "#MoshiLodges",
+      "#HotelManagement",
+      "#Operra"
+    ],
+    "imagePrompt": "Highland lodge amidst coffee farms in Moshi, featuring an outdoor dining terrace of dark timber. A host adjusts a table setting at the terrace edge overlooking gardens. Right of centre sits a plain, untitled dark wood serving tray holding two clear glass goblets. Nearby props include folded cream linen napkins, carved wooden pepper mills, and a small clay vase with green leaves. In the soft-focus background, two staff members walk toward the kitchen doorway. Composition: high aerial drone view looking down at an angle onto the property and its surroundings, the building small in a big place. Light/tone: clear late-morning light, rich landscape colour. Treatment: drone photography, sharp landscape detail, strong sense of geography. The terrace floor remains a quiet calm zone.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Moshi",
+    "series": null,
+    "feature": "table-management",
+    "angle": "a couple asks to move to the terrace mid-meal",
+    "backgroundPath": "state/bg/operra-2026-11-02-16-client-proof.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-02T13:00:00.000Z",
+    "createdAt": "2026-11-01T18:03:30.925Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1968963304
+  },
+  {
+    "id": "operra-2026-11-02-20-swahili-tip",
+    "eyebrow": "Akaunti za Makampuni",
+    "headline": "Usipike taarifa za madeni ya makampuni kwenye Excel",
+    "body": "Kukusanya namba za madeni kutoka mafaili mbalimbali mwisho wa mwezi kunachelewesha ankara na kuleta makosa kwenye hesabu za hoteli.",
+    "cta": "Ona jinsi inavyofanya kazi",
+    "caption": "Kila mwisho wa mwezi, hoteli nyingi Dar es Salaam zinatumia siku kadhaa kuunganisha bili za makampuni kutoka kwenye Excel. Bili moja ikisahaulika, ankara inakataliwa.\n\nWeka mfumo unaopanga madeni kwa makundi ya siku: 0-30, 31-60, 61-90 na zaidi ya siku 90. Kampuni ikifikia kikomo cha mkopo, mfumo ufunge huduma mpya hadi idara ya fedha iruhusu.\n\nTaarifa zenye chapa ya hoteli zinakuwa tayari kutumwa kwa WhatsApp au kuchapishwa papo hapo. 📊",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#DarEsSalaamHotels",
+      "#HotelFinance"
+    ],
+    "imagePrompt": "A commercial waterfront hotel property along the Kivukoni front in Dar es Salaam, with glass business towers and harbour cranes visible in the surrounding cityscape under humid coastal atmosphere. From a high aerial drone view looking down at an angle onto the property and its surroundings, the building appears small in a big place. Outside the ground floor administrative wing, a quiet paved courtyard opens towards the bay under clear late-morning light with rich landscape colour. On an outdoor teak table to the right sits a plain, untitled charcoal-grey paper document beside a sleek brass pen and a glass of water. The left half of the frame remains visually quiet with plain courtyard tiles and soft architectural shadows. Drone photography, sharp landscape detail, strong sense of geography.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "credit-accounts",
+    "angle": "month-end statements built from Excel rows",
+    "backgroundPath": "state/bg/operra-2026-11-02-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-02T17:00:00.000Z",
+    "createdAt": "2026-11-01T18:14:09.498Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "90."
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 3170176481
   }
 ]
