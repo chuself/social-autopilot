@@ -13844,7 +13844,9 @@
       ],
       "builtAt": "2026-11-01T07:06:18.887Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-11-01T07:06:38.157Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-11-01-16-industry-note",
