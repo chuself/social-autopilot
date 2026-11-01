@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-01T08:09:38.797Z"
+    "missedAt": "2026-11-01T10:00:22.925Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-01T08:09:38.798Z"
+    "missedAt": "2026-11-01T10:00:22.926Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13819,7 +13819,7 @@
     ],
     "scheduledFor": "2026-11-01T10:00:00.000Z",
     "createdAt": "2026-10-31T18:09:19.799Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": null,
     "reel": {
       "file": "operra-2026-11-01-13-swahili-tip.mp4",
@@ -13844,10 +13844,14 @@
         "images: could not be inspected (vision unavailable)"
       ],
       "builtAt": "2026-11-01T07:06:18.887Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-01T10:01:42.253Z",
+      "postIds": [
+        "instagram:18148687804536416",
+        "facebook:1130477456394416"
+      ]
     },
-    "lastAttempt": "2026-11-01T08:09:38.872Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-11-01T10:01:42.253Z"
   },
   {
     "id": "operra-2026-11-01-16-industry-note",
