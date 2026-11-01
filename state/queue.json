@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-01T16:44:17.755Z"
+    "missedAt": "2026-11-01T17:04:32.534Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-01T16:44:17.756Z"
+    "missedAt": "2026-11-01T17:04:32.535Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13947,7 +13947,13 @@
     ],
     "scheduledFor": "2026-11-01T17:00:00.000Z",
     "createdAt": "2026-10-31T18:09:48.551Z",
-    "status": "pending",
-    "bgProvider": null
+    "status": "posted",
+    "bgProvider": null,
+    "lastAttempt": "2026-11-01T17:04:57.330Z",
+    "postedAt": "2026-11-01T17:04:57.330Z",
+    "postIds": [
+      "facebook:1049514968255534_122180255337351110",
+      "instagram:18119678995955935"
+    ]
   }
 ]
