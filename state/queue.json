@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-01T12:01:49.676Z"
+    "missedAt": "2026-11-01T13:02:22.734Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-01T12:01:49.677Z"
+    "missedAt": "2026-11-01T13:02:22.735Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13885,7 +13885,7 @@
     ],
     "scheduledFor": "2026-11-01T13:00:00.000Z",
     "createdAt": "2026-10-31T18:09:31.076Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": null,
     "reel": {
       "file": "operra-2026-11-01-16-industry-note.mp4",
@@ -13908,10 +13908,13 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-01T10:05:38.083Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-01T13:03:00.404Z",
+      "postIds": [
+        "instagram:17966761014199774"
+      ]
     },
-    "lastAttempt": "2026-11-01T12:01:49.750Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-11-01T13:03:00.404Z"
   },
   {
     "id": "operra-2026-11-01-20-feature-spotlight",
