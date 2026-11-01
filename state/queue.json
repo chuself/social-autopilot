@@ -14048,7 +14048,32 @@
     "createdAt": "2026-11-01T18:03:04.245Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2371352623
+    "bgSeed": 2371352623,
+    "reel": {
+      "file": "operra-2026-11-02-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-02-13-number-that-lands.mp4",
+      "beats": [
+        "Splitting one folio at checkout?",
+        "Post any charge in three taps",
+        "Seamless tender splitting and accounting",
+        "Keep every guest folio accurate"
+      ],
+      "narration": "A guest checking out in Mwanza wants to split their bill between card and mobile money. With Operra, you can post charges in three taps and split payments across multiple payment methods easily while keeping your ledger accurate.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "pos-charge",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [
+        "images: could not be inspected (vision unavailable)"
+      ],
+      "builtAt": "2026-11-01T18:26:57.200Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-02-16-client-proof",
