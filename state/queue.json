@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-01T07:08:55.611Z"
+    "missedAt": "2026-11-01T08:09:38.797Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-01T07:08:55.611Z"
+    "missedAt": "2026-11-01T08:09:38.798Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13846,7 +13846,7 @@
       "builtAt": "2026-11-01T07:06:18.887Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-01T07:08:55.683Z",
+    "lastAttempt": "2026-11-01T08:09:38.872Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
