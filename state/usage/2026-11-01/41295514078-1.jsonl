@@ -1,0 +1,2 @@
+{"t":"2026-11-01T10:03:19.717Z","provider":"gemini","model":"gemini-3.5-flash","feature":"reel-brief","post":"operra-2026-11-01-16-industry-note","in":2463,"out":323,"think":2414,"outAudio":0,"inImage":0,"ok":true,"wf":"reel"}
+{"t":"2026-11-01T10:03:28.189Z","provider":"gemini","model":"gemini-2.5-flash-preview-tts","feature":"tts","post":"voice","in":53,"out":435,"think":0,"outAudio":435,"inImage":0,"ok":true,"wf":"reel"}

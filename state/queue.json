@@ -13886,7 +13886,30 @@
     "scheduledFor": "2026-11-01T13:00:00.000Z",
     "createdAt": "2026-10-31T18:09:31.076Z",
     "status": "pending",
-    "bgProvider": null
+    "bgProvider": null,
+    "reel": {
+      "file": "operra-2026-11-01-16-industry-note.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-01-16-industry-note.mp4",
+      "beats": [
+        "Still flipping logbooks at check in?",
+        "Live arrivals and occupancy on your screen",
+        "Instant clarity for every front desk shift",
+        "Faster check ins and calm shift handovers"
+      ],
+      "narration": "Still sorting through physical logbooks and calculators during busy check ins? Operra replaces manual shift handovers with a live front desk dashboard. See room availability, arrivals, and revenue updated instantly, keeping check ins fast and handovers effortless.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-01T10:05:38.083Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-01-20-feature-spotlight",
