@@ -14190,5 +14190,171 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481
+  },
+  {
+    "id": "operra-2026-11-03-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "BANK FINANCING",
+        "headline": "Lenders in East Africa demand historical proof",
+        "body": "Expanding your Arusha property requires audited occupancy and RevPAR history, not estimated revenue projections."
+      },
+      {
+        "eyebrow": "THE GAP",
+        "headline": "Rebuilding past records delays loan approvals",
+        "body": "Compiling months of room performance across spreadsheets often reveals missing figures when loan officers review folios."
+      },
+      {
+        "eyebrow": "INSTANT ACCURACY",
+        "headline": "Export audited reports from one live ledger",
+        "body": "Operra generates 30+ reports across 7 categories, converting historical occupancy, ADR, and RevPAR into branded PDFs."
+      },
+      {
+        "eyebrow": "FINANCING READY",
+        "headline": "Present clean metrics whenever lenders ask",
+        "body": "Keep your operational history verified, structured, and ready for bank appraisal at a moment's notice."
+      }
+    ],
+    "caption": "Regional banks across East Africa are tightening lending criteria for hotel expansion projects. Instead of estimated revenue, credit committees require verified operational data: historical occupancy, ADR, and RevPAR by room type. When your property runs on Operra, your front desk and ledger feed directly into 30+ live reports across 7 categories. Export clean, branded PDFs instantly whenever lenders or investors request audit trails.",
+    "hashtags": [
+      "#EastAfricaHospitality",
+      "#ArushaHotels",
+      "#HotelManagement",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "A sprawling safari lodge set against the acacia trees of Arusha with Mount Meru visible in the distant background, featuring stone pathways and manicured lawns. In the morning hours, quiet operational routines take place before guest departures. To the right of centre, a plain, untitled dark blue leather binder rests on a wide teak veranda table. Nearby story props include a neutral ceramic mug, a set of brass keys, and a pair of vintage binoculars. In the distant background, a soft-focus staff member in neutral uniform walks along a garden path away from the camera. Composition: high aerial drone view looking down at an angle onto the property and its surroundings, the building small in a big place. Light/tone: clear late-morning light, rich landscape colour. Treatment: drone photography, sharp landscape detail, strong sense of geography. The left half of the frame from the middle down remains visual calm zone covered by smooth stone patio shadow. All papers, items, and surfaces are blank and legibility-free.",
+    "cta": "Explore Reports Hub",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Arusha",
+    "feature": "reports",
+    "angle": "the bank asks for occupancy history before a loan",
+    "backgroundPath": null,
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-03T05:00:00.000Z",
+    "createdAt": "2026-11-02T18:03:34.048Z",
+    "status": "pending",
+    "bgProvider": null,
+    "slideFiles": [
+      "operra-2026-11-03-08-industry-note-1.png",
+      "operra-2026-11-03-08-industry-note-2.png",
+      "operra-2026-11-03-08-industry-note-3.png",
+      "operra-2026-11-03-08-industry-note-4.png"
+    ],
+    "headline": "Lenders in East Africa demand historical proof"
+  },
+  {
+    "id": "operra-2026-11-03-13-feature-spotlight",
+    "eyebrow": "Multi-Property",
+    "headline": "Stop waiting until the 10th for last month's numbers",
+    "body": "See consolidated group performance live while each property maintains its own independent operations, logo branding, and staff access controls.",
+    "cta": "See group view",
+    "caption": "If you own multiple properties in Zanzibar, waiting until the tenth of the month for financial reports means managing in the rearview mirror.\n\nOperra consolidates performance live across your entire portfolio. Group metrics roll up automatically from owner down to property and outlet level, while staff access remains strictly isolated per property.\n\nEach location keeps its own branding, logos, and PDF templates, with shared corporate credit limits across all sites.",
+    "hashtags": [
+      "#HotelManagement",
+      "#ZanzibarHotels",
+      "#HospitalityTech",
+      "#Operra"
+    ],
+    "imagePrompt": "A sprawling beachfront resort in Zanzibar features whitewashed coastal architecture and makuti-thatched roofs along vibrant turquoise ocean waters. In the quiet morning, open-air pavilion terraces sit ready across the property grounds. Right of centre on a dark teak table sits a plain, untitled ceramic tray carrying two simple white porcelain cups. Nearby details include folded linen towels, unbranded brass lanterns, and woven palm basketry. A staff member appears in soft focus from behind near the water. Composition : high aerial drone view looking down at an angle onto the property and its surroundings, the building small in a big place Light/tone : clear late-morning light, rich landscape colour Treatment : drone photography, sharp landscape detail, strong sense of geography. The calm ocean creates a quiet central zone.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "multi-property",
+    "angle": "the owner waits until the tenth to see last month",
+    "backgroundPath": "state/bg/operra-2026-11-03-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-03T10:00:00.000Z",
+    "createdAt": "2026-11-02T18:03:55.787Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "10"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 1294385919
+  },
+  {
+    "id": "operra-2026-11-03-16-pain-point",
+    "eyebrow": "Baa na Mgahawa",
+    "headline": "Mgeni anataka kulipa nusu kadi, nusu M-Pesa?",
+    "body": "Gawanya bili kwa sekunde chache bila kuvuruga hesabu za meza au mhudumu.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mteja wa nje kwenye mgahawa wako Mwanza amemaliza chakula cha jioni. Anapoulizwa malipo, anataka kulipa nusu kwa kadi na iliyobaki kwa M-Pesa.\n\nKwenye mifumo ya zamani, hii inaleta ucheleweshaji na msongamano meza zingine zikisubiri risiti.\n\nOperra inakuwezesha kugawanya bili moja kwa njia tofauti za malipo bila makosa ya mahesabu.",
+    "hashtags": [
+      "#MwanzaHotels",
+      "#HotelPOS",
+      "#Operra",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "High aerial drone view looking down at an angle onto a lakeside resort property along the shores of Lake Victoria in Mwanza, with massive granite rock formations rising out of the calm blue water and the city shoreline in the background. Below on the outdoor timber dining deck facing the water, a plain, untitled dark leather bill presenter rests right of centre on a teak dining table. Nearby are tall clear water glasses, silver cutlery on a folded white napkin, and a small clay candle dish. In the background, soft-focus staff members in dark aprons move between tables. Clear late-morning light creates sharp landscape detail and rich natural colors across the lake and shoreline, with visually quiet water in the middle ground.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "restaurant-pos",
+    "angle": "the walk-in who pays half by card and half by M-Pesa",
+    "backgroundPath": null,
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-03T13:00:00.000Z",
+    "createdAt": "2026-11-02T18:04:12.386Z",
+    "status": "pending",
+    "bgProvider": null
+  },
+  {
+    "id": "operra-2026-11-03-20-number-that-lands",
+    "eyebrow": "Hotel finance",
+    "headline": "18% VAT applied after discount on every line",
+    "body": "Every folio, restaurant bill, and event payment rolls directly into one ledger. VAT calculates correctly on the net total, eliminating midnight spreadsheet reconciliations.",
+    "cta": "See it work",
+    "caption": "Reconciling room folios, bar receipts, and event deposits across spreadsheets at midnight in Moshi often leads to manual tax errors. When discounts are applied, calculating tax on the gross total distorts your true revenue. Operra applies 18% VAT after the discount on every line item automatically. Every charge posts directly into one master ledger in real time, keeping your P&L instant and accurate without manual math.",
+    "hashtags": [
+      "#HotelFinance",
+      "#MoshiHotels",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "A high aerial drone view looking down at an angle onto a rustic stone highland lodge nestled among coffee plantations in Moshi, with Mount Kilimanjaro rising in the background. The building is small in the vast green landscape. To the right of centre on a sunny stone terrace sits a plain untitled dark wooden table with a simple brass desktop calculator and a neat stack of plain, untitled cream paper folios. A soft-focus finance manager seen from behind stands beside the table. Clear late-morning light casts clean shadows across terracotta tiles. Drone photography, sharp landscape detail, strong sense of geography. The left half of the frame remains visually quiet with plain green lawn and tree shadows.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "aerial",
+    "city": "Moshi",
+    "series": null,
+    "feature": "finance",
+    "angle": "the midnight spreadsheet that reconciles three systems",
+    "backgroundPath": "state/bg/operra-2026-11-03-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-03T17:00:00.000Z",
+    "createdAt": "2026-11-02T18:04:33.499Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1358452620
   }
 ]
