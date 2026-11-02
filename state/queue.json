@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-02T04:24:28.728Z"
+    "missedAt": "2026-11-02T05:25:05.446Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-02T04:24:28.729Z"
+    "missedAt": "2026-11-02T05:25:05.447Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-02T04:24:28.729Z"
+    "missedAt": "2026-11-02T05:25:05.447Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14005,7 +14005,7 @@
     ],
     "scheduledFor": "2026-11-02T05:00:00.000Z",
     "createdAt": "2026-11-01T18:02:50.771Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 2691827569,
     "slideFiles": [
@@ -14014,7 +14014,13 @@
       "operra-2026-11-02-08-pain-point-3.png",
       "operra-2026-11-02-08-pain-point-4.png"
     ],
-    "headline": "Mgeni kuta chumba hajasafishwa jioni?"
+    "headline": "Mgeni kuta chumba hajasafishwa jioni?",
+    "lastAttempt": "2026-11-02T05:25:53.822Z",
+    "postedAt": "2026-11-02T05:25:53.822Z",
+    "postIds": [
+      "facebook:1049514968255534_122180586231351110",
+      "instagram:18142863253615355"
+    ]
   },
   {
     "id": "operra-2026-11-02-13-number-that-lands",
@@ -14075,7 +14081,7 @@
       "builtAt": "2026-11-01T18:26:57.200Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-02T04:24:28.802Z",
+    "lastAttempt": "2026-11-02T05:25:53.903Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
