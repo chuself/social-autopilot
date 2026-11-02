@@ -14285,7 +14285,30 @@
       "10"
     ],
     "bgProvider": "moss-fast",
-    "bgSeed": 1294385919
+    "bgSeed": 1294385919,
+    "reel": {
+      "file": "operra-2026-11-03-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-03-13-feature-spotlight.mp4",
+      "beats": [
+        "Unasubiri ripoti za mwezi uliopita?",
+        "Ona mapato ya hoteli zote mara moja",
+        "Udhibiti kamili kwa kila uendeshaji",
+        "Uamuzi bora wa biashara kwa wakati"
+      ],
+      "narration": "Unasubiri mpaka katikati ya mwezi kuona ripoti za nyuma? Operra inakusanya takwimu za hoteli zako zote kwa wakati mmoja. Kila eneo linahifadhi mipaka ya wafanyakazi na nembo yake, huku wewe ukipata picha kamili moja kwa moja.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-02T22:21:35.020Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
