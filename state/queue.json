@@ -14118,7 +14118,30 @@
     "createdAt": "2026-11-01T18:03:30.925Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1968963304
+    "bgSeed": 1968963304,
+    "reel": {
+      "file": "operra-2026-11-02-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-02-16-client-proof.mp4",
+      "beats": [
+        "Wateja wanahamia terasi kuangalia machweo ya Moshi",
+        "Hamisha meza na bili haraka sana",
+        "Operra inalinda oda na bili ya mgeni",
+        "Wateja wanajivunia machweo bila usumbufu wowote"
+      ],
+      "narration": "Wateja wako wanapoomba kuhamia meza ya terasi kuangalia machweo ya Moshi, huna haja ya kuandika upya chiti. Ukiwa na Operra, unahamisha oda, muhudumu na bili yote kwenda meza mpya haraka sana. Hakuna oda inayopotea au bili inayochanganyika.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:tables",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-02T10:04:55.355Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-02-20-swahili-tip",

@@ -1,0 +1,3 @@
+{"t":"2026-11-02T10:01:49.324Z","provider":"gemini","model":"gemini-3.5-flash","feature":"reel-brief","post":"operra-2026-11-02-16-client-proof","in":0,"out":0,"think":0,"outAudio":0,"inImage":0,"ok":false,"error":"This model is currently experiencing high demand. Spikes in demand are usually t","wf":"reel"}
+{"t":"2026-11-02T10:02:09.776Z","provider":"gemini","model":"gemini-3.5-flash","feature":"reel-brief","post":"operra-2026-11-02-16-client-proof","in":2563,"out":420,"think":2605,"outAudio":0,"inImage":0,"ok":true,"wf":"reel"}
+{"t":"2026-11-02T10:02:18.600Z","provider":"gemini","model":"gemini-2.5-flash-preview-tts","feature":"tts","post":"voice","in":93,"out":466,"think":0,"outAudio":466,"inImage":0,"ok":true,"wf":"reel"}
