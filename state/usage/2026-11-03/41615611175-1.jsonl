@@ -1,0 +1,2 @@
+{"t":"2026-11-03T10:01:41.479Z","provider":"gemini","model":"gemini-3.5-flash","feature":"reel-brief","post":"operra-2026-11-03-16-pain-point","in":2529,"out":416,"think":2722,"outAudio":0,"inImage":0,"ok":true,"wf":"reel"}
+{"t":"2026-11-03T10:01:51.381Z","provider":"gemini","model":"gemini-2.5-flash-preview-tts","feature":"tts","post":"voice","in":95,"out":456,"think":0,"outAudio":456,"inImage":0,"ok":true,"wf":"reel"}

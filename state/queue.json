@@ -14352,7 +14352,30 @@
     "scheduledFor": "2026-11-03T13:00:00.000Z",
     "createdAt": "2026-11-02T18:04:12.386Z",
     "status": "pending",
-    "bgProvider": null
+    "bgProvider": null,
+    "reel": {
+      "file": "operra-2026-11-03-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-03-16-pain-point.mp4",
+      "beats": [
+        "Mgeni anataka kulipa kwa njia mbili?",
+        "Gawanya bili bila kuvuruga hesabu",
+        "Urahisi wa kupokea malipo mgahawani",
+        "Kila bili inakamilika haraka bila makosa"
+      ],
+      "narration": "Mteja kwenye mgahawa wako Mwanza anapotaka kulipa nusu kwa kadi na nusu kwa M-Pesa, huna haja ya kusitisha huduma. Operra inakuwezesha kugawanya bili kwa sekunde chache, kurekodi malipo kwa usahihi, na kuweka meza zako zikienda bila msongamano.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "pos-charge",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-03T10:03:52.889Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-03-20-number-that-lands",
