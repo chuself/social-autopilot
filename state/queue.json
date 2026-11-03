@@ -14510,7 +14510,30 @@
     "createdAt": "2026-11-03T18:04:59.013Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1266040294
+    "bgSeed": 1266040294,
+    "reel": {
+      "file": "operra-2026-11-04-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-04-13-swahili-tip.mp4",
+      "beats": [
+        "Unahamisha mgeni bila kupoteza bili yake?",
+        "Ramani ya vyumba inahamisha folio papo hapo",
+        "Ulinzi kamili wa mapato ya hoteli",
+        "Bili na folio vinamfuata mgeni mara moja"
+      ],
+      "narration": "Mgeni anapobadilisha chumba Arusha, usihangaike kuhamisha bili zake kwa mkono. Kwenye ramani ya vyumba ya Operra, unahamisha mgeni na folio yake inamfuata papo hapo. Oda na huduma zote zinabaki mahali pake kwa ulinzi kamili wa mapato yako.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-03T20:08:19.158Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-04-16-industry-note",
