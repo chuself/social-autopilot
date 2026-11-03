@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-03T12:32:46.421Z"
+    "missedAt": "2026-11-03T13:33:29.896Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-03T12:32:46.421Z"
+    "missedAt": "2026-11-03T13:33:29.896Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-03T12:32:46.422Z"
+    "missedAt": "2026-11-03T13:33:29.896Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-03T12:32:46.422Z"
+    "missedAt": "2026-11-03T13:33:29.897Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14351,7 +14351,7 @@
     ],
     "scheduledFor": "2026-11-03T13:00:00.000Z",
     "createdAt": "2026-11-02T18:04:12.386Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": null,
     "reel": {
       "file": "operra-2026-11-03-16-pain-point.mp4",
@@ -14374,10 +14374,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-03T10:03:52.889Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-03T13:34:40.272Z",
+      "postIds": [
+        "instagram:18098614682121315",
+        "facebook:2633074763837122"
+      ]
     },
-    "lastAttempt": "2026-11-03T12:32:46.496Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-11-03T13:34:40.272Z"
   },
   {
     "id": "operra-2026-11-03-20-number-that-lands",
