@@ -14423,5 +14423,164 @@
       "facebook:1049514968255534_122181259383351110",
       "instagram:18137151751639940"
     ]
+  },
+  {
+    "id": "operra-2026-11-04-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Hasara ya stoo",
+        "headline": "Chupa mbili zimepotelea wapi njiani?",
+        "body": "Mivutano kati ya stoo na baa inakula faida yako kila mwezi Dar es Salaam."
+      },
+      {
+        "eyebrow": "Ushahidi wa Operra",
+        "headline": "Uhamisho wa bidhaa una trail kamili",
+        "body": "Kila chupa inayotoka stoo hadi minibar inajirekodi pande zote mbili kwenye leja moja."
+      },
+      {
+        "eyebrow": "Udhibiti kamili",
+        "headline": "Ziba mianya ya upotevu wa mali",
+        "body": "Operra inasawazisha hesabu za stoo na mauzo bila makosa ya binadamu."
+      }
+    ],
+    "caption": "Upotevu wa bidhaa kati ya stoo na maeneo ya mauzo ni changamoto inayoumiza hoteli nyingi Dar es Salaam. Operra inabadilisha hali hii kwa kuweka 'two-sided trail' kwa kila uhamisho wa bidhaa. Iwe ni vinywaji kwenda baa au viungo kwenda jikoni, kila kitu kinarekodiwa kwenye leja moja papo hapo. Hakuna tena mivutano ya 'nani alipokea nini' wakati wa kufunga hesabu usiku. Udhibiti huu unahakikisha kila senti ya uwekezaji wako kwenye mali inarudi kama faida.",
+    "hashtags": [
+      "Operra",
+      "HotelManagementTanzania",
+      "DarEsSalaamHotels",
+      "StockControl"
+    ],
+    "imagePrompt": "Inside a cool, dimly lit storage room of a high-end business hotel near the Kivukoni waterfront in Dar es Salaam. High concrete ceilings and industrial metal shelving units create a structured atmosphere. On the right, a stack of plain, untitled charcoal-grey plastic crates sits on a stainless steel trolley. A pair of heavy, worn canvas work gloves and a large brass key ring lie beside the crates. In the background, the soft-focus silhouette of a staff member is visible checking items against a shelf. Light filters in from a high, narrow window, casting long, raking golden shadows across the floor. Composition: layered depth with the sharp foreground crates on the right and the storage scene unfolding in soft focus behind. Light/tone: late-afternoon golden light, cinematic editorial photography, 35mm lens at f/2.8. Calm zone: the left half of the frame is a muted, out-of-focus grey wall and soft shadows.",
+    "cta": "Rahisisha stoo yako",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "feature": "inventory",
+    "angle": "stock moved from the store to the bar and lost on the way",
+    "backgroundPath": "state/bg/operra-2026-11-04-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-04T05:00:00.000Z",
+    "createdAt": "2026-11-03T18:04:43.602Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3183586012,
+    "slideFiles": [
+      "operra-2026-11-04-08-client-proof-1.png",
+      "operra-2026-11-04-08-client-proof-2.png",
+      "operra-2026-11-04-08-client-proof-3.png"
+    ],
+    "headline": "Chupa mbili zimepotelea wapi njiani?"
+  },
+  {
+    "id": "operra-2026-11-04-13-swahili-tip",
+    "eyebrow": "Usimamizi wa Vyumba",
+    "headline": "Hamisha mgeni chumba bila kupoteza bili yake",
+    "body": "Unapohamisha mgeni kwenda chumba kingine, bili yake yote ya chakula na huduma inapaswa kumfuata papo hapo bila kuandika upya.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Mgeni akitaka kubadilisha chumba Arusha, usihangaike kuhamisha bili zake kwa mkono.\n\nBila mfumo madhubuti, oda za baa au mkahawa hubaki kwenye chumba cha zamani na kusababisha usumbufu wakati wa kuondoka.\n\nKwenye ramani ya vyumba ya Operra, unahamisha mgeni na folio yake inamfuata papo hapo. Mabadiliko yote yanarekodiwa kwenye mfumo kwa ulinzi wa mapato yako. 📌",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HotelOperations",
+      "#HospitalityTZ",
+      "#Operra"
+    ],
+    "imagePrompt": "A quiet lodge corridor in Arusha framed by dark timber pillars, with jacaranda trees and Mount Meru visible in the hazy background. A room move is underway along the covered veranda. Right of centre, a sharp hero detail of a polished brass luggage cart holding a plain, untitled canvas bag and a folded beige blanket. In the background, a hotel staff member seen softly blurred from behind walks toward an open suite doorway. Late-afternoon golden light rakes low across the polished timber decking, casting long warm shadows. 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. The central visual band remains a calm zone of shadowed wooden floorboards.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "series": null,
+    "feature": "room-operations",
+    "angle": "moving a guest to another room without losing the bill",
+    "backgroundPath": "state/bg/operra-2026-11-04-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-04T10:00:00.000Z",
+    "createdAt": "2026-11-03T18:04:59.013Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1266040294
+  },
+  {
+    "id": "operra-2026-11-04-16-industry-note",
+    "eyebrow": "Audit Trail",
+    "headline": "Silent rate changes quietly erode resort margins",
+    "body": "Unauthorised room discounts leave no trace in manual logbooks. Hash-chained logs bind every rate edit to a specific user and timestamp.",
+    "cta": "See it work",
+    "caption": "In Zanzibar, high-season demand means room rates shift daily. But when staff quietly lower a room rate for a friend, traditional paper logbooks miss the change entirely.\n\nModern hotel management requires full visibility over ledger adjustments. Operra records every user action bound strictly to role and time. Because entries are hash-chained, any silent edit becomes visible immediately across operational and financial views.",
+    "hashtags": [
+      "#HospitalityManagement",
+      "#ZanzibarHotels",
+      "#HotelOperations",
+      "#RevenueProtection"
+    ],
+    "imagePrompt": "A back office inside a Zanzibar boutique resort featuring high coral-stone walls, dark mahogany timber framing, and a tall arched window looking out to a shaded courtyard. A resort manager shown as a soft-focus figure stands near the window looking away. In the sharp foreground right of centre sits a plain, untitled dark brass desk lamp beside a plain unbranded dark-leather desk blotter. A plain ceramic mug and folded reading glasses rest on the polished dark wood surface. Layered depth with the background scene in soft focus. Late-afternoon golden light rakes low through the window, casting long warm shadows and a darker overall tone. Shot on 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. The centre band remains visually quiet with plain shadowy stone texture.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "audit-center",
+    "angle": "a room rate lowered for a friend",
+    "backgroundPath": "state/bg/operra-2026-11-04-16-industry-note.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-04T13:00:00.000Z",
+    "createdAt": "2026-11-03T18:05:15.857Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2435433240
+  },
+  {
+    "id": "operra-2026-11-04-20-feature-spotlight",
+    "eyebrow": "Reservations",
+    "headline": "Two receptionists cannot book the same room twice",
+    "body": "When staff attempt to assign the same room simultaneously, Operra applies a hard conflict block. Convert quotes to reservations in one click.",
+    "cta": "See how it works",
+    "caption": "\"I thought you confirmed it.\" It usually happens during a busy morning shift in Mwanza when a group booking is handled alongside walk-ins. With Operra, duplicate room bookings are impossible. A hard conflict block stops two receptionists from booking the same room at once. Send line-item quotes in TSh or USD as branded PDFs, then convert them in one click.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#HospitalityTech",
+      "#Operra"
+    ],
+    "imagePrompt": "A lakeside hotel lounge along Lake Victoria in Mwanza, with dark granite boulders framing the water outside. Early morning prep before corporate delegates arrive. Right of centre in sharp focus, a plain untitled brass desk bell sits on a dark mahogany counter next to two plain leather key tags. In soft focus behind, a staff member in uniform adjusts patio seating, seen from behind. Layered depth composition with a sharp foreground detail on the right and soft background action. Late-afternoon golden light raking low through windows creates long warm shadows, darker overall. Shot on 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. The left half remains visually quiet with shadowed wood walls.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "reservations",
+    "angle": "'I thought you confirmed it'",
+    "backgroundPath": "state/bg/operra-2026-11-04-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-04T17:00:00.000Z",
+    "createdAt": "2026-11-03T18:05:31.177Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 261360836
   }
 ]
