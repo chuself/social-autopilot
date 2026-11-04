@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-04T12:58:21.733Z"
+    "missedAt": "2026-11-04T13:59:07.222Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-04T12:58:21.734Z"
+    "missedAt": "2026-11-04T13:59:07.222Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-04T12:58:21.734Z"
+    "missedAt": "2026-11-04T13:59:07.222Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-04T12:58:21.734Z"
+    "missedAt": "2026-11-04T13:59:07.222Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14318,7 +14318,7 @@
     },
     "lastAttempt": "2026-11-04T12:58:21.809Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-04T12:58:21.734Z"
+    "missedAt": "2026-11-04T13:59:07.222Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -14580,7 +14580,7 @@
     ],
     "scheduledFor": "2026-11-04T13:00:00.000Z",
     "createdAt": "2026-11-03T18:05:15.857Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 2435433240,
     "reel": {
@@ -14606,10 +14606,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-04T10:04:09.707Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-04T14:00:15.991Z",
+      "postIds": [
+        "instagram:18090681635280739",
+        "facebook:1110350208555296"
+      ]
     },
-    "lastAttempt": "2026-11-04T12:58:21.809Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-11-04T14:00:15.991Z"
   },
   {
     "id": "operra-2026-11-04-20-feature-spotlight",
