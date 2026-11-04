@@ -14748,7 +14748,32 @@
     "createdAt": "2026-11-04T18:03:10.726Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1239694523
+    "bgSeed": 1239694523,
+    "reel": {
+      "file": "operra-2026-11-05-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-05-13-number-that-lands.mp4",
+      "beats": [
+        "Are bar tabs getting stranded on paper?",
+        "Manage floor seating and active dining tables",
+        "Post dining charges straight to guest rooms",
+        "Every meal tab settled without missing revenue"
+      ],
+      "narration": "Are restaurant tabs leaving uncollected revenue behind at checkout? Operra links your bar, dining, and room service directly to the central ledger. Track active tables, post orders instantly to guest room folios, and capture every shilling seamlessly.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:tables",
+        "pos-charge",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [
+        "images: could not be inspected (vision unavailable)"
+      ],
+      "builtAt": "2026-11-04T20:28:50.488Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-05-16-client-proof",
