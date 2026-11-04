@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-04T04:53:28.288Z"
+    "missedAt": "2026-11-04T05:54:04.509Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-04T04:53:28.289Z"
+    "missedAt": "2026-11-04T05:54:04.510Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-04T04:53:28.289Z"
+    "missedAt": "2026-11-04T05:54:04.510Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-04T04:53:28.289Z"
+    "missedAt": "2026-11-04T05:54:04.510Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14316,9 +14316,9 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-04T04:53:28.349Z",
+    "lastAttempt": "2026-11-04T05:54:55.574Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-04T04:53:28.289Z"
+    "missedAt": "2026-11-04T05:54:04.510Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -14468,7 +14468,7 @@
     ],
     "scheduledFor": "2026-11-04T05:00:00.000Z",
     "createdAt": "2026-11-03T18:04:43.602Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 3183586012,
     "slideFiles": [
@@ -14476,7 +14476,13 @@
       "operra-2026-11-04-08-client-proof-2.png",
       "operra-2026-11-04-08-client-proof-3.png"
     ],
-    "headline": "Chupa mbili zimepotelea wapi njiani?"
+    "headline": "Chupa mbili zimepotelea wapi njiani?",
+    "lastAttempt": "2026-11-04T05:54:55.498Z",
+    "postedAt": "2026-11-04T05:54:55.498Z",
+    "postIds": [
+      "facebook:1049514968255534_122181554463351110",
+      "instagram:18117469007037695"
+    ]
   },
   {
     "id": "operra-2026-11-04-13-swahili-tip",
@@ -14535,7 +14541,7 @@
       "builtAt": "2026-11-03T20:08:19.158Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-04T04:53:28.349Z",
+    "lastAttempt": "2026-11-04T05:54:55.574Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
