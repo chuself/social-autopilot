@@ -14578,7 +14578,32 @@
     "createdAt": "2026-11-03T18:05:15.857Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2435433240
+    "bgSeed": 2435433240,
+    "reel": {
+      "file": "operra-2026-11-04-16-industry-note.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-04-16-industry-note.mp4",
+      "beats": [
+        "Silent room discounts quietly erode resort revenue",
+        "Manual paper logbooks miss unofficial rate changes",
+        "Operra locks every rate edit to a user",
+        "Complete visibility over every ledger adjustment",
+        "Protect your resort margins with transparent logs"
+      ],
+      "narration": "In Zanzibar high season, unauthorized room discounts can quietly erode your resort margins. Manual logbooks miss silent rate changes entirely. Operra binds every action to a user and time, making every edit visible immediately to protect your revenue.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "problem-doc",
+        "folio-fix",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-04T10:04:09.707Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-04-20-feature-spotlight",
