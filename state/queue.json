@@ -14655,5 +14655,170 @@
       "facebook:1049514968255534_122181736701351110",
       "instagram:18040448549850020"
     ]
+  },
+  {
+    "id": "operra-2026-11-05-08-pain-point",
+    "slides": [
+      {
+        "eyebrow": "HASARA KIMYA",
+        "headline": "Vinywaji vya ziada vilikwenda wapi?",
+        "body": "Mkutano umeisha, wajumbe wameondoka. Chupa kadhaa za vinywaji zimezidi lakini hazipo kwenye bili ya mwisho."
+      },
+      {
+        "eyebrow": "KUCHANGANYA RISITI",
+        "headline": "Oda ya mdomo haimfikii mkaguzi",
+        "body": "Mhudumu alileta vinywaji kwa haraka, lakini taarifa haikufika mapokezi kabla bili ya tukio haijafungwa."
+      },
+      {
+        "eyebrow": "UHURU WA OPERRA",
+        "headline": "Folio ya tukio inasasishwa papo hapo",
+        "body": "Menyu ya baa imeunganishwa moja kwa moja na tukio. Kila oda ya ziada inaingia kwenye bili kuu."
+      },
+      {
+        "eyebrow": "HESABU KAMILI",
+        "headline": "Zuia uvujaji wa mapato ya mikutano",
+        "body": "Kuanzia advance hadi risiti ya mwisho, Operra inatunza kumbukumbu na malipo ya M-Pesa au kadi."
+      }
+    ],
+    "caption": "Mikutano na matukio ni chanzo kikubwa cha mapato, lakini vinywaji vya ziada visivyoingizwa kwenye bili vinapunguza faida yako kimya kimya. Operra inaunganisha menyu za chakula na baa moja kwa moja na folio ya tukio. Oda yoyote inayochukuliwa ukumbini inarekodiwa papo hapo kwenye bili kuu bila kupotea.",
+    "hashtags": [
+      "#UsimamiziWaHoteli",
+      "#MoshiHotels",
+      "#HoteliTanzania",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A quiet conference hall inside a highland lodge in Moshi, with exposed dark timber ceiling beams and stone accent walls opening onto garden views. The room is in the calm stretch after a corporate seminar. On the right of centre, a plain, untitled dark-brown leather binder rests on a polished wooden console alongside a brass table marker and clear glass tumblers. In the background, a soft blur of a staff member turned away tidies a long table. Layered depth with sharp foreground focus on the right. Late-afternoon golden light raking low through tall windows, creating long warm shadows and a darker overall tone. 35mm lens at f/2.8, warm cinematic photography. Left half of frame features visually quiet smooth shadows over dark wooden walling.",
+    "cta": "Anza na Operra",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Moshi",
+    "feature": "events",
+    "angle": "extra drinks at the conference that never reached the invoice",
+    "backgroundPath": "state/bg/operra-2026-11-05-08-pain-point.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-05T05:00:00.000Z",
+    "createdAt": "2026-11-04T18:02:55.454Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3035154103,
+    "slideFiles": [
+      "operra-2026-11-05-08-pain-point-1.png",
+      "operra-2026-11-05-08-pain-point-2.png",
+      "operra-2026-11-05-08-pain-point-3.png",
+      "operra-2026-11-05-08-pain-point-4.png"
+    ],
+    "headline": "Vinywaji vya ziada vilikwenda wapi?"
+  },
+  {
+    "id": "operra-2026-11-05-13-number-that-lands",
+    "eyebrow": "Restaurant POS",
+    "headline": "One POS across five food and beverage outlets",
+    "body": "Stop running your restaurant on separate books. Operra posts every meal and bar tab straight to the main hotel ledger.",
+    "cta": "See it work",
+    "caption": "When your hotel restaurant in Dar es Salaam runs on a separate register, room charges get stranded on paper chits. Guests check out before dinner hits their bill, leaving your front desk to chase missing revenue.\n\nOperra links restaurant, bar, in-room dining, takeaway, and events to one central system. Settle orders to cash, card, mobile money, or straight to the guest's room folio with complete waiter attribution.\n\nRun your food and beverage operations on one unified ledger.",
+    "hashtags": [
+      "#HotelManagement",
+      "#EastAfricaHospitality",
+      "#HotelPOS",
+      "#Operra"
+    ],
+    "imagePrompt": "A hotel dining terrace in Dar es Salaam along the waterfront, with distant harbour cranes softly blurred. Staff prepare the outdoor deck for evening service. On the right, in sharp focus, a plain untitled dark ceramic vessel and two polished glasses sit on a folded linen napkin upon a teak table. Polished cutlery and a small glass tealight holder sit nearby. In the soft-focus background, a waiter seen from behind carries a wooden tray. Composition : layered depth: one sharp foreground detail on the right, the working scene unfolding in soft focus behind it Light/tone : late-afternoon golden light raking low through a doorway or window, long warm shadows, darker overall Treatment : 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. Plain blurred decking forms a quiet middle band.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "restaurant-pos",
+    "angle": "a restaurant that runs separately from the hotel's books",
+    "backgroundPath": "state/bg/operra-2026-11-05-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-05T10:00:00.000Z",
+    "createdAt": "2026-11-04T18:03:10.726Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1239694523
+  },
+  {
+    "id": "operra-2026-11-05-16-client-proof",
+    "eyebrow": "Kumbukumbu za Wageni",
+    "headline": "Mapokezi yakibadilika, historia ya mgeni haipotei",
+    "body": "Mfanyakazi wa mapokezi akiondoka, taarifa za wageni wanaorudi zinasalia kwenye mfumo. Historia ya kukaa na VIP flags vinatokea papo hapo.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Recepshenisti wako akiondoka, je, uhusiano na wageni wako wa mara kwa mara unaondoka naye?\n\nKatika hoteli za Arusha, wageni wanaorudi ndio msingi wa biashara. Operra inahifadhi historia yote ya mgeni—tangu NIDA na pasi ya kusafiria hadi vyumba anavyopendelea. Mgeni anapofika tena, VIP na corporate flags zinatokea zenyewe.\n\nTaarifa hazibaki kichwani mwa mfanyakazi mmoja; ziko salama kwenye Operra.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#HotelOperations",
+      "#Operra",
+      "#HospitalityEA"
+    ],
+    "imagePrompt": "A quiet timber veranda of a coffee estate lodge in Arusha, looking out toward lush garden shadows under late-afternoon golden sun. On the right, a plain, untitled dark olive-green leather folder rests right of centre on a low teak table. Beside it sits a ceramic cup of hot coffee emitting faint steam, a small brass key tag, and a pair of worn leather safari binoculars. In the soft-focus background, a staff member in a beige uniform walks away down the wooden corridor, seen from behind. The composition has layered depth with warm low raking sunlight casting long shadows. 35mm lens at f/2.8, warm natural tone, gentle film texture, cinematic photography. The central horizontal band remains soft and uncluttered.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "series": null,
+    "feature": "guest-crm",
+    "angle": "the receptionist who left took the guest relationships with her",
+    "backgroundPath": "state/bg/operra-2026-11-05-16-client-proof.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-05T13:00:00.000Z",
+    "createdAt": "2026-11-04T18:03:28.150Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3122107321
+  },
+  {
+    "id": "operra-2026-11-05-20-swahili-tip",
+    "eyebrow": "Ukaguzi wa Usiku",
+    "headline": "Usimkesheshe mfanyakazi usiku kucha kuprint ripoti",
+    "body": "Ukaguzi wa usiku wa hatua sita unajiendesha wenyewe na kutuma taarifa zote za siku kwa barua pepe ifikapo alfajiri.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Katika hoteli nyingi Zanzibar, ni kawaida kumkuta mpokezi au mhasibu akikesha hadi alfajiri ili kupiga hesabu na kuprint ripoti za siku.\n\nNjia bora ya kuongeza ufanisi ni kutumia ukaguzi wa hatua sita unaojiendesha wenyewe. Mfumo unakagua bili ambazo hazijalipwa na tofauti za droo ya fedha mara moja. Hatua zote zikifanikiwa, taarifa za siku zinatumwa kwa barua pepe ifikapo alfajiri bila mtu kuteseka usiku kucha. 🌙",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#HospitalityTZ",
+      "#Operra"
+    ],
+    "imagePrompt": "A quiet manager nook inside a classic Stone Town boutique hotel with exposed coral-stone walls and a soaring ceiling framed by dark mangrove beams. Early morning sunlight slants low through a high arched window, casting long warm shadows across the room. On the right side of a polished mahogany desk in sharp focus sits a plain, untitled vintage brass desk lamp beside an unbranded dark ceramic coffee mug with faint steam rising. In the soft-focus background, a staff member in a neat uniform shirt is seen from behind near a carved wood doorway, looking out toward a quiet courtyard. Composition: layered depth: one sharp foreground detail on the right, the working scene unfolding in soft focus behind it. Light/tone: late-afternoon golden light raking low through a doorway or window, long warm shadows, darker overall. Treatment: 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. The left half of the frame remains visually quiet with deep wall shadows.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "night-audit",
+    "angle": "the night auditor kept awake only to print reports",
+    "backgroundPath": "state/bg/operra-2026-11-05-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-05T17:00:00.000Z",
+    "createdAt": "2026-11-04T18:03:40.881Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 60072548
   }
 ]
