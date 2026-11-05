@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-05T12:50:10.714Z"
+    "missedAt": "2026-11-05T13:50:44.291Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-05T12:50:10.715Z"
+    "missedAt": "2026-11-05T13:50:44.291Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-05T12:50:10.715Z"
+    "missedAt": "2026-11-05T13:50:44.292Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-05T12:50:10.715Z"
+    "missedAt": "2026-11-05T13:50:44.292Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14318,7 +14318,7 @@
     },
     "lastAttempt": "2026-11-05T12:50:10.794Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-05T12:50:10.715Z"
+    "missedAt": "2026-11-05T13:50:44.292Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -14818,7 +14818,7 @@
     ],
     "scheduledFor": "2026-11-05T13:00:00.000Z",
     "createdAt": "2026-11-04T18:03:28.150Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 3122107321,
     "reel": {
@@ -14842,10 +14842,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-05T10:05:01.193Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-05T13:52:03.142Z",
+      "postIds": [
+        "instagram:18092229074692533",
+        "facebook:1163491153303761"
+      ]
     },
-    "lastAttempt": "2026-11-05T12:50:10.794Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-11-05T13:52:03.142Z"
   },
   {
     "id": "operra-2026-11-05-20-swahili-tip",
