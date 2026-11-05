@@ -14817,7 +14817,30 @@
     "createdAt": "2026-11-04T18:03:28.150Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3122107321
+    "bgSeed": 3122107321,
+    "reel": {
+      "file": "operra-2026-11-05-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-05-16-client-proof.mp4",
+      "beats": [
+        "Je, historia ya mgeni inaondoka na wafanyakazi?",
+        "Operra inahifadhi taarifa zote za mgeni papo hapo",
+        "Kila kitu kuhusu mgeni kinakaa salama",
+        "Wageni wanaorudi wanapata huduma bora bila kikwazo"
+      ],
+      "narration": "Recepshenisti wako akiondoka, je, taarifa za wageni wanaorudi zinasalia hoteli? Operra inahifadhi historia yote ya mgeni tangu kitambulisho hadi vyumba anavyopendelea. Mgeni anaporudi, VIP flags zinatokea zenyewe ili kutoa huduma bora bila kupoteza kumbukumbu.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-05T10:05:01.193Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-05-20-swahili-tip",
