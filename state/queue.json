@@ -14891,5 +14891,173 @@
       "facebook:1049514968255534_122182114815351110",
       "instagram:18648946987053246"
     ]
+  },
+  {
+    "id": "operra-2026-11-06-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "REGIONAL TREND",
+        "headline": "Pacing matters more than speed",
+        "body": "Serving starters and mains simultaneously damages guest perception faster than a delayed order."
+      },
+      {
+        "eyebrow": "COURSE CONTROL",
+        "headline": "When courses collide at tables",
+        "body": "East African diners expect structured service, yet busy kitchens often fire all dishes at once."
+      },
+      {
+        "eyebrow": "KITCHEN DISPLAY",
+        "headline": "Automated pacing at every station",
+        "body": "Tickets land per station with modifiers while holding mains until starters are ready to fire."
+      },
+      {
+        "eyebrow": "OPERATIONAL RELIEF",
+        "headline": "Flawless timing to the table",
+        "body": "Visual ticket aging and instant recipe stock deduction keep service smooth and inventory accurate."
+      }
+    ],
+    "caption": "As regional hospitality elevates dining standards across East Africa, guests expect seamless course timing. Firing starters and mains together creates table clutter and ruins the dining flow. Operra’s Kitchen Display System routes orders to specific stations with modifiers and built-in course pacing, keeping mains on hold until needed. Tickets age visually to alert chefs, while sold dishes trim stock automatically.",
+    "hashtags": [
+      "#EastAfricaHospitality",
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A spacious dining terrace of a lakeside hotel along Lake Victoria in Mwanza, with massive rounded granite boulders visible just past the stone balustrade. On the right side foreground, a heavy brass salt and pepper shaker set rests on a dark teak table alongside a plain, unbranded ceramic coaster. In the quiet background, crystal glass stemware catches low light near folded linen napkins, and a waiter in a crisp white shirt adjusts a table from behind in soft focus. Layered depth with sharp foreground detail on the right. Late-afternoon golden light raking low across the floorboards, long warm shadows, darker overall tone. Shot on 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. The left half of the frame is a calm zone of smooth shadowed plaster wall and softly blurred distant lake water.",
+    "cta": "See Operra live",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Mwanza",
+    "feature": "kitchen-display",
+    "angle": "the starter and the main arriving together",
+    "backgroundPath": "state/bg/operra-2026-11-06-08-industry-note.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-06T05:00:00.000Z",
+    "createdAt": "2026-11-05T18:16:27.042Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3946351758,
+    "slideFiles": [
+      "operra-2026-11-06-08-industry-note-1.png",
+      "operra-2026-11-06-08-industry-note-2.png",
+      "operra-2026-11-06-08-industry-note-3.png",
+      "operra-2026-11-06-08-industry-note-4.png"
+    ],
+    "headline": "Pacing matters more than speed"
+  },
+  {
+    "id": "operra-2026-11-06-13-feature-spotlight",
+    "eyebrow": "Front Desk",
+    "headline": "Know your live balances without asking mapokezi",
+    "body": "Stop waiting for evening shift recaps. Operra displays arrivals, departures, room statuses, and unpaid guest balances instantly on one live dashboard.",
+    "cta": "See it work",
+    "caption": "When you ask how much money is outstanding right now at front desk, does your team scramble through logbooks or WhatsApp messages?\n\nDuring busy seasons in Moshi, waiting for end-of-shift recaps means running your property on old information.\n\nOperra gives you one clear screen. Live occupancy recalculates the moment a check-in is confirmed, and outstanding balances update in real time. Shift handover is already done before your receptionist leaves the desk.",
+    "hashtags": [
+      "#HotelManagement",
+      "#HospitalityTanzania",
+      "#MoshiHotels",
+      "#Operra"
+    ],
+    "imagePrompt": "A quiet highland lodge lounge in Moshi framed by dark timber beams, with Mount Kilimanjaro's distant contours visible through tall glass windows. Late afternoon after trekking guests arrive, with canvas duffel bags stacked neatly near the entrance corridor. On the right, a plain untitled brass tray holding wooden room tags sits in sharp focus on a polished dark wood surface. A warm ceramic mug and plain brass bell sit nearby. In the soft-focus background, a staff member walks down a timber hallway, seen from behind. Composition: layered depth: one sharp foreground detail on the right, the working scene unfolding in soft focus behind it. Light/tone: late-afternoon golden light raking low through a window, long warm shadows, darker overall. Treatment: 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. Plain wood shadow across the frame center band.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Moshi",
+    "series": null,
+    "feature": "front-desk",
+    "angle": "the owner asks 'how much is outstanding right now?' and nobody knows",
+    "backgroundPath": "state/bg/operra-2026-11-06-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-06T10:00:00.000Z",
+    "createdAt": "2026-11-05T18:16:42.482Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 79446849
+  },
+  {
+    "id": "operra-2026-11-06-16-pain-point",
+    "eyebrow": "Malipo ya Simu",
+    "headline": "Picha ya skrini ya M-Pesa sio thibitisho la malipo",
+    "body": "Mgeni akionyesha SMS ya malipo mapokezi, unahakikisha vipi kama pesa imeingia kweli kwenye akaunti kabla hajacheki out?",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mgeni anaonyesha picha ya SMS ya M-Pesa mapokezi kisha anaondoka. Jioni, mhasibu anaanza kupitia miamala mmoja mmoja kutafuta pesa ilipoingia.\n\nKazi ya kuhakiki namba za muamala masaa matatu kila siku inapoteza muda na kuleta mianya ya fedha kupotea.\n\nOperra inafanya malipo ya M-Pesa, Tigo Pesa na Airtel Money kuingia moja kwa moja kwenye bili ya mgeni ikiwa na namba ya muamala. Uhakiki unakamilika kwa sekunde chache.",
+    "hashtags": [
+      "#Operra",
+      "#HotelManagement",
+      "#DarEsSalaam",
+      "#TanzaniaHospitality"
+    ],
+    "imagePrompt": "A corporate hotel lobby in Dar es Salaam overlooking Kivukoni waterfront. On the right, a sharp foreground detail of a plain, untitled brass tray holds two room keys with dark wooden fobs. Behind it in soft focus, a polished mahogany desk holds a small glass of water and a desk lamp. A receptionist stands softly blurred in the background. Composition : layered depth: one sharp foreground detail on the right, the working scene unfolding in soft focus behind it Light/tone : late-afternoon golden light raking low through a doorway or window, long warm shadows, darker overall Treatment : 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. The centre band is visually quiet with plain wall shadow.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "mobile-money",
+    "angle": "a screenshot of an M-Pesa message as proof of payment",
+    "backgroundPath": "state/bg/operra-2026-11-06-16-pain-point.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-06T13:00:00.000Z",
+    "createdAt": "2026-11-05T18:19:59.540Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1564040364
+  },
+  {
+    "id": "operra-2026-11-06-20-number-that-lands",
+    "eyebrow": "Company Accounts",
+    "headline": "Track unpaid corporate credit across 4 ageing buckets",
+    "body": "Sort uncollected company balances into 0-30, 31-60, 61-90, and 90+ days automatically before old invoices disappear past three months.",
+    "cta": "See company credit",
+    "caption": "A tour operator in Arusha brings steady safari bookings every week, but their balance hasn't been cleared in three months. Without clear visibility, corporate credit easily slips past due.\n\nOperra tracks company balances across 4 ageing buckets: 0-30, 31-60, 61-90, and 90+ days. Set per-company credit limits and block over-limit charges until finance approves. Generate branded monthly statements ready to print or share instantly.",
+    "hashtags": [
+      "#HotelManagement",
+      "#ArushaHotels",
+      "#HotelFinance",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "An accounts office inside a safari lodge in Arusha, with high timber beams and tall windows opening toward jacaranda trees. On the right of a heavy mahogany desk sits a stack of plain, untitled dark blue clothbound folders. Beside them rest an analog desk clock, a ceramic mug, and reading glasses. In the soft-focus background, a staff member works quietly at a wooden desk, seen from behind. Composition: layered depth: one sharp foreground detail on the right, the working scene unfolding in soft focus behind it. Light/tone: late-afternoon golden light raking low through a doorway or window, long warm shadows, darker overall. Treatment: 35mm lens at f/2.8, warm natural colour, gentle film texture, cinematic editorial photography. The left lower frame stays visual quiet with soft wall shadow.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "goldenhour",
+    "city": "Arusha",
+    "series": null,
+    "feature": "credit-accounts",
+    "angle": "the company that owes for three months and nobody chased",
+    "backgroundPath": "state/bg/operra-2026-11-06-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-06T17:00:00.000Z",
+    "createdAt": "2026-11-05T18:24:51.027Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "90,"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 1055454036
   }
 ]
