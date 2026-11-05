@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-05T16:52:33.299Z"
+    "missedAt": "2026-11-05T17:53:02.910Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-05T16:52:33.300Z"
+    "missedAt": "2026-11-05T17:53:02.911Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-05T16:52:33.300Z"
+    "missedAt": "2026-11-05T17:53:02.911Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-05T16:52:33.300Z"
+    "missedAt": "2026-11-05T17:53:02.911Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14316,9 +14316,9 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-05T16:52:33.364Z",
+    "lastAttempt": "2026-11-05T17:53:25.874Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-05T16:52:33.300Z"
+    "missedAt": "2026-11-05T17:53:02.911Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -14882,8 +14882,14 @@
     ],
     "scheduledFor": "2026-11-05T17:00:00.000Z",
     "createdAt": "2026-11-04T18:03:40.881Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
-    "bgSeed": 60072548
+    "bgSeed": 60072548,
+    "lastAttempt": "2026-11-05T17:53:25.810Z",
+    "postedAt": "2026-11-05T17:53:25.810Z",
+    "postIds": [
+      "facebook:1049514968255534_122182114815351110",
+      "instagram:18648946987053246"
+    ]
   }
 ]
