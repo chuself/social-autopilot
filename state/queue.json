@@ -14984,7 +14984,30 @@
     "createdAt": "2026-11-05T18:16:42.482Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 79446849
+    "bgSeed": 79446849,
+    "reel": {
+      "file": "operra-2026-11-06-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-06-13-feature-spotlight.mp4",
+      "beats": [
+        "Je unajua salio la sasa mapokezi?",
+        "Dashibodi ya mapokezi inaonyesha madeni yote",
+        "Operra inasasisha taarifa zote mara moja",
+        "Pata picha kamili ya biashara yako"
+      ],
+      "narration": "Hadi sasa unauliza mapokezi kujua salio la sasa hivi? Operra inakupa dashibodi ya mapokezi inayoweka wazi wageni waliofika, waliotoka na madeni yote bila kusubiri ripoti za jioni. Pata picha kamili ya biashara yako.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-05T20:35:36.471Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-06-16-pain-point",
