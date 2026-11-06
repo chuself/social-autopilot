@@ -15122,5 +15122,173 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1055454036
+  },
+  {
+    "id": "operra-2026-11-07-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Mwisho wa mwezi",
+        "headline": "Oda za chumbani zilipotea wapi?",
+        "body": "Chakula kilipikwa na kupelekwa. Lakini karatasi ya oda haikufika mapokezi kabla ya mgeni kuondoka."
+      },
+      {
+        "eyebrow": "Uhalisia Zanzibar",
+        "headline": "Kila oda inahitaji idhini kwanza",
+        "body": "Mgeni anaagiza kwa QR code na PIN ya chumba. Mapokezi yanathibitisha kabla jikoni kuanza kupika."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Bili inaenda kwenye chumba papo hapo",
+        "body": "Hakuna karatasi inayopotea. Oda ikithibitishwa, gharama inaingia kwenye akaunti ya chumba moja kwa moja."
+      },
+      {
+        "eyebrow": "Operra PMS",
+        "headline": "Simamia oda za vyumbani bila kuvuja",
+        "body": "Zuia upotevu wa mapato ya chakula na vinywaji katika hoteli yako."
+      }
+    ],
+    "caption": "Resort nyingi Zanzibar zilikuwa zikipoteza mapato ya room service kwa sababu ya karatasi za oda kuchelewa au kupotea kabla ya check-out.\n\nPamoja na Operra, mgeni anachanganua QR code chumbani na kuweka PIN yake. Mapokezi yanathibitisha oda kabla jikoni haijapika, na gharama inaingia kwenye bili ya chumba kiotomatiki. Bei zinaonyeshwa kwa TZS au USD.",
+    "hashtags": [
+      "#HoteliZanzibar",
+      "#HotelManagement",
+      "#OperraPMS",
+      "#HospitalityTZ"
+    ],
+    "imagePrompt": "Overhead view looking straight down onto a dark polished coconut-wood tray on a whitewashed brass-studded table inside a Zanzibar resort suite. On the right side, six objects are intentfully placed: a white ceramic plate with a freshly prepared tropical seafood dish, a glass of dark iced tea, a small untitled acrylic stand holding a black-and-white grid pattern, a folded linen napkin, a brass room key attached to a heavy wooden fob, and a small woven palm-leaf coaster. Soft natural daylight streams evenly from an open balcony doorway. The left side features a calm zone with an uncluttered light grey lime-wash tabletop and soft shadows. Crisp editorial still-life photography with rich, tactile textures.",
+    "cta": "Jaribu Operra Leo",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "feature": "digital-menu",
+    "angle": "the room-service chit that was never charged",
+    "backgroundPath": "state/bg/operra-2026-11-07-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-07T05:00:00.000Z",
+    "createdAt": "2026-11-06T18:09:11.828Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3828446090,
+    "slideFiles": [
+      "operra-2026-11-07-08-client-proof-1.png",
+      "operra-2026-11-07-08-client-proof-2.png",
+      "operra-2026-11-07-08-client-proof-3.png",
+      "operra-2026-11-07-08-client-proof-4.png"
+    ],
+    "headline": "Oda za chumbani zilipotea wapi?"
+  },
+  {
+    "id": "operra-2026-11-07-13-swahili-tip",
+    "eyebrow": "Housekeeping",
+    "headline": "Track every towel before the guest checks out",
+    "body": "Logging room amenities during inspections keeps your linen count accurate and stops missing towels or slippers from quietly eating into your monthly margins.",
+    "cta": "See how it works",
+    "caption": "Small losses at check-out add up fast. In Mwanza, guest rooms turn over quickly, but missing towels and slippers often go unnoticed until physical stock counts at month-end.\n\nWith Operra, housekeepers complete a per-item amenity check directly on their board during inspection. Water, slippers, towels, and minibar items are logged before the room updates to clean. Every status change logs who did it and when. Stop losing track of room inventory.",
+    "hashtags": [
+      "#HotelOperations",
+      "#Housekeeping",
+      "#TanzaniaHospitality",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "A polished dark wooden tabletop inside a lakeside resort office in Mwanza near Lake Victoria. Morning room turnover preparations are underway. Right of centre sits a stack of plain, untitled folded white cotton bath towels tied with natural twine. Surrounding it are a pair of unbranded grey slippers, two sealed clear glass water bottles with plain white caps, a small brass key, a plain unprinted wooden clipboard, and a small wicker basket. Soft-focus hands of a housekeeper rest at the frame edge. Composition: overhead view looking straight down onto a work surface where the story is laid out: six to nine related objects arranged with intent. Light/tone: even soft daylight from a nearby window, mid-tone, true colours. Treatment: crisp editorial still-life photography, soft natural shadows, tactile materials. The centre area is a calm zone of smooth dark wood. Papers are completely blank.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "housekeeping",
+    "angle": "towels and slippers that quietly walk out every week",
+    "backgroundPath": "state/bg/operra-2026-11-07-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-07T10:00:00.000Z",
+    "createdAt": "2026-11-06T18:10:28.022Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3698850269
+  },
+  {
+    "id": "operra-2026-11-07-16-industry-note",
+    "eyebrow": "Guest Folios",
+    "headline": "Unposted laundry and minibar charges erode lodge margins",
+    "body": "Mid-stay add-ons often get lost between departments, leaving hoteliers with uncollected balances after guests depart from the property.",
+    "cta": "See it work",
+    "caption": "When trekking groups arrive at a Moshi highland lodge, laundry requests and room service spike before early departures. If mid-stay additions are recorded on paper chits, charges often fail to reach the front desk before check-out. Unbilled items quietly slip away once the guest leaves. Centralising all room charges into a single folio view ensures every laundry item and minibar restock carries an automatic audit stamp, keeping guest balances accurate in real time.",
+    "hashtags": [
+      "#HotelOperations",
+      "#EastAfricaHospitality",
+      "#MoshiLodges",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "Overhead view looking straight down onto a rough-hewn cedar tabletop inside a highland lodge utility office in Moshi. Seven related objects are arranged with intent across the surface. Right of centre sits a plain, untitled dark slate tray holding two plain brass fasteners. Beside it lie a pair of weathered leather trekking boots, a natural wooden clothes brush, a small coil of woven twine, a simple brass key tag, and two folded off-white canvas laundry bags. Even soft daylight from a nearby window creates soft natural shadows across tactile materials. The centre band of the frame remains visually quiet. All surfaces and items are plain, unlabelled, and entirely free of visible text.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Moshi",
+    "series": null,
+    "feature": "guest-stay",
+    "angle": "the laundry or minibar charge that never reached the bill",
+    "backgroundPath": "state/bg/operra-2026-11-07-16-industry-note.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-07T13:00:00.000Z",
+    "createdAt": "2026-11-06T18:10:40.409Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2769529207
+  },
+  {
+    "id": "operra-2026-11-07-20-feature-spotlight",
+    "eyebrow": "Table Management",
+    "headline": "Stop double-seating reserved restaurant tables",
+    "body": "Reserved tables highlight instantly on your live floor plan, ensuring your host never seats walk-in guests at a booked table.",
+    "cta": "See live floor plan",
+    "caption": "It happens during the Friday dinner rush in Dar es Salaam: a hostess walks a walk-in party to Table 4, only for a reserved guest to arrive five minutes later.\n\nOperra shows your live restaurant floor plan in real time. Reserved tables are clearly flagged before guest arrival so your team never double-seats. Share one reservation link on Instagram or WhatsApp, and let your team confirm every booking before it hits the floor map.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#RestaurantOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "An overhead view looking straight down onto a dark teak host station inside a waterfront restaurant in Dar es Salaam, illuminated by even soft daylight from large harbour-facing windows. Arranged with intent across the surface are seven items: right of centre, a plain untitled matte-black slim tablet on a brass stand, a crisp folded white linen napkin, a pair of polished silver cutlery, a small woven seagrass tray, a plain clear glass tumbler, a brass pen, and a smooth ceramic coaster. The left half of the frame, from the middle to the bottom, remains a visually quiet expanse of smooth dark teak with soft natural shadows. Crisp editorial still-life photography with tactile materials and true mid-tone colours.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "table-management",
+    "angle": "two parties seated at the same reserved table",
+    "backgroundPath": "state/bg/operra-2026-11-07-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-07T17:00:00.000Z",
+    "createdAt": "2026-11-06T18:11:25.785Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "4,"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 563589337
   }
 ]
