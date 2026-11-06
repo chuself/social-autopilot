@@ -15051,7 +15051,30 @@
     "createdAt": "2026-11-05T18:19:59.540Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1564040364
+    "bgSeed": 1564040364,
+    "reel": {
+      "file": "operra-2026-11-06-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-06-16-pain-point.mp4",
+      "beats": [
+        "Picha ya skrini si malipo ya kweli",
+        "Malipo ya simu yanaingia moja kwa moja",
+        "Uhakiki wa miamala kwa sekunde chache",
+        "Hesabu za mapokezi zinapatikana bila makosa"
+      ],
+      "narration": "Onyesho la picha ya SMS ya simu mapokezi si thibitisho kamili la malipo. Operra inaunganisha malipo ya M Pesa, Tigo Pesa na Airtel Money moja kwa moja kwenye bili ya mgeni pamoja na namba ya muamala. Uhakiki unakamilika kwa sekunde chache bila kupoteza muda.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-06T10:04:04.137Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-06-20-number-that-lands",
