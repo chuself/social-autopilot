@@ -14988,7 +14988,7 @@
     ],
     "scheduledFor": "2026-11-06T10:00:00.000Z",
     "createdAt": "2026-11-05T18:16:42.482Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 79446849,
     "reel": {
@@ -15012,10 +15012,13 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-05T20:35:36.471Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-06T10:05:07.795Z",
+      "postIds": [
+        "instagram:17911706670590124"
+      ]
     },
-    "lastAttempt": "2026-11-06T09:38:00.778Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-11-06T10:05:07.795Z"
   },
   {
     "id": "operra-2026-11-06-16-pain-point",
