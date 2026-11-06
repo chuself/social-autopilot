@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-06T12:39:14.118Z"
+    "missedAt": "2026-11-06T13:39:10.521Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-06T12:39:14.119Z"
+    "missedAt": "2026-11-06T13:39:10.522Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-06T12:39:14.119Z"
+    "missedAt": "2026-11-06T13:39:10.522Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-06T12:39:14.119Z"
+    "missedAt": "2026-11-06T13:39:10.522Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14318,7 +14318,7 @@
     },
     "lastAttempt": "2026-11-06T12:39:14.183Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-06T12:39:14.119Z"
+    "missedAt": "2026-11-06T13:39:10.522Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -15052,7 +15052,7 @@
     ],
     "scheduledFor": "2026-11-06T13:00:00.000Z",
     "createdAt": "2026-11-05T18:19:59.540Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 1564040364,
     "reel": {
@@ -15076,10 +15076,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-06T10:04:04.137Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-06T13:40:22.346Z",
+      "postIds": [
+        "instagram:17975608104171173",
+        "facebook:1593812699167452"
+      ]
     },
-    "lastAttempt": "2026-11-06T12:39:14.183Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-11-06T13:40:22.346Z"
   },
   {
     "id": "operra-2026-11-06-20-number-that-lands",
