@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-06T04:59:21.912Z"
+    "missedAt": "2026-11-06T05:59:57.053Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-06T04:59:21.913Z"
+    "missedAt": "2026-11-06T05:59:57.054Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-06T04:59:21.913Z"
+    "missedAt": "2026-11-06T05:59:57.054Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-06T04:59:21.913Z"
+    "missedAt": "2026-11-06T05:59:57.054Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14316,9 +14316,9 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-06T04:59:21.990Z",
+    "lastAttempt": "2026-11-06T06:00:46.892Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-06T04:59:21.913Z"
+    "missedAt": "2026-11-06T05:59:57.054Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -14940,7 +14940,7 @@
     ],
     "scheduledFor": "2026-11-06T05:00:00.000Z",
     "createdAt": "2026-11-05T18:16:27.042Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 3946351758,
     "slideFiles": [
@@ -14949,7 +14949,13 @@
       "operra-2026-11-06-08-industry-note-3.png",
       "operra-2026-11-06-08-industry-note-4.png"
     ],
-    "headline": "Pacing matters more than speed"
+    "headline": "Pacing matters more than speed",
+    "lastAttempt": "2026-11-06T06:00:46.808Z",
+    "postedAt": "2026-11-06T06:00:46.809Z",
+    "postIds": [
+      "facebook:1049514968255534_122182339599351110",
+      "instagram:18651511642054689"
+    ]
   },
   {
     "id": "operra-2026-11-06-13-feature-spotlight",
@@ -15008,7 +15014,7 @@
       "builtAt": "2026-11-05T20:35:36.471Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-06T04:59:21.990Z",
+    "lastAttempt": "2026-11-06T06:00:46.892Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
