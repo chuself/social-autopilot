@@ -15215,7 +15215,30 @@
     "createdAt": "2026-11-06T18:10:28.022Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3698850269
+    "bgSeed": 3698850269,
+    "reel": {
+      "file": "operra-2026-11-07-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-07-13-swahili-tip.mp4",
+      "beats": [
+        "Taulo na ndala zinapotea bila taarifa?",
+        "Ukaguzi wa kila chumba kabla ya kusafishwa",
+        "Fuatilia kila kifaa kinachotumika chumbani",
+        "Komesha upotevu wa mali za vyumba vyako"
+      ],
+      "narration": "Je, taulo na ndala zinapotea kimyakimya kwenye vyumba vyako vya wageni hapa Mwanza? Ukiwa na mfumo wa Operra, wasimamizi wa usafi wanakagua kila kifaa kabla chumba hakijabadilishwa kuwa safi. Udhibiti kamili wa mali zako bila upotevu.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:housekeeping",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 3,
+      "warnings": [],
+      "builtAt": "2026-11-06T20:03:14.151Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-07-16-industry-note",
