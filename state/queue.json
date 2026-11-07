@@ -15353,5 +15353,166 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 563589337
+  },
+  {
+    "0": {
+      "slides": [
+        {
+          "eyebrow": "Ripoti za Hoteli",
+          "headline": "Uko safari, hujui mapato ya leo?",
+          "body": "Unasubiri barua pepe ya ripoti kutoka mapokezi hadi usiku bila majibu."
+        },
+        {
+          "eyebrow": "Mzunguko wa Kila Siku",
+          "headline": "Kukusanya namba kunachukua masaa mengi",
+          "body": "Meneja anapoteza muda kuhesabu vitabu badala ya kuhudumia wageni."
+        },
+        {
+          "eyebrow": "Operra Reports Hub",
+          "headline": "Ripoti zaidi ya 30 mkononi mwako",
+          "body": "Pata taarifa za Occupancy, ADR na RevPAR mara moja katika PDF safi."
+        },
+        {
+          "eyebrow": "Usimamizi Rahisi",
+          "headline": "Ona kila shilingi popote ulipo duniani",
+          "body": "Fuatilia mapato ya vyumba na mauzo ya mgahawa bila kuomba ripoti."
+        }
+      ],
+      "caption": "Kusubiri ripoti za mapato za siku hadi usiku wa manane inavuruga maamuzi ya biashara. Ukiwa safari au mbali na hoteli yako Arusha, unahitaji namba halisi bila kupiga simu mapokezi. Operra inakupa ripoti zaidi ya 30 za viwango vya kimataifa kama Occupancy, ADR na RevPAR zikiwa tayari kwenye PDF. Kila muamala kutoka mapokezi na mgahawa unajumuishwa papo hapo kwenye daftari moja. Chukua udhibiti wa namba zako popote ulipo.",
+      "hashtags": [
+        "#HoteliTanzania",
+        "#ArushaHotels",
+        "#UsimamiziWaHoteli",
+        "#OperraTech"
+      ],
+      "imagePrompt": "Overhead view looking straight down onto a dark polished mahogany desk inside a coffee estate lodge manager office in Arusha. Soft afternoon daylight streams across the workspace. Right of centre sits a plain, untitled dark-brown leather-bound planner lying open alongside a slim brass fountain pen. Surrounding props include a steaming ceramic mug of local black coffee, a classic brass desk clock, reading glasses, and a plain unbranded brass hotel room key fob. On the left side, the rustic wooden table surface remains completely clear, uncluttered and shadowed, creating a calm negative space. Tactile natural textures, crisp editorial still-life photography, soft natural shadows, and rich mid-tone warm colors.",
+      "cta": "Jaribu Operra Leo"
+    },
+    "id": "operra-2026-11-08-08-pain-point",
+    "slides": [],
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Arusha",
+    "feature": "reports",
+    "angle": "the owner abroad waiting for numbers by email",
+    "backgroundPath": null,
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-08T05:00:00.000Z",
+    "createdAt": "2026-11-07T18:03:30.260Z",
+    "status": "pending",
+    "slideFiles": [],
+    "headline": "operra-2026-11-08-08-pain-point"
+  },
+  {
+    "id": "operra-2026-11-08-13-number-that-lands",
+    "eyebrow": "Offline mode",
+    "headline": "30 continuous days of full offline operation",
+    "body": "Operra keeps your front desk, POS, and folios running during Zanzibar power cuts and syncs automatically when signal returns.",
+    "cta": "See offline mode",
+    "caption": "Power outages and internet drops shouldn't force your Zanzibar property back to paper folios. Operra keeps your front desk, restaurant POS, and guest accounts running smoothly for up to 30 continuous days offline. All queued transactions remain perfectly intact and sync in exact chronological order the second your connection returns. Staff always know their online status, so no charges are ever lost or duplicated.",
+    "hashtags": [
+      "#HotelTech",
+      "#HospitalityManagement",
+      "#ZanzibarHotels",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "An office workspace inside a historic Stone Town boutique hotel in Zanzibar, framed by coral-stone walls. The desk shows operations during a power outage. Right of centre rests an unlit vintage brass lantern with a glass sleeve on a plain dark teak surface. Surrounding story props include unprinted brass room keys on leather fobs, a mechanical desk bell, a turned-wood coaster, and a small handheld torch. Soft-focus hands of a manager work at the edge. Composition: overhead view looking straight down onto a work surface where the story is laid out: six to nine related objects arranged with intent. Light/tone: even soft daylight from a nearby window, mid-tone, true colours. Treatment: crisp editorial still-life photography, soft natural shadows, tactile materials. The centre band remains a quiet dark wood surface.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "offline",
+    "angle": "a paper folio written during a power cut",
+    "backgroundPath": "state/bg/operra-2026-11-08-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-08T10:00:00.000Z",
+    "createdAt": "2026-11-07T18:03:42.147Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2073158604
+  },
+  {
+    "id": "operra-2026-11-08-16-client-proof",
+    "eyebrow": "Usimamizi Wa Matawi",
+    "headline": "Ukihamisha meneja hoteli nyingine, taarifa haziingiliani",
+    "body": "Mfumo wa Operra unahakikisha kila hoteli inabaki na nembo yake na folios zake. Wafanyakazi wa hoteli moja hawawezi kuona taarifa za hoteli nyingine.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Meneja wako anapohamia tawi jipya Mwanza, anahitaji kuanza kazi mara moja bila kuvuruga kumbukumbu za hoteli ya kwanza.\n\nKwenye Operra, kila hoteli inajiendesha ikiwa na logo na stakabadhi zake. Mfanyakazi wa tawi moja hawezi kuona folios za tawi jingine, lakini mmiliki anapata ripoti zote za kundi sehemu moja.\n\nHakuna kuchanganya bili au akaunti za makampuni. Usimamizi unakuwa rahisi na salama.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#MwanzaHotels",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A manager office in a lakeside hotel in Mwanza, with granite boulders visible through the window. Overhead view of a dark mahogany desk. Right of centre sits a plain, untitled olive-green leather folder. Surrounding it are a plain brass key, a stainless steel pen, a white ceramic mug, reading glasses, and a wooden block. In the soft-focus background, a hotel employee walks past an open doorway, seen from behind.\nComposition : overhead view looking straight down onto a work surface where the story is laid out: six to nine related objects arranged with intent\nLight/tone  : even soft daylight from a nearby window, mid-tone, true colours\nTreatment   : crisp editorial still-life photography, soft natural shadows, tactile materials\nThe centre of the frame is a quiet zone of smooth polished wood. All items are blank with no visible text.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "multi-property",
+    "angle": "moving a manager between properties",
+    "backgroundPath": "state/bg/operra-2026-11-08-16-client-proof.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-08T13:00:00.000Z",
+    "createdAt": "2026-11-07T18:04:07.083Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1984563531
+  },
+  {
+    "id": "operra-2026-11-08-20-swahili-tip",
+    "eyebrow": "Uhifadhi na Makundi",
+    "headline": "Nukuu ya bei kwenye WhatsApp isiwe booking iliyopotea",
+    "body": "Tuma quotation ya PDF yenye mchanganuo kamili mara moja. Mteja akikubali, ibadilishe kuwa uhifadhi wa chumba kwa click moja tu.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Mteja wa kundi anapoomba nukuu ya bei Moshi, mara nyingi majadiliano yanaishia kwenye chat. Siku zinasogea, vyumba vinabaki wazi, na makubaliano yanapotea.\n\nUkiwa na Operra, unatuma quotation rasmi ya PDF yenye mchanganuo wa bei kwa sekunde chache. Mgeni akithibitisha, unaibadili kuwa reservation kwa click moja tu—bila kurudia kuandika taarifa mapokezi.\n\nFanya ufuatiliaji wa uhifadhi wa makundi uwe wa uhakika.",
+    "hashtags": [
+      "#HotelOps",
+      "#MoshiHotels",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "An overhead view looking straight down onto a rough-hewn dark cedar desk inside a highland lodge office in Moshi. Even soft daylight streams from a window showing green coffee foliage. Right of centre lies a plain, untitled olive-green clothbound folder. Surrounding it are a heavy brass pen, a ceramic mug on a woven coaster, a brass key ring, a pair of folded brown leather gloves, and a small stack of blank off-white note cards. In the soft-focus background, a hotel staff member in uniform is seen from behind. Composition is flat lay with crisp editorial photography and natural shadows. The lower left area remains clean and uncluttered with quiet cedar wood texture.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Moshi",
+    "series": null,
+    "feature": "reservations",
+    "angle": "the quote that sat in a WhatsApp chat and never became a booking",
+    "backgroundPath": "state/bg/operra-2026-11-08-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-08T17:00:00.000Z",
+    "createdAt": "2026-11-07T18:04:29.190Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1743363122
   }
 ]
