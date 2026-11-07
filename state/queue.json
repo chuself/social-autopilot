@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-07T12:22:53.815Z"
+    "missedAt": "2026-11-07T13:23:32.800Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-07T12:22:53.816Z"
+    "missedAt": "2026-11-07T13:23:32.801Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-07T12:22:53.816Z"
+    "missedAt": "2026-11-07T13:23:32.801Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-07T12:22:53.816Z"
+    "missedAt": "2026-11-07T13:23:32.801Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14318,7 +14318,7 @@
     },
     "lastAttempt": "2026-11-07T12:22:53.894Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-07T12:22:53.816Z"
+    "missedAt": "2026-11-07T13:23:32.801Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -15122,7 +15122,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1055454036,
-    "missedAt": "2026-11-07T12:22:53.816Z"
+    "missedAt": "2026-11-07T13:23:32.801Z"
   },
   {
     "id": "operra-2026-11-07-08-client-proof",
@@ -15283,7 +15283,7 @@
     ],
     "scheduledFor": "2026-11-07T13:00:00.000Z",
     "createdAt": "2026-11-06T18:10:40.409Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 2769529207,
     "reel": {
@@ -15307,10 +15307,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-07T10:04:07.141Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-07T13:25:08.990Z",
+      "postIds": [
+        "instagram:18079230728562597",
+        "facebook:4707238899551417"
+      ]
     },
-    "lastAttempt": "2026-11-07T12:22:53.894Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-11-07T13:25:08.990Z"
   },
   {
     "id": "operra-2026-11-07-20-feature-spotlight",
