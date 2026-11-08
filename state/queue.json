@@ -15506,7 +15506,30 @@
     "createdAt": "2026-11-07T18:04:07.083Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1984563531
+    "bgSeed": 1984563531,
+    "reel": {
+      "file": "operra-2026-11-08-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-08-16-client-proof.mp4",
+      "beats": [
+        "Meneja akihama tawi taarifa hazivurugiki?",
+        "Kila tawi linabaki na utambulisho wake",
+        "Mmiliki anaona ripoti za kundi zima",
+        "Kila hoteli inajiendesha bila makosa"
+      ],
+      "narration": "Ukihamisha meneja kwenda tawi lingine Mwanza, kumbukumbu za hoteli hazichanganyiki. Mfumo wa Operra unampa mfanyakazi mtazamo sahihi wa tawi lake pekee, huku mmiliki akiona ripoti za biashara zote pamoja bila hofu ya taarifa kuingiliana.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "checklist",
+        "ui-screen:reports",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-08T10:06:38.112Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-08-20-swahili-tip",
