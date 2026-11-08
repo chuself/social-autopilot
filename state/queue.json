@@ -15444,7 +15444,30 @@
     "createdAt": "2026-11-07T18:03:42.147Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2073158604
+    "bgSeed": 2073158604,
+    "reel": {
+      "file": "operra-2026-11-08-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-08-13-number-that-lands.mp4",
+      "beats": [
+        "What happens when internet drops in Zanzibar?",
+        "Front desk keeps running smoothly offline",
+        "Never lose a folio during power cuts",
+        "Keep front office moving without interruptions"
+      ],
+      "narration": "When internet drops or power cuts hit Zanzibar, your front desk shouldn't stall. Operra keeps reservations, check-ins, and guest folios running offline for up to thirty continuous days. All transactions sync automatically in exact order when connection returns.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-08T07:05:07.010Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-08-16-client-proof",
