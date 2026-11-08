@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-08T16:42:39.772Z"
+    "missedAt": "2026-11-08T17:33:02.633Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-08T16:42:39.772Z"
+    "missedAt": "2026-11-08T17:33:02.633Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-08T16:42:39.772Z"
+    "missedAt": "2026-11-08T17:33:02.633Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-08T16:42:39.772Z"
+    "missedAt": "2026-11-08T17:33:02.633Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14316,9 +14316,9 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-08T16:42:39.856Z",
+    "lastAttempt": "2026-11-08T17:33:27.248Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-08T16:42:39.772Z"
+    "missedAt": "2026-11-08T17:33:02.633Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -15122,7 +15122,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1055454036,
-    "missedAt": "2026-11-08T16:42:39.772Z"
+    "missedAt": "2026-11-08T17:33:02.633Z"
   },
   {
     "id": "operra-2026-11-07-08-client-proof",
@@ -15353,7 +15353,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 563589337,
-    "missedAt": "2026-11-08T16:42:39.772Z"
+    "missedAt": "2026-11-08T17:33:02.633Z"
   },
   {
     "0": {
@@ -15411,7 +15411,7 @@
     "headline": "operra-2026-11-08-08-pain-point",
     "lastAttempt": "2026-11-08T10:57:14.464Z",
     "lastSkipReason": "image not rendered",
-    "missedAt": "2026-11-08T16:42:39.763Z"
+    "missedAt": "2026-11-08T17:33:02.625Z"
   },
   {
     "id": "operra-2026-11-08-13-number-that-lands",
@@ -15573,8 +15573,14 @@
     ],
     "scheduledFor": "2026-11-08T17:00:00.000Z",
     "createdAt": "2026-11-07T18:04:29.190Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
-    "bgSeed": 1743363122
+    "bgSeed": 1743363122,
+    "lastAttempt": "2026-11-08T17:33:27.168Z",
+    "postedAt": "2026-11-08T17:33:27.168Z",
+    "postIds": [
+      "facebook:1049514968255534_122183597793351110",
+      "instagram:18127120540808356"
+    ]
   }
 ]
