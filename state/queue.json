@@ -15675,7 +15675,30 @@
     "createdAt": "2026-11-08T18:05:25.416Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 824488744
+    "bgSeed": 824488744,
+    "reel": {
+      "file": "operra-2026-11-09-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-09-13-feature-spotlight.mp4",
+      "beats": [
+        "Saa za rush meza zinauliza bili",
+        "Ona meza zote na wahudumu wao",
+        "Kila oda inafungamanishwa na muhudumu husika",
+        "Malipo yanakwenda chumbani au M-Pesa bila makosa"
+      ],
+      "narration": "Wakati wa rush ya chakula cha jioni mjini Arusha, meza inapoomba bili, hutaki kuulizana ni muhudumu yupi aliyewahudumia. Operra inaunganisha kila oda na jina la muhudumu, kugawa bili, na kuhamishia malipo chumbani au M-Pesa bila makosa kabisa.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:tables",
+        "pos-charge",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-08T18:21:17.448Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-09-16-pain-point",
