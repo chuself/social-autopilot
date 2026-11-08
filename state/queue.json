@@ -15582,5 +15582,173 @@
       "facebook:1049514968255534_122183597793351110",
       "instagram:18127120540808356"
     ]
+  },
+  {
+    "id": "operra-2026-11-09-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "BANQUET TRENDS",
+        "headline": "Corporate events drive modern hotel margins",
+        "body": "Weekend weddings and weekday conferences now power East African urban hospitality revenue."
+      },
+      {
+        "eyebrow": "THE FRICTION",
+        "headline": "Manual quotes slow down event sales",
+        "body": "Retyping pricing from chat threads into document files creates delay, pricing errors, and lost bookings."
+      },
+      {
+        "eyebrow": "OPERATIONAL IMPACT",
+        "headline": "Connect venue calendars to live pricing",
+        "body": "Unifying venue availability with live F&B menus protects margins and keeps auditors satisfied."
+      },
+      {
+        "eyebrow": "OPERRA SYSTEM",
+        "headline": "One event record from enquiry to receipt",
+        "body": "Operra unifies venue calendars, custom menus, mobile money deposits, and branded signed dossiers."
+      }
+    ],
+    "caption": "Banqueting and corporate events are now primary growth drivers for hotels across Dar es Salaam and East Africa. Yet many sales teams still copy pricing manually from chat messages into text files, creating friction and audit gaps. Modern properties streamline banquet operations by linking venue calendars directly to live F&B menus and mobile deposits. Operra centralises every event record into one branded signed dossier with complete role-restricted payment tracking.",
+    "hashtags": [
+      "#EastAfricaHospitality",
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#BanquetManagement"
+    ],
+    "imagePrompt": "Overhead view looking straight down onto a dark polished mahogany desk inside an event planning office in Dar es Salaam, with large windows overlooking the harbor. Arranged on the dark wood are seven quiet objects: a plain untitled brass pen, a fabric swatch card of folded linen napkins in cream and burgundy, a blank off-white sheet showing an unlabelled venue layout grid, a polished brass calculator, a simple glass of water with light reflections, a single sprig of tropical greenery, and a dark smartphone resting face-up with a completely blank screen. Even soft daylight streams across the textured wood surface, casting subtle natural shadows. The left half of the composition remains clean, dark, and uncluttered for text.",
+    "cta": "Explore Operra Banquets",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Dar es Salaam",
+    "feature": "events",
+    "angle": "the wedding quote retyped from WhatsApp into Word",
+    "backgroundPath": "state/bg/operra-2026-11-09-08-industry-note.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-09T05:00:00.000Z",
+    "createdAt": "2026-11-08T18:05:14.297Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 4256356971,
+    "slideFiles": [
+      "operra-2026-11-09-08-industry-note-1.png",
+      "operra-2026-11-09-08-industry-note-2.png",
+      "operra-2026-11-09-08-industry-note-3.png",
+      "operra-2026-11-09-08-industry-note-4.png"
+    ],
+    "headline": "Corporate events drive modern hotel margins"
+  },
+  {
+    "id": "operra-2026-11-09-13-feature-spotlight",
+    "eyebrow": "POS ya Mgahawa",
+    "headline": "Kila oda kwenye meza ina jina la muhudumu",
+    "body": "Operra inafungamanisha kila oda na muhudumu husika, kugawa bili, na kuhamishia malipo chumbani au kwenye M-Pesa bila makosa.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wakati wa rush ya chakula cha jioni Arusha, meza namba nne ikiulizia bili, huna haja ya kuulizana ni muhudumu yupi aliyewahudumia.\n\nOperra POS inaunganisha kila oda na jina la muhudumu aliyeichukua. Bili inaweza kugawanywa, kuhamishwa meza nyingine, au kulipwa kwa M-Pesa, kadi, fedha taslimu au kuhamishiwa kwenye chumba cha mgeni.\n\nKila oda inakuwa na mmiliki anayeeleweka. 🍽️",
+    "hashtags": [
+      "#HospitalityTanzania",
+      "#ArushaHotels",
+      "#HotelPOS",
+      "#Operra"
+    ],
+    "imagePrompt": "Overhead view looking straight down onto a rustic dark teak dining table inside a safari lodge restaurant in Arusha. Arranged thoughtfully on the polished wood surface are six related dining items: a hand-woven rush place mat, a pristine plain white ceramic dinner plate, heavy silver cutlery, a tall clear glass water goblet, a small brass candle holder, and a plain untitled leather-bound folder positioned right of centre. Soft daylight streams from an adjacent garden window, highlighting tactile wood grains. In the soft-focus background, hands set down a linen napkin. The middle area of the tabletop is clear and visually uncluttered.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Arusha",
+    "series": null,
+    "feature": "restaurant-pos",
+    "angle": "nobody knows which waiter served table four",
+    "backgroundPath": "state/bg/operra-2026-11-09-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-09T10:00:00.000Z",
+    "createdAt": "2026-11-08T18:05:25.416Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 824488744
+  },
+  {
+    "id": "operra-2026-11-09-16-pain-point",
+    "eyebrow": "Finance & Accounts",
+    "headline": "Did you calculate VAT before or after the discount?",
+    "body": "Manual discounts often cause expensive tax audit surprises when VAT is calculated incorrectly. Operra applies 18% VAT after discounts automatically across every folio.",
+    "cta": "See how it works",
+    "caption": "Offering group discounts at your Zanzibar property shouldn't turn into a nightmare during tax audit season.\n\nIf your team calculates 18% VAT before applying a discount, your revenue records won't match your general ledger. The auditor catches the discrepancy, leaving you with unexpected tax penalties and hours of manual reconciliations.\n\nOperra applies 18% VAT after the discount on every line automatically. Every payment rolls straight into one ledger with zero calculation errors.",
+    "hashtags": [
+      "#HotelFinance",
+      "#ZanzibarHotels",
+      "#HotelManagement",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "Overhead view looking straight down onto a smooth, pale chunam plaster desk surface inside a manager's office in Stone Town, Zanzibar. Six to eight objects are neatly arranged across the flat surface. To the right of centre, a plain vintage brass desk calculator sits beside a small stack of untitled cream-colored paper receipts and a plain olive-green clothbound ledger folder. Nearby props include a pair of tortoiseshell reading glasses, a polished brass fountain pen, a small ceramic teacup, and a carved wooden sea turtle paperweight. Soft natural daylight streams across the workspace from a nearby arched window. The centre band remains clean and uncluttered. Crisp editorial still-life photography with soft natural shadows and rich tactile materials.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "finance",
+    "angle": "discounts applied before VAT, and the auditor notices",
+    "backgroundPath": "state/bg/operra-2026-11-09-16-pain-point.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-09T13:00:00.000Z",
+    "createdAt": "2026-11-08T18:05:39.490Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3202997961
+  },
+  {
+    "id": "operra-2026-11-09-20-number-that-lands",
+    "eyebrow": "Company Accounts",
+    "headline": "Break down corporate debt into 4 clear ageing buckets",
+    "body": "Track unpaid company folios across 0-30, 31-60, 61-90, and 90+ days before credit limits are breached.",
+    "cta": "See how it works",
+    "caption": "When corporate clients in Mwanza host workshops, post-event billing can linger for weeks without clear visibility. Operra breaks down outstanding balances into 4 ageing buckets: 0–30, 31–60, 61–90, and 90+ days. Set strict per-company credit limits so over-limit charges are automatically blocked until finance approves. Generate branded monthly statements instantly for print or WhatsApp.",
+    "hashtags": [
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "A back-office setting in a lakeside hotel in Mwanza overlooking Lake Victoria. Composition: overhead view looking straight down onto a work surface where the story is laid out: six to nine related objects arranged with intent. On a dark polished wooden table, a plain, untitled navy leatherbound folder sits right of centre. Story props include a desktop solar calculator, a slim brass pen, reading glasses, a brass paperweight, and a ceramic coffee cup. Soft-focus hands rest near the table edge. Light/tone: even soft daylight from a nearby window, mid-tone, true colours. Treatment: crisp editorial still-life photography, soft natural shadows, tactile materials. Calm zone: keep the left half of the frame, from the middle down to the bottom, visually quiet on plain dark wood.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "flatlay",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "credit-accounts",
+    "angle": "a corporate guest charges past the company's limit",
+    "backgroundPath": "state/bg/operra-2026-11-09-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-09T17:00:00.000Z",
+    "createdAt": "2026-11-08T18:05:51.675Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "90,"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 2315666603
   }
 ]
