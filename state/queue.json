@@ -14316,7 +14316,7 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-09T22:23:42.226Z",
+    "lastAttempt": "2026-11-09T23:08:52.637Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-11-09T22:23:42.160Z"
   },
@@ -15925,7 +15925,9 @@
       "warnings": [],
       "builtAt": "2026-11-09T23:08:22.485Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-11-09T23:08:52.637Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-11-10-16-industry-note",
