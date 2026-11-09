@@ -15807,5 +15807,170 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 2315666603
+  },
+  {
+    "id": "operra-2026-11-10-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Moshi Lodge",
+        "headline": "Jumatatu asubuhi, chupa zimepotea wapi?",
+        "body": "Kila mwanzo wa wiki vinywaji vilitoweka bila maelezo. Hakuna aliyekuwa na majibu sahihi stoo au bar."
+      },
+      {
+        "eyebrow": "Ushuhuda",
+        "headline": "Lodge ya Moshi ilivyokomesha upotevu wa vinywaji",
+        "body": "Kila cocktail inayouzwa bar sasa inakata viungo vyake stoo mara moja kupitia mfumo wetu."
+      },
+      {
+        "eyebrow": "Usimamizi",
+        "headline": "Hamisho la stoo lina kumbukumbu pande zote",
+        "body": "Hamisho kati ya bar, jikoni na stoo kuu sasa linafuatiliwa vizuri na kuonyesha tofauti mara moja."
+      },
+      {
+        "eyebrow": "Matokeo",
+        "headline": "Udhibiti kamili wa stoo na manunuzi",
+        "body": "Operra inakupa taarifa mapema kabla bidhaa hazijaisha stoo. Rejesha nidhamu na amani kwenye hoteli yako."
+      }
+    ],
+    "caption": "Katika lodge moja eneo la Moshi, kila Jumatatu asubuhi ilikuwa na swali moja tu: chupa zilizobaki ziko wapi? Leo hii, mmiliki anafuatilia kila hamisho la bidhaa kati ya stoo kuu, bar na jikoni kwa urahisi. Cocktails zinapouzwa bar, viungo vinakatwa kwenye stoo papo hapo, na hesabu za stoo zinaonyesha tofauti kabla ya manunuzi mapya. Operra imerudisha nidhamu ya stoo na manunuzi bila vipimo vya kubahatisha.",
+    "hashtags": [
+      "#UsimamiziWaHoteli",
+      "#MoshiHotels",
+      "#HoteliTanzania",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A quiet back-office pantry area inside a highland stone lodge in Moshi, with lush green coffee trees visible through a bright window. Sunlight streams across a polished dark-stained wooden shelf on the right half of the frame, holding plain untitled dark glass bottles and stacked woven coasters. In the background, soft-focus stone architecture gives highland warmth. A hotel staff member in a clean apron works softly in the background, seen from behind. Composition features a crisp detail filling the right half, leaving the lower left space soft, plain, and clear. Light is high-key, clean, and airy. 100mm macro lens at f/4, capturing timber grain and smooth glass details.",
+    "cta": "Jaribu Operra Leo",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Moshi",
+    "feature": "inventory",
+    "angle": "'where did the bottle go?' on Monday morning",
+    "backgroundPath": "state/bg/operra-2026-11-10-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-10T05:00:00.000Z",
+    "createdAt": "2026-11-09T18:04:41.549Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 430226249,
+    "slideFiles": [
+      "operra-2026-11-10-08-client-proof-1.png",
+      "operra-2026-11-10-08-client-proof-2.png",
+      "operra-2026-11-10-08-client-proof-3.png",
+      "operra-2026-11-10-08-client-proof-4.png"
+    ],
+    "headline": "Jumatatu asubuhi, chupa zimepotea wapi?"
+  },
+  {
+    "id": "operra-2026-11-10-13-swahili-tip",
+    "eyebrow": "Mapokezi",
+    "headline": "Acha kutegemea ubao wa chaki",
+    "body": "Tumia ramani ya vyumba inayoonyesha hali ya vyumba vyako vyote moja kwa moja. Jua vyumba vilivyo wazi au vinavyosafishwa bila kupiga simu housekeeping.",
+    "cta": "Jaribu Operra",
+    "caption": "Je, ubao wako wa vyumba hapo mapokezi Dar es Salaam unatoa taarifa sahihi? Mara nyingi ubao unachelewa, na mgeni anaweza kupewa chumba ambacho bado hakijasafishwa.\n\nOperra inabadilisha hiyo 'whiteboard' kuwa ramani ya kidijitali inayoonyesha hali tano za vyumba moja kwa moja. Utaona vyumba vilivyo wazi, vyenye wageni, vinavyosafishwa, au vilivyo 'out of service' kwa wakati mmoja. Kila chumba kinaonyesha bei ya TSh na idadi ya wageni. 🏨",
+    "hashtags": [
+      "#OperraTanzania",
+      "#DarHotels",
+      "#HotelManagement",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "A sophisticated hotel lobby along the Kivukoni waterfront in Dar es Salaam, with large windows overlooking the hazy blue Indian Ocean and distant harbour cranes. The scene captures the quiet transition between hotel shifts. The hero detail is a stack of plain, untitled dark-navy clothbound folders resting on a polished grey granite counter. Nearby props include a small unbranded brass service bell, a minimalist glass vase with a sprig of jasmine, and a sleek silver pen. In the background, a staff member in a crisp white uniform is partially visible from behind, adjusting a luggage cart. Composition: a close detail filling the right half of the frame, with the wider room still readable in the soft background. Light/tone: light, high-key, clean and airy. Treatment: 100mm macro lens at f/4, fine texture detail — granite flecks, cloth weave, and brushed metal. The centre band is a soft, neutral blur of the lobby wall.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "room-operations",
+    "angle": "the whiteboard behind reception that is always one hour old",
+    "backgroundPath": "state/bg/operra-2026-11-10-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-10T10:00:00.000Z",
+    "createdAt": "2026-11-09T18:13:53.870Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2225621718
+  },
+  {
+    "id": "operra-2026-11-10-16-industry-note",
+    "eyebrow": "Audit Trail",
+    "headline": "When the cash drawer balances but the ledger shifts",
+    "body": "Unchecked voided items and manual rate edits quietly distort shift reports. User-linked activity logs reveal every change the moment it happens.",
+    "cta": "See live demo",
+    "caption": "In busy Arusha safari lodges, shift handovers often look clean on paper. The cash drawer matches the receipt count, yet month-end margins fall short. Silent overrides, unbacked room rate changes, and untracked voids quietly distort daily revenue figures. East African hospitality operations are shifting toward immutable audit trails where every entry is bound to a specific user and timestamp. When every adjustment leaves a clear record, your books stay accurate without tedious late-night checks.",
+    "hashtags": [
+      "#HotelManagement",
+      "#ArushaHotels",
+      "#HotelOperations",
+      "#HospitalityTech"
+    ],
+    "imagePrompt": "A bright back-office workspace inside a lodge on the slopes of Mount Meru in Arusha, with garden greenery visible through paned glass windows. An evening shift audit underway, right after dinner service. On the right side of the frame, a sharp close-up shows a plain untitled brass receipt spindle resting on a light-oak desk, holding unprinted paper chits. Nearby rest a white ceramic coffee cup, a plain untitled dark-green linen folder, and a brass key ring. In the soft-focused background, a staff member stands turned away from the camera. Composition is a close detail filling the right half of the frame with the airy room softly blurred. Light, high-key, clean and airy, shot on a 100mm macro lens at f/4 highlighting wood grain and metal textures. The centre band remains visually quiet over a plain cream plaster wall blur.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Arusha",
+    "series": null,
+    "feature": "audit-center",
+    "angle": "the cash drawer matches paper but the books do not",
+    "backgroundPath": "state/bg/operra-2026-11-10-16-industry-note.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-10T13:00:00.000Z",
+    "createdAt": "2026-11-09T18:14:49.239Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2377430276
+  },
+  {
+    "id": "operra-2026-11-10-20-feature-spotlight",
+    "eyebrow": "Mapokezi",
+    "headline": "Tambua wageni wako wa kudumu papo hapo",
+    "body": "Operra inatunza historia ya mgeni na kupandisha bendera za VIP moja kwa moja. Inajumuisha fomu ya NIDA na pasipoti sehemu moja.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Mgeni anaporudi Zanzibar, asijisikie kama mgeni mgeni. Operra inatunza kumbukumbu za kila mteja—kuanzia hadhi yake hadi mapendeleo ya chumba. Unapofungua ukurasa wa mgeni, bendera za VIP na kampuni zinatokea zenyewe ili timu yako ijue jinsi ya kumhudumia.\n\nKila taarifa inayotazamwa inarekodiwa kwa usalama wa data. Acha kumuuliza mgeni maelezo yale yale kila mwaka. Timu yako inajua nani anakuja, na mgeni anahisi thamani ya ukarimu wako.",
+    "hashtags": [
+      "#Operra",
+      "#ZanzibarHospitality",
+      "#HotelManagement",
+      "#FrontDesk"
+    ],
+    "imagePrompt": "A quiet reception area in a Stone Town boutique hotel with coral-stone walls and a heavy, brass-studded dhow-wood counter. A close-up on the right side of the frame shows a single, cold, moisture-beaded glass of red hibiscus tea resting on a plain, untitled silver coaster. Beside it, a small palm-leaf basket holds a rolled white linen towel. In the soft-focus background, a guest's hand rests on the dark wood near a small dish of jasmine flowers. The left half of the frame remains a quiet, out-of-focus view of a white-washed wall with the soft shadow of a palm frond. Composition: a close detail filling the right half of the frame, with the wider room still readable in the soft background. Light: light, high-key, clean and airy. Treatment: 100mm macro lens at f/4, fine texture detail on silver and wood grain.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "macro",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "guest-crm",
+    "angle": "asking a returning guest for their phone number again",
+    "backgroundPath": "state/bg/operra-2026-11-10-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-10T17:00:00.000Z",
+    "createdAt": "2026-11-09T18:17:05.338Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 359980707
   }
 ]
