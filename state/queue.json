@@ -15900,7 +15900,32 @@
     "createdAt": "2026-11-09T18:13:53.870Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2225621718
+    "bgSeed": 2225621718,
+    "reel": {
+      "file": "operra-2026-11-10-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-10-13-swahili-tip.mp4",
+      "beats": [
+        "Ubao wa mapokezi unachelewesha taarifa?",
+        "Fuatilia vyumba vilivyo wazi moja kwa moja",
+        "Chumba kilichosafishwa kinaonekana mara moja",
+        "Udhibiti thabiti wa vyumba vyako",
+        "Mapokezi yenye uhakika bila ubao"
+      ],
+      "narration": "Je, ubao wa chaki mapokezi unakupa taarifa zilizopitwa na wakati? Operra inakupa ramani ya vyumba inayoonyesha vyumba vilivyo wazi na vinavyosafishwa moja kwa moja. Hakuna haja ya kupiga simu housekeeping. Kila uhamisho unathibitishwa, na wageni wanapata vyumba vilivyo tayari bila kuchelewa.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "ui-screen:housekeeping",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 2,
+      "warnings": [],
+      "builtAt": "2026-11-09T23:08:22.485Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-10-16-industry-note",
