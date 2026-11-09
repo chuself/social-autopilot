@@ -1,20 +1,6 @@
 [
   {
     "platform": "facebook",
-    "postId": "1049514968255534_122171802303351110",
-    "url": "https://facebook.com/1049514968255534_122171802303351110",
-    "id": "operra-2026-10-14-20-client-proof",
-    "postedAt": "2026-10-14T17:25:05.090Z"
-  },
-  {
-    "platform": "instagram",
-    "postId": "18022909496933224",
-    "url": null,
-    "id": "operra-2026-10-14-20-client-proof",
-    "postedAt": "2026-10-14T17:25:17.365Z"
-  },
-  {
-    "platform": "facebook",
     "postId": "1049514968255534_122171997003351110",
     "slides": 3,
     "id": "operra-2026-10-15-08-swahili-tip",
@@ -1415,5 +1401,19 @@
     "id": "operra-2026-11-09-13-feature-spotlight",
     "format": "reel",
     "postedAt": "2026-11-09T10:02:13.354Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "18596547790068842",
+    "id": "operra-2026-11-09-16-pain-point",
+    "format": "reel",
+    "postedAt": "2026-11-09T13:02:21.207Z"
+  },
+  {
+    "platform": "facebook",
+    "postId": "1667239838400405",
+    "id": "operra-2026-11-09-16-pain-point",
+    "format": "reel",
+    "postedAt": "2026-11-09T13:02:47.865Z"
   }
 ]
