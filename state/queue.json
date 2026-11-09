@@ -15746,7 +15746,23 @@
     "createdAt": "2026-11-08T18:05:39.490Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3202997961
+    "bgSeed": 3202997961,
+    "reel": {
+      "file": "operra-2026-11-09-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-09-16-pain-point.mp4",
+      "beats": [
+        "Diskaunti za makundi zinaleta shida ya kodi?",
+        "Kupiga hesabu kabla ya diskaunti inaleta makosa",
+        "Operra inaweka kodi baada ya diskaunti kiotomatiki",
+        "Malipo yote yanaingia kwenye leja moja mara moja"
+      ],
+      "narration": "Kutoa diskaunti kwa wageni Zanzibar kusilete matatizo wakati wa ukaguzi wa kodi. Wafanyakazi wakihesabu kodi kabla ya punguzo, kumbukumbu zote zinakosewa. Operra inaweka kodi baada ya punguzo kwenye kila ankara kiotomatiki, na kuingiza kila malipo kwenye leja moja.",
+      "hasVoice": true,
+      "engine": "classic",
+      "fallback": "checker: sound stamp and bloom pile up at 8.636s",
+      "builtAt": "2026-11-09T10:13:37.174Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-09-20-number-that-lands",
