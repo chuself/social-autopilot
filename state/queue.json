@@ -16130,7 +16130,32 @@
     "createdAt": "2026-11-10T18:11:32.045Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 537792473
+    "bgSeed": 537792473,
+    "reel": {
+      "file": "operra-2026-11-11-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-11-13-number-that-lands.mp4",
+      "beats": [
+        "Monday mornings bring urgent requests for reports",
+        "Operra brings your operational data together instantly",
+        "Get clear insights across every single department",
+        "Review your lodge performance with complete confidence"
+      ],
+      "narration": "Monday mornings in Moshi shouldn't start with waiting for figures. Operra pulls live occupancy, revenue, and restaurant data directly from your single ledger into clear reports. Export professional files in seconds and review your property with confidence.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [
+        "images: could not be inspected (vision unavailable)"
+      ],
+      "builtAt": "2026-11-10T20:28:15.687Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-11-16-client-proof",
