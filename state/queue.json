@@ -15970,7 +15970,23 @@
     "createdAt": "2026-11-09T18:14:49.239Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2377430276
+    "bgSeed": 2377430276,
+    "reel": {
+      "file": "operra-2026-11-10-16-industry-note.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-10-16-industry-note.mp4",
+      "beats": [
+        "When your cash matches but margins drop",
+        "Manual edits quietly distort shift reports",
+        "Operra restores the true room rate",
+        "Every shift change is logged instantly"
+      ],
+      "narration": "In busy Arusha lodges, cash drawers can balance while ledger records quietly shift. Operra links every single entry to a specific staff member and timestamp. Unbacked overrides become instantly clear, giving lodge owners complete control and accurate revenue records.",
+      "hasVoice": true,
+      "engine": "classic",
+      "fallback": "checker: sound stamp and bloom pile up at 8.809s",
+      "builtAt": "2026-11-10T10:09:36.370Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-10-20-feature-spotlight",
