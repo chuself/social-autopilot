@@ -16199,7 +16199,30 @@
     "createdAt": "2026-11-10T18:12:11.443Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3342040087
+    "bgSeed": 3342040087,
+    "reel": {
+      "file": "operra-2026-11-11-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-11-16-client-proof.mp4",
+      "beats": [
+        "Bado unatuma muhtasari wa asubuhi WhatsApp?",
+        "Dashibodi ya mapokezi inaonyesha wageni wote",
+        "Kila taarifa iko tayari asubuhi",
+        "Makabidhiano ya zamu bila kupiga simu"
+      ],
+      "narration": "Zamu ya asubuhi kwenye hoteli haihitaji tena meseji ndefu za WhatsApp. Ukiwa na Operra, dashibodi ya mapokezi inaonyesha wageni wanaoingia, vyumba wazi na madeni papo hapo. Makabidhiano yanakamilika haraka bila kupigiana simu wala kusubiri muhtasari.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-11T10:07:19.080Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-11-20-swahili-tip",
