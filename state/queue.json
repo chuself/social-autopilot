@@ -16359,7 +16359,30 @@
     "scheduledFor": "2026-11-12T10:00:00.000Z",
     "createdAt": "2026-11-11T18:03:50.589Z",
     "status": "pending",
-    "bgProvider": null
+    "bgProvider": null,
+    "reel": {
+      "file": "operra-2026-11-12-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-12-13-feature-spotlight.mp4",
+      "beats": [
+        "Mgeni anasubiri chumba kilichosafishwa kitambo",
+        "Taarifa za usafi zinasasishwa papo hapo",
+        "Ukaguzi wa vyumba unakamilika bila makosa",
+        "Wageni wanaingia vyumbani bila kuchelewa mapokezi"
+      ],
+      "narration": "Mgeni anasubiri mapokezi akidhani chumba kinaandaliwa, kumbe kimeshasafishwa. Operra inatuma taarifa mapokezi mara tu usafi na ukaguzi unapokamilika. Kila kitu kinathibitishwa kwa usahihi bila kuhitaji kupiga simu wala kumpotezea mgeni muda.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:housekeeping",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-11T20:15:50.937Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-12-16-pain-point",
