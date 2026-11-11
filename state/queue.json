@@ -14316,7 +14316,7 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-11T19:49:18.441Z",
+    "lastAttempt": "2026-11-11T20:16:07.264Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-11-11T19:49:18.359Z"
   },
@@ -16382,7 +16382,9 @@
       "warnings": [],
       "builtAt": "2026-11-11T20:15:50.937Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-11-11T20:16:07.265Z",
+    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
     "id": "operra-2026-11-12-16-pain-point",
