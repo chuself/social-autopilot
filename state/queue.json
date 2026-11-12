@@ -16425,7 +16425,30 @@
     "scheduledFor": "2026-11-12T13:00:00.000Z",
     "createdAt": "2026-11-11T18:10:29.590Z",
     "status": "pending",
-    "bgProvider": null
+    "bgProvider": null,
+    "reel": {
+      "file": "operra-2026-11-12-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-12-16-pain-point.mp4",
+      "beats": [
+        "Meza bora imebaki wazi usiku kucha?",
+        "Wageni wanaomba meza kupitia link moja",
+        "Mgahawa unathibitisha na kuachia meza",
+        "Mapato ya mgahawa yanalindwa kila usiku"
+      ],
+      "narration": "Meza bora kwenye mgahawa wako Moshi inabaki tupu usiku kucha kwasababu ya aliyeweka akiba kutotokea? Ukiwa na Operra, unashiriki link moja ya uhifadhi. Mgahawa wako unathibitisha kila ombi kwanza na kulinda mauzo yako bila kupoteza wageni.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:booking",
+        "ui-screen:tables",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-12T10:04:01.284Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-12-20-number-that-lands",
