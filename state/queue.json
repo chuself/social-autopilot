@@ -16499,5 +16499,165 @@
       "facebook:1049514968255534_122185187943351110",
       "instagram:18075310847592854"
     ]
+  },
+  {
+    "id": "operra-2026-11-13-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Mizania ya jioni",
+        "headline": "Mgeni katuma deposit, risiti iko wapi?",
+        "body": "Pesa imeingia kwenye simu, lakini hakuna anayejua ni ya chumba gani au mgeni yupi."
+      },
+      {
+        "eyebrow": "Uzoefu Arusha",
+        "headline": "Usawa wa hesabu kwa sekunde chache",
+        "body": "M-Pesa, Tigo Pesa na Airtel Money zinaingia moja kwa moja kwenye folio pamoja na namba ya muamala."
+      },
+      {
+        "eyebrow": "Kazi rahisi",
+        "headline": "Kila muamala una kumbukumbu sahihi",
+        "body": "Tafuta malipo ya simu kwa urahisi kwenye stay ya mgeni bila kupoteza muda usiku."
+      }
+    ],
+    "caption": "Lodge moja Arusha ilikuwa ikipoteza masaa kila jioni kulinganisha malipo ya M-Pesa, Tigo Pesa na Airtel Money na madaftari ya mapokezi. Kupitia Operra, kila muamala unajirekodi kwenye folio ya mgeni pamoja na namba yake ya kumbukumbu. Kulinganisha hesabati sasa kunachukua sekunde chache badala ya masaa.",
+    "hashtags": [
+      "#HospitalityTanzania",
+      "#HotelManagement",
+      "#ArushaHotels",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A warm, wood-panelled finance office inside a safari lodge on a coffee estate in Arusha, with Mount Meru softly visible through a large framed window. End-of-day accounts work is taking place. On the right side of a polished mahogany desk sits a plain untitled brass desk calculator alongside a quiet monitor turned away. A ceramic mug of coffee, reading glasses, and a plain untitled dark green clothbound folder rest nearby. A soft-focus finance manager stands near the window facing away toward green garden trees. Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light and tone: muted harmonious palette of forest green, mahogany, warm cream, and ochre with soft flat light. Treatment: gouache and ink illustration with visible brush texture. The left half of the frame remains visually quiet with plain plaster wall and soft shadow.",
+    "cta": "Jaribu Operra leo",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "feature": "mobile-money",
+    "angle": "a deposit paid by phone that nobody can match",
+    "backgroundPath": "state/bg/operra-2026-11-13-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-13T05:00:00.000Z",
+    "createdAt": "2026-11-12T18:03:42.027Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 4283233681,
+    "slideFiles": [
+      "operra-2026-11-13-08-client-proof-1.png",
+      "operra-2026-11-13-08-client-proof-2.png",
+      "operra-2026-11-13-08-client-proof-3.png"
+    ],
+    "headline": "Mgeni katuma deposit, risiti iko wapi?"
+  },
+  {
+    "id": "operra-2026-11-13-13-swahili-tip",
+    "eyebrow": "Mgahawa Na Baa",
+    "headline": "Punguza muda wa kuagiza chakula wakati mgahawa umejaa",
+    "body": "Wakati wa Rush Mode kwenye Operra, unahitaji miguso miwili tu kupokea oda na miguso mitatu kukamilisha malipo ya mgeni bila kukwaza huduma.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wakati mgahawa wa hoteli yako Zanzibar umejaa jioni, muhudumu hapaswi kutumia muda mrefu mbele ya skrini. Mfumo wa POS unaoomba hatua kumi kuingiza oda moja unachelewesha jikoni na kuudhi wageni.\n\nBoresha kasi ya huduma kwa kutumia Rush Mode. Kwa miguso miwili pekee oda inaingia jikoni, na miguso mitatu inafunga bili kwenda kwenye chumba cha mgeni, kadi, au mobile money. Kila oda inabaki na jina la muhudumu bila makosa. 🍽️",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelPOS",
+      "#OperraTech",
+      "#HospitalityTZ"
+    ],
+    "imagePrompt": "A high-ceilinged terrace restaurant in a Zanzibar resort with whitewashed coral-stone walls, polished teak dining tables, and carved arches opening to turquoise water. Busy dinner preparation setting. Right of centre, a plain, untitled brass tray holding clean glassware and folded white linen napkins. Polished silverware aligned beside ceramic plates, a glass vase with a fresh bougainvillea bloom, and open wooden shutters. Soft-focus waitstaff in aprons seen from behind arranging tables. Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light/tone: muted harmonious palette of four or five colours, soft flat light. Treatment: gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph. The upper central wall area remains plain and visually quiet.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "restaurant-pos",
+    "angle": "a full dining room and a POS that needs ten taps",
+    "backgroundPath": "state/bg/operra-2026-11-13-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-13T10:00:00.000Z",
+    "createdAt": "2026-11-12T18:09:17.813Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2452892698
+  },
+  {
+    "id": "operra-2026-11-13-16-industry-note",
+    "eyebrow": "Group Bookings",
+    "headline": "Unmatched mobile deposits stall group arrivals",
+    "body": "Unlinked M-Pesa references create check-in bottlenecks during busy corporate event seasons.",
+    "cta": "See it work",
+    "caption": "Corporate gatherings in Mwanza often start with advance mobile payments. Yet when an M-Pesa deposit lands without a direct link to the room block, receptionists waste critical arrival minutes matching transaction codes.\n\nModern regional operations attach payment references directly to the quotation before converting it into a reservation. When delegates arrive, every deposit is already verified, room conflicts are locked out, and check-in moves smoothly.",
+    "hashtags": [
+      "#HotelOperations",
+      "#HospitalityManagement",
+      "#EastAfricaHotels",
+      "#Mwanza"
+    ],
+    "imagePrompt": "A lakeside hotel lounge setting in Mwanza with visible granite boulders and Lake Victoria through high arched windows. The scene captures the calm back-office preparation before a major corporate conference arrival. Right of centre, a plain untitled brass key tag sits beside a sleek dark metal ballpoint pen on a polished mahogany side table. A stack of plain, untitled teal linen-bound folders rests nearby alongside a neatly folded navy blue lanyard. In the soft-focus background, a staff member in professional attire is seen from behind reviewing a setup layout. Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light and tone: muted harmonious palette of deep teal, slate blue, warm brass, and rich mahogany with soft flat evening light. Treatment: gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph. Central zone remains a calm, soft-focus shadow across a plain plaster wall.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "reservations",
+    "angle": "the deposit paid by M-Pesa that nobody matched to the booking",
+    "backgroundPath": "state/bg/operra-2026-11-13-16-industry-note.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-13T13:00:00.000Z",
+    "createdAt": "2026-11-12T18:09:28.402Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 871133031
+  },
+  {
+    "id": "operra-2026-11-13-20-feature-spotlight",
+    "eyebrow": "Mikutano na Matukio",
+    "headline": "Usipoteze deposit ya mkutano siku ya tukio",
+    "body": "Operra inaweka malipo ya awali, menyu, na kalenda ya ukumbi kwenye kumbukumbu moja inayosasishwa mara moja.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Siku ya mkutano au sherehe Moshi, simu zikianza kuita mapokezi kuhusu deposit iliyolipwa wiki mbili zilizopita, kazi inasimama. Mhasibu anatafuta muamala wa M-Pesa kwenye simu, naye meneja anatafuta risiti.\n\nOperra inaunganisha kalenda ya ukumbi, menyu ya chakula, na deposit kwenye kumbukumbu moja. Malipo ya M-Pesa, Tigo Pesa, Airtel Money au kadi yanaingia papo hapo. Mteja anasaini dossier moja rasmi, na taarifa zote zinabaki salama kwenye mfumo.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#MoshiHotels",
+      "#Operra",
+      "#Mikutano"
+    ],
+    "imagePrompt": "A highland stone lodge event hall in Moshi with high timber ceiling beams and expansive glass doors looking out toward lush coffee foliage. An event room prepared for a seminar, featuring round banquet tables draped in cream linens. Right of centre, resting on a dark timber console, sits a plain, untitled deep-teal clothbound folder beside a heavy brass water pitcher. Round tables are arranged with crystal glasses, neatly folded cloth napkins, and subtle floral arrangements. In the soft-focus background, a staff member in a dark vest stands facing away, aligning chairs. An illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Muted harmonious palette of earth green, slate blue, and warm cream under soft flat light. Gouache and ink illustration with visible brush texture. The left half of the frame from middle to bottom remains visual quiet with a plain warm plaster wall and faint shadow.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "series": null,
+    "feature": "events",
+    "angle": "the deposit nobody can find on event day",
+    "backgroundPath": "state/bg/operra-2026-11-13-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-13T17:00:00.000Z",
+    "createdAt": "2026-11-12T18:09:40.886Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3844708070
   }
 ]

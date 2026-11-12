@@ -1,0 +1,4 @@
+{"t":"2026-11-12T18:03:42.026Z","provider":"gemini","model":"gemini-3.5-flash","feature":"plan-carousel","post":"operra-2026-11-13-08-client-proof","in":2659,"out":571,"think":1995,"outAudio":0,"inImage":0,"ok":true,"wf":"plan-week"}
+{"t":"2026-11-12T18:09:17.812Z","provider":"gemini","model":"gemini-3.5-flash","feature":"plan-reel","post":"operra-2026-11-13-13-swahili-tip","in":3532,"out":469,"think":3528,"outAudio":0,"inImage":0,"ok":true,"wf":"plan-week"}
+{"t":"2026-11-12T18:09:28.401Z","provider":"gemini","model":"gemini-3.5-flash","feature":"plan-reel","post":"operra-2026-11-13-16-industry-note","in":3454,"out":393,"think":1355,"outAudio":0,"inImage":0,"ok":true,"wf":"plan-week"}
+{"t":"2026-11-12T18:09:40.886Z","provider":"gemini","model":"gemini-3.5-flash","feature":"plan-poster","post":"operra-2026-11-13-20-feature-spotlight","in":3528,"out":490,"think":1789,"outAudio":0,"inImage":0,"ok":true,"wf":"plan-week"}
