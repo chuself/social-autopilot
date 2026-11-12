@@ -16586,7 +16586,30 @@
     "createdAt": "2026-11-12T18:09:17.813Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 2452892698
+    "bgSeed": 2452892698,
+    "reel": {
+      "file": "operra-2026-11-13-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-13-13-swahili-tip.mp4",
+      "beats": [
+        "Mgahawa umejaa wakati wa jioni?",
+        "Weka oda haraka bila kuchelewesha jikoni",
+        "POS rahisi kwa huduma ya haraka",
+        "Boresha kasi ya huduma mgahawani"
+      ],
+      "narration": "Wakati mgahawa wa hoteli yako Zanzibar umejaa jioni, muhudumu hapaswi kutumia muda mrefu mbele ya skrini. Mfumo wa Operra unaleta Rush Mode. Pokea oda jikoni na ukamilishe malipo kwenda kwenye chumba cha mgeni au simu kwa urahisi kabisa.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "pos-charge",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-12T20:47:07.922Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-13-16-industry-note",
