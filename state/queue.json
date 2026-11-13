@@ -14316,7 +14316,7 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-13T09:00:54.300Z",
+    "lastAttempt": "2026-11-13T10:05:58.203Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-11-13T10:00:56.126Z"
   },
@@ -16680,7 +16680,9 @@
       "warnings": [],
       "builtAt": "2026-11-13T10:05:42.493Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-11-13T10:05:58.204Z",
+    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
   },
   {
     "id": "operra-2026-11-13-20-feature-spotlight",
