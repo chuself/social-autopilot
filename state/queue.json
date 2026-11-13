@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-13T12:01:03.454Z"
+    "missedAt": "2026-11-13T13:01:17.617Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-13T12:01:03.454Z"
+    "missedAt": "2026-11-13T13:01:17.617Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-13T12:01:03.454Z"
+    "missedAt": "2026-11-13T13:01:17.617Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-13T12:01:03.454Z"
+    "missedAt": "2026-11-13T13:01:17.617Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14318,7 +14318,7 @@
     },
     "lastAttempt": "2026-11-13T12:01:03.540Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-13T12:01:03.454Z"
+    "missedAt": "2026-11-13T13:01:17.617Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -15122,7 +15122,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1055454036,
-    "missedAt": "2026-11-13T12:01:03.454Z"
+    "missedAt": "2026-11-13T13:01:17.617Z"
   },
   {
     "id": "operra-2026-11-07-08-client-proof",
@@ -15353,7 +15353,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 563589337,
-    "missedAt": "2026-11-13T12:01:03.454Z"
+    "missedAt": "2026-11-13T13:01:17.617Z"
   },
   {
     "0": {
@@ -15411,7 +15411,7 @@
     "headline": "operra-2026-11-08-08-pain-point",
     "lastAttempt": "2026-11-08T10:57:14.464Z",
     "lastSkipReason": "image not rendered",
-    "missedAt": "2026-11-13T12:01:03.445Z"
+    "missedAt": "2026-11-13T13:01:17.609Z"
   },
   {
     "id": "operra-2026-11-08-13-number-that-lands",
@@ -15807,7 +15807,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 2315666603,
-    "missedAt": "2026-11-13T12:01:03.454Z"
+    "missedAt": "2026-11-13T13:01:17.617Z"
   },
   {
     "id": "operra-2026-11-10-08-client-proof",
@@ -16655,7 +16655,7 @@
     ],
     "scheduledFor": "2026-11-13T13:00:00.000Z",
     "createdAt": "2026-11-12T18:09:28.402Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 871133031,
     "reel": {
@@ -16679,10 +16679,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-13T10:05:42.493Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-13T13:02:51.311Z",
+      "postIds": [
+        "instagram:17878004865588029",
+        "facebook:1629383678670920"
+      ]
     },
-    "lastAttempt": "2026-11-13T12:01:03.540Z",
-    "lastSkipReason": "filmed, waiting for its 16:00 EAT slot"
+    "lastAttempt": "2026-11-13T13:02:51.311Z"
   },
   {
     "id": "operra-2026-11-13-20-feature-spotlight",
