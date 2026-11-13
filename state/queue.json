@@ -16729,5 +16729,173 @@
       "facebook:1049514968255534_122185516803351110",
       "instagram:17884505487534731"
     ]
+  },
+  {
+    "id": "operra-2026-11-14-08-pain-point",
+    "slides": [
+      {
+        "eyebrow": "Hoteli Tatu",
+        "headline": "Mfumo tofauti kila mahali, ripoti zimetawanyika",
+        "body": "Kupata picha ya jumla ya biashara mwisho wa mwezi kunachukua masaa mengi ya kuchanganya spreadsheets."
+      },
+      {
+        "eyebrow": "Usumbufu wa Mwezi",
+        "headline": "Lahajedwali tatu za Excel kila wiki",
+        "body": "Kila meneja anatuma ripoti yake tofauti. Hujui takwimu halisi za kundi bila kufanya hesabu mwenyewe."
+      },
+      {
+        "eyebrow": "Mfumo Mmoja",
+        "headline": "Muonekano wa mmiliki katika mfumo mmoja",
+        "body": "Operra inajumuisha ripoti za hoteli zako zote papo hapo, huku kila kizio kikibaki na nembo yake."
+      },
+      {
+        "eyebrow": "Picha Kamili",
+        "headline": "Usimamizi rahisi wa hoteli zako zote",
+        "body": "Tazama mapato ya kundi zima mara moja. Rahisisha uendeshaji wa biashara yako leo."
+      }
+    ],
+    "caption": "Kudhibiti hoteli zaidi ya moja haipaswi kuwa kazi ya kukusanya lahajedwali tatu tofauti kila mwisho wa wiki. Kila meneja akituma ripoti kwa muundo wake, mmiliki anapoteza muda mwingi kuunganisha namba badala ya kufanya maamuzi ya biashara. Operra inakuwezesha kuona taarifa za hoteli zako zote mahali pamoja. Kila hoteli inajiendesha yenyewe na nembo yake, lakini mmiliki anapata picha kamili ya kundi zima papo hapo.",
+    "hashtags": [
+      "#UsimamiziWaHoteli",
+      "#HoteliTanzania",
+      "#OperraTech",
+      "#HospitalityEA"
+    ],
+    "imagePrompt": "A high-ceilinged corner executive office on an upper floor of a commercial tower in Dar es Salaam, looking out towards the humid ocean harbor where small dhow silhouettes drift in soft afternoon light. To the right of center sits a brass desk lamp alongside three stacked, plain untitled dark-teal clothbound ledgers and a wooden pen rest with a pen. A clear glass water carafe with two tumblers and a ceramic coffee cup rest on the polished mahogany desk. In the background, a soft-focus figure of a manager sits turned away toward the view. Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light/tone: muted harmonious palette of deep teal, mahogany, ochre, and warm grey, soft flat light. Treatment: gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph. Keep the left half of the frame, from the middle down to the bottom, visually quiet with a plain wall shadow and clean desk edge.",
+    "cta": "Jifunze zaidi Operra",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "feature": "multi-property",
+    "angle": "three lodges, three systems, three spreadsheets",
+    "backgroundPath": "state/bg/operra-2026-11-14-08-pain-point.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-14T05:00:00.000Z",
+    "createdAt": "2026-11-13T18:03:05.184Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 867081237,
+    "slideFiles": [
+      "operra-2026-11-14-08-pain-point-1.png",
+      "operra-2026-11-14-08-pain-point-2.png",
+      "operra-2026-11-14-08-pain-point-3.png",
+      "operra-2026-11-14-08-pain-point-4.png"
+    ],
+    "headline": "Mfumo tofauti kila mahali, ripoti zimetawanyika"
+  },
+  {
+    "id": "operra-2026-11-14-13-number-that-lands",
+    "eyebrow": "Finance & Accounts",
+    "headline": "A charge posts once or not at all",
+    "body": "When a payment retries at your Arusha property, Operra prevents duplicate charges. Every transaction rolls into one ledger instantly.",
+    "cta": "See how it works",
+    "caption": "When a card transaction hiccups during check-out at an Arusha lodge, retrying the payment shouldn't double-post to the guest folio. Duplicate entries create late-night reconciliation headaches and guest disputes.\n\nWith Operra, a charge posts once or not at all. Every POS order, folio settlement, and event deposit rolls directly into one live ledger, keeping your folio numbers strictly sequential with no gaps.",
+    "hashtags": [
+      "#HotelFinance",
+      "#TanzaniaHospitality",
+      "#ArushaHotels",
+      "#Operra"
+    ],
+    "imagePrompt": "A quiet back-office workspace inside a timber safari lodge in Arusha, featuring exposed wood walls and glass doors looking onto a lush garden with Mount Meru in the distance. Right of centre, a simple brass desk lamp illuminates a plain, untitled dark-brown leather binder lying flat beside a wooden calculator. On the table sit a ceramic mug, a small tray with key tags, and brass paperweights. In the soft-focus background, a hotel manager sits in a chair, seen from behind. Composition : an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light/tone : muted harmonious palette of four or five colours, soft flat light. Treatment : gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph. The middle wall is plain and visually quiet.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "feature": "finance",
+    "angle": "a payment posted twice after a retry",
+    "backgroundPath": "state/bg/operra-2026-11-14-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-14T10:00:00.000Z",
+    "createdAt": "2026-11-13T18:03:24.787Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 389226176
+  },
+  {
+    "id": "operra-2026-11-14-16-client-proof",
+    "eyebrow": "Corporate Credit",
+    "headline": "No more building month-end statements in Excel",
+    "body": "A Zanzibar resort switched from manual spreadsheet reconciliations to branded monthly statements with automated 0 to 90 day ageing buckets.",
+    "cta": "See Operra live",
+    "caption": "Month-end used to mean copy-pasting corporate charges from daily spreadsheets into custom Excel statements for every company account in Zanzibar.\n\nNow, branded monthly statements generate automatically, organized into 0-30, 31-60, 61-90, and 90+ day ageing buckets. Over-limit charges stay blocked until finance approves, keeping corporate credit completely under control.\n\nReady for print or WhatsApp dispatch in one click.",
+    "hashtags": [
+      "#HotelManagement",
+      "#ZanzibarHotels",
+      "#HospitalityFinance",
+      "#Operra"
+    ],
+    "imagePrompt": "A quiet back-office workspace inside a Stone Town resort in Zanzibar, with thick coral-stone walls and a tall arched window looking out to calm turquoise ocean waters. On a dark mahogany desk right of centre sits a plain, untitled dark-teal clothbound ledger folder. Story props include a heavy brass paperweight, a simple calculator, and a neat stack of plain cream paper. In the soft-focus background, a hotel manager in a linen shirt stands turned away towards the window. The centre band remains visually quiet against a muted plaster wall. An illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Muted harmonious palette of four or five colours, soft flat light. Gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "credit-accounts",
+    "angle": "month-end statements built from Excel rows",
+    "backgroundPath": "state/bg/operra-2026-11-14-16-client-proof.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-14T13:00:00.000Z",
+    "createdAt": "2026-11-13T18:03:56.727Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "90,"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 303534898
+  },
+  {
+    "id": "operra-2026-11-14-20-swahili-tip",
+    "eyebrow": "Usimamizi wa Baa",
+    "headline": "Usisubiri Jumapili usiku kuhesabu chupa za baa",
+    "body": "Mfumo ukipunguza viungo vya vinywaji mara tu oda inapochapishwa, hesabu ya stoo na mauzo ya baa havitapishana tena.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Hesabu ya baa ya Jumapili usiku Mwanza mara nyingi huleta maumivu ya kichwa wakati idadi ya chupa na fedha hazioani.\n\nSiri ni kutumia mfumo unaopunguza vipimo vya kinywaji kila mara muhudumu anapotoa risiti. Pia unahamisha vinywaji kutoka stoo kuu kwenda baa kwa kumbukumbu ya pande zote mbili.\n\nBaa yako inabaki na idadi sahihi bila kufanya hesabu za kushtukiza usiku wa manane.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#HospitalityTanzania",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A lakeside hotel bar in Mwanza, with granite boulders and Lake Victoria visible through tall windows. Right of centre, a plain, untitled dark wood tray holds clear glass bottles with plain surfaces and a brass jigger. Story props include polished tumbler glasses, a stainless steel ice bucket, and a plain unprinted grey notepad with a pen. In the background, a soft-focus bartender seen from behind reaches up to align glasses on a high shelf. Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light/tone: muted harmonious palette of four or five colours, soft flat light. Treatment: gouache and ink illustration with visible brush texture. The left lower half is visually quiet with a shadow-draped wooden bar face.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "inventory",
+    "angle": "the bar count on Sunday night that never matches sales",
+    "backgroundPath": "state/bg/operra-2026-11-14-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-14T17:00:00.000Z",
+    "createdAt": "2026-11-13T18:04:12.996Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 467446504
   }
 ]
