@@ -16657,7 +16657,30 @@
     "createdAt": "2026-11-12T18:09:28.402Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 871133031
+    "bgSeed": 871133031,
+    "reel": {
+      "file": "operra-2026-11-13-16-industry-note.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-13-16-industry-note.mp4",
+      "beats": [
+        "Unmatched deposits delay group check ins",
+        "Attach payment references directly to quotations",
+        "Convert quotations into reservations instantly",
+        "Welcome corporate delegates without desk bottlenecks"
+      ],
+      "narration": "Corporate arrivals in Mwanza shouldn't stall over unlinked mobile deposit references. With Operra, payment references attach directly to group quotations before converting into reservations. When delegates arrive, every deposit is already verified for a swift check in.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:events",
+        "ui-screen:frontdesk",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-13T10:05:42.493Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-13-20-feature-spotlight",
