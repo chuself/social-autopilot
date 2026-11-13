@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-13T04:40:27.314Z"
+    "missedAt": "2026-11-13T05:41:04.379Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-13T04:40:27.314Z"
+    "missedAt": "2026-11-13T05:41:04.379Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-13T04:40:27.314Z"
+    "missedAt": "2026-11-13T05:41:04.379Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-13T04:40:27.315Z"
+    "missedAt": "2026-11-13T05:41:04.379Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14316,9 +14316,9 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-13T04:40:27.398Z",
+    "lastAttempt": "2026-11-13T05:41:41.314Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-13T04:40:27.315Z"
+    "missedAt": "2026-11-13T05:41:04.379Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -15122,7 +15122,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1055454036,
-    "missedAt": "2026-11-13T04:40:27.315Z"
+    "missedAt": "2026-11-13T05:41:04.379Z"
   },
   {
     "id": "operra-2026-11-07-08-client-proof",
@@ -15353,7 +15353,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 563589337,
-    "missedAt": "2026-11-13T04:40:27.315Z"
+    "missedAt": "2026-11-13T05:41:04.379Z"
   },
   {
     "0": {
@@ -15411,7 +15411,7 @@
     "headline": "operra-2026-11-08-08-pain-point",
     "lastAttempt": "2026-11-08T10:57:14.464Z",
     "lastSkipReason": "image not rendered",
-    "missedAt": "2026-11-13T04:40:27.305Z"
+    "missedAt": "2026-11-13T05:41:04.370Z"
   },
   {
     "id": "operra-2026-11-08-13-number-that-lands",
@@ -15807,7 +15807,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 2315666603,
-    "missedAt": "2026-11-13T04:40:27.315Z"
+    "missedAt": "2026-11-13T05:41:04.380Z"
   },
   {
     "id": "operra-2026-11-10-08-client-proof",
@@ -16543,7 +16543,7 @@
     ],
     "scheduledFor": "2026-11-13T05:00:00.000Z",
     "createdAt": "2026-11-12T18:03:42.027Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 4283233681,
     "slideFiles": [
@@ -16551,7 +16551,13 @@
       "operra-2026-11-13-08-client-proof-2.png",
       "operra-2026-11-13-08-client-proof-3.png"
     ],
-    "headline": "Mgeni katuma deposit, risiti iko wapi?"
+    "headline": "Mgeni katuma deposit, risiti iko wapi?",
+    "lastAttempt": "2026-11-13T05:41:41.236Z",
+    "postedAt": "2026-11-13T05:41:41.236Z",
+    "postIds": [
+      "facebook:1049514968255534_122185380777351110",
+      "instagram:18086179610372462"
+    ]
   },
   {
     "id": "operra-2026-11-13-13-swahili-tip",
@@ -16610,7 +16616,7 @@
       "builtAt": "2026-11-12T20:47:07.922Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-13T04:40:27.398Z",
+    "lastAttempt": "2026-11-13T05:41:41.315Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
