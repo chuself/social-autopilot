@@ -16822,7 +16822,32 @@
     "createdAt": "2026-11-13T18:03:24.787Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 389226176
+    "bgSeed": 389226176,
+    "reel": {
+      "file": "operra-2026-11-14-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-14-13-number-that-lands.mp4",
+      "beats": [
+        "When payment retries double post charges",
+        "Duplicate guest charges break ledger totals",
+        "Operra posts every charge once cleanly",
+        "All transactions enter one live ledger",
+        "Keep your hotel accounts clear today"
+      ],
+      "narration": "When a check-out payment retries at your Arusha property, duplicate charges create major accounting headaches. Operra ensures a charge posts once or not at all. Every transaction rolls instantly into one clean live ledger with zero folio gaps.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "problem-doc",
+        "folio-fix",
+        "ui-screen:reports",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-13T20:29:46.713Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-14-16-client-proof",
