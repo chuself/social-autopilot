@@ -16897,7 +16897,30 @@
       "90,"
     ],
     "bgProvider": "moss-fast",
-    "bgSeed": 303534898
+    "bgSeed": 303534898,
+    "reel": {
+      "file": "operra-2026-11-14-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-14-16-client-proof.mp4",
+      "beats": [
+        "Hesabu za makampuni mwisho wa mwezi?",
+        "Ripoti na madeni ya makampuni tayari",
+        "Kazi zote za akaunti zimerahisishwa",
+        "Mwisho wa mwezi bila shinikizo"
+      ],
+      "narration": "Mwisho wa mwezi huko Zanzibar ulikuwa ukimaanisha masaa mengi ya kuandaa hesabu za makampuni kwenye Excel. Sasa Operra inatengeneza taarifa za kila mwezi kiotomatiki na kupanga madeni vizuri. Kazi za fedha zinakwenda kwa urahisi na usalama.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-14T14:01:31.003Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-14-20-swahili-tip",
