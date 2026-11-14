@@ -16964,5 +16964,164 @@
       "facebook:1049514968255534_122185913301351110",
       "instagram:17981677067918165"
     ]
+  },
+  {
+    "id": "operra-2026-11-15-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "ROOM CONTROL",
+        "headline": "High turnaround demands instant room visibility",
+        "body": "Assigning a room still under maintenance to arriving guests ruins reputation faster than bad service."
+      },
+      {
+        "eyebrow": "FIVE STATES",
+        "headline": "Track every room status in real time",
+        "body": "Operra displays available, occupied, cleaning, maintenance, and out-of-service rooms across all buildings on one screen."
+      },
+      {
+        "eyebrow": "ACCURATE MOVES",
+        "headline": "Role-gated transfers protect room inventory",
+        "body": "Manage room blocks and guest transfers seamlessly with complete audit-traced logs across your property."
+      }
+    ],
+    "caption": "Trekking lodges in Moshi face tight guest turnarounds between expeditions. When front desk staff lack real-time visibility, rooms under repair get assigned by mistake, leading to poor guest experiences. Operra solves this with a live room map tracking five clear states: available, occupied, cleaning, maintenance, and out of service. Room transfers and blocks are role-gated and fully audit-traced, keeping your entire team synchronized without confusion.",
+    "hashtags": [
+      "#EastAfricaHospitality",
+      "#HotelManagement",
+      "#MoshiLodges",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A quiet maintenance workshop and storage alcove inside a stone and timber lodge garden in Moshi, with lush banana trees visible through a high window. Mid-morning maintenance tracking routine at a mountain lodge. On a wooden workbench right of centre sits a plain, untitled brass clipboard holding blank cream ledger paper. Surrounding props include a set of unbranded copper door hardware, a neatly organized wooden toolbox, a ring of solid brass keys on a felt mat, and leather work gloves. In the background garden, a soft-focus maintenance worker turned away from the camera walks toward the guest cottages. Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light/tone: muted harmonious palette of terracotta, sage green, brass, and warm timber, soft flat light. Treatment: gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph. The left half of the frame remains a visually quiet plaster wall in soft shadow.",
+    "cta": "Simplify room control",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Moshi",
+    "feature": "room-operations",
+    "angle": "a guest is given a room that is still under repair",
+    "backgroundPath": "state/bg/operra-2026-11-15-08-industry-note.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-15T05:00:00.000Z",
+    "createdAt": "2026-11-14T18:03:57.987Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 791669006,
+    "slideFiles": [
+      "operra-2026-11-15-08-industry-note-1.png",
+      "operra-2026-11-15-08-industry-note-2.png",
+      "operra-2026-11-15-08-industry-note-3.png"
+    ],
+    "headline": "High turnaround demands instant room visibility"
+  },
+  {
+    "id": "operra-2026-11-15-13-feature-spotlight",
+    "eyebrow": "Chakula Chumbani",
+    "headline": "Mgeni asipige simu mara tatu kuagiza chakula",
+    "body": "Vibandiko vya QR vyenye PIN chumbani vinamwezesha mgeni kuagiza chakula moja kwa moja, mapokezi yathibitishe na bili kwenda kwenye akaunti ya chumba.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Mgeni amewawasili Dar es Salaam baada ya safari ndefu. Anataka tu chakula chumbani, lakini badala yake anapiga simu mapokezi mara tatu kuulizia menu na kama jikoni wamepokea oda yake.\n\nBoresha huduma bila kuongeza usumbufu. Kwenye Operra, kila chumba kinakuwa na stika ya QR. Mgeni anachanganua, anaingiza PIN ya chumba chake, na kuagiza. Mapokezi wanathibitisha oda papo hapo kabla haijaenda jikoni, na gharama inaingia moja kwa moja kwenye bili ya chumba. Hakuna makosa au simu zisizoisha.",
+    "hashtags": [
+      "#HospitalityTanzania",
+      "#HotelManagement",
+      "#DarEsSalaamHotels",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A hotel room overlooking the Dar es Salaam harbour with soft evening light streaming through sheer curtains. On a dark mahogany table, right of centre, stands a small acrylic block holding a plain untitled card with a crisp geometric barcode square. Beside it sits a brass key tag, a water glass, a warm lamp, and a leather bag by the armchair. In the background, a soft-focus staff member carrying a serving tray is seen from behind. Composition: an illustrated scene with real depth and many small details, like a commissioned magazine cover illustration. Light/tone: muted harmonious palette of four or five colours, soft flat light. Treatment: gouache and ink illustration with visible brush texture — clearly an illustration, not a photograph. The middle wall is plain and visually quiet.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "digital-menu",
+    "angle": "a guest calls reception three times to order dinner",
+    "backgroundPath": "state/bg/operra-2026-11-15-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-15T10:00:00.000Z",
+    "createdAt": "2026-11-14T18:04:30.739Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 4162765274
+  },
+  {
+    "id": "operra-2026-11-15-16-pain-point",
+    "eyebrow": "Audit Trail",
+    "headline": "A bill voided at 2am and nobody knows who did it",
+    "body": "Silent edits cost real money. Operra logs every action to a specific user, role, and exact time so zero edits go unnoticed.",
+    "cta": "See it work",
+    "caption": "A bill gets voided at 2am in Arusha, but nobody on duty can explain why. Silent edits and untracked changes leave management guessing where daily revenue went.\n\nOperra logs every single action across your hotel. Every folio edit, void, or ledger adjustment is bound to a specific user, role, and exact timestamp. Entries are hash-chained, so silent modifications show up immediately across six operational views.\n\nNo anonymous edits. Just complete visibility over your revenue.",
+    "hashtags": [
+      "#HotelOperations",
+      "#ArushaHotels",
+      "#AuditTrail",
+      "#HotelManagement"
+    ],
+    "imagePrompt": "An executive back-office workspace inside a quiet hotel in Arusha, with views of lush jacaranda branches and Mount Meru softly silhouetted through high windows. On a dark wooden desk right of centre lies a plain, untitled olive-green clothbound folder resting next to a quiet ceramic mug. Nearby story props include a brass desk lamp casting a warm glow, a simple wooden desk organizer, and a sleek computer screen turned away. In the background, a soft-focus figure of a hotel manager stands looking toward the window, seen from behind. The style is a gouache and ink illustration with visible brush texture, featuring a muted palette of olive green, warm teak, dark slate, and cream in soft flat light with a visual calm zone in the upper center wall.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Arusha",
+    "series": null,
+    "feature": "audit-center",
+    "angle": "a bill voided at 2am and nobody knows who",
+    "backgroundPath": "state/bg/operra-2026-11-15-16-pain-point.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-15T13:00:00.000Z",
+    "createdAt": "2026-11-14T18:05:01.675Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3069523438
+  },
+  {
+    "id": "operra-2026-11-15-20-number-that-lands",
+    "eyebrow": "Guest Folios",
+    "headline": "4 payment tenders settled on a single folio",
+    "body": "Post minibar, laundry, or room moves in three taps. Combine cash, card, mobile money, or company accounts on one bill with zero math errors.",
+    "cta": "See it work",
+    "caption": "Checkout morning at a Zanzibar resort should never start with a bill dispute. When room service, laundry, and late check-outs post straight to the guest folio in three taps, checkout takes minutes instead of arguments.\n\nOperra lets you combine cash, card, mobile money, and company accounts on one bill. 18% VAT applies automatically after discounts, with an audit stamp on every line.\n\nNo missing charges, no manual math, and no friction at departure.",
+    "hashtags": [
+      "#HotelManagement",
+      "#ZanzibarHotels",
+      "#HotelOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "A quiet back office in a Stone Town hotel in Zanzibar, with coral-stone walls and carved mahogany louvres facing a sunlit palm courtyard. Soft morning light falls across a teak desk. Right of centre sits a plain brass desk bell beside a small brass calculator. A ceramic cup, a brass key tassel, and a woven coaster rest on the wood. In the soft-focus background, a hotel employee in linen stands near an archway, seen from behind. The left half of the frame is a calm zone of whitewashed wall in soft shadow. Composition is an illustrated scene with real depth, like a commissioned magazine cover illustration. Muted harmonious palette of terracotta, teak, and soft green with flat light. Gouache and ink illustration with visible brush texture.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "blueprint",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "guest-stay",
+    "angle": "checkout morning: the folio does not match what the guest remembers",
+    "backgroundPath": "state/bg/operra-2026-11-15-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-15T17:00:00.000Z",
+    "createdAt": "2026-11-14T18:05:19.659Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1340977004
   }
 ]
