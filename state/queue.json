@@ -17051,7 +17051,32 @@
     "createdAt": "2026-11-14T18:04:30.739Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 4162765274
+    "bgSeed": 4162765274,
+    "reel": {
+      "file": "operra-2026-11-15-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-15-13-feature-spotlight.mp4",
+      "beats": [
+        "Mgeni anapiga simu mapokezi kuagiza chakula?",
+        "Mgeni anaagiza chakula kwa PIN chumbani",
+        "Mapokezi yathibitishe kabla oda haijafika jikoni",
+        "Oda zote zinaenda moja kwa moja",
+        "Huduma ya chakula inakuwa ya haraka"
+      ],
+      "narration": "Mgeni wako asipige simu mara nyingi kuagiza chakula. Kwenye Operra, kila chumba kina stika ya QR. Mgeni anachanganua, anaingiza PIN ya chumba na kuagiza. Mapokezi wanathibitisha oda papo hapo kabla haijaenda jikoni, na bili inaenda kwenye akaunti ya chumba.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:menu",
+        "ui-screen:kitchen",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 2,
+      "warnings": [],
+      "builtAt": "2026-11-14T18:51:11.045Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-15-16-pain-point",
