@@ -1,12 +1,5 @@
 [
   {
-    "platform": "facebook",
-    "postId": "1049514968255534_122173660329351110",
-    "url": "https://facebook.com/1049514968255534_122173660329351110",
-    "id": "operra-2026-10-19-20-industry-note",
-    "postedAt": "2026-10-19T17:01:21.530Z"
-  },
-  {
     "platform": "instagram",
     "postId": "18465787459184858",
     "url": null,
@@ -1419,5 +1412,12 @@
     "slides": 4,
     "id": "operra-2026-11-14-08-pain-point",
     "postedAt": "2026-11-14T05:14:23.177Z"
+  },
+  {
+    "platform": "instagram",
+    "postId": "17908149741396301",
+    "id": "operra-2026-11-14-13-number-that-lands",
+    "format": "reel",
+    "postedAt": "2026-11-14T10:16:39.811Z"
   }
 ]
