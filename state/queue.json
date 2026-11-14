@@ -14316,7 +14316,7 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-14T13:18:35.945Z",
+    "lastAttempt": "2026-11-14T14:01:47.522Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-11-14T13:18:35.879Z"
   },
@@ -16920,7 +16920,9 @@
       "warnings": [],
       "builtAt": "2026-11-14T14:01:31.003Z",
       "status": "ready"
-    }
+    },
+    "lastAttempt": "2026-11-14T14:01:47.522Z",
+    "lastSkipReason": "filmed but past the 6h lateness cutoff"
   },
   {
     "id": "operra-2026-11-14-20-swahili-tip",
