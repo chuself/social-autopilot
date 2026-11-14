@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-14T04:44:09.979Z"
+    "missedAt": "2026-11-14T05:13:38.351Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-14T04:44:09.979Z"
+    "missedAt": "2026-11-14T05:13:38.351Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-14T04:44:09.979Z"
+    "missedAt": "2026-11-14T05:13:38.351Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-14T04:44:09.980Z"
+    "missedAt": "2026-11-14T05:13:38.351Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14316,9 +14316,9 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-14T04:44:10.046Z",
+    "lastAttempt": "2026-11-14T05:14:26.036Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-14T04:44:09.980Z"
+    "missedAt": "2026-11-14T05:13:38.351Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -15122,7 +15122,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1055454036,
-    "missedAt": "2026-11-14T04:44:09.980Z"
+    "missedAt": "2026-11-14T05:13:38.351Z"
   },
   {
     "id": "operra-2026-11-07-08-client-proof",
@@ -15353,7 +15353,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 563589337,
-    "missedAt": "2026-11-14T04:44:09.980Z"
+    "missedAt": "2026-11-14T05:13:38.351Z"
   },
   {
     "0": {
@@ -15411,7 +15411,7 @@
     "headline": "operra-2026-11-08-08-pain-point",
     "lastAttempt": "2026-11-08T10:57:14.464Z",
     "lastSkipReason": "image not rendered",
-    "missedAt": "2026-11-14T04:44:09.972Z"
+    "missedAt": "2026-11-14T05:13:38.345Z"
   },
   {
     "id": "operra-2026-11-08-13-number-that-lands",
@@ -15807,7 +15807,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 2315666603,
-    "missedAt": "2026-11-14T04:44:09.980Z"
+    "missedAt": "2026-11-14T05:13:38.351Z"
   },
   {
     "id": "operra-2026-11-10-08-client-proof",
@@ -16778,7 +16778,7 @@
     ],
     "scheduledFor": "2026-11-14T05:00:00.000Z",
     "createdAt": "2026-11-13T18:03:05.184Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 867081237,
     "slideFiles": [
@@ -16787,7 +16787,13 @@
       "operra-2026-11-14-08-pain-point-3.png",
       "operra-2026-11-14-08-pain-point-4.png"
     ],
-    "headline": "Mfumo tofauti kila mahali, ripoti zimetawanyika"
+    "headline": "Mfumo tofauti kila mahali, ripoti zimetawanyika",
+    "lastAttempt": "2026-11-14T05:14:25.977Z",
+    "postedAt": "2026-11-14T05:14:25.977Z",
+    "postIds": [
+      "facebook:1049514968255534_122185734495351110",
+      "instagram:18146080225716799"
+    ]
   },
   {
     "id": "operra-2026-11-14-13-number-that-lands",
@@ -16848,7 +16854,7 @@
       "builtAt": "2026-11-13T20:29:46.713Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-14T04:44:10.046Z",
+    "lastAttempt": "2026-11-14T05:14:26.036Z",
     "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
   },
   {
