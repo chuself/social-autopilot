@@ -17285,7 +17285,30 @@
     "createdAt": "2026-11-15T18:04:08.616Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 323338675
+    "bgSeed": 323338675,
+    "reel": {
+      "file": "operra-2026-11-16-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-16-13-swahili-tip.mp4",
+      "beats": [
+        "Benki inaomba historia ya usiku?",
+        "Pata ripoti zote mara moja",
+        "Ripoti safi za PDF kwa sekunde",
+        "Pata mkopo bila kuhangaika benki"
+      ],
+      "narration": "Benki ikiomba historia ya occupancy kabla ya kutoa mkopo Moshi, usihangaike. Mfumo wa Operra unakupa ripoti zote kutoka leja kuu mara moja. Pakua ripoti safi za PDF zenye nembo yako kwa sekunde chache ufanikishe mipango yako.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-15T19:23:42.706Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-16-16-industry-note",
