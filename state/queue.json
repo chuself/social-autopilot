@@ -17198,5 +17198,164 @@
       "facebook:1049514968255534_122186290059351110",
       "instagram:18499545478109194"
     ]
+  },
+  {
+    "id": "operra-2026-11-16-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Kutoka Mwanza",
+        "headline": "Haja ya kupiga kelele jikoni imeisha",
+        "body": "Jiko la mgahawa lilibadili kelele za dirisha na kuwa utulivu wakati wa chakula cha jioni."
+      },
+      {
+        "eyebrow": "Stesheni sahihi",
+        "headline": "Oda zinafika jikoni bila makosa",
+        "body": "Kila oda ya POS inafika stesheni husika ikiwa na madokezo ya mzio na mpangilio wa kozi."
+      },
+      {
+        "eyebrow": "Utulivu jikoni",
+        "headline": "Tiketi zinabadilika rangi zikichelewa",
+        "body": "Mpishi anaona muda wa kila sahani, na kila sahani inayouzwa inakata stoku ya mapishi mara moja."
+      }
+    ],
+    "caption": "Katika mgahawa wenye shughuli nyingi kando ya Ziwa Victoria mjini Mwanza, saa za chakula cha jioni zilikuwa na kelele za wahudumu wakipiga kelele dirishani. Sasa, kwa skrini ya jikoni ya Operra, oda kutoka POS zinaenda moja kwa moja kwenye stesheni sahihi zikiwa na mpangilio wa kozi na madokezo ya mzio. Tiketi zikichelewa zinabadilika rangi ili mpishi achukue hatua, na kila sahani inayouzwa inakata stoku moja kwa moja. Jiko linakuwa tulivu na huduma inawahi.",
+    "hashtags": [
+      "#HospitalityTanzania",
+      "#HotelierTanzania",
+      "#MwanzaHotels",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A lakeside hotel dining terrace in Mwanza, built over granite rocks beside Lake Victoria with fishing boats in the distance. The open kitchen pass connects to a timber deck during meal service. Right of centre rests a plain, untitled stainless steel pass shelf carrying two plated fish meals on white ceramics. Story props include copper garnishing spoons, cut limes, folded linen napkins, and silver plate covers. In the background, soft-focus chefs in white jackets work with their backs to the camera. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The left half of the frame remains visually quiet against a smooth, shaded plastered wall.",
+    "cta": "Zungumza nasi leo",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "feature": "kitchen-display",
+    "angle": "a waiter shouting orders through the hatch",
+    "backgroundPath": "state/bg/operra-2026-11-16-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-16T05:00:00.000Z",
+    "createdAt": "2026-11-15T18:03:48.741Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 4040129783,
+    "slideFiles": [
+      "operra-2026-11-16-08-client-proof-1.png",
+      "operra-2026-11-16-08-client-proof-2.png",
+      "operra-2026-11-16-08-client-proof-3.png"
+    ],
+    "headline": "Haja ya kupiga kelele jikoni imeisha"
+  },
+  {
+    "id": "operra-2026-11-16-13-swahili-tip",
+    "eyebrow": "Ripoti Na Fedha",
+    "headline": "Usikwame Benki Kwa Kukosa Historia Ya Usiku",
+    "body": "Pata ripoti zaidi ya 30 katika makundi 7 na kuzipakua kama PDF safi kwa sekunde chache.",
+    "cta": "Angalia Operra",
+    "caption": "Benki ikikuuliza historia ya occupancy na RevPAR kabla ya kutoa mkopo wa kupanua hoteli yako Moshi, usianze kufukua vitabu vya zamani au kujaza majedwali. Mfumo wa Operra unakupa ripoti zaidi ya 30 katika makundi 7 mara moja — kutoka kwenye leja moja ya fedha. Pata uchanganuzi wa mapato kwa kila aina ya chumba na uziprint kama PDF zenye nembo ya hoteli yako kwa sekunde chache.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MoshiHotels",
+      "#TanzaniaHospitality",
+      "#Operra"
+    ],
+    "imagePrompt": "A bright management workspace inside a highland timber lodge in Moshi, featuring expansive windows framed by volcanic stone and looking out toward coffee banana greenery and the snow cap of Mount Kilimanjaro. On the dark mahogany desk right of centre sits a plain, untitled dark-brown leather folder with no visible text. A ceramic coffee mug, a brass desk lamp, and a wooden pen tray rest nearby. In the soft-focus background, a hotel manager in modern smart clothing stands with back turned, looking out at the mountain landscape. Composition is a wide establishing view, shot on a 24mm lens with bright sunlit midday light, airy shadows, and travel-editorial photography style. The centre band of the frame remains visually quiet across the plain desktop shadow.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "feature": "reports",
+    "angle": "the bank asks for occupancy history before a loan",
+    "backgroundPath": "state/bg/operra-2026-11-16-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-16T10:00:00.000Z",
+    "createdAt": "2026-11-15T18:04:08.616Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 323338675
+  },
+  {
+    "id": "operra-2026-11-16-16-industry-note",
+    "eyebrow": "Guest Profiles",
+    "headline": "Forgotten corporate rates cost repeat business",
+    "body": "When front desk misses a returning executive's agreed rate, check-in friction damages long-term corporate accounts across Dar es Salaam.",
+    "cta": "See Operra live",
+    "caption": "Corporate guests expect instant recognition and their agreed negotiated rates every time they check in. In busy Dar es Salaam hotels, staff turnover often means a returning executive is billed full rack rate by mistake, leading to uncomfortable disputes at checkout.\n\nModern front desks rely on guest profiles that flag corporate status automatically. When stay history follows the guest across every visit, agreed rates apply correctly without relying on memory.",
+    "hashtags": [
+      "#HospitalityManagement",
+      "#DarEsSalaamHotels",
+      "#HotelOperations",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "An executive rooftop terrace lounge overlooking the modern glass towers of the Kivukoni waterfront in Dar es Salaam, with harbour ships visible in the bright ocean light. A midday corporate meeting break setting, showing clear ocean air and sun-drenched architectural lines. Right of centre, a plain, untitled dark blue lanyard lies neatly beside an unbranded ceramic coffee cup on a outdoor table. A stainless steel water carafe, a plain unprinted notebook with a pen, and empty teak loungers sit nearby. In the background, soft-focus figures of business guests stand near the balcony railing, turned away from the camera. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The centre of the frame stays visually calm with soft reflections on smooth glass.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "guest-crm",
+    "angle": "the corporate guest whose company rate was forgotten",
+    "backgroundPath": "state/bg/operra-2026-11-16-16-industry-note.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-16T13:00:00.000Z",
+    "createdAt": "2026-11-15T18:04:29.578Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3314970896
+  },
+  {
+    "id": "operra-2026-11-16-20-feature-spotlight",
+    "eyebrow": "Uhifadhi wa Meza",
+    "headline": "Link moja tu ya uhifadhi wa meza",
+    "body": "Kusanya maombi yote ya meza kutoka WhatsApp na Instagram mahali pamoja na kuzuia meza moja kupewa wageni wawili.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Jumamosi jioni Arusha, jumbe za WhatsApp na simu za kuomba meza zinaingia kwa wakati mmoja. Ni rahisi sana meza moja kuahidiwa wageni wawili bila kujua.\n\nUkiwa na Operra, unatuma link moja tu ya uhifadhi kwenye mitandao yako. Mgeni anapotuma ombi, timu yako inathibitisha na meza inaonekana kwenye ramani ya mgahawa kama 'Reserved'. Hakuna tena meza kuingiliana wala kuchanganyikiwa.",
+    "hashtags": [
+      "#ArushaHotels",
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A sunlit outdoor timber veranda dining space at a coffee estate lodge in Arusha, with lush green foliage and the soft blue contour of Mount Meru visible under a clear sky. Early afternoon setup before weekend service begins. On a polished teak table right of centre, a plain, untitled solid brass table marker stands beside neatly folded linen napkins and polished silver cutlery. In the background, a staff member in a clean dark apron is seen softly out of focus from behind adjusting a chair. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The left half of the frame features smooth timber decking and gentle shadows forming a quiet visual area.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "series": null,
+    "feature": "table-management",
+    "angle": "Saturday bookings scattered across DMs and phone calls",
+    "backgroundPath": "state/bg/operra-2026-11-16-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-16T17:00:00.000Z",
+    "createdAt": "2026-11-15T18:05:20.359Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3036340002
   }
 ]
