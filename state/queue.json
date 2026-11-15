@@ -17121,7 +17121,32 @@
     "createdAt": "2026-11-14T18:05:01.675Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3069523438
+    "bgSeed": 3069523438,
+    "reel": {
+      "file": "operra-2026-11-15-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-15-16-pain-point.mp4",
+      "beats": [
+        "Ankara imefutwa usiku bila maelezo",
+        "Bili iliyofutwa inaleta hasara kubwa",
+        "Operra inarekodi kila badiliko na husika",
+        "Ripoti za ukaguzi zinaonyesha muda wote",
+        "Usimamizi wa fedha unakuwa na amani"
+      ],
+      "narration": "Bili inapofutwa usiku bila maelezo, mapato ya hoteli yako yanaingia shakani. Operra inarekodi kila kitendo, ikihusisha mtumiaji, nafasi yake, na muda kamili wa badiliko. Hakuna marekebisho ya siri yanayopita bila kuonekana. Unapata uwazi kamili na amani ya akili kwenye usimamizi wa fedha.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "problem-doc",
+        "folio-fix",
+        "ui-screen:reports",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-15T10:08:09.465Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-15-20-number-that-lands",
