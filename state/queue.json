@@ -17420,5 +17420,173 @@
       "facebook:1049514968255534_122186694819351110",
       "instagram:17958312060276218"
     ]
+  },
+  {
+    "id": "operra-2026-11-17-08-pain-point",
+    "slides": [
+      {
+        "eyebrow": "Asubuhi na Mapema",
+        "headline": "Umeamka lakini huna namba za jana?",
+        "body": "Unafika hotelini asubuhi lakini huwezi kujua mapato ya usiku mpaka meneja aanze kukusanya risiti."
+      },
+      {
+        "eyebrow": "Siku za Nusu",
+        "headline": "Hesabu zisizolingana zinaleta msongo wa mawazo",
+        "body": "Droo ya fedha hailingani, folios zimebaki wazi, na siku imefungwa nusu bila wewe kujua."
+      },
+      {
+        "eyebrow": "Ukaguzi wa Usiku",
+        "headline": "Hatua sita zinazofanya kazi zenyewe",
+        "body": "Operra inakagua folios, inafunganisha droo za fedha, na kuhakikisha hakuna siku inayofungwa ikiwa na makosa."
+      },
+      {
+        "eyebrow": "Matokeo Halisi",
+        "headline": "Pata Occupancy na RevPAR kabla ya chai",
+        "body": "Muhtasari kamili wa mapato na takwimu unatumwa kwenye barua pepe yako pindi jua linapochomoza."
+      }
+    ],
+    "caption": "Kwamka asubuhi bila kujua mapato halisi ya usiku ni msongo wa mawazo usio na lazima. Operra inafanya ukaguzi wa usiku (night audit) kwa hatua sita kamili. Mfumo unakagua folios zisizolipwa na kutofautisha hesabu za droo kabla ya kufunga siku. Pata taarifa za Occupancy, ADR, na RevPAR moja kwa moja kwenye email yako kila asubuhi. Rahisisha uendeshaji wa hoteli yako leo.",
+    "hashtags": [
+      "#ZanzibarHotels",
+      "#HotelierTanzania",
+      "#OperraTech",
+      "#UsimamiziWaHoteli"
+    ],
+    "imagePrompt": "A quiet manager's office inside a historic Stone Town hotel, featuring thick whitewashed coral-stone walls, dark carved mahogany window shutters, and a view into a sunlit inner courtyard filled with green frangipani leaves. Early morning dawn light streams through the tall arched opening. On a polished teak desk right of centre sits a plain untitled brass tray with a white ceramic espresso cup and an unlit traditional brass lamp. A pair of antique hotel room keys and a plain cream paper notepad rest nearby. In the background, a soft-focus figure of a hotelier seen from behind stands by the open window. Composition is a wide establishing shot with a 24mm lens, bright airy morning sunlight, crisp architectural shadow shapes, and travel-editorial aesthetics. The entire left half of the frame consists of a clean, soft-shadowed coral plaster wall reserved for text overlay.",
+    "cta": "Rahisisha Ukaguzi Wako",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "feature": "night-audit",
+    "angle": "the owner wakes up to no numbers",
+    "backgroundPath": "state/bg/operra-2026-11-17-08-pain-point.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-17T05:00:00.000Z",
+    "createdAt": "2026-11-16T18:07:28.301Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3184515651,
+    "slideFiles": [
+      "operra-2026-11-17-08-pain-point-1.png",
+      "operra-2026-11-17-08-pain-point-2.png",
+      "operra-2026-11-17-08-pain-point-3.png",
+      "operra-2026-11-17-08-pain-point-4.png"
+    ],
+    "headline": "Umeamka lakini huna namba za jana?"
+  },
+  {
+    "id": "operra-2026-11-17-13-number-that-lands",
+    "eyebrow": "Offline Operations",
+    "headline": "30 continuous days of full operation without internet",
+    "body": "When fibre lines cut late at night, front desk, POS, and kitchen workflows keep moving without losing a single transaction record.",
+    "cta": "See it work",
+    "caption": "A main fibre cut at 11pm shouldn't freeze your front desk or leave check-in queues waiting in Mwanza.\n\nOperra keeps front desk, POS, kitchen, and folios running for up to 30 continuous days without internet. Staff always see live network status, and all queued actions sync automatically in the correct order when connection returns.",
+    "hashtags": [
+      "#TanzaniaHospitality",
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#Operra"
+    ],
+    "imagePrompt": "A sprawling lakeside conference hotel garden in Mwanza along the shoreline of Lake Victoria, with massive granite boulders rising from the calm water. Midday sun illuminates an outdoor dining pavilion set for service. Right of centre, a plain, untitled, dark teak service tray rests on a slate side counter. A clear glass carafe of water and woven placemats sit on a nearby dining table. In the soft-focus background, a hotel manager walks away across the manicured lawn toward the shore. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The middle sky band remains visually quiet.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "offline",
+    "angle": "the fibre cut at 11pm with guests queuing",
+    "backgroundPath": "state/bg/operra-2026-11-17-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-17T10:00:00.000Z",
+    "createdAt": "2026-11-16T18:08:10.580Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "11"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 602754940
+  },
+  {
+    "id": "operra-2026-11-17-16-client-proof",
+    "eyebrow": "Mapokezi",
+    "headline": "Handover ya shift bila muhtasari wa WhatsApp",
+    "body": "Hoteli za Moshi zimeacha kukagua daftari na kikokotoo wakati wa kubadilishana shift.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Zamani kila shift ikimalizika Moshi, mapokezi ilibidi watumie kikokotoo na daftari kuandaa muhtasari wa kutuma kwenye WhatsApp. Leo mambo yamebadilika. Shift mpya ikiingia, dashibodi moja inaonyesha mapato yote yaliyokusanywa, salio la wageni, na walioingia au kutoka. Hakuna tena kupoteza muda kuhesabu namba kwa mikono.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MoshiHotels",
+      "#TanzaniaHospitality",
+      "#OperraTech"
+    ],
+    "imagePrompt": "A sprawling highland eco-lodge in Moshi with the snow-capped peak of Mount Kilimanjaro visible in the clear distance above lush banana groves. On a wide open-air timber veranda, morning light streams across a quiet reception corner. Right of centre sits a plain brass desk bell on a polished dark wood counter, next to a steaming ceramic coffee mug. A pair of worn trekking duffels rests on the stone floor nearby. Soft-focus silhouette of a staff member seen from behind near a wooden key rack. Composition is a wide establishing shot showcasing the mountain landscape. Bright sunlit sky, 24mm lens, crisp daylight photography with strong natural shadow shapes. The upper sky and stone pillar create a visually calm zone.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "feature": "front-desk",
+    "angle": "the receptionist flipping between a book, a calculator and a phone",
+    "backgroundPath": "state/bg/operra-2026-11-17-16-client-proof.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-17T13:00:00.000Z",
+    "createdAt": "2026-11-16T18:09:26.921Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1361572798
+  },
+  {
+    "id": "operra-2026-11-17-20-swahili-tip",
+    "eyebrow": "Mgahawa Na Baa",
+    "headline": "Zuia bili za baa kupotea kabla mgeni hajaondoka",
+    "body": "Hakikisha kila kinywaji kilichoagizwa baa kinatumwa moja kwa moja kwenye chumba cha mgeni papo hapo ili kuepuka usumbufu wakati wa kuondoka.",
+    "cta": "Tazama Mfumo",
+    "caption": "Mgeni anapoagiza vinywaji baa na kuomba viwekwe kwenye bili ya chumba, kuchelewa kuhamisha taarifa hizo husababisha hasara Dar es Salaam. Mgeni akichek-out asubuhi, risiti za usiku zinakuwa bado ziko kwenye kaunta ya baa.\n\nTip: Hakikisha mfumo wako wa POS unaunganisha oda ya baa moja kwa moja na folio ya chumba. Kila oda inapoingizwa na muhudumu, inahamia kwenye chumba papo hapo kabla mgeni hajaondoka.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#DarEsSalaam",
+      "#OperraPOS"
+    ],
+    "imagePrompt": "A sunlit hotel restaurant terrace overlooking the waters of the Kivukoni waterfront in Dar es Salaam, with harbour vessels in the distance under a clear sky. On a dark timber table right of centre sits a plain, untitled clear glass decanter beside two crystal rocks glasses, unbranded with no text. Next to them lie a folded linen napkin, a ceramic bowl of cashews, and a brass key tag. In the soft-focus background, a waiter is seen from behind. Composition wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone bright, sunlit, airy, saturated but natural sky. Treatment 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. The lower left area remains quiet with blurred ocean water.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "restaurant-pos",
+    "angle": "the bar tab that never reached the room bill",
+    "backgroundPath": "state/bg/operra-2026-11-17-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-17T17:00:00.000Z",
+    "createdAt": "2026-11-16T18:11:45.824Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1642459954
   }
 ]
