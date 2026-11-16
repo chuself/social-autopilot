@@ -17352,7 +17352,23 @@
     "createdAt": "2026-11-15T18:04:29.578Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 3314970896
+    "bgSeed": 3314970896,
+    "reel": {
+      "file": "operra-2026-11-16-16-industry-note.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-16-16-industry-note.mp4",
+      "beats": [
+        "A returning corporate guest receives the wrong rate.",
+        "Overcharging executive accounts damages valuable business relationships.",
+        "Operra automatically restores the agreed corporate rate.",
+        "Automatic guest profiles flag corporate status on arrival."
+      ],
+      "narration": "When front desk staff miss a returning executive's agreed rate, checkout disputes hurt your hotel's corporate accounts. Operra flags corporate status and stay history automatically, ensuring negotiated rates apply seamlessly across every visit.",
+      "hasVoice": true,
+      "engine": "classic",
+      "fallback": "checker: sound stamp and bloom pile up at 7.006s",
+      "builtAt": "2026-11-16T10:08:18.337Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-16-20-feature-spotlight",
