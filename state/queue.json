@@ -17516,7 +17516,30 @@
       "11"
     ],
     "bgProvider": "moss-fast",
-    "bgSeed": 602754940
+    "bgSeed": 602754940,
+    "reel": {
+      "file": "operra-2026-11-17-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-17-13-number-that-lands.mp4",
+      "beats": [
+        "Fibre cut late at night?",
+        "Front desk check-ins keep moving smoothly",
+        "Operations run without internet connection",
+        "Never stop serving guests in Mwanza"
+      ],
+      "narration": "When main fibre lines cut late at night in Mwanza, your operations keep moving. Operra powers your front desk, restaurant, and kitchen offline for continuous days, automatically syncing every transaction when connection returns.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-16T22:53:21.167Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-17-16-client-proof",
