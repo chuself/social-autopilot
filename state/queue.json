@@ -17289,7 +17289,7 @@
     ],
     "scheduledFor": "2026-11-16T10:00:00.000Z",
     "createdAt": "2026-11-15T18:04:08.616Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 323338675,
     "reel": {
@@ -17313,10 +17313,14 @@
       "attempts": 1,
       "warnings": [],
       "builtAt": "2026-11-15T19:23:42.706Z",
-      "status": "ready"
+      "status": "posted",
+      "postedAt": "2026-11-16T10:10:06.808Z",
+      "postIds": [
+        "instagram:18141955411536117",
+        "facebook:2235318070700478"
+      ]
     },
-    "lastAttempt": "2026-11-16T09:37:19.269Z",
-    "lastSkipReason": "filmed, waiting for its 13:00 EAT slot"
+    "lastAttempt": "2026-11-16T10:10:06.808Z"
   },
   {
     "id": "operra-2026-11-16-16-industry-note",
