@@ -17583,7 +17583,30 @@
     "createdAt": "2026-11-16T18:09:26.921Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1361572798
+    "bgSeed": 1361572798,
+    "reel": {
+      "file": "operra-2026-11-17-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-17-16-client-proof.mp4",
+      "beats": [
+        "Shift inabadilika kwa daftari na kikokotoo?",
+        "Dashibodi ya mapokezi inaonyesha wageni papo hapo",
+        "Mapato ya shift yanaonekana bila muhtasari wa simu",
+        "Handover inakamilika haraka mapokezi yakiwa na utulivu"
+      ],
+      "narration": "Zamani Moshi, kubadilisha shift ilibidi watumie daftari na kikokotoo kuandaa muhtasari wa WhatsApp. Ukiwa na Operra, dashibodi ya mapokezi inaonyesha wageni, vyumba, na mapato yote papo hapo. Shift mpya inaanza kwa utulivu bila kupoteza muda kuhesabu namba.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "ui-screen:reports",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-17T10:09:37.815Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-17-20-swahili-tip",
