@@ -17654,5 +17654,170 @@
       "facebook:1049514968255534_122187070857351110",
       "instagram:18212968273368600"
     ]
+  },
+  {
+    "id": "operra-2026-11-18-08-industry-note",
+    "slides": [
+      {
+        "eyebrow": "Safari Hubs",
+        "headline": "Peak turnarounds test safari lodge operations",
+        "body": "Morning game drives leave narrow windows to clean rooms before afternoon arrivals."
+      },
+      {
+        "eyebrow": "The Friction",
+        "headline": "Paper assignment sheets slow down housekeepers",
+        "body": "Manual floor sheets and phone calls create bottlenecks between supervisors and reception."
+      },
+      {
+        "eyebrow": "The Shift",
+        "headline": "Auto-assign rooms by floor and capacity",
+        "body": "Structured per-item amenity checks clear rooms instantly the moment inspection finishes."
+      },
+      {
+        "eyebrow": "The Standard",
+        "headline": "Zero phone calls to confirm readiness",
+        "body": "Operra logs every room status change automatically so your front desk never waits."
+      }
+    ],
+    "caption": "In safari hubs like Arusha, lodge turnaround times leave zero room for communication delays. Relying on paper clipboards or phone calls to confirm room status slows down check-ins when safari vehicles arrive together. Leading regional properties are shifting to automated floor assignments and structured amenity checks. When housekeeping status updates instantly, front desk teams can check in arriving guests without delay. Operra keeps your front office and housekeeping perfectly synchronized.",
+    "hashtags": [
+      "#EastAfricaHospitality",
+      "#HotelManagement",
+      "#ArushaHotels",
+      "#LodgeOperations",
+      "#Operra"
+    ],
+    "imagePrompt": "A lush safari lodge courtyard in Arusha, surrounded by flowering coffee trees and stone walkways with Mount Meru rising in the distance under a blue sky. In the mid-afternoon sun, housekeepers work quietly along shaded timber verandas. Right of centre, a plain, untitled dark-brown wooden tray rests on a rustic stone bench, holding neatly stacked white face towels and plain glass water bottles. Nearby, a wooden housekeeping trolley sits on a gravel path, and a pair of safari binoculars lies on an outdoor coffee table. In the background, a soft-focus staff member in a khaki uniform walks away along the garden path. Composition: wide establishing view of the property in its setting, the landscape giving a strong sense of place. Light/tone: bright, sunlit, airy, saturated but natural sky. Treatment: 24mm lens, crisp midday light and strong shadow shapes, travel-editorial photography. Calm zone: keep the left half of the frame, from the middle down to the bottom, covered by a softly lit stone wall and open garden lawn, completely free of text or clutter.",
+    "cta": "Modernise room operations",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Arusha",
+    "feature": "housekeeping",
+    "angle": "paper assignment sheets and a noisy WhatsApp group",
+    "backgroundPath": "state/bg/operra-2026-11-18-08-industry-note.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-18T05:00:00.000Z",
+    "createdAt": "2026-11-17T18:03:17.660Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 4150662625,
+    "slideFiles": [
+      "operra-2026-11-18-08-industry-note-1.png",
+      "operra-2026-11-18-08-industry-note-2.png",
+      "operra-2026-11-18-08-industry-note-3.png",
+      "operra-2026-11-18-08-industry-note-4.png"
+    ],
+    "headline": "Peak turnarounds test safari lodge operations"
+  },
+  {
+    "id": "operra-2026-11-18-13-feature-spotlight",
+    "eyebrow": "Uhifadhi wa Vyumba",
+    "headline": "Panga bookings za makundi kwenye kioo kimoja",
+    "body": "Geuza nukuu za bei kuwa uhifadhi kamili kwa click moja tu. Mfumo unazuia chumba kimoja kuuzwa mara mbili wakati wa taharuki ya mapokezi.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wageni wa kundi wakifika Zanzibar kwa pamoja, mapokezi yanaweza kuingia taharuki. Ni rahisi kwa wahudumu wawili kuuza chumba kimoja kwa wageni tofauti kwa bahati mbaya.\n\nOperra inazuia makosa haya kwa kuzuia booking zinazogongana papo hapo. Unaona vyumba vyote, malipo ya deposit ya M-Pesa, na nukuu za bei kwenye kioo kimoja tu. Badilisha nukuu ya bei kuwa booking bila kuandika upya taarifa, huku ukihifadhi historia yote ya mgeni. 🏨",
+    "hashtags": [
+      "ZanzibarHotels",
+      "HotelManagement",
+      "Operra"
+    ],
+    "imagePrompt": "A wide establishing view of a historic Stone Town hotel courtyard in Zanzibar, featuring thick coral-stone walls and high ceilings with exposed mangrove beams. A large group arrival is in progress, with several heavy, colorful canvas duffel bags and leather suitcases clustered neatly on the polished cement floor near a large, carved brass-studded door. In the foreground, right of center, sits a stack of plain, untitled olive-green clothbound folders on a side table made of reclaimed dhow wood. Soft-focus figures of staff in white kanzus are seen from the shoulders down in the background. The scene is bright and airy with crisp midday light and strong shadow shapes. 24mm lens, travel-editorial photography. The center band of the frame remains visually quiet with a plain, sunlit coral wall.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "reservations",
+    "angle": "two receptionists sell the same room to two guests",
+    "backgroundPath": "state/bg/operra-2026-11-18-13-feature-spotlight.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-18T10:00:00.000Z",
+    "createdAt": "2026-11-17T18:05:17.802Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 4227615924
+  },
+  {
+    "id": "operra-2026-11-18-16-pain-point",
+    "eyebrow": "Event Management",
+    "headline": "Two events booked in the same hall on Friday",
+    "body": "When venue reservations live on separate paper pads and message chats, double-booked halls damage client trust and disrupt operations.",
+    "cta": "See Operra live",
+    "caption": "Two corporate clients arrive for the main conference hall on the same morning in Mwanza. Both paid deposits weeks ago, but the dates were noted on different clipboards.\n\nOperra unifies your venue calendar by day, month, or list view. Event menus pull directly from F&B stock, while deposits settled via M-Pesa, Tigo Pesa, or Airtel Money post straight to the event folio.",
+    "hashtags": [
+      "#HotelManagement",
+      "#MwanzaHotels",
+      "#HospitalityTech",
+      "#EastAfricaHospitality"
+    ],
+    "imagePrompt": "A lakeside conference hotel in Mwanza perched along the shore of Lake Victoria, with massive granite boulders rising out of calm water near Bismarck Rock. Early morning preparations are underway inside a glass-fronted hall looking over the water. On a polished wooden table right of centre sits a plain, untitled navy-blue clothbound ledger folder alongside a brass key ring. Linen-covered banquet tables stand arranged in quiet rows with glass water carafes. Soft-focus hotel staff are visible from behind near the windows preparing the room. Composition is a wide establishing view of the property in its setting. Light is bright, sunlit, airy with a natural sky using a 24mm lens and crisp midday light. The centre frame remains calm and visually quiet over the open lake surface outside.",
+    "template": "spotlight",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "events",
+    "angle": "two events booked into the same hall",
+    "backgroundPath": "state/bg/operra-2026-11-18-16-pain-point.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-18T13:00:00.000Z",
+    "createdAt": "2026-11-17T18:06:21.648Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 595831945
+  },
+  {
+    "id": "operra-2026-11-18-20-number-that-lands",
+    "eyebrow": "Finance Management",
+    "headline": "One ledger for total accuracy",
+    "body": "Avoid reconciliation errors. Every folio, POS transaction, and event payment feeds directly into your P&L, ensuring 18% VAT is correctly applied after discounts on every line.",
+    "cta": "See it work",
+    "caption": "It is 2 AM at your Moshi lodge and the numbers are not adding up. Between the restaurant POS, event hall rentals, and room folios, something is missing or double-counted. \n\nOperra brings everything into one unified ledger. When your guest pays, that charge hits the folio exactly once—no duplicates, no gaps, and no hidden variances. You finally have a P&L that reflects the truth of your daily operations without the manual spreadsheet struggle. 📊",
+    "hashtags": [
+      "HotelManagement",
+      "MoshiHotels",
+      "TanzaniaHospitality",
+      "RevenueControl"
+    ],
+    "imagePrompt": "A wide establishing view of a highland lodge in Moshi, built from dark volcanic stone and polished timber, nestled amongst vibrant banana and coffee farms with the distant, snow-capped peak of Mount Kilimanjaro visible through a clear morning sky. In the foreground, a quiet back-office workspace features a heavy wooden desk. Right of center, sits a single, plain, untitled matte-black metal tray containing a neat stack of blank, off-white paper sheets. Story props include a brass desk lamp with a soft glow, a ceramic mug with local coffee, a pair of worn trekking boots tucked under the desk, and a rustic stone fireplace in the background. Soft-focus figures of staff move quietly in the far hallway. Composition is a wide establishing view, shot with a 24mm lens. The lighting is crisp midday sunlight with strong, clean shadow shapes. The left half of the frame is a plain, shadowed wall to allow for text overlay. The aesthetic is travel-editorial photography, natural and saturated.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "daylight",
+    "city": "Moshi",
+    "series": null,
+    "feature": "finance",
+    "angle": "the midnight spreadsheet that reconciles three systems",
+    "backgroundPath": "state/bg/operra-2026-11-18-20-number-that-lands.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-18T17:00:00.000Z",
+    "createdAt": "2026-11-17T18:07:12.138Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 59053560
   }
 ]

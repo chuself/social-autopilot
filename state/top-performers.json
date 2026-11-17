@@ -1,80 +1,5 @@
 [
   {
-    "id": "operra-2026-10-23-13-swahili-tip",
-    "platform": "instagram",
-    "pillar": "swahili-tip",
-    "format": "reel",
-    "language": "sw",
-    "look": "daylight",
-    "headline": "Thibitisha idadi ya wajumbe kabla ya buffet Mwanza",
-    "reach": 4,
-    "likes": 4,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 4,
-    "platforms": [
-      "instagram",
-      "facebook"
-    ]
-  },
-  {
-    "id": "operra-2026-10-22-16-pain-point",
-    "platform": "instagram",
-    "pillar": "pain-point",
-    "format": "reel",
-    "language": "sw",
-    "look": "blueprint",
-    "headline": "Bili za makampuni zinapotea Dar?",
-    "reach": 4,
-    "likes": 3,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 3,
-    "platforms": [
-      "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-10-22-20-number-that-lands",
-    "platform": "facebook",
-    "pillar": "number-that-lands",
-    "format": "poster",
-    "language": "en",
-    "look": "blueprint",
-    "headline": "Six departments running on one lean system",
-    "reach": 4,
-    "likes": 3,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 3,
-    "platforms": [
-      "facebook",
-      "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-10-23-08-client-proof",
-    "platform": "facebook",
-    "pillar": "client-proof",
-    "format": "carousel",
-    "language": "sw",
-    "look": "daylight",
-    "headline": "Mtandao ukikata, folios za wageni zinasimama?",
-    "reach": 4,
-    "likes": 3,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 3,
-    "platforms": [
-      "facebook",
-      "instagram"
-    ]
-  },
-  {
     "id": "operra-2026-10-24-16-client-proof",
     "platform": "instagram",
     "pillar": "client-proof",
@@ -83,6 +8,82 @@
     "look": "daylight",
     "headline": "Meneja mmoja, hoteli nyingi",
     "reach": 4,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 3,
+    "platforms": [
+      "instagram",
+      "facebook",
+      "tiktok"
+    ]
+  },
+  {
+    "id": "operra-2026-10-23-16-industry-note",
+    "platform": "instagram",
+    "pillar": "industry-note",
+    "format": "reel",
+    "language": "en",
+    "look": "daylight",
+    "headline": "Manage the Moshi peak season surge",
+    "reach": 4,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 2,
+    "platforms": [
+      "instagram",
+      "facebook"
+    ]
+  },
+  {
+    "id": "operra-2026-10-24-13-number-that-lands",
+    "platform": "instagram",
+    "pillar": "number-that-lands",
+    "format": "reel",
+    "language": "en",
+    "look": "daylight",
+    "headline": "30 live reports from one unified ledger",
+    "reach": 4,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 2,
+    "platforms": [
+      "instagram"
+    ]
+  },
+  {
+    "id": "operra-2026-10-23-20-feature-spotlight",
+    "platform": "facebook",
+    "pillar": "feature-spotlight",
+    "format": "poster",
+    "language": "sw",
+    "look": "daylight",
+    "headline": "Separate corporate bills from personal tabs automatically",
+    "reach": 3,
+    "likes": 3,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 3,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
+    "id": "operra-2026-10-25-13-feature-spotlight",
+    "platform": "instagram",
+    "pillar": "feature-spotlight",
+    "format": "reel",
+    "language": "sw",
+    "look": "daylight",
+    "headline": "Stop chasing Sunday night bar variances",
+    "reach": 3,
     "likes": 3,
     "comments": 0,
     "shares": 0,
