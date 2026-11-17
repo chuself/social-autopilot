@@ -17747,7 +17747,30 @@
     "createdAt": "2026-11-17T18:05:17.802Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 4227615924
+    "bgSeed": 4227615924,
+    "reel": {
+      "file": "operra-2026-11-18-13-feature-spotlight.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-18-13-feature-spotlight.mp4",
+      "beats": [
+        "Je mapokezi yanaweza kuingia taharuki",
+        "Mfumo unazuia kuuza chumba mara mbili",
+        "Vyumba na ratiba kwenye kioo kimoja",
+        "Uhifadhi wa makundi bila makosa"
+      ],
+      "narration": "Wageni wa kundi wakifika mapokezi, ni rahisi kumpa chumba kimoja mtu mwingine kimakosa. Operra inazuia ugonganishaji wa vyumba papo hapo. Unaona uhifadhi wote na malipo ya simu kwenye kioo kimoja, na kubadilisha nukuu kuwa uhifadhi mara moja.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:frontdesk",
+        "ui-screen:tables",
+        "payoff"
+      ],
+      "attempts": 2,
+      "warnings": [],
+      "builtAt": "2026-11-17T21:51:59.596Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-18-16-pain-point",
