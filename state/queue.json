@@ -17890,5 +17890,172 @@
       "facebook:1049514968255534_122187337323351110",
       "instagram:18117059123271180"
     ]
+  },
+  {
+    "id": "operra-2026-11-19-08-client-proof",
+    "slides": [
+      {
+        "eyebrow": "Changamoto",
+        "headline": "Unasubiri ripoti za mwezi hadi tarehe 10?",
+        "body": "Kuratibu data kutoka hoteli tofauti kwa kutumia Excel inachukua muda mrefu na huleta makosa ya mahesabu."
+      },
+      {
+        "eyebrow": "Ushuhuda",
+        "headline": "\"Sihitaji tena kupiga simu kila mkoa.\"",
+        "body": "Mmiliki mmoja wa Dar sasa anaona hali ya biashara ya mali zake zote tatu kwenye kioo kimoja, live."
+      },
+      {
+        "eyebrow": "Usimamizi",
+        "headline": "Ripoti za kundi zima zimeunganishwa leo",
+        "body": "Kila hoteli inabaki na nembo yake, lakini mmiliki anaona mzunguko wa fedha wa kampuni nzima kwa pamoja."
+      },
+      {
+        "eyebrow": "Operra",
+        "headline": "Rahisisha usimamizi wa hoteli zako zote",
+        "body": "Pata muhtasari wa Business Unit, Property, na Outlet bila kusubiri mahesabu ya mwisho wa mwezi."
+      }
+    ],
+    "caption": "Kusubiri ripoti za wiki iliyopita ili kufanya maamuzi ya leo ni hatari kwa biashara. Operra inampa mmiliki uwezo wa kuona hoteli zote, kuanzia mzunguko wa fedha hadi matumizi ya kila kitengo, bila kuhitaji ripoti za karatasi. Kila mali inajiendesha yenyewe na chapa yake, lakini taarifa zote zinakutana kwenye mfumo mmoja wa kampuni. Huu ndio urahisi wa kusimamia kundi la hoteli ukiwa mahali popote.",
+    "hashtags": [
+      "Operra",
+      "HotelManagement",
+      "DarEsSalaam",
+      "HotelOwnersTanzania"
+    ],
+    "imagePrompt": "An executive office on a high floor of a glass business tower in Dar es Salaam, overlooking the Kivukoni waterfront at dusk. Outside the window, the deep blue sky meets the glowing lights of the harbour and moving ferry lights. Inside, the room is quiet and professional. Right of center sits a plain, untitled dark leather desk blotter on a polished mahogany surface. A thin silver pen and a pair of reading glasses rest beside a small, untitled brass tray. In the soft-focus background, a person in a white shirt is seen from behind, looking out at the city skyline. Composition: interior office at blue hour, cool sky against warm indoor lighting. Treatment: 35mm lens, long-exposure feel, cinematic and calm. The left half of the frame is a clear, dark wooden wall in shadow.",
+    "cta": "Anza kutumia Operra leo",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "feature": "multi-property",
+    "angle": "the owner waits until the tenth to see last month",
+    "backgroundPath": "state/bg/operra-2026-11-19-08-client-proof.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-19T05:00:00.000Z",
+    "createdAt": "2026-11-18T18:05:20.981Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 3485686717,
+    "slideFiles": [
+      "operra-2026-11-19-08-client-proof-1.png",
+      "operra-2026-11-19-08-client-proof-2.png",
+      "operra-2026-11-19-08-client-proof-3.png",
+      "operra-2026-11-19-08-client-proof-4.png"
+    ],
+    "headline": "Unasubiri ripoti za mwezi hadi tarehe 10?"
+  },
+  {
+    "id": "operra-2026-11-19-13-swahili-tip",
+    "eyebrow": "Huduma za Chumbani",
+    "headline": "Ongeza oda za chumbani kwa QR menu",
+    "body": "Wageni wengi wanaacha kuagiza kwa sababu ya usumbufu wa kupiga simu. QR code chumbani inaruhusu uagizaji wa haraka kwa PIN ya siri.",
+    "cta": "Ona inavyofanya kazi",
+    "caption": "Wageni wengi Arusha wanarudi hotelini wakiwa wamechoka baada ya safari ndefu. Kama uagizaji wa chakula unahitaji kupiga simu mapokezi, mgeni anaweza kuacha kuagiza kabisa.\n\nWeka QR sticker ya kudumu chumbani ili kurahisisha huduma. Mgeni anascan na kuagiza, kisha unathibitisha oda mapokezi kabla haijaenda jikoni. Bili inaingia moja kwa moja kwenye folio ya mgeni. Ni rahisi, salama, na inaongeza mapato yako ya ndani.",
+    "hashtags": [
+      "ArushaHotels",
+      "HotelManagement",
+      "TanzaniaHospitality"
+    ],
+    "imagePrompt": "A wide-angle view of a timber lodge veranda in Arusha with the dark silhouette of Mount Meru against a deep blue hour sky. Warm golden light spills from lanterns hanging from the eaves. On a low, plain wooden side table next to a canvas safari chair, sits a small, untitled square wooden block with a printed black square code on one face. Beside it is a ceramic mug and a pair of dark binoculars. In the soft-focus background, a guest is seen from behind, looking out at the mountain landscape. 35mm lens, long-exposure feel, cinematic and calm with glowing interiors. The top third of the frame is clear sky, providing a quiet zone for text.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "series": null,
+    "feature": "digital-menu",
+    "angle": "a guest who would order more if it were easy",
+    "backgroundPath": "state/bg/operra-2026-11-19-13-swahili-tip.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-19T10:00:00.000Z",
+    "createdAt": "2026-11-18T18:13:13.520Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 404787049
+  },
+  {
+    "id": "operra-2026-11-19-16-industry-note",
+    "eyebrow": "Finance",
+    "headline": "Closing the gap on mobile payments",
+    "body": "Match M-Pesa and Tigo Pesa references directly to guest folios. Stop guessing which deposit belongs to which room during the night audit.",
+    "cta": "Simplify your audit",
+    "caption": "It is late evening in Zanzibar. You have twenty mobile money notifications and a stack of guest folios to balance. \n\nMatching transaction references to names manually is a common source of revenue leakage. When a payment is posted to Operra, the reference stays with the folio forever. It makes reconciliation a matter of seconds rather than a morning of phone calls. Searchable references ensure every shilling is accounted for before the shift ends.",
+    "hashtags": [
+      "ZanzibarHospitality",
+      "HotelOperations",
+      "MobileMoney",
+      "Operra"
+    ],
+    "imagePrompt": "A rooftop terrace office in Stone Town, Zanzibar, overlooking the coral-stone minarets and dhows in the harbor. Through a large, open arched window, the deep blue hour sky is visible against the warm glow of the interior. On a side table, a plain, untitled cream-colored ledger lies closed next to a small, warm brass lantern casting a soft light. A glass of water and a small ceramic plate of dates sit nearby. The soft-focus silhouette of a hotel manager is seen from behind, looking out at the harbor lights. Composition: exterior or terrace at dusk, lit windows and lanterns, the building framed against the sky. Light/tone: deep blue hour, cool sky against warm practical light, quiet. Treatment: 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood.",
+    "template": "spotlight",
+    "pillar": "industry-note",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "mobile-money",
+    "angle": "end of day: twenty mobile payments and no names",
+    "backgroundPath": "state/bg/operra-2026-11-19-16-industry-note.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-19T13:00:00.000Z",
+    "createdAt": "2026-11-18T18:14:29.236Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1029123064
+  },
+  {
+    "id": "operra-2026-11-19-20-feature-spotlight",
+    "eyebrow": "Company Accounts",
+    "headline": "Block corporate credit before debts reach 90 days",
+    "body": "Set per-company credit limits in Operra. Over-limit charges block automatically until finance approves, keeping your corporate receivables clear and controlled.",
+    "cta": "See how it works",
+    "caption": "A corporate client brings steady event business to your Mwanza property, but their bill has been sitting unpaid for three months because nobody tracked the balance. Operra puts an end to forgotten credit. You set per-company credit limits, and any over-limit charge is blocked until finance approves. Unpaid balances are sorted into clear 0-30, 31-60, 61-90, and 90+ day ageing buckets, with branded monthly statements ready for WhatsApp or print.",
+    "hashtags": [
+      "#HotelManagement",
+      "#HospitalityTanzania",
+      "#MwanzaHotels",
+      "#HotelFinance"
+    ],
+    "imagePrompt": "A lakeside hotel terrace in Mwanza looking out toward Lake Victoria, with smooth granite boulders visible along the water in the evening light. The scene captures a quiet back-office corner following a busy corporate event. On a warm wooden table right of centre sits a plain, untitled dark-grey leatherbound ledger binder and a metal calculator. Beside them rest a brass desk lamp and a ceramic coffee cup. In the background, a staff member in a hotel uniform works at a desk, turned away from the camera in soft focus. Composition: exterior terrace at dusk, lit windows and warm lanterns, the building framed against the fading sky. Light and tone: deep blue hour, cool sky against warm practical lighting. Treatment: 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood. Calm zone: left half of the frame from middle to bottom is visually quiet with plain shadow and soft architectural blur. Screens and papers are blank or turned away with no visible text.",
+    "template": "spotlight",
+    "pillar": "feature-spotlight",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Mwanza",
+    "series": null,
+    "feature": "credit-accounts",
+    "angle": "the company that owes for three months and nobody chased",
+    "backgroundPath": "state/bg/operra-2026-11-19-20-feature-spotlight.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-19T17:00:00.000Z",
+    "createdAt": "2026-11-18T18:20:02.692Z",
+    "status": "needs-review",
+    "heldFigures": [
+      "90,"
+    ],
+    "bgProvider": "moss-fast",
+    "bgSeed": 1980647592
   }
 ]
