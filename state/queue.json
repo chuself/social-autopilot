@@ -17982,7 +17982,30 @@
     "createdAt": "2026-11-18T18:13:13.520Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 404787049
+    "bgSeed": 404787049,
+    "reel": {
+      "file": "operra-2026-11-19-13-swahili-tip.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-19-13-swahili-tip.mp4",
+      "beats": [
+        "Wageni wanasita kuagiza chakula chumbani?",
+        "Mgeni anaagiza kwa PIN ya chumba",
+        "Mapokezi inathibitisha kabla oda haijaenda jikoni",
+        "Bili inaingia moja kwa moja chumbani"
+      ],
+      "narration": "Wageni wengi wanarudi wamechoka lakini wanasita kupiga simu kuagiza chakula. Operra inaruhusu mgeni kuagiza kwa usalama akitumia PIN ya chumbani. Mapokezi inathibitisha oda mara moja, jiko linaanza kupika, na bili inaingia moja kwa moja kwenye akaunti ya chumba.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "ui-screen:menu",
+        "ui-screen:kitchen",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-18T21:24:11.887Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-19-16-industry-note",
