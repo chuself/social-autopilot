@@ -17815,7 +17815,30 @@
     "createdAt": "2026-11-17T18:06:21.648Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 595831945
+    "bgSeed": 595831945,
+    "reel": {
+      "file": "operra-2026-11-18-16-pain-point.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-18-16-pain-point.mp4",
+      "beats": [
+        "Wateja wawili wamepanga ukumbi mmoja",
+        "Kalenda moja inaratibu matukio yote",
+        "Operra inasimamia matukio kwa urahisi",
+        "Mikutano inaendeshwa kwa amani na ufanisi"
+      ],
+      "narration": "Wateja wawili wakifika ukumbi mmoja kwa wakati mmoja, heshima ya hoteli inaharibika. Operra inaunganisha kalenda ya matukio, menyu, na malipo ya amana kupitia simu mahali pamoja. Kila mteja anapata huduma bora bila migongano wala usumbufu.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:events",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-18T10:05:50.353Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-18-20-number-that-lands",
