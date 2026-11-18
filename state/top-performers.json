@@ -57,6 +57,25 @@
     ]
   },
   {
+    "id": "operra-2026-11-16-20-feature-spotlight",
+    "platform": "facebook",
+    "pillar": "feature-spotlight",
+    "format": "poster",
+    "language": "sw",
+    "look": "daylight",
+    "headline": "Link moja tu ya uhifadhi wa meza",
+    "reach": 4,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 1,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
     "id": "operra-2026-10-23-20-feature-spotlight",
     "platform": "facebook",
     "pillar": "feature-spotlight",
@@ -73,26 +92,6 @@
     "platforms": [
       "facebook",
       "instagram"
-    ]
-  },
-  {
-    "id": "operra-2026-10-25-13-feature-spotlight",
-    "platform": "instagram",
-    "pillar": "feature-spotlight",
-    "format": "reel",
-    "language": "sw",
-    "look": "daylight",
-    "headline": "Stop chasing Sunday night bar variances",
-    "reach": 3,
-    "likes": 3,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 3,
-    "platforms": [
-      "instagram",
-      "facebook",
-      "tiktok"
     ]
   }
 ]
