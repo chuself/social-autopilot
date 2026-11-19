@@ -18049,7 +18049,30 @@
     "createdAt": "2026-11-18T18:14:29.236Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 1029123064
+    "bgSeed": 1029123064,
+    "reel": {
+      "file": "operra-2026-11-19-16-industry-note.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-19-16-industry-note.mp4",
+      "beats": [
+        "Unmatched mobile payments at night audit?",
+        "Mobile payments post directly to folios",
+        "Match every reference to guest stays",
+        "Complete night audit without the stress"
+      ],
+      "narration": "Late evening in Zanzibar brings multiple mobile money payments without guest names. Operra posts M-Pesa, Tigo Pesa, and Airtel Money payments straight to the guest folio with transaction references attached. Match every payment in seconds and balance your night audit stress-free.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "ui-screen:reports",
+        "checklist",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-19T10:08:39.841Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-19-20-feature-spotlight",
