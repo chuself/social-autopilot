@@ -19,26 +19,6 @@
     ]
   },
   {
-    "id": "operra-2026-10-25-13-feature-spotlight",
-    "platform": "instagram",
-    "pillar": "feature-spotlight",
-    "format": "reel",
-    "language": "sw",
-    "look": "daylight",
-    "headline": "Stop chasing Sunday night bar variances",
-    "reach": 3,
-    "likes": 3,
-    "comments": 0,
-    "shares": 0,
-    "saves": 0,
-    "engagement": 3,
-    "platforms": [
-      "instagram",
-      "facebook",
-      "tiktok"
-    ]
-  },
-  {
     "id": "operra-2026-10-26-13-swahili-tip",
     "platform": "instagram",
     "pillar": "swahili-tip",
@@ -92,6 +72,25 @@
     "shares": 0,
     "saves": 0,
     "engagement": 3,
+    "platforms": [
+      "facebook",
+      "instagram"
+    ]
+  },
+  {
+    "id": "operra-2026-10-26-08-client-proof",
+    "platform": "facebook",
+    "pillar": "client-proof",
+    "format": "carousel",
+    "language": "sw",
+    "look": "nightfall",
+    "headline": "Ubao wa kuta unadanganya mapokezi Moshi?",
+    "reach": 3,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "engagement": 2,
     "platforms": [
       "facebook",
       "instagram"

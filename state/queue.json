@@ -18121,5 +18121,172 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1980647592
+  },
+  {
+    "id": "operra-2026-11-20-08-pain-point",
+    "slides": [
+      {
+        "eyebrow": "Katikati ya huduma",
+        "headline": "Oda zinaingia, nyanya zimeisha jikoni",
+        "body": "Mgeni anasubiri chakula cha jioni, lakini mpishi anagundua stoo haina viungo muhimu vya mchuzi."
+      },
+      {
+        "eyebrow": "Mshangao wa jioni",
+        "headline": "Stoo na jiko haziongei kwa wakati",
+        "body": "Huwezi kujua akiba imeisha hadi sahani inapochelewa na mpishi kutuma mtu sokoni kwa dharura."
+      },
+      {
+        "eyebrow": "Ufumbuzi wa Operra",
+        "headline": "Pata taarifa kabla ya bidhaa kuisha",
+        "body": "Kila oda inayouzwa inakata viungo vyake stoo papo hapo na kutoa tahadhari ya kuagiza tena."
+      },
+      {
+        "eyebrow": "Amani jikoni",
+        "headline": "Dhibiti manunuzi na akiba bila mshangao",
+        "body": "Odosha kero za jikoni na uhakikishe kila oda inatoka kwa wakati bila kukwama."
+      }
+    ],
+    "caption": "Hakuna kitu kinachovuruga huduma ya jioni kama mpishi kugundua viungo vimeisha katikati ya oda za wageni. Wakati jiko linapokosa mawasiliano ya moja kwa moja na stoo, biashara inapoteza muda na wageni wanalalamika. Operra inaunganisha mauzo ya jikoni na akiba ya stoo papo hapo. Kila oda inapotoka, mfumo unakata viungo husika na kutoa tahadhari kabla bidhaa hazijaisha kabisa. Weka manunuzi yako kwenye mpangilio thabiti na zuia mshangao jikoni.",
+    "hashtags": [
+      "#HotelManagement",
+      "#TanzaniaHospitality",
+      "#MoshiHotels",
+      "#OperraTech",
+      "#HotelOperations"
+    ],
+    "imagePrompt": "A highland eco-lodge terrace in Moshi framed against the twilight sky with the silhouette of Mount Kilimanjaro in the distance. The building features rough stone architecture and warm lantern light glowing from inside the kitchen doors. Right of centre on a rustic wooden dining prep table sits a plain, untitled dark iron bowl alongside a copper measuring cup and woven garlic baskets. In the soft-focus background, a lodge chef seen from behind in a white jacket walks towards lit kitchen doors. Exterior terrace view at dusk with warm lantern lighting casting a rich golden glow against deep blue hour sky. Shot on a 35mm lens with long-exposure atmospheric mood. The left visual space remains uncluttered, bathed in soft twilight shadows.",
+    "cta": "Ratiba demo leo",
+    "pillar": "pain-point",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Moshi",
+    "feature": "inventory",
+    "angle": "the chef runs out of tomatoes mid-service",
+    "backgroundPath": "state/bg/operra-2026-11-20-08-pain-point.png",
+    "format": "carousel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-20T05:00:00.000Z",
+    "createdAt": "2026-11-20T00:04:00.905Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 1746873448,
+    "slideFiles": [
+      "operra-2026-11-20-08-pain-point-1.png",
+      "operra-2026-11-20-08-pain-point-2.png",
+      "operra-2026-11-20-08-pain-point-3.png",
+      "operra-2026-11-20-08-pain-point-4.png"
+    ],
+    "headline": "Oda zinaingia, nyanya zimeisha jikoni"
+  },
+  {
+    "id": "operra-2026-11-20-13-number-that-lands",
+    "eyebrow": "Front Office",
+    "headline": "Multiple payment tenders on a single folio",
+    "body": "Settle guest charges smoothly whether they pay half by card and half by M-Pesa, with 18% VAT calculated automatically after discounts.",
+    "cta": "See it work",
+    "caption": "When a guest in Dar es Salaam wants to split a final bill—paying half with a card and half via M-Pesa—your front desk shouldn't need manual calculations.\n\nOperra accepts multiple payment tenders on a single live folio. Discounts apply line by line, 18% VAT calculates after the discount, and every payment posts directly to the central ledger with an accurate audit trail.",
+    "hashtags": [
+      "#DarEsSalaamHotels",
+      "#HotelManagement",
+      "#Operra",
+      "#HospitalityTech",
+      "#TanzaniaHotels"
+    ],
+    "imagePrompt": "An oceanfront hotel terrace along the Msasani Peninsula in Dar es Salaam overlooking the Indian Ocean at dusk. Deep blue hour sky contrasts with warm glowing lanterns hung along the timber balustrade. Right of centre, a plain untitled brass payment tray rests on a dark teak table alongside a slim payment card reader and a smartphone with a blank glowing screen. Softly blurred guests sit in silhouette along the oceanfront railing in the background. The centre zone remains visually calm with dark, quiet ocean waters stretching toward the horizon. Captured on a 35mm lens with a long-exposure feel, glowing interior lights, and a peaceful cinematic mood.",
+    "template": "spotlight",
+    "pillar": "number-that-lands",
+    "language": "en",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Dar es Salaam",
+    "series": null,
+    "feature": "guest-stay",
+    "angle": "one bill paid half by card, half by M-Pesa",
+    "backgroundPath": "state/bg/operra-2026-11-20-13-number-that-lands.png",
+    "format": "reel",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-20T10:00:00.000Z",
+    "createdAt": "2026-11-20T00:04:11.830Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 882956416
+  },
+  {
+    "id": "operra-2026-11-20-16-client-proof",
+    "eyebrow": "Front Desk",
+    "headline": "Move the guest without losing a single room charge",
+    "body": "When a lodge in Arusha moved a guest to another room mid-stay, room charges and open folios transferred instantly without manual posting errors.",
+    "cta": "See it work",
+    "caption": "A guest at a safari lodge in Arusha requested a quieter room midway through their stay.\n\nMoving rooms usually risks lost restaurant bills and manual ledger adjustments. With Operra’s live room map, the front desk completed the transfer in seconds.\n\nAll open folio charges moved seamlessly with the guest. Role-gated controls kept the transfer audit-traced, while five live room states updated housekeeping instantly on the change.\n\nNo misplaced bills. No missing revenue at checkout.",
+    "hashtags": [
+      "#HotelManagement",
+      "#FrontDeskOps",
+      "#HospitalityTech",
+      "#TanzaniaHotels"
+    ],
+    "imagePrompt": "A quiet coffee estate lodge courtyard in Arusha features red-brick pathways beneath jacaranda trees and timber-framed guest suites. Evening lights glow along the open veranda during a room transfer. To the right of centre, a plain, untitled brass key tag rests on a dark teak side table next to a plain folded linen towel. Story props include a woven sisal hamper, a ceramic carafe, a potted fern, and warm hurricane lamps. In the soft-focus background, a staff member walks down the corridor seen from behind. Exterior view at dusk with lit windows framed against the sky. Deep blue hour tone with cool sky against warm practical light. 35mm lens, long-exposure feel, calm cinematic mood. The centre band remains visually quiet.",
+    "template": "spotlight",
+    "pillar": "client-proof",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Arusha",
+    "series": null,
+    "feature": "room-operations",
+    "angle": "moving a guest to another room without losing the bill",
+    "backgroundPath": "state/bg/operra-2026-11-20-16-client-proof.png",
+    "format": "reel",
+    "style": "ink",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-20T13:00:00.000Z",
+    "createdAt": "2026-11-20T00:04:41.189Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 489603109
+  },
+  {
+    "id": "operra-2026-11-20-20-swahili-tip",
+    "eyebrow": "Jikoni",
+    "headline": "Karatasi ya oda ikianguka jikoni, mgeni anasubiri",
+    "body": "Ondoa karatasi zinazopotea jikoni. Tumia skrini inayoonyesha kila oda, mlolongo wa sahani, na muda wa kuandaa.",
+    "cta": "Tazama inavyofanya kazi",
+    "caption": "Wakati wa chakula cha usiku katika hoteli za Zanzibar, jikoni kukichafuka, karatasi ndogo ya oda inaweza kuanguka nyuma ya jiko au kupotea. Mgeni anabaki mezani akisubiri starter yake huku oda nyingine zikipita.\n\nNjia rahisi ya kuepuka hili ni kuweka skrini ya jikoni. Oda kutoka POS zinafika mara moja kwenye station husika. Tiketi zikikaa sana zinaruka rangi kuwakumbusha wapishi, na appetizers haziingiliani na main course.",
+    "hashtags": [
+      "#HoteliZanzibar",
+      "#UsimamiziWaHoteli",
+      "#JikoniTech",
+      "#HospitalityTanzania"
+    ],
+    "imagePrompt": "A beachfront hotel restaurant terrace on the coast of Zanzibar, with warm lanterns suspended from makuti thatch structures and coral-stone pillars facing the sea. The restaurant prepares for dinner service as warm amber lighting glows from the kitchen pass onto the open terrace. On the right of centre, a plain, untitled dark wooden pass counter holds a small stainless steel order rail next to two plain white ceramic bowls. Brass lanterns and folded linen napkins rest on surrounding outdoor tables. Soft-focus silhouettes of servers in traditional attire move in the background. Composition: exterior or terrace at dusk, lit windows and lanterns, the building framed against the sky. Light/tone: deep blue hour, cool sky against warm practical light, quiet. Treatment: 35mm lens, long-exposure feel, glowing interiors, calm cinematic mood. The left half of the frame remains visually quiet with soft twilight reflections over calm water.",
+    "template": "spotlight",
+    "pillar": "swahili-tip",
+    "language": "sw",
+    "brand": "operra",
+    "look": "nightfall",
+    "city": "Zanzibar",
+    "series": null,
+    "feature": "kitchen-display",
+    "angle": "the paper chit that fell behind the grill",
+    "backgroundPath": "state/bg/operra-2026-11-20-20-swahili-tip.png",
+    "format": "poster",
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "scheduledFor": "2026-11-20T17:00:00.000Z",
+    "createdAt": "2026-11-20T00:05:40.931Z",
+    "status": "pending",
+    "bgProvider": "moss-fast",
+    "bgSeed": 2614959222
   }
 ]
