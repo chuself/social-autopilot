@@ -18284,7 +18284,30 @@
     "createdAt": "2026-11-20T00:04:41.189Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 489603109
+    "bgSeed": 489603109,
+    "reel": {
+      "file": "operra-2026-11-20-16-client-proof.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-20-16-client-proof.mp4",
+      "beats": [
+        "Mgeni anapobadili chumba katikati ya ukaazi?",
+        "Kila chumba kwa ghorofa, na hali yake",
+        "Hoteli nzima kwenye skrini moja",
+        "Akaunti zote zinahamishwa bila makosa kabisa"
+      ],
+      "narration": "Mgeni wako wa safari Arusha anapoomba kubadili chumba, huna haja ya kuwa na wasiwasi wa kupoteza bili au kufanya makosa. Mfumo wa Operra unaonyesha hali ya kila chumba na kuhamisha taarifa zote mara moja bila usumbufu wowote mapokezi.",
+      "hasVoice": true,
+      "engine": "studio-ink",
+      "scenes": [
+        "place",
+        "app:rooms-mobile#0",
+        "app:rooms-mobile#3",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-20T10:11:04.815Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-20-20-swahili-tip",
