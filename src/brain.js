@@ -4,7 +4,7 @@ import path from "node:path";
 import { completeJson } from "./llm.js";
 import { setUsageContext } from "./usage.js";
 import { factsFor, topicBlock, topicOf } from "./topics.js";
-import { catalogue, parseRef, steps as footageFor } from "../studio/screens.mjs";
+import { captionOf, catalogue, parseRef, steps as footageFor } from "../studio/screens.mjs";
 
 /**
  * The real Operra app in still posts. When the feature has screen recordings (studio/screens.mjs),
@@ -15,11 +15,10 @@ function realScreens(topic, language, format) {
   if (!topic || !footageFor(topic.feature.id, { device: "mobile" }).length) return "";
   const list = catalogue([topic.feature.id], language);
   const how = format === "carousel"
-    ? `Every slide between the first and the last shows ONE real step of the app: give it a "screen" id from
-the list. Its headline retells THAT step's words in the post's language (max 7 words) and its body says what
-the step shows (max 18 words). Never claim more than the step's words: the viewer sees exactly that screen.
-Pick steps that tell the story in order; the last of them should show a result. The first and last slides
-have no "screen".`
+    ? `Every slide between the first and the last shows ONE real step of the app: give it only a "screen" id
+from the list (its headline and words are the step's own, filled in for you). Pick steps that tell the story
+in order; the last of them should show a result. The first and last slides have no "screen" and carry your
+words: the hook, and the payoff with the call to action.`
     : `The poster shows ONE real step of the app beside the words: add "screen" (an id from the list). Choose the
 step that shows the headline's claim, and keep the headline and body to what that step's words say.`;
   return `
@@ -261,7 +260,11 @@ ${sceneBrief(look, city, "carousel")}
   const slides = (post.slides ?? []).slice(0, 5).map((sl, i, all) => {
     const screen = real && i > 0 && i < all.length - 1 ? validScreen(sl.screen) : null;
     const { screen: _drop, ...rest } = sl;
-    return screen ? { ...rest, screen } : rest;
+    if (!screen) return rest;
+    // A screen slide says exactly what its step shows: the director's caption, then the step's own line.
+    const { steps } = parseRef(screen);
+    const last = steps[steps.length - 1];
+    return { ...rest, screen, headline: captionOf(screen, language), body: language === "sw" ? last.sw : last.en };
   });
   return { ...post, slides, template: "app", pillar, language, brand: brandId, look: look?.name ?? null, city: city?.name ?? null, feature: topic?.feature.id ?? null, angle: topic?.angle ?? null };
 }

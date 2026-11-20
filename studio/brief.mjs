@@ -17,7 +17,7 @@ import { setUsageContext } from "../src/usage.js";
 import { compose, validateBrief } from "./compose.mjs";
 import { composeInk } from "./ink/engine.mjs";
 import { factsFor, topicBlock, topicOf } from "../src/topics.js";
-import { catalogue, steps as footageFor } from "./screens.mjs";
+import { captionOf, catalogue, steps as footageFor } from "./screens.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -147,13 +147,13 @@ const INK_RULE = `- This reel is DRAWN, not photographed: hand-drawn line art wi
  */
 const APP_RULE = (list, ink) => `
 ## The real Operra app (use it: this feature has real screen recordings)
-- "app": a real recording of the Operra app on a phone, step by step. Fields: line, screen (ONE id from the
+- "app": a real recording of the Operra app on a phone, step by step. Fields: screen (ONE id from the
   list below, e.g. "checkin-mobile#3", or a run of consecutive steps of one recording, e.g. "checkin-mobile#3-4")${ink ? "" : `,
   image (the place behind the phone, written like every other image)`}.
 - Use ONE or TWO "app" scenes, between the hook and the payoff. They replace "ui-screen", "pos-charge" and
   "checklist": do not use those in this reel. Good shapes: place, app, app, payoff · place, problem-doc, app, payoff.
-- Each app scene's line retells, in the post's language, what ITS step's words below say (3-9 words). Never
-  claim more than those words: what the step says is exactly what the viewer sees.
+- Do not write a line for an app scene: the studio puts the step's own caption (in quotes below) under it,
+  so the words always match the screen. Write the other scenes' lines so the captions read as one story.
 - Choose steps that show the story; the last app scene should show a result (a success, a total, a status).
 - The narration may follow the steps you chose; it still names Operra once and states no figures.
 
@@ -239,6 +239,18 @@ Return ONLY JSON: {"narration": "...", "eyebrow": "...", "cta": "${cta}", "scene
     }
     const brief = normalizeBrief({ ...raw, id: post.id, language, cta: raw.cta || cta, ...(ink ? { style: "ink", city: post.city ?? undefined } : {}) });
     if (ink) for (const sc of brief.scenes) delete sc.image;
+    // The words under a real screen are the library's own caption, never the model's: a writer's
+    // line said "accept multiple tenders" over a screen choosing one (studio-test, 2026-11-20).
+    for (const sc of brief.scenes) {
+      if (sc.type !== "app") continue;
+      try {
+        sc.line = captionOf(sc.screen, language);
+      } catch {
+        continue; // an unknown id: briefErrors names it and the model gets one retry
+      }
+      delete sc.good;
+      delete sc.bad;
+    }
     errors = [...briefErrors(brief, brand), ...footageErrors(brief, topic?.feature.id)];
     if (!errors.length) return brief;
     console.warn(`  brief attempt ${attempt} rejected: ${errors.slice(0, 3).join(" | ")}`);

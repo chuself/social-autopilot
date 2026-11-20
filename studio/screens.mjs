@@ -56,9 +56,34 @@ export function catalogue(features, lang = "en") {
   for (const [name, r] of Object.entries(library())) {
     if (r.device !== "mobile" || (features && !r.features.some((f) => features.includes(f)))) continue;
     lines.push(`${name} (${r.title?.en}):`);
-    r.steps.forEach((s, k) => s.ok && lines.push(`  ${name}#${k}  ${lang === "sw" ? s.sw : s.en}`));
+    r.steps.forEach((s, k) => s.ok && lines.push(`  ${name}#${k}  "${captionOf(`${name}#${k}`, lang)}" (${lang === "sw" ? s.sw : s.en})`));
   }
   return lines.join("\n");
+}
+
+let caps = null;
+/**
+ * The words that go with a ref: the director's caption (captions.json) of its LAST step, the
+ * state the scene ends on. At most eight words, no figures, nothing the screen does not show.
+ */
+export function captionOf(ref, lang = "en") {
+  const { name, rec, b } = parseRef(ref);
+  caps ??= JSON.parse(readFileSync(path.join(LIB, "captions.json"), "utf8"));
+  const c = caps[`${name}#${b}`] ?? caps[`${rec.page}#${b}`];
+  if (!c?.[lang]) throw new Error(`screen "${ref}": no ${lang} caption in captions.json`);
+  return c[lang];
+}
+
+/** Every approved step must have both captions: a gap would stop a reel at render time. */
+export function verifyCaptions() {
+  const missing = [];
+  for (const [name, r] of Object.entries(library())) r.steps.forEach((s, k) => {
+    if (!s.ok) return;
+    for (const lang of ["en", "sw"]) {
+      try { captionOf(`${name}#${k}`, lang); } catch { missing.push(`${name}#${k} ${lang}`); }
+    }
+  });
+  return missing;
 }
 
 const clip = (name) => path.join(LIB, name, "clip.mp4");
