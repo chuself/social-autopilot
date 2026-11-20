@@ -13281,7 +13281,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 4284856791,
-    "missedAt": "2026-11-20T04:01:51.569Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-10-30-08-pain-point",
@@ -13731,7 +13731,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1947312787,
-    "missedAt": "2026-11-20T04:01:51.569Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-11-01-08-client-proof",
@@ -13787,7 +13787,7 @@
       "operra-2026-11-01-08-client-proof-3.png"
     ],
     "headline": "Miamala ishirini ya simu bila majina?",
-    "missedAt": "2026-11-20T04:01:51.569Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-11-01-13-swahili-tip",
@@ -14190,7 +14190,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 3170176481,
-    "missedAt": "2026-11-20T04:01:51.570Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-11-03-08-industry-note",
@@ -14316,9 +14316,9 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-20T04:01:51.630Z",
+    "lastAttempt": "2026-11-20T05:02:46.111Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-20T04:01:51.570Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-11-03-16-pain-point",
@@ -15122,7 +15122,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 1055454036,
-    "missedAt": "2026-11-20T04:01:51.570Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-11-07-08-client-proof",
@@ -15353,7 +15353,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 563589337,
-    "missedAt": "2026-11-20T04:01:51.570Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "0": {
@@ -15411,7 +15411,7 @@
     "headline": "operra-2026-11-08-08-pain-point",
     "lastAttempt": "2026-11-08T10:57:14.464Z",
     "lastSkipReason": "image not rendered",
-    "missedAt": "2026-11-20T04:01:51.563Z"
+    "missedAt": "2026-11-20T05:02:05.315Z"
   },
   {
     "id": "operra-2026-11-08-13-number-that-lands",
@@ -15807,7 +15807,7 @@
     ],
     "bgProvider": "moss-fast",
     "bgSeed": 2315666603,
-    "missedAt": "2026-11-20T04:01:51.570Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-11-10-08-client-proof",
@@ -16921,9 +16921,9 @@
       "builtAt": "2026-11-14T14:01:31.003Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-20T04:01:51.630Z",
+    "lastAttempt": "2026-11-20T05:02:46.111Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-20T04:01:51.570Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-11-14-20-swahili-tip",
@@ -17546,9 +17546,9 @@
       "builtAt": "2026-11-16T22:53:21.167Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-20T04:01:51.630Z",
+    "lastAttempt": "2026-11-20T05:02:46.111Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
-    "missedAt": "2026-11-20T04:01:51.570Z"
+    "missedAt": "2026-11-20T05:02:05.321Z"
   },
   {
     "id": "operra-2026-11-17-16-client-proof",
@@ -18171,7 +18171,7 @@
     ],
     "scheduledFor": "2026-11-20T05:00:00.000Z",
     "createdAt": "2026-11-20T00:04:00.905Z",
-    "status": "pending",
+    "status": "posted",
     "bgProvider": "moss-fast",
     "bgSeed": 1746873448,
     "slideFiles": [
@@ -18180,7 +18180,13 @@
       "operra-2026-11-20-08-pain-point-3.png",
       "operra-2026-11-20-08-pain-point-4.png"
     ],
-    "headline": "Oda zinaingia, nyanya zimeisha jikoni"
+    "headline": "Oda zinaingia, nyanya zimeisha jikoni",
+    "lastAttempt": "2026-11-20T05:02:46.056Z",
+    "postedAt": "2026-11-20T05:02:46.057Z",
+    "postIds": [
+      "facebook:1049514968255534_122187866487351110",
+      "instagram:17980928019135504"
+    ]
   },
   {
     "id": "operra-2026-11-20-13-number-that-lands",
