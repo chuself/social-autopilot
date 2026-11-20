@@ -18222,7 +18222,30 @@
     "createdAt": "2026-11-20T00:04:11.830Z",
     "status": "pending",
     "bgProvider": "moss-fast",
-    "bgSeed": 882956416
+    "bgSeed": 882956416,
+    "reel": {
+      "file": "operra-2026-11-20-13-number-that-lands.mp4",
+      "url": "https://alice-media-537528034831.s3.eu-west-1.amazonaws.com/reels/operra-2026-11-20-13-number-that-lands.mp4",
+      "beats": [
+        "Splitting final bills should never cause desk delays",
+        "Manual calculations for split tenders create billing errors",
+        "Operra calculates split tenders and taxes automatically",
+        "Settle final charges smoothly across card and mobile money"
+      ],
+      "narration": "When guests in Dar es Salaam request to split a final bill between card and mobile money, Operra settles every tender on a single live folio. Discounts apply line by line, taxes calculate automatically, and payments post directly to the central ledger.",
+      "hasVoice": true,
+      "engine": "studio",
+      "scenes": [
+        "place",
+        "problem-doc",
+        "folio-fix",
+        "payoff"
+      ],
+      "attempts": 1,
+      "warnings": [],
+      "builtAt": "2026-11-20T07:04:16.273Z",
+      "status": "ready"
+    }
   },
   {
     "id": "operra-2026-11-20-16-client-proof",
