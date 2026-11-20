@@ -107,6 +107,15 @@ const DEVICES = {
     dress: { lines: [{ d: "M40 860 L1040 850 M40 900 L1040 890", w: 2.4 }], washes: [] } },
   laptop: { x: 160, y: 160, w: 760, h: 530, rot: 0, pad: "34px 40px", wide: true, outline: (w, h) => rrect(w, h, 18), family: "laptop",
     dress: { lines: [{ d: "M60 720 L1020 720 L1060 790 L20 790 Z M460 755 h160", w: 2.6 }, { d: "M960 640 L960 700 C960 716 1010 716 1010 700 L1010 640 Z M1010 652 C1030 652 1030 682 1010 682", w: 2.2 }], washes: [] } },
+  // The real app (studio/screens.mjs): the screen inside is exactly the recording's shape, so
+  // nothing is cropped or stretched. Phone recordings are 1:2, desktop 16:9.
+  // 24 px of drawn bezel: the ink line boils by a few pixels, and at 16 it crossed the screen
+  // (first test, 2026-11-20). Inner box 400 x 800, the recording's exact 1:2.
+  phoneApp: { x: 316, y: 80, w: 448, h: 848, rot: 0, pad: "24px", wide: false, real: true, outline: (w, h) => rrect(w, h, 56), family: "phone" },
+  phoneAppTilt: { x: 306, y: 86, w: 448, h: 848, rot: -3.5, pad: "24px", wide: false, real: true, outline: (w, h) => rrect(w, h, 56), family: "phone" },
+  // inner 800 x 450, the desktop recording's 16:9
+  laptopApp: { x: 116, y: 250, w: 848, h: 498, rot: 0, pad: "24px", wide: true, real: true, outline: (w, h) => rrect(w, h, 20), family: "laptop",
+    dress: { lines: [{ d: "M40 790 L1040 790 L1076 856 L4 856 Z M460 822 h160", w: 2.6 }], washes: [] } },
   board: { x: 150, y: 170, w: 780, h: 660, rot: -1.5, pad: "60px 52px 40px", wide: true, outline: (w, h) => `M4 6 L${w - 6} 0 L${w} ${h - 4} L0 ${h} Z M${w * 0.25 - 10} 18 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0 M${w * 0.75 - 10} 14 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0`, family: "board",
     dress: { lines: [{ d: "M0 120 L1080 110 M0 900 L1080 890", w: 2 }], washes: [] } },
   kds: { x: 150, y: 180, w: 780, h: 550, rot: 0, pad: "34px 36px", wide: true, outline: (w, h) => `${rrect(w, h, 14)} M${w / 2 - 50} ${h} V${h + 50} M${w / 2 + 50} ${h} V${h + 50} M${w / 2 - 140} ${h + 50} H${w / 2 + 140}`, family: "kds",
@@ -144,6 +153,11 @@ const flipSpan = (S, a, b) => `<span class="flip" id="${S}-fl"><span class="fa">
 
 /** The content of a product screen, laid out for a narrow or a wide device. */
 function screenContent(S, s, c, h, wide) {
+  if (s.type === "app") {
+    // Every pixel is the recording; the frames take over one another at their own times.
+    const q = s.seq ?? { frames: [] };
+    return { html: `<div class="real ci">${q.frames.map((f, k) => `<img id="${S}-f${k}" src="${f.src}">`).join("")}</div>`, frames: q.frames, real: true, shows: [] };
+  }
   const sc = s.screen ?? "frontdesk";
   if (sc === "reports") {
     const rows = ["Revenue · today, by outlet", "Occupancy · rooms, live", "Folio audit · every change", "Guests · arrivals"];
@@ -239,9 +253,10 @@ function deviceScreen(S, s, c, h, variant) {
       ${k.pin ? `[0,1,2,3].forEach((q)=>tl.to("#"+S+"-d"+q,{backgroundColor:"${TEAL_INK}",scale:1.15,duration:.12,ease:"none"},q?a+1.3+q*.12:cue(a+1.3,"tap")));` : ""}
       ${k.tap ? `tl.to("#"+S+"-btn",{scale:.94,duration:.08,yoyo:true,repeat:1,ease:"none"},cue(a+Math.min(1.8,(b-a)*.45),"tap"));` : ""}
       ${k.stamp ? `tl.fromTo("#"+S+"-ok",{opacity:0,scale:1.8,rotation:-8},{opacity:1,scale:1,rotation:-4,duration:.2,ease:"power4.in",immediateRender:false},cue(${at},"stamp")-.2);` : ""}
+      ${k.real ? k.frames.slice(1).map((f, j) => `tl.fromTo("#"+S+"-f${j + 1}",{opacity:0},{opacity:1,duration:.01,ease:"none",immediateRender:false},a+${f.t});`).join("") : ""}
       ${k.flip ? `gsap.set("#"+S+"-fl .fb",{yPercent:110});{const at=${at};tl.to("#"+S+"-fl .fa",{yPercent:-110,duration:.32,ease:"power2.inOut"},cue(at,"flip"));tl.to("#"+S+"-fl .fb",{yPercent:0,duration:.32,ease:"power2.inOut"},at);}` : ""}`,
     life: sparkLife(2) + `css(S+"-dev","rotate("+(${d.rot}+.7*Math.sin(t*.8)).toFixed(2)+"deg) translateY("+(8*Math.sin(t*1.2)).toFixed(1)+"px)");`,
-    hide: [`#${S}-dev .ci`, ...(k.stamp ? [`#${S}-ok`] : [])],
+    hide: [`#${S}-dev .ci`, ...(k.stamp ? [`#${S}-ok`] : []), ...(k.real ? k.frames.slice(1).map((_, j) => `#${S}-f${j + 1}`) : [])],
     shows: k.shows,
     variant,
   };
@@ -361,6 +376,15 @@ const SCENE = {
       hide: [`#${S}-pos`, `#${S}-ok`, ...lines.map((_, i) => `#${S}-l${i}`)],
       shows: lines.flatMap((l) => [l.label, l.each, l.value]),
     };
+  },
+
+  /** The real Operra app on a drawn device: a phone for phone recordings, a laptop for desktop ones. */
+  app(S, s, c) {
+    const h = hash(c.seed + S);
+    const mobile = /-mobile#/.test(String(s.screen));
+    const variant = mobile ? (c.used.includes("phone") ? "phoneAppTilt" : ["phoneApp", "phoneAppTilt"][h % 2]) : "laptopApp";
+    c.used.push(familyOf(variant));
+    return deviceScreen(S, s, c, h, variant);
   },
 
   "ui-screen"(S, s, c) {
@@ -726,6 +750,9 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:#F9F5EE;font-fam
 .dsv path{fill:rgba(251,248,241,.55);stroke:${INK};stroke-linecap:round;stroke-linejoin:round}
 .dct{position:absolute;inset:0;display:flex;flex-direction:column;gap:10px;color:${INK};font-size:21px;overflow:hidden}
 .dct>*{zoom:1.12}
+.dct>.real{zoom:1;position:relative;flex:1;border-radius:34px;overflow:hidden;background:#faf8f4;box-shadow:0 0 0 2.4px ${INK}}
+.dev.wide .dct>.real{zoom:1;border-radius:10px}
+.real img{position:absolute;left:0;top:0;width:100%;height:100%}
 .dev.wide .dct>*{zoom:1.2}
 .cols{display:flex;flex-direction:column;gap:12px}
 .cols>div{display:flex;flex-direction:column;gap:8px}

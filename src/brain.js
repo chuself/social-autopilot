@@ -4,6 +4,63 @@ import path from "node:path";
 import { completeJson } from "./llm.js";
 import { setUsageContext } from "./usage.js";
 import { factsFor, topicBlock, topicOf } from "./topics.js";
+import { captionOf, catalogue, parseRef, pictureOf, steps as footageFor } from "../studio/screens.mjs";
+
+/**
+ * The real Operra app in still posts. When the feature has screen recordings (studio/screens.mjs),
+ * a poster or a carousel's middle slides show a real step of the app, and the words on that
+ * slide may only say what the step's own words say. Returns the prompt block, or "".
+ */
+function realScreens(topic, language, format) {
+  if (!topic || !footageFor(topic.feature.id, { device: "mobile" }).length) return "";
+  const list = catalogue([topic.feature.id], language);
+  const how = format === "carousel"
+    ? `Every slide between the first and the last shows ONE real step of the app: give it only a "screen" id
+from the list (its headline and words are the step's own, filled in for you). Pick steps that tell the story
+in order; the last of them should show a result. The first and last slides have no "screen" and carry your
+words: the hook, and the payoff with the call to action.`
+    : `The poster shows ONE real step of the app beside the words: add "screen" (an id from the list). Choose the
+step that shows the headline's claim, and keep the headline and body to what that step's words say.`;
+  return `
+## The real Operra app (this feature has real screen recordings of the app)
+${how}
+
+Steps you may show (id, then what the step shows):
+${list}
+`;
+}
+
+/**
+ * Sentence case for a line the model wrote in Title Case ("Nadhani Uliithibitisha: Kosa La Chumba",
+ * plan-test 2026-11-20). Only when most words are capitalised; names, acronyms and the word after a
+ * colon or a full stop keep their capital.
+ */
+const PROPER = /^(Operra|Managix|M-Pesa|Tigo|Airtel|Halopesa|Selcom|NIDA|VIP|VAT|TRA|POS|QR|PIN|TSh|USD|WhatsApp|Instagram|Booking\.com|Tanzania|Zanzibar|Arusha|Moshi|Mwanza|Dodoma|Dar|Salaam|Kilimanjaro|Serengeti|Ngorongoro|Tanga|Iringa|Mbeya|Morogoro|Bagamoyo|Pemba|Mafia|Karatu|Kigoma|Musoma|Bukoba|Mtwara|Lindi|Singida|Tabora|Africa|East)$/;
+export function sentenceCase(text) {
+  const s = String(text ?? "");
+  const words = s.split(/\s+/).filter((w) => /[A-Za-z]/.test(w));
+  if (words.length < 3) return s;
+  const capped = words.filter((w) => /^[^A-Za-z]*[A-Z]/.test(w)).length;
+  if (capped / words.length < 0.75) return s;
+  let first = true;
+  return s.split(/(\s+)/).map((w) => {
+    if (/^\s+$/.test(w) || !/[A-Za-z]/.test(w)) return w;
+    const bare = w.replace(/[^A-Za-z.-]/g, "");
+    const keep = first || PROPER.test(bare) || /^[A-Z0-9-]{2,}$/.test(bare);
+    first = /[:.?!]$/.test(w);
+    return keep ? w : w.toLowerCase();
+  }).join("");
+}
+
+/** A screen id the writer gave, kept only if the library approves it. */
+function validScreen(ref) {
+  try {
+    parseRef(ref);
+    return String(ref).trim();
+  } catch {
+    return null;
+  }
+}
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -177,7 +234,7 @@ ${pillars}
 ## Approved facts
 You may ONLY state figures or claims that appear here verbatim.
 ${facts}
-${topicBlock(topic, brandId)}
+${topicBlock(topic, brandId)}${realScreens(topic, language, "carousel")}
 ## Already posted — do not repeat these angles
 ${recentLines}
 
@@ -202,7 +259,7 @@ tells it properly. A thin idea stretched over five slides is worse than a tight 
 
 Return ONLY JSON:
 {
-  "slides": [ { "eyebrow": "1-2 words", "headline": "max 7 words", "body": "max 18 words" } ],
+  "slides": [ { "eyebrow": "1-2 words", "headline": "max 7 words", "body": "max 18 words", "screen": "only where the real-app rule above asks for one" } ],
   "caption": "40-90 words, the post caption",
   "hashtags": ["3-5"],
   "imagePrompt": "one background description used across every slide",
@@ -221,8 +278,23 @@ ${sceneBrief(look, city, "carousel")}
 - No URLs, no phone numbers.`
   );
 
-  const slides = (post.slides ?? []).slice(0, 5);
-  return { ...post, slides, pillar, language, brand: brandId, look: look?.name ?? null, city: city?.name ?? null, feature: topic?.feature.id ?? null, angle: topic?.angle ?? null };
+  const real = Boolean(realScreens(topic, language, "carousel"));
+  for (const sl of post.slides ?? []) sl.headline = sentenceCase(sl.headline);
+  post.cta = sentenceCase(post.cta);
+  const shown = new Set();
+  const slides = (post.slides ?? []).slice(0, 5).map((sl, i, all) => {
+    let screen = real && i > 0 && i < all.length - 1 ? validScreen(sl.screen) : null;
+    // never the same picture twice in one carousel: a duplicate becomes a words-only slide
+    if (screen && shown.has(pictureOf(screen))) screen = null;
+    if (screen) shown.add(pictureOf(screen));
+    const { screen: _drop, ...rest } = sl;
+    if (!screen) return rest;
+    // A screen slide says exactly what its step shows: the director's caption, then the step's own line.
+    const { steps } = parseRef(screen);
+    const last = steps[steps.length - 1];
+    return { ...rest, screen, headline: captionOf(screen, language), body: language === "sw" ? last.sw : last.en };
+  });
+  return { ...post, slides, template: "app", pillar, language, brand: brandId, look: look?.name ?? null, city: city?.name ?? null, feature: topic?.feature.id ?? null, angle: topic?.angle ?? null };
 }
 
 /**
@@ -368,7 +440,7 @@ You may ONLY state figures, statistics or client claims that appear here verbati
 If you want a number that is not listed, write the post with no number at all.
 
 ${facts}
-${topicBlock(topic, brandId)}
+${topicBlock(topic, brandId)}${format === "poster" ? realScreens(topic, language, "poster") : ""}
 ## Already posted — do not repeat these angles
 ${recentLines}
 
@@ -407,8 +479,7 @@ Return ONLY a JSON object with these keys:
   Line breaks allowed. At most one emoji, only if it genuinely helps.
 - "hashtags": array of 3-5 hashtags, relevant, no spam.
 ${sceneBrief(look, city, format)}
-- "template": "spotlight"
-
+${format === "poster" && realScreens(topic, language, "poster") ? '- "screen": the id of the real app step this poster shows\n' : ""}
 ${language === "sw"
   ? `Write EVERY field — eyebrow, headline, body, cta, caption — in natural Tanzanian Kiswahili.
 Write it as a Tanzanian hotelier speaks, not as translated English. Avoid stiff textbook
@@ -418,8 +489,15 @@ Hashtags may stay in English where that is what people actually search.`
 
   setUsageContext({ feature: `plan-${format}` });
   const post = await completeJson(prompt);
+  post.headline = sentenceCase(post.headline);
+  post.cta = sentenceCase(post.cta);
+  const screen = format === "poster" && realScreens(topic, language, "poster") ? validScreen(post.screen) : null;
+  delete post.screen;
   return {
     ...post,
+    ...(screen ? { screen } : {}),
+    // Operra's 2026-11 look (templates/app.html), the same as operra.tech and the app.
+    template: "app",
     pillar,
     language,
     brand: brandId,

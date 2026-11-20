@@ -62,6 +62,20 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
   const voiceFile = await voiceFor(brief, dir, voice, reuse);
   const v = await pauses(voiceFile);
 
+  // The real app: each "app" scene's frames are cut to the time the voice gives it, so a dry
+  // compose first fixes every scene's window (compose is deterministic), then the real one.
+  if (scenes.some((s) => s.type === "app")) {
+    const { sequence } = await import("./screens.mjs");
+    const plan = compose({ ...brief, scenes }, v, brand);
+    scenes.forEach((s, i) => {
+      if (s.type !== "app") return;
+      const w = plan.windows[i];
+      const lead = scenes[i - 1]?.type === "app" ? 0.5 : 0.85; // the phone has landed before the app moves
+      const q = sequence(s.screen, path.join(dir, "screens"), { dur: w.t1 - w.t0 + 0.3, lead, width: 560 });
+      s.seq = { lead: 0, speed: q.speed, frames: q.frames.map((f) => ({ t: f.t, src: `file:///${f.file.replace(/\\/g, "/")}` })) };
+      s.seqInfo = { ref: s.screen, from: q.from, to: q.to, speed: q.speed, frames: q.frames.length };
+    });
+  }
   const reel = compose({ ...brief, scenes }, v, brand);
   const page = path.join(dir, "page.html");
   writeFileSync(page, reel.html);
@@ -69,7 +83,8 @@ export async function makeReel(brief, { out, voice = null, work = null, fps = 30
 
   const meta = { id: brief.id, out, duration: reel.duration, cuts: reel.cuts, joins: reel.joins, ledger: reel.ledger, cues: reel.cues, voice: voiceFile,
     windows: reel.windows, endAt: reel.endAt, allowed: reel.allowed, imageFiles,
-    images: scenes.map((s) => (s.imagePrompt ? { prompt: s.imagePrompt, seed: s.imageSeed } : null)) };
+    images: scenes.map((s) => (s.imagePrompt ? { prompt: s.imagePrompt, seed: s.imageSeed } : null)),
+    screens: scenes.map((s) => s.seqInfo ?? null) };
   writeFileSync(path.join(dir, "reel.json"), JSON.stringify(meta, null, 1));
   if (pageOnly) return { ...meta, page, dir };
   await finish(page, voiceFile, reel.cues, reel.duration, dir, out, fps);
@@ -106,11 +121,25 @@ async function makeInk(brief, brand, dir, { out, voice, fps, reuse, pageOnly }) 
   const url = (p) => pathToFileURL(path.resolve(ROOT, p)).href;
   const voiceFile = await voiceFor(brief, dir, voice, reuse);
   const v = await pauses(voiceFile);
-  const reel = composeInk(brief, v, brand, {
+  const urlsInk = {
     tex: url("studio/ink/tex"), gsap: url("studio/assets/gsap.min.js"),
     logo: url(path.join("brands", brand.id, brand.logoLight ?? "assets/logo-light.png")),
     fonts: (wt) => url(`brands/${brand.id}/assets/fonts/inter-latin-${wt}-normal.woff2`),
-  });
+  };
+  // The real app inside the drawn devices: as in makeReel, a dry compose fixes each scene's
+  // window, then each "app" scene gets its frames cut to that window.
+  if (brief.scenes.some((s) => s.type === "app")) {
+    const { sequence } = await import("./screens.mjs");
+    const plan = composeInk(brief, v, brand, urlsInk);
+    brief = { ...brief, scenes: brief.scenes.map((s, i) => {
+      if (s.type !== "app") return s;
+      const w = plan.windows[i];
+      const wide = /-desktop#/.test(s.screen);
+      const q = sequence(s.screen, path.join(dir, "screens"), { dur: w.t1 - w.t0, lead: 1.0, width: wide ? 800 : 400 });
+      return { ...s, seq: { frames: q.frames.map((f) => ({ t: f.t, src: pathToFileURL(f.file).href })) }, seqInfo: { ref: s.screen, from: q.from, to: q.to, speed: q.speed, frames: q.frames.length } };
+    }) };
+  }
+  const reel = composeInk(brief, v, brand, urlsInk);
   const page = path.join(dir, "page.html");
   writeFileSync(page, reel.html);
   const b = await chromium.launch();
@@ -127,7 +156,8 @@ async function makeInk(brief, brand, dir, { out, voice, fps, reuse, pageOnly }) 
   }
   for (const c of cues) if (!VOCABULARY[c.type]) throw new Error(`cue ${c.type} has no meaning`);
   const meta = { id: brief.id, out, style: "ink", look: reel.look, duration: reel.duration, cuts: reel.cuts, joins: reel.joins, ledger: reel.ledger, cues, voice: voiceFile,
-    windows: reel.windows, endAt: reel.endAt, endVeil: true, allowed: reel.allowed, imageFiles: brief.scenes.map(() => null), images: brief.scenes.map(() => null) };
+    windows: reel.windows, endAt: reel.endAt, endVeil: true, allowed: reel.allowed, imageFiles: brief.scenes.map(() => null), images: brief.scenes.map(() => null),
+    screens: brief.scenes.map((s) => s.seqInfo ?? null) };
   writeFileSync(path.join(dir, "reel.json"), JSON.stringify(meta, null, 1));
   if (pageOnly) return { ...meta, page, dir };
   await finish(page, voiceFile, cues, reel.duration, dir, out, fps);

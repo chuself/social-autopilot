@@ -16,20 +16,20 @@
 import { ico, P, frontDesk, guestRow, reportsHub, reportRow, kitchenBoard, guestMenu, housekeepingBoard, eventsDay, floorPlan, bookingPhone } from "./lib/ui.mjs";
 import { fill, assertNoDigits, hash, orderLines } from "./numbers.mjs";
 
-export const ROLE = { place: "hook", "problem-doc": "problem", "folio-fix": "solution", "ui-screen": "solution", "pos-charge": "solution", checklist: "solution", payoff: "payoff" };
+export const ROLE = { place: "hook", "problem-doc": "problem", "folio-fix": "solution", "ui-screen": "solution", app: "solution", "pos-charge": "solution", checklist: "solution", payoff: "payoff" };
 export const WEIGHT = { hook: 1, problem: 1, solution: 1.4, payoff: 0.8 };
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
 /** Caption: one line, words marked bad/good by the brief. */
-function caption(id, line, { bad = [], good = [] } = {}) {
+function caption(id, line, { bad = [], good = [], capTop = null } = {}) {
   assertNoDigits(line, `${id} line`);
   const words = line.trim().split(/\s+/);
   const bare = (w) => w.replace(/[?.,!:;]/g, "").toLowerCase();
   for (const w of [...bad, ...good]) if (!words.some((x) => bare(x) === w.toLowerCase())) throw new Error(`${id}: marked word "${w}" is not in the line`);
   const size = line.length <= 36 ? 80 : line.length <= 52 ? 70 : 60;
   const cls = (w) => (bad.some((b) => b.toLowerCase() === bare(w)) ? "bad" : good.some((g) => g.toLowerCase() === bare(w)) ? "good" : "");
-  return `<div class="cap" id="${id}-cap" style="font-size:${size}px">${words
+  return `<div class="cap" id="${id}-cap" style="font-size:${size}px${capTop ? `;top:${capTop}px` : ""}">${words
     .map((w) => `<span class="w"><span class="wi ${cls(w)}">${esc(w)}</span></span>`)
     .join(" ")}</div>`;
 }
@@ -263,6 +263,34 @@ export const SCENES = {
         ...extra,
         ...(s.chips ?? []).map((_, i) => chipIn(`#${id}-chip${i}`, t0 + dur * (0.42 + i * 0.14), "pop", i + 2)),
         { t: t0 + 1.4, sel: `#${id}-wrap`, to: { y: -12 }, dur: dur - 1.6, ease: "sine.inOut" },
+      ],
+    };
+  },
+
+  /**
+   * Solution: the real Operra app. A step (or run of steps) of the demo hotel's own recording plays
+   * on a phone: every pixel is the app, nothing is drawn (studio/screens.mjs). make.mjs cuts the
+   * frames before composing and passes them in as s.seq; the line may only say what the step's
+   * own words say (brief.mjs gives the writer those words).
+   */
+  app(id, s, { t0, dur, prev }) {
+    // After another app scene the whip itself brings the phone in: fading it in as well left the
+    // frame dark for a beat (the checker's flash rule caught it, first test reel 2026-11-20).
+    const follow = prev === "app";
+    // The brief's dry run composes before any frame is cut: an empty phone then, never a drawn one.
+    const q = s.seq ?? { frames: [], lead: 0 };
+    const imgs = q.frames.map((f, k) => `<img id="${id}-f${k}" src="${f.src}">`).join("");
+    const dev = `<div class="appdev" id="${id}-dev"><div class="appscr">${imgs}</div></div>`;
+    return {
+      html: shell(id, { ...s, capTop: 1408 }, { fg: dev, grade: "app" }),
+      hide: [...(follow ? [] : [`#${id}-dev`]), ...q.frames.slice(1).map((_, k) => `#${id}-f${k + 1}`)],
+      steps: [
+        push(id, t0 - 0.15, dur + 0.3, 1.06),
+        words(id, t0 + 0.25),
+        ...(follow ? [] : [{ t: t0 + 0.1, sel: `#${id}-dev`, from: { opacity: 0, y: 220, rotationX: 22, scale: 0.94, filter: "blur(10px)" }, to: { opacity: 1, y: 0, rotationX: 0, scale: 1, filter: "blur(0px)" }, dur: 0.8, ease: "power3.out", cue: "card" }]),
+        { t: t0 + 0.9, sel: `#${id}-dev`, to: { scale: 1.035, y: -10 }, dur: Math.max(0.5, dur - 1.0), ease: "sine.inOut" },
+        // Frame k appears at its own time over the ones before it; seeking either way is exact.
+        ...q.frames.slice(1).map((f, k) => ({ t: +(t0 + q.lead + f.t).toFixed(3), sel: `#${id}-f${k + 1}`, from: { opacity: 0 }, to: { opacity: 1 }, dur: 0.01, ease: "none" })),
       ],
     };
   },

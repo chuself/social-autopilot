@@ -7,10 +7,9 @@ Run on the PC after scripts/screens-sync.mjs (needs numpy + opencv). Never in CI
 are committed in brands/operra/screens/manifest.json, and the director checks the proposals
 by eye (node scripts/screens-sync.mjs --stills) before marking a step ok.
 
-A loading frame is a skeleton (large flat grey blocks, at least 15% of the frame in the 232-241
-grey band, and almost no dark text) or a blank page (under 0.4% dark pixels: "Authenticating...").
-Measured on today-mobile, stay-mobile and checkin-mobile (2026-11-20); sparse real screens such as
-a check-in success page keep 7-8% dark pixels, so they are never mistaken for loading. Playback holds the last real
+A loading frame is a skeleton (nine or more text-free bands of flat grey, see skeleton_bands) or
+a blank page (under 0.4% dark pixels: "Authenticating..."). Sparse real screens such as a check-in
+success page keep 7-8% dark pixels, so they are never mistaken for loading. Playback holds the last real
 frame through a loading stretch, and a still is never taken from one.
 """
 import json
@@ -23,6 +22,19 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 LIB = ROOT / "brands" / "operra" / "screens"
 FPS = 10
+
+
+def skeleton_bands(g):
+    """Rows of a half-size frame that are flat skeleton grey with no text at all. A page still
+    loading has many (18-44 measured); a real screen, even with grey inputs or a grey balance
+    box, has at most 5 (stay, today, checkin, kds, 2026-11-20). The first rule (grey share plus
+    almost no dark pixels) missed half-loaded pages: a real header over skeleton lists."""
+    n = 0
+    for y in range(0, g.shape[0] - 10, 10):
+        b = g[y:y + 10]
+        if ((b >= 226) & (b < 244)).mean() > 0.45 and (b < 200).mean() == 0:
+            n += 1
+    return n
 
 
 def frames(clip):
@@ -38,8 +50,7 @@ def frames(clip):
             g = cv2.cvtColor(f, cv2.COLOR_BGR2GRAY)
             g = cv2.resize(g, (g.shape[1] // 2, g.shape[0] // 2))
             dark = float((g < 200).mean())
-            grey = float(((g >= 232) & (g < 242)).mean())
-            out.append((i / src, g, (grey > 0.15 and dark < 0.01) or dark < 0.004))
+            out.append((i / src, g, skeleton_bands(g) >= 9 or dark < 0.004))
         i += 1
     return out
 
@@ -59,7 +70,13 @@ def main(force):
                 j = k
                 while j + 1 < len(low) and low[j + 1]:
                     j += 1
-                spans.append([round(float(ts[k]) - 0.05, 2), round(float(ts[j]) + 0.1, 2)])
+                a, b = round(float(ts[k]) - 0.1, 2), round(float(ts[j]) + 0.1, 2)
+                # two loading stretches under 0.3 s apart are one: the screen between them would
+                # flash for a frame (stay-mobile: Guests list between two skeletons)
+                if spans and a - spans[-1][1] < 0.3:
+                    spans[-1][1] = b
+                else:
+                    spans.append([a, b])
                 k = j + 1
             else:
                 k += 1
@@ -80,6 +97,23 @@ def main(force):
                 if sc > score:
                     best, score = float(ts[k]), sc
             s["still"] = round(best, 2) if best is not None else None
+        # Steps whose stills are the same picture (a long page scrolled to one view): a carousel
+        # must never show one screen twice (plan-test, 2026-11-20: overview steps 2 and 3).
+        cap = cv2.VideoCapture(str(LIB / name / "clip.mp4"))
+        thumbs = {}
+        for k, s in enumerate(r["steps"]):
+            if s.get("still") is None:
+                continue
+            cap.set(cv2.CAP_PROP_POS_MSEC, s["still"] * 1000)
+            ok, f = cap.read()
+            if ok:
+                thumbs[k] = cv2.resize(cv2.cvtColor(f, cv2.COLOR_BGR2GRAY), (96, 192) if r["device"] == "mobile" else (192, 108)).astype(np.int16)
+        for k, s in enumerate(r["steps"]):
+            s.pop("same", None)
+            for j in range(k):
+                if j in thumbs and k in thumbs and float(np.abs(thumbs[j] - thumbs[k]).mean()) < 3:
+                    s["same"] = r["steps"][j].get("same", j)
+                    break
         print(f"{name}: {len(spans)} loading stretch(es) {spans}")
     (LIB / "manifest.json").write_text(json.dumps(m, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 

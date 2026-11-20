@@ -384,10 +384,10 @@
       "en": "Audit trail",
       "sw": "Kumbukumbu ya kila badiliko",
       "page": "/features/finance-compliance/audit-center",
-      "what": "Every action by every user is recorded, linked to the person and time, and chained so a silent edit shows immediately.",
+      "what": "Every action by every user is recorded, linked to the person and time, and kept with its history, so a silent edit shows.",
       "claims": [
         "Every action is bound to a user, role and time: no anonymous edits",
-        "Entries are hash-chained, so a silent edit becomes visible",
+        "Every change keeps its history, so a silent edit becomes visible",
         "Six views: operations, financial, rooms, staff, restaurant, automation"
       ],
       "angles": [

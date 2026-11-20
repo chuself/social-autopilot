@@ -28,6 +28,12 @@ export async function renderPoster(post, brandId = "operra", outFile) {
   const panel = activeLook?.panel;
 
   const template = post.template ?? "spotlight";
+  // A real app screen (studio/screens.mjs) is cut from the committed recording on demand, so any
+  // re-render, on any machine, shows exactly the same frame.
+  if (post.screen && !post.shotPath && template === "app") {
+    const { still } = await import("../studio/screens.mjs");
+    post = { ...post, shotPath: path.relative(ROOT, still(post.screen, path.join(ROOT, "state", "frames", "shots"), 896)) };
+  }
   const templatePath = path.join(brandDir, "templates", `${template}.html`);
   if (!existsSync(templatePath)) throw new Error(`No template "${template}" for brand ${brandId}`);
 
@@ -42,7 +48,7 @@ export async function renderPoster(post, brandId = "operra", outFile) {
     await page.goto(pathToFileURL(templatePath).href, { waitUntil: "load" });
 
     await page.evaluate(
-      ({ brand, post, logoUrl, bgUrl, accent, scrim, panel }) => {
+      ({ brand, post, logoUrl, bgUrl, shotUrl, accent, scrim, panel }) => {
         const root = document.documentElement;
         for (const [key, value] of Object.entries(brand.colors)) {
           root.style.setProperty(`--${key}`, value);
@@ -79,6 +85,17 @@ export async function renderPoster(post, brandId = "operra", outFile) {
 
         document.getElementById("logo").src = logoUrl;
 
+        // The app look (templates/app.html): a real screen of the app, or the photo in a card.
+        const shot = document.getElementById("shot");
+        if (shot && shotUrl) {
+          shot.src = shotUrl;
+          document.body.classList.add("has-shot");
+          set("step", post.stepLabel ?? "");
+        } else if (document.getElementById("photo") && bgUrl) {
+          document.getElementById("photo").style.backgroundImage = `url("${bgUrl}")`;
+          document.body.classList.add("has-photo");
+        }
+
         // A post never dies for lack of an image — the gradient fallback stands in.
         if (bgUrl) {
           const bg = document.getElementById("bg");
@@ -92,20 +109,26 @@ export async function renderPoster(post, brandId = "operra", outFile) {
         accent,
         scrim,
         panel,
-        logoUrl: pathToFileURL(path.join(brandDir, brand.logo)).href,
+        // A light ground takes the lockup drawn for light grounds.
+        logoUrl: pathToFileURL(path.join(brandDir, template === "app" ? brand.logoLight ?? "assets/logo-light.png" : brand.logo)).href,
+        shotUrl: post.shotPath ? pathToFileURL(path.resolve(ROOT, post.shotPath)).href : null,
         bgUrl: post.backgroundPath ? pathToFileURL(path.resolve(ROOT, post.backgroundPath)).href : null,
       }
     );
 
     await page.evaluate(() => document.fonts.ready);
+    // A template that can fit its own words (templates/app.html) does so once the fonts are in.
+    const fits = await page.evaluate(() => (window.fit ? window.fit() : true));
+    if (!fits) console.warn(`  ${post.id ?? "poster"}: words still crowd the footer after fitting`);
     // Let the background image decode before the shot.
     await page.waitForFunction(() => {
-      const bg = document.getElementById("bg");
-      const m = /url\("(.+)"\)/.exec(bg.style.backgroundImage);
-      if (!m) return true;
+      const imgs = [...document.images].every((i) => i.complete);
+      const bg = document.getElementById("photo")?.style.backgroundImage || document.getElementById("bg").style.backgroundImage;
+      const m = /url\("(.+)"\)/.exec(bg);
+      if (!m) return imgs;
       const img = new Image();
       img.src = m[1];
-      return img.complete;
+      return imgs && img.complete;
     }, null, { timeout: 15000 }).catch(() => {});
 
     await mkdir(path.dirname(outFile), { recursive: true });

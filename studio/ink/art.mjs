@@ -128,11 +128,18 @@ export const PROPS = {
     fine: Array.from({ length: 12 }, (_, i) => R(cx - 140 + (i % 4) * 72, cy - 60 + Math.floor(i / 4) * 66, 52, 46)).join(" ") + ` M${cx + 76} ${cy + 74} l40 40 M${cx + 116} ${cy + 74} l-40 40`,
     wash: ["wash-violet-b", cx - 170, cy - 150, 340, 120, 0.45],
   }),
+  // A room key: round bow with a hole, a thick shaft, a stepped bit, and the room's tag hanging
+  // off the bow. The old one (thin shaft, tiny teeth, the tag drawn as a box underneath) read as
+  // a wheel on a post (studio-test, 2026-11-20).
   keys: (cx, cy) => ({
-    fill: `M${cx - 160} ${cy} a70 70 0 1 0 140 0 a70 70 0 1 0 -140 0`,
-    d: `M${cx - 160} ${cy} a70 70 0 1 0 140 0 a70 70 0 1 0 -140 0 M${cx - 20} ${cy} L${cx + 200} ${cy} M${cx + 160} ${cy} v40 M${cx + 120} ${cy} v30 M${cx - 110} ${cy} a20 20 0 1 0 40 0 a20 20 0 1 0 -40 0`,
-    fine: `${R(cx - 140, cy + 70, 100, 140)} M${cx - 90} ${cy + 70} L${cx - 90} ${cy + 40}`,
-    wash: ["wash-teal", cx - 180, cy - 80, 220, 300, 0.45],
+    fill: `M${cx - 180} ${cy} a75 75 0 1 0 150 0 a75 75 0 1 0 -150 0`
+      + ` M${cx - 34} ${cy - 16} L${cx + 220} ${cy - 16} L${cx + 220} ${cy + 16} L${cx + 196} ${cy + 16} L${cx + 196} ${cy + 62} L${cx + 166} ${cy + 62} L${cx + 166} ${cy + 40} L${cx + 140} ${cy + 40} L${cx + 140} ${cy + 70} L${cx + 110} ${cy + 70} L${cx + 110} ${cy + 16} L${cx - 34} ${cy + 16} Z`
+      + ` M${cx - 250} ${cy + 96} L${cx - 178} ${cy + 96} L${cx - 178} ${cy + 230} C${cx - 178} ${cy + 250} ${cx - 250} ${cy + 250} ${cx - 250} ${cy + 230} Z`,
+    d: `M${cx - 180} ${cy} a75 75 0 1 0 150 0 a75 75 0 1 0 -150 0 M${cx - 128} ${cy} a23 23 0 1 0 46 0 a23 23 0 1 0 -46 0`
+      + ` M${cx - 32} ${cy - 16} L${cx + 220} ${cy - 16} L${cx + 220} ${cy + 16} L${cx + 196} ${cy + 16} L${cx + 196} ${cy + 62} L${cx + 166} ${cy + 62} L${cx + 166} ${cy + 40} L${cx + 140} ${cy + 40} L${cx + 140} ${cy + 70} L${cx + 110} ${cy + 70} L${cx + 110} ${cy + 16} L${cx - 32} ${cy + 16}`,
+    fine: `M${cx - 168} ${cy + 38} C${cx - 196} ${cy + 60} ${cx - 210} ${cy + 80} ${cx - 214} ${cy + 96}`
+      + ` M${cx - 250} ${cy + 96} L${cx - 178} ${cy + 96} L${cx - 178} ${cy + 230} C${cx - 178} ${cy + 250} ${cx - 250} ${cy + 250} ${cx - 250} ${cy + 230} Z M${cx - 222} ${cy + 116} a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0`,
+    wash: ["wash-teal", cx - 260, cy - 80, 280, 330, 0.45],
   }),
 };
 export const PROP_NAMES = Object.keys(PROPS);
