@@ -1,0 +1,1990 @@
+{
+ "source": "operra-migration/infra/tutorials (demo hotel recordings)",
+ "syncedAt": "2026-11-20T06:18:18.622Z",
+ "recordings": {
+  "audit-desktop": {
+   "page": "audit",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 16.97,
+   "title": {
+    "en": "Close the day",
+    "sw": "Kufunga siku"
+   },
+   "about": {
+    "en": "Check the day in figures, add a note, then lock it.",
+    "sw": "Kagua takwimu za siku, ongeza maelezo, kisha ifunge."
+   },
+   "features": [
+    "night-audit",
+    "audit-center"
+   ],
+   "steps": [
+    {
+     "en": "Close the day shows the day in figures before you lock it.",
+     "sw": "Funga siku inaonyesha takwimu za siku kabla hujaifunga.",
+     "t": 0,
+     "end": 3.01,
+     "taps": [],
+     "still": 2.8,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    },
+    {
+     "en": "Rooms, restaurant, money earned and money in, all for that one day.",
+     "sw": "Vyumba, mgahawa, mapato na pesa zilizoingia, zote kwa siku hiyo moja.",
+     "t": 3.01,
+     "end": 6.347,
+     "taps": [],
+     "still": 6.1,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    },
+    {
+     "en": "Anything still open is carried to the next day, so nothing is lost.",
+     "sw": "Chochote kilichobaki wazi kinahamia siku inayofuata, hivyo hakuna kinachopotea.",
+     "t": 6.347,
+     "end": 9.665,
+     "taps": [],
+     "still": 9.5,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    },
+    {
+     "en": "Add a note for the record if anything was unusual.",
+     "sw": "Ongeza maelezo kwa kumbukumbu kama kulikuwa na jambo lisilo la kawaida.",
+     "t": 9.665,
+     "end": 12.96,
+     "taps": [
+      0.07
+     ],
+     "still": 12.8,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    },
+    {
+     "en": "When the figures are right, tap Close. A closed day can no longer be changed.",
+     "sw": "Takwimu zikiwa sawa, gusa Funga. Siku iliyofungwa haiwezi kubadilishwa tena.",
+     "t": 12.96,
+     "end": 16.521,
+     "taps": [],
+     "still": 16.3,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    }
+   ],
+   "loading": []
+  },
+  "audit-mobile": {
+   "page": "audit",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 17,
+   "title": {
+    "en": "Close the day",
+    "sw": "Kufunga siku"
+   },
+   "about": {
+    "en": "Check the day in figures, add a note, then lock it.",
+    "sw": "Kagua takwimu za siku, ongeza maelezo, kisha ifunge."
+   },
+   "features": [
+    "night-audit",
+    "audit-center"
+   ],
+   "steps": [
+    {
+     "en": "Close the day shows the day in figures before you lock it.",
+     "sw": "Funga siku inaonyesha takwimu za siku kabla hujaifunga.",
+     "t": 0,
+     "end": 3.002,
+     "taps": [],
+     "still": 2.8,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    },
+    {
+     "en": "Rooms, restaurant, money earned and money in, all for that one day.",
+     "sw": "Vyumba, mgahawa, mapato na pesa zilizoingia, zote kwa siku hiyo moja.",
+     "t": 3.002,
+     "end": 6.34,
+     "taps": [],
+     "still": 6.1,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    },
+    {
+     "en": "Anything still open is carried to the next day, so nothing is lost.",
+     "sw": "Chochote kilichobaki wazi kinahamia siku inayofuata, hivyo hakuna kinachopotea.",
+     "t": 6.34,
+     "end": 9.67,
+     "taps": [],
+     "still": 9.5,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    },
+    {
+     "en": "Add a note for the record if anything was unusual.",
+     "sw": "Ongeza maelezo kwa kumbukumbu kama kulikuwa na jambo lisilo la kawaida.",
+     "t": 9.67,
+     "end": 12.952,
+     "taps": [
+      0.06
+     ],
+     "still": 12.8,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    },
+    {
+     "en": "When the figures are right, tap Close. A closed day can no longer be changed.",
+     "sw": "Takwimu zikiwa sawa, gusa Funga. Siku iliyofungwa haiwezi kubadilishwa tena.",
+     "t": 12.952,
+     "end": 16.54,
+     "taps": [],
+     "still": 16.3,
+     "ok": false,
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+    }
+   ],
+   "loading": []
+  },
+  "checkin-desktop": {
+   "page": "checkin",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 22.67,
+   "title": {
+    "en": "Check in a guest with a booking",
+    "sw": "Kumwingiza mgeni mwenye booking"
+   },
+   "about": {
+    "en": "From the arrivals list: confirm the ID, take a payment and hand over the room.",
+    "sw": "Kutoka orodha ya wanaowasili: thibitisha kitambulisho, pokea malipo na mkabidhi chumba."
+   },
+   "features": [
+    "front-desk",
+    "guest-stay",
+    "mobile-money"
+   ],
+   "steps": [
+    {
+     "en": "Guests arriving today wait at the top of Today. Tap Check in next to the guest.",
+     "sw": "Wageni wanaowasili leo wako juu kwenye Leo. Gusa Mwingize karibu na jina la mgeni.",
+     "t": 0,
+     "end": 2.158,
+     "taps": [
+      0.06
+     ],
+     "still": 2,
+     "ok": true
+    },
+    {
+     "en": "The booking is already filled in. Add the ID the guest shows you.",
+     "sw": "Taarifa za booking zimeshajazwa. Ongeza kitambulisho anachokuonyesha mgeni.",
+     "t": 2.158,
+     "end": 6.144,
+     "taps": [
+      0.08,
+      0.36,
+      1.98
+     ],
+     "still": 5.9,
+     "ok": true
+    },
+    {
+     "en": "The room is already chosen. You can still move the guest to another free room.",
+     "sw": "Chumba kimeshachaguliwa. Bado unaweza kumhamishia chumba kingine kilicho wazi.",
+     "t": 6.144,
+     "end": 8.499,
+     "taps": [],
+     "still": 8.3,
+     "ok": true
+    },
+    {
+     "en": "Take a payment now, or leave it for check-out. For mobile money, type the transaction code.",
+     "sw": "Pokea malipo sasa, au yaache hadi siku ya kuondoka. Kwa malipo ya simu, andika namba ya muamala.",
+     "t": 8.499,
+     "end": 11.018,
+     "taps": [
+      0.05,
+      0.39
+     ],
+     "still": 10.8,
+     "ok": true
+    },
+    {
+     "en": "Tap Check in. The room turns occupied and the bill opens.",
+     "sw": "Gusa Mwingize. Chumba kinakuwa na mgeni na bili inafunguka.",
+     "t": 11.018,
+     "end": 22.245,
+     "taps": [
+      0.07
+     ],
+     "still": 22,
+     "ok": true
+    }
+   ],
+   "loading": [
+    [
+     0.75,
+     1.4
+    ]
+   ]
+  },
+  "checkin-mobile": {
+   "page": "checkin",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 23.2,
+   "title": {
+    "en": "Check in a guest with a booking",
+    "sw": "Kumwingiza mgeni mwenye booking"
+   },
+   "about": {
+    "en": "From the arrivals list: confirm the ID, take a payment and hand over the room.",
+    "sw": "Kutoka orodha ya wanaowasili: thibitisha kitambulisho, pokea malipo na mkabidhi chumba."
+   },
+   "features": [
+    "front-desk",
+    "guest-stay",
+    "mobile-money"
+   ],
+   "steps": [
+    {
+     "en": "Guests arriving today wait at the top of Today. Tap Check in next to the guest.",
+     "sw": "Wageni wanaowasili leo wako juu kwenye Leo. Gusa Mwingize karibu na jina la mgeni.",
+     "t": 0,
+     "end": 2.164,
+     "taps": [
+      0.07
+     ],
+     "still": 2,
+     "ok": true
+    },
+    {
+     "en": "The booking is already filled in. Add the ID the guest shows you.",
+     "sw": "Taarifa za booking zimeshajazwa. Ongeza kitambulisho anachokuonyesha mgeni.",
+     "t": 2.164,
+     "end": 6.123,
+     "taps": [
+      0.04,
+      0.32,
+      1.95
+     ],
+     "still": 5.9,
+     "ok": true
+    },
+    {
+     "en": "The room is already chosen. You can still move the guest to another free room.",
+     "sw": "Chumba kimeshachaguliwa. Bado unaweza kumhamishia chumba kingine kilicho wazi.",
+     "t": 6.123,
+     "end": 8.485,
+     "taps": [],
+     "still": 8.3,
+     "ok": true
+    },
+    {
+     "en": "Take a payment now, or leave it for check-out. For mobile money, type the transaction code.",
+     "sw": "Pokea malipo sasa, au yaache hadi siku ya kuondoka. Kwa malipo ya simu, andika namba ya muamala.",
+     "t": 8.485,
+     "end": 11.014,
+     "taps": [
+      0.05,
+      0.37
+     ],
+     "still": 10.8,
+     "ok": true
+    },
+    {
+     "en": "Tap Check in. The room turns occupied and the bill opens.",
+     "sw": "Gusa Mwingize. Chumba kinakuwa na mgeni na bili inafunguka.",
+     "t": 11.014,
+     "end": 22.758,
+     "taps": [
+      0.04
+     ],
+     "still": 22.6,
+     "ok": true
+    }
+   ],
+   "loading": [
+    [
+     0.75,
+     1.3
+    ]
+   ]
+  },
+  "counter-desktop": {
+   "page": "counter",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 10.47,
+   "title": {
+    "en": "Sell at the counter",
+    "sw": "Kuuza kaunta"
+   },
+   "about": {
+    "en": "Tap the items, choose how the customer pays, take the money.",
+    "sw": "Gusa bidhaa, chagua mteja analipaje, pokea pesa."
+   },
+   "features": [
+    "restaurant-pos",
+    "mobile-money"
+   ],
+   "steps": [
+    {
+     "en": "The counter: tap a category, then each item the customer wants.",
+     "sw": "Kaunta: gusa kundi, kisha kila bidhaa anayotaka mteja.",
+     "t": 0,
+     "end": 2.587,
+     "taps": [
+      0.67,
+      1.09
+     ],
+     "still": 2.4,
+     "ok": true
+    },
+    {
+     "en": "Tap again to add one more. Switch category for food.",
+     "sw": "Gusa tena kuongeza moja zaidi. Badilisha kundi kwa chakula.",
+     "t": 2.588,
+     "end": 5.02,
+     "taps": [
+      0.07,
+      0.4,
+      0.74
+     ],
+     "still": 4.8,
+     "ok": true
+    },
+    {
+     "en": "The cart adds it up. Choose how the customer pays.",
+     "sw": "Kikapu kinajumlisha. Chagua mteja analipaje.",
+     "t": 5.02,
+     "end": 6.736,
+     "taps": [
+      0.06
+     ],
+     "still": 6.5,
+     "ok": true
+    },
+    {
+     "en": "Take the payment. The sale is recorded and the cart is ready for the next customer.",
+     "sw": "Pokea malipo. Mauzo yanarekodiwa na kikapu kiko tayari kwa mteja anayefuata.",
+     "t": 6.736,
+     "end": 10.014,
+     "taps": [
+      0.02
+     ],
+     "still": 9.8,
+     "ok": false,
+     "note": "empty cart, TSh 0"
+    }
+   ],
+   "loading": []
+  },
+  "counter-mobile": {
+   "page": "counter",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 10.97,
+   "title": {
+    "en": "Sell at the counter",
+    "sw": "Kuuza kaunta"
+   },
+   "about": {
+    "en": "Tap the items, choose how the customer pays, take the money.",
+    "sw": "Gusa bidhaa, chagua mteja analipaje, pokea pesa."
+   },
+   "features": [
+    "restaurant-pos",
+    "mobile-money"
+   ],
+   "steps": [
+    {
+     "en": "The counter: tap a category, then each item the customer wants.",
+     "sw": "Kaunta: gusa kundi, kisha kila bidhaa anayotaka mteja.",
+     "t": 0,
+     "end": 1.956,
+     "taps": [
+      0.07,
+      0.47
+     ],
+     "still": 1.8,
+     "ok": true
+    },
+    {
+     "en": "Tap again to add one more. Switch category for food.",
+     "sw": "Gusa tena kuongeza moja zaidi. Badilisha kundi kwa chakula.",
+     "t": 1.956,
+     "end": 4.373,
+     "taps": [
+      0.05,
+      0.4,
+      0.72
+     ],
+     "still": 4.2,
+     "ok": true
+    },
+    {
+     "en": "Tap the cart at the bottom to see the total, then choose how the customer pays.",
+     "sw": "Gusa kikapu chini kuona jumla, kisha chagua mteja analipaje.",
+     "t": 4.373,
+     "end": 7.243,
+     "taps": [
+      0.05,
+      1.22
+     ],
+     "still": 7,
+     "ok": true
+    },
+    {
+     "en": "Take the payment. The sale is recorded and the cart is ready for the next customer.",
+     "sw": "Pokea malipo. Mauzo yanarekodiwa na kikapu kiko tayari kwa mteja anayefuata.",
+     "t": 7.243,
+     "end": 10.531,
+     "taps": [
+      0.03
+     ],
+     "still": 10.3,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "hk-desktop": {
+   "page": "hk",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 11.8,
+   "title": {
+    "en": "Housekeeping: my rooms",
+    "sw": "Usafi: vyumba vyangu"
+   },
+   "about": {
+    "en": "Rooms to clean after check-out, and guests whose rooms need freshening up.",
+    "sw": "Vyumba vya kusafisha baada ya mgeni kuondoka, na wageni ambao vyumba vyao vinahitaji kupangwa."
+   },
+   "features": [
+    "housekeeping"
+   ],
+   "steps": [
+    {
+     "en": "Rooms to clean come first: guests have left these rooms.",
+     "sw": "Vyumba vya kusafisha vinaanza: wageni wameshaondoka kwenye vyumba hivi.",
+     "t": 0,
+     "end": 2.61,
+     "taps": [],
+     "still": 2.4,
+     "ok": true
+    },
+    {
+     "en": "When a room is clean, tap Mark ready. Reception sees it free straight away.",
+     "sw": "Chumba kikiwa safi, gusa Tayari. Mapokezi wanakiona kiko wazi hapo hapo.",
+     "t": 2.61,
+     "end": 5.359,
+     "taps": [
+      0.08
+     ],
+     "still": 5.2,
+     "ok": true
+    },
+    {
+     "en": "Guests staying: tap Freshen up when you tidy an occupied room.",
+     "sw": "Wageni waliopo: gusa Panga chumba unapopanga chumba chenye mgeni.",
+     "t": 5.359,
+     "end": 8.107,
+     "taps": [
+      0.05
+     ],
+     "still": 7.9,
+     "ok": true
+    },
+    {
+     "en": "Tap anything used or missing, like towels or the minibar. Then save.",
+     "sw": "Gusa chochote kilichotumika au kinachokosekana, kama taulo au minibar. Kisha hifadhi.",
+     "t": 8.107,
+     "end": 11.366,
+     "taps": [
+      0.05,
+      0.38
+     ],
+     "still": 11.2,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "hk-mobile": {
+   "page": "hk",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 11.77,
+   "title": {
+    "en": "Housekeeping: my rooms",
+    "sw": "Usafi: vyumba vyangu"
+   },
+   "about": {
+    "en": "Rooms to clean after check-out, and guests whose rooms need freshening up.",
+    "sw": "Vyumba vya kusafisha baada ya mgeni kuondoka, na wageni ambao vyumba vyao vinahitaji kupangwa."
+   },
+   "features": [
+    "housekeeping"
+   ],
+   "steps": [
+    {
+     "en": "Rooms to clean come first: guests have left these rooms.",
+     "sw": "Vyumba vya kusafisha vinaanza: wageni wameshaondoka kwenye vyumba hivi.",
+     "t": 0,
+     "end": 2.613,
+     "taps": [],
+     "still": 2.4,
+     "ok": true
+    },
+    {
+     "en": "When a room is clean, tap Mark ready. Reception sees it free straight away.",
+     "sw": "Chumba kikiwa safi, gusa Tayari. Mapokezi wanakiona kiko wazi hapo hapo.",
+     "t": 2.613,
+     "end": 5.375,
+     "taps": [
+      0.07
+     ],
+     "still": 5.2,
+     "ok": true
+    },
+    {
+     "en": "Guests staying: tap Freshen up when you tidy an occupied room.",
+     "sw": "Wageni waliopo: gusa Panga chumba unapopanga chumba chenye mgeni.",
+     "t": 5.375,
+     "end": 8.104,
+     "taps": [
+      0.04
+     ],
+     "still": 7.9,
+     "ok": true
+    },
+    {
+     "en": "Tap anything used or missing, like towels or the minibar. Then save.",
+     "sw": "Gusa chochote kilichotumika au kinachokosekana, kama taulo au minibar. Kisha hifadhi.",
+     "t": 8.104,
+     "end": 11.317,
+     "taps": [
+      0.05,
+      0.34
+     ],
+     "still": 11.1,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "kds-desktop": {
+   "page": "kds",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 14.77,
+   "title": {
+    "en": "The kitchen screen",
+    "sw": "Skrini ya jikoni"
+   },
+   "about": {
+    "en": "Orders arrive as tickets; tap each dish as you start it and when it is ready.",
+    "sw": "Oda zinafika kama tiketi; gusa kila chakula unapoanza kukipika na kikiwa tayari."
+   },
+   "features": [
+    "kitchen-display"
+   ],
+   "steps": [
+    {
+     "en": "New orders arrive here as tickets, with how long each has waited.",
+     "sw": "Oda mpya zinafika hapa kama tiketi, pamoja na muda kila moja imesubiri.",
+     "t": 0,
+     "end": 3.011,
+     "taps": [],
+     "still": 2.8,
+     "ok": true
+    },
+    {
+     "en": "Tap a dish when you start cooking it.",
+     "sw": "Gusa chakula unapoanza kukipika.",
+     "t": 3.011,
+     "end": 5.183,
+     "taps": [
+      0.07
+     ],
+     "still": 4.9,
+     "ok": true
+    },
+    {
+     "en": "Tap it again when it is ready. The waiter is told to collect it.",
+     "sw": "Kiguse tena kikiwa tayari. Mhudumu anaarifiwa akichukue.",
+     "t": 5.183,
+     "end": 7.7,
+     "taps": [
+      0.05
+     ],
+     "still": 7.5,
+     "ok": true
+    },
+    {
+     "en": "All ready marks the rest of the ticket at once.",
+     "sw": "Zote tayari inatia alama tiketi iliyobaki mara moja.",
+     "t": 7.7,
+     "end": 10.486,
+     "taps": [
+      0.06
+     ],
+     "still": 10.3,
+     "ok": true
+    },
+    {
+     "en": "Drinks go to their own screen. Switch between Kitchen and Bar here.",
+     "sw": "Vinywaji vinaenda kwenye skrini yake. Badilisha kati ya Jikoni na Baa hapa.",
+     "t": 10.486,
+     "end": 14.333,
+     "taps": [
+      0.02
+     ],
+     "still": 14.1,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "kds-mobile": {
+   "page": "kds",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 14.2,
+   "title": {
+    "en": "The kitchen screen",
+    "sw": "Skrini ya jikoni"
+   },
+   "about": {
+    "en": "Orders arrive as tickets; tap each dish as you start it and when it is ready.",
+    "sw": "Oda zinafika kama tiketi; gusa kila chakula unapoanza kukipika na kikiwa tayari."
+   },
+   "features": [
+    "kitchen-display"
+   ],
+   "steps": [
+    {
+     "en": "New orders arrive here as tickets, with how long each has waited.",
+     "sw": "Oda mpya zinafika hapa kama tiketi, pamoja na muda kila moja imesubiri.",
+     "t": 0,
+     "end": 3.015,
+     "taps": [],
+     "still": 2.8,
+     "ok": true
+    },
+    {
+     "en": "Tap a dish when you start cooking it.",
+     "sw": "Gusa chakula unapoanza kukipika.",
+     "t": 3.015,
+     "end": 5.171,
+     "taps": [
+      0.07
+     ],
+     "still": 4.8,
+     "ok": true
+    },
+    {
+     "en": "Tap it again when it is ready. The waiter is told to collect it.",
+     "sw": "Kiguse tena kikiwa tayari. Mhudumu anaarifiwa akichukue.",
+     "t": 5.171,
+     "end": 7.674,
+     "taps": [
+      0.05
+     ],
+     "still": 7.5,
+     "ok": true
+    },
+    {
+     "en": "All ready marks the rest of the ticket at once.",
+     "sw": "Zote tayari inatia alama tiketi iliyobaki mara moja.",
+     "t": 7.674,
+     "end": 10.441,
+     "taps": [
+      0.06
+     ],
+     "still": 10.2,
+     "ok": true
+    },
+    {
+     "en": "Drinks go to their own screen. Switch between Kitchen and Bar here.",
+     "sw": "Vinywaji vinaenda kwenye skrini yake. Badilisha kati ya Jikoni na Baa hapa.",
+     "t": 10.441,
+     "end": 13.774,
+     "taps": [
+      0.05
+     ],
+     "still": 13.6,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "newbooking-desktop": {
+   "page": "newbooking",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 16.57,
+   "title": {
+    "en": "Make a booking",
+    "sw": "Kuweka booking"
+   },
+   "about": {
+    "en": "Dates, a room from the map, the guest and an optional deposit.",
+    "sw": "Tarehe, chumba kutoka kwenye ramani, mgeni na amana ukipenda."
+   },
+   "features": [
+    "reservations"
+   ],
+   "steps": [
+    {
+     "en": "Tap New booking.",
+     "sw": "Gusa Booking mpya.",
+     "t": 0,
+     "end": 1.783,
+     "taps": [
+      0.08
+     ],
+     "still": 1.6,
+     "ok": false,
+     "note": "room map still loading"
+    },
+    {
+     "en": "Choose the arrival date and the number of nights.",
+     "sw": "Chagua tarehe ya kuwasili na idadi ya usiku.",
+     "t": 1.783,
+     "end": 4.723,
+     "taps": [
+      0.05,
+      0.91,
+      1.25
+     ],
+     "still": 4.5,
+     "ok": true
+    },
+    {
+     "en": "Pick a free room on the map. Taken rooms are greyed out.",
+     "sw": "Chagua chumba kilicho wazi kwenye ramani. Vyumba vilivyochukuliwa vimefifia.",
+     "t": 4.723,
+     "end": 6.448,
+     "taps": [
+      0.05
+     ],
+     "still": 6.2,
+     "ok": true
+    },
+    {
+     "en": "Type the guest's name and phone, and how the booking came in.",
+     "sw": "Andika jina la mgeni na simu yake, na booking imekujaje.",
+     "t": 6.448,
+     "end": 10.549,
+     "taps": [
+      0.03,
+      0.72,
+      1.57,
+      2.63
+     ],
+     "still": 10.3,
+     "ok": true
+    },
+    {
+     "en": "Save the booking. It appears on the calendar straight away.",
+     "sw": "Hifadhi booking. Inaonekana kwenye kalenda hapo hapo.",
+     "t": 10.549,
+     "end": 16.105,
+     "taps": [
+      0.03
+     ],
+     "still": 15.9,
+     "ok": true
+    }
+   ],
+   "loading": [
+    [
+     1.25,
+     1.6
+    ]
+   ]
+  },
+  "newbooking-mobile": {
+   "page": "newbooking",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 16.47,
+   "title": {
+    "en": "Make a booking",
+    "sw": "Kuweka booking"
+   },
+   "about": {
+    "en": "Dates, a room from the map, the guest and an optional deposit.",
+    "sw": "Tarehe, chumba kutoka kwenye ramani, mgeni na amana ukipenda."
+   },
+   "features": [
+    "reservations"
+   ],
+   "steps": [
+    {
+     "en": "Tap New booking.",
+     "sw": "Gusa Booking mpya.",
+     "t": 0,
+     "end": 1.788,
+     "taps": [
+      0.08
+     ],
+     "still": 1.6,
+     "ok": false,
+     "note": "room map still loading"
+    },
+    {
+     "en": "Choose the arrival date and the number of nights.",
+     "sw": "Chagua tarehe ya kuwasili na idadi ya usiku.",
+     "t": 1.788,
+     "end": 4.68,
+     "taps": [
+      0.04,
+      0.87,
+      1.21
+     ],
+     "still": 4.5,
+     "ok": true
+    },
+    {
+     "en": "Pick a free room on the map. Taken rooms are greyed out.",
+     "sw": "Chagua chumba kilicho wazi kwenye ramani. Vyumba vilivyochukuliwa vimefifia.",
+     "t": 4.68,
+     "end": 6.401,
+     "taps": [
+      0.06
+     ],
+     "still": 6.2,
+     "ok": true
+    },
+    {
+     "en": "Type the guest's name and phone, and how the booking came in.",
+     "sw": "Andika jina la mgeni na simu yake, na booking imekujaje.",
+     "t": 6.401,
+     "end": 10.478,
+     "taps": [
+      0.04,
+      0.67,
+      1.49,
+      2.6
+     ],
+     "still": 10.3,
+     "ok": true
+    },
+    {
+     "en": "Save the booking. It appears on the calendar straight away.",
+     "sw": "Hifadhi booking. Inaonekana kwenye kalenda hapo hapo.",
+     "t": 10.478,
+     "end": 16.039,
+     "taps": [
+      0.04
+     ],
+     "still": 15.8,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "overview-desktop": {
+   "page": "overview",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 13.67,
+   "title": {
+    "en": "The manager's overview",
+    "sw": "Muhtasari wa meneja"
+   },
+   "about": {
+    "en": "What needs you today, the day to close, balances and money in.",
+    "sw": "Kinachokuhitaji leo, siku ya kufunga, salio na pesa zilizoingia."
+   },
+   "features": [
+    "reports",
+    "finance"
+   ],
+   "steps": [
+    {
+     "en": "The manager's home shows what needs you first.",
+     "sw": "Ukurasa wa meneja unaonyesha kwanza kinachokuhitaji.",
+     "t": 0,
+     "end": 3.013,
+     "taps": [],
+     "still": 2.8,
+     "ok": true
+    },
+    {
+     "en": "Needs you lists open days, guests who have not arrived and approvals.",
+     "sw": "Kinachokuhitaji kinaorodhesha siku zilizo wazi, wageni ambao hawajafika na vibali.",
+     "t": 3.013,
+     "end": 6.197,
+     "taps": [],
+     "still": 6,
+     "ok": true
+    },
+    {
+     "en": "Below: balances owed by company accounts, and money earned by department.",
+     "sw": "Chini: madeni ya akaunti za makampuni, na mapato kwa kila idara.",
+     "t": 6.197,
+     "end": 9.721,
+     "taps": [],
+     "still": 9.5,
+     "ok": true
+    },
+    {
+     "en": "And money in by method: cash, mobile money, card and bank.",
+     "sw": "Na pesa zilizoingia kwa njia: taslimu, simu, kadi na benki.",
+     "t": 9.721,
+     "end": 13.244,
+     "taps": [],
+     "still": 13,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "overview-mobile": {
+   "page": "overview",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 13.73,
+   "title": {
+    "en": "The manager's overview",
+    "sw": "Muhtasari wa meneja"
+   },
+   "about": {
+    "en": "What needs you today, the day to close, balances and money in.",
+    "sw": "Kinachokuhitaji leo, siku ya kufunga, salio na pesa zilizoingia."
+   },
+   "features": [
+    "reports",
+    "finance"
+   ],
+   "steps": [
+    {
+     "en": "The manager's home shows what needs you first.",
+     "sw": "Ukurasa wa meneja unaonyesha kwanza kinachokuhitaji.",
+     "t": 0,
+     "end": 3.014,
+     "taps": [],
+     "still": 2.8,
+     "ok": true
+    },
+    {
+     "en": "Needs you lists open days, guests who have not arrived and approvals.",
+     "sw": "Kinachokuhitaji kinaorodhesha siku zilizo wazi, wageni ambao hawajafika na vibali.",
+     "t": 3.014,
+     "end": 6.199,
+     "taps": [],
+     "still": 6,
+     "ok": true
+    },
+    {
+     "en": "Below: balances owed by company accounts, and money earned by department.",
+     "sw": "Chini: madeni ya akaunti za makampuni, na mapato kwa kila idara.",
+     "t": 6.199,
+     "end": 9.723,
+     "taps": [],
+     "still": 9.5,
+     "ok": true
+    },
+    {
+     "en": "And money in by method: cash, mobile money, card and bank.",
+     "sw": "Na pesa zilizoingia kwa njia: taslimu, simu, kadi na benki.",
+     "t": 9.723,
+     "end": 13.266,
+     "taps": [],
+     "still": 13.1,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "reservations-desktop": {
+   "page": "reservations",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 13.13,
+   "title": {
+    "en": "Bookings calendar",
+    "sw": "Kalenda ya booking"
+   },
+   "about": {
+    "en": "Every room across the coming days, with each booking as a bar you can open.",
+    "sw": "Kila chumba kwa siku zijazo, kila booking ikiwa ni mstari unaoweza kuufungua."
+   },
+   "features": [
+    "reservations"
+   ],
+   "steps": [
+    {
+     "en": "Bookings shows each room across the coming two weeks. Each bar is a booking.",
+     "sw": "Booking inaonyesha kila chumba kwa wiki mbili zijazo. Kila mstari ni booking moja.",
+     "t": 0,
+     "end": 3.215,
+     "taps": [],
+     "still": 3,
+     "ok": true
+    },
+    {
+     "en": "Tap Later to look further ahead, Today to come back.",
+     "sw": "Gusa Baadaye kuangalia mbele zaidi, Leo kurudi.",
+     "t": 3.215,
+     "end": 6.723,
+     "taps": [
+      0.1,
+      1.83
+     ],
+     "still": 6.5,
+     "ok": true
+    },
+    {
+     "en": "Find any booking by name, booking number or phone.",
+     "sw": "Tafuta booking yoyote kwa jina, namba ya booking au simu.",
+     "t": 6.723,
+     "end": 9.361,
+     "taps": [
+      0.04
+     ],
+     "still": 9.2,
+     "ok": true
+    },
+    {
+     "en": "Tap a booking to open it.",
+     "sw": "Gusa booking kuifungua.",
+     "t": 9.361,
+     "end": 12.682,
+     "taps": [
+      0.04
+     ],
+     "still": 12.5,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "reservations-mobile": {
+   "page": "reservations",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 13.13,
+   "title": {
+    "en": "Bookings calendar",
+    "sw": "Kalenda ya booking"
+   },
+   "about": {
+    "en": "Every room across the coming days, with each booking as a bar you can open.",
+    "sw": "Kila chumba kwa siku zijazo, kila booking ikiwa ni mstari unaoweza kuufungua."
+   },
+   "features": [
+    "reservations"
+   ],
+   "steps": [
+    {
+     "en": "On a phone, Bookings lists who arrives each day, with their room.",
+     "sw": "Kwenye simu, Booking inaorodhesha wanaowasili kila siku, pamoja na vyumba vyao.",
+     "t": 0,
+     "end": 3.216,
+     "taps": [],
+     "still": 3,
+     "ok": true
+    },
+    {
+     "en": "Tap the arrows or a day to look ahead, Today to come back.",
+     "sw": "Gusa mishale au siku kuangalia mbele, Leo kurudi.",
+     "t": 3.216,
+     "end": 6.695,
+     "taps": [
+      0.08,
+      1.79
+     ],
+     "still": 6.5,
+     "ok": true
+    },
+    {
+     "en": "Find any booking by name, booking number or phone.",
+     "sw": "Tafuta booking yoyote kwa jina, namba ya booking au simu.",
+     "t": 6.695,
+     "end": 9.336,
+     "taps": [
+      0.03
+     ],
+     "still": 9.1,
+     "ok": true
+    },
+    {
+     "en": "Tap a booking to open it.",
+     "sw": "Gusa booking kuifungua.",
+     "t": 9.336,
+     "end": 12.687,
+     "taps": [
+      0.05
+     ],
+     "still": 12.5,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "rooms-desktop": {
+   "page": "rooms",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 12.03,
+   "title": {
+    "en": "The rooms board",
+    "sw": "Ubao wa vyumba"
+   },
+   "about": {
+    "en": "Every room by floor with its status: ready, occupied or needs cleaning.",
+    "sw": "Kila chumba kwa ghorofa pamoja na hali yake: tayari, kina mgeni au kinahitaji usafi."
+   },
+   "features": [
+    "room-operations",
+    "housekeeping"
+   ],
+   "steps": [
+    {
+     "en": "Rooms shows every room by floor, with its status.",
+     "sw": "Vyumba inaonyesha kila chumba kwa ghorofa, pamoja na hali yake.",
+     "t": 0,
+     "end": 3.002,
+     "taps": [],
+     "still": 2.8,
+     "ok": true
+    },
+    {
+     "en": "Filter to see only the rooms that need cleaning.",
+     "sw": "Chuja uone vyumba vinavyohitaji usafi tu.",
+     "t": 3.002,
+     "end": 5.985,
+     "taps": [
+      0.1
+     ],
+     "still": 5.8,
+     "ok": true
+    },
+    {
+     "en": "Or only the rooms ready for the next guest.",
+     "sw": "Au vyumba vilivyo tayari kwa mgeni anayefuata tu.",
+     "t": 5.985,
+     "end": 8.904,
+     "taps": [
+      0.03
+     ],
+     "still": 8.7,
+     "ok": true
+    },
+    {
+     "en": "Tap All to see the whole hotel again.",
+     "sw": "Gusa Vyote kuona hoteli nzima tena.",
+     "t": 8.904,
+     "end": 11.608,
+     "taps": [
+      0.05
+     ],
+     "still": 11.4,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "rooms-mobile": {
+   "page": "rooms",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 13.27,
+   "title": {
+    "en": "The rooms board",
+    "sw": "Ubao wa vyumba"
+   },
+   "about": {
+    "en": "Every room by floor with its status: ready, occupied or needs cleaning.",
+    "sw": "Kila chumba kwa ghorofa pamoja na hali yake: tayari, kina mgeni au kinahitaji usafi."
+   },
+   "features": [
+    "room-operations",
+    "housekeeping"
+   ],
+   "steps": [
+    {
+     "en": "Rooms shows every room by floor, with its status.",
+     "sw": "Vyumba inaonyesha kila chumba kwa ghorofa, pamoja na hali yake.",
+     "t": 0,
+     "end": 3.743,
+     "taps": [],
+     "still": 3.5,
+     "ok": true
+    },
+    {
+     "en": "Filter to see only the rooms that need cleaning.",
+     "sw": "Chuja uone vyumba vinavyohitaji usafi tu.",
+     "t": 3.743,
+     "end": 7.211,
+     "taps": [
+      0.59
+     ],
+     "still": 7,
+     "ok": true
+    },
+    {
+     "en": "Or only the rooms ready for the next guest.",
+     "sw": "Au vyumba vilivyo tayari kwa mgeni anayefuata tu.",
+     "t": 7.211,
+     "end": 10.135,
+     "taps": [
+      0.04
+     ],
+     "still": 9.9,
+     "ok": true
+    },
+    {
+     "en": "Tap All to see the whole hotel again.",
+     "sw": "Gusa Vyote kuona hoteli nzima tena.",
+     "t": 10.135,
+     "end": 12.842,
+     "taps": [
+      0.04
+     ],
+     "still": 12.6,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "rooms-setup-desktop": {
+   "page": "rooms-setup",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 25.2,
+   "title": {
+    "en": "Rooms and rates",
+    "sw": "Vyumba na bei"
+   },
+   "about": {
+    "en": "Add a room type with its price, what it includes and photos.",
+    "sw": "Ongeza aina ya chumba pamoja na bei, vilivyomo na picha."
+   },
+   "features": [
+    "room-operations"
+   ],
+   "steps": [
+    {
+     "en": "Rooms and rates holds your room types and their prices.",
+     "sw": "Vyumba na bei ina aina za vyumba vyako na bei zake.",
+     "t": 0,
+     "end": 2.612,
+     "taps": [],
+     "still": 2.4,
+     "ok": true
+    },
+    {
+     "en": "Tap New room type. Give it a name, a price a night and a short description.",
+     "sw": "Gusa Aina mpya ya chumba. Ipe jina, bei kwa usiku na maelezo mafupi.",
+     "t": 2.612,
+     "end": 8.586,
+     "taps": [
+      0.06,
+      1.36,
+      2.4,
+      3.08
+     ],
+     "still": 8.4,
+     "ok": true
+    },
+    {
+     "en": "Tap what the room includes.",
+     "sw": "Gusa vilivyomo kwenye chumba.",
+     "t": 8.586,
+     "end": 11.075,
+     "taps": [
+      0.02,
+      0.36,
+      0.69,
+      1.02
+     ],
+     "still": 10.9,
+     "ok": true
+    },
+    {
+     "en": "Add photos. Guests see them on your booking page.",
+     "sw": "Ongeza picha. Wageni wanaziona kwenye ukurasa wako wa booking.",
+     "t": 11.075,
+     "end": 16.366,
+     "taps": [],
+     "still": 16.2,
+     "ok": true
+    },
+    {
+     "en": "Save it. Then add the rooms of this type on the rooms tab.",
+     "sw": "Hifadhi. Kisha ongeza vyumba vya aina hii kwenye kichupo cha vyumba.",
+     "t": 16.366,
+     "end": 24.77,
+     "taps": [
+      0.07
+     ],
+     "still": 24.6,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "rooms-setup-mobile": {
+   "page": "rooms-setup",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 24.87,
+   "title": {
+    "en": "Rooms and rates",
+    "sw": "Vyumba na bei"
+   },
+   "about": {
+    "en": "Add a room type with its price, what it includes and photos.",
+    "sw": "Ongeza aina ya chumba pamoja na bei, vilivyomo na picha."
+   },
+   "features": [
+    "room-operations"
+   ],
+   "steps": [
+    {
+     "en": "Rooms and rates holds your room types and their prices.",
+     "sw": "Vyumba na bei ina aina za vyumba vyako na bei zake.",
+     "t": 0,
+     "end": 2.612,
+     "taps": [],
+     "still": 2.4,
+     "ok": true
+    },
+    {
+     "en": "Tap New room type. Give it a name, a price a night and a short description.",
+     "sw": "Gusa Aina mpya ya chumba. Ipe jina, bei kwa usiku na maelezo mafupi.",
+     "t": 2.612,
+     "end": 8.494,
+     "taps": [
+      0.06,
+      1.31,
+      2.29,
+      2.99
+     ],
+     "still": 8.3,
+     "ok": true
+    },
+    {
+     "en": "Tap what the room includes.",
+     "sw": "Gusa vilivyomo kwenye chumba.",
+     "t": 8.494,
+     "end": 10.937,
+     "taps": [
+      0.02,
+      0.35,
+      0.64,
+      0.96
+     ],
+     "still": 10.7,
+     "ok": true
+    },
+    {
+     "en": "Add photos. Guests see them on your booking page.",
+     "sw": "Ongeza picha. Wageni wanaziona kwenye ukurasa wako wa booking.",
+     "t": 10.937,
+     "end": 16.097,
+     "taps": [],
+     "still": 15.9,
+     "ok": true
+    },
+    {
+     "en": "Save it. Then add the rooms of this type on the rooms tab.",
+     "sw": "Hifadhi. Kisha ongeza vyumba vya aina hii kwenye kichupo cha vyumba.",
+     "t": 16.097,
+     "end": 24.416,
+     "taps": [
+      0.04
+     ],
+     "still": 24.2,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "stay-desktop": {
+   "page": "stay",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 21.4,
+   "title": {
+    "en": "The guest bill: charges, payments, check-out",
+    "sw": "Bili ya mgeni: gharama, malipo, kuondoka"
+   },
+   "about": {
+    "en": "Add a minibar or restaurant charge, take a payment and check the guest out.",
+    "sw": "Ongeza gharama ya minibar au mgahawa, pokea malipo na mtoe mgeni."
+   },
+   "features": [
+    "guest-stay",
+    "finance"
+   ],
+   "steps": [
+    {
+     "en": "Open a guest from In house. Their bill shows every night, charge and payment.",
+     "sw": "Fungua mgeni kutoka Waliopo. Bili yake inaonyesha kila usiku, gharama na malipo.",
+     "t": 0,
+     "end": 4.33,
+     "taps": [
+      0.07,
+      1.65
+     ],
+     "still": 4.1,
+     "ok": true
+    },
+    {
+     "en": "Tap Add charge, choose what it is for and type the price.",
+     "sw": "Gusa Ongeza gharama, chagua ni ya nini na andika bei.",
+     "t": 4.33,
+     "end": 7.591,
+     "taps": [
+      0.07,
+      1.12,
+      1.4
+     ],
+     "still": 7.4,
+     "ok": true
+    },
+    {
+     "en": "Add it. The balance goes up straight away.",
+     "sw": "Iongeze. Salio linapanda hapo hapo.",
+     "t": 7.591,
+     "end": 10.122,
+     "taps": [
+      0.05
+     ],
+     "still": 9.8,
+     "ok": false,
+     "note": "mid-save state"
+    },
+    {
+     "en": "Tap Take payment, choose how the guest pays and take it.",
+     "sw": "Gusa Pokea malipo, chagua anavyolipa mgeni na pokea.",
+     "t": 10.122,
+     "end": 14.003,
+     "taps": [
+      0.04,
+      1.06,
+      1.39
+     ],
+     "still": 13.8,
+     "ok": false,
+     "note": "mid-save state"
+    },
+    {
+     "en": "With the bill settled, tap Check out. The room goes to housekeeping for cleaning.",
+     "sw": "Bili ikishalipwa, gusa Mtoe. Chumba kinaenda kwa wahudumu wa usafi.",
+     "t": 14.003,
+     "end": 20.961,
+     "taps": [
+      0.04,
+      1.17
+     ],
+     "still": 20.8,
+     "ok": true
+    }
+   ],
+   "loading": [
+    [
+     2.35,
+     3.9
+    ]
+   ]
+  },
+  "stay-mobile": {
+   "page": "stay",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 21.37,
+   "title": {
+    "en": "The guest bill: charges, payments, check-out",
+    "sw": "Bili ya mgeni: gharama, malipo, kuondoka"
+   },
+   "about": {
+    "en": "Add a minibar or restaurant charge, take a payment and check the guest out.",
+    "sw": "Ongeza gharama ya minibar au mgahawa, pokea malipo na mtoe mgeni."
+   },
+   "features": [
+    "guest-stay",
+    "finance"
+   ],
+   "steps": [
+    {
+     "en": "Open a guest from In house. Their bill shows every night, charge and payment.",
+     "sw": "Fungua mgeni kutoka Waliopo. Bili yake inaonyesha kila usiku, gharama na malipo.",
+     "t": 0,
+     "end": 4.343,
+     "taps": [
+      0.07,
+      1.66
+     ],
+     "still": 4.1,
+     "ok": true
+    },
+    {
+     "en": "Tap Add charge, choose what it is for and type the price.",
+     "sw": "Gusa Ongeza gharama, chagua ni ya nini na andika bei.",
+     "t": 4.343,
+     "end": 7.524,
+     "taps": [
+      0.04,
+      1.07,
+      1.39
+     ],
+     "still": 7.18,
+     "ok": true
+    },
+    {
+     "en": "Add it. The balance goes up straight away.",
+     "sw": "Iongeze. Salio linapanda hapo hapo.",
+     "t": 7.524,
+     "end": 10.024,
+     "taps": [
+      0.04
+     ],
+     "still": 10.6,
+     "ok": true,
+     "note": "the raised balance shows a beat after the step ends"
+    },
+    {
+     "en": "Tap Take payment, choose how the guest pays and take it.",
+     "sw": "Gusa Pokea malipo, chagua anavyolipa mgeni na pokea.",
+     "t": 10.024,
+     "end": 13.873,
+     "taps": [
+      0.06,
+      1.09,
+      1.38
+     ],
+     "still": 11.95,
+     "ok": true
+    },
+    {
+     "en": "With the bill settled, tap Check out. The room goes to housekeeping for cleaning.",
+     "sw": "Bili ikishalipwa, gusa Mtoe. Chumba kinaenda kwa wahudumu wa usafi.",
+     "t": 13.873,
+     "end": 20.933,
+     "taps": [
+      0.13,
+      1.28
+     ],
+     "still": 19.6,
+     "ok": true
+    }
+   ],
+   "loading": [
+    [
+     0.75,
+     1.6
+    ],
+    [
+     2.35,
+     3.9
+    ]
+   ]
+  },
+  "today-desktop": {
+   "page": "today",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 15,
+   "title": {
+    "en": "Today at reception",
+    "sw": "Leo mapokezi"
+   },
+   "about": {
+    "en": "Arrivals, guests in house, departures and free rooms on one screen.",
+    "sw": "Wanaowasili, wageni waliopo, wanaoondoka na vyumba vilivyo wazi kwenye skrini moja."
+   },
+   "features": [
+    "front-desk"
+   ],
+   "steps": [
+    {
+     "en": "Today shows the whole desk: who arrives, who is in, who leaves and which rooms are free.",
+     "sw": "Leo inaonyesha mapokezi yote: nani anawasili, nani yupo, nani anaondoka na vyumba vipi viko wazi.",
+     "t": 0,
+     "end": 3.207,
+     "taps": [],
+     "still": 3,
+     "ok": true
+    },
+    {
+     "en": "Guests with a booking for today are listed with their room.",
+     "sw": "Wageni waliohifadhi kwa leo wameorodheshwa pamoja na chumba chao.",
+     "t": 3.208,
+     "end": 5.817,
+     "taps": [],
+     "still": 5.6,
+     "ok": true
+    },
+    {
+     "en": "Every room shows its status: ready, occupied or waiting for cleaning.",
+     "sw": "Kila chumba kinaonyesha hali yake: tayari, kina mgeni au kinasubiri usafi.",
+     "t": 5.817,
+     "end": 8.429,
+     "taps": [],
+     "still": 8.2,
+     "ok": true
+    },
+    {
+     "en": "Tap In house to see every guest staying with you.",
+     "sw": "Gusa Waliopo kuona kila mgeni anayekaa kwako.",
+     "t": 8.429,
+     "end": 11.21,
+     "taps": [
+      0.09
+     ],
+     "still": 11,
+     "ok": true
+    },
+    {
+     "en": "Each guest opens their bill, with every charge and payment.",
+     "sw": "Kila mgeni anafungua bili yake, yenye kila gharama na malipo.",
+     "t": 11.21,
+     "end": 14.564,
+     "taps": [
+      0.08
+     ],
+     "still": 14.4,
+     "ok": false,
+     "note": "guest page reads Paid in full TSh 0 next to a TSh 120,000 bill"
+    }
+   ],
+   "loading": [
+    [
+     11.95,
+     13.6
+    ]
+   ]
+  },
+  "today-mobile": {
+   "page": "today",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 17,
+   "title": {
+    "en": "Today at reception",
+    "sw": "Leo mapokezi"
+   },
+   "about": {
+    "en": "Arrivals, guests in house, departures and free rooms on one screen.",
+    "sw": "Wanaowasili, wageni waliopo, wanaoondoka na vyumba vilivyo wazi kwenye skrini moja."
+   },
+   "features": [
+    "front-desk"
+   ],
+   "steps": [
+    {
+     "en": "Today shows the whole desk: who arrives, who is in, who leaves and which rooms are free.",
+     "sw": "Leo inaonyesha mapokezi yote: nani anawasili, nani yupo, nani anaondoka na vyumba vipi viko wazi.",
+     "t": 0,
+     "end": 3.201,
+     "taps": [],
+     "still": 3,
+     "ok": true
+    },
+    {
+     "en": "Guests with a booking for today are listed with their room.",
+     "sw": "Wageni waliohifadhi kwa leo wameorodheshwa pamoja na chumba chao.",
+     "t": 3.201,
+     "end": 6.52,
+     "taps": [],
+     "still": 6.3,
+     "ok": true
+    },
+    {
+     "en": "Every room shows its status: ready, occupied or waiting for cleaning.",
+     "sw": "Kila chumba kinaonyesha hali yake: tayari, kina mgeni au kinasubiri usafi.",
+     "t": 6.52,
+     "end": 9.841,
+     "taps": [],
+     "still": 9.6,
+     "ok": true
+    },
+    {
+     "en": "Tap In house to see every guest staying with you.",
+     "sw": "Gusa Waliopo kuona kila mgeni anayekaa kwako.",
+     "t": 9.841,
+     "end": 13.211,
+     "taps": [
+      0.69
+     ],
+     "still": 13,
+     "ok": true
+    },
+    {
+     "en": "Each guest opens their bill, with every charge and payment.",
+     "sw": "Kila mgeni anafungua bili yake, yenye kila gharama na malipo.",
+     "t": 13.211,
+     "end": 16.567,
+     "taps": [
+      0.09
+     ],
+     "still": 16.4,
+     "ok": false,
+     "note": "guest page reads Paid in full TSh 0 next to a TSh 120,000 bill"
+    }
+   ],
+   "loading": [
+    [
+     13.95,
+     15.5
+    ]
+   ]
+  },
+  "walkin-desktop": {
+   "page": "walkin",
+   "device": "desktop",
+   "size": [
+    1600,
+    900
+   ],
+   "duration": 26.73,
+   "title": {
+    "en": "Check in a walk-in guest",
+    "sw": "Kumwingiza mgeni asiye na booking"
+   },
+   "about": {
+    "en": "A guest at the desk without a booking: room, details, ID and payment in one screen.",
+    "sw": "Mgeni mapokezi bila booking: chumba, taarifa, kitambulisho na malipo kwenye skrini moja."
+   },
+   "features": [
+    "front-desk",
+    "mobile-money"
+   ],
+   "steps": [
+    {
+     "en": "A guest arrives without a booking. Tap New, then Walk-in guest.",
+     "sw": "Mgeni anafika bila booking. Gusa Mpya, kisha Mgeni wa ghafla.",
+     "t": 0,
+     "end": 3.271,
+     "taps": [
+      0.06,
+      1.35
+     ],
+     "still": 3.1,
+     "ok": true
+    },
+    {
+     "en": "Choose how many nights, then pick a free room.",
+     "sw": "Chagua idadi ya usiku, kisha chagua chumba kilicho wazi.",
+     "t": 3.271,
+     "end": 5.495,
+     "taps": [
+      0.2,
+      0.52
+     ],
+     "still": 5.3,
+     "ok": true
+    },
+    {
+     "en": "Type the guest's name and phone number.",
+     "sw": "Andika jina la mgeni na namba yake ya simu.",
+     "t": 5.495,
+     "end": 9.063,
+     "taps": [
+      0.05,
+      0.61,
+      1.26
+     ],
+     "still": 8.9,
+     "ok": true
+    },
+    {
+     "en": "Add the ID they show you.",
+     "sw": "Ongeza kitambulisho anachokuonyesha.",
+     "t": 9.063,
+     "end": 13.091,
+     "taps": [
+      0.05,
+      0.38,
+      2
+     ],
+     "still": 12.9,
+     "ok": true
+    },
+    {
+     "en": "Choose how they pay, then check them in.",
+     "sw": "Chagua anavyolipa, kisha mwingize.",
+     "t": 13.091,
+     "end": 26.26,
+     "taps": [
+      0.05,
+      0.38
+     ],
+     "still": 26.1,
+     "ok": true
+    }
+   ],
+   "loading": []
+  },
+  "walkin-mobile": {
+   "page": "walkin",
+   "device": "mobile",
+   "size": [
+    780,
+    1560
+   ],
+   "duration": 26.87,
+   "title": {
+    "en": "Check in a walk-in guest",
+    "sw": "Kumwingiza mgeni asiye na booking"
+   },
+   "about": {
+    "en": "A guest at the desk without a booking: room, details, ID and payment in one screen.",
+    "sw": "Mgeni mapokezi bila booking: chumba, taarifa, kitambulisho na malipo kwenye skrini moja."
+   },
+   "features": [
+    "front-desk",
+    "mobile-money"
+   ],
+   "steps": [
+    {
+     "en": "A guest arrives without a booking. Tap New, then Walk-in guest.",
+     "sw": "Mgeni anafika bila booking. Gusa Mpya, kisha Mgeni wa ghafla.",
+     "t": 0,
+     "end": 3.208,
+     "taps": [
+      0.07,
+      1.32
+     ],
+     "still": 3,
+     "ok": true
+    },
+    {
+     "en": "Choose how many nights, then pick a free room.",
+     "sw": "Chagua idadi ya usiku, kisha chagua chumba kilicho wazi.",
+     "t": 3.208,
+     "end": 5.228,
+     "taps": [
+      0.03,
+      0.35
+     ],
+     "still": 5,
+     "ok": true
+    },
+    {
+     "en": "Type the guest's name and phone number.",
+     "sw": "Andika jina la mgeni na namba yake ya simu.",
+     "t": 5.229,
+     "end": 10.061,
+     "taps": [
+      0.06,
+      1.54,
+      2.57
+     ],
+     "still": 9.9,
+     "ok": true
+    },
+    {
+     "en": "Add the ID they show you.",
+     "sw": "Ongeza kitambulisho anachokuonyesha.",
+     "t": 10.061,
+     "end": 14.397,
+     "taps": [
+      0.05,
+      0.36,
+      2.34
+     ],
+     "still": 14.2,
+     "ok": true
+    },
+    {
+     "en": "Choose how they pay, then check them in.",
+     "sw": "Chagua anavyolipa, kisha mwingize.",
+     "t": 14.398,
+     "end": 26.418,
+     "taps": [
+      0.04,
+      0.39
+     ],
+     "still": 26.2,
+     "ok": true
+    }
+   ],
+   "loading": []
+  }
+ }
+}
