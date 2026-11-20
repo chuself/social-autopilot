@@ -17,6 +17,7 @@ import { setUsageContext } from "../src/usage.js";
 import { compose, validateBrief } from "./compose.mjs";
 import { composeInk } from "./ink/engine.mjs";
 import { factsFor, topicBlock, topicOf } from "../src/topics.js";
+import { catalogue, steps as footageFor } from "./screens.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -139,6 +140,36 @@ const INK_RULE = `- This reel is DRAWN, not photographed: hand-drawn line art wi
   "toast" (two people celebrating), "farewell" (guests waving goodbye), "sunrise" (a calm morning).
 `;
 
+/**
+ * The real app. When the post's feature has footage in the screen library, the reel shows the
+ * actual Operra v2 app (the demo hotel's recording) instead of a drawn screen, and the line under
+ * it may only say what that step's own words say.
+ */
+const APP_RULE = (list, ink) => `
+## The real Operra app (use it: this feature has real screen recordings)
+- "app": a real recording of the Operra app on a phone, step by step. Fields: line, screen (ONE id from the
+  list below, e.g. "checkin-mobile#3", or a run of consecutive steps of one recording, e.g. "checkin-mobile#3-4")${ink ? "" : `,
+  image (the place behind the phone, written like every other image)`}.
+- Use ONE or TWO "app" scenes, between the hook and the payoff. They replace "ui-screen", "pos-charge" and
+  "checklist": do not use those in this reel. Good shapes: place, app, app, payoff · place, problem-doc, app, payoff.
+- Each app scene's line retells, in the post's language, what ITS step's words below say (3-9 words). Never
+  claim more than those words: what the step says is exactly what the viewer sees.
+- Choose steps that show the story; the last app scene should show a result (a success, a total, a status).
+- The narration may follow the steps you chose; it still names Operra once and states no figures.
+
+Steps you may show (id, then what the step shows):
+${list}
+`;
+
+export function footageErrors(brief, feature) {
+  if (!feature || !footageFor(feature, { device: "mobile" }).length) return [];
+  const types = brief.scenes.map((s) => s.type);
+  const errs = [];
+  if (!types.includes("app")) errs.push(`this feature has real app recordings: use at least one "app" scene with a screen id from the list`);
+  for (const t of ["ui-screen", "pos-charge", "checklist"]) if (types.includes(t)) errs.push(`"${t}" is not allowed when the real app can be shown: use an "app" scene instead`);
+  return errs;
+}
+
 /** A fake voice good enough to compose against: catches scene-level errors without TTS. */
 const DRY_VOICE = { duration: 23, speechStart: 0.3, speechEnd: 21.5, pauses: [] };
 
@@ -171,6 +202,7 @@ export async function writeReelBrief(post, brandId = "operra", { style = post.st
   const cta = language === "sw" ? "Ona inavyofanya kazi" : "See it work";
   // Ink reels are drawn by the studio in code, so there are no image prompts to
   // write and none of the rules that keep MOSS from lettering a photo.
+  const real = topic && footageFor(topic.feature.id, { device: "mobile" }).length ? catalogue([topic.feature.id], language) : "";
   const spec = (ink ? SPEC.replace(/- Each "image" is ONE[\s\S]*?The studio draws every document and screen itself\.\n/, INK_RULE).replace(/,\s*image(?=[.,])/g, "") : SPEC).replace("{LANG}", language === "sw" ? "Tanzanian Kiswahili" : "English").replace("{CTA}", cta);
 
   const base = `You are planning a 20-25 second vertical video ad for ${brand.name}, hotel management software
@@ -185,11 +217,11 @@ Caption: ${(post.caption ?? "").slice(0, 400)}
 
 ## The only facts you may state about Operra
 ${facts}
-${topicBlock(topic, brandId)}${topic?.feature.reel?.scenes ? `Scenes that show this feature best: ${topic.feature.reel.scenes.join(", ")} (type:screen).
+${topicBlock(topic, brandId)}${!real && topic?.feature.reel?.scenes ? `Scenes that show this feature best: ${topic.feature.reel.scenes.join(", ")} (type:screen).
 ` : ""}${recentShapes(post) ? `Scene shapes used by the last reels (pick a different one if the subject allows): ${recentShapes(post)}
 ` : ""}
 ${spec}
-
+${real ? APP_RULE(real, ink) : ""}
 Return ONLY JSON: {"narration": "...", "eyebrow": "...", "cta": "${cta}", "scenes": [ ... ]}`;
 
   setUsageContext({ feature: "reel-brief", post: post.id });
@@ -207,7 +239,7 @@ Return ONLY JSON: {"narration": "...", "eyebrow": "...", "cta": "${cta}", "scene
     }
     const brief = normalizeBrief({ ...raw, id: post.id, language, cta: raw.cta || cta, ...(ink ? { style: "ink", city: post.city ?? undefined } : {}) });
     if (ink) for (const sc of brief.scenes) delete sc.image;
-    errors = briefErrors(brief, brand);
+    errors = [...briefErrors(brief, brand), ...footageErrors(brief, topic?.feature.id)];
     if (!errors.length) return brief;
     console.warn(`  brief attempt ${attempt} rejected: ${errors.slice(0, 3).join(" | ")}`);
   }

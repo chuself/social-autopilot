@@ -9,6 +9,7 @@
  *
  * The logo is the brand's own file, used as given. It is never redrawn.
  */
+import { parseRef } from "./screens.mjs";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -37,6 +38,13 @@ export function validateBrief(b) {
     const SCREENS = ["frontdesk", "reports", "kitchen", "menu", "housekeeping", "events", "tables", "booking"];
     if (s.type === "ui-screen" && s.screen && !SCREENS.includes(s.screen)) errs.push(`scene ${i + 1}: screen must be one of ${SCREENS.join(", ")}`);
     if (b.style !== "ink" && ["place", "problem-doc", "payoff"].includes(s.type) && !s.image) errs.push(`scene ${i + 1}: ${s.type} needs an image`);
+    if (s.type === "app") {
+      try {
+        parseRef(s.screen);
+      } catch (e) {
+        errs.push(`scene ${i + 1}: ${e.message}`);
+      }
+    }
   });
   if (b.scenes?.[b.scenes.length - 1]?.type !== "payoff") errs.push("the last scene must be a payoff");
   // Anything that naturally carries writing makes MOSS write on it, and three
@@ -80,7 +88,7 @@ export function compose(brief, voice, brand) {
     // One chip under a screen: a second one fell into Instagram's caption zone
     // (first live test, 2026-10-23). Sliced here, before the scene schedules
     // entrances and sounds, so no cue can exist for a chip that is not drawn.
-    SCENES[s.type](ids[i], { ...s, ...(Array.isArray(s.chips) ? { chips: s.chips.slice(0, 1) } : {}) }, { t0: starts[i], dur: ends[i] - starts[i], T, seed, ledger }),
+    SCENES[s.type](ids[i], { ...s, ...(Array.isArray(s.chips) ? { chips: s.chips.slice(0, 1) } : {}) }, { t0: starts[i], dur: ends[i] - starts[i], T, seed, ledger, prev: brief.scenes[i - 1]?.type }),
   );
 
   const steps = [];
@@ -239,6 +247,11 @@ html,body{width:${W}px;height:${H}px;overflow:hidden;background:${P.bg};font-fam
        border:6px double #c8312b;border-radius:10px;padding:6px 18px;transform:rotate(-12deg)}
 ${UI_CSS}
 .tilt{position:absolute;left:80px;top:440px;width:920px;perspective:1400px}
+.grade.app{background:radial-gradient(60% 36% at 50% 40%,rgba(123,84,255,.26),rgba(4,15,19,0) 72%),linear-gradient(180deg,rgba(4,15,19,.72),rgba(4,15,19,.80) 55%,rgba(4,15,19,.96) 76%)}
+.appdev{position:absolute;left:246px;top:196px;width:588px;height:1148px;padding:14px;border-radius:74px;background:linear-gradient(145deg,#2a2a30,#0c0c0f 40%,#18181c);
+        box-shadow:0 0 0 2px rgba(255,255,255,.10) inset,0 70px 140px -40px rgba(0,0,0,.95),0 30px 110px -30px rgba(164,120,255,.45);transform-origin:50% 60%}
+.appscr{position:relative;width:560px;height:1120px;border-radius:60px;overflow:hidden;background:#faf8f4}
+.appscr img{position:absolute;left:0;top:0;width:560px;height:1120px}
 .tilt .fcard{position:relative;width:920px;transform-origin:50% 100%}
 .tilt>.chip{position:relative;display:inline-flex;margin-top:30px}
 .scrwrap{transform-origin:50% 100%}

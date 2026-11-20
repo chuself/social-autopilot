@@ -252,7 +252,8 @@ for (let n = 0; n < timetable.length; n++) {
 // running — and billed — through every Gemini call that wrote the next post,
 // and an image is the cheap part: about 7 s in fast mode against a fixed boot,
 // load and 120 s idle tail. One burst pays those once and nothing in between.
-const drawable = planned.filter((r) => r.imagePrompt);
+// A poster that shows a real app screen has no photograph on it: no image to pay for.
+const drawable = planned.filter((r) => r.imagePrompt && !(r.format === "poster" && r.screen && r.template === "app"));
 const drawn = await generateBackgrounds(
   drawable.map((r) => ({
     prompt: r.imagePrompt,
@@ -276,12 +277,16 @@ for (const record of planned) {
     // One PNG per slide, numbered in swipe order.
     const slides = record.slides ?? [];
     record.slideFiles = [];
+    let step = 0;
     for (const [i, slide] of slides.entries()) {
       const file = `${id}-${i + 1}.png`;
+      if (slide.screen) step += 1;
       await renderPoster(
         {
           ...record,
           ...slide,
+          // the real-app slides count their steps: "Hatua 2" / "Step 2"
+          stepLabel: slide.screen ? `${record.language === "sw" ? "Hatua" : "Step"} ${step}` : "",
           // Only the last slide asks for anything.
           cta: i === slides.length - 1 ? record.cta : "",
         },

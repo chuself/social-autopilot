@@ -4,6 +4,42 @@ import path from "node:path";
 import { completeJson } from "./llm.js";
 import { setUsageContext } from "./usage.js";
 import { factsFor, topicBlock, topicOf } from "./topics.js";
+import { catalogue, parseRef, steps as footageFor } from "../studio/screens.mjs";
+
+/**
+ * The real Operra app in still posts. When the feature has screen recordings (studio/screens.mjs),
+ * a poster or a carousel's middle slides show a real step of the app, and the words on that
+ * slide may only say what the step's own words say. Returns the prompt block, or "".
+ */
+function realScreens(topic, language, format) {
+  if (!topic || !footageFor(topic.feature.id, { device: "mobile" }).length) return "";
+  const list = catalogue([topic.feature.id], language);
+  const how = format === "carousel"
+    ? `Every slide between the first and the last shows ONE real step of the app: give it a "screen" id from
+the list. Its headline retells THAT step's words in the post's language (max 7 words) and its body says what
+the step shows (max 18 words). Never claim more than the step's words: the viewer sees exactly that screen.
+Pick steps that tell the story in order; the last of them should show a result. The first and last slides
+have no "screen".`
+    : `The poster shows ONE real step of the app beside the words: add "screen" (an id from the list). Choose the
+step that shows the headline's claim, and keep the headline and body to what that step's words say.`;
+  return `
+## The real Operra app (this feature has real screen recordings of the app)
+${how}
+
+Steps you may show (id, then what the step shows):
+${list}
+`;
+}
+
+/** A screen id the writer gave, kept only if the library approves it. */
+function validScreen(ref) {
+  try {
+    parseRef(ref);
+    return String(ref).trim();
+  } catch {
+    return null;
+  }
+}
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
@@ -177,7 +213,7 @@ ${pillars}
 ## Approved facts
 You may ONLY state figures or claims that appear here verbatim.
 ${facts}
-${topicBlock(topic, brandId)}
+${topicBlock(topic, brandId)}${realScreens(topic, language, "carousel")}
 ## Already posted — do not repeat these angles
 ${recentLines}
 
@@ -202,7 +238,7 @@ tells it properly. A thin idea stretched over five slides is worse than a tight 
 
 Return ONLY JSON:
 {
-  "slides": [ { "eyebrow": "1-2 words", "headline": "max 7 words", "body": "max 18 words" } ],
+  "slides": [ { "eyebrow": "1-2 words", "headline": "max 7 words", "body": "max 18 words", "screen": "only where the real-app rule above asks for one" } ],
   "caption": "40-90 words, the post caption",
   "hashtags": ["3-5"],
   "imagePrompt": "one background description used across every slide",
@@ -221,8 +257,13 @@ ${sceneBrief(look, city, "carousel")}
 - No URLs, no phone numbers.`
   );
 
-  const slides = (post.slides ?? []).slice(0, 5);
-  return { ...post, slides, pillar, language, brand: brandId, look: look?.name ?? null, city: city?.name ?? null, feature: topic?.feature.id ?? null, angle: topic?.angle ?? null };
+  const real = Boolean(realScreens(topic, language, "carousel"));
+  const slides = (post.slides ?? []).slice(0, 5).map((sl, i, all) => {
+    const screen = real && i > 0 && i < all.length - 1 ? validScreen(sl.screen) : null;
+    const { screen: _drop, ...rest } = sl;
+    return screen ? { ...rest, screen } : rest;
+  });
+  return { ...post, slides, template: "app", pillar, language, brand: brandId, look: look?.name ?? null, city: city?.name ?? null, feature: topic?.feature.id ?? null, angle: topic?.angle ?? null };
 }
 
 /**
@@ -368,7 +409,7 @@ You may ONLY state figures, statistics or client claims that appear here verbati
 If you want a number that is not listed, write the post with no number at all.
 
 ${facts}
-${topicBlock(topic, brandId)}
+${topicBlock(topic, brandId)}${format === "poster" ? realScreens(topic, language, "poster") : ""}
 ## Already posted — do not repeat these angles
 ${recentLines}
 
@@ -407,8 +448,7 @@ Return ONLY a JSON object with these keys:
   Line breaks allowed. At most one emoji, only if it genuinely helps.
 - "hashtags": array of 3-5 hashtags, relevant, no spam.
 ${sceneBrief(look, city, format)}
-- "template": "spotlight"
-
+${format === "poster" && realScreens(topic, language, "poster") ? '- "screen": the id of the real app step this poster shows\n' : ""}
 ${language === "sw"
   ? `Write EVERY field — eyebrow, headline, body, cta, caption — in natural Tanzanian Kiswahili.
 Write it as a Tanzanian hotelier speaks, not as translated English. Avoid stiff textbook
@@ -418,8 +458,13 @@ Hashtags may stay in English where that is what people actually search.`
 
   setUsageContext({ feature: `plan-${format}` });
   const post = await completeJson(prompt);
+  const screen = format === "poster" && realScreens(topic, language, "poster") ? validScreen(post.screen) : null;
+  delete post.screen;
   return {
     ...post,
+    ...(screen ? { screen } : {}),
+    // Operra's 2026-11 look (templates/app.html), the same as operra.tech and the app.
+    template: "app",
     pillar,
     language,
     brand: brandId,

@@ -73,7 +73,7 @@ jobs:
         run: |
           shopt -s nullglob  # a run with no model calls has no usage file; the glob must vanish, not reach git add
           bash scripts/push-state.sh "chore: plan week [skip ci]" \
-            public state/bg state/queue.json state/top-performers.json \
+            public state/bg state/queue.json state/top-performers.json state/lessons.json \
             state/pillar-scores.json state/config.json state/actions.json state/usage/*/${{ github.run_id }}-*.jsonl
 
       # The posters must be publicly reachable before publish day, because

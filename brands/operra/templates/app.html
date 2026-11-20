@@ -1,0 +1,122 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>poster (v2 app look)</title>
+<!--
+  Operra's 2026-11 look, the same as operra.tech and the app itself: warm paper ground, one ink,
+  Operra violet, Schibsted Grotesk for display and Geist for text. Values from
+  operra-tech/src/styles.css (the app's own surfaces, src/v2/styles/v2.css).
+
+  Three layouts, chosen by the class renderPoster puts on <body>:
+    has-shot   a real screen of the Operra app (studio/screens.mjs) on a phone, words beside it
+    has-photo  the post's photograph in a rounded card, words under it (hook and closing slides)
+    (neither)  words only
+  The phone's screen is the recording itself: never drawn, never retouched.
+-->
+<style>
+  @font-face { font-family: "Schibsted Grotesk"; src: url("../assets/fonts/schibsted.woff2") format("woff2"); font-weight: 400 900; font-display: block; }
+  @font-face { font-family: Geist; src: url("../assets/fonts/geist.woff2") format("woff2"); font-weight: 100 900; font-display: block; }
+
+  :root {
+    --v-paper: oklch(0.982 0.005 85);
+    --v-surface: oklch(1 0 0);
+    --v-sunk: oklch(0.955 0.008 85);
+    --v-line: oklch(0.912 0.008 80);
+    --v-ink: oklch(0.23 0.014 60);
+    --v-muted: oklch(0.47 0.014 60);
+    --v-violet: oklch(0.5125 0.2162 290.67);
+    --v-violet-soft: oklch(0.945 0.0282 290.67);
+    --v-violet-deep: oklch(0.26 0.1189 290.67);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1350px; }
+  body {
+    font-family: Geist, system-ui, sans-serif; color: var(--v-ink); position: relative; overflow: hidden;
+    background:
+      radial-gradient(60% 40% at 88% 18%, var(--v-violet-soft) 0%, transparent 70%),
+      var(--v-paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  /* renderPoster writes the brand's legacy dark colours as root variables (--surface, --bg...);
+     every colour here is --v-*, so none of them can leak in (a dark step pill, first test). */
+
+  header { position: absolute; left: 84px; right: 84px; top: 80px; display: flex; align-items: center; justify-content: space-between; }
+  #logo { height: 40px; width: auto; }
+  #eyebrow {
+    font-size: 21px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--v-violet); background: var(--v-violet-soft); border-radius: 100px; padding: 12px 24px;
+  }
+  #eyebrow:empty { display: none; }
+
+  #headline {
+    font-family: "Schibsted Grotesk", Geist, sans-serif; font-weight: 700; letter-spacing: -0.03em;
+    line-height: 1.04; color: var(--v-ink); text-wrap: balance;
+  }
+  #rule { width: 84px; height: 6px; border-radius: 6px; background: var(--v-violet); }
+  #body { font-size: 31px; line-height: 1.45; color: var(--v-muted); text-wrap: pretty; }
+  #body:empty, #body:empty ~ * { }
+
+  footer { position: absolute; left: 84px; right: 84px; bottom: 76px; display: flex; align-items: center; justify-content: space-between; }
+  #cta { font-size: 27px; font-weight: 600; color: #fff; background: var(--v-violet); border-radius: 100px; padding: 22px 42px; }
+  #site { font-size: 25px; font-weight: 500; color: var(--v-muted); letter-spacing: 0.01em; }
+
+  /* ── has-shot: a real screen on a phone, words in the left column ── */
+  #device { display: none; }
+  .has-shot #device {
+    display: block; position: absolute; left: 524px; top: 196px; width: 472px; height: 924px;
+    padding: 12px; border-radius: 64px;
+    background: linear-gradient(145deg, #2b2a2e, #0d0d10 42%, #1a191d);
+    box-shadow: 0 0 0 2px rgba(255,255,255,.12) inset, 0 60px 120px -40px rgba(40,25,80,.55), 0 24px 60px -24px rgba(0,0,0,.35);
+  }
+  .has-shot #screen { width: 448px; height: 896px; border-radius: 52px; overflow: hidden; background: var(--v-paper); }
+  .has-shot #shot { display: block; width: 448px; height: 896px; }
+  .has-shot #words { position: absolute; left: 84px; top: 250px; width: 400px; display: flex; flex-direction: column; gap: 32px; }
+  .has-shot #headline { font-size: 58px; }
+  .has-shot #headline.long { font-size: 50px; }
+  .has-shot #headline.xlong { font-size: 44px; }
+  .has-shot #body { font-size: 29px; }
+  #step { display: none; }
+  .has-shot #step:not(:empty) {
+    display: inline-flex; align-self: flex-start; font-size: 22px; font-weight: 600; color: var(--v-violet-deep);
+    border: 2px solid var(--v-line); background: var(--v-surface); border-radius: 100px; padding: 10px 20px;
+  }
+
+  /* ── has-photo: the photograph in a card, words below ── */
+  #photo { display: none; }
+  .has-photo #photo {
+    display: block; position: absolute; left: 84px; top: 176px; width: 912px; height: 600px; border-radius: 30px;
+    background-size: cover; background-position: center; box-shadow: 0 40px 80px -40px rgba(40,25,80,.45);
+  }
+  .has-photo #words { position: absolute; left: 84px; top: 832px; width: 912px; display: flex; flex-direction: column; gap: 26px; }
+  .has-photo #headline { font-size: 70px; max-width: 16ch; }
+  .has-photo #headline.long { font-size: 60px; }
+  .has-photo #headline.xlong { font-size: 50px; }
+  .has-photo #body { max-width: 30ch; }
+  .has-photo #rule { display: none; }
+
+  /* ── words only ── */
+  body:not(.has-shot):not(.has-photo) #words { position: absolute; left: 84px; top: 380px; width: 912px; display: flex; flex-direction: column; gap: 36px; }
+  body:not(.has-shot):not(.has-photo) #headline { font-size: 92px; max-width: 14ch; }
+  body:not(.has-shot):not(.has-photo) #headline.long { font-size: 78px; }
+  body:not(.has-shot):not(.has-photo) #headline.xlong { font-size: 64px; }
+
+  /* the old template's ids, kept so renderPoster finds them; unused here */
+  #bg, #scrim, #textpanel, #footerpanel { display: none; }
+</style>
+
+<div id="bg"></div><div id="scrim"></div><div id="textpanel"></div><div id="footerpanel"></div>
+<header>
+  <img id="logo" alt="">
+  <span id="eyebrow"></span>
+</header>
+<div id="photo"></div>
+<div id="device"><div id="screen"><img id="shot" alt=""></div></div>
+<div id="words">
+  <span id="step"></span>
+  <h1 id="headline"></h1>
+  <div id="rule"></div>
+  <p id="body"></p>
+</div>
+<footer>
+  <span id="cta"></span>
+  <span id="site"></span>
+</footer>

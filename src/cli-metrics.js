@@ -65,6 +65,8 @@ for (const h of history) {
       format: post.format ?? "poster",
       language: post.language,
       look: post.look ?? null,
+      // Did it show the real Operra app (studio/screens.mjs, from 2026-11-20) or drawn/no screens?
+      screens: post.screen || post.slides?.some((x) => x.screen) || post.reel?.scenes?.some((x) => String(x).startsWith("app:")) ? "real" : "drawn",
       headline: post.headline,
       ...stats,
     });
@@ -123,7 +125,7 @@ await writeFile(path.join(ROOT, "state", "top-performers.json"), JSON.stringify(
 // The shape a future fleet could pool: what was varied, what happened, how many
 // times, and how much to trust it.
 const lessons = [];
-for (const dimension of ["pillar", "format", "language", "look"]) {
+for (const dimension of ["pillar", "format", "language", "look", "screens"]) {
   lessons.push(...learn(posts, dimension));
 }
 await writeFile(
