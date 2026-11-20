@@ -80,6 +80,23 @@ def main(force):
                 if sc > score:
                     best, score = float(ts[k]), sc
             s["still"] = round(best, 2) if best is not None else None
+        # Steps whose stills are the same picture (a long page scrolled to one view): a carousel
+        # must never show one screen twice (plan-test, 2026-11-20: overview steps 2 and 3).
+        cap = cv2.VideoCapture(str(LIB / name / "clip.mp4"))
+        thumbs = {}
+        for k, s in enumerate(r["steps"]):
+            if s.get("still") is None:
+                continue
+            cap.set(cv2.CAP_PROP_POS_MSEC, s["still"] * 1000)
+            ok, f = cap.read()
+            if ok:
+                thumbs[k] = cv2.resize(cv2.cvtColor(f, cv2.COLOR_BGR2GRAY), (96, 192) if r["device"] == "mobile" else (192, 108)).astype(np.int16)
+        for k, s in enumerate(r["steps"]):
+            s.pop("same", None)
+            for j in range(k):
+                if j in thumbs and k in thumbs and float(np.abs(thumbs[j] - thumbs[k]).mean()) < 3:
+                    s["same"] = r["steps"][j].get("same", j)
+                    break
         print(f"{name}: {len(spans)} loading stretch(es) {spans}")
     (LIB / "manifest.json").write_text(json.dumps(m, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 

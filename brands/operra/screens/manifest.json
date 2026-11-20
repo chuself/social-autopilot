@@ -51,7 +51,8 @@
      "taps": [],
      "still": 9.5,
      "ok": false,
-     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel",
+     "same": 1
     },
     {
      "en": "Add a note for the record if anything was unusual.",
@@ -63,7 +64,8 @@
      ],
      "still": 12.8,
      "ok": false,
-     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel",
+     "same": 1
     },
     {
      "en": "When the figures are right, tap Close. A closed day can no longer be changed.",
@@ -73,7 +75,8 @@
      "taps": [],
      "still": 16.3,
      "ok": false,
-     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel",
+     "same": 1
     }
    ],
    "loading": []
@@ -139,7 +142,8 @@
      ],
      "still": 12.8,
      "ok": false,
-     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel",
+     "same": 2
     },
     {
      "en": "When the figures are right, tap Close. A closed day can no longer be changed.",
@@ -149,7 +153,8 @@
      "taps": [],
      "still": 16.3,
      "ok": false,
-     "note": "demo day shows TSh 0 earned: reads as an empty hotel"
+     "note": "demo day shows TSh 0 earned: reads as an empty hotel",
+     "same": 2
     }
    ],
    "loading": []
@@ -207,7 +212,8 @@
      "end": 8.499,
      "taps": [],
      "still": 8.3,
-     "ok": true
+     "ok": true,
+     "same": 1
     },
     {
      "en": "Take a payment now, or leave it for check-out. For mobile money, type the transaction code.",
@@ -293,7 +299,8 @@
      "end": 8.485,
      "taps": [],
      "still": 8.3,
-     "ok": true
+     "ok": true,
+     "same": 1
     },
     {
      "en": "Take a payment now, or leave it for check-out. For mobile money, type the transaction code.",
@@ -381,7 +388,8 @@
       0.06
      ],
      "still": 6.5,
-     "ok": true
+     "ok": true,
+     "same": 1
     },
     {
      "en": "Take the payment. The sale is recorded and the cart is ready for the next customer.",
@@ -508,7 +516,8 @@
       0.08
      ],
      "still": 5.2,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Guests staying: tap Freshen up when you tidy an occupied room.",
@@ -574,7 +583,8 @@
       0.07
      ],
      "still": 5.2,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Guests staying: tap Freshen up when you tidy an occupied room.",
@@ -640,7 +650,8 @@
       0.07
      ],
      "still": 4.9,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Tap it again when it is ready. The waiter is told to collect it.",
@@ -651,7 +662,8 @@
       0.05
      ],
      "still": 7.5,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "All ready marks the rest of the ticket at once.",
@@ -673,7 +685,8 @@
       0.02
      ],
      "still": 14.1,
-     "ok": true
+     "ok": true,
+     "same": 0
     }
    ],
    "loading": []
@@ -716,7 +729,8 @@
       0.07
      ],
      "still": 4.8,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Tap it again when it is ready. The waiter is told to collect it.",
@@ -808,7 +822,8 @@
       0.05
      ],
      "still": 6.2,
-     "ok": true
+     "ok": true,
+     "same": 1
     },
     {
      "en": "Type the guest's name and phone, and how the booking came in.",
@@ -897,7 +912,8 @@
       0.06
      ],
      "still": 6.2,
-     "ok": true
+     "ok": true,
+     "same": 1
     },
     {
      "en": "Type the guest's name and phone, and how the booking came in.",
@@ -964,7 +980,8 @@
      "end": 6.197,
      "taps": [],
      "still": 6,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Below: balances owed by company accounts, and money earned by department.",
@@ -982,7 +999,8 @@
      "end": 13.244,
      "taps": [],
      "still": 13,
-     "ok": true
+     "ok": true,
+     "same": 2
     }
    ],
    "loading": []
@@ -1024,7 +1042,8 @@
      "end": 6.199,
      "taps": [],
      "still": 6,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Below: balances owed by company accounts, and money earned by department.",
@@ -1042,7 +1061,8 @@
      "end": 13.266,
      "taps": [],
      "still": 13.1,
-     "ok": true
+     "ok": true,
+     "same": 2
     }
    ],
    "loading": []
@@ -1086,7 +1106,8 @@
       1.83
      ],
      "still": 6.5,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Find any booking by name, booking number or phone.",
@@ -1152,7 +1173,8 @@
       1.79
      ],
      "still": 6.5,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Find any booking by name, booking number or phone.",
@@ -1229,7 +1251,8 @@
       0.03
      ],
      "still": 8.7,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Tap All to see the whole hotel again.",
@@ -1240,7 +1263,8 @@
       0.05
      ],
      "still": 11.4,
-     "ok": true
+     "ok": true,
+     "same": 0
     }
    ],
    "loading": []
@@ -1366,7 +1390,8 @@
       1.02
      ],
      "still": 10.9,
-     "ok": true
+     "ok": true,
+     "same": 1
     },
     {
      "en": "Add photos. Guests see them on your booking page.",
@@ -1375,7 +1400,8 @@
      "end": 16.366,
      "taps": [],
      "still": 16.2,
-     "ok": true
+     "ok": true,
+     "same": 1
     },
     {
      "en": "Save it. Then add the rooms of this type on the rooms tab.",
@@ -1455,7 +1481,8 @@
      "end": 16.097,
      "taps": [],
      "still": 15.9,
-     "ok": true
+     "ok": true,
+     "same": 2
     },
     {
      "en": "Save it. Then add the rooms of this type on the rooms tab.",
@@ -1527,7 +1554,8 @@
      ],
      "still": 9.8,
      "ok": false,
-     "note": "mid-save state"
+     "note": "mid-save state",
+     "same": 1
     },
     {
      "en": "Tap Take payment, choose how the guest pays and take it.",
@@ -1694,7 +1722,8 @@
      "end": 5.817,
      "taps": [],
      "still": 5.6,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Every room shows its status: ready, occupied or waiting for cleaning.",
@@ -1703,7 +1732,8 @@
      "end": 8.429,
      "taps": [],
      "still": 8.2,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Tap In house to see every guest staying with you.",
@@ -1781,7 +1811,8 @@
      "end": 9.841,
      "taps": [],
      "still": 9.6,
-     "ok": true
+     "ok": true,
+     "same": 1
     },
     {
      "en": "Tap In house to see every guest staying with you.",
@@ -1857,7 +1888,8 @@
       0.52
      ],
      "still": 5.3,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Type the guest's name and phone number.",
@@ -1883,7 +1915,8 @@
       2
      ],
      "still": 12.9,
-     "ok": true
+     "ok": true,
+     "same": 2
     },
     {
      "en": "Choose how they pay, then check them in.",
@@ -1943,7 +1976,8 @@
       0.35
      ],
      "still": 5,
-     "ok": true
+     "ok": true,
+     "same": 0
     },
     {
      "en": "Type the guest's name and phone number.",

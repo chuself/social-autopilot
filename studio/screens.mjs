@@ -56,7 +56,7 @@ export function catalogue(features, lang = "en") {
   for (const [name, r] of Object.entries(library())) {
     if (r.device !== "mobile" || (features && !r.features.some((f) => features.includes(f)))) continue;
     lines.push(`${name} (${r.title?.en}):`);
-    r.steps.forEach((s, k) => s.ok && lines.push(`  ${name}#${k}  "${captionOf(`${name}#${k}`, lang)}" (${lang === "sw" ? s.sw : s.en})`));
+    r.steps.forEach((s, k) => s.ok && lines.push(`  ${name}#${k}  "${captionOf(`${name}#${k}`, lang)}" (${lang === "sw" ? s.sw : s.en})${s.same !== undefined ? ` [same picture as #${s.same}]` : ""}`));
   }
   return lines.join("\n");
 }
@@ -72,6 +72,12 @@ export function captionOf(ref, lang = "en") {
   const c = caps[`${name}#${b}`] ?? caps[`${rec.page}#${b}`];
   if (!c?.[lang]) throw new Error(`screen "${ref}": no ${lang} caption in captions.json`);
   return c[lang];
+}
+
+/** Which still a ref shows: steps of one long page can settle on the same view ("same" in the manifest). */
+export function pictureOf(ref) {
+  const { name, rec, b } = parseRef(ref);
+  return `${name}#${rec.steps[b].same ?? b}`;
 }
 
 /** Every approved step must have both captions: a gap would stop a reel at render time. */

@@ -87,7 +87,7 @@
     background-size: cover; background-position: center; box-shadow: 0 40px 80px -40px rgba(40,25,80,.45);
   }
   .has-photo #words { position: absolute; left: 84px; top: 832px; width: 912px; display: flex; flex-direction: column; gap: 26px; }
-  .has-photo #headline { font-size: 70px; max-width: 16ch; }
+  .has-photo #headline { font-size: 70px; max-width: 20ch; }
   .has-photo #headline.long { font-size: 60px; }
   .has-photo #headline.xlong { font-size: 50px; }
   .has-photo #body { max-width: 30ch; }
@@ -120,3 +120,27 @@
   <span id="cta"></span>
   <span id="site"></span>
 </footer>
+<script>
+// Called by renderPoster once the fonts are in: nothing may run into the footer. Steps, in order:
+// a smaller headline, a shorter photo card, a smaller body (a hook slide's body ran into the
+// footer in the first plan-test, 2026-11-20).
+window.fit = () => {
+  const words = document.getElementById("words"), foot = document.querySelector("footer");
+  const h = document.getElementById("headline"), body = document.getElementById("body"), photo = document.getElementById("photo");
+  const over = () => words.getBoundingClientRect().bottom > foot.getBoundingClientRect().top - 32;
+  for (let guard = 0; over() && guard < 16; guard++) {
+    if (!h.classList.contains("long")) h.classList.add("long");
+    else if (!h.classList.contains("xlong")) h.classList.add("xlong");
+    else if (document.body.classList.contains("has-photo") && photo.offsetHeight > 420) {
+      const nh = photo.offsetHeight - 45;
+      photo.style.height = nh + "px";
+      words.style.top = 176 + nh + 56 + "px";
+    } else {
+      const fs = parseFloat(getComputedStyle(body).fontSize);
+      if (fs <= 23) break;
+      body.style.fontSize = fs - 2 + "px";
+    }
+  }
+  return !over();
+};
+</script>

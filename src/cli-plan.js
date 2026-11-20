@@ -287,6 +287,9 @@ for (const record of planned) {
           ...slide,
           // the real-app slides count their steps: "Hatua 2" / "Step 2"
           stepLabel: slide.screen ? `${record.language === "sw" ? "Hatua" : "Step"} ${step}` : "",
+          // In the app look one photo opens and closes the carousel; a middle slide without a
+          // screen is words only, not the same photo again.
+          ...(record.template === "app" && i > 0 && i < slides.length - 1 && !slide.screen ? { backgroundPath: null } : {}),
           // Only the last slide asks for anything.
           cta: i === slides.length - 1 ? record.cta : "",
         },

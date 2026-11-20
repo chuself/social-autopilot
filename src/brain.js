@@ -4,7 +4,7 @@ import path from "node:path";
 import { completeJson } from "./llm.js";
 import { setUsageContext } from "./usage.js";
 import { factsFor, topicBlock, topicOf } from "./topics.js";
-import { captionOf, catalogue, parseRef, steps as footageFor } from "../studio/screens.mjs";
+import { captionOf, catalogue, parseRef, pictureOf, steps as footageFor } from "../studio/screens.mjs";
 
 /**
  * The real Operra app in still posts. When the feature has screen recordings (studio/screens.mjs),
@@ -28,6 +28,28 @@ ${how}
 Steps you may show (id, then what the step shows):
 ${list}
 `;
+}
+
+/**
+ * Sentence case for a line the model wrote in Title Case ("Nadhani Uliithibitisha: Kosa La Chumba",
+ * plan-test 2026-11-20). Only when most words are capitalised; names, acronyms and the word after a
+ * colon or a full stop keep their capital.
+ */
+const PROPER = /^(Operra|Managix|M-Pesa|Tigo|Airtel|Halopesa|Selcom|NIDA|VIP|VAT|TRA|POS|QR|PIN|TSh|USD|WhatsApp|Instagram|Booking\.com|Tanzania|Zanzibar|Arusha|Moshi|Mwanza|Dodoma|Dar|Salaam|Kilimanjaro|Serengeti|Ngorongoro|Tanga|Iringa|Mbeya|Morogoro|Bagamoyo|Pemba|Mafia|Karatu|Kigoma|Musoma|Bukoba|Mtwara|Lindi|Singida|Tabora|Africa|East)$/;
+export function sentenceCase(text) {
+  const s = String(text ?? "");
+  const words = s.split(/\s+/).filter((w) => /[A-Za-z]/.test(w));
+  if (words.length < 3) return s;
+  const capped = words.filter((w) => /^[^A-Za-z]*[A-Z]/.test(w)).length;
+  if (capped / words.length < 0.75) return s;
+  let first = true;
+  return s.split(/(\s+)/).map((w) => {
+    if (/^\s+$/.test(w) || !/[A-Za-z]/.test(w)) return w;
+    const bare = w.replace(/[^A-Za-z.-]/g, "");
+    const keep = first || PROPER.test(bare) || /^[A-Z0-9-]{2,}$/.test(bare);
+    first = /[:.?!]$/.test(w);
+    return keep ? w : w.toLowerCase();
+  }).join("");
 }
 
 /** A screen id the writer gave, kept only if the library approves it. */
@@ -257,8 +279,14 @@ ${sceneBrief(look, city, "carousel")}
   );
 
   const real = Boolean(realScreens(topic, language, "carousel"));
+  for (const sl of post.slides ?? []) sl.headline = sentenceCase(sl.headline);
+  post.cta = sentenceCase(post.cta);
+  const shown = new Set();
   const slides = (post.slides ?? []).slice(0, 5).map((sl, i, all) => {
-    const screen = real && i > 0 && i < all.length - 1 ? validScreen(sl.screen) : null;
+    let screen = real && i > 0 && i < all.length - 1 ? validScreen(sl.screen) : null;
+    // never the same picture twice in one carousel: a duplicate becomes a words-only slide
+    if (screen && shown.has(pictureOf(screen))) screen = null;
+    if (screen) shown.add(pictureOf(screen));
     const { screen: _drop, ...rest } = sl;
     if (!screen) return rest;
     // A screen slide says exactly what its step shows: the director's caption, then the step's own line.
@@ -461,6 +489,8 @@ Hashtags may stay in English where that is what people actually search.`
 
   setUsageContext({ feature: `plan-${format}` });
   const post = await completeJson(prompt);
+  post.headline = sentenceCase(post.headline);
+  post.cta = sentenceCase(post.cta);
   const screen = format === "poster" && realScreens(topic, language, "poster") ? validScreen(post.screen) : null;
   delete post.screen;
   return {

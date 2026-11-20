@@ -117,6 +117,9 @@ export async function renderPoster(post, brandId = "operra", outFile) {
     );
 
     await page.evaluate(() => document.fonts.ready);
+    // A template that can fit its own words (templates/app.html) does so once the fonts are in.
+    const fits = await page.evaluate(() => (window.fit ? window.fit() : true));
+    if (!fits) console.warn(`  ${post.id ?? "poster"}: words still crowd the footer after fitting`);
     // Let the background image decode before the shot.
     await page.waitForFunction(() => {
       const imgs = [...document.images].every((i) => i.complete);
