@@ -1,0 +1,60 @@
+name: plan-test
+
+# Plans posts with the production planner (src/cli-plan.js) against a COPY of the queue and
+# uploads the rendered posters and slides as a run artifact. Commits nothing, posts nothing,
+# deploys nothing: for checking a change to the writers or the templates before it reaches main.
+on:
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Slot hours, e.g. 8 or 8,20"
+        default: "8"
+      format:
+        description: "carousel, poster or reel"
+        default: "carousel"
+      days:
+        description: "How many days to plan"
+        default: "2"
+      start:
+        description: "First day (YYYY-MM-DD), well after anything queued"
+        default: "2026-12-01"
+
+concurrency: plan-test
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: npx playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Plan against a copy of the queue
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MOSS_URL: ${{ secrets.MOSS_URL }}
+          MOSS_API_KEY: ${{ secrets.MOSS_API_KEY }}
+          QUEUE_FILE: state/frames/test-queue.json
+        run: |
+          mkdir -p state/frames
+          cp state/queue.json state/frames/test-queue.json
+          before=$(ls public | sort)
+          node src/cli-plan.js --start "${{ inputs.start }}" --days "${{ inputs.days }}" --hours "${{ inputs.hours }}" --format "${{ inputs.format }}"
+          node -e "const q=require('./state/frames/test-queue.json');const old=new Set(require('./state/queue.json').map(p=>p.id));for(const p of q.filter(p=>!old.has(p.id)))console.log(JSON.stringify({id:p.id,feature:p.feature,template:p.template,screen:p.screen,slides:(p.slides||[]).map(s=>({h:s.headline,b:s.body,screen:s.screen}))},null,1))"
+          mkdir -p state/frames/new && comm -13 <(echo "$before") <(ls public | sort) | while read f; do cp "public/$f" state/frames/new/; done
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: plan-test-${{ github.run_id }}
+          path: |
+            state/frames/new/
+            state/frames/test-queue.json
+          if-no-files-found: warn
+          retention-days: 7
