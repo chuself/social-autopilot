@@ -180,6 +180,26 @@ await check(
   { group: "config" }
 );
 
+// The real-app screen library (studio/screens.mjs): every approved step needs its clip and both
+// captions, or a reel that picks it fails at render time, after the voice and the images are paid for.
+await check(
+  "real screens library",
+  async () => {
+    const { existsSync } = await import("node:fs");
+    const { library, verifyCaptions } = await import("../studio/screens.mjs");
+    const lib = library();
+    const names = Object.keys(lib);
+    if (!names.length) throw new Error("brands/operra/screens/manifest.json is missing or empty");
+    const noClip = names.filter((n) => !existsSync(path.join(ROOT, "brands", "operra", "screens", n, "clip.mp4")));
+    if (noClip.length) throw new Error(`no clip for ${noClip.join(", ")}`);
+    const missing = verifyCaptions();
+    if (missing.length) throw new Error(`no caption for ${missing.slice(0, 4).join(", ")}`);
+    const ok = Object.values(lib).reduce((a, r) => a + r.steps.filter((s) => s.ok).length, 0);
+    return `${names.length} recordings, ${ok} approved steps, captions complete`;
+  },
+  { group: "code" }
+);
+
 // An ink slot is only safe if the ink engine can draw a reel here: its textures
 // are in the repo and a known-good brief composes. Dry, no render.
 await check(
