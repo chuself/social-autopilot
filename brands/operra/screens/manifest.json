@@ -241,7 +241,7 @@
    ],
    "loading": [
     [
-     0.75,
+     0.7,
      1.4
     ]
    ]
@@ -328,7 +328,7 @@
    ],
    "loading": [
     [
-     0.75,
+     0.7,
      1.3
     ]
    ]
@@ -811,7 +811,8 @@
       1.25
      ],
      "still": 4.5,
-     "ok": true
+     "ok": false,
+     "note": "the room map is still loading (grey block) in this step"
     },
     {
      "en": "Pick a free room on the map. Taken rooms are greyed out.",
@@ -853,8 +854,8 @@
    ],
    "loading": [
     [
-     1.25,
-     1.6
+     1.2,
+     1.8
     ]
    ]
   },
@@ -941,7 +942,20 @@
      "ok": true
     }
    ],
-   "loading": []
+   "loading": [
+    [
+     0.7,
+     1.8
+    ],
+    [
+     2.5,
+     2.8
+    ],
+    [
+     3.3,
+     4
+    ]
+   ]
   },
   "overview-desktop": {
    "page": "overview",
@@ -1132,7 +1146,12 @@
      "ok": true
     }
    ],
-   "loading": []
+   "loading": [
+    [
+     3.9,
+     4.6
+    ]
+   ]
   },
   "reservations-mobile": {
    "page": "reservations",
@@ -1199,7 +1218,20 @@
      "ok": true
     }
    ],
-   "loading": []
+   "loading": [
+    [
+     3.9,
+     4.5
+    ],
+    [
+     7.4,
+     8.2
+    ],
+    [
+     10,
+     10.6
+    ]
+   ]
   },
   "rooms-desktop": {
    "page": "rooms",
@@ -1415,7 +1447,12 @@
      "ok": true
     }
    ],
-   "loading": []
+   "loading": [
+    [
+     19.7,
+     19.9
+    ]
+   ]
   },
   "rooms-setup-mobile": {
    "page": "rooms-setup",
@@ -1496,7 +1533,12 @@
      "ok": true
     }
    ],
-   "loading": []
+   "loading": [
+    [
+     19.3,
+     19.5
+    ]
+   ]
   },
   "stay-desktop": {
    "page": "stay",
@@ -1586,7 +1628,7 @@
    ],
    "loading": [
     [
-     2.35,
+     2.3,
      3.9
     ]
    ]
@@ -1677,12 +1719,12 @@
    ],
    "loading": [
     [
-     0.75,
-     1.6
+     0.7,
+     3.9
     ],
     [
-     2.35,
-     3.9
+     14.1,
+     14.3
     ]
    ]
   },
@@ -1761,7 +1803,7 @@
    ],
    "loading": [
     [
-     11.95,
+     11.9,
      13.6
     ]
    ]
@@ -1840,7 +1882,7 @@
    ],
    "loading": [
     [
-     13.95,
+     13.9,
      15.5
     ]
    ]
