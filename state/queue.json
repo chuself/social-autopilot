@@ -14316,7 +14316,7 @@
       "builtAt": "2026-11-02T22:21:35.020Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-24T16:12:10.275Z",
+    "lastAttempt": "2026-11-24T17:12:58.847Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-11-21T18:47:22.993Z"
   },
@@ -16921,7 +16921,7 @@
       "builtAt": "2026-11-14T14:01:31.003Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-24T16:12:10.275Z",
+    "lastAttempt": "2026-11-24T17:12:58.847Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-11-21T18:47:22.993Z"
   },
@@ -17546,7 +17546,7 @@
       "builtAt": "2026-11-16T22:53:21.167Z",
       "status": "ready"
     },
-    "lastAttempt": "2026-11-24T16:12:10.275Z",
+    "lastAttempt": "2026-11-24T17:12:58.847Z",
     "lastSkipReason": "filmed but past the 6h lateness cutoff",
     "missedAt": "2026-11-21T18:47:22.993Z"
   },
